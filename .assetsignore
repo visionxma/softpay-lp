@@ -10,3 +10,8 @@ README.md
 docs/
 node_modules/
 *.zip
+
+# NUNCA publicar o histórico do repositório
+.git/
+.gitattributes
+.wrangler/

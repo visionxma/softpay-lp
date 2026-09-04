@@ -20,6 +20,17 @@
     "html_handling": "auto-trailing-slash"
   },
 
+  // URL de teste (softpay-lp.visionxma.workers.dev). Pode ser desligada
+  // depois que site.softpaybr.com estiver no ar.
+  "workers_dev": true,
+
+  // Domínio oficial. Descomente DEPOIS de remover o registro DNS antigo
+  // "site" (CNAME -> visionxma.github.io) no painel da Cloudflare —
+  // a API recusa criar o custom domain enquanto o CNAME antigo existir.
+  // "routes": [
+  //   { "pattern": "site.softpaybr.com", "custom_domain": true }
+  // ],
+
   "observability": {
     "enabled": true
   }
