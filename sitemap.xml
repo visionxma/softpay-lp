@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap do SoftPay.
+  IMPORTANTE: precisa ser servido na raiz (https://site.softpaybr.com/sitemap.xml).
+  Contém apenas páginas públicas, indexáveis e canônicas que existem hoje.
+  Novas URLs (segmentos, soluções, guias, perguntas) devem ser adicionadas
+  somente quando as páginas forem publicadas.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://site.softpaybr.com/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/termos</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/privacidade</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/reembolso</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

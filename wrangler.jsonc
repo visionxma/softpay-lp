@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Site estático (HTML/CSS/JS, sem build) servido pela Cloudflare
+  // com Workers Static Assets.
+  // Deploy: npx wrangler deploy
+  "name": "softpay-lp",
+  "compatibility_date": "2026-07-01",
+
+  "assets": {
+    // A raiz do repositório é o site. O que não deve ser publicado
+    // está listado em .assetsignore (docs/, .github/, README.md…).
+    "directory": ".",
+
+    // Site estático com páginas .html — não é SPA.
+    // Rota desconhecida cai no 404.html.
+    "not_found_handling": "404-page",
+
+    // /termos -> /termos.html, /pasta -> /pasta/ (padrão, bom para SEO)
+    "html_handling": "auto-trailing-slash"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+}

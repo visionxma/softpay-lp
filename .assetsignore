@@ -1,0 +1,12 @@
+# Arquivos que ficam no repositório mas NÃO devem ser publicados no site.
+# Sintaxe igual à do .gitignore.
+
+.assetsignore
+.gitignore
+.nojekyll
+wrangler.jsonc
+README.md
+.github/
+docs/
+node_modules/
+*.zip

@@ -1,0 +1,19 @@
+# robots.txt — SoftPay
+# IMPORTANTE: este arquivo só tem efeito quando servido na RAIZ do domínio
+# (https://site.softpaybr.com/robots.txt). Se a landing continuar publicada
+# em /lp/, ele precisa ser copiado para a raiz no deploy.
+
+User-agent: *
+Allow: /
+
+# Áreas privadas / de aplicação — fora do índice
+Disallow: /auth
+Disallow: /dashboard
+Disallow: /app
+Disallow: /admin
+
+# CSS e JS devem permanecer rastreáveis (renderização da página)
+Allow: /*.css$
+Allow: /*.js$
+
+Sitemap: https://site.softpaybr.com/sitemap.xml

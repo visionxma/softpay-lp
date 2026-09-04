@@ -1,0 +1,31 @@
+# Cabeçalhos aplicados pela Cloudflare aos assets estáticos.
+# Docs: https://developers.cloudflare.com/workers/static-assets/headers/
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# HTML: sempre revalida, para que uma publicação nova apareça na hora
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS/JS: versionados por query string (?v=N). Um dia de cache com revalidação.
+/style.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/script.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Imagens e ícones: nomes estáveis, cache longo
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Arquivos de SEO: cache curto, mudam junto com o conteúdo
+/robots.txt
+  Cache-Control: public, max-age=3600
+/sitemap.xml
+  Cache-Control: public, max-age=3600
