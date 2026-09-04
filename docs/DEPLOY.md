@@ -1,101 +1,124 @@
-# Deploy — SoftPay LP
-
-## Onde está o quê
+# Deploy — SoftPay LP (Cloudflare Pages)
 
 | | |
 |---|---|
 | Repositório | https://github.com/visionxma/softpay-lp |
-| Worker Cloudflare | `softpay-lp` (conta `visionxma`) |
-| URL de teste | https://softpay-lp.visionxma.workers.dev |
-| Domínio final | https://site.softpaybr.com ← **ainda não migrado** |
+| Hospedagem | Cloudflare **Pages** |
+| URL do Pages | `softpay-lp.pages.dev` (criada no passo 1) |
+| Domínio final | https://site.softpaybr.com |
 | App (outro projeto) | https://www.softpaybr.com |
+
+> O site fica em **`public/`**. Tudo que está fora dessa pasta (`docs/`,
+> `README.md`, `.github/`) **não** é publicado.
 
 ---
 
-## ⚠️ Pendente: apontar site.softpaybr.com para a Cloudflare
+## 1. Criar o projeto no Pages
 
-O site novo **já está publicado** na URL de teste, mas o domínio oficial ainda
-serve a versão antiga pelo GitHub Pages (repo `visionxma/controleapp`).
+Painel da Cloudflare → **Workers & Pages** → **Create** → aba **Pages**
+→ **Connect to Git** → selecione `visionxma/softpay-lp`.
 
-A tentativa automática de criar o domínio falhou com **HTTP 409 Conflict** —
-não é falta de permissão: já existe um registro DNS ocupando esse nome.
+Configure exatamente assim:
+
+| Campo | Valor |
+|---|---|
+| Framework preset | **None** |
+| Build command | *(deixe vazio)* |
+| Build output directory | **`public`** |
+| Root directory | `/` |
+| Production branch | `main` |
+
+Não há build: os arquivos de `public/` são o site.
+
+Ao salvar, o Pages publica e devolve a URL `softpay-lp.pages.dev`.
+A partir daí, **todo push em `main` publica sozinho**.
+
+## 2. Conferir na URL do Pages
+
+```bash
+curl -s https://softpay-lp.pages.dev/ | grep -o '<title>.*</title>'
+```
+
+Deve responder `Sistema de Gestão para Pequenos Negócios | SoftPay`.
+
+Confira também: `/termos`, `/lp/` (deve redirecionar para `/`) e uma
+URL inexistente (deve cair no 404).
+
+## 3. Apontar site.softpaybr.com
+
+Hoje o domínio serve a versão antiga pelo GitHub Pages:
 
 ```
 site.softpaybr.com.  CNAME  visionxma.github.io.   ← registro antigo
 ```
 
-### Passo a passo
-
-1. **Confira a URL de teste** e valide o site:
-   https://softpay-lp.visionxma.workers.dev
-
-2. **Remova o registro DNS antigo**
-   Cloudflare → zona `softpaybr.com` → **DNS** → **Records**
+1. Cloudflare → zona `softpaybr.com` → **DNS** → **Records**
    → apague o registro `site` (CNAME → `visionxma.github.io`)
 
-3. **Crie o domínio no Worker** — escolha uma das duas formas:
+   > Sem apagar, a criação do domínio falha com **HTTP 409 Conflict**.
+   > Isso não é falta de permissão — é o nome já ocupado.
 
-   **Pelo painel:**
-   Workers & Pages → `softpay-lp` → Settings → **Domains & Routes**
-   → Add → Custom Domain → `site.softpaybr.com`
+2. Pages → projeto `softpay-lp` → **Custom domains** → **Set up a custom domain**
+   → `site.softpaybr.com`
 
-   **Pelo código:** descomente o bloco `routes` no `wrangler.jsonc` e rode:
-   ```bash
-   npx wrangler deploy
-   ```
-
-4. **Confirme** (o certificado leva alguns minutos):
+3. Aguarde o certificado (alguns minutos) e confirme:
    ```bash
    curl -sI https://site.softpaybr.com/ | head -3
-   curl -s https://site.softpaybr.com/ | grep -o '<title>.*</title>'
    ```
-   Deve responder `200` e o título `Sistema de Gestão para Pequenos Negócios | SoftPay`.
 
-5. **Desative o GitHub Pages do repo antigo**
+4. Desative o GitHub Pages do repositório antigo:
    `visionxma/controleapp` → Settings → Pages → Source: **None**
-   (deixe o repositório como backup da versão anterior).
+   (mantenha o repositório como backup da versão anterior).
 
-> Enquanto o passo 2 não for feito, o domínio continua servindo o site antigo.
-> Nada quebra — a troca só acontece quando você remover o CNAME.
-
----
-
-## Deploy automático pelo GitHub Actions
-
-Todo push em `main` publica sozinho. Falta cadastrar dois secrets:
-
-**GitHub → Settings → Secrets and variables → Actions → New repository secret**
-
-| Secret | Onde obter |
-|---|---|
-| `CLOUDFLARE_ACCOUNT_ID` | `2eb0e3cbc1e9e6090e8946fb75d978c0` |
-| `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens → Create Token → template **Edit Cloudflare Workers** |
-
-Sem esses secrets o workflow falha — até lá, publique com `npx wrangler deploy`.
+> Até o passo 1 ser feito, o domínio continua servindo o site antigo.
+> Nada quebra: a troca só acontece quando o CNAME sair.
 
 ---
 
-## Comandos
+## Rodar localmente
 
 ```bash
-npx wrangler dev              # roda local com o runtime real da Cloudflare
-npx wrangler deploy           # publica
-npx wrangler deployments list # histórico
-npx wrangler rollback         # volta para a versão anterior
+# runtime real do Cloudflare Pages (testa _headers e _redirects)
+npx wrangler pages dev public --compatibility-date=2026-07-01
+
+# ou, para só olhar o HTML
+python3 -m http.server 8000 --directory public
+```
+
+> A flag `--compatibility-date` é necessária porque o wrangler instalado
+> (4.109.0) é mais antigo que a data de hoje e o runtime local recusa
+> subir. Não afeta o deploy real. Some ao atualizar o wrangler.
+
+## Deploy manual
+
+O workflow `.github/workflows/deploy.yml` é **só disparo manual**
+(Actions → Deploy para o Cloudflare Pages → Run workflow), de propósito:
+com a integração Git ativa, um workflow automático publicaria duas vezes
+a cada push.
+
+Para usá-lo, cadastre em **Settings → Secrets and variables → Actions**:
+
+| Secret | Valor / onde obter |
+|---|---|
+| `CLOUDFLARE_ACCOUNT_ID` | `2eb0e3cbc1e9e6090e8946fb75d978c0` |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare → My Profile → API Tokens → template **Edit Cloudflare Workers** |
+
+Ou, do seu terminal:
+
+```bash
+npx wrangler pages deploy public --project-name=softpay-lp
 ```
 
 ---
 
 ## Armadilhas conhecidas
 
-- **`.assetsignore` é o que protege o site.** Sem ele, `wrangler deploy`
-  publica `.git/`, `.wrangler/` e `docs/` junto com o site. Isso aconteceu no
-  primeiro deploy e foi corrigido. Ao adicionar pastas novas ao repositório,
-  verifique se elas devem entrar nessa lista.
-- **Nunca crie `/termos → /termos.html` no `_redirects`.** O
-  `html_handling: auto-trailing-slash` já faz o caminho contrário, e as duas
-  regras juntas geram loop infinito de redirecionamento.
-- **`compatibility_date` não pode ser mais nova que o wrangler instalado**,
-  senão `wrangler dev` não sobe. Hoje: `2026-07-01`.
-- **`workers_dev: true` precisa ficar explícito.** Ao adicionar `routes`, o
-  wrangler desativa a URL `.workers.dev` por padrão.
+- **O site é `public/`, não a raiz.** Se o *build output directory* ficar
+  como `/`, o Pages publica `docs/` e `README.md` junto com o site.
+- **Nunca crie `/termos → /termos.html` no `_redirects`.** O Pages já serve
+  `/termos` a partir de `termos.html` e canonicaliza no sentido inverso; as
+  duas regras juntas geram loop infinito de redirecionamento.
+- **Cache de um ano em `/assets/*`.** Ao trocar uma imagem, use um nome de
+  arquivo novo, senão o navegador segue com a antiga.
+- **`style.css` e `script.js` são versionados por query string** (`?v=3`).
+  Ao alterá-los, incremente o número no `index.html`.

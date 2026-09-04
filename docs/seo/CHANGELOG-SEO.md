@@ -98,24 +98,24 @@ O bloco de cálculo de lucro (§9.2) usa números fictícios e traz badge visív
 
 ---
 
-## ⚠️ AÇÕES DE DEPLOY NECESSÁRIAS
+## Deploy — resolvido nesta rodada
 
-Três itens desta rodada **só funcionam se o deploy for ajustado**:
+A investigação do ambiente mostrou que os pressupostos do código estavam desatualizados:
 
-1. **A home precisa ser servida na raiz.**
-   O `canonical` aponta para `https://site.softpaybr.com/`, conforme o §2 do briefing.
-   Enquanto a página continuar acessível apenas em `/lp/`:
-   - ou publique-a na raiz e faça **301 de `/lp/` → `/`**;
-   - ou, temporariamente, troque o `canonical` no `index.html` para `https://site.softpaybr.com/lp/`.
+- `site.softpaybr.com` **já serve a LP na raiz** (GitHub Pages, repo `visionxma/controleapp`), e `/lp/` responde 404. O comentário do `<base href="/lp/">` não valia mais.
+- **Os CTAs apontavam para `/auth`, que é 404 nesse domínio.** O app está em `www.softpaybr.com`. Todos os botões de teste grátis estavam quebrados em produção.
 
-   Há um comentário no `<head>` do `index.html` marcando exatamente esse ponto.
+Correções aplicadas:
 
-2. **`robots.txt` precisa ser servido em `https://site.softpaybr.com/robots.txt`.**
-   Em `/lp/robots.txt` ele é ignorado pelos crawlers.
+- `<base href="/lp/">` removido — quebraria todos os assets na raiz
+- CTAs passam a apontar para `https://www.softpaybr.com/auth`
+- seletor de atribuição de afiliados no `script.js` ajustado para os CTAs absolutos
+- `canonical`, Open Graph e JSON-LD agora usam URLs de raiz
+- `robots.txt` e `sitemap.xml` ficam na raiz do site, onde os crawlers os leem
+- `_redirects` com **301 de `/lp/` → `/`**, preservando o link antigo
 
-3. **`sitemap.xml` precisa ser servido em `https://site.softpaybr.com/sitemap.xml`.**
-
-Também é preciso ajustar o `<base href="/lp/">` caso a página passe a ser servida na raiz.
+O site foi movido para `public/` e é publicado pelo **Cloudflare Pages**.
+O passo a passo — inclusive a troca de DNS ainda pendente — está em [`../DEPLOY.md`](../DEPLOY.md).
 
 ---
 

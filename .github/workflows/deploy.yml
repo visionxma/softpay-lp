@@ -1,18 +1,21 @@
-name: Deploy para a Cloudflare
+name: Deploy para o Cloudflare Pages
 
-# Publica a landing page na Cloudflare (Workers Static Assets) a cada push
-# na branch principal. Também pode ser disparado manualmente pela aba Actions.
+# ATENÇÃO: use este workflow OU a integração Git do painel do Cloudflare
+# Pages — nunca os dois, senão cada push gera duas publicações.
+#
+# Se você conectou o repositório pelo painel (Workers & Pages → Create →
+# Pages → Connect to Git), o deploy já é automático e este workflow serve
+# apenas como disparo manual de emergência.
 on:
-  push:
-    branches: [main]
-    paths-ignore:
-      - 'docs/**'
-      - 'README.md'
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch de destino no Pages (production = branch de produção)'
+        required: false
+        default: 'main'
 
-# Uma publicação por vez: se dois pushes acontecerem juntos, o mais novo vence.
 concurrency:
-  group: deploy-cloudflare
+  group: deploy-pages
   cancel-in-progress: true
 
 jobs:
@@ -27,9 +30,12 @@ jobs:
       - name: Baixar o repositório
         uses: actions/checkout@v7
 
-      - name: Publicar na Cloudflare
+      - name: Publicar no Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy
+          command: >-
+            pages deploy public
+            --project-name=softpay-lp
+            --branch=${{ inputs.branch }}
