@@ -25,11 +25,16 @@ def _json(obj, indent=2):
 
 
 def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None,
+           artigo=False, passos=None,
            related=None, breadcrumbs=None, cta_title=None, cta_text=None,
            updated="2026-09-04"):
     """slug: caminho sem barras nas pontas, ex 'segmentos/mercadinho'."""
     url = "%s/%s/" % (BASE, slug)
     crumbs = breadcrumbs or []
+    # Imagem social: a da própria página quando existe. Compartilhar a mesma
+    # foto genérica em 49 páginas desperdiça o espaço visual do link.
+    og_img = BASE + figura[0] if figura else BASE + "/assets/COmputador.webp"
+    og_alt = figura[1] if figura else "Painel do SoftPay aberto em um computador"
 
     # ---------- dados estruturados ----------
     graph = [{
@@ -42,6 +47,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
         "isPartOf": {"@id": BASE + "/#website"},
         "about": {"@id": BASE + "/#softpay"},
         "dateModified": updated,
+        "primaryImageOfPage": og_img,
     }]
 
     itens = [{"@type": "ListItem", "position": 1, "name": "Início", "item": BASE + "/"}]
@@ -55,6 +61,44 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
         "@id": url + "#breadcrumb",
         "itemListElement": itens,
     })
+
+    # Guias são conteúdo editorial: Article dá ao Google o autor, a data e o
+    # veículo. Sem isso eles são só "uma página" a mais.
+    if artigo:
+        graph.append({
+            "@type": "Article",
+            "@id": url + "#article",
+            "headline": h1[:110],
+            "description": description,
+            "image": og_img,
+            "inLanguage": "pt-BR",
+            "datePublished": "2026-09-04",
+            "dateModified": updated,
+            "author": {"@id": BASE + "/#organizacao"},
+            "publisher": {"@id": BASE + "/#organizacao"},
+            "isPartOf": {"@id": url + "#webpage"},
+            "mainEntityOfPage": {"@id": url + "#webpage"},
+        })
+
+    # HowTo só entra quando a página realmente ensina um passo a passo, e os
+    # passos abaixo são os mesmos que estão visíveis no texto.
+    if passos:
+        graph.append({
+            "@type": "HowTo",
+            "@id": url + "#howto",
+            "name": h1,
+            "description": description,
+            "image": og_img,
+            "inLanguage": "pt-BR",
+            "totalTime": "PT30M",
+            "step": [{
+                "@type": "HowToStep",
+                "position": i + 1,
+                "name": nome,
+                "text": texto,
+                "url": url + "#" + ancora,
+            } for i, (nome, texto, ancora) in enumerate(passos)],
+        })
 
     if faq:
         graph.append({
@@ -146,16 +190,20 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <meta property="og:url" content="%(url)s" />
     <meta property="og:title" content="%(title)s" />
     <meta property="og:description" content="%(description)s" />
-    <meta property="og:image" content="%(base)s/assets/COmputador.webp" />
+    <meta property="og:image" content="%(og_img)s" />
+    <meta property="og:image:alt" content="%(og_alt)s" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="%(title)s" />
     <meta name="twitter:description" content="%(description)s" />
-    <meta name="twitter:image" content="%(base)s/assets/COmputador.webp" />
+    <meta name="twitter:image" content="%(og_img)s" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        media="print" onload="this.media='all';this.onload=null" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
     <link rel="stylesheet" href="/style.css?v=5f927827a8" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
@@ -242,7 +290,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Soluções</h4>
+                        <h3 class="footer-heading">Soluções</h3>
                         <ul>
                             <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
                             <li><a href="/solucoes/sistema-de-estoque/">Controle de estoque</a></li>
@@ -252,7 +300,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Para o seu negócio</h4>
+                        <h3 class="footer-heading">Para o seu negócio</h3>
                         <ul>
                             <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
                             <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
@@ -262,7 +310,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Conteúdo</h4>
+                        <h3 class="footer-heading">Conteúdo</h3>
                         <ul>
                             <li><a href="/sistema-de-gestao-para-pequenos-negocios/">O que é sistema de gestão</a></li>
                             <li><a href="/guias/">Guias</a></li>
@@ -272,7 +320,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Legal</h4>
+                        <h3 class="footer-heading">Legal</h3>
                         <ul>
                             <li><a href="/termos">Termos de Uso</a></li>
                             <li><a href="/privacidade">Política de Privacidade</a></li>
@@ -309,6 +357,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 </html>
 ''' % dict(title=esc(title), description=esc(description), url=url, base=BASE,
            ld=ld, bc=bc_html, h1=h1, intro=intro, corpo=corpo, faq=faq_html, fig=fig_html,
+           og_img=og_img, og_alt=esc(og_alt),
            rel=rel_html, app=APP, wpp=WPP,
            cta_title=esc(cta_title or "Experimente o SoftPay por 7 dias"),
            cta_text=esc(cta_text or ("Teste todos os recursos do plano sem cartão de crédito. "

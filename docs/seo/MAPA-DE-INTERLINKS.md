@@ -22,8 +22,8 @@ por relevância, e traz links contextuais dentro do texto.
 | Métrica | Valor |
 |---|---|
 | Páginas | 49 |
-| Links internos (com âncora) | 1253 |
-| Links contextuais no corpo | 379 |
+| Links internos (com âncora) | 1254 |
+| Links contextuais no corpo | 380 |
 | Páginas órfãs | 0 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -77,6 +77,9 @@ por relevância, e traz links contextuais dentro do texto.
 | `/` | `/segmentos/pequeno-comercio/` | Ver como funciona numa loja pequena |
 | `/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é um sistema de gestãoO guia completo: para quem serve, quanto c |
 | `/` | `/solucoes/` | Ver todos os recursos |
+| `/` | `/solucoes/bot-whatsapp/` | Novo
+                        Registre a venda falando no WhatsApp
+     |
 | `/` | `/solucoes/bot-whatsapp/` | Registre falando no WhatsAppA venda entra no sistema com o cliente ain |
 | `/` | `/solucoes/bot-whatsapp/` | Ver como funciona o bot do WhatsApp → |
 | `/` | `/solucoes/controle-de-fiado/` | Ver como funciona o controle de fiado → |
@@ -136,7 +139,6 @@ por relevância, e traz links contextuais dentro do texto.
 | `/guias/como-controlar-fiado/` | `/reembolso` | Política de Reembolso |
 | `/guias/como-controlar-fiado/` | `/segmentos/mercadinho/` | MercadinhoO fiado do bairro |
 | `/guias/como-controlar-fiado/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/guias/como-controlar-fiado/` | `/solucoes/controle-de-fiado/` | Controle de fiadoComo funciona no SoftPay |
 
 ## Páginas órfãs
 

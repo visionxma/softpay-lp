@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Sitemap do SoftPay. Contém apenas páginas públicas, indexáveis e canônicas.
-  Regenerado a partir das definições em tools/c_*.py.
+  Sitemap do SoftPay. Só páginas públicas, indexáveis e canônicas.
+  Gerado por tools/sitemap.py a partir de tools/c_*.py — não editar à mão.
 -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://site.softpaybr.com/</loc>
     <lastmod>2026-09-06</lastmod>
@@ -45,144 +46,240 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/mercadinho.webp</image:loc>
+      <image:title>Dona de mercadinho embalando produtos atrás do balcão, com prateleiras de mercearia ao fundo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-roupas/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-roupas.webp</image:loc>
+      <image:title>Lojista conferindo peças numa arara de roupas com um tablet na mão</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-variedades/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-variedades.webp</image:loc>
+      <image:title>Dona de loja de variedades organizando produtos de utilidade doméstica na prateleira</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/papelaria/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/papelaria.webp</image:loc>
+      <image:title>Atendente de papelaria finalizando a venda no caixa, com material escolar ao fundo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/farmacia/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/farmacia.webp</image:loc>
+      <image:title>Atendente de farmácia usando o computador no balcão, com prateleiras de produtos ao fundo</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/distribuidora/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
+      <image:title>Funcionário de distribuidora de bebidas conferindo estoque pelo celular entre engradados</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pequeno-comercio/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/casal-comerciantes.webp</image:loc>
+      <image:title>Casal de comerciantes olhando juntos a tela do computador atrás do balcão da loja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-de-estoque/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-variedades.webp</image:loc>
+      <image:title>Lojista organizando produtos na prateleira da loja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-pdv/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/mercadinho.webp</image:loc>
+      <image:title>Lojista registrando a venda no balcão do mercadinho</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/controle-de-fiado/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/casal-comerciantes.webp</image:loc>
+      <image:title>Casal de comerciantes conferindo as contas no computador da loja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-financeiro/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/casal-comerciantes.webp</image:loc>
+      <image:title>Comerciantes analisando os números da loja no computador</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/nfe/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
+      <image:title>Operação de distribuidora, onde a nota fiscal faz parte da rotina</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/nfce/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/papelaria.webp</image:loc>
+      <image:title>Atendente finalizando a venda no caixa da papelaria</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/loja-online/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/celular-balcao.webp</image:loc>
+      <image:title>Mãos de um comerciante usando o celular sobre o balcão</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/controle-de-clientes/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-roupas.webp</image:loc>
+      <image:title>Lojista atendendo com o tablet na mão numa loja de roupas</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/bot-whatsapp/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/celular-balcao.webp</image:loc>
+      <image:title>Comerciante registrando uma venda pelo celular no balcão</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/multiplas-lojas/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
+      <image:title>Funcionário conferindo estoque no depósito da distribuidora</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-estoque/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-variedades.webp</image:loc>
+      <image:title>Lojista organizando o estoque na prateleira</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-caixa-da-loja/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/mercadinho.webp</image:loc>
+      <image:title>Lojista no balcão do mercadinho, onde o caixa é fechado</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-fiado/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/casal-comerciantes.webp</image:loc>
+      <image:title>Comerciantes conferindo o que os clientes ainda têm a pagar</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-calcular-lucro-da-loja/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/casal-comerciantes.webp</image:loc>
+      <image:title>Casal de comerciantes analisando os números da loja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-calcular-margem-de-lucro/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-roupas.webp</image:loc>
+      <image:title>Lojista avaliando preço e margem das peças da loja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-organizar-uma-loja/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/mercadinho.webp</image:loc>
+      <image:title>Lojista organizando a rotina do mercadinho</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-sair-do-caderno/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/papelaria.webp</image:loc>
+      <image:title>Atendente registrando a venda no sistema, no lugar do caderno</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/quanto-custa-um-sistema-para-loja/</loc>

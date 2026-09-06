@@ -11,7 +11,7 @@ PAGINAS = [
 # ------------------------------------------------------------- PÁGINA PILAR
 dict(
   slug="sistema-de-gestao-para-pequenos-negocios",
-  title="Sistema de Gestão para Pequenos Negócios: Guia Completo | SoftPay",
+  title="O que é um Sistema de Gestão? Guia do Lojista | SoftPay",
   description="O que é um sistema de gestão, para quem serve, quanto custa e o que ele resolve numa loja pequena: estoque, PDV, caixa, fiado, notas fiscais e lucro.",
   h1="Sistema de gestão para pequenos negócios",
   intro="Um guia completo para quem está avaliando se vale a pena, o que um sistema de gestão realmente faz e como escolher sem pagar por aquilo que a sua loja não usa.",

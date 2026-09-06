@@ -13,7 +13,17 @@ FONTE = ('        <p class="page-sources">Referências sobre CMV e margem: '
 PAGINAS = [
 
 dict(
+  artigo=True,
   slug="guias/como-controlar-estoque",
+  passos=[
+    ('Faça o inventário inicial', 'Liste os produtos de maior giro, conte a quantidade real e registre quantidade, preço de venda e custo de compra de cada um.', 'passo-1-faca-o-inventario-inicial-sem-tentar-fazer-tudo'),
+    ('Faça toda venda passar pelo mesmo lugar', 'Inclua a venda fiada, a venda para conhecido e a que o funcionário fez. Toda saída de mercadoria precisa gerar registro.', 'passo-2-faca-toda-venda-passar-pelo-mesmo-lugar'),
+    ('Registre também o que entra', 'Compra de fornecedor, devolução de cliente e perda por quebra ou validade vencida.', 'passo-3-registre-tambem-o-que-entra'),
+    ('Descubra quanto dinheiro está parado', 'Com quantidade e custo cadastrados, o total investido em mercadoria deixa de ser chute.', 'passo-4-descubra-quanto-dinheiro-esta-parado'),
+    ('Use a curva ABC para decidir a compra', 'Classifique os produtos por participação no resultado e concentre a decisão nos que movem o faturamento.', 'passo-5-use-a-curva-abc-para-decidir-a-compra'),
+  ],
+  figura=("/assets/lojistas/loja-de-variedades.webp",
+          "Lojista organizando o estoque na prateleira"),
   title="Como Controlar o Estoque de uma Loja: Guia Prático | SoftPay",
   description="Passo a passo para controlar o estoque da sua loja: inventário inicial, custo por produto, baixa automática e curva ABC. Guia completo e prático.",
   h1="Como controlar o estoque de uma loja",
@@ -85,7 +95,17 @@ dict(
 ),
 
 dict(
+  artigo=True,
   slug="guias/como-controlar-caixa-da-loja",
+  passos=[
+    ('Defina o fundo de troco', 'Comece o dia com um valor fixo em espécie e registre esse valor.', 'passo-1-defina-o-fundo-de-troco'),
+    ('Registre a venda com a forma de pagamento', 'Dinheiro, Pix, débito e crédito não são a mesma coisa na hora de conferir.', 'passo-2-registre-a-venda-com-a-forma-de-pagamento'),
+    ('Registre as saídas, inclusive as pequenas', 'Toda retirada precisa ser registrada, incluindo a sangria para o cofre ou o banco.', 'passo-3-registre-as-saidas-inclusive-as-pequenas'),
+    ('Feche o caixa todo dia', 'Compare o que o sistema registrou com o que existe fisicamente na gaveta.', 'passo-4-feche-o-caixa-todo-dia'),
+    ('Não confunda caixa com lucro', 'Parte do dinheiro na gaveta é o custo da mercadoria que você vai repor.', 'passo-5-nao-confunda-caixa-com-lucro'),
+  ],
+  figura=("/assets/lojistas/mercadinho.webp",
+          "Lojista no balcão do mercadinho, onde o caixa é fechado"),
   title="Como Controlar o Caixa de uma Loja: Guia Prático | SoftPay",
   description="Como fazer o controle e o fechamento de caixa da loja: rotina diária, conferência, sangria e o que fazer quando não bate. Guia passo a passo.",
   h1="Como controlar o caixa de uma loja",
@@ -143,7 +163,17 @@ dict(
 ),
 
 dict(
+  artigo=True,
   slug="guias/como-controlar-fiado",
+  passos=[
+    ('Decida a quem você vende fiado', 'Defina um critério e aplique igual para todos.', 'passo-1-decida-a-quem-voce-vende-fiado'),
+    ('Combine prazo antes, não depois', 'Um prazo combinado na venda transforma a cobrança em lembrete, não em conflito.', 'passo-2-combine-prazo-antes-nao-depois'),
+    ('Registre no nome do cliente', 'Cada venda fiada ligada a um cadastro, com data, valor e produtos.', 'passo-3-registre-no-nome-do-cliente'),
+    ('Olhe o total, não os nomes', 'A pergunta que muda a gestão é quanto a loja tem a receber no conjunto.', 'passo-4-olhe-o-total-nao-os-nomes'),
+    ('Cobre sem constrangimento', 'Uma mensagem com link de pagamento chega na hora certa sem transformar o balcão em conversa difícil.', 'passo-5-cobre-sem-constrangimento'),
+  ],
+  figura=("/assets/lojistas/casal-comerciantes.webp",
+          "Comerciantes conferindo o que os clientes ainda têm a pagar"),
   title="Como Controlar Vendas Fiadas na Loja | SoftPay",
   description="Como organizar o fiado da sua loja: registro por cliente, limite, prazo, cobrança sem constrangimento e como sair do caderno. Guia prático.",
   h1="Como controlar vendas fiadas",
@@ -204,7 +234,10 @@ dict(
 ),
 
 dict(
+  artigo=True,
   slug="guias/como-calcular-lucro-da-loja",
+  figura=("/assets/lojistas/casal-comerciantes.webp",
+          "Casal de comerciantes analisando os números da loja"),
   title="Como Calcular o Lucro de uma Loja (com Exemplo) | SoftPay",
   description="Aprenda a calcular o lucro da sua loja: faturamento, CMV, lucro bruto, despesas e resultado. Com fórmula, exemplo prático e os erros mais comuns.",
   h1="Como calcular o lucro de uma loja",
@@ -269,7 +302,10 @@ dict(
 ),
 
 dict(
+  artigo=True,
   slug="guias/como-calcular-margem-de-lucro",
+  figura=("/assets/lojistas/loja-de-roupas.webp",
+          "Lojista avaliando preço e margem das peças da loja"),
   title="Como Calcular a Margem de Lucro e o Preço de Venda | SoftPay",
   description="Como calcular margem de lucro e formar preço de venda: markup, margem sobre venda, o erro de somar a porcentagem no custo e exemplos práticos.",
   h1="Como calcular a margem de lucro",
@@ -328,7 +364,10 @@ dict(
 ),
 
 dict(
+  artigo=True,
   slug="guias/como-organizar-uma-loja",
+  figura=("/assets/lojistas/mercadinho.webp",
+          "Lojista organizando a rotina do mercadinho"),
   title="Como Organizar uma Loja: Guia Prático de Gestão | SoftPay",
   description="Como organizar a gestão de uma loja do zero: cadastro de produtos, rotina de caixa, estoque, fiado e clientes. Um roteiro em etapas realista.",
   h1="Como organizar uma loja",
@@ -392,7 +431,18 @@ dict(
 ),
 
 dict(
+  artigo=True,
   slug="guias/como-sair-do-caderno",
+  passos=[
+    ('Cadastre os produtos de giro', 'Comece pelos itens que você vende toda semana, com preço, custo e categoria.', 'o-passo-a-passo-em-uma-semana'),
+    ('Registre as quantidades', 'Conte esses itens e registre a quantidade real em estoque.', 'o-passo-a-passo-em-uma-semana'),
+    ('Comece a vender pelo sistema', 'A partir daqui toda venda passa pelo PDV — é a virada de chave.', 'o-passo-a-passo-em-uma-semana'),
+    ('Traga clientes e fiado', 'Cadastre quem tem saldo em aberto e lance o valor como venda fiada.', 'o-passo-a-passo-em-uma-semana'),
+    ('Estabeleça a rotina de caixa', 'Fundo de troco, formas de pagamento e fechamento no fim do dia.', 'o-passo-a-passo-em-uma-semana'),
+    ('Confira', 'O estoque bate? O caixa fecha? Ajuste o que estiver fora antes de seguir.', 'o-passo-a-passo-em-uma-semana'),
+  ],
+  figura=("/assets/lojistas/papelaria.webp",
+          "Atendente registrando a venda no sistema, no lugar do caderno"),
   title="Como Sair do Caderno e Controlar a Loja em Sistema | SoftPay",
   description="Passo a passo para migrar do caderno ou da planilha para um sistema de gestão sem parar a loja: o que levar, em que ordem e o que fazer com o caderno antigo.",
   h1="Como sair do caderno",

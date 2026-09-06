@@ -36,8 +36,11 @@
     <meta name="twitter:image" content="https://site.softpaybr.com/assets/COmputador.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link rel="preload" as="image" href="/assets/COmputador.webp" fetchpriority="high" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        media="print" onload="this.media='all';this.onload=null" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
     <link rel="stylesheet" href="style.css?v=5f927827a8" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
@@ -1736,7 +1739,7 @@
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
-                        <h4>Sistema</h4>
+                        <h3 class="footer-heading">Sistema</h3>
                         <ul>
                             <li><a href="#features">Funcionalidades</a></li>
                             <li><a href="#estoque">Controle de estoque</a></li>
@@ -1751,7 +1754,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Para o seu negócio</h4>
+                        <h3 class="footer-heading">Para o seu negócio</h3>
                         <ul>
                             <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
                             <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
@@ -1762,7 +1765,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Legal</h4>
+                        <h3 class="footer-heading">Legal</h3>
                         <ul>
                             <li><a href="/termos">Termos de Uso</a></li>
                             <li><a href="/privacidade">Política de Privacidade</a></li>
@@ -1770,7 +1773,7 @@
                         </ul>
                     </div>
                     <div class="footer-column">
-                        <h4>Contato e ajuda</h4>
+                        <h3 class="footer-heading">Contato e ajuda</h3>
                         <ul>
                             <li><a href="https://wa.me/558698193851" target="_blank" rel="noopener">WhatsApp (86) 9 9819-3851</a></li>
                             <li><a href="mailto:suporte@softpaybr.com">suporte@softpaybr.com</a></li>

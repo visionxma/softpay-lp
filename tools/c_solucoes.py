@@ -8,6 +8,8 @@ PAGINAS = [
 
 dict(
   slug="solucoes/sistema-de-estoque",
+  figura=("/assets/lojistas/loja-de-variedades.webp",
+          "Lojista organizando produtos na prateleira da loja"),
   title="Sistema de Controle de Estoque para Loja | SoftPay",
   description="Controle de estoque com custo, quantidade, variações e curva ABC. Saiba quanto dinheiro está parado na prateleira. Teste grátis por 7 dias.",
   h1="Sistema de controle de estoque",
@@ -58,6 +60,8 @@ dict(
 
 dict(
   slug="solucoes/sistema-pdv",
+  figura=("/assets/lojistas/mercadinho.webp",
+          "Lojista registrando a venda no balcão do mercadinho"),
   title="Sistema PDV para Loja: Frente de Caixa | SoftPay",
   description="Sistema PDV com venda rápida, baixa automática de estoque, formas de pagamento e fechamento de caixa. Roda no navegador. Teste grátis 7 dias.",
   h1="Sistema PDV (frente de caixa)",
@@ -100,6 +104,8 @@ dict(
 
 dict(
   slug="solucoes/controle-de-fiado",
+  figura=("/assets/lojistas/casal-comerciantes.webp",
+          "Casal de comerciantes conferindo as contas no computador da loja"),
   title="Sistema de Controle de Fiado para Loja | SoftPay",
   description="Controle de fiado digital: saldo por cliente, histórico e cobrança por link de Pix no WhatsApp. Saia do caderno. Teste grátis por 7 dias.",
   h1="Controle de fiado",
@@ -141,6 +147,8 @@ dict(
 
 dict(
   slug="solucoes/sistema-financeiro",
+  figura=("/assets/lojistas/casal-comerciantes.webp",
+          "Comerciantes analisando os números da loja no computador"),
   title="Sistema Financeiro para Loja: Caixa e Resultado | SoftPay",
   description="Controle de caixa, entradas e saídas, e visão do resultado da loja. Entenda a diferença entre faturamento e lucro. Teste grátis por 7 dias.",
   h1="Controle financeiro da loja",
@@ -189,6 +197,8 @@ dict(
 
 dict(
   slug="solucoes/nfe",
+  figura=("/assets/lojistas/distribuidora.webp",
+          "Operação de distribuidora, onde a nota fiscal faz parte da rotina"),
   title="Sistema para Emitir NF-e (Nota Fiscal Eletrônica) | SoftPay",
   description="Emissão de NF-e com cadastro fiscal e pacote do contador. Planos a partir de R$ 65/mês. Teste grátis por 7 dias, sem cartão.",
   h1="Emissão de NF-e",
@@ -228,6 +238,8 @@ dict(
 
 dict(
   slug="solucoes/nfce",
+  figura=("/assets/lojistas/papelaria.webp",
+          "Atendente finalizando a venda no caixa da papelaria"),
   title="Sistema para Emitir NFC-e (Cupom Fiscal) | SoftPay",
   description="Emissão de NFC-e, o cupom fiscal eletrônico da venda no balcão, integrada ao PDV. Planos com emissão a partir de R$ 65/mês. Teste grátis 7 dias.",
   h1="Emissão de NFC-e",
@@ -267,6 +279,8 @@ dict(
 
 dict(
   slug="solucoes/loja-online",
+  figura=("/assets/lojistas/celular-balcao.webp",
+          "Mãos de um comerciante usando o celular sobre o balcão"),
   title="Loja Online com Catálogo e Pix | SoftPay",
   description="Loja online integrada ao seu estoque, com catálogo, pagamento por Pix e confirmação automática do pedido. A partir do plano Loja. Teste grátis 7 dias.",
   h1="Loja online com Pix",
@@ -307,6 +321,8 @@ dict(
 
 dict(
   slug="solucoes/controle-de-clientes",
+  figura=("/assets/lojistas/loja-de-roupas.webp",
+          "Lojista atendendo com o tablet na mão numa loja de roupas"),
   title="Controle de Clientes e CRM para Loja | SoftPay",
   description="Cadastro de clientes com histórico de compras, base para fiado, cupons e fidelidade. Saiba quem volta a comprar. Teste grátis por 7 dias.",
   h1="Controle de clientes (CRM)",
@@ -346,6 +362,8 @@ dict(
 
 dict(
   slug="solucoes/bot-whatsapp",
+  figura=("/assets/lojistas/celular-balcao.webp",
+          "Comerciante registrando uma venda pelo celular no balcão"),
   title="Registre a Venda pelo WhatsApp | Bot do SoftPay",
   description="Registre venda, despesa, estoque e fiado mandando uma mensagem ou um áudio no WhatsApp. O SoftPay responde em segundos, sem você abrir o sistema.",
   h1="Registre a venda pelo WhatsApp",
@@ -433,6 +451,8 @@ dict(
 
 dict(
   slug="solucoes/multiplas-lojas",
+  figura=("/assets/lojistas/distribuidora.webp",
+          "Funcionário conferindo estoque no depósito da distribuidora"),
   title="Sistema para Múltiplas Lojas e Filiais | SoftPay",
   description="Controle de filiais na mesma conta, multi-login por funcionário e acesso de qualquer dispositivo. Até 10 usuários no ERP Completo. Teste grátis 7 dias.",
   h1="Múltiplas lojas e filiais",

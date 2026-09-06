@@ -28,7 +28,11 @@
 - [x] `canonical` em todas as páginas
 - [x] Metadata única em todas
 - [x] Open Graph em todas
-- [x] Schema em todas
+- [x] Schema em todas: WebPage, BreadcrumbList, FAQPage, Article e HowTo
+- [x] `og:image` específica nas páginas com foto
+- [x] Sitemap com extensão de imagem
+- [x] Fonte carregada sem bloquear render
+- [x] Preload da imagem LCP na home
 - [x] Página 404
 - [x] Redirect 301 de `/lp/` → `/`
 - [x] Políticas: termos, privacidade, reembolso
@@ -36,13 +40,17 @@
 - [ ] Google Search Console configurado — ver `SEARCH-CONSOLE.md`
 - [ ] Core Web Vitals medidos em campo
 
-## Verificação automática
-
-O script confere o que dá para conferir por máquina:
+## Ferramentas
 
 ```bash
-python3 tools/verifica.py
+python3 tools/build.py           # gera as páginas a partir de tools/c_*.py
+python3 tools/sitemap.py         # regenera o sitemap (com extensão de imagem)
+python3 tools/fingerprint.py     # versiona CSS/JS pelo hash do conteúdo
+python3 tools/verifica.py        # auditoria: estrutura, metadata, links, schema
+python3 tools/mapa_interlinks.py # regenera o mapa de links
 ```
+
+O `verifica.py` confere o que dá para conferir por máquina:
 
 Ele valida, nas 48 páginas: estrutura HTML balanceada, `H1` único, links
 internos quebrados, duplicatas de `title`/`description`/`H1`, e se cada
