@@ -124,7 +124,7 @@
     --spacing-xl: 3rem;
     --spacing-2xl: 4.5rem;
     --spacing-3xl: 7rem;
-    --section-y: clamp(3.5rem, 2.2rem + 5.5vw, 7rem);
+    --section-y: clamp(2.5rem, 1.7rem + 3.4vw, 4.5rem);
 
     /* --- Raio: contido, não arredondado demais --- */
     --radius-sm: 0.375rem;
@@ -4982,4 +4982,141 @@ body {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* =====================================================================
+   RITMO VERTICAL — correção do espaçamento duplicado
+   As seções .section-block controlam o próprio respiro pelo container
+   interno. Sem zerar o padding do <section>, elas somavam o padding
+   global de 7rem ao do container: 224px de cada lado, ou seja quase
+   450px de vão entre duas seções seguidas.
+   ===================================================================== */
+.section-block {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* O bloco arredondado não precisa de margem embaixo E do padding da
+   seção seguinte: uma margem só, entre blocos. */
+.section-block + .section-block {
+    margin-top: 0;
+}
+
+/* As seções sem .section-block usam o ritmo padrão, uma vez só */
+.insight,
+.split,
+.decision,
+.trust,
+.support,
+.testimonials,
+.showcase,
+.cta-section {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+}
+
+/* Duas seções seguidas com o mesmo fundo viram um bloco só: sem a costura
+   dupla de padding no meio, o espaço entre elas é o de uma seção. */
+.split + .split,
+.trust + .trust {
+    padding-top: 0;
+}
+
+/* ---------- Fecha os vazios que sobravam ---------- */
+
+/* O cabeçalho de seção separava demais o título do conteúdo */
+.section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Blocos divididos: a coluna visual era estreita e sobrava faixa vazia
+   ao lado. Agora as duas colunas dividem o espaço de forma equilibrada. */
+.split-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.stat-card {
+    padding: clamp(1.25rem, 2.5vw, 1.85rem);
+}
+
+/* O cartão de exemplo ficava pequeno no meio de uma seção larga */
+.insight-card {
+    max-width: 720px;
+    padding: clamp(1.25rem, 2.5vw, 1.85rem);
+}
+
+.insight .section-header,
+.decision .section-header {
+    margin-bottom: var(--spacing-md);
+}
+
+/* Grades internas mais próximas */
+.decision-steps,
+.trust-grid {
+    gap: clamp(0.85rem, 1.6vw, 1.15rem);
+}
+
+.decision-step,
+.trust-card {
+    padding: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+/* Demonstração e depoimentos ocupavam altura demais para o conteúdo */
+.showcase-grid {
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.testimonials .section-header {
+    margin-bottom: var(--spacing-md);
+}
+
+/* O rodapé começava longe demais do último bloco */
+.footer {
+    padding-top: var(--section-y);
+}
+
+/* Última seção antes do rodapé não precisa do respiro de baixo inteiro */
+.cta-section {
+    padding-bottom: calc(var(--section-y) * 0.8);
+}
+
+/* ---------- Abas: equilíbrio entre as colunas ---------- */
+.display-tabs {
+    grid-template-columns: minmax(200px, 0.75fr) minmax(0, 1.25fr);
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    align-items: start;
+}
+
+/* Sem altura mínima, a seção pulava de tamanho a cada troca de aba */
+.display-panel {
+    min-height: 160px;
+}
+
+.capsule-cloud {
+    gap: 0.65rem;
+}
+
+.capsule {
+    padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+    font-size: var(--text-sm);
+}
+
+.capsule-icon {
+    width: 38px;
+    height: 38px;
+}
+
+.capsule-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.panel-note {
+    margin-top: var(--spacing-sm);
+}
+
+/* A seção de conteúdo no fim não precisa de dois blocos escuros seguidos */
+#conteudo-seo {
+    padding-top: var(--section-y);
 }
