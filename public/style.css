@@ -5351,3 +5351,78 @@ body {
     color: var(--color-gray-400);
     white-space: nowrap;
 }
+
+/* ---------- Anúncio de novidade no topo da hero ---------- */
+.hero-announce {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.35rem 0.9rem 0.35rem 0.4rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    border: 1px solid var(--brand-200);
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    color: var(--color-ink);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+                border-color var(--transition-fast);
+}
+
+.hero-announce:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--brand-400);
+}
+
+.hero-announce-tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.hero-announce-text {
+    font-weight: 600;
+}
+
+.hero-announce-go {
+    color: var(--brand-600);
+    transition: transform var(--transition-fast);
+}
+
+.hero-announce:hover .hero-announce-go {
+    transform: translateX(3px);
+}
+
+/* A oferta desceu para junto dos botões, onde ela pesa na decisão */
+.hero-offer {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: -1rem 0 1.5rem;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--brand-700);
+}
+
+.hero-offer svg {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 560px) {
+    .hero-announce {
+        gap: 0.45rem;
+        padding-right: 0.7rem;
+        font-size: var(--text-xs);
+    }
+    .hero-announce-text {
+        line-height: 1.3;
+    }
+}
