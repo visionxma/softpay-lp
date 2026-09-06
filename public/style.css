@@ -2929,15 +2929,39 @@ section {
         padding: var(--spacing-lg) 0 var(--spacing-2xl);
     }
 
+    /* Antes os links eram escondidos no mobile e sobrava só o CTA — as
+       páginas internas não têm menu hamburger, então quem chegava pela
+       busca no celular ficava sem navegação. Agora a barra rola na
+       horizontal e todo link continua alcançável. */
     .nav-menu--simple {
-        gap: 0.6rem;
+        gap: 0.35rem;
         font-size: 0.85rem;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        margin-left: 0.5rem;
+        padding-bottom: 2px;
+        -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+        mask-image: linear-gradient(90deg, #000 88%, transparent);
     }
 
-    .nav-menu--simple li:not(:last-child) {
+    .nav-menu--simple::-webkit-scrollbar {
         display: none;
+    }
+
+    .nav-menu--simple li {
+        flex: 0 0 auto;
+    }
+
+    .nav-menu--simple .nav-link {
+        white-space: nowrap;
+        padding: 0.35rem 0.5rem;
+    }
+
+    .nav-menu--simple .btn-nav-cta {
+        padding: 0.5rem 0.85rem;
     }
 
     .page-cta,
@@ -4379,4 +4403,226 @@ body {
 .hero-text > * {
     opacity: 1;
     animation: none;
+}
+
+/* ---------- Header e colunas laterais: acabamento ---------- */
+.navbar--solid .nav-wrapper {
+    min-height: 68px;
+    gap: var(--spacing-md);
+}
+
+.navbar--solid .logo-img {
+    height: 34px;
+    width: auto;
+}
+
+.navbar--solid .nav-link {
+    position: relative;
+    padding: 0.4rem 0.1rem;
+    color: var(--color-gray-700);
+    font-weight: 550;
+}
+
+/* sublinhado que cresce no hover, sem deslocar o texto */
+.navbar--solid .nav-link:not(.btn-nav-cta)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--brand-500);
+    transition: right var(--transition-base);
+}
+
+.navbar--solid .nav-link:not(.btn-nav-cta):hover::after {
+    right: 0;
+}
+
+.nav-menu--simple {
+    gap: var(--spacing-md);
+}
+
+/* As colunas laterais (abas e FAQ) acompanham a rolagem, mas precisam
+   respeitar a altura do header fixo para não ficarem por baixo dele. */
+.display-tablist,
+.faq--split .faq-aside {
+    top: calc(68px + var(--spacing-md));
+}
+
+/* Só gruda quando há altura sobrando; em tela baixa atrapalha mais que ajuda */
+@media (max-height: 640px) {
+    .display-tablist,
+    .faq--split .faq-aside {
+        position: static;
+    }
+}
+
+.faq--split .faq-aside .section-title {
+    margin-bottom: 0.6rem;
+}
+
+/* ---------- Correções de sobreposição e ritmo ---------- */
+
+/* O CTA fixo e o botão do WhatsApp dividiam o mesmo canto e se sobrepunham.
+   O WhatsApp fica no canto; o CTA senta à esquerda dele. */
+.float-cta {
+    right: calc(clamp(1rem, 2vw, 1.75rem) + 76px);
+}
+
+/* Em telas estreitas nenhum dos dois flutuantes deve competir com a barra
+   fixa do rodapé — o CTA já sai, e o WhatsApp sobe um pouco. */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 84px;
+    }
+}
+
+/* O cabeçalho da página respirava demais antes do primeiro título */
+.page-header {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+}
+
+.page-section:first-of-type {
+    margin-top: 0;
+}
+
+.page-section {
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Respiro do CTA do header até a borda */
+.navbar--solid .container {
+    padding-right: clamp(1.15rem, 4vw, 2.25rem);
+}
+
+/* Existe uma regra global `section { padding: 7rem 0 }`, pensada para as
+   faixas da home. As páginas internas usam <section> como bloco de texto
+   dentro de um artigo — herdar 112px no topo de cada uma abria vãos
+   enormes entre parágrafos. Aqui o espaçamento é de artigo, não de faixa. */
+.page .page-section,
+.page .page-faq,
+.page .page-related {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.page .page-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.page .page-faq {
+    margin: var(--spacing-2xl) 0;
+}
+
+.page .page-related {
+    margin-top: var(--spacing-2xl);
+}
+
+.page .page-cta {
+    padding: var(--spacing-xl);
+    margin: var(--spacing-2xl) 0;
+}
+
+/* ---------- Par de painéis: etiqueta, preço e link claro ---------- */
+.panel-tag {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-pill);
+    background: var(--brand-100);
+    color: var(--brand-700);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.panel-tag--light {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--brand-200);
+}
+
+.plan-panel-inner {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.panel-price {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    letter-spacing: -0.03em;
+    color: var(--brand-800);
+    line-height: 1;
+}
+
+.panel-price span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+.plan-panel--dark .panel-price {
+    color: var(--color-white);
+}
+
+.plan-panel--dark .panel-price span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.panel-price-note {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+}
+
+.plan-panel--dark .panel-price-note {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.link-arrow--light {
+    color: var(--brand-200);
+}
+
+.plan-panel .link-arrow {
+    align-self: flex-start;
+}
+
+/* Os painéis empurram o CTA para baixo, mantendo os dois alinhados */
+.plan-panel-list {
+    flex: 1;
+}
+
+/* A seção .benefits tinha fundo escuro e pintava título, subtítulo e
+   etiqueta de branco. Agora ela é um bloco claro com o par de painéis —
+   sem isto, o título e a lista do painel claro ficam invisíveis. */
+.benefits.soft-block {
+    background: var(--surface-tint-soft);
+    color: var(--color-ink);
+}
+
+.benefits.soft-block .section-title {
+    color: var(--brand-800);
+}
+
+.benefits.soft-block .section-subtitle {
+    color: var(--color-muted);
+}
+
+.benefits.soft-block .section-label {
+    background: var(--color-white);
+    border: 1px solid var(--border);
+    color: var(--brand-600);
+}
+
+.benefits.soft-block .plan-panel--light .plan-panel-list li {
+    color: var(--color-gray-700);
+}
+
+.benefits.soft-block .plan-panel--light .plan-panel-list strong {
+    color: var(--color-ink);
 }
