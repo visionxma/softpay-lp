@@ -54,8 +54,12 @@
     /* --- Superfícies --- */
     --surface: #FFFFFF;
     --surface-alt: #F7F9FB;
-    --surface-brand: #EFF8FE;
-    --surface-dark: #0F1B2D;
+    --surface-brand: #EAF5FE;
+    /* Fundo monocromático clarinho: base das seções em bloco */
+    --surface-tint: #EAF6FF;
+    --surface-tint-soft: #F5FBFF;
+    --surface-dark: #0B3A5C;
+    --surface-darker: #072B45;
     --border: #E1E7EE;
     --border-strong: #CBD5E1;
 
@@ -81,7 +85,10 @@
        Inter é uma grotesk desenhada para tela e para texto corrido — o site
        tem guias longos, e a Poppins (geométrica) cansa nesse volume.
        A Poppins fica como fallback para não quebrar caso a Inter não carregue. */
-    --font-primary: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Display condensada e pesada: é ela que dá a personalidade dos títulos.
+       Usada sempre em caixa alta, como assinatura visual. */
+    --font-display: 'Anton', 'Archivo Black', 'Inter', Impact, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
 
     /* Escala fluida: cresce com a viewport sem media query */
@@ -94,6 +101,10 @@
     --text-2xl: clamp(1.45rem, 1.24rem + 1.05vw, 2.05rem);
     --text-3xl: clamp(1.75rem, 1.38rem + 1.85vw, 2.85rem);
     --text-4xl: clamp(2.1rem, 1.5rem + 3vw, 3.9rem);
+    /* Display: títulos de seção e hero */
+    --display-md: clamp(2rem, 1.3rem + 3.4vw, 3.4rem);
+    --display-lg: clamp(2.5rem, 1.4rem + 5.4vw, 5.2rem);
+    --display-xl: clamp(2.9rem, 1.3rem + 7.6vw, 7rem);
 
     --leading-tight: 1.12;
     --leading-snug: 1.28;
@@ -120,6 +131,8 @@
     --radius-lg: 0.875rem;
     --radius-xl: 1.125rem;
     --radius-2xl: 1.5rem;
+    --radius-3xl: 2.5rem;
+    --radius-block: clamp(1.75rem, 3vw, 3rem);
     --radius-pill: 999px;
 
     /* --- Transições --- */
@@ -3553,4 +3566,478 @@ body {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* =====================================================================
+   LINGUAGEM VISUAL
+   Display condensada em caixa alta, cápsulas, esteiras horizontais,
+   abas em tipografia gigante e blocos com cantos muito arredondados.
+   ===================================================================== */
+
+/* ---------- Títulos display ---------- */
+.hero-title .title-main,
+.section-title,
+.pricing-title-new,
+.cta-title,
+.split-title,
+.support-title,
+.display,
+.page-title {
+    font-family: var(--font-display);
+    font-weight: 400;           /* a Anton só tem um peso, já é pesada */
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    line-height: 0.93;
+    color: var(--brand-800);
+}
+
+.hero-title .title-main {
+    font-size: var(--display-xl);
+    display: block;
+}
+
+.section-title,
+.pricing-title-new,
+.split-title,
+.support-title {
+    font-size: var(--display-md);
+}
+
+.cta-title {
+    font-size: var(--display-lg);
+}
+
+.page-title {
+    font-size: var(--display-md);
+    line-height: 0.96;
+}
+
+/* Sobre fundo escuro o título fica branco */
+.cta-section .cta-title,
+.support .support-title,
+.page-cta h2,
+.dark-block .section-title {
+    color: var(--color-white);
+}
+
+/* ---------- Blocos de seção arredondados ---------- */
+.section-block {
+    border-radius: var(--radius-block);
+    margin: 0 clamp(0.5rem, 1.5vw, 1.25rem) clamp(0.75rem, 2vw, 1.5rem);
+    overflow: hidden;
+}
+
+.tint-block {
+    background: var(--surface-tint);
+}
+
+.soft-block {
+    background: var(--surface-tint-soft);
+}
+
+.dark-block {
+    background: var(--surface-darker);
+    color: var(--color-white);
+}
+
+.dark-block .section-subtitle,
+.dark-block p {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* ---------- Cápsula: o componente central ---------- */
+.capsule {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.6rem 1.5rem 0.6rem 0.6rem;
+    background: var(--color-white);
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    color: var(--brand-800);
+    font-weight: 600;
+    font-size: var(--text-md);
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(8, 77, 124, 0.06);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.capsule:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(8, 77, 124, 0.12);
+}
+
+.capsule-icon {
+    flex: 0 0 auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--surface-tint);
+    color: var(--brand-600);
+}
+
+.capsule-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Cápsula de foto: a imagem assume o próprio formato de cápsula */
+.capsule-photo {
+    flex: 0 0 auto;
+    height: 78px;
+    width: 190px;
+    border-radius: var(--radius-pill);
+    overflow: hidden;
+    background: var(--surface-tint);
+}
+
+.capsule-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- Esteira horizontal ---------- */
+.marquee {
+    overflow: hidden;
+    padding: 0.55rem 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 44s) linear infinite;
+}
+
+.marquee--reverse .marquee-track {
+    animation-direction: reverse;
+}
+
+.marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+        animation: none;
+        flex-wrap: wrap;
+        width: auto;
+        justify-content: center;
+    }
+    .marquee {
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+}
+
+/* ---------- Abas em tipografia display ---------- */
+.display-tabs {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.9fr) 1.6fr;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    align-items: start;
+}
+
+.display-tablist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    position: sticky;
+    top: 92px;
+}
+
+.display-tab {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3.4vw, 3rem);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.005em;
+    text-align: left;
+    background: none;
+    border: 0;
+    padding: 0.1rem 0;
+    cursor: pointer;
+    /* Estado fantasma. Não pode ser claro demais: é um botão que a pessoa
+       precisa conseguir ler para escolher. #3E8CC0 dá 3.52:1 sobre o fundo,
+       e o ativo (8.5:1) continua muito mais forte — o efeito se mantém. */
+    color: #3E8CC0;
+    transition: color var(--transition-base);
+}
+
+.display-tab:hover {
+    color: var(--brand-600);
+}
+
+.display-tab[aria-selected="true"] {
+    color: var(--brand-800);
+}
+
+.display-panel[hidden] {
+    display: none;
+}
+
+.display-panel {
+    animation: tabIn var(--transition-base) both;
+}
+
+.capsule-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.panel-note {
+    margin-top: var(--spacing-md);
+    color: var(--color-muted);
+    font-size: var(--text-md);
+    line-height: var(--leading-relaxed);
+    max-width: 52ch;
+}
+
+@media (max-width: 860px) {
+    .display-tabs {
+        grid-template-columns: 1fr;
+    }
+    .display-tablist {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+    }
+    .display-tab {
+        font-size: clamp(1.3rem, 6vw, 1.9rem);
+    }
+}
+
+/* ---------- FAQ em duas colunas com linhas ---------- */
+.faq--split .faq-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.85fr) 1.5fr;
+    gap: clamp(1.5rem, 4vw, 4rem);
+    align-items: start;
+}
+
+.faq--split .faq-aside {
+    position: sticky;
+    top: 92px;
+}
+
+.faq--split .faq-list {
+    max-width: none;
+    display: block;
+    border-top: 1px solid var(--border);
+}
+
+.faq--split .faq-item {
+    background: none;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.faq--split .faq-item[open] {
+    box-shadow: none;
+    border-color: var(--border);
+}
+
+.faq--split .faq-question {
+    padding: 1.35rem 3rem 1.35rem 0;
+    font-size: var(--text-lg);
+    font-weight: 600;
+}
+
+/* "+" que vira "−" ao abrir, no lugar da seta */
+.faq--split .faq-question::after {
+    content: "";
+    top: 50%;
+    right: 0.25rem;
+    width: 15px;
+    height: 15px;
+    border: 0;
+    transform: translateY(-50%);
+    background:
+        linear-gradient(var(--brand-700), var(--brand-700)) center/100% 2px no-repeat,
+        linear-gradient(var(--brand-700), var(--brand-700)) center/2px 100% no-repeat;
+    transition: transform var(--transition-base), background-size var(--transition-base);
+}
+
+.faq--split .faq-item[open] .faq-question::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    background:
+        linear-gradient(var(--brand-700), var(--brand-700)) center/100% 2px no-repeat,
+        linear-gradient(var(--brand-700), var(--brand-700)) center/0 100% no-repeat;
+}
+
+.faq--split .faq-answer {
+    padding: 0 3rem 1.35rem 0;
+}
+
+@media (max-width: 860px) {
+    .faq--split .faq-layout {
+        grid-template-columns: 1fr;
+    }
+    .faq--split .faq-aside {
+        position: static;
+    }
+}
+
+/* ---------- Par de planos claro / escuro ---------- */
+.plan-duo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.plan-panel {
+    border-radius: var(--radius-3xl);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.plan-panel--light {
+    background: var(--surface-tint-soft);
+    border: 1px solid var(--brand-100);
+}
+
+.plan-panel--dark {
+    background: var(--surface-darker);
+    color: var(--color-white);
+}
+
+.plan-panel h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: clamp(1.7rem, 3.4vw, 2.6rem);
+    line-height: 0.95;
+    color: var(--brand-800);
+}
+
+.plan-panel--dark h3 {
+    color: var(--color-white);
+}
+
+.plan-panel--dark .plan-panel-desc {
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.plan-panel-desc {
+    color: var(--color-muted);
+    line-height: var(--leading-relaxed);
+}
+
+.plan-panel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
+}
+
+.plan-panel-list li {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+}
+
+.plan-panel--dark .plan-panel-list li {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.plan-panel-list svg {
+    flex: 0 0 auto;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    color: var(--brand-500);
+}
+
+.plan-panel--dark .plan-panel-list svg {
+    color: var(--brand-300);
+}
+
+.plan-panel-inner {
+    background: var(--color-white);
+    border-radius: var(--radius-2xl);
+    padding: var(--spacing-md);
+}
+
+.plan-panel--dark .plan-panel-inner {
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.plan-panel .btn {
+    align-self: flex-start;
+    border-radius: var(--radius-pill);
+}
+
+/* ---------- CTA flutuante ---------- */
+.float-cta {
+    position: fixed;
+    right: clamp(1rem, 2vw, 1.75rem);
+    bottom: clamp(1rem, 2vw, 1.75rem);
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.95rem 1.6rem;
+    border-radius: var(--radius-pill);
+    background: var(--gradient-primary);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    box-shadow: var(--shadow-xl);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.float-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(8, 92, 151, 0.4);
+}
+
+/* No mobile o CTA fixo do rodapé já cumpre esse papel */
+@media (max-width: 768px) {
+    .float-cta { display: none; }
+}
+
+/* ---------- Faixa de fotos coladas ---------- */
+.photo-strip {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(160px, 1fr);
+    height: clamp(140px, 20vw, 260px);
+    overflow: hidden;
+}
+
+.photo-strip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ---------- Números grandes em display ---------- */
+.stat-value {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    letter-spacing: 0.005em;
 }

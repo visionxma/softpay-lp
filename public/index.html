@@ -36,9 +36,9 @@
     <meta name="twitter:image" content="https://site.softpaybr.com/assets/COmputador.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=bc76074a1d" />
+    <link rel="stylesheet" href="style.css?v=cce81909e7" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -619,6 +619,89 @@
     <!-- Barra de números. ATENÇÃO: só entram aqui dados verificáveis.
          "Mais de 100 lojistas" é a afirmação já usada no site — [VALIDAR] o
          número real. Os demais são fatos do produto e da oferta. -->
+    <!-- Esteira de recursos: cápsulas em fileiras que correm em sentidos
+         alternados. Pausa no hover e vira grade estática quando o sistema
+         pede menos movimento. É decorativa (aria-hidden): a lista real de
+         recursos, acessível e rastreável, está em /solucoes/. -->
+    <section id="recursos" class="section-block tint-block" aria-labelledby="recursos-titulo">
+        <div style="padding: var(--section-y) 0;">
+            <div class="container">
+                <h2 class="section-title" id="recursos-titulo" style="text-align:center; margin-bottom:2.5rem;">O sistema da sua loja</h2>
+            </div>
+                <div class="marquee" style="--marquee-duration: 46s" aria-hidden="true">
+                    <div class="marquee-track">
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M7 20h10"></path><path d="M12 16v4"></path></svg></span>PDV</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"></path><path d="M3 7l9 4 9-4"></path><path d="M12 11v10"></path></svg></span>Estoque</span>
+                        <span class="capsule-photo"><img src="assets/celular.webp" alt="SoftPay no celular" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle></svg></span>Caixa</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></span>Fiado</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" alt="Naldo Bebidas, distribuidora que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M17 11a3 3 0 1 0 0-6"></path><path d="M18 20a6 6 0 0 0-3-5.2"></path></svg></span>Clientes</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19V9"></path><path d="M10 19V5"></path><path d="M16 19v-7"></path><path d="M3 19h18"></path></svg></span>Curva ABC</span>
+                        <span class="capsule-photo"><img src="assets/celular.webp" alt="SoftPay no celular" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M7 20h10"></path><path d="M12 16v4"></path></svg></span>PDV</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"></path><path d="M3 7l9 4 9-4"></path><path d="M12 11v10"></path></svg></span>Estoque</span>
+                        <span class="capsule-photo"><img src="assets/celular.webp" alt="SoftPay no celular" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle></svg></span>Caixa</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></span>Fiado</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" alt="Naldo Bebidas, distribuidora que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M17 11a3 3 0 1 0 0-6"></path><path d="M18 20a6 6 0 0 0-3-5.2"></path></svg></span>Clientes</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19V9"></path><path d="M10 19V5"></path><path d="M16 19v-7"></path><path d="M3 19h18"></path></svg></span>Curva ABC</span>
+                        <span class="capsule-photo"><img src="assets/celular.webp" alt="SoftPay no celular" loading="lazy" decoding="async" /></span>
+                    </div>
+                </div>
+                <div class="marquee marquee--reverse" style="--marquee-duration: 53s" aria-hidden="true">
+                    <div class="marquee-track">
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg></span>Loja online</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l4.5 4.5L12 12 7.5 7.5z"></path><path d="M12 12l4.5 4.5L12 21l-4.5-4.5z"></path></svg></span>Pix na loja</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/rngrifes/WhatsApp Image 2026-05-01 at 18.56.53.jpeg" alt="Fachada da RN Grifes, loja que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="7" height="7" rx="1.2"></rect><rect x="14" y="4" width="7" height="7" rx="1.2"></rect><rect x="3" y="14" width="7" height="7" rx="1.2"></rect><rect x="14" y="14" width="7" height="7" rx="1.2"></rect></svg></span>Catálogo</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"></path><path d="M14 8v8"></path></svg></span>Cupons</span>
+                        <span class="capsule-photo"><img src="assets/COmputador.webp" alt="SoftPay no computador do balcão" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-6.2-8.6"></path><path d="M21 4v6h-6"></path></svg></span>CRM</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h14v18H5z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path><path d="M9 16h3"></path></svg></span>Relatórios</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/rngrifes/WhatsApp Image 2026-05-01 at 18.56.53.jpeg" alt="Fachada da RN Grifes, loja que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"></path></svg></span>Loja online</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l4.5 4.5L12 12 7.5 7.5z"></path><path d="M12 12l4.5 4.5L12 21l-4.5-4.5z"></path></svg></span>Pix na loja</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/rngrifes/WhatsApp Image 2026-05-01 at 18.56.53.jpeg" alt="Fachada da RN Grifes, loja que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="7" height="7" rx="1.2"></rect><rect x="14" y="4" width="7" height="7" rx="1.2"></rect><rect x="3" y="14" width="7" height="7" rx="1.2"></rect><rect x="14" y="14" width="7" height="7" rx="1.2"></rect></svg></span>Catálogo</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"></path><path d="M14 8v8"></path></svg></span>Cupons</span>
+                        <span class="capsule-photo"><img src="assets/COmputador.webp" alt="SoftPay no computador do balcão" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-6.2-8.6"></path><path d="M21 4v6h-6"></path></svg></span>CRM</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h14v18H5z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path><path d="M9 16h3"></path></svg></span>Relatórios</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/rngrifes/WhatsApp Image 2026-05-01 at 18.56.53.jpeg" alt="Fachada da RN Grifes, loja que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                    </div>
+                </div>
+                <div class="marquee" style="--marquee-duration: 60s" aria-hidden="true">
+                    <div class="marquee-track">
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h9l5 5v13H5z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h4"></path></svg></span>NF-e</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6"></path><path d="M9 12h4"></path></svg></span>NFC-e</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" alt="Naldo Bebidas, distribuidora que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></span>Multi-login</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18"></path><path d="M5 21V8l7-4 7 4v13"></path><path d="M10 21v-5h4v5"></path></svg></span>Filiais</span>
+                        <span class="capsule-photo"><img src="assets/celular.webp" alt="SoftPay no celular" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg></span>Backup</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></span>Celular</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" alt="Naldo Bebidas, distribuidora que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 9h18l-1.5-5H4.5z"></path><path d="M4 9v11h16V9"></path><path d="M9 20v-6h6v6"></path></svg></span>Atacado e varejo</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h9l5 5v13H5z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h4"></path></svg></span>NF-e</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"></path><path d="M9 8h6"></path><path d="M9 12h4"></path></svg></span>NFC-e</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" alt="Naldo Bebidas, distribuidora que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></span>Multi-login</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18"></path><path d="M5 21V8l7-4 7 4v13"></path><path d="M10 21v-5h4v5"></path></svg></span>Filiais</span>
+                        <span class="capsule-photo"><img src="assets/celular.webp" alt="SoftPay no celular" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="8" ry="3"></ellipse><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"></path><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"></path></svg></span>Backup</span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="2.5"></rect><path d="M11 18h2"></path></svg></span>Celular</span>
+                        <span class="capsule-photo"><img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" alt="Naldo Bebidas, distribuidora que usa o SoftPay" loading="lazy" decoding="async" /></span>
+                        <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 9h18l-1.5-5H4.5z"></path><path d="M4 9v11h16V9"></path><path d="M9 20v-6h6v6"></path></svg></span>Atacado e varejo</span>
+                    </div>
+                </div>
+            <div class="container" style="text-align:center; margin-top:2.5rem;">
+                <a href="/solucoes/" class="btn btn-secondary">Ver todos os recursos</a>
+            </div>
+        </div>
+    </section>
+
     <section class="stats-bar" aria-label="O SoftPay em números">
         <div class="container">
             <div class="stats-grid">
@@ -1097,83 +1180,65 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
+    <section id="features" class="features section-block soft-block">
+        <div class="container" style="padding: var(--section-y) 0;">
+            <div class="section-header" style="text-align:left; margin-left:0; max-width:640px;">
                 <span class="section-label">Funcionalidades</span>
-                <h2 class="section-title">Tudo que você precisa em um só lugar</h2>
-                <p class="section-subtitle">
-                    Vendas, estoque, clientes e números conectados: o que você registra no
-                    balcão alimenta o resto do sistema sozinho.
+                <h2 class="section-title">Tudo que sua loja precisa</h2>
+                <p class="section-subtitle" style="margin-left:0;">
+                    Escolha uma área e veja o que entra nela.
                 </p>
             </div>
 
-            <div class="tabs">
-                <div class="tablist" role="tablist" aria-label="Áreas do sistema">
-                        <button class="tab" id="aba-venda" role="tab" aria-controls="painel-venda" aria-selected="true" tabindex="0">Venda e caixa</button>
-                        <button class="tab" id="aba-estoque" role="tab" aria-controls="painel-estoque" aria-selected="false" tabindex="-1">Produtos e estoque</button>
-                        <button class="tab" id="aba-clientes" role="tab" aria-controls="painel-clientes" aria-selected="false" tabindex="-1">Clientes</button>
-                        <button class="tab" id="aba-gestao" role="tab" aria-controls="painel-gestao" aria-selected="false" tabindex="-1">Gestão e números</button>
+            <div class="display-tabs">
+                <div class="display-tablist" role="tablist" aria-label="Áreas do sistema">
+                        <button class="display-tab" id="aba-venda" role="tab" aria-controls="painel-venda" aria-selected="true" tabindex="0">Vendas</button>
+                        <button class="display-tab" id="aba-estoque" role="tab" aria-controls="painel-estoque" aria-selected="false" tabindex="-1">Estoque</button>
+                        <button class="display-tab" id="aba-clientes" role="tab" aria-controls="painel-clientes" aria-selected="false" tabindex="-1">Clientes</button>
+                        <button class="display-tab" id="aba-gestao" role="tab" aria-controls="painel-gestao" aria-selected="false" tabindex="-1">Gestão</button>
                 </div>
-                    <div class="tabpanel" id="painel-venda" role="tabpanel" aria-labelledby="aba-venda">
-                        <div class="tabpanel-grid">
-                        <article class="feature-card">
-                            <h3 class="feature-title">PDV</h3>
-                            <p class="feature-description">Ponto de venda ágil com múltiplas formas de pagamento e fechamento de caixa.</p>
-                        </article>
-                        <article class="feature-card">
-                            <h3 class="feature-title">Cupom</h3>
-                            <p class="feature-description">Crie e gerencie cupons de desconto para suas campanhas e promoções.</p>
-                        </article>
-                        <article class="feature-card">
-                            <h3 class="feature-title">Atacado e Varejo</h3>
-                            <p class="feature-description">Tabelas de preço diferenciadas para atacado e varejo em um só sistema.</p>
-                        </article>
+                <div>
+                    <div class="display-panel" id="painel-venda" role="tabpanel" aria-labelledby="aba-venda">
+                        <div class="capsule-cloud">
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M7 20h10"></path><path d="M12 16v4"></path></svg></span>PDV</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2.5"></circle></svg></span>Caixa</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"></path></svg></span>Cupom</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 9h18l-1.5-5H4.5z"></path><path d="M4 9v11h16V9"></path><path d="M9 20v-6h6v6"></path></svg></span>Atacado e varejo</span>
                         </div>
+                        <p class="panel-note">Toda venda passa pelo balcão e alimenta estoque, caixa e relatórios sozinha — sem redigitar nada no fim do dia.</p>
                     </div>
-                    <div class="tabpanel" id="painel-estoque" role="tabpanel" aria-labelledby="aba-estoque" hidden>
-                        <div class="tabpanel-grid">
-                        <article class="feature-card">
-                            <h3 class="feature-title">Produtos</h3>
-                            <p class="feature-description">Cadastre e gerencie produtos com preços, categorias e variações.</p>
-                        </article>
-                        <article class="feature-card">
-                            <h3 class="feature-title">Estoque</h3>
-                            <p class="feature-description">Controle entradas e saídas com alertas automáticos de estoque baixo.</p>
-                        </article>
+                    <div class="display-panel" id="painel-estoque" role="tabpanel" aria-labelledby="aba-estoque" hidden>
+                        <div class="capsule-cloud">
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"></path><path d="M3 7l9 4 9-4"></path></svg></span>Produtos</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"></path><path d="M12 11v10"></path></svg></span>Estoque</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.2"></rect><rect x="14" y="3" width="7" height="7" rx="1.2"></rect><rect x="3" y="14" width="7" height="7" rx="1.2"></rect></svg></span>Variações</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 19V9"></path><path d="M10 19V5"></path><path d="M16 19v-7"></path><path d="M3 19h18"></path></svg></span>Curva ABC</span>
                         </div>
+                        <p class="panel-note">Custo e quantidade cadastrados transformam “acho que tem” em um número. A curva ABC mostra o que gira e o que está parado.</p>
                     </div>
-                    <div class="tabpanel" id="painel-clientes" role="tabpanel" aria-labelledby="aba-clientes" hidden>
-                        <div class="tabpanel-grid">
-                        <article class="feature-card">
-                            <h3 class="feature-title">Clientes</h3>
-                            <p class="feature-description">Cadastro completo de clientes com histórico de compras e contatos.</p>
-                        </article>
-                        <article class="feature-card">
-                            <h3 class="feature-title">CRM</h3>
-                            <p class="feature-description">Gerencie relacionamentos, follow-ups e oportunidades de venda com seus clientes.</p>
-                        </article>
+                    <div class="display-panel" id="painel-clientes" role="tabpanel" aria-labelledby="aba-clientes" hidden>
+                        <div class="capsule-cloud">
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path></svg></span>Clientes</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a9 9 0 1 1-6.2-8.6"></path><path d="M21 4v6h-6"></path></svg></span>CRM</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5h16v14H4z"></path><path d="M8 9h8"></path><path d="M8 13h5"></path></svg></span>Fiado</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.5 9.2l5.9-.9z"></path></svg></span>Fidelidade</span>
                         </div>
+                        <p class="panel-note">O cliente deixa de viver na memória de quem está no balcão: histórico, saldo de fiado e recompra no mesmo cadastro.</p>
                     </div>
-                    <div class="tabpanel" id="painel-gestao" role="tabpanel" aria-labelledby="aba-gestao" hidden>
-                        <div class="tabpanel-grid">
-                        <article class="feature-card">
-                            <h3 class="feature-title">Visão Geral</h3>
-                            <p class="feature-description">Painel completo com resumo de vendas, estoque e caixa em tempo real.</p>
-                        </article>
-                        <article class="feature-card">
-                            <h3 class="feature-title">Relatórios</h3>
-                            <p class="feature-description">Dashboards e relatórios detalhados de faturamento, lucro e desempenho.</p>
-                        </article>
-                        <article class="feature-card">
-                            <h3 class="feature-title">Configurações</h3>
-                            <p class="feature-description">Personalize o sistema e mantenha seus dados protegidos na nuvem.</p>
-                        </article>
+                    <div class="display-panel" id="painel-gestao" role="tabpanel" aria-labelledby="aba-gestao" hidden>
+                        <div class="capsule-cloud">
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="9" rx="1.2"></rect><rect x="14" y="3" width="7" height="5" rx="1.2"></rect><rect x="14" y="12" width="7" height="9" rx="1.2"></rect><rect x="3" y="16" width="7" height="5" rx="1.2"></rect></svg></span>Painel</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h14v18H5z"></path><path d="M9 8h6"></path><path d="M9 12h6"></path></svg></span>Relatórios</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h9l5 5v13H5z"></path><path d="M14 3v5h5"></path></svg></span>NF-e</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 20a7 7 0 0 1 14 0"></path></svg></span>Multi-login</span>
+                            <span class="capsule"><span class="capsule-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18"></path><path d="M5 21V8l7-4 7 4v13"></path></svg></span>Filiais</span>
                         </div>
+                        <p class="panel-note">Os números do mês, a nota fiscal e o acesso da equipe no mesmo lugar — inclusive com mais de uma loja.</p>
                     </div>
+                </div>
             </div>
 
-            <p class="faq-footer" style="margin-top:2rem">
+            <p class="faq-footer" style="margin-top:2.5rem; text-align:left">
                 Veja cada recurso em detalhe nas <a href="/solucoes/">páginas de solução</a>.
             </p>
         </div>
@@ -1418,13 +1483,14 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header">
+    <section id="faq" class="faq faq--split section-block soft-block">
+        <div class="container" style="padding: var(--section-y) 0;">
+          <div class="faq-layout">
+            <div class="faq-aside">
                 <span class="section-label">Perguntas frequentes</span>
-                <h2 class="section-title">Dúvidas de quem está avaliando o SoftPay</h2>
-                <p class="section-subtitle">
-                    Respostas diretas sobre preço, recursos, segurança e uso do sistema no dia a dia da loja.
+                <h2 class="section-title" style="margin-top:.85rem">Ficou com dúvida sobre o SoftPay?</h2>
+                <p class="section-subtitle" style="margin-left:0">
+                    Respostas diretas sobre preço, recursos, segurança e uso no dia a dia da loja.
                 </p>
             </div>
             <div class="faq-list">
@@ -1549,7 +1615,8 @@
                     <div class="faq-answer"><p>Não existe regra de tamanho. O que costuma indicar a necessidade é a perda de controle: estoque que ninguém sabe ao certo, fiado no caderno e dúvida sobre quanto a loja realmente ganhou no mês.</p></div>
                 </details>
             </div>
-            <p class="faq-footer">
+          </div>
+            <p class="faq-footer" style="margin-top:2rem">
                 Não achou sua dúvida?
                 <a href="https://wa.me/558698193851?text=Olá!%20Tenho%20uma%20dúvida%20sobre%20o%20SoftPay."
                     target="_blank" rel="noopener" data-track="whatsapp-support">Pergunte para o nosso suporte no WhatsApp.</a>
@@ -1685,6 +1752,10 @@
         </a>
     </div>
 
+    <!-- CTA fixo no canto (desktop). No mobile quem cumpre esse papel é a
+         barra fixa do rodapé, para não empilhar dois botões flutuantes. -->
+    <a href="https://www.softpaybr.com/auth" class="float-cta" data-track="complete-registration">Começar grátis</a>
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/558698193851?text=Olá!%20Tenho%20dúvidas%20sobre%20os%207%20dias%20grátis%20do%20SoftPay." target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Fale conosco no WhatsApp">
         <span class="whatsapp-bubble">Dúvida sobre os 7 dias grátis? Fale conosco!</span>
@@ -1695,7 +1766,7 @@
         </span>
     </a>
 
-    <script src="script.js?v=c5021297b4"></script>
+    <script src="script.js?v=1cbf08a1e4"></script>
 </body>
 
 </html>

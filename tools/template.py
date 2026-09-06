@@ -91,10 +91,14 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
             '            <div class="faq-answer"><p>%s</p></div>\n'
             '          </details>' % (esc(q), esc(a)) for q, a in faq)
         faq_html = '''
-      <section class="page-faq" id="perguntas">
-        <h2>Perguntas frequentes</h2>
-        <div class="faq-list">
+      <section class="page-faq faq--split" id="perguntas">
+        <div class="faq-layout">
+          <div class="faq-aside">
+            <h2>Perguntas frequentes</h2>
+          </div>
+          <div class="faq-list">
 %s
+          </div>
         </div>
       </section>
 ''' % itens_faq
@@ -142,9 +146,9 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css?v=bc76074a1d" />
+    <link rel="stylesheet" href="/style.css?v=cce81909e7" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -288,7 +292,9 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
         </span>
     </a>
 
-    <script src="/script.js?v=c5021297b4"></script>
+    <a href="%(app)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
+
+    <script src="/script.js?v=1cbf08a1e4"></script>
 </body>
 
 </html>

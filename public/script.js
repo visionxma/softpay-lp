@@ -454,14 +454,12 @@ window.ControleApp = {
     animateCounter
 };
 
-// ========== Abas de funcionalidades ==========
+// ========== Abas ==========
 // Padrão ARIA de tablist: clique, setas, Home e End.
-// Se o JS não rodar, o primeiro painel continua visível e os demais ficam
-// com [hidden] — a página não quebra, só perde a troca de abas.
-(function () {
-    var lista = document.querySelector('.tablist');
-    if (!lista) return;
-
+// Cobre tanto a lista em pílula quanto a versão em tipografia display.
+// Sem JS, o primeiro painel continua visível e os outros ficam com [hidden]:
+// a página não quebra, só perde a troca.
+document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista) {
     var abas = Array.prototype.slice.call(lista.querySelectorAll('[role="tab"]'));
     if (!abas.length) return;
 
@@ -484,8 +482,8 @@ window.ControleApp = {
         var atual = abas.indexOf(document.activeElement);
         if (atual === -1) return;
         var destino = null;
-        if (e.key === 'ArrowRight') destino = (atual + 1) % abas.length;
-        else if (e.key === 'ArrowLeft') destino = (atual - 1 + abas.length) % abas.length;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') destino = (atual + 1) % abas.length;
+        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') destino = (atual - 1 + abas.length) % abas.length;
         else if (e.key === 'Home') destino = 0;
         else if (e.key === 'End') destino = abas.length - 1;
         if (destino !== null) {
@@ -493,4 +491,4 @@ window.ControleApp = {
             seleciona(destino, true);
         }
     });
-})();
+});
