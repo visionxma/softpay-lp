@@ -5120,3 +5120,19 @@ body {
 #conteudo-seo {
     padding-top: var(--section-y);
 }
+
+/* Foto de contexto dentro de uma seção da home */
+.section-figure {
+    margin: 0 0 var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    line-height: 0;
+    max-width: 900px;
+    margin-inline: auto;
+}
+
+.section-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

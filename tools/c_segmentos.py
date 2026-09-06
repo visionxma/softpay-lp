@@ -11,17 +11,14 @@ PAGINAS = [
 # ---------------------------------------------------------------- MERCADINHO
 dict(
   slug="segmentos/mercadinho",
+  figura=("/assets/lojistas/mercadinho.webp",
+          "Dona de mercadinho embalando produtos atrás do balcão, com prateleiras de mercearia ao fundo"),
   title="Sistema para Mercadinho: PDV, Estoque e Fiado | SoftPay",
   description="Sistema para mercadinho com PDV rápido, controle de estoque de muitos itens, fechamento de caixa e caderninho de fiado. Teste grátis por 7 dias.",
   h1="Sistema para mercadinho",
   intro="Mercadinho é volume: muitos itens baratos, giro rápido e margem apertada. O SoftPay organiza a venda no balcão, o que está acabando na prateleira e o fiado dos clientes de sempre.",
   breadcrumbs=_c("Mercadinho"),
   blocks=[
-    '      <figure class="page-figure">\n'
-    '        <img src="/assets/lojistas/mercadinho.webp" width="1600" height="667"\n'
-    '             alt="Dona de mercadinho embalando produtos atrás do balcão, com prateleiras de mercearia ao fundo"\n'
-    '             loading="lazy" decoding="async" />\n'
-    '      </figure>',
     sec("A rotina de um mercadinho não perdoa lentidão",
       p("Fila no caixa em horário de pico, cliente esperando enquanto alguém procura o preço, o refrigerante que acabou sem ninguém perceber e o caderno de fiado que só uma pessoa sabe ler. Esses quatro problemas têm a mesma origem: a informação da loja não está em lugar nenhum além da cabeça de quem trabalha ali."),
       p("Um mercadinho de bairro chega a passar centenas de itens por dia. Sem registro, o dono termina a semana sabendo quanto entrou no caixa e sem a menor ideia de quanto sobrou."),
@@ -74,6 +71,8 @@ dict(
 # ------------------------------------------------------------ LOJA DE ROUPAS
 dict(
   slug="segmentos/loja-de-roupas",
+  figura=("/assets/lojistas/loja-de-roupas.webp",
+          "Lojista conferindo peças numa arara de roupas com um tablet na mão"),
   title="Sistema para Loja de Roupas: Grade, Estoque e Clientes | SoftPay",
   description="Sistema para loja de roupas com controle de estoque por tamanho e cor, PDV, cadastro de clientes e loja online. Teste grátis por 7 dias.",
   h1="Sistema para loja de roupas",
@@ -125,6 +124,8 @@ dict(
 # -------------------------------------------------------- LOJA DE VARIEDADES
 dict(
   slug="segmentos/loja-de-variedades",
+  figura=("/assets/lojistas/loja-de-variedades.webp",
+          "Dona de loja de variedades organizando produtos de utilidade doméstica na prateleira"),
   title="Sistema para Loja de Variedades e Bazar | SoftPay",
   description="Sistema para loja de variedades: centenas de produtos organizados por categoria, PDV rápido, controle de custo e curva ABC. Teste grátis por 7 dias.",
   h1="Sistema para loja de variedades",
@@ -179,6 +180,8 @@ dict(
 # ----------------------------------------------------------------- PAPELARIA
 dict(
   slug="segmentos/papelaria",
+  figura=("/assets/lojistas/papelaria.webp",
+          "Atendente de papelaria finalizando a venda no caixa, com material escolar ao fundo"),
   title="Sistema para Papelaria: PDV, Estoque e Atacado | SoftPay",
   description="Sistema para papelaria com PDV, controle de estoque, preço de atacado e varejo e emissão de cupom. Preparado para a volta às aulas. Teste grátis 7 dias.",
   h1="Sistema para papelaria",
@@ -229,6 +232,8 @@ dict(
 # ------------------------------------------------------------------ FARMACIA
 dict(
   slug="segmentos/farmacia",
+  figura=("/assets/lojistas/farmacia.webp",
+          "Atendente de farmácia usando o computador no balcão, com prateleiras de produtos ao fundo"),
   title="Sistema para Farmácia: Gestão Comercial e PDV | SoftPay",
   description="Sistema para farmácia com PDV, controle de estoque, caixa, clientes e notas fiscais. Gestão comercial do balcão. Teste grátis por 7 dias.",
   h1="Sistema para farmácia",
@@ -277,6 +282,8 @@ dict(
 # -------------------------------------------------------------- DISTRIBUIDORA
 dict(
   slug="segmentos/distribuidora",
+  figura=("/assets/lojistas/distribuidora.webp",
+          "Funcionário de distribuidora de bebidas conferindo estoque pelo celular entre engradados"),
   title="Sistema para Distribuidora: Atacado, Estoque e NF-e | SoftPay",
   description="Sistema para distribuidora com controle de estoque em volume, preço de atacado e varejo, emissão de NF-e e gestão de clientes. Teste grátis 7 dias.",
   h1="Sistema para distribuidora",
@@ -329,6 +336,8 @@ dict(
 # ---------------------------------------------------------- PEQUENO COMERCIO
 dict(
   slug="segmentos/pequeno-comercio",
+  figura=("/assets/lojistas/casal-comerciantes.webp",
+          "Casal de comerciantes olhando juntos a tela do computador atrás do balcão da loja"),
   title="Sistema para Pequeno Comércio e Loja Pequena | SoftPay",
   description="Sistema de gestão para pequeno comércio: PDV, estoque, caixa e fiado em um só lugar, simples de começar. Teste grátis por 7 dias, sem cartão.",
   h1="Sistema para pequeno comércio",

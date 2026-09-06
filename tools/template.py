@@ -24,7 +24,7 @@ def _json(obj, indent=2):
     return "\n".join("    " + l if l.strip() else l for l in s.split("\n"))
 
 
-def render(*, slug, title, description, h1, intro, blocks, faq=None,
+def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None,
            related=None, breadcrumbs=None, cta_title=None, cta_text=None,
            updated="2026-09-04"):
     """slug: caminho sem barras nas pontas, ex 'segmentos/mercadinho'."""
@@ -118,6 +118,14 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
       </section>
 ''' % li
 
+    # imagem de abertura, logo abaixo do cabeçalho da página
+    fig_html = ""
+    if figura:
+        fig_html = ('      <figure class="page-figure">\n'
+                    '        <img src="%s" width="1600" height="667" alt="%s"\n'
+                    '             fetchpriority="high" decoding="async" />\n'
+                    '      </figure>\n' % (figura[0], esc(figura[1])))
+
     corpo = "\n".join(blocks)
 
     return '''<!DOCTYPE html>
@@ -148,7 +156,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css?v=30aa6e64da" />
+    <link rel="stylesheet" href="/style.css?v=37ff8ffdc2" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -204,6 +212,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
           <p class="page-intro">%(intro)s</p>
         </header>
 
+%(fig)s
 %(corpo)s
 %(faq)s
         <aside class="page-cta">
@@ -299,7 +308,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
 
 </html>
 ''' % dict(title=esc(title), description=esc(description), url=url, base=BASE,
-           ld=ld, bc=bc_html, h1=h1, intro=intro, corpo=corpo, faq=faq_html,
+           ld=ld, bc=bc_html, h1=h1, intro=intro, corpo=corpo, faq=faq_html, fig=fig_html,
            rel=rel_html, app=APP, wpp=WPP,
            cta_title=esc(cta_title or "Experimente o SoftPay por 7 dias"),
            cta_text=esc(cta_text or ("Teste todos os recursos do plano sem cartão de crédito. "
