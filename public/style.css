@@ -4382,8 +4382,8 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-2xl);
+    /* Sem moldura: a imagem já traz o próprio enquadramento, e a borda
+       arredondada com sombra virava um retângulo branco solto atrás dela. */
 }
 
 @media (max-width: 900px) {
@@ -4625,4 +4625,347 @@ body {
 
 .benefits.soft-block .plan-panel--light .plan-panel-list strong {
     color: var(--color-ink);
+}
+
+/* ---------- Segmentos: cards compactos + destaque ---------- */
+.seg-grid {
+    display: grid;
+    /* 3 colunas fixas: com auto-fit dava 4+2 e sobrava um buraco na
+       segunda linha. Seis cards em três colunas fecham 3+3. */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+@media (max-width: 900px) {
+    .seg-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .seg-grid { grid-template-columns: 1fr; }
+}
+
+.seg-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "icone nome" "icone desc";
+    column-gap: 0.9rem;
+    row-gap: 0.25rem;
+    align-content: start;
+    padding: 1.15rem 2.25rem 1.15rem 1.15rem;
+    background: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    text-decoration: none;
+    transition: transform var(--transition-base), box-shadow var(--transition-base),
+                border-color var(--transition-base);
+}
+
+.seg-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--brand-200);
+}
+
+.seg-icon {
+    grid-area: icone;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    background: var(--surface-tint);
+    color: var(--brand-600);
+}
+
+.seg-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.seg-name {
+    grid-area: nome;
+    font-weight: 700;
+    font-size: var(--text-md);
+    color: var(--color-ink);
+    letter-spacing: -0.015em;
+}
+
+.seg-desc {
+    grid-area: desc;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+.seg-go {
+    position: absolute;
+    right: 1rem;
+    top: 1.3rem;
+    color: var(--brand-400);
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.seg-card:hover .seg-go {
+    opacity: 1;
+    transform: none;
+}
+
+/* O sétimo segmento vira destaque em largura total: sem ele, sobrava um
+   card órfão na última linha da grade. */
+.seg-feature {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: clamp(1rem, 2.5vw, 1.75rem);
+    margin-top: clamp(0.75rem, 1.5vw, 1rem);
+    padding: clamp(1.15rem, 2.5vw, 1.65rem);
+    border-radius: var(--radius-xl);
+    background: var(--surface-darker);
+    color: var(--color-white);
+    text-decoration: none;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.seg-feature:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+}
+
+.seg-feature-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-lg);
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--brand-200);
+}
+
+.seg-feature-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+.seg-feature-text strong {
+    display: block;
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    margin-bottom: 0.25rem;
+}
+
+.seg-feature-text span {
+    display: block;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.76);
+    line-height: 1.6;
+    max-width: 62ch;
+}
+
+.seg-feature-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    font-weight: 600;
+    font-size: var(--text-sm);
+    color: var(--brand-200);
+}
+
+.seg-feature:hover .seg-feature-go span {
+    transform: translateX(3px);
+}
+
+.seg-feature-go span {
+    transition: transform var(--transition-fast);
+}
+
+@media (max-width: 720px) {
+    .seg-feature {
+        grid-template-columns: auto 1fr;
+    }
+    .seg-feature-go {
+        grid-column: 1 / -1;
+    }
+}
+
+/* a seção de segmentos deixa de herdar as cores da versão anterior */
+.segments.soft-block {
+    background: var(--surface-tint-soft);
+}
+
+/* ---------- Preços: cards alinhados ---------- */
+.pricing.section-block {
+    background: var(--surface);
+}
+
+.price-grid {
+    display: grid;
+    /* quatro planos, quatro colunas — com auto-fit a última linha ficava torta */
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(0.75rem, 1.5vw, 1.15rem);
+    align-items: stretch;
+}
+
+.price-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    padding: clamp(1.25rem, 2.2vw, 1.75rem);
+    background: var(--color-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-base), box-shadow var(--transition-base),
+                border-color var(--transition-base);
+}
+
+.price-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--brand-200);
+}
+
+.price-card--pop {
+    border-color: var(--brand-400);
+    box-shadow: var(--shadow-xl);
+}
+
+/* A etiqueta vive DENTRO do card. Antes flutuava sobre a borda superior
+   com top negativo e era cortada pelo topo da seção. */
+.price-tag {
+    align-self: flex-start;
+    padding: 0.25rem 0.7rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-gray-100);
+    color: var(--color-gray-600);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.price-tag--pop {
+    background: var(--brand-100);
+    color: var(--brand-700);
+}
+
+.price-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: var(--radius-md);
+    display: grid;
+    place-items: center;
+    background: var(--surface-tint);
+    color: var(--brand-600);
+}
+
+.price-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.price-name {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    color: var(--color-ink);
+}
+
+.price-desc {
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    line-height: 1.55;
+    min-height: 3.2em;
+}
+
+.price-value {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2rem, 3.4vw, 2.6rem);
+    letter-spacing: -0.035em;
+    color: var(--color-ink);
+    line-height: 1;
+    margin-top: 0.15rem;
+}
+
+.price-cur {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-muted);
+    align-self: flex-start;
+    margin-top: 0.3rem;
+}
+
+.price-per {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-muted);
+    letter-spacing: 0;
+}
+
+.price-users {
+    font-size: var(--text-xs);
+    color: var(--color-gray-500);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.price-cta {
+    width: 100%;
+    justify-content: center;
+    border-radius: var(--radius-pill);
+    margin: 0.35rem 0 0.15rem;
+    padding: 0.8rem 1rem;
+    font-size: var(--text-sm);
+}
+
+.price-list {
+    list-style: none;
+    padding: 1rem 0 0;
+    margin: 0;
+    border-top: 1px solid var(--border);
+    display: grid;
+    gap: 0.6rem;
+}
+
+.price-list li {
+    display: flex;
+    gap: 0.55rem;
+    align-items: flex-start;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--color-gray-700);
+}
+
+.price-list svg {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    color: var(--brand-500);
+}
+
+.plans-trust-line,
+.plans-support-note {
+    text-align: center;
+}
+
+.plans-trust-line {
+    margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 1080px) {
+    .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+    .price-grid { grid-template-columns: 1fr; }
 }
