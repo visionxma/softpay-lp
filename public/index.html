@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=79279808d4" />
+    <link rel="stylesheet" href="style.css?v=74118c712c" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -1118,6 +1118,12 @@
                 </p>
             </div>
 
+            <!-- Trilho de rolagem: a seção fica fixa enquanto o scroll avança e
+                 as abas trocam sozinhas. Sem JS, ou com movimento reduzido,
+                 o trilho vira altura automática e as abas voltam a ser só
+                 clicáveis — nada some. -->
+            <div class="tabs-scroll" data-tabs-scroll>
+              <div class="tabs-pin">
             <div class="display-tabs">
                 <div class="display-tablist" role="tablist" aria-label="Áreas do sistema">
                         <button class="display-tab" id="aba-venda" role="tab" aria-controls="painel-venda" aria-selected="true" tabindex="0">Vendas</button>
@@ -1164,6 +1170,8 @@
                         <p class="panel-note">Os números do mês, a nota fiscal e o acesso da equipe no mesmo lugar — inclusive com mais de uma loja.</p>
                     </div>
                 </div>
+            </div>
+              </div>
             </div>
 
             <p class="faq-footer" style="margin-top:2.5rem; text-align:left">
@@ -1744,7 +1752,7 @@
         </span>
     </a>
 
-    <script src="script.js?v=f6d90c0070"></script>
+    <script src="script.js?v=e952e85d3f"></script>
 </body>
 
 </html>

@@ -3540,7 +3540,8 @@ body {
     display: none;
 }
 
-.tabpanel {
+.tabpanel.is-entering,
+.display-panel.is-entering {
     animation: tabIn var(--transition-base) both;
 }
 
@@ -3780,8 +3781,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
-    position: sticky;
-    top: 92px;
 }
 
 .display-tab {
@@ -3814,9 +3813,7 @@ body {
     display: none;
 }
 
-.display-panel {
-    animation: tabIn var(--transition-base) both;
-}
+/* o painel nasce visível; a animação vive em .is-entering */
 
 .capsule-cloud {
     display: flex;
@@ -4449,14 +4446,12 @@ body {
 
 /* As colunas laterais (abas e FAQ) acompanham a rolagem, mas precisam
    respeitar a altura do header fixo para não ficarem por baixo dele. */
-.display-tablist,
 .faq--split .faq-aside {
     top: calc(68px + var(--spacing-md));
 }
 
 /* Só gruda quando há altura sobrando; em tela baixa atrapalha mais que ajuda */
 @media (max-height: 640px) {
-    .display-tablist,
     .faq--split .faq-aside {
         position: static;
     }
@@ -5199,5 +5194,92 @@ body {
                 rgba(234, 246, 255, 0.72) 100%),
             linear-gradient(0deg, rgba(11, 77, 124, 0.14), rgba(11, 77, 124, 0.14)),
             url("/assets/lojistas/fundo-brasil.webp");
+    }
+}
+
+/* ---------- Abas que avançam com o scroll ----------
+   O trilho é mais alto que a tela; o miolo fica fixo dentro dele. Enquanto
+   a pessoa rola o trilho, o JS troca a aba ativa. A altura extra só é
+   aplicada quando o JS confirma suporte (classe no <html>), então sem JS
+   a seção continua no tamanho natural e as abas seguem clicáveis. */
+.tabs-scroll {
+    position: relative;
+}
+
+.js-tabs-scroll .tabs-scroll[data-tabs-scroll] {
+    /* uma "tela" de rolagem por aba, além da primeira */
+    height: calc(100vh + (var(--tabs-count, 4) - 1) * 62vh);
+}
+
+.js-tabs-scroll .tabs-pin {
+    position: sticky;
+    top: 88px;
+    /* a altura livre evita que o miolo encoste no rodapé do viewport */
+    max-height: calc(100vh - 110px);
+}
+
+/* Indicador de progresso ao lado das abas */
+.display-tablist {
+    position: relative;
+}
+
+.js-tabs-scroll .display-tablist {
+    padding-left: 1.1rem;
+}
+
+.js-tabs-scroll .display-tablist::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.35rem;
+    bottom: 0.35rem;
+    width: 3px;
+    border-radius: 3px;
+    background: var(--brand-100);
+}
+
+.tabs-progress {
+    position: absolute;
+    left: 0;
+    width: 3px;
+    border-radius: 3px;
+    background: var(--brand-500);
+    transition: transform var(--transition-base), height var(--transition-base);
+}
+
+.js-tabs-scroll .display-tab {
+    transition: color var(--transition-base), opacity var(--transition-base);
+}
+
+/* No mobile o pin ocuparia a tela inteira e atrapalharia a leitura */
+@media (max-width: 900px) {
+    .js-tabs-scroll .tabs-scroll[data-tabs-scroll] {
+        height: auto;
+    }
+    .js-tabs-scroll .tabs-pin {
+        position: static;
+        max-height: none;
+    }
+    .js-tabs-scroll .display-tablist {
+        padding-left: 0;
+    }
+    .js-tabs-scroll .display-tablist::before,
+    .tabs-progress {
+        display: none;
+    }
+}
+
+/* Quem pede menos movimento não é levado a um scroll que prende a tela */
+@media (prefers-reduced-motion: reduce) {
+    .js-tabs-scroll .tabs-scroll[data-tabs-scroll] {
+        height: auto;
+    }
+    .js-tabs-scroll .tabs-pin {
+        position: static;
+        max-height: none;
+    }
+    .js-tabs-scroll .display-tablist::before,
+    .tabs-progress {
+        display: none;
     }
 }

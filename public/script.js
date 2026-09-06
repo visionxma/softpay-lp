@@ -409,13 +409,27 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
             aba.setAttribute('aria-selected', ativa ? 'true' : 'false');
             aba.tabIndex = ativa ? 0 : -1;
             var painel = document.getElementById(aba.getAttribute('aria-controls'));
-            if (painel) painel.hidden = !ativa;
+            if (painel) {
+                painel.hidden = !ativa;
+                if (ativa) {
+                    painel.classList.remove('is-entering');
+                    void painel.offsetWidth;          // reinicia a animação
+                    painel.classList.add('is-entering');
+                }
+            }
         });
         if (moverFoco) abas[indice].focus();
     }
 
     abas.forEach(function (aba, i) {
-        aba.addEventListener('click', function () { seleciona(i, false); });
+        aba.addEventListener('click', function () {
+            // Quando o modo de rolagem está ativo, quem manda na aba é o
+            // scroll: trocar aqui também faria a aba piscar antes de o
+            // scroll reposicionar.
+            if (document.documentElement.classList.contains('js-tabs-scroll')
+                && lista.closest('[data-tabs-scroll]')) return;
+            seleciona(i, false);
+        });
     });
 
     lista.addEventListener('keydown', function (e) {
@@ -429,6 +443,112 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
         if (destino !== null) {
             e.preventDefault();
             seleciona(destino, true);
+            if (document.documentElement.classList.contains('js-tabs-scroll')) {
+                abas[destino].click();     // leva a rolagem até o trecho da aba
+            }
         }
     });
 });
+
+// ========== Abas que avançam com o scroll ==========
+// A seção de funcionalidades fica fixa enquanto a página rola, e a aba ativa
+// muda conforme o progresso. Só liga quando faz sentido: precisa de tela
+// larga, de suporte a position:sticky e de o visitante não ter pedido menos
+// movimento. Em qualquer outro caso a seção segue no tamanho natural, com as
+// abas funcionando por clique — o conteúdo nunca depende deste efeito.
+(function () {
+    var trilho = document.querySelector('[data-tabs-scroll]');
+    if (!trilho) return;
+
+    var lista = trilho.querySelector('.display-tablist');
+    var abas = lista ? Array.prototype.slice.call(lista.querySelectorAll('[role="tab"]')) : [];
+    if (abas.length < 2) return;
+
+    var querMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var telaLarga = window.matchMedia('(min-width: 901px)');
+    var suportaSticky = CSS.supports && CSS.supports('position', 'sticky');
+
+    function podeLigar() {
+        return suportaSticky && telaLarga.matches && !querMenosMovimento.matches;
+    }
+
+    document.documentElement.style.setProperty('--tabs-count', abas.length);
+
+    // barra de progresso ao lado das abas
+    var progresso = document.createElement('span');
+    progresso.className = 'tabs-progress';
+    progresso.setAttribute('aria-hidden', 'true');
+
+    var ativo = -1;
+    function ativar(indice) {
+        if (indice === ativo) return;
+        ativo = indice;
+        abas.forEach(function (aba, i) {
+            var eh = i === indice;
+            aba.setAttribute('aria-selected', eh ? 'true' : 'false');
+            aba.tabIndex = eh ? 0 : -1;
+            var painel = document.getElementById(aba.getAttribute('aria-controls'));
+            if (painel) {
+                painel.hidden = !eh;
+                if (eh) {
+                    painel.classList.remove('is-entering');
+                    void painel.offsetWidth;
+                    painel.classList.add('is-entering');
+                }
+            }
+        });
+        var alvo = abas[indice];
+        if (alvo && progresso.parentNode) {
+            progresso.style.height = alvo.offsetHeight + 'px';
+            progresso.style.transform = 'translateY(' + alvo.offsetTop + 'px)';
+        }
+    }
+
+    var pendente = false;
+    function aoRolar() {
+        if (pendente) return;
+        pendente = true;
+        window.requestAnimationFrame(function () {
+            pendente = false;
+            if (!podeLigar()) return;
+            var caixa = trilho.getBoundingClientRect();
+            var percorrivel = caixa.height - window.innerHeight;
+            if (percorrivel <= 0) return;
+            var avanco = Math.min(Math.max(-caixa.top / percorrivel, 0), 0.999);
+            ativar(Math.floor(avanco * abas.length));
+        });
+    }
+
+    // clique continua funcionando: leva a rolagem até o trecho da aba
+    abas.forEach(function (aba, i) {
+        aba.addEventListener('click', function (e) {
+            if (!podeLigar()) return;              // fora do modo fixo, o clique já é tratado
+            e.preventDefault();
+            var caixa = trilho.getBoundingClientRect();
+            var topo = caixa.top + window.pageYOffset;
+            var percorrivel = caixa.height - window.innerHeight;
+            var destino = topo + (percorrivel * (i + 0.35) / abas.length);
+            window.scrollTo({ top: destino, behavior: 'smooth' });
+        });
+    });
+
+    function aplicarModo() {
+        if (podeLigar()) {
+            document.documentElement.classList.add('js-tabs-scroll');
+            if (!progresso.parentNode) lista.appendChild(progresso);
+            ativo = -1;
+            aoRolar();
+        } else {
+            document.documentElement.classList.remove('js-tabs-scroll');
+            if (progresso.parentNode) progresso.parentNode.removeChild(progresso);
+        }
+    }
+
+    aplicarModo();
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', aplicarModo);
+    if (querMenosMovimento.addEventListener) {
+        querMenosMovimento.addEventListener('change', aplicarModo);
+        telaLarga.addEventListener('change', aplicarModo);
+    }
+})();

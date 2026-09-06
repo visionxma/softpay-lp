@@ -156,7 +156,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css?v=79279808d4" />
+    <link rel="stylesheet" href="/style.css?v=74118c712c" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -303,7 +303,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
     <a href="%(app)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
 
-    <script src="/script.js?v=f6d90c0070"></script>
+    <script src="/script.js?v=e952e85d3f"></script>
 </body>
 
 </html>
