@@ -4969,3 +4969,17 @@ body {
 @media (max-width: 560px) {
     .price-grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Imagem de contexto nas páginas internas ---------- */
+.page-figure {
+    margin: 0 0 var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    line-height: 0;
+}
+
+.page-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

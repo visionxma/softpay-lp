@@ -17,6 +17,11 @@ dict(
   intro="Mercadinho é volume: muitos itens baratos, giro rápido e margem apertada. O SoftPay organiza a venda no balcão, o que está acabando na prateleira e o fiado dos clientes de sempre.",
   breadcrumbs=_c("Mercadinho"),
   blocks=[
+    '      <figure class="page-figure">\n'
+    '        <img src="/assets/lojistas/mercadinho.webp" width="1600" height="667"\n'
+    '             alt="Dona de mercadinho embalando produtos atrás do balcão, com prateleiras de mercearia ao fundo"\n'
+    '             loading="lazy" decoding="async" />\n'
+    '      </figure>',
     sec("A rotina de um mercadinho não perdoa lentidão",
       p("Fila no caixa em horário de pico, cliente esperando enquanto alguém procura o preço, o refrigerante que acabou sem ninguém perceber e o caderno de fiado que só uma pessoa sabe ler. Esses quatro problemas têm a mesma origem: a informação da loja não está em lugar nenhum além da cabeça de quem trabalha ali."),
       p("Um mercadinho de bairro chega a passar centenas de itens por dia. Sem registro, o dono termina a semana sabendo quanto entrou no caixa e sem a menor ideia de quanto sobrou."),
