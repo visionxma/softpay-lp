@@ -148,7 +148,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None,
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="/style.css?v=cce81909e7" />
+    <link rel="stylesheet" href="/style.css?v=fc8c4f8894" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
