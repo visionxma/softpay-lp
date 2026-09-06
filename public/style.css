@@ -85,10 +85,11 @@
        Inter é uma grotesk desenhada para tela e para texto corrido — o site
        tem guias longos, e a Poppins (geométrica) cansa nesse volume.
        A Poppins fica como fallback para não quebrar caso a Inter não carregue. */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    /* Display condensada e pesada: é ela que dá a personalidade dos títulos.
-       Usada sempre em caixa alta, como assinatura visual. */
-    --font-display: 'Anton', 'Archivo Black', 'Inter', Impact, sans-serif;
+    /* Uma família só, do corpo ao título. É o que garante harmonia: a
+       hierarquia vem do PESO e do TAMANHO, não da mistura de tipografias.
+       A Plus Jakarta Sans tem 200-800 e se comporta bem nos dois extremos. */
+    --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
 
     /* Escala fluida: cresce com a viewport sem media query */
@@ -102,11 +103,11 @@
     --text-3xl: clamp(1.75rem, 1.38rem + 1.85vw, 2.85rem);
     --text-4xl: clamp(2.1rem, 1.5rem + 3vw, 3.9rem);
     /* Display: títulos de seção e hero */
-    --display-md: clamp(2rem, 1.3rem + 3.4vw, 3.4rem);
-    --display-lg: clamp(2.5rem, 1.4rem + 5.4vw, 5.2rem);
-    --display-xl: clamp(2.9rem, 1.3rem + 7.6vw, 7rem);
+    --display-md: clamp(1.75rem, 1.25rem + 2.5vw, 2.85rem);
+    --display-lg: clamp(2rem, 1.35rem + 3.2vw, 3.4rem);
+    --display-xl: clamp(2.3rem, 1.5rem + 4vw, 4.2rem);
 
-    --leading-tight: 1.12;
+    --leading-tight: 1.06;
     --leading-snug: 1.28;
     --leading-normal: 1.6;
     --leading-relaxed: 1.78;
@@ -3584,11 +3585,12 @@ body {
 .display,
 .page-title {
     font-family: var(--font-display);
-    font-weight: 400;           /* a Anton só tem um peso, já é pesada */
-    text-transform: uppercase;
-    letter-spacing: 0.005em;
-    line-height: 0.93;
+    font-weight: 800;
+    text-transform: none;
+    letter-spacing: -0.028em;
+    line-height: 1.04;
     color: var(--brand-800);
+    text-wrap: balance;
 }
 
 .hero-title .title-main {
@@ -3760,10 +3762,10 @@ body {
 
 .display-tab {
     font-family: var(--font-display);
-    font-size: clamp(1.6rem, 3.4vw, 3rem);
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.005em;
+    font-size: clamp(1.4rem, 2.6vw, 2.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.026em;
     text-align: left;
     background: none;
     border: 0;
@@ -3922,10 +3924,10 @@ body {
 
 .plan-panel h3 {
     font-family: var(--font-display);
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: clamp(1.7rem, 3.4vw, 2.6rem);
-    line-height: 0.95;
+    font-weight: 800;
+    letter-spacing: -0.026em;
+    font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+    line-height: 1.1;
     color: var(--brand-800);
 }
 
@@ -4037,9 +4039,9 @@ body {
 /* ---------- Números grandes em display ---------- */
 .stat-value {
     font-family: var(--font-display);
-    font-weight: 400;
-    font-size: clamp(1.9rem, 4vw, 3rem);
-    letter-spacing: 0.005em;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+    letter-spacing: -0.03em;
 }
 
 /* ---------- Seção de cobertura nacional ---------- */
@@ -4152,4 +4154,229 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
     .map-dot { animation: none; opacity: .7; }
+}
+
+/* ---------- Mapa por estado ---------- */
+.map-brasil .uf {
+    fill: var(--color-white);
+    stroke: var(--brand-200);
+    stroke-width: 1.1;
+    stroke-linejoin: round;
+}
+
+.map-brasil .uf--ativo {
+    fill: var(--brand-400);
+    stroke: var(--color-white);
+    stroke-width: 1.2;
+    transition: fill var(--transition-fast);
+}
+
+.map-brasil .uf--ativo:hover {
+    fill: var(--brand-600);
+}
+
+.uf-legend {
+    list-style: none;
+    padding: 0;
+    margin: var(--spacing-md) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.85rem;
+    justify-content: center;
+}
+
+.uf-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+}
+
+.uf-chip {
+    display: inline-grid;
+    place-items: center;
+    min-width: 2rem;
+    padding: 0.15rem 0.45rem;
+    border-radius: var(--radius-sm);
+    background: var(--brand-400);
+    color: var(--color-white);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+/* ---------- Depoimentos lado a lado ---------- */
+.testimonials-grid-static {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1rem, 2vw, 1.5rem);
+    max-width: 940px;
+    margin-inline: auto;
+}
+
+.testimonials-grid-static .testimonial-card {
+    width: auto;
+    min-width: 0;
+    flex: none;
+    margin: 0;
+    opacity: 1;
+    transform: none;
+    scroll-snap-align: none;
+}
+
+/* ---------- Entrada do hero ----------
+   Não existe animação de entrada aqui, de propósito. Uma animação com
+   fill-mode "both" mantém opacity:0 durante o delay, e o hero é o primeiro
+   conteúdo que o visitante precisa ler — qualquer atraso ou falha o esconde.
+   O resto da página anima ao entrar na viewport; o hero não. */
+
+/* =====================================================================
+   HERO — reescrita
+   Compacta, sobre fundo claro. Substitui a versão anterior, que herdava
+   texto branco de um fundo escuro que não existe mais e perdia as duas
+   colunas. Vem depois no arquivo, então prevalece.
+   ===================================================================== */
+.hero {
+    position: relative;
+    /* o topo compensa a altura da navbar fixa, senão o badge fica por baixo */
+    padding: calc(78px + clamp(1.5rem, 1rem + 2.5vw, 3rem)) 0 clamp(3rem, 2rem + 4vw, 5rem);
+    background:
+        radial-gradient(1100px 520px at 78% -8%, var(--brand-100) 0%, transparent 62%),
+        linear-gradient(180deg, var(--surface-tint-soft) 0%, var(--color-white) 68%);
+    overflow: hidden;
+}
+
+/* neutraliza o fundo animado da versão antiga, se algum resto sobrar */
+.hero .hero-background,
+.hero .animated-shapes {
+    display: none;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
+    align-items: center;
+}
+
+.hero-text {
+    color: var(--color-ink);        /* claro: era branco e sumia no fundo novo */
+    max-width: 36rem;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.4rem 0.85rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-white);
+    border: 1px solid var(--brand-200);
+    color: var(--brand-700);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-badge svg {
+    width: 15px;
+    height: 15px;
+    color: var(--brand-500);
+}
+
+.hero-title {
+    margin: 1.15rem 0 0.9rem;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: clamp(2rem, 1.35rem + 2.9vw, 3.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.032em;
+    color: var(--brand-800);
+    text-wrap: balance;
+}
+
+.hero-subtitle {
+    margin: 0 0 1.75rem;
+    font-size: var(--text-lg);
+    line-height: var(--leading-relaxed);
+    color: var(--color-muted);
+    max-width: 33rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.85rem;
+}
+
+.hero-actions .btn {
+    border-radius: var(--radius-pill);
+    padding: 0.9rem 1.4rem;
+    font-size: var(--text-sm);
+    white-space: nowrap;
+}
+
+.hero-proof {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.hero-proof-avatars {
+    display: flex;
+}
+
+.hero-proof-avatars img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    object-fit: cover;
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.hero-proof-avatars img + img {
+    margin-left: -10px;
+}
+
+.hero-proof p {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--color-muted);
+    line-height: var(--leading-normal);
+}
+
+.hero-proof strong {
+    color: var(--color-ink);
+}
+
+.hero-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+}
+
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    .hero-text {
+        max-width: none;
+    }
+    .hero-media {
+        order: -1;
+    }
+}
+
+/* Sem animação no hero: o conteúdo é visível desde o primeiro frame. */
+.hero-text > * {
+    opacity: 1;
+    animation: none;
 }
