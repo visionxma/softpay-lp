@@ -21,9 +21,9 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Métrica | Valor |
 |---|---|
-| Páginas | 48 |
-| Links internos (com âncora) | 1219 |
-| Links contextuais no corpo | 359 |
+| Páginas | 49 |
+| Links internos (com âncora) | 1253 |
+| Links contextuais no corpo | 379 |
 | Páginas órfãs | 0 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -33,18 +33,18 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Página | Links de entrada |
 |---|---|
-| `/` | 47 |
-| `/termos` | 44 |
-| `/privacidade` | 44 |
-| `/reembolso` | 44 |
-| `/segmentos/` | 43 |
-| `/solucoes/` | 43 |
-| `/guias/` | 43 |
-| `/sobre/` | 43 |
-| `/perguntas/` | 43 |
-| `/solucoes/sistema-pdv/` | 43 |
-| `/solucoes/controle-de-fiado/` | 43 |
-| `/solucoes/loja-online/` | 43 |
+| `/` | 48 |
+| `/termos` | 45 |
+| `/privacidade` | 45 |
+| `/reembolso` | 45 |
+| `/segmentos/` | 44 |
+| `/solucoes/` | 44 |
+| `/guias/` | 44 |
+| `/sobre/` | 44 |
+| `/perguntas/` | 44 |
+| `/solucoes/sistema-pdv/` | 44 |
+| `/solucoes/controle-de-fiado/` | 44 |
+| `/solucoes/loja-online/` | 44 |
 
 ## Links contextuais
 
@@ -56,10 +56,29 @@ por relevância, e traz links contextuais dentro do texto.
 | `/` | `/perguntas/` | Perguntas frequentes |
 | `/` | `/perguntas/` | perguntas frequentes |
 | `/` | `/perguntas/caderno-ou-sistema/` | Caderno ou sistema?Comparação honesta, com os prós do caderno |
+| `/` | `/perguntas/funciona-no-brasil-inteiro/` | Como funciona o atendimento nacional |
 | `/` | `/perguntas/quanto-custa-um-sistema-para-loja/` | Quanto custa um sistema?Preços e o que checar antes de assinar |
 | `/` | `/privacidade` | Política de Privacidade |
 | `/` | `/reembolso` | Política de Reembolso |
+| `/` | `/segmentos/distribuidora/` | Distribuidora
+                    Volume alto, preço de atacado e nota |
+| `/` | `/segmentos/farmacia/` | Farmácia
+                    A gestão comercial do balcão. Não substit |
+| `/` | `/segmentos/loja-de-roupas/` | Loja de roupas
+                    Grade de tamanho e cor sem virar ba |
+| `/` | `/segmentos/loja-de-variedades/` | Loja de variedades
+                    Centenas de itens baratos — sai |
+| `/` | `/segmentos/mercadinho/` | Mercadinho
+                    Muitos itens, giro rápido e o fiado dos |
+| `/` | `/segmentos/papelaria/` | Papelaria
+                    Varejo, atacado e o pico da volta às aul |
+| `/` | `/segmentos/pequeno-comercio/` | Pequeno comércio em geral
+                    Loja com uma ou duas pes |
+| `/` | `/segmentos/pequeno-comercio/` | Ver como funciona numa loja pequena |
 | `/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é um sistema de gestãoO guia completo: para quem serve, quanto c |
+| `/` | `/solucoes/` | Ver todos os recursos |
+| `/` | `/solucoes/bot-whatsapp/` | Registre falando no WhatsAppA venda entra no sistema com o cliente ain |
+| `/` | `/solucoes/bot-whatsapp/` | Ver como funciona o bot do WhatsApp → |
 | `/` | `/solucoes/controle-de-fiado/` | Ver como funciona o controle de fiado → |
 | `/404` | `/` | Ir para a página inicial |
 | `/contato/` | `/perguntas/` | PerguntasDúvidas frequentes |
@@ -118,18 +137,6 @@ por relevância, e traz links contextuais dentro do texto.
 | `/guias/como-controlar-fiado/` | `/segmentos/mercadinho/` | MercadinhoO fiado do bairro |
 | `/guias/como-controlar-fiado/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
 | `/guias/como-controlar-fiado/` | `/solucoes/controle-de-fiado/` | Controle de fiadoComo funciona no SoftPay |
-| `/guias/como-controlar-fiado/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/como-organizar-uma-loja/` | `/guias/como-controlar-caixa-da-loja/` | Como controlar o caixaRotina diária |
-| `/guias/como-organizar-uma-loja/` | `/guias/como-controlar-estoque/` | Como controlar estoqueEtapa do estoque |
-| `/guias/como-organizar-uma-loja/` | `/privacidade` | Política de Privacidade |
-| `/guias/como-organizar-uma-loja/` | `/reembolso` | Política de Reembolso |
-| `/guias/como-organizar-uma-loja/` | `/segmentos/pequeno-comercio/` | Pequeno comércioPara lojas pequenas |
-| `/guias/como-organizar-uma-loja/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/guias/como-organizar-uma-loja/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/como-sair-do-caderno/` | `/guias/como-controlar-fiado/` | Como controlar fiadoLevar o fiado junto |
-| `/guias/como-sair-do-caderno/` | `/guias/como-organizar-uma-loja/` | Como organizar uma lojaO roteiro completo |
-| `/guias/como-sair-do-caderno/` | `/perguntas/caderno-ou-sistema/` | Caderno ou sistema?A comparação |
-| `/guias/como-sair-do-caderno/` | `/privacidade` | Política de Privacidade |
 
 ## Páginas órfãs
 
