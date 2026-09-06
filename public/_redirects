@@ -1,19 +1,27 @@
 # Redirects da Cloudflare (static assets).
 # Docs: https://developers.cloudflare.com/workers/static-assets/redirects/
 # Formato: <origem> <destino> <status>
+#
+# ORDEM IMPORTA: regras exatas primeiro, regras com splat (*) por último.
+# O wrangler avisa quando uma regra exata fica depois de um splat, porque
+# aí ela deixa de ser resolvida no caminho rápido.
+
+# --- Regras exatas ---
+
+# Áreas de aplicação não existem neste site — vão para o app
+/auth              https://www.softpaybr.com/auth      302
+/login             https://www.softpaybr.com/auth      302
+/cadastro          https://www.softpaybr.com/auth      302
 
 # §2 e §36 do briefing de SEO: a home é a raiz, nunca /lp/.
 # A LP já esteve publicada em /lp/ — preserva o link antigo com 301.
 /lp                /                                   301
 /lp/               /                                   301
-/lp/*              /:splat                             301
 
 # NÃO redirecionar /termos -> /termos.html: o html_handling
 # "auto-trailing-slash" já serve /termos a partir de termos.html e
 # canonicaliza /termos.html -> /termos. Uma regra inversa aqui cria
 # loop infinito de redirecionamento.
 
-# Áreas de aplicação não existem neste site — vão para o app
-/auth              https://www.softpaybr.com/auth      302
-/login             https://www.softpaybr.com/auth      302
-/cadastro          https://www.softpaybr.com/auth      302
+# --- Regras com splat (sempre por último) ---
+/lp/*              /:splat                             301

@@ -113,27 +113,29 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
     // Add shadow when scrolled
-    if (currentScroll > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
+    if (navbar) {
+        if (currentScroll > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     }
 
     lastScroll = currentScroll;
 });
 
 // ========== Mobile Menu Toggle ==========
-mobileMenuToggle.addEventListener('click', () => {
+mobileMenuToggle?.addEventListener('click', () => {
     mobileMenuToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    navMenu?.classList.toggle('active');
+    document.body.style.overflow = navMenu?.classList.contains('active') ? 'hidden' : '';
 });
 
 // ========== Close Mobile Menu on Link Click ==========
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        mobileMenuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
+        mobileMenuToggle?.classList.remove('active');
+        navMenu?.classList.remove('active');
         document.body.style.overflow = '';
     });
 });
@@ -382,6 +384,7 @@ function initTestimonialsCarousel() {
 
     // Touch / swipe support
     let touchStartX = 0;
+    if (!track) return;
     track.addEventListener('touchstart', e => {
         touchStartX = e.touches[0].clientX;
     }, { passive: true });
@@ -450,3 +453,44 @@ window.ControleApp = {
     validateEmail,
     animateCounter
 };
+
+// ========== Abas de funcionalidades ==========
+// Padrão ARIA de tablist: clique, setas, Home e End.
+// Se o JS não rodar, o primeiro painel continua visível e os demais ficam
+// com [hidden] — a página não quebra, só perde a troca de abas.
+(function () {
+    var lista = document.querySelector('.tablist');
+    if (!lista) return;
+
+    var abas = Array.prototype.slice.call(lista.querySelectorAll('[role="tab"]'));
+    if (!abas.length) return;
+
+    function seleciona(indice, moverFoco) {
+        abas.forEach(function (aba, i) {
+            var ativa = i === indice;
+            aba.setAttribute('aria-selected', ativa ? 'true' : 'false');
+            aba.tabIndex = ativa ? 0 : -1;
+            var painel = document.getElementById(aba.getAttribute('aria-controls'));
+            if (painel) painel.hidden = !ativa;
+        });
+        if (moverFoco) abas[indice].focus();
+    }
+
+    abas.forEach(function (aba, i) {
+        aba.addEventListener('click', function () { seleciona(i, false); });
+    });
+
+    lista.addEventListener('keydown', function (e) {
+        var atual = abas.indexOf(document.activeElement);
+        if (atual === -1) return;
+        var destino = null;
+        if (e.key === 'ArrowRight') destino = (atual + 1) % abas.length;
+        else if (e.key === 'ArrowLeft') destino = (atual - 1 + abas.length) % abas.length;
+        else if (e.key === 'Home') destino = 0;
+        else if (e.key === 'End') destino = abas.length - 1;
+        if (destino !== null) {
+            e.preventDefault();
+            seleciona(destino, true);
+        }
+    });
+})();

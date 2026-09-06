@@ -36,9 +36,9 @@
     <meta name="twitter:image" content="https://site.softpaybr.com/assets/COmputador.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=4" />
+    <link rel="stylesheet" href="style.css?v=5" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -616,6 +616,32 @@
         </div>
     </section>
 
+    <!-- Barra de números. ATENÇÃO: só entram aqui dados verificáveis.
+         "Mais de 100 lojistas" é a afirmação já usada no site — [VALIDAR] o
+         número real. Os demais são fatos do produto e da oferta. -->
+    <section class="stats-bar" aria-label="O SoftPay em números">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-value">+100</span>
+                    <span class="stat-label">lojistas usando o SoftPay</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">7 dias</span>
+                    <span class="stat-label">de teste grátis, sem cartão</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">R$ 65</span>
+                    <span class="stat-label">por mês no plano de entrada</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">Brasil</span>
+                    <span class="stat-label">atendimento nacional por WhatsApp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section (Early Placement - CRO) -->
     <section id="pricing" class="pricing">
         <div class="container">
@@ -1077,152 +1103,79 @@
                 <span class="section-label">Funcionalidades</span>
                 <h2 class="section-title">Tudo que você precisa em um só lugar</h2>
                 <p class="section-subtitle">
-                    Com SoftPay você tem total controle de seu estoque,
-                    ganha eficiência e rapidez na rotina da sua loja e diminui a margem de erros.
+                    Vendas, estoque, clientes e números conectados: o que você registra no
+                    balcão alimenta o resto do sistema sozinho.
                 </p>
             </div>
-            <div class="features-grid">
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Visão Geral</h3>
-                    <p class="feature-description">
-                        Painel completo com resumo de vendas, estoque e caixa em tempo real.
-                    </p>
+            <div class="tabs">
+                <div class="tablist" role="tablist" aria-label="Áreas do sistema">
+                        <button class="tab" id="aba-venda" role="tab" aria-controls="painel-venda" aria-selected="true" tabindex="0">Venda e caixa</button>
+                        <button class="tab" id="aba-estoque" role="tab" aria-controls="painel-estoque" aria-selected="false" tabindex="-1">Produtos e estoque</button>
+                        <button class="tab" id="aba-clientes" role="tab" aria-controls="painel-clientes" aria-selected="false" tabindex="-1">Clientes</button>
+                        <button class="tab" id="aba-gestao" role="tab" aria-controls="painel-gestao" aria-selected="false" tabindex="-1">Gestão e números</button>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <path d="M20 7h-9"></path>
-                            <path d="M14 17H5"></path>
-                            <circle cx="17" cy="17" r="3"></circle>
-                            <circle cx="7" cy="7" r="3"></circle>
-                        </svg>
+                    <div class="tabpanel" id="painel-venda" role="tabpanel" aria-labelledby="aba-venda">
+                        <div class="tabpanel-grid">
+                        <article class="feature-card">
+                            <h3 class="feature-title">PDV</h3>
+                            <p class="feature-description">Ponto de venda ágil com múltiplas formas de pagamento e fechamento de caixa.</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Cupom</h3>
+                            <p class="feature-description">Crie e gerencie cupons de desconto para suas campanhas e promoções.</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Atacado e Varejo</h3>
+                            <p class="feature-description">Tabelas de preço diferenciadas para atacado e varejo em um só sistema.</p>
+                        </article>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Produtos</h3>
-                    <p class="feature-description">
-                        Cadastre e gerencie produtos com preços, categorias e variações.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
+                    <div class="tabpanel" id="painel-estoque" role="tabpanel" aria-labelledby="aba-estoque" hidden>
+                        <div class="tabpanel-grid">
+                        <article class="feature-card">
+                            <h3 class="feature-title">Produtos</h3>
+                            <p class="feature-description">Cadastre e gerencie produtos com preços, categorias e variações.</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Estoque</h3>
+                            <p class="feature-description">Controle entradas e saídas com alertas automáticos de estoque baixo.</p>
+                        </article>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Estoque</h3>
-                    <p class="feature-description">
-                        Controle entradas e saídas com alertas automáticos de estoque baixo.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
+                    <div class="tabpanel" id="painel-clientes" role="tabpanel" aria-labelledby="aba-clientes" hidden>
+                        <div class="tabpanel-grid">
+                        <article class="feature-card">
+                            <h3 class="feature-title">Clientes</h3>
+                            <p class="feature-description">Cadastro completo de clientes com histórico de compras e contatos.</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">CRM</h3>
+                            <p class="feature-description">Gerencie relacionamentos, follow-ups e oportunidades de venda com seus clientes.</p>
+                        </article>
+                        </div>
                     </div>
-                    <h3 class="feature-title">PDV</h3>
-                    <p class="feature-description">
-                        Ponto de venda ágil com múltiplas formas de pagamento e fechamento de caixa.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
+                    <div class="tabpanel" id="painel-gestao" role="tabpanel" aria-labelledby="aba-gestao" hidden>
+                        <div class="tabpanel-grid">
+                        <article class="feature-card">
+                            <h3 class="feature-title">Visão Geral</h3>
+                            <p class="feature-description">Painel completo com resumo de vendas, estoque e caixa em tempo real.</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Relatórios</h3>
+                            <p class="feature-description">Dashboards e relatórios detalhados de faturamento, lucro e desempenho.</p>
+                        </article>
+                        <article class="feature-card">
+                            <h3 class="feature-title">Configurações</h3>
+                            <p class="feature-description">Personalize o sistema e mantenha seus dados protegidos na nuvem.</p>
+                        </article>
+                        </div>
                     </div>
-                    <h3 class="feature-title">Clientes</h3>
-                    <p class="feature-description">
-                        Cadastro completo de clientes com histórico de compras e contatos.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <line x1="18" y1="20" x2="18" y2="10"></line>
-                            <line x1="12" y1="20" x2="12" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Relatórios</h3>
-                    <p class="feature-description">
-                        Dashboards e relatórios detalhados de faturamento, lucro e desempenho.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <circle cx="12" cy="12" r="3"></circle>
-                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Configurações</h3>
-                    <p class="feature-description">
-                        Personalize o sistema e mantenha seus dados protegidos na nuvem.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">CRM</h3>
-                    <p class="feature-description">
-                        Gerencie relacionamentos, follow-ups e oportunidades de venda com seus clientes.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Atacado e Varejo</h3>
-                    <p class="feature-description">
-                        Tabelas de preço diferenciadas para atacado e varejo em um só sistema.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true" focusable="false">
-                            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                            <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                        </svg>
-                    </div>
-                    <h3 class="feature-title">Cupom</h3>
-                    <p class="feature-description">
-                        Crie e gerencie cupons de desconto para suas campanhas e promoções.
-                    </p>
-                </div>
-
             </div>
+
+            <p class="faq-footer" style="margin-top:2rem">
+                Veja cada recurso em detalhe nas <a href="/solucoes/">páginas de solução</a>.
+            </p>
         </div>
     </section>
 
@@ -1742,7 +1695,7 @@
         </span>
     </a>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 
 </html>
