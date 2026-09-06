@@ -69,6 +69,23 @@ npx wrangler pages deploy public --project-name=softpay-lp
 O passo a passo completo — criar o projeto no painel e apontar o domínio —
 está em **[`docs/DEPLOY.md`](docs/DEPLOY.md)**.
 
+## Fluxo ao editar
+
+```bash
+# 1. editou conteúdo em tools/c_*.py ou o template?
+python3 tools/build.py
+
+# 2. editou style.css ou script.js?
+python3 tools/fingerprint.py
+
+# 3. sempre, antes de commitar
+python3 tools/verifica.py
+python3 tools/mapa_interlinks.py
+
+# 4. publique
+git add -A && git commit -m "..." && git push
+```
+
 ## Convenções
 
 - **URLs canônicas não têm `.html`.** `/termos`, não `/termos.html` — o
@@ -78,8 +95,10 @@ está em **[`docs/DEPLOY.md`](docs/DEPLOY.md)**.
 - **Arquivo novo do site vai em `public/`.** Fora de lá, não é publicado.
 - **Cache:** HTML sempre revalida; `assets/` tem cache de um ano. Ao trocar uma
   imagem, use um nome de arquivo novo.
-- **`style.css` e `script.js` são versionados por query string** (`?v=3`).
-  Ao alterá-los, incremente o número no `index.html`.
+- **`style.css` e `script.js` são versionados pelo hash do conteúdo.**
+  Depois de editá-los, rode `python3 tools/fingerprint.py`: ele recalcula o
+  `?v=` em todas as páginas. Sem isso, o cache de um dia do `_headers` serve
+  a versão antiga e o layout quebra.
 
 ## SEO
 

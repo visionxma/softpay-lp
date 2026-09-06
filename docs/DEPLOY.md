@@ -120,5 +120,7 @@ npx wrangler pages deploy public --project-name=softpay-lp
   duas regras juntas geram loop infinito de redirecionamento.
 - **Cache de um ano em `/assets/*`.** Ao trocar uma imagem, use um nome de
   arquivo novo, senão o navegador segue com a antiga.
-- **`style.css` e `script.js` são versionados por query string** (`?v=3`).
-  Ao alterá-los, incremente o número no `index.html`.
+- **`style.css` e `script.js` são versionados pelo hash do conteúdo.**
+  Depois de editá-los, rode `python3 tools/fingerprint.py`. Já aconteceu de
+  o CSS novo ficar preso atrás do cache de um dia com o HTML novo já no ar —
+  o fingerprint existe para isso não repetir.
