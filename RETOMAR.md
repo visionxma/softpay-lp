@@ -161,23 +161,14 @@ outro HTML — aí as media queries respondem à largura do iframe.
 
 ---
 
-## Pendências que dependem de você, não de código
+## Pendências
 
-Estas travam melhoria real e nenhuma delas é resolvível escrevendo código:
+Todas em **`docs/PENDENCIAS.md`** — o que falta, quem resolve e em que ordem.
 
-- [ ] **Google Search Console** — não configurado. É o P0: sem ele, todo o
-      trabalho de keywords é hipótese. Passo a passo em `docs/seo/SEARCH-CONSOLE.md`.
-- [ ] Número real de clientes ativos (o site diz "mais de 100")
-- [ ] Descrição técnica exata da segurança (Supabase é o banco? criptografia?)
-- [ ] Situação da emissão fiscal por plano, hoje
-- [ ] **Controle de validade de produtos existe?** Citado como "a confirmar" em
-      farmácia, mercadinho e distribuidora — três páginas dependem da resposta
-- [ ] Limite de fiado por cliente existe?
-- [ ] **Perfis de permissão por usuário, ou só multi-login?** Citado como "a
-      confirmar" em empresas-com-filiais
-- [ ] **Estrutura de filiais: estoque compartilhado ou separado?** Idem
-- [ ] Transferência de mercadoria entre filiais existe?
-- [ ] WhatsApp correto: (86) 99819-3851 ou (99) 98468-0391? As duas versões do
-      site divergiam
-- [ ] Screenshots reais do produto — §35 do briefing, não dá para gerar
-- [ ] Fotos dos 4 segmentos sem figura (prompts em `docs/IMAGENS.md`)
+Resumo do topo da lista:
+
+1. **O link do WhatsApp tem um dígito a menos**, em 108 links de 52 páginas
+2. **Search Console** — a tag já está no ar, falta criar a propriedade
+3. **Seis respostas de produto** travam 22 páginas em "confirme com o suporte"
+4. **`/solucoes/` virou a metade fraca do site:** 9 das 10 páginas com 2 a 3
+   blocos, contra 6 a 8 dos segmentos
