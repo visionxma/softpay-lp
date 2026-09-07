@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="style.css?v=5f927827a8" />
+    <link rel="stylesheet" href="style.css?v=0adbbf8dd7" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -941,32 +941,68 @@
                     <p class="split-more"><a href="/solucoes/bot-whatsapp/">Ver como funciona o bot do WhatsApp →</a></p>
                 </div>
                 <div class="split-visual">
-                    <div class="chat-demo" aria-label="Exemplo de conversa com o bot do SoftPay">
-                        <p class="chat-note">Conversa real, em 46 segundos</p>
-                        <div class="chat-line chat-line--out">
-                            <span class="chat-bubble">Vendi duas cocas no pix</span>
-                            <span class="chat-time">16:08</span>
+                    <div class="wa" aria-label="Exemplo de conversa com o bot do SoftPay no WhatsApp">
+                        <div class="wa-header">
+                            <span class="wa-avatar" aria-hidden="true">
+                                <img src="assets/logo.png" width="40" height="40" alt="" loading="lazy" />
+                            </span>
+                            <span class="wa-id">
+                                <strong>SoftPay</strong>
+                                <span>online</span>
+                            </span>
                         </div>
-                        <div class="chat-line">
-                            <span class="chat-bubble chat-bubble--warn">⚠️ Estoque insuficiente: disponível 0</span>
+
+                        <div class="wa-body">
+                            <p class="wa-day">HOJE</p>
+                            <div class="wa-row wa-row--out">
+                                <div class="wa-bubble wa-bubble--out">
+                                    <span class="wa-text">Vendi duas cocas no pix</span>
+                                    <span class="wa-meta">16:08 <svg class="wa-tick" viewBox="0 0 16 11" aria-hidden="true" focusable="false"><path d="M11.07.65a.44.44 0 0 0-.62 0L5.1 6.03 2.9 3.83a.44.44 0 1 0-.63.62l2.5 2.5c.18.18.46.18.63 0L11.07 1.3a.44.44 0 0 0 0-.63z"/><path d="M15.02.65a.44.44 0 0 0-.62 0L9.05 6.03l-.5-.5a.44.44 0 1 0-.63.62l.82.82c.17.18.45.18.62 0l5.66-5.66a.44.44 0 0 0 0-.63z"/></svg></span>
+                                </div>
+                            </div>
+                            <div class="wa-row">
+                                <div class="wa-bubble wa-bubble--in wa-bubble--warn">
+                                    <span class="wa-text">⚠️ Estoque insuficiente para <strong>Coca-Cola 350ml</strong><br>Disponível: <strong>0</strong></span>
+                                    <span class="wa-meta">16:08</span>
+                                </div>
+                            </div>
+                            <div class="wa-row wa-row--out">
+                                <div class="wa-bubble wa-bubble--out">
+                                    <span class="wa-text">Registre no estoque 10 coca</span>
+                                    <span class="wa-meta">16:08 <svg class="wa-tick" viewBox="0 0 16 11" aria-hidden="true" focusable="false"><path d="M11.07.65a.44.44 0 0 0-.62 0L5.1 6.03 2.9 3.83a.44.44 0 1 0-.63.62l2.5 2.5c.18.18.46.18.63 0L11.07 1.3a.44.44 0 0 0 0-.63z"/><path d="M15.02.65a.44.44 0 0 0-.62 0L9.05 6.03l-.5-.5a.44.44 0 1 0-.63.62l.82.82c.17.18.45.18.62 0l5.66-5.66a.44.44 0 0 0 0-.63z"/></svg></span>
+                                </div>
+                            </div>
+                            <div class="wa-row">
+                                <div class="wa-bubble wa-bubble--in wa-bubble--ok">
+                                    <span class="wa-text">📥 Entrada registrada<br><strong>Coca-Cola 350ml</strong> · estoque agora: <strong>10</strong></span>
+                                    <span class="wa-meta">16:08</span>
+                                </div>
+                            </div>
+                            <div class="wa-row wa-row--out">
+                                <div class="wa-bubble wa-bubble--out">
+                                    <span class="wa-text">Vende duas cocas no Pix</span>
+                                    <span class="wa-meta">16:08 <svg class="wa-tick" viewBox="0 0 16 11" aria-hidden="true" focusable="false"><path d="M11.07.65a.44.44 0 0 0-.62 0L5.1 6.03 2.9 3.83a.44.44 0 1 0-.63.62l2.5 2.5c.18.18.46.18.63 0L11.07 1.3a.44.44 0 0 0 0-.63z"/><path d="M15.02.65a.44.44 0 0 0-.62 0L9.05 6.03l-.5-.5a.44.44 0 1 0-.63.62l.82.82c.17.18.45.18.62 0l5.66-5.66a.44.44 0 0 0 0-.63z"/></svg></span>
+                                </div>
+                            </div>
+                            <div class="wa-row">
+                                <div class="wa-bubble wa-bubble--in wa-bubble--ok">
+                                    <span class="wa-text">✅ Venda registrada<br>2 × Coca-Cola 350ml · <strong>R$ 10,00</strong> no Pix<br><span class="wa-hint">Responda DESFAZER para cancelar</span></span>
+                                    <span class="wa-meta">16:08</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="chat-line chat-line--out">
-                            <span class="chat-bubble">Registre no estoque 10 coca</span>
+
+                        <div class="wa-input" aria-hidden="true">
+                            <span class="wa-field">Mensagem</span>
+                            <span class="wa-mic">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3z"></path><path d="M18 11a1 1 0 1 0-2 0 4 4 0 0 1-8 0 1 1 0 1 0-2 0 6 6 0 0 0 5 5.9V19H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-2v-2.1A6 6 0 0 0 18 11z"></path></svg>
+                            </span>
                         </div>
-                        <div class="chat-line">
-                            <span class="chat-bubble chat-bubble--ok">📥 Entrada registrada, estoque: 10</span>
-                        </div>
-                        <div class="chat-line chat-line--out">
-                            <span class="chat-bubble">Vende duas cocas no Pix</span>
-                            <span class="chat-time">16:08</span>
-                        </div>
-                        <div class="chat-line">
-                            <span class="chat-bubble chat-bubble--ok">✅ Venda registrada, R$ 10,00</span>
-                        </div>
-                        <p class="chat-caption">
-                            O bot recusou a primeira venda porque o estoque estava zerado.
-                        </p>
                     </div>
+                    <p class="wa-caption">
+                        Conversa real, em 46 segundos. O bot recusou a primeira venda
+                        porque o estoque estava zerado.
+                    </p>
                 </div>
             </div>
         </div>
@@ -1177,22 +1213,22 @@
 
     <!-- Features Section -->
     <section id="features" class="features section-block soft-block">
-        <div class="container" style="padding: var(--section-y) 0;">
-            <div class="section-header" style="text-align:left; margin-left:0; max-width:640px;">
+        <!-- Trilho de rolagem: a tela fica presa e as abas trocam conforme o
+             scroll. O cabeçalho vive DENTRO do miolo fixo — fora dele, a
+             tela presa mostrava só as abas e sobrava vão. Sem JS ou com
+             movimento reduzido, o trilho volta a ter altura automática. -->
+        <div class="tabs-scroll" data-tabs-scroll>
+          <div class="tabs-pin">
+            <div class="container">
+              <div class="section-header" style="text-align:left; margin-left:0; max-width:640px;">
                 <span class="section-label">Funcionalidades</span>
                 <h2 class="section-title">Tudo que sua loja precisa</h2>
                 <p class="section-subtitle" style="margin-left:0;">
                     Escolha uma área e veja o que entra nela.
                 </p>
-            </div>
+              </div>
 
-            <!-- Trilho de rolagem: a seção fica fixa enquanto o scroll avança e
-                 as abas trocam sozinhas. Sem JS, ou com movimento reduzido,
-                 o trilho vira altura automática e as abas voltam a ser só
-                 clicáveis — nada some. -->
-            <div class="tabs-scroll" data-tabs-scroll>
-              <div class="tabs-pin">
-            <div class="display-tabs">
+<div class="display-tabs">
                 <div class="display-tablist" role="tablist" aria-label="Áreas do sistema">
                         <button class="display-tab" id="aba-venda" role="tab" aria-controls="painel-venda" aria-selected="true" tabindex="0">Vendas</button>
                         <button class="display-tab" id="aba-estoque" role="tab" aria-controls="painel-estoque" aria-selected="false" tabindex="-1">Estoque</button>
@@ -1239,12 +1275,12 @@
                     </div>
                 </div>
             </div>
-              </div>
-            </div>
 
-            <p class="faq-footer" style="margin-top:2.5rem; text-align:left">
+              <p class="faq-footer" style="margin-top:2rem; text-align:left">
                 Veja cada recurso em detalhe nas <a href="/solucoes/">páginas de solução</a>.
-            </p>
+              </p>
+            </div>
+          </div>
         </div>
     </section>
 
