@@ -2176,11 +2176,21 @@ section {
     grid-template-columns: 1.1fr 0.9fr;
     gap: var(--spacing-2xl);
     /* `center` só funciona quando as duas colunas têm alturas parecidas. Aqui
-       o cartão tem cerca de 200px e a coluna de texto passa de 600, então o
-       cartão ficava boiando no meio com mais de 200px de vazio em cima e
-       embaixo. Alinhado ao topo, ele divide a primeira linha com o rótulo da
-       seção e o vazio sobra embaixo, onde o olho já não está. */
+       o cartão tem cerca de 200px e a coluna de texto passa de 600. Centrado,
+       ele boiava com 200px de vazio em cima; alinhado ao topo, o mesmo vazio
+       ia parar embaixo. `start` é o que dá ao sticky abaixo espaço para
+       percorrer — as duas coisas trabalham juntas. */
     align-items: start;
+}
+
+/* Com o cartão grudado, o vazio deixa de aparecer ao lado de texto: ele
+   acompanha a leitura da lista em vez de ficar parado num canto da seção.
+   Só enquanto existem duas colunas — empilhado, grudar atrapalharia. */
+@media (min-width: 861px) {
+    .split-visual {
+        position: sticky;
+        top: calc(68px + 1.5rem);
+    }
 }
 
 .split-grid--reverse .split-content {
@@ -5117,9 +5127,14 @@ body {
 }
 
 /* Duas seções seguidas com o mesmo fundo viram um bloco só: sem a costura
-   dupla de padding no meio, o espaço entre elas é o de uma seção. */
-.split + .split,
-.trust + .trust {
+   dupla de padding no meio, o espaço entre elas é o de uma seção.
+   Só vale quando o fundo é realmente o mesmo. Quando muda — .split--light
+   seguido de .split, ou .trust seguido de .trust--alt — a borda de cor fica
+   visível e o conteúdo encostava nela, sem respiro nenhum no topo. */
+.split--light + .split--light,
+.split:not(.split--light) + .split:not(.split--light),
+.trust--alt + .trust--alt,
+.trust:not(.trust--alt) + .trust:not(.trust--alt) {
     padding-top: 0;
 }
 
