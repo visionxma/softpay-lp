@@ -2183,13 +2183,78 @@ section {
     align-items: start;
 }
 
-/* Com o cartão grudado, o vazio deixa de aparecer ao lado de texto: ele
-   acompanha a leitura da lista em vez de ficar parado num canto da seção.
-   Só enquanto existem duas colunas — empilhado, grudar atrapalharia. */
+/* Grudar o cartão não resolvia: parado, o vazio continuava lá — a coluna de
+   texto tem cabeçalho, parágrafo, cinco bullets, nota e botão, e o cartão
+   sozinho nunca ia alcançar 650px. A saída é não pedir que ele alcance.
+
+   O cartão passa a dividir a linha apenas com o cabeçalho e o parágrafo, que
+   juntos têm altura parecida com a dele. O que sobra — bullets, nota e botão —
+   desce e ocupa a largura inteira, com os bullets em duas colunas. Some o
+   buraco à direita e a seção encurta.
+
+   `display: contents` dissolve o .split-content para que os filhos dele virem
+   itens do próprio grid. A ordem dos filhos é a mesma nas quatro seções. */
 @media (min-width: 861px) {
+    .split-grid {
+        column-gap: var(--spacing-2xl);
+        /* o ritmo vertical continua vindo das margens dos elementos */
+        row-gap: 0;
+    }
+
+    .split-content {
+        display: contents;
+    }
+
+    .split-content > .section-label,
+    .split-content > .split-title,
+    .split-content > .split-text {
+        grid-column: 1;
+    }
+
     .split-visual {
-        position: sticky;
-        top: calc(68px + 1.5rem);
+        grid-column: 2;
+        grid-row: 1 / 4;
+        align-self: start;
+    }
+
+    /* invertido: o cartão vai para a esquerda e o texto para a direita */
+    .split-grid--reverse .split-content > .section-label,
+    .split-grid--reverse .split-content > .split-title,
+    .split-grid--reverse .split-content > .split-text {
+        grid-column: 2;
+    }
+
+    .split-grid--reverse .split-visual {
+        grid-column: 1;
+    }
+
+    /* o resto atravessa as duas colunas */
+    .split-content > .split-list,
+    .split-content > .split-note,
+    .split-content > .btn,
+    .split-content > .split-more {
+        grid-column: 1 / -1;
+    }
+
+    /* os bullets na horizontal: metade do scroll vertical que ocupavam */
+    .split-content > .split-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--spacing-2xl);
+        row-gap: 0.6rem;
+    }
+
+    /* order do layout antigo não vale mais com display:contents */
+    .split-grid--reverse .split-content,
+    .split-grid--reverse .split-visual {
+        order: 0;
+    }
+
+    /* Item de grid estica por padrão. O rótulo e o botão precisam do
+       tamanho do próprio conteúdo, senão viram faixas de ponta a ponta. */
+    .split-content > .section-label,
+    .split-content > .btn {
+        justify-self: start;
     }
 }
 
