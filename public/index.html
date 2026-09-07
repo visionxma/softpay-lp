@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="style.css?v=540ccfd494" />
+    <link rel="stylesheet" href="style.css?v=c572749497" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -838,34 +838,37 @@
                 </p>
             </div>
 
-            <div class="insight-card">
+            <div class="insight-card insight-card--wide">
                 <span class="example-badge">Exemplo ilustrativo</span>
                 <h3 class="insight-question">Você vendeu R$ 25.480. Quanto realmente ganhou?</h3>
-                <div class="calc">
-                    <div class="calc-row">
+                <!-- Fluxo horizontal: os operadores saem dos rótulos e passam a viver
+                     entre as parcelas, que é o que a conta faz de verdade. Volta a
+                     empilhar abaixo de 900px. -->
+                <div class="calc calc--flow">
+                    <div class="calc-step">
                         <span class="calc-label">Vendas do mês</span>
                         <span class="calc-value">R$ 25.480,00</span>
                     </div>
-                    <div class="calc-row calc-row--minus">
-                        <span class="calc-label">Custo dos produtos vendidos (CMV)</span>
-                        <span class="calc-value">− R$ 16.560,00</span>
+                    <span class="calc-op">−</span>
+                    <div class="calc-step calc-step--minus">
+                        <span class="calc-label">Custo dos produtos (CMV)</span>
+                        <span class="calc-value">R$ 16.560,00</span>
                     </div>
-                    <div class="calc-row calc-row--result">
-                        <span class="calc-label">= Lucro bruto</span>
+                    <span class="calc-op">=</span>
+                    <div class="calc-step calc-step--result">
+                        <span class="calc-label">Lucro bruto</span>
                         <span class="calc-value">R$ 8.920,00</span>
                     </div>
-                    <div class="calc-row calc-row--minus">
+                    <span class="calc-op">−</span>
+                    <div class="calc-step calc-step--minus">
                         <span class="calc-label">Despesas do período</span>
-                        <span class="calc-value">− R$ 3.400,00</span>
+                        <span class="calc-value">R$ 3.400,00</span>
                     </div>
-                    <div class="calc-row calc-row--result calc-row--final">
-                        <span class="calc-label">= Resultado estimado</span>
+                    <span class="calc-op">=</span>
+                    <div class="calc-step calc-step--result calc-step--final">
+                        <span class="calc-label">Resultado estimado</span>
                         <span class="calc-value">R$ 5.520,00</span>
                     </div>
-                </div>
-                <div class="calc-formulas">
-                    <code class="calc-formula">vendas − custo dos produtos = lucro bruto</code>
-                    <code class="calc-formula">lucro bruto − despesas = resultado estimado</code>
                 </div>
                 <p class="calc-note">
                     Números fictícios, usados apenas para explicar o cálculo. O resultado do seu

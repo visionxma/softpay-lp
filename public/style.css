@@ -2076,6 +2076,91 @@ section {
     line-height: 1.6;
 }
 
+/* ---------- Cálculo em fluxo horizontal ----------
+   Variante opt-in: as cinco parcelas viram cartões lado a lado e os
+   operadores passam a viver entre elas, que é onde a conta acontece.
+   O `.calc` base continua vertical — ele é gerado pelo helper exemplo()
+   em nove outras páginas. */
+.calc--flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0.45rem;
+    border: 0;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.calc-step {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    /* rótulo no topo e valor na base: os valores alinham entre si mesmo
+       quando um rótulo quebra em duas linhas e outro não */
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.85rem 0.8rem;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+}
+
+.calc-step .calc-label {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    color: var(--color-gray-600);
+}
+
+.calc-step .calc-value {
+    font-size: 1.02rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.calc-step--minus .calc-value {
+    color: var(--color-danger);
+}
+
+.calc-step--result {
+    background: var(--color-gray-50);
+}
+
+.calc-step--final {
+    background: rgba(29, 161, 242, 0.08);
+    border-color: rgba(29, 161, 242, 0.35);
+}
+
+.calc-step--final .calc-value {
+    color: var(--color-primary-dark);
+    font-size: 1.12rem;
+}
+
+.calc-op {
+    flex: 0 0 auto;
+    align-self: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-gray-400);
+}
+
+/* Abaixo disso não cabe lado a lado: volta a empilhar, com o operador
+   entre um cartão e outro. */
+@media (max-width: 900px) {
+    .calc--flow {
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+    .calc-step {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: var(--spacing-sm);
+    }
+    .calc-step .calc-label {
+        font-size: 0.9rem;
+    }
+}
+
 /* ---------- Blocos divididos (estoque, fiado, loja online) ---------- */
 .split {
     padding: var(--spacing-3xl) 0;
@@ -5060,6 +5145,13 @@ body {
 .insight-card {
     max-width: 720px;
     padding: clamp(1.25rem, 2.5vw, 1.85rem);
+}
+
+/* Precisa de mais largura que os 720px acima para os cinco passos do cálculo
+   caberem lado a lado. Tem de vir depois daquela regra: mesma especificidade,
+   quem vence é a ordem. */
+.insight-card--wide {
+    max-width: 1040px;
 }
 
 .insight .section-header,
