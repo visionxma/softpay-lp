@@ -150,7 +150,12 @@ outro HTML — aí as media queries respondem à largura do iframe.
 6. **Contraste:** o azul do logo (`#1DA1F2`) dá 2,83:1 com texto branco e
    reprova em WCAG AA. Para texto sobre fundo colorido, use `--brand-600` ou
    mais escuro.
-7. **Cuidado com seletor descendente em componentes.** `.page-note strong`
+7. **`overflow: hidden` mata `position: sticky`.** Um ancestral com overflow
+   diferente de `visible` vira o container de rolagem do sticky, e o elemento
+   para de grudar. Foi o que quebrou as abas de funcionalidades: `.section-block`
+   usava `overflow: hidden` para recortar os cantos arredondados. Use
+   `overflow: clip`, que recorta igual sem criar o container.
+8. **Cuidado com seletor descendente em componentes.** `.page-note strong`
    pegava o `<strong>` do texto além do título e quebrava frases em três linhas.
    Já corrigido, mas o padrão pode se repetir em outros blocos.
 

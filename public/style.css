@@ -3653,7 +3653,18 @@ body {
 .section-block {
     border-radius: var(--radius-block);
     margin: 0 clamp(0.5rem, 1.5vw, 1.25rem) clamp(0.75rem, 2vw, 1.5rem);
+    /* `hidden` recorta nos cantos, mas transforma a seção em container de
+       rolagem — e isso mata o position:sticky de qualquer descendente. Era o
+       que quebrava as abas de funcionalidades: o .tabs-pin não grudava e a
+       lista de abas subia para fora da tela no meio da animação.
+       `clip` recorta igual e não cria o container. */
     overflow: hidden;
+}
+
+@supports (overflow: clip) {
+    .section-block {
+        overflow: clip;
+    }
 }
 
 .tint-block {
