@@ -55,9 +55,22 @@ def rota_de(f):
     return "/" + f
 
 
+# Arquivos .html que não são páginas e não devem ser auditados: tokens de
+# verificação de propriedade (Google Search Console, Bing) são texto solto
+# dentro de um .html e nunca terão title, h1 ou canonical.
+def _e_pagina(caminho):
+    nome = os.path.basename(caminho)
+    if re.match(r"^google[0-9a-f]{16}\.html$", nome):
+        return False
+    if nome in ("BingSiteAuth.xml", "BingSiteAuth.html"):
+        return False
+    return True
+
+
 def main():
     os.chdir(PUBLIC)
-    paginas = sorted(glob.glob("**/*.html", recursive=True))
+    paginas = sorted(p for p in glob.glob("**/*.html", recursive=True)
+                     if _e_pagina(p))
 
     rotas = set()
     for f in paginas:
