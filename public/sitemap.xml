@@ -102,6 +102,36 @@
     </image:image>
   </url>
   <url>
+    <loc>https://site.softpaybr.com/segmentos/loja-de-celulares-e-acessorios/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/celular-balcao.webp</image:loc>
+      <image:title>Comerciante usando o celular sobre o balcão da loja</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/loja-de-autopecas/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
+      <image:title>Funcionário conferindo estoque entre prateleiras do depósito</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/materiais-de-construcao/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
+      <image:title>Conferência de estoque em depósito de materiais</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://site.softpaybr.com/segmentos/pequeno-comercio/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
