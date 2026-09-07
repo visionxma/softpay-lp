@@ -1,7 +1,8 @@
 # Plano de expansão das landing pages de segmento
 
-Auditoria e planejamento feitos em 2026-09-06. **Ainda não implementado** —
-este documento existe para o trabalho não precisar ser refeito.
+Auditoria e planejamento feitos em 2026-09-06. **Implementado em 2026-09-07** —
+veja a seção 6 para o estado final. A auditoria das seções 1 a 5 é o registro
+de como o site estava antes, e foi mantida como está de propósito.
 
 ---
 
@@ -138,25 +139,81 @@ celulares, sem catálogo automotivo por veículo em autopeças, sem orçamento d
 obra e controle de entrega em construção. Evita cliente frustrado e sustenta a
 credibilidade que o §32 do briefing pede.
 
-### Falta
+### Feito em 2026-09-07
 
-- [ ] Aprimorar `/segmentos/mercadinho/` (P1) — hoje 4 blocos, 5 FAQ
-- [ ] Aprimorar `/segmentos/distribuidora/` (P1) — hoje 3 blocos, 5 FAQ; incluir seções internas de bebidas, alimentos e outros produtos
-- [ ] Criar `/segmentos/loja-de-joias/` (P2)
-- [ ] Ampliar `/segmentos/pequeno-comercio/` para cobrir MEI (P2) — **preservar a URL**
-- [ ] Criar `/segmentos/empresas-com-filiais/` (P2), com link cruzado explícito para `/solucoes/multiplas-lojas/`
-- [ ] Reescrever a página central `/segmentos/` para explicar os negócios atendidos, não só listar
-- [ ] Rodar `build.py`, `sitemap.py`, `fingerprint.py`, `verifica.py`
-- [ ] Validar visualmente a piloto em desktop e mobile
-- [ ] Considerar aprimorar `/segmentos/farmacia/`, a página mais fraca do conjunto (2 blocos)
-- [ ] Citar o bot do WhatsApp nos segmentos antigos, que foram escritos antes de ele existir
+- [x] `/segmentos/mercadinho/` ampliado — de 4 blocos e 5 FAQ para **7 blocos e 9 FAQ**
+- [x] `/segmentos/distribuidora/` ampliado — de 3 blocos e 5 FAQ para **8 blocos e 9 FAQ**,
+      com seções internas de bebidas, alimentos e produtos em geral na mesma página
+- [x] `/segmentos/farmacia/` ampliado — de **2 blocos** (a página mais fraca do site)
+      para 7 blocos e 9 FAQ, com o aviso sobre o SNGPC promovido ao primeiro bloco
+- [x] `/segmentos/loja-de-joias/` criado — 7 blocos, 9 FAQ
+- [x] `/segmentos/empresas-com-filiais/` criado — 7 blocos, 9 FAQ, com um bloco
+      inteiro explicando a divisão de papéis com `/solucoes/multiplas-lojas/`
+- [x] `/segmentos/pequeno-comercio/` ampliado para cobrir MEI — **URL preservada**,
+      7 blocos, 9 FAQ, com bloco próprio sobre a condição de MEI
+- [x] Página central `/segmentos/` reescrita — deixou de ser só uma grade de links:
+      agora explica o formato de negócio atendido, liga segmento a recurso numa
+      tabela e diz para quem o SoftPay **não** serve
+- [x] Bot do WhatsApp citado em mercadinho, distribuidora, farmácia, variedades e
+      papelaria — os segmentos escritos antes de ele existir
+- [x] `build.py`, `sitemap.py`, `fingerprint.py`, `verifica.py` e `mapa_interlinks.py`
+      rodados: **54 páginas, 53 URLs no sitemap, 1440 links internos, 0 órfãs**
+- [x] Piloto validada visualmente em desktop e mobile
 
-## 7. Pendência de ambiente
+### Corrigido durante a validação
 
-Este plano foi feito mas **não implementado** porque a sessão degradou: comandos
-de leitura de arquivo passaram a levar minutos e o `git push` parou de concluir
-(`fatal: mmap failed`). Há um commit local não publicado (`8330a2e` — chat do
-WhatsApp com visual de conversa real e correção do vão nas abas).
+- [x] **Foto enganosa em duas páginas.** `loja-de-autopecas` e
+      `materiais-de-construcao` reaproveitavam `distribuidora.webp` — que mostra
+      engradados de bebida — com `alt` descrevendo algo que a imagem não tem.
+      A figura foi removida das duas e os prompts das fotos que faltam entraram
+      em `docs/IMAGENS.md` (itens 9 a 12).
+- [x] **`.page-note strong` quebrava frases.** O seletor era descendente e
+      aplicava `display: block` a todo `<strong>` dentro do texto da nota, não só
+      ao título. Nove notas em nove páginas ficavam partidas em três linhas,
+      incluindo `/solucoes/bot-whatsapp/`, `/solucoes/nfe/` e `/solucoes/nfce/`,
+      que já estavam no ar. Corrigido para `.page-note > strong`.
 
-Ao retomar em sessão nova: `git push origin main`, depois seguir deste
-documento a partir da seção 2.
+### Contagem final dos segmentos
+
+| Segmento | Blocos | FAQ | Figura |
+|---|---|---|---|
+| mercadinho | 7 | 9 | sim |
+| loja-de-roupas (piloto) | 6 | 9 | sim |
+| loja-de-variedades | 3 | 6 | sim |
+| papelaria | 3 | 6 | sim |
+| farmacia | 7 | 9 | sim |
+| distribuidora | 8 | 9 | sim |
+| loja-de-celulares-e-acessorios | 6 | 7 | sim |
+| loja-de-autopecas | 6 | 7 | **não** |
+| materiais-de-construcao | 6 | 7 | **não** |
+| loja-de-joias | 7 | 9 | **não** |
+| empresas-com-filiais | 7 | 9 | **não** |
+| pequeno-comercio | 7 | 9 | sim |
+
+`loja-de-variedades` e `papelaria` continuam com os 3 blocos originais: o bot
+entrou como subtítulo dentro do bloco "o que muda com o SoftPay", com uma
+pergunta a mais na FAQ e dois links relacionados novos — não como bloco próprio.
+São páginas honestas e já cobrem o segmento. Elevá-las ao padrão de 7 blocos,
+com "o que ele não faz" e tabela de planos, é a próxima oportunidade — não uma
+correção pendente.
+
+## 7. Pendência de ambiente — resolvida
+
+O plano não tinha sido implementado porque a sessão de 2026-09-06 degradou:
+leituras de arquivo passaram a levar minutos e o `git push` parou de concluir
+com `fatal: mmap failed`.
+
+**A causa não era o git nem o repositório.** O projeto vive em `~/Documents`,
+sincronizado com o iCloud Drive com "Otimizar Armazenamento do Mac" ativo e o
+disco em 93%. O macOS despejou 997 arquivos para a nuvem — incluindo
+`tools/build.py`, `tools/verifica.py` e 935 objetos do `.git`. Toda leitura
+desses arquivos bloqueava esperando um download que não acontecia: o daemon
+`bird` girava a 85% de CPU sem materializar nada.
+
+Reiniciar o `bird` liberou `tools/` e `docs/`, mas o `.git` continuou preso.
+A saída foi clonar o repositório num diretório local, fora do iCloud, copiar
+para lá os fontes já materializados e publicar de lá.
+
+**Enquanto o projeto viver no iCloud com armazenamento otimizado, isso volta a
+acontecer.** A solução durável é mover o repositório para fora de `~/Documents`
+ou desligar "Otimizar Armazenamento do Mac".

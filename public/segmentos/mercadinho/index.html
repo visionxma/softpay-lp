@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="/style.css?v=0adbbf8dd7" />
+    <link rel="stylesheet" href="/style.css?v=552ff65a5d" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -107,10 +107,34 @@
             },
             {
               "@type": "Question",
+              "name": "E a balança? Vendo frios e hortifrúti por peso.",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV. Se a maior parte do seu faturamento é venda por peso, leve isso em conta na decisão."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Consigo controlar o fiado dos clientes?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. O caderninho de fiado está no plano Comércio. A partir do plano Loja, o sistema também envia cobrança por link de Pix pelo WhatsApp."
+                "text": "Sim. O caderninho de fiado está no plano Comércio, com saldo e histórico por cliente. A partir do plano Loja, o sistema também envia cobrança por link de Pix pelo WhatsApp."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O sistema controla a validade dos produtos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Esse é um ponto a confirmar com o suporte antes de contratar. Num mercadinho o controle de validade é importante e não deve ser assumido sem verificação."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dá para registrar a entrada de mercadoria pelo WhatsApp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, a partir do plano Loja. Você manda uma mensagem ou um áudio e o SoftPay registra. Vale a ressalva: no pico do caixa o PDV continua sendo o caminho — o bot rende na reposição e no fiado."
               }
             },
             {
@@ -119,6 +143,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Sim. Como é acessado pelo navegador, você consulta estoque e preço pelo celular enquanto organiza a prateleira."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso emitir cupom fiscal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Depende do seu regime — confirme com o seu contador. Se precisar, a emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação."
               }
             }
           ]
@@ -191,6 +223,17 @@
         <h2>A rotina de um mercadinho não perdoa lentidão</h2>
         <p>Fila no caixa em horário de pico, cliente esperando enquanto alguém procura o preço, o refrigerante que acabou sem ninguém perceber e o caderno de fiado que só uma pessoa sabe ler. Esses quatro problemas têm a mesma origem: a informação da loja não está em lugar nenhum além da cabeça de quem trabalha ali.</p>
         <p>Um mercadinho de bairro chega a passar centenas de itens por dia. Sem registro, o dono termina a semana sabendo quanto entrou no caixa e sem a menor ideia de quanto sobrou.</p>
+        <p>E há um detalhe que separa o mercadinho dos outros comércios: aqui o cliente é o vizinho. Ele volta três vezes por semana, leva fiado, pergunta se chegou aquele item. A relação é o ativo do negócio — e ela não cabe num caderno que só uma pessoa lê.</p>
+      </section>
+      <section class="page-section" id="os-problemas-que-aparecem-sempre">
+        <h2>Os problemas que aparecem sempre</h2>
+        <ul class="page-list">
+          <li><strong>A fila trava por causa do preço.</strong> Ninguém lembra quanto custa um item entre centenas, e a venda para enquanto alguém confere na prateleira.</li>
+          <li><strong>A prateleira vazia surpreende.</strong> O item de maior giro acaba no meio da tarde e só é notado quando um cliente pergunta.</li>
+          <li><strong>O fiado depende de uma pessoa só.</strong> Se quem anota falta, ninguém sabe quem deve o quê — e cobrar vira constrangimento.</li>
+          <li><strong>O caixa fecha com diferença e ninguém explica.</strong> Sem registro item a item, a diferença some no meio do movimento.</li>
+          <li><strong>Vendeu muito e não sobrou.</strong> Com margem apertada, o custo da mercadoria decide o resultado — e ele quase nunca está anotado.</li>
+        </ul>
       </section>
       <section class="page-section" id="o-que-muda-com-o-softpay">
         <h2>O que muda com o SoftPay</h2>
@@ -199,9 +242,27 @@
         <h3>Estoque de muitos itens sem virar bagunça</h3>
         <p>Produtos organizados por categoria, com preço de venda e custo. Como cada venda dá baixa automática, a quantidade em sistema acompanha a prateleira em vez de virar um número que ninguém confia.</p>
         <h3>Fiado sem caderno</h3>
-        <p>O fiado é parte do mercadinho de bairro — o problema nunca foi vender a prazo, foi anotar em papel. Cada venda fiada fica no nome do cliente, com histórico, e o saldo para de depender da memória de quem estava no balcão.</p>
+        <p>O fiado é parte do mercadinho de bairro — o problema nunca foi vender a prazo, foi anotar em papel. Cada venda fiada fica no nome do cliente, com histórico, e o saldo para de depender da memória de quem estava no balcão. A partir do plano Loja, o sistema ainda envia a cobrança por link de Pix pelo WhatsApp, o que tira de você a parte mais desconfortável: pedir.</p>
         <h3>Fechamento de caixa</h3>
         <p>No fim do expediente você confere o que o sistema registrou contra o que está na gaveta. A diferença aparece no mesmo dia, não no fim do mês.</p>
+        <h3>Curva ABC: onde está o seu resultado</h3>
+        <p>A partir do plano Loja, a curva ABC separa os itens que sustentam o faturamento daqueles que só ocupam prateleira. Num mercadinho com centenas de produtos, é o filtro que transforma a compra do mês numa decisão em vez de um hábito.</p>
+        <h3>Registrar a entrada da mercadoria falando</h3>
+        <p>A partir do plano Loja, você dá entrada de estoque, lança despesa ou registra um fiado mandando uma mensagem ou um áudio no WhatsApp. Veja o <a href="/solucoes/bot-whatsapp/">bot do WhatsApp</a>.</p>
+        <aside class="page-note">
+          <strong>Onde o bot rende, e onde não</strong>
+          <p>Seja realista sobre onde o bot ajuda no mercadinho: <strong>não é para o pico do caixa</strong>. Quem passa centenas de itens por dia precisa de PDV, não de conversa. O bot rende na reposição, na despesa do meio da tarde e no fiado do vizinho — os momentos em que abrir o sistema é justamente o que não acontece.</p>
+        </aside>
+      </section>
+      <section class="page-section" id="o-que-o-softpay-nao-faz-num-mercadinho">
+        <h2>O que o SoftPay não faz num mercadinho</h2>
+        <p>Dizer isso antes da contratação é mais útil que descobrir depois:</p>
+        <ul class="page-list">
+          <li><strong>Não integra com balança.</strong> Venda por peso — frios, hortifrúti, granel — não sai etiquetada pelo sistema. Esses itens entram como produto comum, com o valor digitado no PDV.</li>
+          <li><strong>Não faz pedido automático ao fornecedor.</strong> O sistema mostra o que está acabando; a compra continua sendo sua, pelo canal de sempre.</li>
+          <li><strong>Não tem controle de validade confirmado.</strong> Num mercadinho isso pesa. Confirme com o suporte antes de contratar contando com esse recurso.</li>
+          <li><strong>Não faz delivery nem roteiro de entrega.</strong> A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.</li>
+        </ul>
       </section>
       <section class="page-section" id="a-conta-que-todo-dono-de-mercadinho-precisa-fazer">
         <h2>A conta que todo dono de mercadinho precisa fazer</h2>
@@ -234,9 +295,30 @@
           <p class="calc-note">Números fictícios, só para mostrar o raciocínio. Com custo e quantidade cadastrados no sistema, essa conta deixa de ser estimativa. Aprenda a fazê-la no guia <a href="/guias/como-calcular-lucro-da-loja/">como calcular o lucro da loja</a>.</p>
         </div>
       </section>
-      <section class="page-section" id="perguntas-que-o-dono-de-mercadinho-costuma-fazer-antes-de-co">
-        <h2>Perguntas que o dono de mercadinho costuma fazer antes de contratar</h2>
-        <p>Duas dúvidas aparecem sempre. A primeira é se dá para começar sem cadastrar todos os produtos de uma vez — dá: comece pelos itens de maior giro e vá completando conforme repõe. A segunda é se precisa de computador novo: não, o SoftPay roda no navegador, inclusive no celular.</p>
+      <section class="page-section" id="perguntas-que-voce-passa-a-conseguir-responder">
+        <h2>Perguntas que você passa a conseguir responder</h2>
+        <ul class="page-list">
+          <li>Quanto ainda tenho daquele item que vende todo dia?</li>
+          <li>Quem está devendo fiado, quanto e desde quando?</li>
+          <li>O caixa de ontem bateu? Se não, em qual venda começou a diferença?</li>
+          <li>Quais produtos sustentam o meu faturamento e quais só ocupam prateleira?</li>
+          <li>Qual a minha margem depois do custo da mercadoria?</li>
+          <li>Quanto tenho de dinheiro parado em estoque agora?</li>
+        </ul>
+      </section>
+      <section class="page-section" id="qual-plano-faz-sentido">
+        <h2>Qual plano faz sentido</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>Para o mercadinho</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td><strong>O ponto de partida:</strong> PDV, caixa, fiado e estoque essencial, com 1 usuário. É o perfil mais comum de mercadinho de bairro</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td>Quando você quer curva ABC, cobrança de fiado por Pix no WhatsApp, registro pelo bot e importação. Até 3 usuários</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Para quem precisa emitir NF-e e NFC-e e tem equipe maior. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -258,12 +340,28 @@
             <div class="faq-answer"><p>O SoftPay roda no navegador e o campo de busca do PDV aceita a leitura do código. Confirme com o suporte a compatibilidade do seu leitor antes de contratar.</p></div>
           </details>
           <details class="faq-item">
+            <summary class="faq-question">E a balança? Vendo frios e hortifrúti por peso.</summary>
+            <div class="faq-answer"><p>O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV. Se a maior parte do seu faturamento é venda por peso, leve isso em conta na decisão.</p></div>
+          </details>
+          <details class="faq-item">
             <summary class="faq-question">Consigo controlar o fiado dos clientes?</summary>
-            <div class="faq-answer"><p>Sim. O caderninho de fiado está no plano Comércio. A partir do plano Loja, o sistema também envia cobrança por link de Pix pelo WhatsApp.</p></div>
+            <div class="faq-answer"><p>Sim. O caderninho de fiado está no plano Comércio, com saldo e histórico por cliente. A partir do plano Loja, o sistema também envia cobrança por link de Pix pelo WhatsApp.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">O sistema controla a validade dos produtos?</summary>
+            <div class="faq-answer"><p>Esse é um ponto a confirmar com o suporte antes de contratar. Num mercadinho o controle de validade é importante e não deve ser assumido sem verificação.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Dá para registrar a entrada de mercadoria pelo WhatsApp?</summary>
+            <div class="faq-answer"><p>Sim, a partir do plano Loja. Você manda uma mensagem ou um áudio e o SoftPay registra. Vale a ressalva: no pico do caixa o PDV continua sendo o caminho — o bot rende na reposição e no fiado.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Dá para usar no celular durante a reposição?</summary>
             <div class="faq-answer"><p>Sim. Como é acessado pelo navegador, você consulta estoque e preço pelo celular enquanto organiza a prateleira.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Preciso emitir cupom fiscal?</summary>
+            <div class="faq-answer"><p>Depende do seu regime — confirme com o seu contador. Se precisar, a emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação.</p></div>
           </details>
           </div>
         </div>
@@ -271,7 +369,7 @@
 
         <aside class="page-cta">
           <h2>Organize seu mercadinho em uma tarde</h2>
-          <p>Cadastre os produtos de maior giro, passe as primeiras vendas no PDV e veja o estoque acompanhar sozinho.</p>
+          <p>Cadastre os produtos de maior giro, passe as primeiras vendas no PDV e veja o estoque acompanhar sozinho. 7 dias grátis, sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -284,7 +382,10 @@
         <ul class="related-grid">
           <li><a href="/solucoes/sistema-de-estoque/"><strong>Controle de estoque</strong><span>Custo, quantidade e curva ABC</span></a></li>
           <li><a href="/solucoes/controle-de-fiado/"><strong>Controle de fiado</strong><span>Quem deve, quanto e desde quando</span></a></li>
+          <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>Venda rápida no balcão</span></a></li>
+          <li><a href="/solucoes/bot-whatsapp/"><strong>Bot do WhatsApp</strong><span>Registrar entrada e fiado falando</span></a></li>
           <li><a href="/guias/como-sair-do-caderno/"><strong>Como sair do caderno</strong><span>O passo a passo da migração</span></a></li>
+          <li><a href="/segmentos/loja-de-variedades/"><strong>Loja de variedades</strong><span>Outro segmento com muitos itens</span></a></li>
         </ul>
       </section>
 

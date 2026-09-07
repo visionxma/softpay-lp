@@ -81,6 +81,32 @@ Base comum a todos — cole junto de cada prompt:
 > Close nas mãos de um comerciante segurando um celular sobre o balcão de uma
 > loja, com o caixa e produtos desfocados ao fundo. Sem mostrar o rosto.
 
+### 9. Loja de autopeças — **faltando**
+> Balconista de loja de autopeças, homem pardo de 45 anos, camisa de uniforme
+> simples, atrás do balcão conferindo uma peça na mão. Prateleiras metálicas
+> com caixas de peças e filtros ao fundo, levemente desfocadas.
+
+### 10. Materiais de construção — **faltando**
+> Dono de depósito de materiais de construção, homem branco de 50 anos,
+> conferindo o estoque com uma prancheta. Sacos de cimento empilhados e
+> vergalhões ao fundo, área coberta, luz natural entrando pela lateral.
+
+### 11. Loja de joias — **faltando**
+> Vendedora de joalheria de rua, mulher negra de 35 anos, apresentando uma
+> peça sobre uma bandeja de veludo na vitrine do balcão. Iluminação quente e
+> discreta, vitrine desfocada ao fundo. Sem marca visível.
+
+### 12. Empresa com filiais — **faltando**
+> Dona de uma rede pequena de lojas, mulher parda de 40 anos, de pé no meio
+> da loja com um tablet, olhando para o salão. Ambiente de varejo organizado,
+> uma segunda pessoa atendendo ao fundo, desfocada.
+
+> **Estas quatro ainda não existem.** Enquanto não existirem, as páginas
+> correspondentes ficam sem `figura` — é melhor não ter foto do que ter uma
+> foto que o `alt` precisa mentir para descrever. Não reaproveite
+> `distribuidora.webp`: ela mostra engradados de bebida e só serve à
+> distribuidora.
+
 ---
 
 ## Diversidade
@@ -114,7 +140,8 @@ prompts acima já alternam de propósito.
 
 - **Depoimentos**: hoje só há dois clientes com foto. Cada novo depoimento
   verdadeiro vale mais que qualquer imagem gerada (§32).
-- **Páginas de segmento**: as 7 páginas em `/segmentos/` não têm imagem
-  nenhuma. Uma foto de contexto em cada uma daria muito mais vida.
+- **Páginas de segmento**: faltam as fotos 9 a 12 acima. As páginas de
+  autopeças, materiais de construção, joias e empresas com filiais estão no ar
+  sem imagem de abertura à espera delas.
 - **Screenshots do produto**: o briefing pede telas reais do SoftPay (§35).
   Essas não dá para gerar — precisam vir do sistema.

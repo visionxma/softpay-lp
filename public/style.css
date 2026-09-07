@@ -2692,7 +2692,9 @@ section {
     margin: var(--spacing-md) 0;
 }
 
-.page-note strong {
+/* Só o título da nota vira bloco. Sem o `>`, todo <strong> dentro do texto
+   também virava bloco e quebrava a frase no meio. */
+.page-note > strong {
     display: block;
     color: var(--color-gray-900);
     margin-bottom: 0.35rem;

@@ -7,7 +7,7 @@ import io, os, sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from template import render, BASE
-from blocks import sec, p, cards
+from blocks import sec, p, ul, nota, tabela, cards
 import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras
 
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
@@ -33,13 +33,60 @@ INDICES = [
   dict(
     slug="segmentos",
     title="Sistema de Gestão por Segmento de Loja | SoftPay",
-    description="Veja como o SoftPay atende cada tipo de comércio: mercadinho, loja de roupas, variedades, papelaria, farmácia, distribuidora e pequeno comércio.",
+    description="Veja como o SoftPay atende cada tipo de comércio: mercadinho, roupas, variedades, papelaria, farmácia, distribuidora, celulares, autopeças, construção, joias, filiais e MEI.",
     h1="Feito para o seu tipo de negócio",
-    intro="Cada comércio tem uma rotina diferente. Veja como o SoftPay se encaixa no seu.",
+    intro="Cada comércio tem uma rotina diferente, e um sistema que serve para todo mundo costuma não servir direito para ninguém. Estas páginas mostram o que muda no SoftPay quando a loja é a sua.",
     breadcrumbs=[("Segmentos", None)],
-    blocks=[sec("Escolha o seu segmento", _lista(c_segmentos.PAGINAS, "segmentos"))],
+    blocks=[
+      sec("Para que tipo de negócio o SoftPay foi feito",
+        p("O SoftPay é um sistema de gestão comercial para <strong>comércio que vende produto e controla estoque</strong>. Ele se encaixa bem quando a loja tem estas características:"),
+        ul("<strong>Vende produto físico</strong>, com entrada de mercadoria e baixa a cada venda.",
+           "<strong>Tem de 1 a 10 pessoas com acesso ao sistema</strong> — o teto do plano ERP Completo.",
+           "<strong>Já sente a perda de controle:</strong> estoque incerto, fiado no caderno, caixa que não fecha.",
+           "<strong>Não quer implantação nem servidor na loja.</strong> Roda no navegador, no computador ou no celular."),
+        p("Se a sua loja tem esse formato, é bem provável que um dos segmentos abaixo descreva a sua rotina — e, se nenhum descrever exatamente, a base é a mesma."),
+      ),
+      sec("Escolha o seu segmento", _lista(c_segmentos.PAGINAS, "segmentos")),
+      sec("Do seu segmento para o recurso que resolve",
+        p("As páginas de segmento contam a rotina do seu negócio. As de <a href=\"/solucoes/\">soluções</a> explicam cada recurso por dentro. Este é o caminho de uma para a outra:"),
+        tabela(["Se o seu problema é…", "O recurso", "Onde ele aparece"], [
+          ["Não sei o que tenho em estoque",
+           "<a href=\"/solucoes/sistema-de-estoque/\">Controle de estoque</a>",
+           "Todos os segmentos. Essencial em mercadinho, variedades e distribuidora"],
+          ["A fila trava no caixa",
+           "<a href=\"/solucoes/sistema-pdv/\">Sistema PDV</a>",
+           "Mercadinho, papelaria, farmácia"],
+          ["O mesmo item existe em tamanhos e cores",
+           "Variações, no <a href=\"/solucoes/sistema-de-estoque/\">estoque</a>",
+           "Loja de roupas e loja de joias. A partir do plano Loja"],
+          ["Não sei quem me deve",
+           "<a href=\"/solucoes/controle-de-fiado/\">Controle de fiado</a>",
+           "Mercadinho, farmácia, joias, pequeno comércio"],
+          ["Registrar exige parar o atendimento",
+           "<a href=\"/solucoes/bot-whatsapp/\">Bot do WhatsApp</a>",
+           "Todos. A partir do plano Loja"],
+          ["Preciso emitir nota fiscal",
+           "<a href=\"/solucoes/nfe/\">NF-e e NFC-e</a>",
+           "Distribuidora, autopeças, materiais de construção"],
+          ["Tenho mais de um ponto de venda",
+           "<a href=\"/solucoes/multiplas-lojas/\">Múltiplas lojas</a>",
+           "Empresas com filiais e distribuidora"],
+          ["Quero vender além da loja física",
+           "<a href=\"/solucoes/loja-online/\">Loja online</a>",
+           "Roupas, variedades, joias. A partir do plano Loja"],
+        ]),
+      ),
+      sec("Não achou o seu segmento?",
+        p("A base é a mesma para qualquer comércio com estoque: PDV, caixa, estoque, fiado, clientes e relatórios. Se a sua loja não tem página própria, comece pela de <a href=\"/segmentos/pequeno-comercio/\">pequeno comércio e MEI</a> — ela descreve o que vale para todos."),
+        p("Também vale ser direto sobre onde o SoftPay <strong>não</strong> é a escolha certa hoje: pizzaria e delivery, prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste."),
+        nota("Cada página de segmento traz um bloco com o que o sistema <strong>não</strong> faz naquele ramo. Vale ler esse bloco antes do resto — ele responde mais rápido se o SoftPay serve para você.", "Como ler estas páginas"),
+      ),
+    ],
+    cta_title="Teste no seu próprio balcão",
+    cta_text="Sete dias grátis, sem cartão de crédito. Cadastre os produtos de maior giro, passe algumas vendas e veja se a rotina melhora.",
     related=[("Soluções", "/solucoes/", "Por recurso do sistema"),
              ("Guias", "/guias/", "Como organizar a loja"),
+             ("Preços", "/#pricing", "O que tem em cada plano"),
              ("O que é sistema de gestão", "/sistema-de-gestao-para-pequenos-negocios/", "Guia completo")],
   ),
   dict(

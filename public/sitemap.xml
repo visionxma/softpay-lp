@@ -116,20 +116,12 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
-      <image:title>Funcionário conferindo estoque entre prateleiras do depósito</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/materiais-de-construcao/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://site.softpaybr.com/assets/lojistas/distribuidora.webp</image:loc>
-      <image:title>Conferência de estoque em depósito de materiais</image:title>
-    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pequeno-comercio/</loc>
@@ -140,6 +132,18 @@
       <image:loc>https://site.softpaybr.com/assets/lojistas/casal-comerciantes.webp</image:loc>
       <image:title>Casal de comerciantes olhando juntos a tela do computador atrás do balcão da loja</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/loja-de-joias/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/empresas-com-filiais/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-de-estoque/</loc>

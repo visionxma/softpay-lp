@@ -1,5 +1,78 @@
 # Changelog SEO — SoftPay
 
+## 2026-09-07 — Rodada 4: expansão das landing pages de segmento
+
+De 7 para **12 páginas de segmento**, com o padrão de 6 a 8 blocos aplicado às
+prioridades do plano. Site em **54 páginas**, sitemap com 53 URLs.
+
+### Páginas criadas
+
+| URL | Palavra-chave principal |
+|---|---|
+| `/segmentos/loja-de-joias/` | sistema para loja de joias, sistema para joalheria |
+| `/segmentos/empresas-com-filiais/` | sistema para empresa com filiais, sistema para rede de lojas |
+
+Somam-se às três criadas na rodada anterior e publicadas hoje:
+`/segmentos/loja-de-celulares-e-acessorios/`, `/segmentos/loja-de-autopecas/`
+e `/segmentos/materiais-de-construcao/`.
+
+### Páginas ampliadas — **todas as URLs preservadas**
+
+| URL | Antes | Depois |
+|---|---|---|
+| `/segmentos/mercadinho/` | 4 blocos, 5 FAQ | 7 blocos, 9 FAQ |
+| `/segmentos/distribuidora/` | 3 blocos, 5 FAQ | 8 blocos, 9 FAQ |
+| `/segmentos/farmacia/` | **2 blocos**, 5 FAQ | 7 blocos, 9 FAQ |
+| `/segmentos/pequeno-comercio/` | 3 blocos, 5 FAQ | 7 blocos, 9 FAQ, cobrindo MEI |
+| `/segmentos/` (índice) | grade de links | 4 blocos, tabela segmento→recurso, CTA |
+| `/segmentos/loja-de-variedades/` | 3 blocos, 5 FAQ | + bot do WhatsApp, 6 FAQ |
+| `/segmentos/papelaria/` | 3 blocos, 5 FAQ | + bot do WhatsApp, 6 FAQ |
+
+`distribuidora` passou a cobrir bebidas, alimentos e produtos em geral em seções
+internas da mesma página, em vez de páginas separadas por tipo — que dariam três
+textos quase idênticos competindo entre si.
+
+`pequeno-comercio` passou a cobrir MEI na mesma URL, pelo mesmo motivo: não
+criamos `/segmentos/mei-e-pequeno-comercio/`.
+
+### Correções
+
+- **Foto enganosa removida de duas páginas.** `loja-de-autopecas` e
+  `materiais-de-construcao` reaproveitavam `distribuidora.webp` — foto de
+  engradados de bebida — com `alt` descrevendo prateleiras e depósito de
+  materiais. As duas ficaram sem figura até existir foto real; os prompts
+  entraram em `docs/IMAGENS.md` (itens 9 a 12). Sitemap com imagem: 27 → 25.
+- **`.page-note strong` quebrava frases ao meio.** Seletor descendente aplicava
+  `display: block` a todo `<strong>` do texto da nota, não só ao título.
+  Corrigido para `.page-note > strong`. Afetava 9 notas em 9 páginas, três delas
+  já no ar: `/solucoes/bot-whatsapp/`, `/solucoes/nfe/` e `/solucoes/nfce/`.
+
+### Links internos
+
+O bot do WhatsApp — recurso mais diferenciado do produto e escrito depois dos
+segmentos antigos — passou a ser citado e linkado em mercadinho, distribuidora,
+farmácia, variedades e papelaria. `empresas-com-filiais` e
+`/solucoes/multiplas-lojas/` ganharam link cruzado explícito, com um bloco
+dizendo qual das duas ler (segmento descreve a empresa, solução descreve o
+recurso).
+
+`mapa_interlinks.py`: **54 páginas, 1440 links, 0 órfãs**.
+
+### Arquivos alterados
+
+- `tools/c_segmentos.py` — todo o conteúdo dos segmentos
+- `tools/build.py` — índice `/segmentos/` e importação de `ul`, `nota`, `tabela`
+- `public/style.css` — correção de `.page-note > strong`
+- `docs/IMAGENS.md` — prompts 9 a 12
+- `docs/seo/PLANO-SEGMENTOS.md` — status da implementação
+
+### Verificação
+
+`python3 tools/verifica.py` → **54 páginas, tudo certo**: estrutura, H1,
+canonical, Open Graph, links internos, duplicatas e FAQ schema.
+
+---
+
 ## 2026-09-04 — Rodada 1: nova home (landing page)
 
 Implementação das seções do briefing que dizem respeito à **home / landing page**.
