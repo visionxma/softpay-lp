@@ -2090,7 +2090,12 @@ section {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: var(--spacing-2xl);
-    align-items: center;
+    /* `center` só funciona quando as duas colunas têm alturas parecidas. Aqui
+       o cartão tem cerca de 200px e a coluna de texto passa de 600, então o
+       cartão ficava boiando no meio com mais de 200px de vazio em cima e
+       embaixo. Alinhado ao topo, ele divide a primeira linha com o rótulo da
+       seção e o vazio sobra embaixo, onde o olho já não está. */
+    align-items: start;
 }
 
 .split-grid--reverse .split-content {
