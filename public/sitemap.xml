@@ -7,43 +7,55 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://site.softpaybr.com/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/sistema-de-gestao-para-pequenos-negocios/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/comparativos/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/mercadinho/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -53,7 +65,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-roupas/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -63,7 +75,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-variedades/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -73,7 +85,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/papelaria/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -83,7 +95,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/farmacia/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -93,7 +105,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/distribuidora/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -103,7 +115,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-celulares-e-acessorios/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -113,7 +125,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-autopecas/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -123,7 +135,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/materiais-de-construcao/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -133,7 +145,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pequeno-comercio/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -143,7 +155,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-joias/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -153,7 +165,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/empresas-com-filiais/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -163,7 +175,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pet-shop/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -173,7 +185,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-calcados/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -183,7 +195,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/cosmeticos-e-perfumaria/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -193,7 +205,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-bebidas/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -203,7 +215,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-de-estoque/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -213,7 +225,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-pdv/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -223,7 +235,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/controle-de-fiado/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -233,7 +245,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-financeiro/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -243,7 +255,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/nfe/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -253,7 +265,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/nfce/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -263,7 +275,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/loja-online/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -273,7 +285,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/controle-de-clientes/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -283,7 +295,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/bot-whatsapp/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -293,7 +305,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/multiplas-lojas/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -302,8 +314,26 @@
     </image:image>
   </url>
   <url>
+    <loc>https://site.softpaybr.com/comparativos/softpay-ou-nex/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/comparativos/softpay-ou-kyte/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/comparativos/alternativa-ao-bling/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-estoque/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -313,7 +343,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-caixa-da-loja/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -323,7 +353,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-fiado/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -333,7 +363,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-calcular-lucro-da-loja/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -343,7 +373,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-calcular-margem-de-lucro/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -353,7 +383,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-organizar-uma-loja/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -363,7 +393,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-sair-do-caderno/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -373,157 +403,193 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/vale-a-pena-ter-sistema-de-gestao/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/quanto-custa-um-sistema-de-gestao/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-escolher-sistema-de-gestao/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/reforma-tributaria-comercio/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/reforma-tributaria-mei/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/meu-sistema-precisa-mudar-reforma-tributaria/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/checklist-reforma-tributaria-2027/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/nfe-nfce-o-que-e/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/como-precificar-produto/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/perda-de-estoque-validade/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/produtos-parados-no-estoque/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/troca-e-devolucao-na-loja/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/como-organizar-vitrine-de-loja/</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/blog/fluxo-de-caixa-loja-pequena/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/quanto-custa-um-sistema-para-loja/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/loja-pequena-precisa-de-sistema/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/caderno-ou-sistema/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/excel-ou-sistema-de-gestao/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/qual-sistema-para-mercadinho/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/sistema-de-gestao-e-seguro/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/posso-usar-o-softpay-no-celular/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/posso-migrar-de-outro-sistema/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/e-dificil-aprender/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/preciso-instalar/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/tem-suporte-humano/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/funciona-no-brasil-inteiro/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/posso-usar-em-varios-dispositivos/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/sobre/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/contato/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/termos</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/privacidade</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/reembolso</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -21,9 +21,9 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Métrica | Valor |
 |---|---|
-| Páginas | 66 |
-| Links internos (com âncora) | 1845 |
-| Links contextuais no corpo | 622 |
+| Páginas | 77 |
+| Links internos (com âncora) | 2314 |
+| Links contextuais no corpo | 740 |
 | Páginas órfãs | 0 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -33,18 +33,18 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Página | Links de entrada |
 |---|---|
-| `/` | 65 |
-| `/termos` | 62 |
-| `/privacidade` | 62 |
-| `/reembolso` | 62 |
-| `/segmentos/` | 61 |
-| `/solucoes/` | 61 |
-| `/guias/` | 61 |
-| `/sobre/` | 61 |
-| `/perguntas/` | 61 |
-| `/solucoes/sistema-pdv/` | 61 |
-| `/solucoes/controle-de-fiado/` | 61 |
-| `/solucoes/loja-online/` | 61 |
+| `/` | 76 |
+| `/termos` | 73 |
+| `/privacidade` | 73 |
+| `/reembolso` | 73 |
+| `/segmentos/` | 72 |
+| `/solucoes/` | 72 |
+| `/guias/` | 72 |
+| `/segmentos/loja-de-roupas/` | 72 |
+| `/solucoes/sistema-pdv/` | 72 |
+| `/solucoes/controle-de-fiado/` | 72 |
+| `/solucoes/loja-online/` | 72 |
+| `/segmentos/mercadinho/` | 72 |
 
 ## Links contextuais
 
@@ -84,61 +84,61 @@ por relevância, e traz links contextuais dentro do texto.
 | `/` | `/solucoes/bot-whatsapp/` | Ver como funciona o bot do WhatsApp → |
 | `/` | `/solucoes/controle-de-fiado/` | Ver como funciona o controle de fiado → |
 | `/404` | `/` | Ir para a página inicial |
-| `/contato/` | `/perguntas/` | PerguntasDúvidas frequentes |
-| `/contato/` | `/perguntas/tem-suporte-humano/` | Suporte humanoComo funciona |
-| `/contato/` | `/privacidade` | Política de Privacidade |
-| `/contato/` | `/reembolso` | Política de Reembolso |
-| `/contato/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/contato/` | `/sobre/` | Sobre o SoftPayQuem está por trás |
-| `/contato/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/` | `/guias/checklist-reforma-tributaria-2027/` | Checklist da reforma tributária até janeiro de 2027Seis passos, em ord |
-| `/guias/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular o lucro de uma lojaResposta curta: lucro bruto é o fatur |
-| `/guias/` | `/guias/como-calcular-margem-de-lucro/` | Como calcular a margem de lucroResposta curta: margem é o lucro dividi |
-| `/guias/` | `/guias/como-controlar-caixa-da-loja/` | Como controlar o caixa de uma lojaResposta curta: registre toda entrad |
-| `/guias/` | `/guias/como-controlar-estoque/` | Como controlar o estoque de uma lojaResposta curta: registre o que ent |
-| `/guias/` | `/guias/como-controlar-fiado/` | Como controlar vendas fiadasResposta curta: registre cada venda fiada  |
-| `/guias/` | `/guias/como-escolher-sistema-de-gestao/` | Como escolher um sistema de gestãoA maioria das escolhas ruins tem a m |
-| `/guias/` | `/guias/como-organizar-uma-loja/` | Como organizar uma lojaResposta curta: organize uma coisa de cada vez, |
-| `/guias/` | `/guias/como-sair-do-caderno/` | Como sair do cadernoResposta curta: não transcreva o caderno inteiro |
-| `/guias/` | `/guias/meu-sistema-precisa-mudar-reforma-tributaria/` | Meu sistema precisa mudar por causa da reforma tributária?Resposta cur |
-| `/guias/` | `/guias/nfe-nfce-o-que-e/` | NF-e e NFC-e: qual a diferençaA diferença é o cliente |
-| `/guias/` | `/guias/quanto-custa-um-sistema-de-gestao/` | Quanto custa um sistema de gestão para comércioA faixa de mercado para |
-| `/guias/` | `/guias/reforma-tributaria-comercio/` | Reforma tributária no comércio: o que muda e quandoDuas datas resolvem |
-| `/guias/` | `/guias/reforma-tributaria-mei/` | Reforma tributária e o MEIA mudança mais concreta para o MEI tem data: |
-| `/guias/` | `/guias/vale-a-pena-ter-sistema-de-gestao/` | Vale a pena ter um sistema de gestão na loja?Resposta curta e honesta: |
-| `/guias/` | `/perguntas/` | PerguntasDúvidas antes de contratar |
-| `/guias/` | `/privacidade` | Política de Privacidade |
-| `/guias/` | `/reembolso` | Política de Reembolso |
-| `/guias/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/guias/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestãoGuia completo |
-| `/guias/` | `/solucoes/` | SoluçõesComo o SoftPay ajuda |
-| `/guias/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO cadastro de produtos |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/como-sair-do-caderno/` | Como sair do cadernoSair do papel |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/meu-sistema-precisa-mudar-reforma-tributaria/` | Meu sistema precisa mudar?As perguntas ao fornecedor |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/meu-sistema-precisa-mudar-reforma-tributaria/` | meu sistema precisa mudar? |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/nfe-nfce-o-que-e/` | O que é NF-e e NFC-eA diferença entre as duas |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/reforma-tributaria-comercio/` | Reforma tributária no comércioAs datas e o que muda |
-| `/guias/checklist-reforma-tributaria-2027/` | `/guias/reforma-tributaria-mei/` | Reforma tributária e o MEIA obrigação de 2027 |
-| `/guias/checklist-reforma-tributaria-2027/` | `/privacidade` | Política de Privacidade |
-| `/guias/checklist-reforma-tributaria-2027/` | `/reembolso` | Política de Reembolso |
-| `/guias/checklist-reforma-tributaria-2027/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/guias/checklist-reforma-tributaria-2027/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/como-calcular-lucro-da-loja/` | `/guias/como-calcular-margem-de-lucro/` | Como calcular margemFormação de preço |
-| `/guias/como-calcular-lucro-da-loja/` | `/guias/como-controlar-estoque/` | Como controlar estoqueDe onde vem o custo |
-| `/guias/como-calcular-lucro-da-loja/` | `/privacidade` | Política de Privacidade |
-| `/guias/como-calcular-lucro-da-loja/` | `/reembolso` | Política de Reembolso |
-| `/guias/como-calcular-lucro-da-loja/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/guias/como-calcular-lucro-da-loja/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/como-calcular-lucro-da-loja/` | `/solucoes/sistema-financeiro/` | Sistema financeiroCaixa e resultado |
-| `/guias/como-calcular-margem-de-lucro/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular lucroA conta completa |
-| `/guias/como-calcular-margem-de-lucro/` | `/privacidade` | Política de Privacidade |
-| `/guias/como-calcular-margem-de-lucro/` | `/reembolso` | Política de Reembolso |
-| `/guias/como-calcular-margem-de-lucro/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
-| `/guias/como-calcular-margem-de-lucro/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
-| `/guias/como-calcular-margem-de-lucro/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueCusto por produto |
-| `/guias/como-calcular-margem-de-lucro/` | `/solucoes/sistema-financeiro/` | Sistema financeiroResultado do período |
-| `/guias/como-controlar-caixa-da-loja/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular lucroCaixa não é lucro |
+| `/blog/` | `/blog/como-organizar-vitrine-de-loja/` | Como organizar a vitrine de uma loja pequenaA vitrine é o único vended |
+| `/blog/` | `/blog/como-precificar-produto/` | Como precificar um produto na lojaO erro mais comum na precificação nã |
+| `/blog/` | `/blog/fluxo-de-caixa-loja-pequena/` | Fluxo de caixa para loja pequenaDá para vender bem e não ter dinheiro  |
+| `/blog/` | `/blog/perda-de-estoque-validade/` | Perda de estoque por validadeProduto vencido é prejuízo dobrado: você  |
+| `/blog/` | `/blog/produtos-parados-no-estoque/` | Produtos parados no estoqueProduto parado não é neutro: é dinheiro que |
+| `/blog/` | `/blog/troca-e-devolucao-na-loja/` | Troca e devolução na lojaBoa parte dos conflitos de troca vem de uma c |
+| `/blog/` | `/guias/` | GuiasMétodo passo a passo |
+| `/blog/` | `/perguntas/` | PerguntasDúvidas antes de contratar |
+| `/blog/` | `/privacidade` | Política de Privacidade |
+| `/blog/` | `/reembolso` | Política de Reembolso |
+| `/blog/` | `/segmentos/` | SegmentosPelo seu tipo de loja |
+| `/blog/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
+| `/blog/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
+| `/blog/como-organizar-vitrine-de-loja/` | `/blog/como-precificar-produto/` | Como precificarO preço que aparece |
+| `/blog/como-organizar-vitrine-de-loja/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosO que não vai na vitrine |
+| `/blog/como-organizar-vitrine-de-loja/` | `/blog/produtos-parados-no-estoque/` | produtos parados no estoque |
+| `/blog/como-organizar-vitrine-de-loja/` | `/guias/como-organizar-uma-loja/` | Como organizar uma lojaO roteiro completo |
+| `/blog/como-organizar-vitrine-de-loja/` | `/privacidade` | Política de Privacidade |
+| `/blog/como-organizar-vitrine-de-loja/` | `/reembolso` | Política de Reembolso |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-calcados/` | Loja de calçadosExposição por modelo |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-joias/` | Loja de joiasVitrine como argumento |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-roupas/` | Loja de roupasVitrine é decisiva |
+| `/blog/como-organizar-vitrine-de-loja/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
+| `/blog/como-organizar-vitrine-de-loja/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
+| `/blog/como-precificar-produto/` | `/blog/perda-de-estoque-validade/` | Perda de estoqueO custo que some da conta |
+| `/blog/como-precificar-produto/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosDinheiro na prateleira |
+| `/blog/como-precificar-produto/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular o lucro da lojaDo faturamento ao que sobra |
+| `/blog/como-precificar-produto/` | `/guias/como-calcular-margem-de-lucro/` | Como calcular margem de lucroO método completo |
+| `/blog/como-precificar-produto/` | `/guias/como-calcular-margem-de-lucro/` | como calcular margem de lucro |
+| `/blog/como-precificar-produto/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO passo a passo |
+| `/blog/como-precificar-produto/` | `/privacidade` | Política de Privacidade |
+| `/blog/como-precificar-produto/` | `/reembolso` | Política de Reembolso |
+| `/blog/como-precificar-produto/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
+| `/blog/como-precificar-produto/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
+| `/blog/como-precificar-produto/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueCusto e curva ABC |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/blog/como-precificar-produto/` | Como precificarA taxa do cartão no preço |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosEstoque que virou caixa preso |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular o lucroDo faturamento ao que sobra |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-controlar-caixa-da-loja/` | Como controlar caixa da lojaO fechamento diário |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-controlar-caixa-da-loja/` | como controlar o caixa da loja |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-controlar-fiado/` | Como controlar fiadoO dinheiro que já é seu |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/privacidade` | Política de Privacidade |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/reembolso` | Política de Reembolso |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/solucoes/sistema-financeiro/` | Sistema financeiroO recurso no SoftPay |
+| `/blog/perda-de-estoque-validade/` | `/blog/como-precificar-produto/` | Como precificarA perda entra no custo |
+| `/blog/perda-de-estoque-validade/` | `/blog/produtos-parados-no-estoque/` | Produtos parados no estoqueDinheiro preso na prateleira |
+| `/blog/perda-de-estoque-validade/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO passo a passo |
+| `/blog/perda-de-estoque-validade/` | `/privacidade` | Política de Privacidade |
+| `/blog/perda-de-estoque-validade/` | `/reembolso` | Política de Reembolso |
+| `/blog/perda-de-estoque-validade/` | `/segmentos/farmacia/` | FarmáciaOutro caso de validade curta |
+| `/blog/perda-de-estoque-validade/` | `/segmentos/mercadinho/` | MercadinhoOnde a validade mais pesa |
+| `/blog/perda-de-estoque-validade/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
+| `/blog/perda-de-estoque-validade/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
 
 ## Páginas órfãs
 

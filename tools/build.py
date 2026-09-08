@@ -8,12 +8,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from template import render, BASE
 from blocks import sec, p, ul, nota, tabela, cards
-import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras
+import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras, c_blog, c_comparativos
 
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
 
 PAGINAS = (c_segmentos.PAGINAS + c_solucoes.PAGINAS + c_guias.PAGINAS
-           + c_perguntas.PAGINAS + c_extras.PAGINAS)
+           + c_perguntas.PAGINAS + c_blog.PAGINAS
+           + c_comparativos.PAGINAS + c_extras.PAGINAS)
 
 
 def _lista(paginas, prefixo):
@@ -112,6 +113,30 @@ INDICES = [
     related=[("Perguntas", "/perguntas/", "Dúvidas antes de contratar"),
              ("Soluções", "/solucoes/", "Como o SoftPay ajuda"),
              ("O que é sistema de gestão", "/sistema-de-gestao-para-pequenos-negocios/", "Guia completo")],
+  ),
+  dict(
+    slug="comparativos",
+    title="Comparativos: SoftPay e Outros Sistemas de Gestão | SoftPay",
+    description="Comparações honestas entre o SoftPay e outros sistemas de gestão para pequeno comércio, incluindo quando o concorrente é a melhor escolha.",
+    h1="Comparativos",
+    intro="Comparações entre o SoftPay e outros sistemas, com preços lidos na fonte e dizendo também quando o concorrente atende melhor.",
+    breadcrumbs=[("Comparativos", None)],
+    blocks=[sec("Escolha a comparação", _lista(c_comparativos.PAGINAS, "comparativos"))],
+    related=[("Como escolher um sistema", "/guias/como-escolher-sistema-de-gestao/", "Os 7 critérios"),
+             ("Quanto custa um sistema", "/guias/quanto-custa-um-sistema-de-gestao/", "Preço real"),
+             ("Preços", "/#pricing", "Os planos do SoftPay")],
+  ),
+  dict(
+    slug="blog",
+    title="Blog do Lojista: Rotina, Preço, Estoque e Vitrine | SoftPay",
+    description="Conteúdo prático sobre a rotina de quem tem loja: como precificar, evitar perda de estoque, lidar com trocas, montar vitrine e organizar o fluxo de caixa.",
+    h1="Blog do lojista",
+    intro="Sobre a rotina de quem tem loja — preço, estoque, vitrine, caixa e troca. Serve mesmo que você não use o SoftPay.",
+    breadcrumbs=[("Blog", None)],
+    blocks=[sec("Escolha o assunto", _lista(c_blog.PAGINAS, "blog"))],
+    related=[("Guias", "/guias/", "Método passo a passo"),
+             ("Perguntas", "/perguntas/", "Dúvidas antes de contratar"),
+             ("Segmentos", "/segmentos/", "Pelo seu tipo de loja")],
   ),
   dict(
     slug="perguntas",

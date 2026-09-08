@@ -12,9 +12,10 @@ RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras
+import c_blog, c_comparativos
 
 BASE = "https://site.softpaybr.com"
-HOJE = "2026-09-06"
+HOJE = "2026-09-08"
 
 
 def esc(t):
@@ -25,11 +26,14 @@ def main():
     os.chdir(RAIZ)
     urls = [("/", "1.0", "weekly", None),
             ("/sistema-de-gestao-para-pequenos-negocios/", "0.9", "monthly", None)]
-    for slug in ["segmentos", "solucoes", "guias", "perguntas"]:
+    for slug in ["segmentos", "solucoes", "guias", "comparativos", "blog", "perguntas"]:
         urls.append(("/%s/" % slug, "0.8", "monthly", None))
 
+    # comparativo tem a maior intencao de compra do site: quem busca
+    # "SoftPay ou X" ja decidiu contratar algo. Por isso prioridade 0.8.
     for mod, pri in [(c_segmentos, "0.8"), (c_solucoes, "0.8"),
-                     (c_guias, "0.7"), (c_perguntas, "0.6")]:
+                     (c_comparativos, "0.8"), (c_guias, "0.7"),
+                     (c_blog, "0.7"), (c_perguntas, "0.6")]:
         for pg in mod.PAGINAS:
             urls.append(("/%s/" % pg["slug"], pri, "monthly", pg.get("figura")))
 

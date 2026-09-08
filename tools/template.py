@@ -244,6 +244,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                     <li><a href="/segmentos/" class="nav-link">Segmentos</a></li>
                     <li><a href="/solucoes/" class="nav-link">Soluções</a></li>
                     <li><a href="/guias/" class="nav-link">Guias</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
                     <li><a href="/#pricing" class="nav-link">Preços</a></li>
                     <li><a href="%(app)s" class="nav-link btn-nav-cta">Teste Grátis 7 Dias</a></li>
                 </ul>
@@ -314,6 +315,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                         <ul>
                             <li><a href="/sistema-de-gestao-para-pequenos-negocios/">O que é sistema de gestão</a></li>
                             <li><a href="/guias/">Guias</a></li>
+                            <li><a href="/blog/">Blog</a></li>
                             <li><a href="/perguntas/">Perguntas</a></li>
                             <li><a href="/sobre/">Sobre</a></li>
                             <li><a href="/contato/">Contato</a></li>
