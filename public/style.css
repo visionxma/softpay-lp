@@ -6058,18 +6058,85 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVIDADE — conforto de leitura e toque
-   Auditoria em 8 aparelhos (iPhone SE ao Desktop) apontou três problemas
-   mensuráveis, tratados abaixo. Nenhuma regra muda o desenho: são ajustes de
-   legibilidade e de área de toque.
+   MOVIMENTO E RESPONSIVIDADE
+   Padrão copiado do site.froxbr.com, que já está validado e no ar. Os valores
+   (tempos, curva, deslocamento, largura de linha) foram lidos do CSS dele, não
+   arbitrados aqui:
+     --e-out: cubic-bezier(.22,1,.36,1)   curva de saída "expo"
+     --d-base 280ms · --d-slow 520ms      tempos de transição
+     translateY(22px)                     deslocamento da revelação
+     max-width: 46ch                      largura de linha do texto corrido
    ========================================================================== */
 
-/* 1. LINHA LONGA DEMAIS ------------------------------------------------------
-   Medido no desktop: blocos de texto chegando a 167 caracteres por linha, com
-   `max-width: none`. A faixa confortável de leitura é 45–75; acima disso o
-   olho perde o começo da linha seguinte e a leitura cansa. Estes oito blocos
-   não tinham limite algum. 68ch mantém a linha dentro da faixa sem mudar o
-   desenho da seção. */
+:root {
+    --e-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --d-fast: 160ms;
+    --d-base: 280ms;
+    --d-slow: 520ms;
+}
+
+/* --- 1. REVELAÇÃO AO ROLAR -------------------------------------------------
+   Só esconde quando há JavaScript (a classe .js é posta pelo próprio script).
+   Sem JS, nada fica invisível — regra do FroX, e a única forma segura de
+   esconder conteúdo por animação. */
+.js [data-reveal] {
+    opacity: 0;
+    transform: translateY(22px);
+    will-change: transform, opacity;
+}
+
+.js [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+    transition: opacity var(--d-slow) var(--e-out),
+                transform var(--d-slow) var(--e-out);
+}
+
+/* Libera o will-change quando a transição termina: mantê-lo ligado o tempo
+   todo consome memória de vídeo à toa em celular. */
+.js [data-reveal].reveal-done {
+    will-change: auto;
+}
+
+/* Escalonamento: filhos diretos entram em sequência, não em bloco. */
+.js [data-reveal-stagger] > * {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+.js [data-reveal-stagger].is-visible > * {
+    opacity: 1;
+    transform: none;
+    transition: opacity var(--d-slow) var(--e-out),
+                transform var(--d-slow) var(--e-out);
+}
+
+.js [data-reveal-stagger].is-visible > *:nth-child(1) { transition-delay: 0ms; }
+.js [data-reveal-stagger].is-visible > *:nth-child(2) { transition-delay: 70ms; }
+.js [data-reveal-stagger].is-visible > *:nth-child(3) { transition-delay: 140ms; }
+.js [data-reveal-stagger].is-visible > *:nth-child(4) { transition-delay: 210ms; }
+.js [data-reveal-stagger].is-visible > *:nth-child(n+5) { transition-delay: 280ms; }
+
+/* --- 2. CARTAS EMPILHADAS (efeito de rolagem do FroX) ----------------------
+   Cada carta gruda um pouco abaixo da anterior, formando um baralho conforme
+   a página rola. É o que dá sensação de progresso em vez de corredor.
+   Fundo sólido e sombra são obrigatórios: sem eles a carta de baixo vaza
+   através da de cima e o efeito vira transparência confusa (comentário do
+   próprio CSS do FroX). */
+@media (min-width: 861px) {
+    .deck-item {
+        position: sticky;
+        top: calc(var(--nav-h, 90px) + 16px + var(--i, 0) * 10px);
+        background: var(--color-white);
+        box-shadow: 0 -6px 18px rgba(16, 24, 40, .05);
+        transition: border-color var(--d-base) var(--e-out);
+    }
+}
+
+/* --- 3. LARGURA DE LINHA ---------------------------------------------------
+   O FroX usa max-width: 46ch no texto corrido. Medido no SoftPay antes: até
+   167 caracteres por linha, contra a faixa confortável de 45 a 75 — o olho
+   perde o começo da linha seguinte e a leitura cansa. */
 .split-note,
 .plans-support-note,
 .faq-footer,
@@ -6077,15 +6144,9 @@ body {
 .support-text,
 .map-caption,
 .showcase-description {
-    /* 46ch e não 68ch: a unidade `ch` mede a largura do dígito ZERO, que é
-       bem mais largo que a letra média em texto corrido. Medido nesta fonte,
-       68ch rendia ~100 caracteres reais por linha — ainda acima da faixa
-       confortável de 45 a 75. Com 46ch a linha fica em ~68 caracteres. */
     max-width: 46ch;
 }
 
-/* Nos blocos centralizados, o limite precisa vir com margem automática,
-   senão o texto encurta e fica encostado à esquerda. */
 .support-text,
 .plans-support-note,
 .map-caption {
@@ -6093,118 +6154,10 @@ body {
     margin-right: auto;
 }
 
-/* 2. ALVO DE TOQUE PEQUENO ---------------------------------------------------
-   Medido no iPhone 14: 33 links com 21px de altura e 4 abas com 30px. A
-   recomendação de acessibilidade para toque é 44px. Em vez de aumentar a
-   fonte (que mudaria o desenho), o alvo cresce por padding vertical — a
-   área clicável aumenta e o texto continua igual. */
-@media (max-width: 860px) {
-    .footer-column a,
-    .faq-footer a,
-    .nav-menu .nav-link {
-        display: inline-block;
-        padding-block: .5rem;   /* 21px + 16px = 37px, e o gap da lista completa */
-    }
-
-    .display-tab {
-        min-height: 44px;
-        padding-block: .55rem;
-    }
-
-    .footer-column ul {
-        gap: .125rem; /* o padding já separa; o gap antigo somava e esticava */
-    }
-}
-
-/* 3. TEXTO MIÚDO -------------------------------------------------------------
-   Medido: 64 elementos abaixo de 14px no celular. Os rótulos em caixa alta
-   (section-label, price-tag, uf-chip) são etiquetas curtas e podem ser
-   menores, mas o texto CORRIDO abaixo de 14px cansa em tela pequena. Só o
-   texto de leitura sobe. */
-@media (max-width: 560px) {
-    .wa-text,
-    .split-note,
-    .calc-note,
-    .price-per {
-        font-size: .9375rem; /* 15px */
-        line-height: 1.6;
-    }
-
-    .wa-meta {
-        font-size: .8125rem; /* era 10px — pequeno demais até para metadado */
-    }
-}
-
-/* 4. RITMO DA ROLAGEM --------------------------------------------------------
-   A página tem ~29.500px no celular (35 telas). Sem marcação de ritmo, a
-   rolagem vira um corredor sem fim. `scroll-margin-top` faz cada seção parar
-   abaixo da navbar quando alcançada por link âncora, e o respiro entre
-   seções encolhe no celular para reduzir a distância morta entre blocos. */
-section[id] {
-    scroll-margin-top: calc(var(--nav-h, 90px) + 8px);
-}
-
-@media (max-width: 560px) {
-    .section-block {
-        padding-block: clamp(2.5rem, 9vw, 4rem);
-    }
-}
-
-/* Últimos alvos abaixo de 44px, medidos depois do ajuste anterior:
-   .btn a 42px, .nav-link a 41px, .link-arrow a 25px e o botão do menu a 35px.
-   Faltavam poucos pixels em cada — resolvido com altura mínima, sem tocar na
-   fonte nem no espaçamento visível. */
-@media (max-width: 860px) {
-    .btn,
-    .nav-menu .nav-link,
-    .hero-announce {
-        min-height: 44px;
-    }
-
-    /* o conteúdo continua centrado dentro da nova altura */
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .link-arrow {
-        display: inline-flex;
-        align-items: center;
-        min-height: 44px;
-    }
-
-    .mobile-menu-toggle {
-        min-width: 44px;
-        min-height: 44px;
-    }
-}
-
-/* "Desenvolvido pela VisionX" — link dentro de frase corrida. Aumentar a
-   altura da caixa quebraria a linha do texto, então a área de toque cresce
-   por baixo do próprio link, sem deslocar nada: o pseudo-elemento estende a
-   região sensível para 44px sem alterar o layout. */
-.footer-credit a {
-    position: relative;
-    display: inline;
-}
-
-@media (max-width: 860px) {
-    .footer-credit a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 50%;
-        height: 44px;
-        transform: translateY(-50%);
-    }
-}
-
-/* O iPad Pro (1024px) e telas grandes com toque ficavam de fora das regras
-   acima, que param em 860px — medido: 56 alvos abaixo de 44px no iPad Pro.
-   `pointer: coarse` alcança qualquer aparelho cujo apontador principal é o
-   dedo, independentemente da largura, e não afeta quem usa mouse. */
+/* --- 4. ALVO DE TOQUE ------------------------------------------------------
+   Medido no iPhone 14: 58 links e botões abaixo de 44px, sendo 33 com apenas
+   21px de altura. `pointer: coarse` alcança qualquer aparelho tocável,
+   inclusive tablet grande, que a regra por largura deixava de fora. */
 @media (pointer: coarse) {
     .footer-column a,
     .faq-footer a,
@@ -6239,5 +6192,50 @@ section[id] {
 
     .footer-column ul {
         gap: .125rem;
+    }
+
+    /* link dentro de frase corrida: a área cresce sem deslocar o texto */
+    .footer-credit a {
+        position: relative;
+        display: inline;
+    }
+
+    .footer-credit a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 44px;
+        transform: translateY(-50%);
+    }
+}
+
+/* --- 5. RITMO DA ROLAGEM ---------------------------------------------------
+   Âncora não pode parar atrás da navbar fixa. E, como o FroX, rolagem suave. */
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: calc(var(--nav-h, 90px) + 8px);
+}
+
+/* --- 6. MENOS MOVIMENTO ----------------------------------------------------
+   Todo efeito acima tem par aqui, como no FroX: quem pediu menos movimento no
+   sistema recebe a página inteira, sem animação e sem rolagem suave. */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+
+    .js [data-reveal],
+    .js [data-reveal-stagger] > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .deck-item {
+        position: static;
+        box-shadow: none;
     }
 }

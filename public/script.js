@@ -614,3 +614,92 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
     window.addEventListener('resize', function () { medir(); aoRolar(); });
     if (menosMovimento.addEventListener) menosMovimento.addEventListener('change', atualizar);
 })();
+
+/* ---------------------------------------------------------------------------
+   REVELAÇÃO AO ROLAR
+   Estrutura copiada do site.froxbr.com (js/main.js), que já está validado no
+   ar, com as mesmas quatro proteções:
+
+     1. A classe `.js` é posta aqui, e só ela ativa o estado escondido no CSS.
+        Sem JavaScript nada some — esconder por animação sem essa trava é a
+        forma mais comum de deixar página em branco para o visitante.
+     2. Sem IntersectionObserver, tudo aparece de uma vez.
+     3. `intersectionRatio === 0` junto com `isIntersecting`: em rolagem muito
+        rápida o observador pode reportar o elemento já ultrapassado.
+     4. Rede de segurança no scroll: se por qualquer motivo um elemento acima
+        da dobra continuar oculto, ele é revelado assim que entra na faixa.
+
+   Marcação automática: em vez de editar 77 páginas à mão, os alvos são
+   escolhidos por seletor. Só entra bloco de conteúdo — nada de hero (que
+   precisa aparecer instantaneamente) nem de elemento fixo.
+   --------------------------------------------------------------------------- */
+(function () {
+    var raiz = document.documentElement;
+    var menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Sem a classe .js o CSS não esconde nada. Quem pediu menos movimento
+    // também não recebe o estado escondido.
+    if (menosMovimento) return;
+    raiz.classList.add('js');
+
+    var SELETORES = [
+        '.section-header',
+        '.pricing-card',
+        '.segment-card',
+        '.testimonial-card, .depo-card',
+        '.split-content',
+        '.stat-card',
+        '.page-section > h2',
+        '.faq-item',
+        '.footer-column'
+    ].join(',');
+
+    var itens = [].slice.call(document.querySelectorAll(SELETORES))
+        .filter(function (el) {
+            // fora: o que está na primeira tela (precisa nascer visível) e o
+            // que já tem marcação própria
+            if (el.closest('#hero, .navbar, .whatsapp-float')) return false;
+            if (el.hasAttribute('data-reveal')) return false;
+            return el.getBoundingClientRect().top > window.innerHeight * 0.9;
+        });
+
+    itens.forEach(function (el) { el.setAttribute('data-reveal', ''); });
+
+    function mostrar(el) {
+        if (el.classList.contains('is-visible')) return;
+        el.classList.add('is-visible');
+        el.addEventListener('transitionend', function fim() {
+            el.classList.add('reveal-done');
+            el.removeEventListener('transitionend', fim);
+        });
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        itens.forEach(mostrar);
+        return;
+    }
+
+    var io = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (e) {
+            if (!e.isIntersecting && e.intersectionRatio === 0) return;
+            mostrar(e.target);
+            io.unobserve(e.target);
+        });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
+
+    itens.forEach(function (el) { io.observe(el); });
+
+    // Rede de segurança
+    var varrendo = false;
+    function varrer() {
+        varrendo = false;
+        var limite = window.innerHeight + 200;
+        itens.forEach(function (el) {
+            if (el.classList.contains('is-visible')) return;
+            if (el.getBoundingClientRect().top < limite) { mostrar(el); io.unobserve(el); }
+        });
+    }
+    window.addEventListener('scroll', function () {
+        if (!varrendo) { varrendo = true; requestAnimationFrame(varrer); }
+    }, { passive: true });
+})();
