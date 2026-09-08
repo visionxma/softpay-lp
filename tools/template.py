@@ -33,7 +33,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     crumbs = breadcrumbs or []
     # Imagem social: a da própria página quando existe. Compartilhar a mesma
     # foto genérica em 49 páginas desperdiça o espaço visual do link.
-    og_img = BASE + figura[0] if figura else BASE + "/assets/COmputador.webp?v=14eb0e9e1b"
+    og_img = BASE + figura[0] if figura else BASE + "/assets/COmputador.webp?v=84785b8377"
     og_alt = figura[1] if figura else "Painel do SoftPay aberto em um computador"
 
     # ---------- dados estruturados ----------
