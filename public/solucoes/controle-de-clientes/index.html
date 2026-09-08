@@ -86,39 +86,71 @@
               "name": "O cadastro de clientes está em qual plano?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O cadastro de clientes faz parte do sistema a partir do plano Comércio. Cupons e fidelidade ficam disponíveis a partir do plano Loja."
+                "text": "A partir do plano Comércio, de R$ 69/mês, com histórico de compras e saldo de fiado. Cupons e fidelidade ficam disponíveis a partir do plano Loja."
               }
             },
             {
               "@type": "Question",
-              "name": "Consigo ver o histórico de compras de cada cliente?",
+              "name": "O histórico de compras fica ligado ao cliente?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim, quando a venda é vinculada ao cliente no momento do registro no PDV."
+                "text": "Sim. Identificando o cliente no PDV, a compra entra no histórico dele, com data e valor."
               }
             },
             {
               "@type": "Question",
-              "name": "Serve para trabalhar recompra?",
+              "name": "Dá para trabalhar recompra e fidelidade?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. Saber o que a pessoa comprou e quando é a base para um contato com propósito, especialmente em segmentos de recompra previsível."
+                "text": "Sim, a partir do plano Loja. Cupom e programa de fidelidade se apoiam no histórico de compras do cadastro."
               }
             },
             {
               "@type": "Question",
-              "name": "E a LGPD?",
+              "name": "O sistema dispara e-mail marketing ou mensagem automática?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Você é responsável pelos dados dos seus clientes. Colete o necessário, informe a finalidade e consulte a Política de Privacidade do SoftPay."
+                "text": "Não. O SoftPay guarda o histórico e sustenta cupom e fidelidade, mas não tem régua de campanha nem automação de envio."
               }
             },
             {
               "@type": "Question",
-              "name": "Dá para importar minha lista atual?",
+              "name": "Tem funil de vendas ou CRM de oportunidades?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A importação está disponível a partir do plano Loja. Fale com o suporte para conferir o formato do arquivo."
+                "text": "Não. É um cadastro de clientes de varejo, com histórico de compras — não uma ferramenta de venda consultiva com etapas e previsão."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Integra com Instagram ou WhatsApp Business?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O bot do WhatsApp fala com você, o dono, para registrar operações — não com o seu cliente final."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Consigo saber quem parou de comprar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O histórico com datas permite ver quem não volta há tempo. Não existe alerta automático de cliente inativo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso cadastrar todo cliente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O cadastro faz diferença em quem volta, compra fiado ou tem ticket alto. Para a venda de passagem, ele é opcional."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dá para importar minha lista de clientes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo."
               }
             }
           ]
@@ -189,18 +221,95 @@
 
       <section class="page-section" id="o-problema">
         <h2>O problema</h2>
-        <p>Na maioria das lojas pequenas, o conhecimento sobre os clientes está na cabeça do dono. Funciona enquanto o movimento é pequeno e a mesma pessoa atende todo mundo. Quando entra outra pessoa no balcão ou o volume cresce, esse conhecimento não se transfere.</p>
+        <p>Na maior parte das lojas pequenas, o cliente é anônimo. Ele compra, vai embora e some do registro. A loja sabe quanto vendeu, mas não sabe para quem — e por isso trata quem volta pela décima vez igual a quem entrou pela primeira.</p>
+        <p>O custo disso é invisível porque nunca aparece numa conta. Não existe a linha "clientes que deixaram de voltar". Existe só um faturamento que não cresce e ninguém sabe explicar.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-loja">
+        <h2>Como isso aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>A cliente que volta é atendida como nova.</strong> Ninguém lembra do que ela levou, nem do tamanho dela.</li>
+          <li><strong>Você não sabe quem sumiu.</strong> O cliente de todo mês parou de vir e a queda só aparece no trimestre.</li>
+          <li><strong>A promoção vai para todo mundo.</strong> Sem histórico, o desconto é disparado para uma lista inteira — inclusive para quem já ia comprar.</li>
+          <li><strong>O fiado não tem dono.</strong> A dívida existe, mas não está ligada a um cadastro com histórico.</li>
+          <li><strong>Você não sabe quanto vale um cliente.</strong> Quem gasta R$ 2.000 por ano e quem gastou R$ 40 uma vez são a mesma coisa no seu sistema.</li>
+        </ul>
       </section>
       <section class="page-section" id="como-o-softpay-resolve">
         <h2>Como o SoftPay resolve</h2>
         <h3>Cadastro ligado à venda</h3>
-        <p>A venda registrada no PDV pode ser vinculada ao cliente, formando um histórico real de compras — não uma lista solta de nomes e telefones.</p>
+        <p>O cliente é identificado no PDV e a compra entra no histórico dele. Não é um cadastro morto num canto do sistema: é o registro do que aquela pessoa comprou e quando.</p>
+        <h3>Histórico que responde na hora</h3>
+        <p>Quando ele volta, você vê o que levou da última vez. Numa loja de roupas isso é o tamanho e a preferência; numa joalheria, a data da compra que se repete no ano seguinte.</p>
         <h3>Base do fiado</h3>
-        <p>O saldo do fiado vive no cadastro do cliente, com as compras que o formam.</p>
+        <p>O saldo devedor vive no cadastro do cliente, com as compras que o formam. Veja o <a href="/solucoes/controle-de-fiado/">controle de fiado</a>.</p>
         <h3>Cupom e fidelidade</h3>
-        <p>A partir do plano Loja, cupons de desconto e programa de fidelidade usam essa base para trazer o cliente de volta.</p>
-        <h3>Contato com propósito</h3>
-        <p>Saber o que a pessoa comprou e quando permite um contato útil, em vez de disparo genérico para uma lista inteira.</p>
+        <p>A partir do plano Loja, o histórico sustenta cupom e programa de fidelidade. A diferença entre disparar desconto para uma lista e falar com quem tem motivo para voltar está inteira aqui.</p>
+        <h3>Quem comprou o quê</h3>
+        <p>Cruzar cliente e produto mostra qual público sustenta cada parte do seu catálogo — e é o que transforma uma coleção nova em contato com propósito em vez de mensagem em massa.</p>
+      </section>
+      <section class="page-section" id="o-que-o-crm-do-softpay-nao-faz">
+        <h2>O que o CRM do SoftPay não faz</h2>
+        <p>É um cadastro de clientes com histórico, não uma plataforma de marketing. O que fica de fora:</p>
+        <ul class="page-list">
+          <li><strong>Não dispara e-mail marketing nem campanha automática.</strong> Não há régua de mensagens nem automação de envio.</li>
+          <li><strong>Não tem funil de vendas.</strong> Sem etapas, oportunidades ou previsão — é varejo, não venda consultiva.</li>
+          <li><strong>Não integra com Instagram, WhatsApp Business ou catálogo de rede social.</strong></li>
+          <li><strong>Não faz segmentação avançada.</strong> Não há criação de públicos por regra combinada.</li>
+          <li><strong>Não importa a sua agenda de contatos do celular.</strong></li>
+        </ul>
+        <p>Se você precisa de automação de marketing, o SoftPay é a fonte do dado — não a ferramenta de disparo.</p>
+      </section>
+      <section class="page-section" id="o-que-muda-quando-o-cliente-tem-nome">
+        <h2>O que muda quando o cliente tem nome</h2>
+        <p>O raciocínio que o cadastro torna possível:</p>
+        <div class="page-example">
+          <span class="example-badge">Exemplo ilustrativo</span>
+          <h3>Dois clientes que faturam parecido</h3>
+          <div class="calc">
+            <div class="calc-row">
+              <span class="calc-label">Cliente A — 1 compra de R$ 900</span>
+              <span class="calc-value">R$ 900,00</span>
+            </div>
+            <div class="calc-row">
+              <span class="calc-label">Cliente B — 9 compras de R$ 100 no ano</span>
+              <span class="calc-value">R$ 900,00</span>
+            </div>
+            <div class="calc-row calc-row--result">
+              <span class="calc-label">= Mesmo faturamento</span>
+              <span class="calc-value">R$ 900,00</span>
+            </div>
+            <div class="calc-row calc-row--result final">
+              <span class="calc-label">Quem vale um contato quando chega coleção nova?</span>
+              <span class="calc-value">o B</span>
+            </div>
+          </div>
+          <p class="calc-note">Exemplo ilustrativo. Sem cadastro, os dois são a mesma linha no relatório. Com histórico, o B é uma relação e o A foi um evento — e você sabe em qual investir atenção.</p>
+        </div>
+      </section>
+      <section class="page-section" id="o-que-voce-passa-a-conseguir-responder">
+        <h2>O que você passa a conseguir responder</h2>
+        <ul class="page-list">
+          <li>Quem são meus clientes que mais compram?</li>
+          <li>O que esta pessoa levou da última vez?</li>
+          <li>Quem comprou nesta coleção e pode voltar na próxima?</li>
+          <li>Quem parou de comprar nos últimos meses?</li>
+          <li>Quanto este cliente já gastou comigo?</li>
+          <li>Quem está devendo e desde quando?</li>
+        </ul>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>O cadastro neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td>Cadastro de clientes com histórico de compras e saldo de fiado. 1 usuário</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td><strong>Onde o cadastro vira ferramenta:</strong> cupons, fidelidade e cobrança por Pix no WhatsApp. Até 3 usuários</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -211,31 +320,47 @@
           <div class="faq-list">
           <details class="faq-item">
             <summary class="faq-question">O cadastro de clientes está em qual plano?</summary>
-            <div class="faq-answer"><p>O cadastro de clientes faz parte do sistema a partir do plano Comércio. Cupons e fidelidade ficam disponíveis a partir do plano Loja.</p></div>
+            <div class="faq-answer"><p>A partir do plano Comércio, de R$ 69/mês, com histórico de compras e saldo de fiado. Cupons e fidelidade ficam disponíveis a partir do plano Loja.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Consigo ver o histórico de compras de cada cliente?</summary>
-            <div class="faq-answer"><p>Sim, quando a venda é vinculada ao cliente no momento do registro no PDV.</p></div>
+            <summary class="faq-question">O histórico de compras fica ligado ao cliente?</summary>
+            <div class="faq-answer"><p>Sim. Identificando o cliente no PDV, a compra entra no histórico dele, com data e valor.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Serve para trabalhar recompra?</summary>
-            <div class="faq-answer"><p>Sim. Saber o que a pessoa comprou e quando é a base para um contato com propósito, especialmente em segmentos de recompra previsível.</p></div>
+            <summary class="faq-question">Dá para trabalhar recompra e fidelidade?</summary>
+            <div class="faq-answer"><p>Sim, a partir do plano Loja. Cupom e programa de fidelidade se apoiam no histórico de compras do cadastro.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">E a LGPD?</summary>
-            <div class="faq-answer"><p>Você é responsável pelos dados dos seus clientes. Colete o necessário, informe a finalidade e consulte a Política de Privacidade do SoftPay.</p></div>
+            <summary class="faq-question">O sistema dispara e-mail marketing ou mensagem automática?</summary>
+            <div class="faq-answer"><p>Não. O SoftPay guarda o histórico e sustenta cupom e fidelidade, mas não tem régua de campanha nem automação de envio.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Dá para importar minha lista atual?</summary>
-            <div class="faq-answer"><p>A importação está disponível a partir do plano Loja. Fale com o suporte para conferir o formato do arquivo.</p></div>
+            <summary class="faq-question">Tem funil de vendas ou CRM de oportunidades?</summary>
+            <div class="faq-answer"><p>Não. É um cadastro de clientes de varejo, com histórico de compras — não uma ferramenta de venda consultiva com etapas e previsão.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Integra com Instagram ou WhatsApp Business?</summary>
+            <div class="faq-answer"><p>Não. O bot do WhatsApp fala com você, o dono, para registrar operações — não com o seu cliente final.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Consigo saber quem parou de comprar?</summary>
+            <div class="faq-answer"><p>O histórico com datas permite ver quem não volta há tempo. Não existe alerta automático de cliente inativo.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Preciso cadastrar todo cliente?</summary>
+            <div class="faq-answer"><p>Não. O cadastro faz diferença em quem volta, compra fiado ou tem ticket alto. Para a venda de passagem, ele é opcional.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Dá para importar minha lista de clientes?</summary>
+            <div class="faq-answer"><p>A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo.</p></div>
           </details>
           </div>
         </div>
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Comece pelos clientes que voltam</h2>
+          <p>Cadastre os dez que você já reconhece de vista, registre as compras deles por um mês e veja o histórico virar argumento. 7 dias grátis, sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -246,9 +371,12 @@
       <section class="page-related">
         <h2>Continue por aqui</h2>
         <ul class="related-grid">
-          <li><a href="/solucoes/controle-de-fiado/"><strong>Controle de fiado</strong><span>Saldo por cliente</span></a></li>
-          <li><a href="/solucoes/loja-online/"><strong>Loja online</strong><span>Cupom e fidelidade</span></a></li>
-          <li><a href="/segmentos/loja-de-roupas/"><strong>Loja de roupas</strong><span>Cliente que volta</span></a></li>
+          <li><a href="/solucoes/controle-de-fiado/"><strong>Controle de fiado</strong><span>O saldo por cliente</span></a></li>
+          <li><a href="/solucoes/loja-online/"><strong>Loja online</strong><span>Vender para quem já conhece</span></a></li>
+          <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>Onde o cliente é identificado</span></a></li>
+          <li><a href="/segmentos/loja-de-roupas/"><strong>Loja de roupas</strong><span>A cliente que volta na coleção</span></a></li>
+          <li><a href="/segmentos/loja-de-joias/"><strong>Loja de joias</strong><span>Recompra por data</span></a></li>
+          <li><a href="/segmentos/farmacia/"><strong>Farmácia</strong><span>Uso contínuo e recompra</span></a></li>
         </ul>
       </section>
 

@@ -86,7 +86,15 @@
               "name": "A loja online usa o mesmo estoque da loja física?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. O catálogo é alimentado pelos produtos já cadastrados, o que evita manter dois cadastros em paralelo."
+                "text": "Sim. O catálogo usa os produtos já cadastrados, e a venda online baixa o mesmo saldo da venda do balcão. Não existem dois estoques para conciliar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Em qual plano está a loja online?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A partir do plano Loja, de R$ 89/mês. O plano Comércio não inclui esse recurso."
               }
             },
             {
@@ -94,31 +102,55 @@
               "name": "Como o cliente paga?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Por Pix, com confirmação automática do pedido — sem você precisar conferir comprovante manualmente."
+                "text": "Por Pix, com confirmação automática do pedido — sem você precisar conferir comprovante."
               }
             },
             {
               "@type": "Question",
-              "name": "Aceita cartão de crédito?",
+              "name": "Aceita cartão parcelado?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Confirme com o suporte as formas de pagamento disponíveis hoje na loja online antes de contratar."
+                "text": "Não. O pagamento na loja online é por Pix."
               }
             },
             {
               "@type": "Question",
-              "name": "Preciso de domínio próprio?",
+              "name": "Calcula frete e integra com transportadora?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Converse com o suporte sobre como o endereço da sua loja online é configurado."
+                "text": "Não. Não há cálculo por CEP, emissão de etiqueta nem rastreio. A entrega é combinada fora do sistema."
               }
             },
             {
               "@type": "Question",
-              "name": "Em qual plano está?",
+              "name": "Posso usar meu próprio domínio?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A partir do plano Loja, de R$ 89/mês."
+                "text": "Esse ponto não está confirmado. Se ter a loja num endereço seu é importante, verifique com o suporte antes de contratar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Integra com Mercado Livre, Shopee ou Nuvemshop?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A loja online é um catálogo próprio ligado ao seu estoque, sem integração com marketplace."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso cadastrar os produtos de novo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O catálogo usa os produtos que já estão no sistema, com o preço do cadastro."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A venda online entra no meu relatório?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. Ela baixa estoque, entra no caixa e aparece nos relatórios junto com as vendas do balcão."
               }
             }
           ]
@@ -179,7 +211,7 @@
 
         <header class="page-header">
           <h1 class="page-title">Loja online com Pix</h1>
-          <p class="page-intro">Nem todo cliente vai até o balcão. Com a loja online do SoftPay, seu catálogo fica disponível para quem prefere escolher pelo celular e pagar por Pix.</p>
+          <p class="page-intro">Nem todo cliente vai até o balcão. Com a loja online do SoftPay, seu catálogo fica disponível para quem prefere escolher pelo celular e pagar por Pix — usando o mesmo estoque da loja física.</p>
         </header>
 
       <figure class="page-figure">
@@ -187,24 +219,90 @@
              fetchpriority="high" decoding="async" />
       </figure>
 
-      <section class="page-section" id="o-problema-de-manter-dois-negocios">
-        <h2>O problema de manter dois negócios</h2>
-        <p>Vender pela internet costuma significar um segundo cadastro de produtos, um segundo estoque e uma segunda conta para acompanhar. Na prática, o lojista pequeno abandona um dos dois — quase sempre o online.</p>
+      <section class="page-section" id="o-problema">
+        <h2>O problema</h2>
+        <p>Vender pela internet costuma significar montar uma segunda loja: outro cadastro de produtos, outro estoque para atualizar e outro lugar para conferir pedido. Na prática, quem tenta acaba com dois números de estoque que nunca batem.</p>
+        <p>O resultado mais comum é o pior possível: vender online algo que acabou de sair no balcão, e ter que desmarcar a venda com o cliente.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-loja">
+        <h2>Como isso aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>O cliente pergunta preço pelo WhatsApp</strong> e alguém digita a resposta de novo, uma por uma, o dia inteiro.</li>
+          <li><strong>A foto está no Instagram, o preço não.</strong> E o que estava no post já mudou.</li>
+          <li><strong>Você vende o que não tem.</strong> O item saiu no balcão e o anúncio continua no ar.</li>
+          <li><strong>O pagamento vira conversa.</strong> Mandar chave Pix, esperar comprovante, conferir na mão.</li>
+          <li><strong>O pedido não vira registro.</strong> A venda online fica fora do estoque e do relatório.</li>
+        </ul>
       </section>
       <section class="page-section" id="como-o-softpay-resolve">
         <h2>Como o SoftPay resolve</h2>
-        <h3>Um cadastro só</h3>
-        <p>O catálogo online é alimentado pelos produtos que você já cadastrou para o balcão. Não existe um segundo cadastro para manter.</p>
-        <h3>Pix que confirma sozinho</h3>
-        <p>O cliente paga por Pix e o pedido é confirmado automaticamente, sem você precisar conferir comprovante no WhatsApp.</p>
-        <h3>Pedidos dentro do sistema</h3>
-        <p>Os pedidos chegam no mesmo lugar onde você já acompanha a loja física.</p>
-        <h3>Cupom e fidelidade</h3>
-        <p>Cupons de desconto e programa de fidelidade ajudam a trazer o cliente de volta, online ou no balcão.</p>
+        <h3>Um estoque, dois canais</h3>
+        <p>O catálogo online usa os mesmos produtos já cadastrados. A venda online e a venda do balcão baixam o mesmo saldo — não existem dois números para conciliar.</p>
+        <h3>Catálogo sem cadastro dobrado</h3>
+        <p>Produto, foto, preço e descrição são os do sistema. Se você mudou o preço no cadastro, mudou na loja online. Nada de manter dois lugares atualizados.</p>
+        <h3>Pix com confirmação automática</h3>
+        <p>O cliente paga por Pix e o pedido é confirmado sem você ficar conferindo comprovante. É a parte que mais consome tempo na venda por WhatsApp.</p>
+        <h3>O pedido entra no seu resultado</h3>
+        <p>Venda online é venda: baixa estoque, entra no caixa e aparece nos relatórios junto com o resto. O canal muda, o registro não.</p>
+        <h3>Ligado ao cadastro de clientes</h3>
+        <p>Quem compra online alimenta o mesmo histórico de quem compra no balcão. Veja o <a href="/solucoes/controle-de-clientes/">controle de clientes</a>.</p>
         <aside class="page-note">
           <strong>Em qual plano</strong>
-          <p>A loja online está disponível a partir do plano Loja (R$ 89/mês).</p>
+          <p>A loja online está disponível <strong>a partir do plano Loja</strong> (R$ 89/mês). Não existe no plano Comércio.</p>
         </aside>
+      </section>
+      <section class="page-section" id="o-que-a-loja-online-nao-e">
+        <h2>O que a loja online não é</h2>
+        <p>Ela é um catálogo que vende com Pix, não uma plataforma de e-commerce. Vale ser exato:</p>
+        <ul class="page-list">
+          <li><strong>Não calcula frete nem integra com transportadora.</strong> Não há cálculo por CEP, etiqueta nem rastreio.</li>
+          <li><strong>Não gerencia entrega.</strong> Combinação de retirada ou entrega acontece fora do sistema.</li>
+          <li><strong>Não tem checkout com cartão parcelado.</strong> O pagamento é por Pix.</li>
+          <li><strong>Não tem domínio próprio confirmado.</strong> Se você precisa da loja em um endereço seu, confirme com o suporte antes de contratar.</li>
+          <li><strong>Não faz marketplace nem integra com Mercado Livre, Shopee ou Nuvemshop.</strong></li>
+          <li><strong>Não tem recuperação de carrinho, cupom de frete nem ferramentas de conversão</strong> de e-commerce.</li>
+        </ul>
+        <p>Se você precisa de operação de e-commerce completa, ela não substitui uma plataforma dedicada. Se você quer parar de responder preço no WhatsApp e receber por Pix sem conferir comprovante, resolve exatamente isso.</p>
+      </section>
+      <section class="page-section" id="onde-ela-rende-mais">
+        <h2>Onde ela rende mais</h2>
+        <p>O ganho não é abrir um canal novo — é tirar trabalho manual de um canal que você já usa:</p>
+        <ol class="page-steps">
+          <li>O cliente pergunta pelo WhatsApp se tem determinado produto.</li>
+          <li>Em vez de digitar preço e disponibilidade, você manda o link do catálogo.</li>
+          <li>Ele escolhe, vê o que realmente tem em estoque e paga por Pix.</li>
+          <li>A confirmação é automática — sem esperar comprovante.</li>
+          <li>O pedido baixa o estoque e entra no seu relatório como qualquer venda.</li>
+          <li>A compra fica no histórico daquele cliente.</li>
+        </ol>
+        <aside class="page-note">
+          <strong>Sobre este exemplo</strong>
+          <p>Exemplo ilustrativo do fluxo. O quanto isso rende depende de quanto do seu atendimento hoje acontece por mensagem.</p>
+        </aside>
+      </section>
+      <section class="page-section" id="o-que-voce-passa-a-conseguir-responder">
+        <h2>O que você passa a conseguir responder</h2>
+        <ul class="page-list">
+          <li>Quanto vendi online neste mês?</li>
+          <li>Qual produto sai mais pelo catálogo e qual sai mais no balcão?</li>
+          <li>O estoque do site bate com o da loja?</li>
+          <li>Quem são os clientes que compram pela internet?</li>
+          <li>Quanto do meu faturamento já vem de fora do balcão?</li>
+        </ul>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>Loja online neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td><strong>Não inclui loja online.</strong> Só a operação do balcão</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td><strong>O plano que libera a loja online:</strong> catálogo, Pix com confirmação automática, cupons e fidelidade. Até 3 usuários</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -215,31 +313,47 @@
           <div class="faq-list">
           <details class="faq-item">
             <summary class="faq-question">A loja online usa o mesmo estoque da loja física?</summary>
-            <div class="faq-answer"><p>Sim. O catálogo é alimentado pelos produtos já cadastrados, o que evita manter dois cadastros em paralelo.</p></div>
+            <div class="faq-answer"><p>Sim. O catálogo usa os produtos já cadastrados, e a venda online baixa o mesmo saldo da venda do balcão. Não existem dois estoques para conciliar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Em qual plano está a loja online?</summary>
+            <div class="faq-answer"><p>A partir do plano Loja, de R$ 89/mês. O plano Comércio não inclui esse recurso.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Como o cliente paga?</summary>
-            <div class="faq-answer"><p>Por Pix, com confirmação automática do pedido — sem você precisar conferir comprovante manualmente.</p></div>
+            <div class="faq-answer"><p>Por Pix, com confirmação automática do pedido — sem você precisar conferir comprovante.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Aceita cartão de crédito?</summary>
-            <div class="faq-answer"><p>Confirme com o suporte as formas de pagamento disponíveis hoje na loja online antes de contratar.</p></div>
+            <summary class="faq-question">Aceita cartão parcelado?</summary>
+            <div class="faq-answer"><p>Não. O pagamento na loja online é por Pix.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Preciso de domínio próprio?</summary>
-            <div class="faq-answer"><p>Converse com o suporte sobre como o endereço da sua loja online é configurado.</p></div>
+            <summary class="faq-question">Calcula frete e integra com transportadora?</summary>
+            <div class="faq-answer"><p>Não. Não há cálculo por CEP, emissão de etiqueta nem rastreio. A entrega é combinada fora do sistema.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Em qual plano está?</summary>
-            <div class="faq-answer"><p>A partir do plano Loja, de R$ 89/mês.</p></div>
+            <summary class="faq-question">Posso usar meu próprio domínio?</summary>
+            <div class="faq-answer"><p>Esse ponto não está confirmado. Se ter a loja num endereço seu é importante, verifique com o suporte antes de contratar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Integra com Mercado Livre, Shopee ou Nuvemshop?</summary>
+            <div class="faq-answer"><p>Não. A loja online é um catálogo próprio ligado ao seu estoque, sem integração com marketplace.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Preciso cadastrar os produtos de novo?</summary>
+            <div class="faq-answer"><p>Não. O catálogo usa os produtos que já estão no sistema, com o preço do cadastro.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">A venda online entra no meu relatório?</summary>
+            <div class="faq-answer"><p>Sim. Ela baixa estoque, entra no caixa e aparece nos relatórios junto com as vendas do balcão.</p></div>
           </details>
           </div>
         </div>
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Pare de digitar preço no WhatsApp</h2>
+          <p>Publique o catálogo com os produtos que você já cadastrou e mande o link em vez da resposta. 7 dias grátis, sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -250,9 +364,12 @@
       <section class="page-related">
         <h2>Continue por aqui</h2>
         <ul class="related-grid">
-          <li><a href="/solucoes/sistema-de-estoque/"><strong>Controle de estoque</strong><span>O catálogo vem daqui</span></a></li>
-          <li><a href="/solucoes/controle-de-clientes/"><strong>Controle de clientes</strong><span>Cupom e fidelidade</span></a></li>
-          <li><a href="/segmentos/loja-de-roupas/"><strong>Loja de roupas</strong><span>Vender moda online</span></a></li>
+          <li><a href="/solucoes/sistema-de-estoque/"><strong>Controle de estoque</strong><span>O estoque que os dois canais usam</span></a></li>
+          <li><a href="/solucoes/controle-de-clientes/"><strong>Controle de clientes</strong><span>Quem compra pela internet</span></a></li>
+          <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>A venda do balcão</span></a></li>
+          <li><a href="/segmentos/loja-de-roupas/"><strong>Loja de roupas</strong><span>Catálogo com grade</span></a></li>
+          <li><a href="/segmentos/loja-de-variedades/"><strong>Loja de variedades</strong><span>Catálogo grande</span></a></li>
+          <li><a href="/segmentos/loja-de-joias/"><strong>Loja de joias</strong><span>Peça de alto valor online</span></a></li>
         </ul>
       </section>
 
