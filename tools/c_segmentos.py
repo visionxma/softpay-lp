@@ -686,9 +686,8 @@ dict(
 # ---------------------------------------------------------------- AUTOPEÇAS
 dict(
   slug="segmentos/loja-de-autopecas",
-  # sem figura: não existe foto de autopeças ainda. Reaproveitar a da
-  # distribuidora de bebidas daria um alt que não descreve a imagem.
-  # Prompt registrado em docs/IMAGENS.md.
+  figura=("/assets/lojistas/loja-de-autopecas.webp",
+          "Balconista de loja de autopeças conferindo uma peça atrás do balcão"),
   title="Sistema para Loja de Autopeças | SoftPay",
   description="Sistema para autopeças com catálogo amplo, busca rápida de peça, controle de estoque, curva ABC para itens parados, fiado e nota fiscal. Teste grátis 7 dias.",
   h1="Sistema para loja de autopeças",
@@ -774,7 +773,8 @@ dict(
 # ------------------------------------------------- MATERIAIS DE CONSTRUÇÃO
 dict(
   slug="segmentos/materiais-de-construcao",
-  # sem figura: ver a nota em loja-de-autopecas.
+  figura=("/assets/lojistas/materiais-de-construcao.webp",
+          "Dono de depósito de materiais de construção conferindo o estoque com prancheta"),
   title="Sistema para Loja de Material de Construção | SoftPay",
   description="Sistema para material de construção com atacado e varejo, controle de estoque, fiado de obra, venda de valor alto e nota fiscal. Teste grátis por 7 dias.",
   h1="Sistema para loja de material de construção",
@@ -967,7 +967,8 @@ dict(
 # ------------------------------------------------------------- LOJA DE JOIAS
 dict(
   slug="segmentos/loja-de-joias",
-  # sem figura: ver a nota em loja-de-autopecas.
+  figura=("/assets/lojistas/loja-de-joias.webp",
+          "Vendedora de joalheria apresentando uma peça sobre bandeja de veludo no balcão"),
   title="Sistema para Loja de Joias e Joalheria | SoftPay",
   description="Sistema para loja de joias com controle unitário de peça, custo e margem, cadastro de clientes e crediário próprio. Teste grátis por 7 dias, sem cartão.",
   h1="Sistema para loja de joias",
@@ -1073,7 +1074,8 @@ dict(
 # ------------------------------------------------------ EMPRESAS COM FILIAIS
 dict(
   slug="segmentos/empresas-com-filiais",
-  # sem figura: ver a nota em loja-de-autopecas.
+  figura=("/assets/lojistas/empresas-com-filiais.webp",
+          "Dona de rede de lojas acompanhando o movimento do salão com um tablet"),
   title="Sistema para Empresa com Filiais e Rede de Lojas | SoftPay",
   description="Sistema de gestão para empresa com mais de uma loja: filiais na mesma conta, equipe com acesso próprio e visão do conjunto. Teste grátis por 7 dias.",
   h1="Sistema para empresa com filiais",
@@ -1171,6 +1173,8 @@ dict(
 # ------------------------------------------------------------------ PET SHOP
 dict(
   slug="segmentos/pet-shop",
+  figura=("/assets/lojistas/pet-shop.webp",
+          "Dona de pet shop conferindo sacos de ração na prateleira da loja"),
   title="Sistema para Pet Shop: PDV, Estoque e Fiado | SoftPay",
   description="Sistema para pet shop com PDV, controle de estoque de ração e acessórios, fiado do cliente de sempre e curva ABC. Teste grátis por 7 dias, sem cartão.",
   h1="Sistema para pet shop",
@@ -1270,6 +1274,8 @@ dict(
 # --------------------------------------------------------- LOJA DE CALÇADOS
 dict(
   slug="segmentos/loja-de-calcados",
+  figura=("/assets/lojistas/loja-de-calcados.webp",
+          "Vendedor de loja de calçados conferindo a numeração de um par na caixa"),
   title="Sistema para Loja de Calçados com Numeração | SoftPay",
   description="Sistema para loja de calçados com estoque por numeração e cor, PDV, curva ABC para achar o par encalhado e cadastro de clientes. Teste grátis por 7 dias.",
   h1="Sistema para loja de calçados",
@@ -1356,6 +1362,8 @@ dict(
 # ------------------------------------------------------- COSMÉTICOS E PERFUMARIA
 dict(
   slug="segmentos/cosmeticos-e-perfumaria",
+  figura=("/assets/lojistas/cosmeticos-e-perfumaria.webp",
+          "Atendente de loja de cosméticos organizando produtos na prateleira do balcão"),
   title="Sistema para Loja de Cosméticos e Perfumaria | SoftPay",
   description="Sistema para loja de cosméticos e perfumaria com PDV, estoque por variação, controle de revendedora, fiado e curva ABC. Teste grátis por 7 dias, sem cartão.",
   h1="Sistema para loja de cosméticos e perfumaria",
@@ -1442,6 +1450,8 @@ dict(
 # ------------------------------------------------------------- LOJA DE BEBIDAS
 dict(
   slug="segmentos/loja-de-bebidas",
+  figura=("/assets/lojistas/loja-de-bebidas.webp",
+          "Dono de loja de bebidas conferindo garrafas em engradados empilhados"),
   title="Sistema para Loja de Bebidas e Adega | SoftPay",
   description="Sistema para loja de bebidas com PDV rápido, estoque de alto giro, venda no atacado e varejo, fiado e curva ABC. Teste grátis por 7 dias, sem cartão.",
   h1="Sistema para loja de bebidas",

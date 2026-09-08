@@ -116,12 +116,20 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-autopecas.webp</image:loc>
+      <image:title>Balconista de loja de autopeças conferindo uma peça atrás do balcão</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/materiais-de-construcao/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/materiais-de-construcao.webp</image:loc>
+      <image:title>Dono de depósito de materiais de construção conferindo o estoque com prancheta</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pequeno-comercio/</loc>
@@ -138,36 +146,60 @@
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-joias.webp</image:loc>
+      <image:title>Vendedora de joalheria apresentando uma peça sobre bandeja de veludo no balcão</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/empresas-com-filiais/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/empresas-com-filiais.webp</image:loc>
+      <image:title>Dona de rede de lojas acompanhando o movimento do salão com um tablet</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pet-shop/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/pet-shop.webp</image:loc>
+      <image:title>Dona de pet shop conferindo sacos de ração na prateleira da loja</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-calcados/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-calcados.webp</image:loc>
+      <image:title>Vendedor de loja de calçados conferindo a numeração de um par na caixa</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/cosmeticos-e-perfumaria/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/cosmeticos-e-perfumaria.webp</image:loc>
+      <image:title>Atendente de loja de cosméticos organizando produtos na prateleira do balcão</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-bebidas/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://site.softpaybr.com/assets/lojistas/loja-de-bebidas.webp</image:loc>
+      <image:title>Dono de loja de bebidas conferindo garrafas em engradados empilhados</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-de-estoque/</loc>
