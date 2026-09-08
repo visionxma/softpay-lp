@@ -101,11 +101,19 @@ Base comum a todos — cole junto de cada prompt:
 > da loja com um tablet, olhando para o salão. Ambiente de varejo organizado,
 > uma segunda pessoa atendendo ao fundo, desfocada.
 
-> **Estas quatro ainda não existem.** Enquanto não existirem, as páginas
-> correspondentes ficam sem `figura` — é melhor não ter foto do que ter uma
-> foto que o `alt` precisa mentir para descrever. Não reaproveite
-> `distribuidora.webp`: ela mostra engradados de bebida e só serve à
-> distribuidora.
+### 13 a 16. Pet shop, calçados, cosméticos e bebidas — **faltando**
+
+Os quatro segmentos criados em 2026-09-08 também nasceram sem foto.
+
+> **Oito páginas estão no ar sem imagem de abertura** (9 a 16). Enquanto não
+> existirem, elas ficam sem `figura` — é melhor não ter foto do que ter uma que
+> o `alt` precisa mentir para descrever. Não reaproveite `distribuidora.webp`:
+> ela mostra engradados de bebida e só serve à distribuidora.
+>
+> **Os prompts prontos das oito estão em
+> [`PROMPTS-FOTOS-SEGMENTOS.md`](PROMPTS-FOTOS-SEGMENTOS.md)**, com o padrão de
+> estilo extraído das fotos já publicadas, negative prompt e o `alt` de cada
+> uma.
 
 ---
 
