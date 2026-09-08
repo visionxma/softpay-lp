@@ -9,6 +9,11 @@
    Todo o CSS consome estes tokens: mudar aqui muda o site inteiro.
    ================================================== */
 :root {
+    /* Altura da navbar fixa. Medida no navegador nesta home: 90px.
+       Existe como variável porque o FAQ com copy centralizada precisa
+       descontá-la para centralizar no espaço realmente visível. */
+    --nav-h: 90px;
+
     /* --- Marca ---
        O azul do logo (#1DA1F2) é claro demais para texto sobre branco
        (contraste ~2.4:1). Por isso a escala: os tons claros são para
@@ -4030,9 +4035,45 @@ body {
     align-items: start;
 }
 
+/* A copy da esquerda acompanha a rolagem da lista de perguntas, centralizada
+   na altura da janela em vez de colada no topo. Medido nesta home: a copy tem
+   ~232px e a lista ~2262px, logo há ~2030px de rolagem com ela parada.
+
+   POR QUE NÃO `top: 50%` + `translateY(-50%)`: o `transform` é aplicado DEPOIS
+   de o sticky calcular a posição, então o navegador gruda a borda de cima no
+   meio da janela e só então desloca o bloco meia altura para cima — jogando-o
+   para fora da tela. Medido aqui: a copy parava com o topo em -24px.
+
+   O que funciona é um wrapper com a altura da janela (`100vh`) grudado no topo,
+   com o conteúdo centralizado DENTRO dele por flex. Aí o sticky trabalha sobre
+   uma caixa de altura conhecida e a centralização é do flex, não do sticky.
+   Como a altura do texto não entra na conta, ele continua centralizado mesmo
+   se a copy crescer numa tela estreita. */
+.faq--split .faq-layout {
+    align-items: stretch; /* a coluna acompanha a linha, e o sticky tem por onde correr */
+}
+
 .faq--split .faq-aside {
     position: sticky;
-    top: 92px;
+    top: var(--nav-h, 90px);
+    /* altura da janela menos a navbar: a "tela livre" onde centralizar */
+    height: calc(100vh - var(--nav-h, 90px));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+}
+
+/* Telas baixas: com pouca altura, uma caixa de 100vh empurraria a copy para
+   fora. Abaixo de 620px a coluna volta a ter a altura do próprio conteúdo e
+   gruda logo abaixo da navbar. */
+@media (max-height: 620px) {
+    .faq--split .faq-aside {
+        height: auto;
+        display: block;
+        top: calc(var(--nav-h, 90px) + var(--spacing-md));
+    }
+}
 }
 
 .faq--split .faq-list {
@@ -4093,6 +4134,10 @@ body {
     }
     .faq--split .faq-aside {
         position: static;
+        /* desfaz a caixa de 100vh usada no desktop: em coluna única a copy
+           tem a altura do próprio texto, senão sobra um vão enorme */
+        height: auto;
+        display: block;
     }
 }
 
@@ -4631,6 +4676,10 @@ body {
 @media (max-height: 640px) {
     .faq--split .faq-aside {
         position: static;
+        /* desfaz a caixa de 100vh usada no desktop: em coluna única a copy
+           tem a altura do próprio texto, senão sobra um vão enorme */
+        height: auto;
+        display: block;
     }
 }
 
