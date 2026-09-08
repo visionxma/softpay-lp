@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="style.css?v=bf7227f167" />
+    <link rel="stylesheet" href="style.css?v=9fad176cde" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -1180,39 +1180,57 @@
     </section>
 
     <!-- Testimonials Section -->
+    <!-- Depoimentos em vídeo. Os dois vídeos foram gravados pelos próprios
+         clientes e a fala transcrita é a que está no áudio — nada foi
+         reescrito nem "melhorado". Substituíram dois depoimentos em texto
+         que estavam entre aspas mas não tinham origem verificável.
+         Cada <video> tem poster próprio (quadro real do vídeo, com a legenda
+         de nome e loja visível), preload="none" para não pesar o carregamento
+         da home, e controles nativos. -->
     <section id="testimonials" class="testimonials">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Depoimentos</span>
-                <h2 class="section-title">O que nossos clientes dizem</h2>
-                <p class="section-subtitle">Mais de 100 lojistas organizam suas vendas com o SoftPay</p>
+                <h2 class="section-title">Quem usa, contando com as próprias palavras</h2>
+                <p class="section-subtitle">Dois clientes do SoftPay gravaram o que mudou na loja depois do sistema.</p>
             </div>
 
-            <div class="testimonials-grid-static">
-                <div class="testimonial-card">
-                    <div class="testimonial-cover">
-                        <img src="assets/assets-lojas/rngrifes/WhatsApp Image 2026-05-01 at 18.56.53.jpeg" class="testimonial-cover-img" loading="lazy" decoding="async" alt="Fachada RN Grifes" />
-                    </div>
-                    <div class="testimonial-body">
-                        <img src="assets/assets-lojas/rngrifes/logo.png" alt="Logo RN Grifes" class="testimonial-avatar" loading="lazy" decoding="async" width="64" height="64" />
-                        <p class="testimonial-name">RN Grifes</p>
-                        <p class="testimonial-business">Loja de Roupas</p>
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"Antes as vendas eram anotadas no caderno e o estoque vivia descontrolado. Com o SoftPay organizei tudo em um dia e agora consigo ver o lucro real da loja na hora."</p>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-cover">
-                        <img src="assets/assets-lojas/naldobebidas/Captura de tela 2026-05-01 182510.png" class="testimonial-cover-img" loading="lazy" decoding="async" alt="Fachada Naldo Bebidas" />
-                    </div>
-                    <div class="testimonial-body">
-                        <img src="assets/assets-lojas/naldobebidas/Esloga NB.png" alt="Logo Naldo Bebidas" class="testimonial-avatar" loading="lazy" decoding="async" width="64" height="64" />
-                        <p class="testimonial-name">Naldo Bebidas</p>
-                        <p class="testimonial-business">Distribuidora de Bebidas</p>
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"O SoftPay transformou nossa operação. Controlamos o estoque de centenas de produtos, atacado e varejo no mesmo sistema. Hoje sabemos exatamente o que entra e sai todo dia."</p>
-                    </div>
-                </div>
+            <div class="depo-grid">
+                <figure class="depo-card">
+                    <video class="depo-video"
+                           controls
+                           preload="none"
+                           playsinline
+                           poster="assets/depoimentos/neto-rn-grifes.webp"
+                           width="608" height="1080"
+                           aria-label="Depoimento em vídeo de Neto, da RN Grifes, cliente do SoftPay">
+                        <source src="assets/depoimentos/neto-rn-grifes.mp4" type="video/mp4" />
+                        Seu navegador não reproduz vídeo. <a href="assets/depoimentos/neto-rn-grifes.mp4">Baixe o depoimento de Neto</a>.
+                    </video>
+                    <figcaption class="depo-body">
+                        <p class="depo-quote">&ldquo;Eu faço a venda, imprimo a notinha pro cliente, e o melhor de tudo é que tudo isso você encontra em um só lugar.&rdquo;</p>
+                        <p class="depo-name">Neto</p>
+                        <p class="depo-business">RN Grifes &middot; loja de roupas</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="depo-card">
+                    <video class="depo-video"
+                           controls
+                           preload="none"
+                           playsinline
+                           poster="assets/depoimentos/gabriel-landim.webp"
+                           width="608" height="1080"
+                           aria-label="Depoimento em vídeo de Gabriel Landim, cliente do SoftPay">
+                        <source src="assets/depoimentos/gabriel-landim.mp4" type="video/mp4" />
+                        Seu navegador não reproduz vídeo. <a href="assets/depoimentos/gabriel-landim.mp4">Baixe o depoimento de Gabriel Landim</a>.
+                    </video>
+                    <figcaption class="depo-body">
+                        <p class="depo-quote">&ldquo;Antigamente, quando eu não tinha um sistema, o meu financeiro era bagunçado, a minha loja era bagunçada. Hoje eu sei quem me deve, eu sei o produto que eu tenho.&rdquo;</p>
+                        <p class="depo-name">Gabriel Landim</p>
+                        <p class="depo-business">Cliente SoftPay</p>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>

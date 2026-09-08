@@ -5857,3 +5857,65 @@ body {
     color: var(--color-gray-600);
     line-height: 1.55;
 }
+
+/* --------------------------------------------------------------------------
+   DEPOIMENTOS EM VÍDEO
+   Os vídeos são verticais (9:16, gravados no celular). O poster é um quadro
+   real de cada um, com a legenda de nome e loja visível — por isso a prévia
+   nunca mostra frame preto nem rosto no meio de um movimento.
+   `aspect-ratio` no próprio <video> reserva a altura antes de o arquivo
+   carregar: sem isso a página salta quando o poster chega.
+   -------------------------------------------------------------------------- */
+.depo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.depo-card {
+  margin: 0;
+  background: var(--color-white, #fff);
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 16px;
+  overflow: clip; /* clip, não hidden: hidden criaria container de rolagem */
+  box-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 8px 24px rgba(16, 24, 40, .06);
+}
+
+.depo-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 608 / 1080;   /* reserva a altura antes do poster chegar */
+  background: #0f172a;         /* enquanto o poster não pinta, fundo escuro */
+  object-fit: cover;
+}
+
+.depo-body {
+  padding: 1.25rem 1.25rem 1.375rem;
+}
+
+.depo-quote {
+  margin: 0 0 .875rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text, #1f2937);
+}
+
+.depo-name {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-heading, #0f172a);
+}
+
+.depo-business {
+  margin: .125rem 0 0;
+  font-size: .875rem;
+  color: var(--color-text-muted, #6b7280);
+}
+
+@media (max-width: 560px) {
+  .depo-grid { max-width: 380px; }
+  .depo-body { padding: 1rem 1rem 1.125rem; }
+}
