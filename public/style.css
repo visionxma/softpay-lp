@@ -4901,6 +4901,21 @@ body {
     color: var(--brand-600);
 }
 
+/* A .support tem fundo escuro (--gradient-dark), e a regra acima pinta a
+   pílula do rótulo de BRANCO, com texto em --brand-600. Combinada com o
+   `.support .section-label { color: --color-primary-light }` definido antes,
+   sobrava azul-claro sobre pílula quase branca: medido, 1,65:1 — o pior
+   contraste do site, contra os 4,5:1 exigidos.
+
+   Auditei os 14 rótulos da home: este é o único dentro de seção escura, e o
+   único que reprovava. Aqui a pílula fica translúcida sobre o próprio fundo e
+   o texto vai a branco — 12,6:1 contra a base do gradiente. */
+.support .section-label {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #ffffff;
+}
+
 .benefits.soft-block .plan-panel--light .plan-panel-list li {
     color: var(--color-gray-700);
 }
