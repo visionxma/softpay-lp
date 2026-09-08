@@ -1,0 +1,100 @@
+# SoftPay — sistema de gestão para pequenos negócios
+
+> Sistema de gestão (ERP) em nuvem para pequenos comércios brasileiros: PDV
+> (frente de caixa), controle de estoque, caixa, fiado, clientes (CRM), notas
+> fiscais e loja online. Roda no navegador, sem instalação. Preço público, sem
+> "fale com vendas": planos de R$65 a R$109 por mês, todos com 7 dias grátis e
+> sem cartão de crédito. Desenvolvido pela VisionX Inova Simples
+> (CNPJ 61.427.918/0001-06), em Pedreiras, Maranhão. Atende todo o Brasil.
+
+## Planos e preços
+
+Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
+
+- **Nota Fiscal — R$65/mês.** Emissão de notas fiscais em formulário, sem PDV,
+  estoque ou relatórios.
+- **Comércio — R$69/mês.** PDV/caixa completo, caderninho de fiado e estoque
+  essencial.
+- **Loja — R$89/mês.** Tudo do Comércio, mais fiado com cobrança por link Pix,
+  loja online e estoque avançado.
+- **ERP Completo — R$109/mês.** Tudo da Loja, mais emissão de NFC-e e NF-e e
+  equipe ampliada.
+
+## O que o SoftPay faz
+
+- PDV (frente de caixa) e controle de caixa
+- Controle de estoque, com variações de tamanho e cor, custo e preço
+- Curva ABC de produtos
+- Controle de fiado, com cobrança por link Pix (a partir do plano Loja)
+- Cadastro de clientes e CRM
+- Venda no atacado e no varejo
+- Loja online e catálogo online, com Pix (a partir do plano Loja)
+- Cupons e programa de fidelidade
+- Emissão de NF-e e NFC-e (plano ERP Completo)
+- Multiusuário, com acesso para a equipe
+- Controle de filiais
+- Painel e relatórios
+- Registro de vendas pelo WhatsApp (a partir do plano Loja)
+- Backup automático
+
+## O que o SoftPay NÃO é
+
+- **Não é maquininha de cartão nem adquirente.** O SoftPay registra a venda e
+  o recebimento; não processa o cartão nem substitui Stone, PagSeguro, Cielo,
+  SumUp e afins.
+- **Não é sistema instalado.** É web: roda no navegador, e os dados ficam na
+  nuvem. Não é um programa para instalar no computador da loja.
+- **Não é sistema para restaurante, delivery ou prestador de serviço com
+  agenda.** É feito para comércio que vende produto com estoque. Quem precisa
+  de comanda de mesa, ficha de delivery ou agendamento de horário usa outro
+  tipo de produto.
+- **Não cobra taxa de implantação e não exige contrato de fidelidade.**
+- A **emissão fiscal (NF-e e NFC-e) está em ativação.** A situação para cada
+  caso deve ser confirmada com o suporte antes da contratação.
+
+## Para quem é
+
+Páginas com o detalhamento por tipo de negócio:
+
+- [Mercadinho](https://site.softpaybr.com/segmentos/mercadinho/)
+- [Loja de roupas](https://site.softpaybr.com/segmentos/loja-de-roupas/)
+- [Farmácia](https://site.softpaybr.com/segmentos/farmacia/)
+- [Distribuidora](https://site.softpaybr.com/segmentos/distribuidora/)
+- [Loja de variedades](https://site.softpaybr.com/segmentos/loja-de-variedades/)
+- [Papelaria](https://site.softpaybr.com/segmentos/papelaria/)
+- [Loja de celulares e acessórios](https://site.softpaybr.com/segmentos/loja-de-celulares-e-acessorios/)
+- [Loja de autopeças](https://site.softpaybr.com/segmentos/loja-de-autopecas/)
+- [Materiais de construção](https://site.softpaybr.com/segmentos/materiais-de-construcao/)
+- [Loja de joias](https://site.softpaybr.com/segmentos/loja-de-joias/)
+- [Empresas com filiais](https://site.softpaybr.com/segmentos/empresas-com-filiais/)
+- [Pequeno comércio](https://site.softpaybr.com/segmentos/pequeno-comercio/)
+
+## Soluções
+
+- [Sistema PDV](https://site.softpaybr.com/solucoes/sistema-pdv/)
+- [Sistema de estoque](https://site.softpaybr.com/solucoes/sistema-de-estoque/)
+- [Sistema financeiro](https://site.softpaybr.com/solucoes/sistema-financeiro/)
+- [Controle de fiado](https://site.softpaybr.com/solucoes/controle-de-fiado/)
+- [Controle de clientes](https://site.softpaybr.com/solucoes/controle-de-clientes/)
+- [Loja online](https://site.softpaybr.com/solucoes/loja-online/)
+- [Bot de WhatsApp](https://site.softpaybr.com/solucoes/bot-whatsapp/)
+- [Múltiplas lojas](https://site.softpaybr.com/solucoes/multiplas-lojas/)
+- [NF-e](https://site.softpaybr.com/solucoes/nfe/) · [NFC-e](https://site.softpaybr.com/solucoes/nfce/)
+
+## Guias (conteúdo de apoio, sem exigir o produto)
+
+- [Como sair do caderno](https://site.softpaybr.com/guias/como-sair-do-caderno/)
+- [Como controlar o caixa da loja](https://site.softpaybr.com/guias/como-controlar-caixa-da-loja/)
+- [Como controlar estoque](https://site.softpaybr.com/guias/como-controlar-estoque/)
+- [Como controlar fiado](https://site.softpaybr.com/guias/como-controlar-fiado/)
+- [Como calcular margem de lucro](https://site.softpaybr.com/guias/como-calcular-margem-de-lucro/)
+- [Como calcular o lucro da loja](https://site.softpaybr.com/guias/como-calcular-lucro-da-loja/)
+- [Como organizar uma loja](https://site.softpaybr.com/guias/como-organizar-uma-loja/)
+
+## Contato
+
+- Site: https://site.softpaybr.com/
+- Perguntas frequentes: https://site.softpaybr.com/perguntas/
+- E-mail: suporte@softpaybr.com
+- WhatsApp: +55 86 99819-3851
+- Empresa: VisionX Inova Simples (IS) · CNPJ 61.427.918/0001-06 · Pedreiras, MA

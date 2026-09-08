@@ -1,4 +1,4 @@
-# robots.txt — SoftPay
+# robots.txt — SoftPay (site.softpaybr.com)
 # IMPORTANTE: este arquivo só tem efeito quando servido na RAIZ do domínio
 # (https://site.softpaybr.com/robots.txt). Se a landing continuar publicada
 # em /lp/, ele precisa ser copiado para a raiz no deploy.
@@ -15,5 +15,73 @@ Disallow: /admin
 # CSS e JS devem permanecer rastreáveis (renderização da página)
 Allow: /*.css$
 Allow: /*.js$
+
+# Buscadores tradicionais — sem atraso de rastreamento
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Assistentes de IA: hoje as pessoas também perguntam "qual sistema de PDV
+# para mercadinho?" no ChatGPT/Perplexity/Gemini. Liberado de propósito —
+# aparecer nas respostas geradas é descoberta tão real quanto a SERP.
+# O resumo que esses assistentes devem ler está em /llms.txt.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
 
 Sitemap: https://site.softpaybr.com/sitemap.xml

@@ -167,8 +167,11 @@ Todas em **`docs/PENDENCIAS.md`** — o que falta, quem resolve e em que ordem.
 
 Resumo do topo da lista:
 
-1. **O link do WhatsApp tem um dígito a menos**, em 108 links de 52 páginas
-2. **Search Console** — a tag já está no ar, falta criar a propriedade
-3. **Seis respostas de produto** travam 22 páginas em "confirme com o suporte"
-4. **`/solucoes/` virou a metade fraca do site:** 9 das 10 páginas com 2 a 3
-   blocos, contra 6 a 8 dos segmentos
+1. **Search Console** — a tag já está no ar, falta criar a propriedade
+2. **Seis respostas de produto** travam 22 páginas em "confirme com o suporte"
+3. **Política de privacidade** pode nomear o banco errado (Firebase × Supabase)
+4. **Quatro fotos de segmento** ainda faltam — prompts em `docs/IMAGENS.md`
+
+Saíram desta lista por já estarem resolvidos: o link do WhatsApp (corrigido no
+commit `b297d74`, 108 links com `wa.me/5586998193851`) e a reescrita de
+`/solucoes/`, concluída em 2026-09-07.

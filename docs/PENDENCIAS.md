@@ -1,7 +1,10 @@
 # Pendências — SoftPay
 
-> Estado em 2026-09-07. Este documento lista **só o que falta**. O que já foi
+> Estado em 2026-09-08. Este documento lista **só o que falta**. O que já foi
 > feito está em `seo/CHANGELOG-SEO.md` e `seo/PLANO-SEGMENTOS.md`.
+>
+> O item do link do WhatsApp saiu daqui: o número foi corrigido no commit
+> `b297d74`, e os 108 links das 52 páginas usam `wa.me/5586998193851`.
 
 **Onde o projeto está:** 54 páginas no ar, sitemap com 53 URLs, `verifica.py`
 sem apontamentos, 1478 links internos e nenhuma página órfã. Todas as 22 páginas
@@ -12,30 +15,7 @@ tem), eu (código) ou outra pessoa (o site `www`, que não vive neste repositór
 
 ---
 
-## 1. O link do WhatsApp tem um dígito a menos — VOCÊ
-
-**É o item mais urgente do documento.** Pode estar derrubando conversão agora.
-
-```
-no site:   wa.me/558698193851   →  55 · 86 · 98193851   (8 dígitos)
-esperado:  wa.me/5586998193851  →  55 · 86 · 998193851  (9 dígitos)
-```
-
-Celular no Brasil tem 9 dígitos depois do DDD. Falta o **9** inicial.
-
-Está em **108 links, em 52 páginas** — botão flutuante, "Fale conosco" e a
-página de contato. Ou seja: em toda página do site.
-
-**O que fazer:** abra o botão flutuante do site no seu celular. Se der "número
-inválido", confirme qual é o número certo e me avise — eu corrijo as 52 páginas
-de uma vez.
-
-O `RETOMAR.md` já registrava dúvida entre **(86) 99819-3851** e
-**(99) 98468-0391**. Nenhum dos dois bate com o que está publicado.
-
----
-
-## 2. A política de privacidade pode nomear o banco errado — VOCÊ
+## 1. A política de privacidade pode nomear o banco errado — VOCÊ
 
 `/privacidade.html` afirma:
 
@@ -51,7 +31,7 @@ fecha sem mudar nada.
 
 ---
 
-## 3. Seis respostas de produto que estão travando o texto público — VOCÊ
+## 2. Seis respostas de produto que estão travando o texto público — VOCÊ
 
 Hoje **22 páginas mandam o visitante perguntar ao suporte**. Escrevi assim de
 propósito — prometer o que não existe seria pior —, mas cada "confirme com o
@@ -72,7 +52,7 @@ várias páginas de uma vez — não preciso reescrever nada do zero.
 
 ---
 
-## 4. Uma alegação sem lastro na home — VOCÊ
+## 3. Uma alegação sem lastro na home — VOCÊ
 
 Logo abaixo dos logos de cliente, visível na primeira dobra:
 
@@ -84,7 +64,7 @@ estava perto de assinar.
 
 ---
 
-## 5. Google Search Console — VOCÊ, em andamento
+## 4. Google Search Console — VOCÊ, em andamento
 
 A tag de verificação **já está publicada** na home:
 
@@ -125,7 +105,7 @@ seção 8.
 
 ---
 
-## 6. Imagens — VOCÊ
+## 5. Imagens — VOCÊ
 
 ### Quatro fotos de segmento
 
@@ -151,7 +131,7 @@ sair do sistema.
 
 ---
 
-## 7. Conteúdo — FEITO em 2026-09-07
+## 6. Conteúdo — FEITO em 2026-09-07
 
 O cluster `/solucoes/` era a metade fraca do site depois da rodada de
 segmentos. **Não é mais.** As 11 páginas abaixo do padrão foram reescritas:
@@ -195,7 +175,7 @@ suporte" no texto público, agora também nas soluções:
 **Quando você responder a seção 3, cada resposta vira afirmação em várias
 páginas de uma vez** — é uma passada de edição, não uma reescrita.
 
-## 8. O outro site no mesmo domínio — OUTRA PESSOA
+## 7. O outro site no mesmo domínio — OUTRA PESSOA
 
 Descoberto em 2026-09-07. Não está neste repositório.
 
@@ -234,7 +214,7 @@ Não dá para decidir sem os dados do Search Console.
 
 ---
 
-## 9. Oportunidades registradas, não implementadas
+## 8. Oportunidades registradas, não implementadas
 
 Páginas de segmento que só valem se houver funcionalidade real que as sustente:
 pet shop, loja de calçados, ótica, loja de brinquedos, tabacaria.
@@ -252,13 +232,12 @@ as outras não dizem.
 
 | # | O quê | Quem | Por quê |
 |---|---|---|---|
-| 1 | Testar o botão do WhatsApp | Você | Pode estar custando conversão hoje |
-| 2 | Terminar o Search Console | Você | Sem ele, tudo é hipótese |
-| 3 | Responder as seis perguntas de produto | Você | Destrava 22 páginas e a seção 7 |
-| 4 | Confirmar Firebase × Supabase | Você | LGPD |
-| 5 | ~~Reescrever `/solucoes/`~~ | ~~Eu~~ | **Feito em 2026-09-07** |
-| 6 | Produzir as 4 fotos | Você | Páginas no ar sem imagem |
-| 7 | Decidir `www` × `site` | Vocês | Depende dos dados do passo 2 |
+| 1 | Terminar o Search Console | Você | Sem ele, tudo é hipótese |
+| 2 | Responder as seis perguntas de produto | Você | Destrava 22 páginas e a seção 6 |
+| 3 | Confirmar Firebase × Supabase | Você | LGPD |
+| 4 | ~~Reescrever `/solucoes/`~~ | ~~Eu~~ | **Feito em 2026-09-07** |
+| 5 | Produzir as 4 fotos | Você | Páginas no ar sem imagem |
+| 6 | Decidir `www` × `site` | Vocês | Depende dos dados do passo 2 |
 
-Depois das respostas da seção 3, sobra uma passada de edição trocando
+Depois das respostas da seção 2, sobra uma passada de edição trocando
 "confirme com o suporte" por afirmação nas páginas que ganharam esse texto.

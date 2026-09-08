@@ -29,3 +29,9 @@
   Cache-Control: public, max-age=3600
 /sitemap.xml
   Cache-Control: public, max-age=3600
+
+# llms.txt: resumo do produto para assistentes de IA. Precisa sair como
+# text/plain e em UTF-8; sem o charset explicito o acento chega quebrado.
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
