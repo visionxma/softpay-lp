@@ -9,7 +9,7 @@ seguem o mesmo padrão de SEO e de layout.
 
 BASE = "https://site.softpaybr.com"
 APP = "https://www.softpaybr.com/auth"
-WPP = ("https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida"
+WPP = ("https://wa.me/5586998193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida"
        "%20sobre%20o%20SoftPay.")
 
 
