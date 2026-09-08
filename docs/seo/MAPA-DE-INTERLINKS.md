@@ -21,9 +21,9 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Métrica | Valor |
 |---|---|
-| Páginas | 54 |
-| Links internos (com âncora) | 1478 |
-| Links contextuais no corpo | 483 |
+| Páginas | 58 |
+| Links internos (com âncora) | 1599 |
+| Links contextuais no corpo | 528 |
 | Páginas órfãs | 0 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -33,18 +33,18 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Página | Links de entrada |
 |---|---|
-| `/` | 53 |
-| `/termos` | 50 |
-| `/privacidade` | 50 |
-| `/reembolso` | 50 |
-| `/segmentos/` | 49 |
-| `/solucoes/` | 49 |
-| `/guias/` | 49 |
-| `/sobre/` | 49 |
-| `/perguntas/` | 49 |
-| `/solucoes/sistema-pdv/` | 49 |
-| `/solucoes/controle-de-fiado/` | 49 |
-| `/solucoes/loja-online/` | 49 |
+| `/` | 57 |
+| `/termos` | 54 |
+| `/privacidade` | 54 |
+| `/reembolso` | 54 |
+| `/segmentos/` | 53 |
+| `/solucoes/` | 53 |
+| `/guias/` | 53 |
+| `/sobre/` | 53 |
+| `/perguntas/` | 53 |
+| `/solucoes/sistema-pdv/` | 53 |
+| `/solucoes/controle-de-fiado/` | 53 |
+| `/solucoes/loja-online/` | 53 |
 
 ## Links contextuais
 

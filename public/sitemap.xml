@@ -146,6 +146,30 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://site.softpaybr.com/segmentos/pet-shop/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/loja-de-calcados/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/cosmeticos-e-perfumaria/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/segmentos/loja-de-bebidas/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-de-estoque/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
