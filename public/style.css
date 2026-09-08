@@ -6239,3 +6239,138 @@ section[id] {
         box-shadow: none;
     }
 }
+
+/* ==========================================================================
+   EFEITOS DE ROLAGEM POR APARELHO — padrão medido no site.froxbr.com
+   com Playwright, em 390px, 768px e 1440px.
+
+   O que a medição do FroX mostrou, e que eu tinha invertido antes:
+
+     mobile e tablet (<=999px) ... .passo vira CARTA EMPILHADA (position:sticky,
+                                   top escalonado por --i, z-index crescente,
+                                   fundo sólido + sombra). Todas legíveis; a
+                                   carta em leitura ganha borda da marca.
+     desktop (>=1000px) .......... sticky DESLIGADO. Os painéis ficam em
+                                   opacity .38 e o ativo em 1 — foco por
+                                   contraste, com trilho de progresso ao lado.
+
+   Ou seja: o empilhamento é um recurso DE TELA PEQUENA, onde o espaço é
+   vertical. No desktop o mesmo conteúdo respira em colunas.
+   ========================================================================== */
+
+/* --- CARTAS EMPILHADAS (mobile e tablet) ---------------------------------- */
+@media (max-width: 999px) {
+    .price-grid,
+    .trust-grid,
+    .coverage-grid,
+    .showcase-grid {
+        display: block; /* o sticky precisa de fluxo normal, não de grid */
+    }
+
+    .price-grid > *,
+    .trust-grid > *,
+    .coverage-grid > *,
+    .showcase-grid > * {
+        position: sticky;
+        /* mesma fórmula do FroX: base + degrau de 10px por posição */
+        top: calc(var(--nav-h, 90px) + 14px + var(--i, 0) * 10px);
+        /* fundo sólido e sombra: sem eles a carta de baixo vaza pela de cima
+           e o baralho vira transparência confusa (comentário do CSS do FroX) */
+        background: var(--color-white);
+        box-shadow: 0 -6px 18px rgba(16, 24, 40, .06);
+        margin-bottom: 1rem;
+        transition: border-color var(--d-base) var(--e-out);
+    }
+
+    .price-grid > *:nth-child(1),
+    .trust-grid > *:nth-child(1),
+    .coverage-grid > *:nth-child(1),
+    .showcase-grid > *:nth-child(1) { --i: 0; z-index: 1; }
+    .price-grid > *:nth-child(2),
+    .trust-grid > *:nth-child(2),
+    .coverage-grid > *:nth-child(2),
+    .showcase-grid > *:nth-child(2) { --i: 1; z-index: 2; }
+    .price-grid > *:nth-child(3),
+    .trust-grid > *:nth-child(3),
+    .coverage-grid > *:nth-child(3) { --i: 2; z-index: 3; }
+    .price-grid > *:nth-child(4),
+    .trust-grid > *:nth-child(4) { --i: 3; z-index: 4; }
+    .price-grid > *:nth-child(5) { --i: 4; z-index: 5; }
+    .price-grid > *:nth-child(6) { --i: 5; z-index: 6; }
+}
+
+/* --- CARROSSEL HORIZONTAL (mobile) ----------------------------------------
+   Grades de muitos cards pequenos não viram baralho — viram trilho. Empilhar
+   6 segmentos em coluna custa 745px de rolagem; em trilho horizontal custa
+   uma tela. `scroll-snap` faz cada card parar alinhado, que é o que dá a
+   sensação de folhear em vez de arrastar. */
+@media (max-width: 720px) {
+    .seg-grid,
+    .card-grid,
+    .stats-grid {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 78%;      /* o próximo card aparece pela borda,
+                                        sinalizando que há mais para o lado */
+        grid-template-columns: none;
+        gap: .875rem;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 1rem;
+        padding-inline: 1rem;
+        margin-inline: -1rem;        /* sangra até a borda da tela */
+        padding-bottom: .75rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .seg-grid::-webkit-scrollbar,
+    .card-grid::-webkit-scrollbar,
+    .stats-grid::-webkit-scrollbar { display: none; }
+
+    .seg-grid > *,
+    .card-grid > *,
+    .stats-grid > * {
+        scroll-snap-align: start;
+        min-width: 0;
+    }
+
+    /* cards de estatística são curtos: cabem dois por tela */
+    .stats-grid { grid-auto-columns: 62%; }
+}
+
+/* --- DESKTOP: foco por contraste, como o FroX faz acima de 1000px ---------- */
+@media (min-width: 1000px) {
+    .price-grid > *,
+    .trust-grid > * {
+        transition: opacity var(--d-slow) var(--e-out),
+                    transform var(--d-base) var(--e-out);
+    }
+
+    /* o cartão sob o ponteiro sobe um pouco e os vizinhos recuam */
+    .price-grid:hover > *,
+    .trust-grid:hover > * { opacity: .55; }
+
+    .price-grid:hover > *:hover,
+    .trust-grid:hover > *:hover {
+        opacity: 1;
+        transform: translateY(-4px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .price-grid > *,
+    .trust-grid > *,
+    .coverage-grid > *,
+    .showcase-grid > * {
+        position: static;
+        box-shadow: none;
+        transition: none;
+        transform: none;
+    }
+
+    .seg-grid,
+    .card-grid,
+    .stats-grid { scroll-behavior: auto; }
+}
