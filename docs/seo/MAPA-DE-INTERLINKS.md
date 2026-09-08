@@ -21,9 +21,9 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Métrica | Valor |
 |---|---|
-| Páginas | 58 |
-| Links internos (com âncora) | 1599 |
-| Links contextuais no corpo | 528 |
+| Páginas | 61 |
+| Links internos (com âncora) | 1691 |
+| Links contextuais no corpo | 563 |
 | Páginas órfãs | 0 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -33,18 +33,18 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Página | Links de entrada |
 |---|---|
-| `/` | 57 |
-| `/termos` | 54 |
-| `/privacidade` | 54 |
-| `/reembolso` | 54 |
-| `/segmentos/` | 53 |
-| `/solucoes/` | 53 |
-| `/guias/` | 53 |
-| `/sobre/` | 53 |
-| `/perguntas/` | 53 |
-| `/solucoes/sistema-pdv/` | 53 |
-| `/solucoes/controle-de-fiado/` | 53 |
-| `/solucoes/loja-online/` | 53 |
+| `/` | 60 |
+| `/termos` | 57 |
+| `/privacidade` | 57 |
+| `/reembolso` | 57 |
+| `/segmentos/` | 56 |
+| `/solucoes/` | 56 |
+| `/guias/` | 56 |
+| `/sobre/` | 56 |
+| `/perguntas/` | 56 |
+| `/solucoes/sistema-pdv/` | 56 |
+| `/solucoes/controle-de-fiado/` | 56 |
+| `/solucoes/loja-online/` | 56 |
 
 ## Links contextuais
 
@@ -96,8 +96,11 @@ por relevância, e traz links contextuais dentro do texto.
 | `/guias/` | `/guias/como-controlar-caixa-da-loja/` | Como controlar o caixa de uma lojaResposta curta: registre toda entrad |
 | `/guias/` | `/guias/como-controlar-estoque/` | Como controlar o estoque de uma lojaResposta curta: registre o que ent |
 | `/guias/` | `/guias/como-controlar-fiado/` | Como controlar vendas fiadasResposta curta: registre cada venda fiada  |
+| `/guias/` | `/guias/como-escolher-sistema-de-gestao/` | Como escolher um sistema de gestãoA maioria das escolhas ruins tem a m |
 | `/guias/` | `/guias/como-organizar-uma-loja/` | Como organizar uma lojaResposta curta: organize uma coisa de cada vez, |
 | `/guias/` | `/guias/como-sair-do-caderno/` | Como sair do cadernoResposta curta: não transcreva o caderno inteiro |
+| `/guias/` | `/guias/quanto-custa-um-sistema-de-gestao/` | Quanto custa um sistema de gestão para comércioA faixa de mercado para |
+| `/guias/` | `/guias/vale-a-pena-ter-sistema-de-gestao/` | Vale a pena ter um sistema de gestão na loja?Resposta curta e honesta: |
 | `/guias/` | `/perguntas/` | PerguntasDúvidas antes de contratar |
 | `/guias/` | `/privacidade` | Política de Privacidade |
 | `/guias/` | `/reembolso` | Política de Reembolso |
@@ -136,9 +139,6 @@ por relevância, e traz links contextuais dentro do texto.
 | `/guias/como-controlar-estoque/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueComo funciona no SoftPay |
 | `/guias/como-controlar-fiado/` | `/guias/como-sair-do-caderno/` | Como sair do cadernoMigração completa |
 | `/guias/como-controlar-fiado/` | `/privacidade` | Política de Privacidade |
-| `/guias/como-controlar-fiado/` | `/reembolso` | Política de Reembolso |
-| `/guias/como-controlar-fiado/` | `/segmentos/mercadinho/` | MercadinhoO fiado do bairro |
-| `/guias/como-controlar-fiado/` | `/sistema-de-gestao-para-pequenos-negocios/` | O que é sistema de gestão |
 
 ## Páginas órfãs
 
