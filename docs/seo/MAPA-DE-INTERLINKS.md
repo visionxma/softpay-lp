@@ -22,8 +22,8 @@ por relevância, e traz links contextuais dentro do texto.
 | Métrica | Valor |
 |---|---|
 | Páginas | 54 |
-| Links internos (com âncora) | 1440 |
-| Links contextuais no corpo | 453 |
+| Links internos (com âncora) | 1478 |
+| Links contextuais no corpo | 483 |
 | Páginas órfãs | 0 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não

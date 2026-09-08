@@ -18,7 +18,10 @@ def rota(f):
 
 def main():
     os.chdir(os.path.join(RAIZ, "public"))
-    paginas = sorted(glob.glob("**/*.html", recursive=True))
+    # tokens de verificação de propriedade não são páginas: são texto solto
+    # dentro de um .html, ninguém linka para eles e não devem contar como órfãs
+    paginas = sorted(p for p in glob.glob("**/*.html", recursive=True)
+                     if not re.match(r"^google[0-9a-f]{16}\.html$", os.path.basename(p)))
     titulos, links = {}, []
     for f in paginas:
         s = io.open(f, encoding="utf-8").read()

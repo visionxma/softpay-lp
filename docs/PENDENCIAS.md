@@ -4,7 +4,8 @@
 > feito está em `seo/CHANGELOG-SEO.md` e `seo/PLANO-SEGMENTOS.md`.
 
 **Onde o projeto está:** 54 páginas no ar, sitemap com 53 URLs, `verifica.py`
-sem apontamentos, 1440 links internos e nenhuma página órfã.
+sem apontamentos, 1478 links internos e nenhuma página órfã. Todas as 22 páginas
+de segmento e solução com 6 blocos ou mais.
 
 Cada item abaixo diz **quem resolve**: você (informação ou acesso que só você
 tem), eu (código) ou outra pessoa (o site `www`, que não vive neste repositório).
@@ -150,45 +151,49 @@ sair do sistema.
 
 ---
 
-## 7. Conteúdo que eu posso escrever — EU
+## 7. Conteúdo — FEITO em 2026-09-07
 
-Depois da rodada de segmentos, **`/solucoes/` virou a metade fraca do site**:
+O cluster `/solucoes/` era a metade fraca do site depois da rodada de
+segmentos. **Não é mais.** As 11 páginas abaixo do padrão foram reescritas:
 
 ```
-segmentos:  6 a 8 blocos · 7 a 9 FAQ
-solucoes:   2 a 3 blocos · 5 FAQ    ← 9 das 10 páginas
+antes:  solucoes 2 a 3 blocos · 5 FAQ   (9 das 10 páginas)
+depois: todas as 22 páginas com 6 ou mais blocos · 0 abaixo do padrão
 ```
 
-| Página | Blocos | FAQ |
+| Página | Antes | Depois |
 |---|---|---|
-| `/solucoes/sistema-pdv/` | 2 | 5 |
-| `/solucoes/controle-de-fiado/` | 2 | 5 |
-| `/solucoes/controle-de-clientes/` | 2 | 5 |
-| `/solucoes/loja-online/` | 2 | 5 |
-| `/solucoes/multiplas-lojas/` | 2 | 5 |
-| `/solucoes/nfe/` | 2 | 5 |
-| `/solucoes/nfce/` | 2 | 5 |
-| `/solucoes/sistema-de-estoque/` | 3 | 5 |
-| `/solucoes/sistema-financeiro/` | 3 | 5 |
-| `/segmentos/loja-de-variedades/` | 3 | 6 |
-| `/segmentos/papelaria/` | 3 | 6 |
+| `/solucoes/sistema-pdv/` | 2 · 5 | 7 · 9 |
+| `/solucoes/controle-de-fiado/` | 2 · 5 | 7 · 9 |
+| `/solucoes/controle-de-clientes/` | 2 · 5 | 7 · 9 |
+| `/solucoes/loja-online/` | 2 · 5 | 7 · 9 |
+| `/solucoes/multiplas-lojas/` | 2 · 5 | 7 · 9 |
+| `/solucoes/nfe/` | 2 · 5 | 7 · 9 |
+| `/solucoes/nfce/` | 2 · 5 | 7 · 9 |
+| `/solucoes/sistema-de-estoque/` | 3 · 5 | 7 · 9 |
+| `/solucoes/sistema-financeiro/` | 3 · 5 | 7 · 9 |
+| `/segmentos/loja-de-variedades/` | 3 · 6 | 6 · 6 |
+| `/segmentos/papelaria/` | 3 · 6 | 6 · 6 |
 
-**Por que importa:** os segmentos apontam para as soluções. São 1440 links
-internos levando o visitante de "sistema para joalheria" até "controle de
-estoque" — e ele chega numa página de dois parágrafos. A jornada quebra
-exatamente onde ele ia decidir.
+Mapa de links: **54 páginas, 1478 links, 0 órfãs**.
 
-`/solucoes/multiplas-lojas/` é o caso mais visível: é para onde
-`/segmentos/empresas-com-filiais/` aponta, e tem 2 blocos.
+### O que ficou pendente dentro deste item
 
-**Ordem sugerida:** `multiplas-lojas`, `sistema-pdv`, `controle-de-fiado`,
-`sistema-de-estoque`, `controle-de-clientes`, `loja-online`,
-`sistema-financeiro`, `nfe`, `nfce`, depois `loja-de-variedades` e `papelaria`.
+As páginas foram escritas **antes** das respostas da seção 3, como você
+escolheu. Isso significa que 6 assuntos continuam saindo como "confirme com o
+suporte" no texto público, agora também nas soluções:
 
-**Dependência:** esbarra na seção 3. Sem aquelas seis respostas eu escrevo mais
-"confirme com o suporte", que é justamente o que queremos reduzir.
+- validade e lote (estoque, e nos segmentos de farmácia e alimentos)
+- limite de fiado por cliente
+- perfis de permissão por usuário
+- estoque por filial e transferência entre lojas
+- contas a pagar com vencimento (financeiro)
+- emissão fiscal em ativação (NF-e, NFC-e e todos os planos)
+- impressora térmica e gaveta (PDV)
+- domínio próprio na loja online
 
----
+**Quando você responder a seção 3, cada resposta vira afirmação em várias
+páginas de uma vez** — é uma passada de edição, não uma reescrita.
 
 ## 8. O outro site no mesmo domínio — OUTRA PESSOA
 
@@ -251,6 +256,9 @@ as outras não dizem.
 | 2 | Terminar o Search Console | Você | Sem ele, tudo é hipótese |
 | 3 | Responder as seis perguntas de produto | Você | Destrava 22 páginas e a seção 7 |
 | 4 | Confirmar Firebase × Supabase | Você | LGPD |
-| 5 | Reescrever `/solucoes/` | Eu | A jornada quebra ali |
+| 5 | ~~Reescrever `/solucoes/`~~ | ~~Eu~~ | **Feito em 2026-09-07** |
 | 6 | Produzir as 4 fotos | Você | Páginas no ar sem imagem |
 | 7 | Decidir `www` × `site` | Vocês | Depende dos dados do passo 2 |
+
+Depois das respostas da seção 3, sobra uma passada de edição trocando
+"confirme com o suporte" por afirmação nas páginas que ganharam esse texto.
