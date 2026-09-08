@@ -552,3 +552,65 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
         telaLarga.addEventListener('change', aplicarModo);
     }
 })();
+
+/* ---------------------------------------------------------------------------
+   FAQ — a copy da esquerda entra alinhada ao topo da seção e vai para o meio
+   da janela conforme a página rola.
+
+   Por que isso não sai só com CSS: `position: sticky` tem UM ponto de parada,
+   e aqui são dois comportamentos. Três abordagens em CSS puro foram medidas e
+   descartadas (o motivo de cada uma está no comentário do style.css); todas
+   falhavam no mesmo ponto — a copy já nascia no meio, em vez de começar junto
+   da primeira pergunta.
+
+   O que o script faz: enquanto a seção rola, aumenta o deslocamento de 0 até o
+   valor que centraliza o texto na janela, proporcionalmente ao quanto já se
+   rolou. O CSS aplica esse número no `top`. Sem JavaScript, o valor fica em 0
+   e a copy se comporta como sticky comum, alinhada ao topo — nada quebra.
+   --------------------------------------------------------------------------- */
+(function () {
+    const aside = document.querySelector('.faq--split .faq-aside');
+    const secao = document.querySelector('#faq');
+    if (!aside || !secao) return;
+
+    const menosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let alvo = 0;          // deslocamento final, em px
+    let pendente = false;
+
+    function medir() {
+        const navH = parseFloat(getComputedStyle(document.documentElement)
+                        .getPropertyValue('--nav-h')) || 90;
+        const respiro = 24; // o --spacing-md que o CSS já soma no top
+        const livre = window.innerHeight - navH;
+        // quanto seria preciso descer para o texto ficar no meio da janela
+        alvo = Math.max(0, (livre - aside.offsetHeight) / 2 - respiro);
+    }
+
+    function atualizar() {
+        pendente = false;
+
+        // desliga em coluna única, tela baixa ou quando o usuário pediu menos
+        // movimento: nesses casos o CSS já resolve, alinhado ao topo.
+        if (window.innerWidth <= 860 || window.innerHeight <= 620 || menosMovimento.matches) {
+            aside.style.setProperty('--faq-offset', '0px');
+            return;
+        }
+
+        const r = secao.getBoundingClientRect();
+        // 0 quando a seção encosta no topo; 1 depois de rolar uma janela inteira
+        const avanco = Math.min(1, Math.max(0, -r.top / window.innerHeight));
+        aside.style.setProperty('--faq-offset', (alvo * avanco).toFixed(1) + 'px');
+    }
+
+    function aoRolar() {
+        if (pendente) return;
+        pendente = true;
+        requestAnimationFrame(atualizar);
+    }
+
+    medir();
+    atualizar();
+    window.addEventListener('scroll', aoRolar, { passive: true });
+    window.addEventListener('resize', function () { medir(); aoRolar(); });
+    if (menosMovimento.addEventListener) menosMovimento.addEventListener('change', atualizar);
+})();
