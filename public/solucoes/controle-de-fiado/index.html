@@ -86,7 +86,7 @@
               "name": "Consigo ver quanto cada cliente me deve?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. O saldo fica no cadastro do cliente, com o histórico das compras que formam o valor."
+                "text": "Sim. O saldo fica no cadastro do cliente, com o histórico das compras que formam o valor — dá para mostrar na tela quando ele perguntar."
               }
             },
             {
@@ -94,7 +94,7 @@
               "name": "O sistema cobra o cliente automaticamente?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A partir do plano Loja, o SoftPay envia link de pagamento por Pix pelo WhatsApp, o que tira de você a tarefa de puxar o assunto da cobrança."
+                "text": "A partir do plano Loja, o SoftPay envia link de pagamento por Pix pelo WhatsApp. O envio é uma ação sua: não existe régua de cobrança que dispara sozinha."
               }
             },
             {
@@ -102,7 +102,23 @@
               "name": "Dá para definir um limite de fiado por cliente?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Confirme esse ponto com o suporte antes de contratar — não assuma que existe sem verificar."
+                "text": "Esse ponto não está confirmado. Se travar venda acima de um valor é importante para você, verifique com o suporte antes de contratar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O sistema cobra juros de quem atrasa?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O saldo é o valor das compras; não há cálculo de juros nem multa por atraso."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Consigo consultar SPC ou negativar quem não paga?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O SoftPay não consulta órgão de proteção ao crédito nem negativa ninguém. A decisão de vender a prazo continua sendo sua."
               }
             },
             {
@@ -111,6 +127,22 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Sim. Ela é uma venda como qualquer outra: o produto sai do estoque e o valor fica registrado como a receber."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dá para registrar fiado pelo WhatsApp?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, a partir do plano Loja — tanto a venda fiada quanto a baixa da dívida. O bot recusa baixa maior que o saldo e responde com o valor correto."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Emite carnê ou boleto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A cobrança sai por link de Pix pelo WhatsApp, disponível a partir do plano Loja."
               }
             },
             {
@@ -191,21 +223,90 @@
         <h2>O problema</h2>
         <p>No comércio de bairro o fiado é parte do negócio — é o que mantém o cliente fiel e o que atravessa o fim do mês de muita gente. Mas o dinheiro fiado é o mais fácil de perder: não tem comprovante, depende da memória de quem anotou e some quando a folha do caderno acaba.</p>
         <p>O efeito é silencioso. A loja vendeu, o estoque saiu, mas o dinheiro não entrou — e como não há um total visível, ninguém percebe o tamanho do buraco.</p>
+        <p>Some a isso o desconforto de cobrar alguém que você encontra na rua. É por isso que muita dívida de fiado nunca é cobrada: não por falta de controle, por falta de jeito de puxar o assunto.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-loja">
+        <h2>Como isso aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>Você não sabe o total a receber.</strong> Sabe que "tem gente devendo", não quanto.</li>
+          <li><strong>O saldo depende de uma pessoa só.</strong> Se quem anota falta, ninguém resolve nada no balcão.</li>
+          <li><strong>A conversa vira discussão.</strong> O cliente lembra de um valor, o caderno diz outro, e não há como provar.</li>
+          <li><strong>A cobrança não acontece.</strong> Você adia porque é constrangedor, e o valor envelhece.</li>
+          <li><strong>O caderno acaba.</strong> Folha rasgada, letra ilegível, página molhada — e o registro simplesmente deixa de existir.</li>
+        </ul>
       </section>
       <section class="page-section" id="como-o-softpay-resolve">
         <h2>Como o SoftPay resolve</h2>
         <h3>Cada venda no nome do cliente</h3>
-        <p>A venda fiada é registrada no cadastro do cliente, com data e valor. O saldo é do sistema, não da memória de quem estava no balcão.</p>
+        <p>A venda fiada é registrada no cadastro do cliente, com data e valor. O saldo é do sistema, não da memória de quem estava no balcão — e qualquer pessoa da loja consegue responder.</p>
         <h3>Histórico para consultar na hora</h3>
-        <p>Quando o cliente pergunta quanto deve, a resposta está na tela — com as compras que formam o valor. Isso encerra a discussão antes de ela começar.</p>
+        <p>Quando o cliente pergunta quanto deve, a resposta está na tela, com as compras que formam o valor. Isso encerra a discussão antes de ela começar, porque não é a sua palavra contra a dele.</p>
         <h3>Cobrança sem constrangimento</h3>
-        <p>A partir do plano Loja, o sistema envia link de pagamento por Pix pelo WhatsApp. A cobrança deixa de depender de você puxar o assunto no balcão.</p>
+        <p>A partir do plano Loja, o sistema envia link de pagamento por Pix pelo WhatsApp. A cobrança deixa de depender de você puxar o assunto no balcão — que é o motivo real de tanta dívida antiga não ser cobrada.</p>
         <h3>Ligado ao resto da loja</h3>
-        <p>A venda fiada baixa o estoque como qualquer outra e fica registrada como valor a receber, aparecendo no seu resultado.</p>
-        <aside class="page-note">
-          <strong>Em qual plano</strong>
-          <p>O caderninho de fiado está no plano Comércio (R$ 69/mês). A cobrança automática com link de Pix pelo WhatsApp fica disponível a partir do plano Loja (R$ 89/mês).</p>
-        </aside>
+        <p>A venda fiada baixa o estoque como qualquer outra e fica registrada como valor a receber, aparecendo no seu resultado. Fiado deixa de ser um controle paralelo.</p>
+        <h3>Registrar e dar baixa falando</h3>
+        <p>A partir do plano Loja, você registra uma venda fiada ou dá baixa numa dívida por mensagem ou áudio no WhatsApp. O bot recusa baixa maior que o saldo e responde com o valor certo. Veja o <a href="/solucoes/bot-whatsapp/">bot do WhatsApp</a>.</p>
+      </section>
+      <section class="page-section" id="o-que-o-controle-de-fiado-nao-faz">
+        <h2>O que o controle de fiado não faz</h2>
+        <p>É crédito que você concede com o próprio dinheiro. Vale saber o que o sistema não cobre:</p>
+        <ul class="page-list">
+          <li><strong>Não consulta SPC nem Serasa.</strong> A decisão de vender fiado continua sendo sua, baseada no que você sabe do cliente.</li>
+          <li><strong>Não negativa quem não paga.</strong> Não há qualquer integração com órgão de proteção ao crédito.</li>
+          <li><strong>Não calcula juros nem multa por atraso.</strong> O saldo é o valor das compras.</li>
+          <li><strong>Não gera carnê nem boleto.</strong> A cobrança sai por link de Pix no WhatsApp, a partir do plano Loja.</li>
+          <li><strong>Limite de crédito por cliente não está confirmado.</strong> Se você precisa travar venda acima de um valor, verifique com o suporte antes de contratar.</li>
+          <li><strong>Não cobra sozinho de tempos em tempos.</strong> O envio do link é uma ação sua, não uma régua automática.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="o-tamanho-do-buraco-quando-ele-fica-visivel">
+        <h2>O tamanho do buraco, quando ele fica visível</h2>
+        <p>O primeiro efeito de sair do caderno costuma ser um susto — o total a receber quase sempre é maior do que o dono imaginava:</p>
+        <div class="page-example">
+          <span class="example-badge">Exemplo ilustrativo</span>
+          <h3>O que estava espalhado pelo caderno</h3>
+          <div class="calc">
+            <div class="calc-row">
+              <span class="calc-label">14 clientes com saldo em aberto</span>
+              <span class="calc-value">R$ 3.180,00</span>
+            </div>
+            <div class="calc-row calc-row--minus">
+              <span class="calc-label">Desses, 5 com dívida acima de 60 dias</span>
+              <span class="calc-value">R$ 1.940,00</span>
+            </div>
+            <div class="calc-row calc-row--result final">
+              <span class="calc-label">= Dinheiro seu, fora do caixa</span>
+              <span class="calc-value">R$ 3.180,00</span>
+            </div>
+          </div>
+          <p class="calc-note">Números fictícios, só para mostrar o raciocínio. A linha do meio é a que muda o comportamento: quando o vencimento fica visível, a cobrança para de ser adiada. Veja o guia <a href="/guias/como-controlar-fiado/">como controlar fiado</a>.</p>
+        </div>
+      </section>
+      <section class="page-section" id="o-que-voce-passa-a-conseguir-responder">
+        <h2>O que você passa a conseguir responder</h2>
+        <ul class="page-list">
+          <li>Quanto tenho a receber de fiado, no total?</li>
+          <li>Quem deve, quanto e desde quando?</li>
+          <li>Quais dívidas estão mais velhas?</li>
+          <li>Este cliente já pagou o que devia do mês passado?</li>
+          <li>Quanto do meu faturamento saiu a prazo?</li>
+          <li>Vale continuar vendendo fiado para esta pessoa?</li>
+        </ul>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>O fiado neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td><strong>Caderninho digital já aqui:</strong> saldo e histórico por cliente, venda fiada pelo PDV. 1 usuário</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td>Tudo do Comércio mais <strong>cobrança por link de Pix no WhatsApp</strong> e registro pelo bot. Até 3 usuários</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -216,19 +317,35 @@
           <div class="faq-list">
           <details class="faq-item">
             <summary class="faq-question">Consigo ver quanto cada cliente me deve?</summary>
-            <div class="faq-answer"><p>Sim. O saldo fica no cadastro do cliente, com o histórico das compras que formam o valor.</p></div>
+            <div class="faq-answer"><p>Sim. O saldo fica no cadastro do cliente, com o histórico das compras que formam o valor — dá para mostrar na tela quando ele perguntar.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">O sistema cobra o cliente automaticamente?</summary>
-            <div class="faq-answer"><p>A partir do plano Loja, o SoftPay envia link de pagamento por Pix pelo WhatsApp, o que tira de você a tarefa de puxar o assunto da cobrança.</p></div>
+            <div class="faq-answer"><p>A partir do plano Loja, o SoftPay envia link de pagamento por Pix pelo WhatsApp. O envio é uma ação sua: não existe régua de cobrança que dispara sozinha.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Dá para definir um limite de fiado por cliente?</summary>
-            <div class="faq-answer"><p>Confirme esse ponto com o suporte antes de contratar — não assuma que existe sem verificar.</p></div>
+            <div class="faq-answer"><p>Esse ponto não está confirmado. Se travar venda acima de um valor é importante para você, verifique com o suporte antes de contratar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">O sistema cobra juros de quem atrasa?</summary>
+            <div class="faq-answer"><p>Não. O saldo é o valor das compras; não há cálculo de juros nem multa por atraso.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Consigo consultar SPC ou negativar quem não paga?</summary>
+            <div class="faq-answer"><p>Não. O SoftPay não consulta órgão de proteção ao crédito nem negativa ninguém. A decisão de vender a prazo continua sendo sua.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">A venda fiada baixa o estoque?</summary>
             <div class="faq-answer"><p>Sim. Ela é uma venda como qualquer outra: o produto sai do estoque e o valor fica registrado como a receber.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Dá para registrar fiado pelo WhatsApp?</summary>
+            <div class="faq-answer"><p>Sim, a partir do plano Loja — tanto a venda fiada quanto a baixa da dívida. O bot recusa baixa maior que o saldo e responde com o valor correto.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Emite carnê ou boleto?</summary>
+            <div class="faq-answer"><p>Não. A cobrança sai por link de Pix pelo WhatsApp, disponível a partir do plano Loja.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Como faço para passar o caderno atual para o sistema?</summary>
@@ -239,8 +356,8 @@
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Descubra quanto você tem para receber</h2>
+          <p>Lance os saldos do caderno no nome de cada cliente e veja o total aparecer. Costuma ser maior do que a gente imagina. 7 dias grátis, sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -253,7 +370,10 @@
         <ul class="related-grid">
           <li><a href="/guias/como-controlar-fiado/"><strong>Como controlar fiado</strong><span>Método e cobrança</span></a></li>
           <li><a href="/solucoes/controle-de-clientes/"><strong>Controle de clientes</strong><span>Cadastro e histórico</span></a></li>
+          <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>A venda a prazo no balcão</span></a></li>
+          <li><a href="/solucoes/bot-whatsapp/"><strong>Bot do WhatsApp</strong><span>Registrar e dar baixa falando</span></a></li>
           <li><a href="/segmentos/mercadinho/"><strong>Mercadinho</strong><span>O fiado do bairro</span></a></li>
+          <li><a href="/segmentos/loja-de-joias/"><strong>Loja de joias</strong><span>Crediário de alto valor</span></a></li>
         </ul>
       </section>
 

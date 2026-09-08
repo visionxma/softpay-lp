@@ -86,7 +86,7 @@
               "name": "Preciso instalar o PDV no computador?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja."
+                "text": "Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja. Funciona no computador do balcão, no notebook e no celular."
               }
             },
             {
@@ -102,7 +102,7 @@
               "name": "Funciona sem internet?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O sistema é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade, converse com o suporte antes de contratar."
+                "text": "Não. O sistema é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade, converse com o suporte antes de contratar."
               }
             },
             {
@@ -110,7 +110,39 @@
               "name": "O PDV controla as formas de pagamento?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. A forma de pagamento é registrada na venda, o que permite conferir o caixa por tipo de recebimento no fechamento."
+                "text": "Sim. Dinheiro, Pix, cartão e fiado são registrados individualmente na venda, o que permite conferir o caixa por tipo de recebimento no fechamento."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ele concilia o que a maquininha me paga?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência com o extrato é manual."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Serve para bar ou restaurante?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O SoftPay não tem comanda nem controle de mesa. Ele foi feito para comércio que vende produto com estoque."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Funciona com impressora térmica e gaveta de dinheiro?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Esse ponto não está confirmado. Descreva seu equipamento ao suporte antes de contratar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O PDV emite cupom fiscal?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação com o suporte e com seu contador."
               }
             },
             {
@@ -191,19 +223,86 @@
         <h2>O problema</h2>
         <p>Muita loja pequena trata o caixa como uma gaveta: o dinheiro entra, o produto sai e nada fica registrado. No fim do dia sobra um valor que não se explica, e no fim do mês uma dúvida sobre o resultado.</p>
         <p>Quando existe registro, ele costuma ser em papel ou planilha — feito depois, de memória, com o movimento já terminado. O que chega ao relatório é uma reconstrução aproximada do que aconteceu.</p>
+        <p>O detalhe que quase ninguém nota: o erro não está no relatório, está na origem. Nenhuma ferramenta conserta depois um dado que nunca foi coletado.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-loja">
+        <h2>Como isso aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>O caixa não bate</strong> e ninguém sabe em qual venda a diferença começou.</li>
+          <li><strong>O estoque mente</strong>, porque a saída do produto não foi registrada junto com a venda.</li>
+          <li><strong>A fila trava no preço.</strong> Alguém vai conferir na prateleira enquanto o cliente espera.</li>
+          <li><strong>Você não sabe como recebeu.</strong> Quanto foi Pix, quanto foi cartão, quanto foi dinheiro — tudo virou um total só.</li>
+          <li><strong>O fiado sai por fora</strong>, num caderno paralelo que ninguém mais consegue ler.</li>
+        </ul>
       </section>
       <section class="page-section" id="como-o-softpay-resolve">
         <h2>Como o SoftPay resolve</h2>
         <h3>Venda registrada na hora</h3>
-        <p>Produto, quantidade, preço, forma de pagamento e cliente ficam gravados no momento da venda. É o mesmo ato: vender e registrar.</p>
+        <p>Produto, quantidade, preço, forma de pagamento e cliente ficam gravados no momento da venda. É o mesmo ato: vender e registrar. Não existe a etapa de passar a limpo depois — que é justamente onde a informação se perde.</p>
         <h3>Estoque e caixa alimentados juntos</h3>
-        <p>A mesma venda baixa o estoque e entra no caixa. Não existe a etapa de passar a limpo depois — que é justamente onde as informações se perdem.</p>
+        <p>A mesma venda baixa o estoque e entra no caixa. Um registro, três consequências: a prateleira, a gaveta e o relatório passam a contar a mesma história.</p>
         <h3>Fechamento de caixa</h3>
         <p>No fim do expediente você compara o que o sistema registrou com o que está na gaveta. A diferença aparece no mesmo dia, enquanto ainda dá para lembrar o que houve.</p>
+        <h3>Forma de pagamento por venda</h3>
+        <p>Dinheiro, Pix, cartão e fiado ficam registrados individualmente. No fechamento você confere cada tipo de recebimento separadamente, em vez de brigar com um total único.</p>
         <h3>Venda fiada no mesmo fluxo</h3>
-        <p>Se o cliente leva para pagar depois, a venda entra como fiado no nome dele, sem sair do PDV e sem caderno paralelo.</p>
+        <p>Se o cliente leva para pagar depois, a venda entra como fiado no nome dele, sem sair do PDV e sem caderno paralelo. Veja o <a href="/solucoes/controle-de-fiado/">controle de fiado</a>.</p>
         <h3>Sem instalar nada</h3>
-        <p>O PDV roda no navegador. Funciona no computador do balcão, no notebook e no celular, com os dados na nuvem.</p>
+        <p>O PDV roda no navegador. Funciona no computador do balcão, no notebook e no celular, com os dados na nuvem — sem servidor na loja e sem licença por máquina.</p>
+      </section>
+      <section class="page-section" id="o-que-o-pdv-nao-faz">
+        <h2>O que o PDV não faz</h2>
+        <p>Os limites reais, para você não descobrir durante o teste:</p>
+        <ul class="page-list">
+          <li><strong>Não funciona sem internet.</strong> O acesso é pelo navegador. Se a sua região tem queda frequente de conexão, pese isso na decisão.</li>
+          <li><strong>Não integra com balança.</strong> Venda por peso entra como produto comum, com o valor digitado.</li>
+          <li><strong>Não tem TEF nem concilia maquininha.</strong> A forma de pagamento é registrada na venda, mas o valor que a adquirente deposita não entra sozinho no sistema.</li>
+          <li><strong>Não faz comanda nem mesa.</strong> Bar, restaurante e lanchonete precisam de um fluxo que o SoftPay não tem.</li>
+          <li><strong>Impressora térmica e gaveta não estão confirmadas.</strong> Verifique o seu equipamento com o suporte antes de contratar.</li>
+          <li><strong>A emissão fiscal consta como em ativação.</strong> Se você precisa de NFC-e no ato da venda, confirme a situação atual com o suporte.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="um-dia-no-balcao-do-jeito-que-acontece">
+        <h2>Um dia no balcão, do jeito que acontece</h2>
+        <p>A rotina que o PDV substitui:</p>
+        <ol class="page-steps">
+          <li>Abre o caixa com o valor de troco inicial.</li>
+          <li>Cada venda passa pelo PDV: produto, quantidade e forma de pagamento.</li>
+          <li>O estoque baixa junto, sem ninguém precisar lembrar.</li>
+          <li>A venda fiada entra no nome do cliente, no mesmo lugar.</li>
+          <li>No fim do dia, o fechamento compara sistema e gaveta.</li>
+          <li>A diferença, se houver, é conferida hoje — não no fim do mês.</li>
+        </ol>
+        <aside class="page-note">
+          <strong>Sobre este exemplo</strong>
+          <p>Exemplo ilustrativo do fluxo. O ritmo da sua loja depende do seu movimento e do tamanho do catálogo.</p>
+        </aside>
+      </section>
+      <section class="page-section" id="o-que-voce-passa-a-conseguir-responder">
+        <h2>O que você passa a conseguir responder</h2>
+        <ul class="page-list">
+          <li>Quanto vendi hoje, e quanto disso foi Pix, cartão e dinheiro?</li>
+          <li>O caixa de ontem bateu?</li>
+          <li>Qual produto mais saiu esta semana?</li>
+          <li>Quanto saiu em fiado no mês?</li>
+          <li>Qual o meu ticket médio?</li>
+          <li>Que horas a loja vende mais?</li>
+        </ul>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>O PDV neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td><strong>PDV completo já aqui:</strong> venda, formas de pagamento, baixa de estoque, fiado e fechamento de caixa. 1 usuário</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td>O mesmo PDV, com estoque avançado por trás: custo, variações e curva ABC. Até 3 usuários</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários</td></tr>
+            <tr><td>Nota Fiscal</td><td>R$ 65/mês</td><td><strong>Não inclui PDV.</strong> Serve só para emissão de notas</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -214,7 +313,7 @@
           <div class="faq-list">
           <details class="faq-item">
             <summary class="faq-question">Preciso instalar o PDV no computador?</summary>
-            <div class="faq-answer"><p>Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja.</p></div>
+            <div class="faq-answer"><p>Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja. Funciona no computador do balcão, no notebook e no celular.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Funciona com leitor de código de barras?</summary>
@@ -222,11 +321,27 @@
           </details>
           <details class="faq-item">
             <summary class="faq-question">Funciona sem internet?</summary>
-            <div class="faq-answer"><p>O sistema é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade, converse com o suporte antes de contratar.</p></div>
+            <div class="faq-answer"><p>Não. O sistema é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade, converse com o suporte antes de contratar.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">O PDV controla as formas de pagamento?</summary>
-            <div class="faq-answer"><p>Sim. A forma de pagamento é registrada na venda, o que permite conferir o caixa por tipo de recebimento no fechamento.</p></div>
+            <div class="faq-answer"><p>Sim. Dinheiro, Pix, cartão e fiado são registrados individualmente na venda, o que permite conferir o caixa por tipo de recebimento no fechamento.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Ele concilia o que a maquininha me paga?</summary>
+            <div class="faq-answer"><p>Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência com o extrato é manual.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Serve para bar ou restaurante?</summary>
+            <div class="faq-answer"><p>Não. O SoftPay não tem comanda nem controle de mesa. Ele foi feito para comércio que vende produto com estoque.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Funciona com impressora térmica e gaveta de dinheiro?</summary>
+            <div class="faq-answer"><p>Esse ponto não está confirmado. Descreva seu equipamento ao suporte antes de contratar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">O PDV emite cupom fiscal?</summary>
+            <div class="faq-answer"><p>A emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação com o suporte e com seu contador.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Em qual plano está o PDV?</summary>
@@ -237,8 +352,8 @@
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Teste no seu próprio balcão</h2>
+          <p>Cadastre os produtos de maior giro, passe as vendas de um dia pelo PDV e feche o caixa no fim da tarde. 7 dias grátis, sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -251,7 +366,10 @@
         <ul class="related-grid">
           <li><a href="/solucoes/sistema-de-estoque/"><strong>Controle de estoque</strong><span>A baixa automática</span></a></li>
           <li><a href="/solucoes/sistema-financeiro/"><strong>Sistema financeiro</strong><span>Caixa e resultado</span></a></li>
+          <li><a href="/solucoes/controle-de-fiado/"><strong>Controle de fiado</strong><span>A venda a prazo, no mesmo fluxo</span></a></li>
+          <li><a href="/solucoes/bot-whatsapp/"><strong>Bot do WhatsApp</strong><span>Registrar sem abrir o painel</span></a></li>
           <li><a href="/guias/como-controlar-caixa-da-loja/"><strong>Como controlar o caixa</strong><span>Rotina de fechamento</span></a></li>
+          <li><a href="/segmentos/mercadinho/"><strong>Mercadinho</strong><span>O balcão de maior movimento</span></a></li>
         </ul>
       </section>
 

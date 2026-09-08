@@ -102,7 +102,7 @@
               "name": "O que é curva ABC?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "É uma classificação que separa os produtos pela participação no resultado: poucos itens costumam responder pela maior parte do faturamento. Serve para focar a decisão de compra no que importa."
+                "text": "É uma classificação que separa os produtos pela participação no resultado: poucos itens costumam responder pela maior parte do faturamento. Serve para focar a decisão de compra no que importa. Está disponível a partir do plano Loja."
               }
             },
             {
@@ -110,7 +110,31 @@
               "name": "Dá para controlar tamanho e cor?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim, com o cadastro de variações, disponível a partir do plano Loja."
+                "text": "Sim, com o cadastro de variações, disponível a partir do plano Loja. Cada combinação tem quantidade própria e a baixa acontece na variação certa."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O sistema controla validade e lote?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não está confirmado. Se você trabalha com alimento, medicamento ou qualquer item com data crítica, verifique com o suporte antes de contratar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vendo por peso. Funciona com balança?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Dá para importar minha planilha de produtos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo."
               }
             },
             {
@@ -119,6 +143,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "O caminho prático é cadastrar primeiro os produtos de maior giro com quantidade e custo, e completar o restante conforme repõe. O guia de estoque explica o método."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Tenho duas lojas. O estoque é separado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Esse ponto não está confirmado e depende da sua estrutura. Descreva sua operação ao suporte antes de contratar."
               }
             }
           ]
@@ -191,19 +223,71 @@
         <h2>O problema</h2>
         <p>Estoque descontrolado custa dos dois lados. Falta do que vende, e o cliente compra na concorrência. Sobra do que não vende, e o dinheiro fica preso na prateleira em vez de girar.</p>
         <p>A causa quase sempre é a mesma: a baixa do estoque depende de alguém lembrar de fazer. Quando a venda e o estoque são dois controles separados, eles se desencontram em questão de dias.</p>
+        <p>E o desencontro não avisa. Ele aparece semanas depois, na forma de um item que faltou num sábado de movimento ou de uma compra repetida do que já estava no depósito.</p>
+      </section>
+      <section class="page-section" id="como-o-descontrole-aparece-na-sua-loja">
+        <h2>Como o descontrole aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>Você promete o que não tem.</strong> Diz que tem, vai buscar e não acha. A venda morre na hora.</li>
+          <li><strong>Compra o que já está lá.</strong> O fornecedor chega, você repõe pela impressão, e o item aparece em dobro.</li>
+          <li><strong>O encalhe só aparece no inventário.</strong> Quando você percebe, o dinheiro já está parado há meses.</li>
+          <li><strong>A margem é uma média que engana.</strong> Sem custo por item, o produto de 15% e o de 60% viram um número só.</li>
+          <li><strong>Ninguém confia no número da tela.</strong> E quando o sistema perde a confiança, todo mundo volta a conferir na prateleira.</li>
+        </ul>
       </section>
       <section class="page-section" id="como-o-softpay-resolve">
         <h2>Como o SoftPay resolve</h2>
         <h3>A venda dá baixa sozinha</h3>
-        <p>O estoque é alimentado pelo PDV. Toda venda registrada no balcão baixa a quantidade do produto na hora, sem segunda digitação.</p>
+        <p>O estoque é alimentado pelo PDV. Toda venda registrada no balcão baixa a quantidade do produto na hora, sem segunda digitação. É o que impede o desencontro de nascer.</p>
         <h3>Custo junto com o preço</h3>
         <p>Cadastrar só o preço de venda responde quanto entrou. Cadastrar o custo é o que permite responder quanto sobrou — e é o que separa faturamento de lucro.</p>
         <h3>Variações de tamanho e cor</h3>
-        <p>Para quem vende roupa e calçado, cada combinação tem a própria quantidade. A baixa acontece na variação certa, não no modelo genérico.</p>
+        <p>Para quem vende roupa e calçado, cada combinação tem a própria quantidade. A baixa acontece na variação certa, não no modelo genérico. A partir do plano Loja.</p>
         <h3>Curva ABC</h3>
-        <p>Separa os produtos por participação no resultado. É o filtro que transforma um cadastro de centenas de itens numa decisão de compra concreta: o que repor, o que remarcar e o que não comprar mais.</p>
+        <p>Separa os produtos por participação no resultado. É o filtro que transforma um cadastro de centenas de itens numa decisão de compra concreta: o que repor, o que remarcar e o que não comprar mais. A partir do plano Loja.</p>
         <h3>Atacado e varejo</h3>
-        <p>Dois preços no mesmo produto, para quem atende revendedor e consumidor final.</p>
+        <p>Dois preços no mesmo produto, para quem atende revendedor e consumidor final, sem cadastro duplicado.</p>
+        <h3>Entrada de mercadoria pelo WhatsApp</h3>
+        <p>A partir do plano Loja, a entrada de estoque pode ser registrada por mensagem ou áudio. No momento em que a carga chega, ninguém está sentado na frente do computador — e é aí que o registro costuma não acontecer. Veja o <a href="/solucoes/bot-whatsapp/">bot do WhatsApp</a>.</p>
+      </section>
+      <section class="page-section" id="o-que-o-controle-de-estoque-nao-faz">
+        <h2>O que o controle de estoque não faz</h2>
+        <p>Os limites, antes de você contratar contando com eles:</p>
+        <ul class="page-list">
+          <li><strong>Não integra com balança.</strong> Venda por peso — frios, hortifrúti, granel — entra como produto comum, com o valor digitado no PDV.</li>
+          <li><strong>Não faz inventário por coletor.</strong> A contagem é feita por você e lançada no sistema; não há aparelho de leitura em massa.</li>
+          <li><strong>Não faz pedido de compra automático.</strong> O sistema mostra o que está acabando; a compra continua sendo sua, pelo canal de sempre.</li>
+          <li><strong>Não monta kit nem ficha técnica.</strong> Produto composto de outros produtos, com baixa dos componentes, não faz parte do sistema.</li>
+          <li><strong>Validade e lote não estão confirmados.</strong> Se a sua operação depende disso, verifique com o suporte antes de contratar.</li>
+          <li><strong>Estoque separado por filial não está confirmado.</strong> Descreva sua estrutura ao suporte se você tem mais de um ponto.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="quanto-dinheiro-esta-parado-na-pratica">
+        <h2>Quanto dinheiro está parado, na prática</h2>
+        <p>O número que quase nenhuma loja pequena sabe de cabeça é o valor do próprio estoque a preço de custo. Com custo e quantidade cadastrados, ele deixa de ser chute:</p>
+        <div class="page-example">
+          <span class="example-badge">Exemplo ilustrativo</span>
+          <h3>O que a prateleira vale, a preço de custo</h3>
+          <div class="calc">
+            <div class="calc-row">
+              <span class="calc-label">Classe A — 40 itens que giram</span>
+              <span class="calc-value">R$ 9.200,00</span>
+            </div>
+            <div class="calc-row">
+              <span class="calc-label">Classe B — 120 itens de giro médio</span>
+              <span class="calc-value">R$ 7.400,00</span>
+            </div>
+            <div class="calc-row calc-row--minus">
+              <span class="calc-label">Classe C — 380 itens parados</span>
+              <span class="calc-value">R$ 11.800,00</span>
+            </div>
+            <div class="calc-row calc-row--result final">
+              <span class="calc-label">= Total investido em mercadoria</span>
+              <span class="calc-value">R$ 28.400,00</span>
+            </div>
+          </div>
+          <p class="calc-note">Números fictícios, só para mostrar o raciocínio. A leitura importante é a última linha da classe C: quase metade do dinheiro imobilizado nos itens que menos giram. Veja o guia <a href="/guias/como-controlar-estoque/">como controlar estoque</a>.</p>
+        </div>
       </section>
       <section class="page-section" id="o-que-voce-passa-a-conseguir-responder">
         <h2>O que você passa a conseguir responder</h2>
@@ -213,11 +297,22 @@
           <li>O que está encalhado há tempo demais?</li>
           <li>Quanto eu realmente ganho em cada produto, depois do custo?</li>
           <li>O que preciso repor antes de acabar?</li>
+          <li>Qual variação de tamanho ou cor mais sai, e qual eu compro demais?</li>
         </ul>
-        <aside class="page-note">
-          <strong>Em qual plano</strong>
-          <p>Estoque essencial já está no plano Comércio (R$ 69/mês). Variações, custo e curva ABC ficam disponíveis a partir do plano Loja (R$ 89/mês).</p>
-        </aside>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta-cada-parte">
+        <h2>Em qual plano está cada parte</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>O que você tem de estoque</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td>Estoque essencial: cadastro de produtos, quantidade e baixa automática pela venda</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td><strong>O plano do controle completo:</strong> custo por produto, variações de tamanho e cor, curva ABC e importação</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Tudo da Loja, mais emissão de NF-e e NFC-e e até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -236,23 +331,39 @@
           </details>
           <details class="faq-item">
             <summary class="faq-question">O que é curva ABC?</summary>
-            <div class="faq-answer"><p>É uma classificação que separa os produtos pela participação no resultado: poucos itens costumam responder pela maior parte do faturamento. Serve para focar a decisão de compra no que importa.</p></div>
+            <div class="faq-answer"><p>É uma classificação que separa os produtos pela participação no resultado: poucos itens costumam responder pela maior parte do faturamento. Serve para focar a decisão de compra no que importa. Está disponível a partir do plano Loja.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Dá para controlar tamanho e cor?</summary>
-            <div class="faq-answer"><p>Sim, com o cadastro de variações, disponível a partir do plano Loja.</p></div>
+            <div class="faq-answer"><p>Sim, com o cadastro de variações, disponível a partir do plano Loja. Cada combinação tem quantidade própria e a baixa acontece na variação certa.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">O sistema controla validade e lote?</summary>
+            <div class="faq-answer"><p>Não está confirmado. Se você trabalha com alimento, medicamento ou qualquer item com data crítica, verifique com o suporte antes de contratar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Vendo por peso. Funciona com balança?</summary>
+            <div class="faq-answer"><p>O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Dá para importar minha planilha de produtos?</summary>
+            <div class="faq-answer"><p>A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Como faço o primeiro inventário?</summary>
             <div class="faq-answer"><p>O caminho prático é cadastrar primeiro os produtos de maior giro com quantidade e custo, e completar o restante conforme repõe. O guia de estoque explica o método.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Tenho duas lojas. O estoque é separado?</summary>
+            <div class="faq-answer"><p>Esse ponto não está confirmado e depende da sua estrutura. Descreva sua operação ao suporte antes de contratar.</p></div>
           </details>
           </div>
         </div>
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Descubra quanto está parado na sua prateleira</h2>
+          <p>Cadastre os produtos de maior giro com custo e quantidade, registre as vendas por uma semana e veja o número aparecer. 7 dias grátis, sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -265,7 +376,10 @@
         <ul class="related-grid">
           <li><a href="/guias/como-controlar-estoque/"><strong>Como controlar estoque</strong><span>Método passo a passo</span></a></li>
           <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>A venda que alimenta o estoque</span></a></li>
+          <li><a href="/solucoes/bot-whatsapp/"><strong>Bot do WhatsApp</strong><span>Dar entrada falando</span></a></li>
           <li><a href="/segmentos/loja-de-roupas/"><strong>Loja de roupas</strong><span>Estoque com grade</span></a></li>
+          <li><a href="/segmentos/loja-de-variedades/"><strong>Loja de variedades</strong><span>Centenas de itens</span></a></li>
+          <li><a href="/segmentos/distribuidora/"><strong>Distribuidora</strong><span>Estoque em volume</span></a></li>
         </ul>
       </section>
 
