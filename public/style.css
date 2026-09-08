@@ -5390,11 +5390,26 @@ body {
     padding-bottom: calc(var(--section-y) * 0.8);
 }
 
-/* ---------- Abas: equilíbrio entre as colunas ---------- */
+/* ---------- Abas: equilíbrio entre as colunas ----------
+   ATENÇÃO: este bloco de refinamentos está dentro de uma @media
+   (max-width: 560px), e a regra de duas colunas abaixo estava sendo aplicada
+   ao CELULAR — sobrescrevendo o `grid-template-columns: 1fr` de 860px.
+   O resultado, medido no iPhone 14: as cápsulas vazavam para fora da tela
+   ("Atacado e v…" cortado) e o texto do painel ficava numa coluna de ~180px,
+   com 2 a 3 palavras por linha.
+   As duas colunas agora só valem de 561px para cima. */
+@media (min-width: 561px) {
+    .display-tabs {
+        grid-template-columns: minmax(200px, 0.75fr) minmax(0, 1.25fr);
+        gap: clamp(1.25rem, 3vw, 2.5rem);
+        align-items: start;
+    }
+}
+
+/* No celular: uma coluna, abas em linha rolável e painel de largura cheia */
 .display-tabs {
-    grid-template-columns: minmax(200px, 0.75fr) minmax(0, 1.25fr);
-    gap: clamp(1.25rem, 3vw, 2.5rem);
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
 }
 
 /* Sem altura mínima, a seção pulava de tamanho a cada troca de aba */
@@ -6040,4 +6055,189 @@ body {
 @media (max-width: 560px) {
   .depo-grid { max-width: 380px; }
   .depo-body { padding: 1rem 1rem 1.125rem; }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE — conforto de leitura e toque
+   Auditoria em 8 aparelhos (iPhone SE ao Desktop) apontou três problemas
+   mensuráveis, tratados abaixo. Nenhuma regra muda o desenho: são ajustes de
+   legibilidade e de área de toque.
+   ========================================================================== */
+
+/* 1. LINHA LONGA DEMAIS ------------------------------------------------------
+   Medido no desktop: blocos de texto chegando a 167 caracteres por linha, com
+   `max-width: none`. A faixa confortável de leitura é 45–75; acima disso o
+   olho perde o começo da linha seguinte e a leitura cansa. Estes oito blocos
+   não tinham limite algum. 68ch mantém a linha dentro da faixa sem mudar o
+   desenho da seção. */
+.split-note,
+.plans-support-note,
+.faq-footer,
+.calc-note,
+.support-text,
+.map-caption,
+.showcase-description {
+    /* 46ch e não 68ch: a unidade `ch` mede a largura do dígito ZERO, que é
+       bem mais largo que a letra média em texto corrido. Medido nesta fonte,
+       68ch rendia ~100 caracteres reais por linha — ainda acima da faixa
+       confortável de 45 a 75. Com 46ch a linha fica em ~68 caracteres. */
+    max-width: 46ch;
+}
+
+/* Nos blocos centralizados, o limite precisa vir com margem automática,
+   senão o texto encurta e fica encostado à esquerda. */
+.support-text,
+.plans-support-note,
+.map-caption {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2. ALVO DE TOQUE PEQUENO ---------------------------------------------------
+   Medido no iPhone 14: 33 links com 21px de altura e 4 abas com 30px. A
+   recomendação de acessibilidade para toque é 44px. Em vez de aumentar a
+   fonte (que mudaria o desenho), o alvo cresce por padding vertical — a
+   área clicável aumenta e o texto continua igual. */
+@media (max-width: 860px) {
+    .footer-column a,
+    .faq-footer a,
+    .nav-menu .nav-link {
+        display: inline-block;
+        padding-block: .5rem;   /* 21px + 16px = 37px, e o gap da lista completa */
+    }
+
+    .display-tab {
+        min-height: 44px;
+        padding-block: .55rem;
+    }
+
+    .footer-column ul {
+        gap: .125rem; /* o padding já separa; o gap antigo somava e esticava */
+    }
+}
+
+/* 3. TEXTO MIÚDO -------------------------------------------------------------
+   Medido: 64 elementos abaixo de 14px no celular. Os rótulos em caixa alta
+   (section-label, price-tag, uf-chip) são etiquetas curtas e podem ser
+   menores, mas o texto CORRIDO abaixo de 14px cansa em tela pequena. Só o
+   texto de leitura sobe. */
+@media (max-width: 560px) {
+    .wa-text,
+    .split-note,
+    .calc-note,
+    .price-per {
+        font-size: .9375rem; /* 15px */
+        line-height: 1.6;
+    }
+
+    .wa-meta {
+        font-size: .8125rem; /* era 10px — pequeno demais até para metadado */
+    }
+}
+
+/* 4. RITMO DA ROLAGEM --------------------------------------------------------
+   A página tem ~29.500px no celular (35 telas). Sem marcação de ritmo, a
+   rolagem vira um corredor sem fim. `scroll-margin-top` faz cada seção parar
+   abaixo da navbar quando alcançada por link âncora, e o respiro entre
+   seções encolhe no celular para reduzir a distância morta entre blocos. */
+section[id] {
+    scroll-margin-top: calc(var(--nav-h, 90px) + 8px);
+}
+
+@media (max-width: 560px) {
+    .section-block {
+        padding-block: clamp(2.5rem, 9vw, 4rem);
+    }
+}
+
+/* Últimos alvos abaixo de 44px, medidos depois do ajuste anterior:
+   .btn a 42px, .nav-link a 41px, .link-arrow a 25px e o botão do menu a 35px.
+   Faltavam poucos pixels em cada — resolvido com altura mínima, sem tocar na
+   fonte nem no espaçamento visível. */
+@media (max-width: 860px) {
+    .btn,
+    .nav-menu .nav-link,
+    .hero-announce {
+        min-height: 44px;
+    }
+
+    /* o conteúdo continua centrado dentro da nova altura */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link-arrow {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    .mobile-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+/* "Desenvolvido pela VisionX" — link dentro de frase corrida. Aumentar a
+   altura da caixa quebraria a linha do texto, então a área de toque cresce
+   por baixo do próprio link, sem deslocar nada: o pseudo-elemento estende a
+   região sensível para 44px sem alterar o layout. */
+.footer-credit a {
+    position: relative;
+    display: inline;
+}
+
+@media (max-width: 860px) {
+    .footer-credit a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        height: 44px;
+        transform: translateY(-50%);
+    }
+}
+
+/* O iPad Pro (1024px) e telas grandes com toque ficavam de fora das regras
+   acima, que param em 860px — medido: 56 alvos abaixo de 44px no iPad Pro.
+   `pointer: coarse` alcança qualquer aparelho cujo apontador principal é o
+   dedo, independentemente da largura, e não afeta quem usa mouse. */
+@media (pointer: coarse) {
+    .footer-column a,
+    .faq-footer a,
+    .nav-menu .nav-link {
+        display: inline-block;
+        padding-block: .5rem;
+    }
+
+    .btn,
+    .nav-menu .nav-link,
+    .hero-announce,
+    .display-tab {
+        min-height: 44px;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .link-arrow {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+    }
+
+    .mobile-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .footer-column ul {
+        gap: .125rem;
+    }
 }
