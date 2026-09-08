@@ -83,10 +83,42 @@
           "mainEntity": [
             {
               "@type": "Question",
+              "name": "O SoftPay emite NF-e?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação atual com o suporte antes de contratar contando com ela."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Qual a diferença entre NF-e e NFC-e?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A NF-e costuma ser usada em operações entre empresas e em vendas que exigem documento fiscal completo. A NFC-e é o cupom fiscal eletrônico, usado na venda ao consumidor final no balcão."
+                "text": "A NF-e é usada em operações entre empresas e em vendas que exigem documento fiscal completo. A NFC-e é o cupom da venda ao consumidor final, no balcão."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Em qual plano fica mais barato só a nota?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No plano Nota Fiscal, de R$ 65/mês, que traz a parte fiscal sem PDV nem estoque — para quem já tem outro sistema de gestão. Até 2 usuários."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O sistema calcula meus impostos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O SoftPay emite o documento com a configuração fiscal definida pelo seu contador. Apuração, guia e declaração continuam com ele."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quem define CFOP, NCM e CST?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Seu contador. O sistema emite com o que estiver configurado — ele não decide a tributação da sua operação."
               }
             },
             {
@@ -94,31 +126,31 @@
               "name": "Preciso de certificado digital?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A emissão de documentos fiscais eletrônicos normalmente exige certificado digital. Confirme com o suporte e com seu contador o que é necessário no seu caso."
+                "text": "O certificado não está incluso. Confirme com o suporte qual tipo é aceito e o que você precisa providenciar."
               }
             },
             {
               "@type": "Question",
-              "name": "Em quais planos está a emissão?",
+              "name": "Emite nota de serviço (NFS-e)?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nos planos Nota Fiscal (R$ 65/mês) e ERP Completo (R$ 109/mês). Os planos Comércio e Loja não incluem emissão."
+                "text": "Não. A NFS-e é municipal e fica fora do SoftPay."
               }
             },
             {
               "@type": "Question",
-              "name": "O plano Nota Fiscal tem PDV e estoque?",
+              "name": "E o MDF-e, para transporte?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Não. Ele é só a nota: você preenche um formulário e emite. Sem PDV, estoque, clientes ou relatórios."
+                "text": "Consta nos planos como recurso em ativação. Confirme com o suporte e com seu contador antes de contar com ele."
               }
             },
             {
               "@type": "Question",
-              "name": "Consigo ver as notas que recebo dos fornecedores?",
+              "name": "Consigo ver as notas que meus fornecedores emitiram?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. A visualização de notas recebidas está disponível a partir do plano Comércio, e a manifestação no plano Nota Fiscal."
+                "text": "As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal."
               }
             }
           ]
@@ -187,26 +219,79 @@
              fetchpriority="high" decoding="async" />
       </figure>
 
-      <section class="page-section" id="quando-voce-precisa-de-nf-e">
-        <h2>Quando você precisa de NF-e</h2>
-        <p>A obrigatoriedade depende do seu regime tributário, da atividade e do tipo de operação. Venda para outra empresa, transporte de mercadoria e algumas operações específicas normalmente exigem NF-e.</p>
+      <section class="page-section" id="leia-isto-antes-de-contratar-por-causa-da-nota">
+        <h2>Leia isto antes de contratar por causa da nota</h2>
         <aside class="page-note">
-          <strong>Consulte seu contador</strong>
-          <p>Obrigação fiscal não se resolve por artigo em site. Confirme com o seu contador o que a sua empresa precisa emitir antes de contratar qualquer sistema. Informações oficiais estão no portal da NF-e e na SEFAZ do seu estado.</p>
+          <strong>Recurso em ativação</strong>
+          <p>A emissão fiscal consta nos planos como <strong>recurso em ativação</strong>. Se a nota é condição para você fechar negócio, <strong>confirme a situação atual com o suporte antes de contratar</strong> — não assuma que está disponível hoje na sua conta e no seu estado.</p>
         </aside>
+        <p>Colocamos esse aviso no primeiro bloco de propósito. Descobrir isso depois de assinar seria pior para você e para nós.</p>
       </section>
-      <section class="page-section" id="como-funciona-no-softpay">
-        <h2>Como funciona no SoftPay</h2>
-        <h3>Dois caminhos</h3>
-        <p>Se você só precisa emitir notas, o plano <strong>Nota Fiscal</strong> (R$ 65/mês) resolve: você preenche um formulário e emite, sem PDV, estoque ou relatórios. Se quer a gestão completa com a emissão junto, o <strong>ERP Completo</strong> (R$ 109/mês) inclui tudo.</p>
-        <h3>Cadastro fiscal e pacote do contador</h3>
-        <p>Os dois planos incluem o cadastro fiscal e o pacote do contador, para que o seu contabilista receba o que precisa sem trabalho manual seu.</p>
-        <h3>Notas recebidas</h3>
-        <p>Além de emitir, dá para visualizar as notas recebidas de fornecedores, e manifestá-las no plano Nota Fiscal.</p>
-        <aside class="page-note">
-          <strong>Situação da emissão</strong>
-          <p>A emissão de NFC-e, NF-e, NFS-e e MDF-e consta nos planos como recurso <strong>em ativação</strong>. Antes de contratar contando com um documento específico, confirme a situação atual com o suporte.</p>
-        </aside>
+      <section class="page-section" id="o-problema">
+        <h2>O problema</h2>
+        <p>Quem vende para empresa não escolhe: sem NF-e, não há venda. O cliente exige o documento para lançar a compra na contabilidade dele, e a operação simplesmente não acontece sem isso.</p>
+        <p>A saída comum é emitir a nota num sistema separado, digitando de novo o que já foi vendido. É trabalho dobrado, e cada digitação repetida é uma chance de erro — em documento que tem consequência fiscal.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-operacao">
+        <h2>Como isso aparece na sua operação</h2>
+        <ul class="page-list">
+          <li><strong>A venda é digitada duas vezes:</strong> uma no sistema da loja, outra no emissor de nota.</li>
+          <li><strong>O número na nota não bate com o da venda</strong>, e a diferença só aparece na conferência do contador.</li>
+          <li><strong>O contador cobra os arquivos todo mês</strong> e alguém precisa juntar tudo na mão.</li>
+          <li><strong>A nota de fornecedor se perde.</strong> Chega por e-mail, ninguém baixa, e a entrada de mercadoria fica sem documento.</li>
+          <li><strong>Você perde venda</strong> porque não consegue emitir no ato.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="como-o-softpay-resolve">
+        <h2>Como o SoftPay resolve</h2>
+        <h3>A nota sai da venda que já existe</h3>
+        <p>O documento é emitido a partir da venda registrada no sistema, sem redigitar produto, quantidade e valor em outro lugar.</p>
+        <h3>Cadastro fiscal da empresa</h3>
+        <p>Os dados fiscais ficam configurados na conta, para a emissão não depender de alguém preencher tudo de novo a cada nota.</p>
+        <h3>Pacote do contador</h3>
+        <p>Os arquivos que o contador precisa ficam disponíveis para envio, em vez de virarem uma coleta manual no fim do mês.</p>
+        <h3>Notas de fornecedor</h3>
+        <p>As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal — parte da rotina de quem compra em volume.</p>
+        <h3>Junto do resto da operação</h3>
+        <p>No ERP Completo, a emissão convive com PDV, estoque, caixa e clientes. No plano Nota Fiscal, ela vem sozinha, para quem já tem outro sistema de gestão.</p>
+      </section>
+      <section class="page-section" id="o-que-o-softpay-nao-faz-na-parte-fiscal">
+        <h2>O que o SoftPay não faz na parte fiscal</h2>
+        <p>O limite entre o sistema e o seu contador, com clareza:</p>
+        <ul class="page-list">
+          <li><strong>Não é contabilidade.</strong> Não apura imposto, não calcula guia, não faz declaração nem entrega obrigação acessória.</li>
+          <li><strong>Não decide a tributação da sua operação.</strong> CFOP, NCM, CST e regime são definição do seu contador — o sistema emite com o que estiver configurado.</li>
+          <li><strong>Não emite NFS-e</strong>, a nota de serviço. Ela é municipal e fica fora do SoftPay.</li>
+          <li><strong>Não emite CT-e.</strong></li>
+          <li><strong>MDF-e consta como recurso em ativação.</strong> Se a sua operação exige documento de transporte, confirme com o suporte e com o contador.</li>
+          <li><strong>Certificado digital não está incluso.</strong> Confirme com o suporte qual tipo é aceito e o que você precisa ter.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="quem-precisa-de-nf-e">
+        <h2>Quem precisa de NF-e</h2>
+        <p>Nem toda loja precisa. Vale saber em qual caso você está — e confirmar com o seu contador:</p>
+        <ul class="page-list">
+          <li><strong>Quem vende para outra empresa (PJ).</strong> Aqui a nota costuma ser condição da venda.</li>
+          <li><strong>Distribuidora e atacado.</strong> A maior parte das saídas exige documento fiscal.</li>
+          <li><strong>Quem faz venda interestadual</strong> ou transporta mercadoria entre praças.</li>
+          <li><strong>Quem vende para órgão público</strong> ou participa de licitação.</li>
+        </ul>
+        <p>Para venda no balcão ao consumidor final, o documento costuma ser a <a href="/solucoes/nfce/">NFC-e</a>, não a NF-e.</p>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>A emissão neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Nota Fiscal</td><td>R$ 65/mês</td><td><strong>Só a parte fiscal:</strong> emissão de NF-e e NFC-e, cadastro fiscal, manifestação de notas e pacote do contador. Sem PDV nem estoque. Até 2 usuários</td></tr>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td><strong>Não emite nota.</strong> PDV, caixa, fiado e estoque essencial</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td><strong>Não emite nota.</strong> Estoque avançado, curva ABC, loja online e bot do WhatsApp</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td><strong>Gestão e nota no mesmo lugar:</strong> tudo do Loja mais NF-e e NFC-e. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -216,32 +301,48 @@
           </div>
           <div class="faq-list">
           <details class="faq-item">
+            <summary class="faq-question">O SoftPay emite NF-e?</summary>
+            <div class="faq-answer"><p>A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação atual com o suporte antes de contratar contando com ela.</p></div>
+          </details>
+          <details class="faq-item">
             <summary class="faq-question">Qual a diferença entre NF-e e NFC-e?</summary>
-            <div class="faq-answer"><p>A NF-e costuma ser usada em operações entre empresas e em vendas que exigem documento fiscal completo. A NFC-e é o cupom fiscal eletrônico, usado na venda ao consumidor final no balcão.</p></div>
+            <div class="faq-answer"><p>A NF-e é usada em operações entre empresas e em vendas que exigem documento fiscal completo. A NFC-e é o cupom da venda ao consumidor final, no balcão.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Em qual plano fica mais barato só a nota?</summary>
+            <div class="faq-answer"><p>No plano Nota Fiscal, de R$ 65/mês, que traz a parte fiscal sem PDV nem estoque — para quem já tem outro sistema de gestão. Até 2 usuários.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">O sistema calcula meus impostos?</summary>
+            <div class="faq-answer"><p>Não. O SoftPay emite o documento com a configuração fiscal definida pelo seu contador. Apuração, guia e declaração continuam com ele.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Quem define CFOP, NCM e CST?</summary>
+            <div class="faq-answer"><p>Seu contador. O sistema emite com o que estiver configurado — ele não decide a tributação da sua operação.</p></div>
           </details>
           <details class="faq-item">
             <summary class="faq-question">Preciso de certificado digital?</summary>
-            <div class="faq-answer"><p>A emissão de documentos fiscais eletrônicos normalmente exige certificado digital. Confirme com o suporte e com seu contador o que é necessário no seu caso.</p></div>
+            <div class="faq-answer"><p>O certificado não está incluso. Confirme com o suporte qual tipo é aceito e o que você precisa providenciar.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Em quais planos está a emissão?</summary>
-            <div class="faq-answer"><p>Nos planos Nota Fiscal (R$ 65/mês) e ERP Completo (R$ 109/mês). Os planos Comércio e Loja não incluem emissão.</p></div>
+            <summary class="faq-question">Emite nota de serviço (NFS-e)?</summary>
+            <div class="faq-answer"><p>Não. A NFS-e é municipal e fica fora do SoftPay.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">O plano Nota Fiscal tem PDV e estoque?</summary>
-            <div class="faq-answer"><p>Não. Ele é só a nota: você preenche um formulário e emite. Sem PDV, estoque, clientes ou relatórios.</p></div>
+            <summary class="faq-question">E o MDF-e, para transporte?</summary>
+            <div class="faq-answer"><p>Consta nos planos como recurso em ativação. Confirme com o suporte e com seu contador antes de contar com ele.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Consigo ver as notas que recebo dos fornecedores?</summary>
-            <div class="faq-answer"><p>Sim. A visualização de notas recebidas está disponível a partir do plano Comércio, e a manifestação no plano Nota Fiscal.</p></div>
+            <summary class="faq-question">Consigo ver as notas que meus fornecedores emitiram?</summary>
+            <div class="faq-answer"><p>As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal.</p></div>
           </details>
           </div>
         </div>
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Confirme a emissão antes de assinar</h2>
+          <p>Fale com o suporte sobre a situação da emissão fiscal no seu estado e no seu regime, e use os 7 dias grátis para testar o resto do sistema. Sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -252,9 +353,12 @@
       <section class="page-related">
         <h2>Continue por aqui</h2>
         <ul class="related-grid">
-          <li><a href="/solucoes/nfce/"><strong>NFC-e</strong><span>Cupom fiscal no balcão</span></a></li>
-          <li><a href="/segmentos/distribuidora/"><strong>Distribuidora</strong><span>Operação com nota</span></a></li>
-          <li><a href="/#pricing"><strong>Preços</strong><span>Planos com emissão fiscal</span></a></li>
+          <li><a href="/solucoes/nfce/"><strong>NFC-e</strong><span>O cupom da venda no balcão</span></a></li>
+          <li><a href="/segmentos/distribuidora/"><strong>Distribuidora</strong><span>Nota em quase toda saída</span></a></li>
+          <li><a href="/segmentos/loja-de-autopecas/"><strong>Loja de autopeças</strong><span>Venda para oficina</span></a></li>
+          <li><a href="/segmentos/materiais-de-construcao/"><strong>Materiais de construção</strong><span>Venda para obra e empresa</span></a></li>
+          <li><a href="/solucoes/sistema-financeiro/"><strong>Sistema financeiro</strong><span>O que é do contador</span></a></li>
+          <li><a href="/#pricing"><strong>Preços</strong><span>O que tem em cada plano</span></a></li>
         </ul>
       </section>
 

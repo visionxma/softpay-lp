@@ -72,7 +72,7 @@
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Financeiro"
+              "name": "Sistema financeiro"
             }
           ]
         },
@@ -83,42 +83,74 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "O SoftPay substitui meu contador?",
+              "name": "O SoftPay calcula meu imposto ou gera o DAS?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Não. Ele organiza os dados da operação — vendas, custos, caixa e notas. A contabilidade da empresa continua com o seu contador."
+                "text": "Não. É um sistema de gestão comercial: registra venda, caixa, despesa e estoque. Cálculo de imposto, apuração e declaração continuam com o seu contador."
               }
             },
             {
               "@type": "Question",
-              "name": "Ele calcula o meu lucro automaticamente?",
+              "name": "Ele importa meu extrato bancário?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "O sistema reúne os dados que formam a conta: vendas registradas e custo dos produtos cadastrado. A precisão do resultado depende de esses dados estarem completos."
+                "text": "Não. Não há integração com banco, importação de OFX nem conciliação bancária."
               }
             },
             {
               "@type": "Question",
-              "name": "Consigo lançar despesas da loja?",
+              "name": "Concilia o que a maquininha me paga?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Confirme com o suporte o alcance do lançamento de despesas no seu plano antes de contratar."
+                "text": "Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência é manual."
               }
             },
             {
               "@type": "Question",
-              "name": "Como o fiado aparece no financeiro?",
+              "name": "Dá para registrar as despesas da loja?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A venda fiada é registrada como valor a receber, o que evita contar como caixa um dinheiro que ainda não entrou."
+                "text": "Sim. A despesa lançada entra na conta do resultado. A partir do plano Loja, ela também pode ser lançada por mensagem ou áudio no WhatsApp."
               }
             },
             {
               "@type": "Question",
-              "name": "Dá para fechar o caixa todo dia?",
+              "name": "Tem contas a pagar com vencimento?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim, e é a prática recomendada: a diferença aparece no mesmo dia, enquanto ainda dá para identificar a causa."
+                "text": "Não está confirmado. Se agenda de vencimentos é central na sua rotina, verifique com o suporte antes de contratar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mostra fluxo de caixa projetado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O sistema mostra o que já aconteceu — não faz previsão dos próximos meses."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como sei quanto sobrou de verdade?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pela conta de vendas menos custo dos produtos menos despesas. Ela só fecha se o custo estiver cadastrado nos produtos, o que está disponível a partir do plano Loja."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Consigo separar o dinheiro da loja do meu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, registrando retirada como sangria. É o que evita que a retirada do dono vire diferença inexplicada no fechamento."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Emite boleto?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A cobrança de fiado sai por link de Pix pelo WhatsApp, a partir do plano Loja."
               }
             }
           ]
@@ -173,7 +205,7 @@
                 <ol>
                   <li><a href="/">Início</a></li>
                   <li><a href="/solucoes/">Soluções</a></li>
-                  <li><span aria-current="page">Financeiro</span></li>
+                  <li><span aria-current="page">Sistema financeiro</span></li>
                 </ol>
               </nav>
 
@@ -189,23 +221,53 @@
 
       <section class="page-section" id="o-problema">
         <h2>O problema</h2>
-        <p>“Vendi muito e não tenho dinheiro” é a frase mais comum do varejo pequeno. Quase nunca é problema de venda: é o custo da mercadoria e as despesas comendo a margem sem que ninguém acompanhe.</p>
-        <p>Sem separar essas camadas, qualquer decisão vira aposta — desde formar preço até saber se dá para contratar alguém.</p>
+        <p>O dono de loja pequena costuma saber quanto vendeu. Quase nunca sabe quanto sobrou — e essa distância é onde mora o problema. Vender bem e não ter dinheiro é o resultado normal de acompanhar só o faturamento.</p>
+        <p>Dois motivos explicam quase todos os casos: o custo da mercadoria não está registrado, e as despesas do mês vivem espalhadas entre memória, extrato e papel.</p>
+        <p>Sem essas duas peças, o resultado do mês vira sensação. E sensação não decide preço, não decide compra e não decide se dá para contratar alguém.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-loja">
+        <h2>Como isso aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>O caixa fecha com diferença</strong> e a explicação nunca aparece.</li>
+          <li><strong>Você mistura o dinheiro da loja com o seu.</strong> Retirada não registrada vira "sumiço" no fim do mês.</li>
+          <li><strong>Vendeu muito, não sobrou nada.</strong> O CMV comeu a margem e ninguém viu acontecer.</li>
+          <li><strong>A despesa recorrente surpreende.</strong> Aluguel, energia e fornecedor caem sempre, mas nunca entram na conta antes.</li>
+          <li><strong>Você não sabe o quanto pode retirar.</strong> Então retira pouco e aperta, ou retira demais e quebra o caixa.</li>
+        </ul>
       </section>
       <section class="page-section" id="como-o-softpay-resolve">
         <h2>Como o SoftPay resolve</h2>
-        <h3>Caixa alimentado pela venda</h3>
-        <p>O que passa no PDV entra no caixa com a forma de pagamento registrada. O fechamento diário compara o registrado com o que está na gaveta.</p>
-        <h3>Custo dentro da conta</h3>
-        <p>Com o custo dos produtos cadastrado, o sistema tem os dois lados da operação — o que entrou e o que a mercadoria custou —, que é a base do lucro bruto.</p>
-        <h3>Visão do período</h3>
-        <p>Painel e relatórios reúnem vendas, estoque, caixa e fiado no mesmo lugar, para você olhar o mês inteiro em vez de um dia isolado.</p>
+        <h3>Caixa aberto e fechado todo dia</h3>
+        <p>Abertura com troco inicial, movimento do dia e fechamento comparando sistema e gaveta. A diferença aparece hoje, enquanto ainda dá para lembrar o que houve.</p>
+        <h3>Suprimento e sangria registrados</h3>
+        <p>Dinheiro que entra fora da venda e dinheiro que sai do caixa ficam registrados. É o que separa retirada de sumiço.</p>
+        <h3>Despesas no mesmo lugar</h3>
+        <p>A despesa lançada no sistema entra na conta do resultado. Enquanto ela vive só no extrato do banco, o cálculo do mês fica pela metade.</p>
+        <h3>Custo da mercadoria no cálculo</h3>
+        <p>Com o custo cadastrado nos produtos, o sistema mostra a margem, não só o faturamento. É a peça que transforma "vendi R$ 25 mil" em "sobrou tanto". Veja o <a href="/solucoes/sistema-de-estoque/">controle de estoque</a>.</p>
+        <h3>Forma de recebimento separada</h3>
+        <p>Dinheiro, Pix, cartão e fiado ficam distintos. No fechamento você confere cada um, em vez de brigar com um total só.</p>
+        <h3>Lançar despesa falando</h3>
+        <p>A partir do plano Loja, despesa, suprimento e sangria entram por mensagem ou áudio no WhatsApp — no momento em que acontecem, que é quando costumam não ser registradas. Veja o <a href="/solucoes/bot-whatsapp/">bot do WhatsApp</a>.</p>
       </section>
-      <section class="page-section" id="a-conta-camada-por-camada">
-        <h2>A conta, camada por camada</h2>
+      <section class="page-section" id="o-que-o-financeiro-do-softpay-nao-faz">
+        <h2>O que o financeiro do SoftPay não faz</h2>
+        <p>É o controle financeiro da operação da loja, não um sistema contábil. O que fica de fora:</p>
+        <ul class="page-list">
+          <li><strong>Não é contabilidade.</strong> Não calcula imposto, não gera DAS, não faz apuração nem declaração. Isso é do seu contador.</li>
+          <li><strong>Não integra com banco.</strong> Não há importação de extrato (OFX), conciliação bancária nem saldo de conta.</li>
+          <li><strong>Não concilia maquininha.</strong> O que a adquirente deposita não entra sozinho no sistema.</li>
+          <li><strong>Não emite boleto nem gera cobrança bancária.</strong></li>
+          <li><strong>Não faz contas a pagar com agenda de vencimentos</strong> de forma confirmada. Se isso é central para você, verifique com o suporte.</li>
+          <li><strong>Não faz fluxo de caixa projetado.</strong> Ele mostra o que aconteceu, não uma previsão dos próximos meses.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="a-conta-que-separa-faturamento-de-lucro">
+        <h2>A conta que separa faturamento de lucro</h2>
+        <p>É a mesma conta em qualquer comércio, e quase nunca é feita:</p>
         <div class="page-example">
           <span class="example-badge">Exemplo ilustrativo</span>
-          <h3>Do faturamento ao resultado</h3>
+          <h3>Vendi R$ 25.480 no mês. Sobrou quanto?</h3>
           <div class="calc">
             <div class="calc-row">
               <span class="calc-label">Vendas do mês</span>
@@ -228,12 +290,33 @@
               <span class="calc-value">R$ 5.520,00</span>
             </div>
           </div>
-          <p class="calc-note">Números fictícios. O resultado da sua loja depende dos seus próprios dados de venda, custo e despesa. Veja o método em <a href="/guias/como-calcular-lucro-da-loja/">como calcular o lucro da loja</a>.</p>
+          <p class="calc-note">Números fictícios, só para mostrar o raciocínio. Com custo cadastrado e despesa lançada, essa conta deixa de ser estimativa e vira relatório. Veja o guia <a href="/guias/como-calcular-lucro-da-loja/">como calcular o lucro da loja</a>.</p>
         </div>
-        <aside class="page-note">
-          <strong>Sobre o alcance disto</strong>
-          <p>O SoftPay ajuda a organizar os dados que formam essa conta. Ele não substitui a contabilidade da empresa nem dispensa o seu contador.</p>
-        </aside>
+      </section>
+      <section class="page-section" id="o-que-voce-passa-a-conseguir-responder">
+        <h2>O que você passa a conseguir responder</h2>
+        <ul class="page-list">
+          <li>Quanto sobrou de verdade no mês passado?</li>
+          <li>O caixa de ontem bateu? Se não, onde começou a diferença?</li>
+          <li>Quanto saiu de despesa neste mês?</li>
+          <li>Quanto do que vendi ainda está a receber, em fiado?</li>
+          <li>Quanto posso retirar sem apertar o caixa?</li>
+          <li>Minha margem melhorou ou piorou em relação ao mês anterior?</li>
+        </ul>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>O financeiro neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td>Caixa com abertura e fechamento, suprimento, sangria, despesas e formas de recebimento. 1 usuário</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td><strong>Onde o resultado fica completo:</strong> custo por produto e curva ABC entram no cálculo da margem. Até 3 usuários</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td>Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -243,32 +326,48 @@
           </div>
           <div class="faq-list">
           <details class="faq-item">
-            <summary class="faq-question">O SoftPay substitui meu contador?</summary>
-            <div class="faq-answer"><p>Não. Ele organiza os dados da operação — vendas, custos, caixa e notas. A contabilidade da empresa continua com o seu contador.</p></div>
+            <summary class="faq-question">O SoftPay calcula meu imposto ou gera o DAS?</summary>
+            <div class="faq-answer"><p>Não. É um sistema de gestão comercial: registra venda, caixa, despesa e estoque. Cálculo de imposto, apuração e declaração continuam com o seu contador.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Ele calcula o meu lucro automaticamente?</summary>
-            <div class="faq-answer"><p>O sistema reúne os dados que formam a conta: vendas registradas e custo dos produtos cadastrado. A precisão do resultado depende de esses dados estarem completos.</p></div>
+            <summary class="faq-question">Ele importa meu extrato bancário?</summary>
+            <div class="faq-answer"><p>Não. Não há integração com banco, importação de OFX nem conciliação bancária.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Consigo lançar despesas da loja?</summary>
-            <div class="faq-answer"><p>Confirme com o suporte o alcance do lançamento de despesas no seu plano antes de contratar.</p></div>
+            <summary class="faq-question">Concilia o que a maquininha me paga?</summary>
+            <div class="faq-answer"><p>Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência é manual.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Como o fiado aparece no financeiro?</summary>
-            <div class="faq-answer"><p>A venda fiada é registrada como valor a receber, o que evita contar como caixa um dinheiro que ainda não entrou.</p></div>
+            <summary class="faq-question">Dá para registrar as despesas da loja?</summary>
+            <div class="faq-answer"><p>Sim. A despesa lançada entra na conta do resultado. A partir do plano Loja, ela também pode ser lançada por mensagem ou áudio no WhatsApp.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Dá para fechar o caixa todo dia?</summary>
-            <div class="faq-answer"><p>Sim, e é a prática recomendada: a diferença aparece no mesmo dia, enquanto ainda dá para identificar a causa.</p></div>
+            <summary class="faq-question">Tem contas a pagar com vencimento?</summary>
+            <div class="faq-answer"><p>Não está confirmado. Se agenda de vencimentos é central na sua rotina, verifique com o suporte antes de contratar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Mostra fluxo de caixa projetado?</summary>
+            <div class="faq-answer"><p>Não. O sistema mostra o que já aconteceu — não faz previsão dos próximos meses.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Como sei quanto sobrou de verdade?</summary>
+            <div class="faq-answer"><p>Pela conta de vendas menos custo dos produtos menos despesas. Ela só fecha se o custo estiver cadastrado nos produtos, o que está disponível a partir do plano Loja.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Consigo separar o dinheiro da loja do meu?</summary>
+            <div class="faq-answer"><p>Sim, registrando retirada como sangria. É o que evita que a retirada do dono vire diferença inexplicada no fechamento.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Emite boleto?</summary>
+            <div class="faq-answer"><p>Não. A cobrança de fiado sai por link de Pix pelo WhatsApp, a partir do plano Loja.</p></div>
           </details>
           </div>
         </div>
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Feche o caixa por uma semana</h2>
+          <p>Registre as vendas, lance as despesas e feche o caixa todo dia por sete dias. No fim da semana você vê a diferença entre o que imaginava e o que aconteceu. Sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -279,9 +378,12 @@
       <section class="page-related">
         <h2>Continue por aqui</h2>
         <ul class="related-grid">
-          <li><a href="/guias/como-calcular-lucro-da-loja/"><strong>Como calcular lucro</strong><span>Faturamento não é lucro</span></a></li>
-          <li><a href="/guias/como-calcular-margem-de-lucro/"><strong>Como calcular margem</strong><span>Formação de preço</span></a></li>
-          <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>De onde vem o dado</span></a></li>
+          <li><a href="/guias/como-calcular-lucro-da-loja/"><strong>Como calcular o lucro</strong><span>A conta, passo a passo</span></a></li>
+          <li><a href="/guias/como-controlar-caixa-da-loja/"><strong>Como controlar o caixa</strong><span>Rotina de fechamento</span></a></li>
+          <li><a href="/solucoes/sistema-de-estoque/"><strong>Controle de estoque</strong><span>O custo que entra na conta</span></a></li>
+          <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>Onde a entrada é registrada</span></a></li>
+          <li><a href="/solucoes/bot-whatsapp/"><strong>Bot do WhatsApp</strong><span>Lançar despesa falando</span></a></li>
+          <li><a href="/guias/como-calcular-margem-de-lucro/"><strong>Como calcular a margem</strong><span>Margem contra giro</span></a></li>
         </ul>
       </section>
 

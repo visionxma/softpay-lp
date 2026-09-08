@@ -83,42 +83,74 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "NFC-e é o mesmo que cupom fiscal?",
+              "name": "O SoftPay emite NFC-e?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A NFC-e é o cupom fiscal eletrônico. Ela substituiu o cupom impresso por equipamento fiscal próprio na venda ao consumidor final."
+                "text": "A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação atual com o suporte antes de contratar contando com ela."
               }
             },
             {
               "@type": "Question",
-              "name": "Minha loja é obrigada a emitir NFC-e?",
+              "name": "Qual plano serve para emitir no balcão?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Depende do estado, do regime tributário e da atividade. Confirme com seu contador e com a SEFAZ do seu estado."
+                "text": "O ERP Completo, de R$ 109/mês, porque junta PDV e emissão. O plano Nota Fiscal, de R$ 65/mês, tem a emissão mas não tem PDV."
               }
             },
             {
               "@type": "Question",
-              "name": "Em qual plano está a NFC-e?",
+              "name": "Sou obrigado a emitir NFC-e?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nos planos Nota Fiscal (R$ 65/mês) e ERP Completo (R$ 109/mês)."
+                "text": "Depende do seu estado, da sua atividade e do seu regime. Quem responde isso é o seu contador — o sistema não faz essa avaliação."
               }
             },
             {
               "@type": "Question",
-              "name": "Precisa de impressora fiscal?",
+              "name": "Qual a diferença entre NFC-e e cupom fiscal antigo?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A NFC-e não exige o antigo equipamento emissor de cupom fiscal. Sobre impressão do DANFE e equipamentos, confirme os detalhes com o suporte."
+                "text": "A NFC-e é o documento eletrônico que substituiu o cupom da impressora fiscal. Ela é transmitida ao fisco e não depende do equipamento antigo."
               }
             },
             {
               "@type": "Question",
-              "name": "A emissão está funcionando hoje?",
+              "name": "Preciso de impressora fiscal?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Os planos descrevem a emissão como em ativação. Confirme a situação atual com o suporte antes de contratar."
+                "text": "A NFC-e não exige a impressora fiscal antiga. Sobre impressora térmica e gaveta, confirme a compatibilidade do seu equipamento com o suporte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Preciso de certificado digital?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O certificado não está incluso. Confirme com o suporte qual tipo é aceito e o que você precisa providenciar."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O sistema calcula os impostos do cupom?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. Ele emite com a configuração fiscal definida pelo seu contador. Apuração e guias continuam com ele."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Emite nota de serviço?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A NFS-e é municipal e fica fora do SoftPay."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A venda e o cupom podem ficar diferentes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não, porque a NFC-e é gerada a partir da venda registrada no PDV. É um registro só — o que passou no caixa é o que vai no documento."
               }
             }
           ]
@@ -179,7 +211,7 @@
 
         <header class="page-header">
           <h1 class="page-title">Emissão de NFC-e</h1>
-          <p class="page-intro">A NFC-e é o cupom fiscal eletrônico da venda ao consumidor final — o documento do balcão. No SoftPay ela vive junto do PDV, no plano ERP Completo.</p>
+          <p class="page-intro">A NFC-e é o cupom fiscal eletrônico da venda ao consumidor final — o documento do balcão. No SoftPay ela vive junto do PDV, nos planos Nota Fiscal e ERP Completo.</p>
         </header>
 
       <figure class="page-figure">
@@ -187,26 +219,80 @@
              fetchpriority="high" decoding="async" />
       </figure>
 
-      <section class="page-section" id="o-que-e-a-nfc-e">
-        <h2>O que é a NFC-e</h2>
-        <p>A NFC-e substituiu o antigo cupom fiscal impresso por equipamento próprio. É o documento emitido na venda ao consumidor final, no varejo, e sua exigência varia conforme o estado e o perfil da empresa.</p>
+      <section class="page-section" id="leia-isto-antes-de-contratar-por-causa-do-cupom">
+        <h2>Leia isto antes de contratar por causa do cupom</h2>
         <aside class="page-note">
-          <strong>Regras variam por estado</strong>
-          <p>Cada estado tem regras próprias de credenciamento e obrigatoriedade para NFC-e. Confirme com o seu contador e com a SEFAZ do seu estado antes de contratar.</p>
+          <strong>Recurso em ativação</strong>
+          <p>A emissão fiscal consta nos planos como <strong>recurso em ativação</strong>. Se o cupom é obrigatório na sua operação, <strong>confirme a situação atual com o suporte antes de contratar</strong> — a exigência varia por estado e por regime, e quem define isso é o seu contador.</p>
         </aside>
+        <p>Preferimos dizer isso na primeira linha a deixar você descobrir depois de assinar.</p>
       </section>
-      <section class="page-section" id="como-funciona-no-softpay">
-        <h2>Como funciona no SoftPay</h2>
-        <h3>Junto da venda</h3>
-        <p>No ERP Completo, a emissão convive com o PDV: a mesma venda que baixa o estoque e entra no caixa é a que gera o documento fiscal.</p>
-        <h3>Só a nota, se for o caso</h3>
-        <p>Se você não precisa de PDV e estoque, o plano Nota Fiscal (R$ 65/mês) permite emitir preenchendo um formulário.</p>
-        <h3>Cadastro fiscal e contador</h3>
-        <p>Os planos com emissão incluem cadastro fiscal e pacote do contador.</p>
-        <aside class="page-note">
-          <strong>Situação da emissão</strong>
-          <p>A emissão consta nos planos como recurso <strong>em ativação</strong>. Confirme a situação atual com o suporte antes de contratar contando com ela.</p>
-        </aside>
+      <section class="page-section" id="o-problema">
+        <h2>O problema</h2>
+        <p>A NFC-e substituiu o antigo cupom da impressora fiscal. Onde ela é exigida, cada venda ao consumidor final precisa gerar o documento no ato — e isso acontece no meio do movimento, com o cliente esperando.</p>
+        <p>Quando a emissão vive num programa separado do PDV, a loja passa a ter dois registros da mesma venda. Eles se desencontram, e a conferência do contador vira uma caça a diferenças.</p>
+      </section>
+      <section class="page-section" id="como-isso-aparece-na-sua-loja">
+        <h2>Como isso aparece na sua loja</h2>
+        <ul class="page-list">
+          <li><strong>A fila para na emissão.</strong> O cupom é gerado em outro programa, com os dados digitados de novo.</li>
+          <li><strong>Venda e cupom não batem.</strong> Um item passou no PDV e não entrou no documento.</li>
+          <li><strong>O fechamento fica em dúvida:</strong> qual dos dois números é o certo?</li>
+          <li><strong>O contador pede os arquivos</strong> e alguém precisa exportar de dois lugares.</li>
+          <li><strong>Você deixa de emitir no aperto</strong> — e o problema aparece depois.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="como-o-softpay-resolve">
+        <h2>Como o SoftPay resolve</h2>
+        <h3>O cupom sai da venda do PDV</h3>
+        <p>A NFC-e é gerada a partir da venda registrada no balcão. Um registro só: o que passou no PDV é o que vai no documento.</p>
+        <h3>Estoque, caixa e cupom juntos</h3>
+        <p>A mesma venda baixa o estoque, entra no caixa e gera o documento fiscal. Não há dois números para conciliar no fim do dia.</p>
+        <h3>Cadastro fiscal configurado uma vez</h3>
+        <p>Os dados da empresa ficam na conta, para a emissão não depender de preenchimento manual a cada venda.</p>
+        <h3>Pacote do contador</h3>
+        <p>Os arquivos ficam disponíveis para envio, em vez de virarem uma coleta manual no fim do mês.</p>
+      </section>
+      <section class="page-section" id="o-que-o-softpay-nao-faz-na-parte-fiscal">
+        <h2>O que o SoftPay não faz na parte fiscal</h2>
+        <ul class="page-list">
+          <li><strong>Não é contabilidade.</strong> Não apura imposto, não gera guia, não faz declaração.</li>
+          <li><strong>Não decide a sua tributação.</strong> CFOP, NCM, CST e regime são definição do contador; o sistema emite com o que estiver configurado.</li>
+          <li><strong>Não diz se você é obrigado a emitir.</strong> A exigência varia por estado, atividade e regime — quem responde isso é o seu contador.</li>
+          <li><strong>Não emite NFS-e</strong>, a nota de serviço, que é municipal.</li>
+          <li><strong>Certificado digital não está incluso.</strong> Confirme com o suporte qual tipo é aceito.</li>
+          <li><strong>Impressora térmica e gaveta não estão confirmadas.</strong> Descreva seu equipamento ao suporte antes de contratar.</li>
+        </ul>
+      </section>
+      <section class="page-section" id="nfc-e-ou-nf-e-qual-e-a-sua">
+        <h2>NFC-e ou NF-e: qual é a sua</h2>
+        <p>A confusão é comum e a diferença é simples:</p>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th></th><th>NFC-e</th><th>NF-e</th></tr></thead>
+            <tbody>
+            <tr><td>Para quem</td><td>Consumidor final, no balcão</td><td>Outra empresa (PJ) e operações que exigem documento completo</td></tr>
+            <tr><td>Onde acontece</td><td>Na venda do PDV</td><td>Na venda para revenda, atacado ou órgão público</td></tr>
+            <tr><td>Quem usa mais</td><td>Mercadinho, papelaria, farmácia, loja de roupas</td><td>Distribuidora, autopeças, materiais de construção</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Muita loja precisa das duas. Nesse caso o plano é o mesmo — veja a página de <a href="/solucoes/nfe/">NF-e</a>.</p>
+      </section>
+      <section class="page-section" id="em-qual-plano-esta">
+        <h2>Em qual plano está</h2>
+        <div class="table-wrap">
+          <table class="page-table">
+            <thead><tr><th>Plano</th><th>Preço</th><th>A emissão neste plano</th></tr></thead>
+            <tbody>
+            <tr><td>Nota Fiscal</td><td>R$ 65/mês</td><td>Emissão de NFC-e e NF-e, cadastro fiscal e pacote do contador. <strong>Sem PDV</strong> — para quem já tem outro sistema. Até 2 usuários</td></tr>
+            <tr><td>Comércio</td><td>R$ 69/mês</td><td><strong>Não emite cupom.</strong> PDV, caixa, fiado e estoque essencial</td></tr>
+            <tr><td>Loja</td><td>R$ 89/mês</td><td><strong>Não emite cupom.</strong> Estoque avançado, curva ABC, loja online e bot</td></tr>
+            <tr><td>ERP Completo</td><td>R$ 109/mês</td><td><strong>O plano de quem emite no balcão:</strong> PDV e NFC-e no mesmo sistema. Até 10 usuários</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Se você precisa emitir <em>no ato da venda</em>, o plano é o ERP Completo — o plano Nota Fiscal não tem PDV. Todos com 7 dias grátis, sem cartão. Veja os <a href="/#pricing">planos completos</a>.</p>
       </section>
 
       <section class="page-faq faq--split" id="perguntas">
@@ -216,32 +302,48 @@
           </div>
           <div class="faq-list">
           <details class="faq-item">
-            <summary class="faq-question">NFC-e é o mesmo que cupom fiscal?</summary>
-            <div class="faq-answer"><p>A NFC-e é o cupom fiscal eletrônico. Ela substituiu o cupom impresso por equipamento fiscal próprio na venda ao consumidor final.</p></div>
+            <summary class="faq-question">O SoftPay emite NFC-e?</summary>
+            <div class="faq-answer"><p>A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação atual com o suporte antes de contratar contando com ela.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Minha loja é obrigada a emitir NFC-e?</summary>
-            <div class="faq-answer"><p>Depende do estado, do regime tributário e da atividade. Confirme com seu contador e com a SEFAZ do seu estado.</p></div>
+            <summary class="faq-question">Qual plano serve para emitir no balcão?</summary>
+            <div class="faq-answer"><p>O ERP Completo, de R$ 109/mês, porque junta PDV e emissão. O plano Nota Fiscal, de R$ 65/mês, tem a emissão mas não tem PDV.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Em qual plano está a NFC-e?</summary>
-            <div class="faq-answer"><p>Nos planos Nota Fiscal (R$ 65/mês) e ERP Completo (R$ 109/mês).</p></div>
+            <summary class="faq-question">Sou obrigado a emitir NFC-e?</summary>
+            <div class="faq-answer"><p>Depende do seu estado, da sua atividade e do seu regime. Quem responde isso é o seu contador — o sistema não faz essa avaliação.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">Precisa de impressora fiscal?</summary>
-            <div class="faq-answer"><p>A NFC-e não exige o antigo equipamento emissor de cupom fiscal. Sobre impressão do DANFE e equipamentos, confirme os detalhes com o suporte.</p></div>
+            <summary class="faq-question">Qual a diferença entre NFC-e e cupom fiscal antigo?</summary>
+            <div class="faq-answer"><p>A NFC-e é o documento eletrônico que substituiu o cupom da impressora fiscal. Ela é transmitida ao fisco e não depende do equipamento antigo.</p></div>
           </details>
           <details class="faq-item">
-            <summary class="faq-question">A emissão está funcionando hoje?</summary>
-            <div class="faq-answer"><p>Os planos descrevem a emissão como em ativação. Confirme a situação atual com o suporte antes de contratar.</p></div>
+            <summary class="faq-question">Preciso de impressora fiscal?</summary>
+            <div class="faq-answer"><p>A NFC-e não exige a impressora fiscal antiga. Sobre impressora térmica e gaveta, confirme a compatibilidade do seu equipamento com o suporte.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Preciso de certificado digital?</summary>
+            <div class="faq-answer"><p>O certificado não está incluso. Confirme com o suporte qual tipo é aceito e o que você precisa providenciar.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">O sistema calcula os impostos do cupom?</summary>
+            <div class="faq-answer"><p>Não. Ele emite com a configuração fiscal definida pelo seu contador. Apuração e guias continuam com ele.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">Emite nota de serviço?</summary>
+            <div class="faq-answer"><p>Não. A NFS-e é municipal e fica fora do SoftPay.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary class="faq-question">A venda e o cupom podem ficar diferentes?</summary>
+            <div class="faq-answer"><p>Não, porque a NFC-e é gerada a partir da venda registrada no PDV. É um registro só — o que passou no caixa é o que vai no documento.</p></div>
           </details>
           </div>
         </div>
       </section>
 
         <aside class="page-cta">
-          <h2>Experimente o SoftPay por 7 dias</h2>
-          <p>Teste todos os recursos do plano sem cartão de crédito. Se não fizer sentido para a sua loja, é só não continuar.</p>
+          <h2>Confirme a emissão antes de assinar</h2>
+          <p>Fale com o suporte sobre a situação do cupom fiscal no seu estado, e use os 7 dias grátis para testar o PDV e o resto do sistema. Sem cartão.</p>
           <div class="page-cta-actions">
             <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
             <a href="https://wa.me/558698193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
@@ -252,9 +354,12 @@
       <section class="page-related">
         <h2>Continue por aqui</h2>
         <ul class="related-grid">
-          <li><a href="/solucoes/nfe/"><strong>NF-e</strong><span>Nota fiscal eletrônica</span></a></li>
+          <li><a href="/solucoes/nfe/"><strong>NF-e</strong><span>A nota entre empresas</span></a></li>
           <li><a href="/solucoes/sistema-pdv/"><strong>Sistema PDV</strong><span>A venda que gera o cupom</span></a></li>
-          <li><a href="/segmentos/papelaria/"><strong>Papelaria</strong><span>Cupom no varejo</span></a></li>
+          <li><a href="/segmentos/papelaria/"><strong>Papelaria</strong><span>Cupom no pico da temporada</span></a></li>
+          <li><a href="/segmentos/farmacia/"><strong>Farmácia</strong><span>Balcão e cupom</span></a></li>
+          <li><a href="/segmentos/mercadinho/"><strong>Mercadinho</strong><span>Venda ao consumidor final</span></a></li>
+          <li><a href="/#pricing"><strong>Preços</strong><span>O que tem em cada plano</span></a></li>
         </ul>
       </section>
 
