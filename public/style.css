@@ -1033,11 +1033,19 @@ section {
     padding: var(--spacing-3xl) 0 var(--spacing-lg);
 }
 
+/* Padrão do site.froxbr.com: bloco de marca à esquerda e as colunas de links
+   à direita, todas com a mesma largura. Antes era 1.5fr/1fr com 4 colunas
+   espremidas em 1fr — os títulos quebravam em duas linhas e as colunas
+   ficavam desalinhadas entre si. `minmax(0, …)` impede que um link longo
+   estoure a coluna. */
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: var(--spacing-3xl);
+    /* 1fr/2.6fr: a marca ocupa ~28% e as 4 colunas dividem o resto. Medido
+       antes com 2.15fr, sobrava um vão de ~120px abaixo do texto da marca. */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.6fr);
+    gap: clamp(1.75rem, 4vw, 3.5rem);
     margin-bottom: var(--spacing-2xl);
+    align-items: start;
 }
 
 .footer-brand {
@@ -1061,15 +1069,15 @@ section {
 
 .footer-links {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(1.25rem, 2.5vw, 2.25rem);
 }
 
 .footer-company {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 0.8125rem;
     line-height: 1.7;
-    margin-bottom: var(--spacing-md);
+    margin: 0;
 }
 
 .footer-company strong {
@@ -1077,10 +1085,24 @@ section {
     font-weight: 600;
 }
 
-.footer-column h4 {
-    font-size: 1.125rem;
+.footer-column h4,
+.footer-column .footer-heading {
+    font-size: .9375rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-md);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-bottom: .875rem;
+    white-space: nowrap; /* "Para o seu negócio" quebrava em duas linhas */
+}
+
+/* Segundo título dentro da mesma coluna (Legal, sob Contato) */
+.footer-column .footer-heading--sub {
+    margin-top: 1.75rem;
+}
+
+.footer-column ul + .footer-heading {
+    margin-top: 1.75rem;
 }
 
 .footer-column ul {
@@ -1101,10 +1123,21 @@ section {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding-top: var(--spacing-lg);
-    text-align: center;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.62);
+    font-size: .875rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem 1.5rem;
+}
+
+.footer-bottom p { margin: 0; }
+
+@media (max-width: 560px) {
+    .footer-bottom { justify-content: center; text-align: center; }
 }
 
 .footer-bottom p {
@@ -3280,6 +3313,18 @@ body {
     line-height: var(--leading-relaxed);
     color: var(--color-muted);
     max-width: 62ch;
+}
+
+/* A .cta-section tem fundo escuro (gradiente azul-marinho). A regra acima
+   pinta o subtítulo com --color-muted, que é cinza para fundo CLARO: medido,
+   o contraste caía para 1,82:1 contra a base do gradiente — muito abaixo dos
+   4,5:1 exigidos, e o texto ficava ilegível. Sobre fundo escuro o subtítulo
+   usa branco a 88%, que mede 10,9:1 na base e 14,0:1 no topo do gradiente. */
+.cta-section .cta-subtitle {
+    color: rgba(255, 255, 255, 0.88);
+    opacity: 1; /* a regra antiga somava opacity .95 e escurecia ainda mais */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-header .section-subtitle {
