@@ -6299,29 +6299,34 @@ section[id] {
     .price-grid > *:nth-child(6) { --i: 5; z-index: 6; }
 }
 
-/* --- CARROSSEL HORIZONTAL (mobile) ----------------------------------------
-   Grades de muitos cards pequenos não viram baralho — viram trilho. Empilhar
-   6 segmentos em coluna custa 745px de rolagem; em trilho horizontal custa
-   uma tela. `scroll-snap` faz cada card parar alinhado, que é o que dá a
-   sensação de folhear em vez de arrastar. */
-@media (max-width: 720px) {
+/* --- CARROSSEL HORIZONTAL -------------------------------------------------
+   Extraído do CSS real do safirion.com.br (captura do CodeMirror,
+   css/*.css). O padrão dele, medido no arquivo:
+
+     .kvc { flex: 0 0 85%; min-width: 85%; scroll-snap-align: center; }
+     @media (max-width:640px) {
+       .kvc-grid { display: flex !important; grid-template-columns: none;
+                   overflow-x: auto; scroll-snap-type: x mandatory;
+                   gap: 14px; padding: 2px 4px 10px; margin: 0 -4px;
+                   -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+     }
+
+   Três diferenças do que eu tinha feito antes por conta própria, e que
+   importam: o card ocupa 85% (não 78%), o snap é CENTER (não start, o que
+   deixa o card centralizado ao parar) e o corte é em 640px (não 720px). */
+@media (max-width: 640px) {
     .seg-grid,
     .card-grid,
     .stats-grid {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: 78%;      /* o próximo card aparece pela borda,
-                                        sinalizando que há mais para o lado */
+        display: flex !important;
         grid-template-columns: none;
-        gap: .875rem;
         overflow-x: auto;
-        overscroll-behavior-x: contain;
         scroll-snap-type: x mandatory;
-        scroll-padding-inline: 1rem;
-        padding-inline: 1rem;
-        margin-inline: -1rem;        /* sangra até a borda da tela */
-        padding-bottom: .75rem;
+        gap: 14px;
+        padding: 2px 4px 10px;
+        margin: 0 -4px;
         -webkit-overflow-scrolling: touch;
+        overscroll-behavior-x: contain;
         scrollbar-width: none;
     }
 
@@ -6330,14 +6335,48 @@ section[id] {
     .stats-grid::-webkit-scrollbar { display: none; }
 
     .seg-grid > *,
-    .card-grid > *,
-    .stats-grid > * {
-        scroll-snap-align: start;
-        min-width: 0;
+    .card-grid > * {
+        flex: 0 0 85%;
+        min-width: 85%;
+        scroll-snap-align: center;
     }
 
-    /* cards de estatística são curtos: cabem dois por tela */
-    .stats-grid { grid-auto-columns: 62%; }
+    /* cards de número são curtos: dois por tela, como o .kvp-plate do
+       Safirion, que usa 46% */
+    .stats-grid > * {
+        flex: 0 0 46%;
+        min-width: 46%;
+        scroll-snap-align: center;
+    }
+}
+
+/* --- PONTOS INDICADORES ---------------------------------------------------
+   Também do Safirion: ocultos por padrão, aparecem só no carrossel, e o
+   ponto ativo vira uma barrinha. Valores exatos do CSS dele —
+   7px de bolinha, 22px quando ativo, gap 7px, transição .3s. */
+.cm-dots { display: none; }
+
+@media (max-width: 640px) {
+    .cm-dots {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        margin-top: 18px;
+    }
+
+    .cm-dots span {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: rgba(15, 27, 45, .22);
+        transition: width .3s ease, background .3s ease;
+    }
+
+    .cm-dots span.on {
+        background: var(--brand-600, #1d7fd4);
+        width: 22px;
+        border-radius: 4px;
+    }
 }
 
 /* --- DESKTOP: foco por contraste, como o FroX faz acima de 1000px ---------- */
@@ -6373,4 +6412,35 @@ section[id] {
     .seg-grid,
     .card-grid,
     .stats-grid { scroll-behavior: auto; }
+}
+
+/* --- ESCALA TIPOGRÁFICA POR FAIXA ------------------------------------------
+   O mecanismo central da responsividade do safirion.com.br, extraído do CSS
+   real dele (captura do CodeMirror):
+
+     @media (min-width: 1200px) and (max-width: 1439.98px) { :root { font-size: 112.5% } }
+     @media (min-width: 810px)  and (max-width: 1199.98px) { :root { font-size: 112.5% } }
+     @media (max-width: 809.98px)                          { :root { font-size: 100%   } }
+
+   Ele escala a FONTE-RAIZ por faixa de largura, e tudo que usa `rem`
+   acompanha — tamanho de texto, espaçamento, raio de borda. É por isso que o
+   site inteiro parece proporcional em qualquer tela, em vez de ter dezenas de
+   ajustes soltos.
+
+   As mesmas faixas do Safirion, para o SoftPay herdar o comportamento.
+   O `--nav-h` não entra na conta porque é medida física da barra. */
+@media (min-width: 1440px) {
+    :root { font-size: 112.5%; }
+}
+
+@media (min-width: 1200px) and (max-width: 1439.98px) {
+    :root { font-size: 112.5%; }
+}
+
+@media (min-width: 810px) and (max-width: 1199.98px) {
+    :root { font-size: 112.5%; }
+}
+
+@media (max-width: 809.98px) {
+    :root { font-size: 100%; }
 }

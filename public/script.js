@@ -703,3 +703,80 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
         if (!varrendo) { varrendo = true; requestAnimationFrame(varrer); }
     }, { passive: true });
 })();
+
+/* ---------------------------------------------------------------------------
+   PONTOS INDICADORES DO CARROSSEL
+   O CSS veio do safirion.com.br (classe .kvc-dots): bolinha de 7px que vira
+   barra de 22px quando ativa. O HTML dele é gerado por script, então a lógica
+   abaixo é a implementação equivalente.
+
+   Os pontos são criados só quando o elemento REALMENTE rola na horizontal —
+   assim, se a tela for larga e a grade voltar a ser grade, eles somem.
+   --------------------------------------------------------------------------- */
+(function () {
+    var GRADES = '.seg-grid, .card-grid, .stats-grid';
+    var mq = window.matchMedia('(max-width: 640px)');
+
+    function montar(grade) {
+        if (grade.nextElementSibling && grade.nextElementSibling.classList.contains('cm-dots')) {
+            return grade.nextElementSibling;
+        }
+        var dots = document.createElement('div');
+        dots.className = 'cm-dots';
+        dots.setAttribute('aria-hidden', 'true'); // decorativo: a rolagem já é acessível
+        for (var i = 0; i < grade.children.length; i++) {
+            dots.appendChild(document.createElement('span'));
+        }
+        grade.parentNode.insertBefore(dots, grade.nextSibling);
+        return dots;
+    }
+
+    function ligar(grade) {
+        // só faz sentido se houver rolagem horizontal de verdade
+        if (grade.scrollWidth <= grade.clientWidth + 10) return;
+
+        var dots = montar(grade);
+        var spans = dots.children;
+
+        function marcar() {
+            var meio = grade.scrollLeft + grade.clientWidth / 2;
+            var atual = 0, menor = Infinity;
+            for (var i = 0; i < grade.children.length; i++) {
+                var c = grade.children[i];
+                var centro = c.offsetLeft + c.offsetWidth / 2;
+                var d = Math.abs(centro - meio);
+                if (d < menor) { menor = d; atual = i; }
+            }
+            for (var j = 0; j < spans.length; j++) {
+                spans[j].classList.toggle('on', j === atual);
+            }
+        }
+
+        var pendente = false;
+        grade.addEventListener('scroll', function () {
+            if (pendente) return;
+            pendente = true;
+            requestAnimationFrame(function () { pendente = false; marcar(); });
+        }, { passive: true });
+
+        marcar();
+    }
+
+    function aplicar() {
+        var grades = document.querySelectorAll(GRADES);
+        for (var i = 0; i < grades.length; i++) {
+            if (mq.matches) ligar(grades[i]);
+            else {
+                var d = grades[i].nextElementSibling;
+                if (d && d.classList.contains('cm-dots')) d.remove();
+            }
+        }
+    }
+
+    aplicar();
+    if (mq.addEventListener) mq.addEventListener('change', aplicar);
+    window.addEventListener('resize', function () {
+        clearTimeout(window.__cmDotsT);
+        window.__cmDotsT = setTimeout(aplicar, 200);
+    });
+})();
