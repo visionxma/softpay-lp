@@ -33,7 +33,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     crumbs = breadcrumbs or []
     # Imagem social: a da própria página quando existe. Compartilhar a mesma
     # foto genérica em 49 páginas desperdiça o espaço visual do link.
-    og_img = BASE + figura[0] if figura else BASE + "/assets/COmputador.webp?v=61ec1bd699"
+    og_img = BASE + figura[0] if figura else BASE + "/assets/COmputador.webp?v=d928fe14a3"
     og_alt = figura[1] if figura else "Painel do SoftPay aberto em um computador"
 
     # ---------- dados estruturados ----------
@@ -204,7 +204,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="/style.css?v=c5d1265da3" />
+    <link rel="stylesheet" href="/style.css?v=bf7227f167" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">

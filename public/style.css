@@ -4563,25 +4563,6 @@ body {
     /* Sem moldura: a imagem já traz o próprio enquadramento, e a borda
        arredondada com sombra virava um retângulo branco solto atrás dela. */
 }
-
-/* A arte foi endireitada (a tela olhava para a borda da página, não para quem
-   lê) e, ao perder a inclinação, ficou mais alta que larga. Presa a 100% da
-   coluna ela encolhia e o print do sistema voltava a ficar pequeno — que era
-   justamente o problema. Deixo a imagem transbordar a coluna para a direita,
-   até a borda da tela, como é comum em hero de produto: o monitor volta ao
-   tamanho de antes sem empurrar o texto. */
-@media (min-width: 993px) {
-    .hero-media {
-        /* a coluna continua com a mesma largura no grid; só a imagem sai dela */
-        margin-right: calc(-1 * clamp(1rem, 6vw, 7rem));
-    }
-
-    .hero-media img {
-        width: calc(100% + clamp(1rem, 6vw, 7rem));
-        max-width: none;
-    }
-}
-
 @media (max-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr;
