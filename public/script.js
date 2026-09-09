@@ -591,7 +591,13 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
 
         // desliga em coluna única, tela baixa ou quando o usuário pediu menos
         // movimento: nesses casos o CSS já resolve, alinhado ao topo.
-        if (window.innerWidth <= 860 || window.innerHeight <= 620 || menosMovimento.matches) {
+        //
+        // Também desliga a partir de 1100px, onde a lista passou a ter DUAS
+        // colunas: com a lista pela metade da altura, centralizar a copy abria
+        // um vazio de ~400px no topo da coluna esquerda enquanto as perguntas
+        // já tinham começado. Medido em 1440px na captura da seção.
+        if (window.innerWidth <= 860 || window.innerWidth >= 1100 ||
+            window.innerHeight <= 620 || menosMovimento.matches) {
             aside.style.setProperty('--faq-offset', '0px');
             return;
         }

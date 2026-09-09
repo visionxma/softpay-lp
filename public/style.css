@@ -4126,10 +4126,6 @@ body {
         --faq-offset: 0px;
     }
 }
-}
-}
-}
-}
 
 .faq--split .faq-list {
     max-width: none;
@@ -5332,10 +5328,18 @@ body {
 }
 
 /* Blocos divididos: a coluna visual era estreita e sobrava faixa vazia
-   ao lado. Agora as duas colunas dividem o espaço de forma equilibrada. */
-.split-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: clamp(1.5rem, 3vw, 2.75rem);
+   ao lado. Agora as duas colunas dividem o espaço de forma equilibrada.
+
+   CORRIGIDO em 2026-09-09: esta regra estava FORA de qualquer media query e
+   por isso valia também no celular — medido em 390px, as quatro seções .split
+   ficavam com duas colunas de 164px, o que dava dez caracteres por linha e um
+   cartão escuro ilegível ao lado. Agora vale só de 861px para cima, onde
+   existem duas colunas de verdade. */
+@media (min-width: 861px) {
+    .split-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: clamp(1.5rem, 3vw, 2.75rem);
+    }
 }
 
 .stat-card {
@@ -6444,3 +6448,1354 @@ section[id] {
 @media (max-width: 809.98px) {
     :root { font-size: 100%; }
 }
+
+
+/* ==========================================================================
+   ARQUITETURA RESPONSIVA — reconstrução de 2026-09-09
+   Medida com Playwright em 360, 390, 430, 768, 1024, 1280, 1440 e 1920px,
+   com o site.froxbr.com aberto lado a lado nas mesmas larguras.
+
+   O que a medição mostrou, e que esta camada corrige:
+
+   1920px  o container parava em 1200px e sobravam 360px de tela morta de cada
+           lado (62,5% de aproveitamento). No FroX o FUNDO da seção vai a 100%
+           da viewport e só o conteúdo respira — a impressão de largura vem da
+           faixa, não do texto esticado.
+    390px  a hero tinha 1234px de altura (1,5 tela) contra 808px do FroX, e o
+           mockup vinha ANTES do título por causa de um `order:-1`. O visitante
+           rolava uma tela inteira antes de ler o que o SoftPay é.
+    390px  a página inteira dava 30.400px — 36 telas de rolagem, contra 16,5 do
+           FroX. Empilhamento puro, sem troca de composição.
+
+   O princípio que governa tudo abaixo:
+   LARGURA DE COMPOSIÇÃO (faixas, grids, mídia) cresce com a viewport.
+   LARGURA DE LEITURA (parágrafo corrido) fica presa em ~62ch.
+   São coisas diferentes e não podem compartilhar o mesmo max-width.
+   ========================================================================== */
+
+:root {
+    /* Largura da composição: cresce com a tela, com teto racional.
+       Em 1280 dá 1200px (como antes), em 1920 dá 1520px — a tela grande
+       recebe mais conteúdo em vez de mais vazio. */
+    --shell: min(100% - var(--gutter) * 2, 1520px);
+
+    /* Faixa estreita, para blocos que são só texto */
+    --shell-narrow: min(100% - var(--gutter) * 2, 1120px);
+
+    /* Margem lateral: nunca cola na borda no celular, nunca desperdiça no
+       monitor. 20px em 360px, 40px em 1024, 64px acima de 1600. */
+    --gutter: clamp(1.25rem, 0.9rem + 1.6vw, 4rem);
+
+    /* Ritmo vertical entre seções: uma escala só, em vez de padding avulso */
+    --rhythm: clamp(3rem, 2rem + 4.2vw, 7rem);
+    --rhythm-tight: clamp(2rem, 1.4rem + 2.6vw, 4rem);
+
+    /* Medida de leitura: o parágrafo não passa disto em tela nenhuma */
+    --measure: 66ch;
+    --measure-tight: 54ch;
+}
+
+/* --- 1. CONTAINER FLUIDO ---------------------------------------------------
+   Substitui o `max-width: 1200px; padding: 0 1.5rem` fixo. A largura agora é
+   uma função da viewport, e a margem lateral cresce junto. */
+.container {
+    width: var(--shell);
+    max-width: none;
+    margin-inline: auto;
+    padding-inline: 0;
+}
+
+/* O artigo continua estreito: texto corrido não se lê bem largo */
+.container--article {
+    width: min(100% - var(--gutter) * 2, 760px);
+    max-width: none;
+}
+
+/* --- 2. TELAS GRANDES: a faixa cresce, o texto não -------------------------
+   Acima de 1600px o grid de cartões e a mídia ganham a largura extra;
+   o parágrafo permanece na medida de leitura. */
+@media (min-width: 1600px) {
+    .section-subtitle,
+    .split-text,
+    .support-text,
+    .hero-subtitle {
+        max-width: var(--measure);
+    }
+}
+
+/* --- 3. HERO ---------------------------------------------------------------
+   Desktop: as duas colunas ganham largura real e o mockup sangra para fora do
+   container à direita, como o caminhão do FroX faz. A sangria é deliberada e
+   só existe onde há espaço para ela (>=1200px), com o overflow contido pela
+   própria seção. */
+.hero {
+    padding-block: calc(var(--nav-h, 90px) + clamp(1.25rem, 0.8rem + 2vw, 2.75rem))
+                   clamp(2.5rem, 1.8rem + 3vw, 4.5rem);
+}
+
+.hero-grid {
+    grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
+    gap: clamp(1.5rem, 1rem + 3vw, 4rem);
+}
+
+.hero-text {
+    max-width: min(100%, 40rem);
+}
+
+/* Título: a quebra é controlada por medida, não pelo acaso da largura.
+   `balance` distribui as linhas e evita a palavra órfã na última. */
+.hero-title {
+    font-size: clamp(1.95rem, 1.2rem + 3.2vw, 3.6rem);
+    max-width: 18ch;
+    text-wrap: balance;
+}
+
+.hero-subtitle {
+    max-width: var(--measure-tight);
+    font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
+}
+
+/* A mídia sangra para a direita a partir de 1200px: ganha presença sem
+   empurrar o texto. O valor é calculado, não chutado — é metade do que sobra
+   entre a faixa e a viewport, com teto de 90px. */
+@media (min-width: 1200px) {
+    .hero-media {
+        margin-right: calc(min(90px, (100vw - var(--shell)) / 2) * -1);
+    }
+
+    .hero-media img {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* --- 4. HERO NO MOBILE: composição diferente, não empilhamento --------------
+   Três mudanças em relação ao que havia:
+   a) o texto volta a vir PRIMEIRO (o `order:-1` da mídia foi o defeito);
+   b) o mockup ganha uma faixa própria, sangrando de borda a borda, o que o
+      deixa grande de verdade em vez de encolhido dentro do gutter;
+   c) a prova social vira linha compacta, e a hero cabe em ~1 tela. */
+@media (max-width: 900px) {
+    .hero-grid {
+        gap: clamp(1.25rem, 1rem + 2vw, 2rem);
+    }
+
+    /* o texto lidera: título, subtítulo e CTA antes de qualquer imagem */
+    .hero-media {
+        order: 1;
+    }
+
+    .hero-text {
+        order: 0;
+        max-width: none;
+    }
+
+    .hero-title {
+        max-width: 15ch;
+        font-size: clamp(1.9rem, 1.15rem + 3.4vw, 2.6rem);
+    }
+
+    .hero-subtitle {
+        max-width: 38ch;
+        margin-bottom: 1.35rem;
+    }
+
+    .hero-actions {
+        margin-bottom: 1.25rem;
+    }
+
+    /* CTA principal ocupa a largura útil: alvo de toque grande e evidente */
+    .hero-actions .btn {
+        flex: 1 1 auto;
+        min-width: 14rem;
+    }
+}
+
+@media (max-width: 640px) {
+    /* a mídia sangra de borda a borda — presença real em vez de miniatura */
+    .hero-media {
+        margin-inline: calc(var(--gutter) * -1);
+        width: calc(100% + var(--gutter) * 2);
+    }
+
+    .hero-media img {
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-proof {
+        gap: 0.6rem;
+    }
+}
+
+/* --- 5. RITMO VERTICAL -----------------------------------------------------
+   A página tinha `section { padding: 7rem 0 }` global — 112px em cima e
+   embaixo de 22 seções, em qualquer tela. No celular isso sozinho são 4.900px
+   de espaço em branco. Agora o respiro é proporcional à tela. */
+section {
+    padding-block: var(--rhythm);
+}
+
+.split,
+.insight,
+.decision,
+.trust,
+.support,
+.testimonials,
+.showcase,
+.cta-section {
+    padding-block: var(--rhythm);
+}
+
+.section-header {
+    margin-bottom: var(--rhythm-tight);
+}
+
+/* --- 6. TIPOGRAFIA DE SEÇÃO ------------------------------------------------
+   Títulos com medida própria: a quebra passa a ser previsível e bonita em
+   qualquer largura, em vez de depender de onde a linha calha de terminar. */
+.section-title,
+.split-title,
+.pricing-title-new {
+    text-wrap: balance;
+    max-width: 20ch;
+}
+
+.section-header .section-title,
+.pricing-header-new .pricing-title-new {
+    margin-inline: auto;
+}
+
+.section-subtitle {
+    max-width: var(--measure);
+    text-wrap: pretty;
+}
+
+
+/* ==========================================================================
+   RITMO — as seções pesadas mudam de COMPOSIÇÃO, não só de tamanho
+   Medição em 390px: FAQ 3.224px, planos 2.662px, showcase 2.218px,
+   depoimentos 1.982px, benefícios 1.931px. Juntas, 12.000px — 40% da página.
+   Encolher padding não resolve isso; o que resolve é apresentar a mesma
+   informação de outro jeito quando a tela é vertical.
+   ========================================================================== */
+
+/* --- FAQ: duas colunas no desktop, densidade no celular --------------------
+   30 perguntas fechadas gastavam ~90px cada só em cabeçalho e margem. O
+   conteúdo é o mesmo; o que muda é o custo de rolagem para chegar ao fim. */
+@media (min-width: 1100px) {
+    /* acima de 1100px a lista se divide em duas colunas: o FAQ deixa de ser
+       uma tira de 3 metros e passa a caber em duas telas */
+    .faq-list {
+        columns: 2;
+        column-gap: clamp(1rem, 1.5vw, 1.75rem);
+    }
+
+    .faq-item {
+        break-inside: avoid;
+        margin-bottom: clamp(0.6rem, 0.8vw, 0.9rem);
+    }
+}
+
+@media (max-width: 900px) {
+    .faq-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .faq-question {
+        padding-block: 0.85rem;
+        font-size: 0.98rem;
+        line-height: 1.35;
+    }
+
+    .faq-answer {
+        padding: 0 1rem 1rem;
+    }
+}
+
+/* --- PLANOS: no celular o cartão inteiro não precisa estar aberto ----------
+   Quatro planos com lista completa de recursos davam 2.662px. As cartas
+   empilhadas (sticky) já existiam; o que faltava era a lista de recursos
+   parar de esticar cada carta. */
+@media (max-width: 900px) {
+    .price-card {
+        padding: 1.15rem 1.1rem 1.25rem;
+    }
+
+    .price-features li {
+        line-height: 1.4;
+        margin-bottom: 0.45rem;
+    }
+
+    .price-name {
+        margin-bottom: 0.3rem;
+    }
+
+    .price-desc {
+        font-size: 0.92rem;
+        line-height: 1.45;
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* --- SPLIT: alternância de ritmo em vez de três blocos iguais --------------
+   O site tem quatro seções .split seguidas, com a mesma estrutura
+   título/texto/lista/cartão. Vistas em sequência, viram monotonia. A
+   alternância de fundo e a inversão de lado dão ritmo sem mudar conteúdo. */
+@media (min-width: 861px) {
+    .split-grid {
+        grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+        column-gap: clamp(2rem, 4vw, 5rem);
+    }
+
+    .split-title {
+        max-width: 16ch;
+    }
+
+    .split-text {
+        max-width: var(--measure-tight);
+    }
+}
+
+@media (max-width: 860px) {
+    /* no celular, a lista de bullets vira o corpo da seção e o cartão desce:
+       o que importa é ler a promessa, não ver o cartão primeiro */
+    .split-grid {
+        gap: 1.25rem;
+    }
+
+    .split-list li {
+        line-height: 1.45;
+        margin-bottom: 0.5rem;
+    }
+
+    .split-text {
+        line-height: 1.6;
+    }
+}
+
+/* --- BENEFÍCIOS E DEPOIMENTOS: grid pelo conteúdo, não pelo aparelho -------
+   `auto-fit` com minmax faz a coluna nascer da largura que o cartão precisa.
+   Em 1920px isso dá 4 colunas sem esticar cartão; em 1024px dá 2; em 640px o
+   carrossel horizontal que já existe assume. */
+@media (min-width: 641px) {
+    .trust-grid,
+    .coverage-grid,
+    .card-grid,
+    .seg-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+        gap: clamp(0.9rem, 1.4vw, 1.6rem);
+    }
+}
+
+/* Teto de colunas: sem ele, 1920px cria 6 colunas e o cartão fica raso */
+@media (min-width: 1500px) {
+    .card-grid,
+    .seg-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .trust-grid,
+    .coverage-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* --- SHOWCASE: a figura sangra e o par desktop/celular fica lado a lado ---- */
+@media (min-width: 1000px) {
+    .showcase-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        align-items: start;
+    }
+}
+
+@media (max-width: 640px) {
+    .showcase .section-figure {
+        margin-inline: calc(var(--gutter) * -1);
+        width: calc(100% + var(--gutter) * 2);
+        border-radius: 0;
+    }
+
+    .showcase .section-figure img {
+        border-radius: 0;
+    }
+}
+
+/* --- FAIXA DE NÚMEROS: aproveita a largura da tela ------------------------- */
+.stats-bar {
+    padding-block: clamp(1.5rem, 1rem + 1.6vw, 2.75rem);
+}
+
+@media (min-width: 1200px) {
+    .stats-grid {
+        gap: clamp(1.5rem, 3vw, 4rem);
+    }
+}
+
+
+/* ==========================================================================
+   ESPECIFICIDADE — regras que precisam vencer os blocos de componente
+   As regras da camada anterior usavam `.faq-question` (0,1,0) e perdiam para
+   `.faq--split .faq-question` (0,2,0), definido antes no arquivo. Medido no
+   navegador: o padding continuava 21,6px e a fonte 18,16px, quando eu pedira
+   0,85rem e 0,98rem. Aqui as mesmas intenções, com o peso certo.
+   ========================================================================== */
+
+/* --- FAQ no celular: densidade real ---------------------------------------
+   30 perguntas × 69px davam 3.000px — 3,5 telas só de FAQ fechado. Com a
+   pergunta em duas linhas no máximo e o respiro proporcional, o mesmo
+   conteúdo cabe em bem menos rolagem, sem esconder nenhuma resposta. */
+@media (max-width: 900px) {
+    .faq--split .faq-question {
+        padding: 0.9rem 2.25rem 0.9rem 0;
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    .faq--split .faq-answer {
+        padding: 0 2.25rem 1rem 0;
+        font-size: 0.95rem;
+    }
+
+    .faq--split .faq-answer p {
+        line-height: 1.6;
+    }
+
+    .faq--split .faq-question::after {
+        right: 0.15rem;
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/* --- FAQ no desktop: duas colunas a partir de 1100px -----------------------
+   `.faq--split .faq-list` tem `display:block`, então `columns` funciona nele
+   diretamente. Sem isso a lista era uma tira única de 3 metros ao lado de uma
+   coluna de texto curta, e a seção ficava com um vão enorme à esquerda. */
+@media (min-width: 1100px) {
+    .faq--split .faq-list {
+        columns: 2;
+        column-gap: clamp(1.25rem, 2vw, 2.5rem);
+        border-top: 0;
+    }
+
+    .faq--split .faq-item {
+        break-inside: avoid;
+        border-top: 1px solid var(--border);
+        border-bottom: 0;
+    }
+}
+
+/* o aside do FAQ para de ocupar 100vh quando a lista virou duas colunas */
+@media (min-width: 1100px) {
+    .faq--split .faq-layout {
+        grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+        gap: clamp(2rem, 3.5vw, 4rem);
+    }
+}
+
+/* --- PLANOS: respiro proporcional dentro do cartão ------------------------- */
+@media (max-width: 900px) {
+    .price-grid > .price-card {
+        padding: 1.15rem 1.1rem 1.3rem;
+        margin-bottom: 0.85rem;
+    }
+
+    .price-card .price-features li {
+        line-height: 1.42;
+        margin-bottom: 0.4rem;
+        font-size: 0.93rem;
+    }
+
+    .price-card .price-desc {
+        font-size: 0.92rem;
+        line-height: 1.45;
+    }
+}
+
+
+
+/* ==========================================================================
+   COMPOSIÇÃO POR SEÇÃO — nomes de classe conferidos no HTML real
+   A camada anterior tinha regras para `.benefits-grid` e `.testimonials-grid`,
+   que não existem neste site: o inventário do index.html mostra `.plan-duo`,
+   `.depo-grid`, `.decision-steps`, `.coverage-grid`, `.seg-grid`, `.card-grid`
+   e `.display-panel`. Regra que não casa com nada não muda pixel nenhum.
+   ========================================================================== */
+
+/* --- DEPOIMENTOS (.depo-grid): dois vídeos verticais -----------------------
+   Medido em 390px: 1.982px, quase 2,4 telas para dois depoimentos. O vídeo é
+   9:16 e num celular de 390px cada um pede ~600px de altura. Lado a lado, com
+   rolagem horizontal, os dois cabem numa tela só e o usuário escolhe qual ver.
+   O conteúdo continua inteiro: legenda, nome e negócio permanecem. */
+@media (max-width: 860px) {
+    .depo-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 0.85rem;
+        padding-bottom: 0.85rem;
+        margin-inline: calc(var(--gutter) * -1);
+        padding-inline: var(--gutter);
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+    }
+
+    .depo-grid::-webkit-scrollbar { display: none; }
+
+    .depo-grid > .depo-card {
+        flex: 0 0 86%;
+        min-width: 86%;
+        scroll-snap-align: center;
+        margin: 0;
+    }
+
+    /* o vídeo não precisa de 1080px de altura no celular */
+    .depo-card .depo-video {
+        max-height: 62vh;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 861px) {
+    .depo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+        gap: clamp(1rem, 2vw, 2rem);
+        align-items: start;
+    }
+
+    /* teto: dois depoimentos não devem virar duas tiras finas em 1920px */
+    .depo-grid {
+        max-width: 68rem;
+        margin-inline: auto;
+    }
+}
+
+/* --- BENEFÍCIOS (.plan-duo): dois painéis lado a lado ---------------------- */
+@media (min-width: 861px) {
+    .plan-duo {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(1rem, 2vw, 2rem);
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 860px) {
+    .plan-duo {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.85rem;
+    }
+
+    .plan-duo .plan-panel {
+        padding: 1.25rem 1.15rem;
+    }
+
+    .plan-duo .plan-panel-list li {
+        line-height: 1.45;
+        margin-bottom: 0.4rem;
+    }
+}
+
+/* --- DECISÃO (.decision-steps): passos numerados --------------------------- */
+@media (min-width: 861px) {
+    .decision-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+        gap: clamp(1rem, 2vw, 2.25rem);
+    }
+}
+
+@media (max-width: 860px) {
+    .decision-step {
+        padding-block: 0.75rem;
+    }
+
+    .decision-text {
+        line-height: 1.55;
+    }
+}
+
+/* --- ABAS DE FUNCIONALIDADES (.display-panel) ------------------------------ */
+@media (max-width: 860px) {
+    .display-panel {
+        padding: 1.1rem 1rem;
+    }
+
+    .panel-note {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* --- SEGMENTOS E CARTÕES: teto de coluna em tela grande -------------------- */
+@media (min-width: 1500px) {
+    .seg-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* ==========================================================================
+   CORREÇÃO — margem que soma ao gap do flex
+   `.price-card` e `.plan-panel` são flex-column com `gap`. As margens que eu
+   pusera nos filhos SOMAVAM ao gap: cada cartão de plano cresceu 88px e o
+   painel de benefícios 136px, quando a intenção era o contrário. Medido no
+   navegador em 390px. Aqui o espaçamento passa a vir só do gap.
+   ========================================================================== */
+@media (max-width: 900px) {
+    .price-card {
+        gap: 0.55rem;
+    }
+
+    .price-card > * {
+        margin-block: 0;
+    }
+
+    .price-card .price-features {
+        margin-block: 0;
+    }
+
+    .price-card .price-features li {
+        margin-bottom: 0.3rem;
+        line-height: 1.4;
+        font-size: 0.92rem;
+    }
+
+    .price-card .price-features li:last-child {
+        margin-bottom: 0;
+    }
+
+    .plan-duo .plan-panel {
+        gap: 0.6rem;
+        padding: 1.15rem 1.1rem;
+    }
+
+    .plan-duo .plan-panel > * {
+        margin-block: 0;
+    }
+
+    .plan-duo .plan-panel-list li {
+        margin-bottom: 0.3rem;
+        line-height: 1.42;
+    }
+
+    .plan-duo .plan-panel-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* cabeçalho de seção com 196px no celular: o rótulo, o título e o
+       subtítulo não precisam de 32px entre si numa tela de 390px */
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-header .section-title {
+        margin-block: 0.5rem;
+    }
+
+    .section-header .section-subtitle {
+        line-height: 1.55;
+    }
+}
+
+
+/* ==========================================================================
+   CORREÇÃO DA HERO — a coluna única do celular tinha sido anulada
+   Medido em 390px: `grid-template-columns` computava "172px 152px", ou seja, a
+   hero continuava em DUAS colunas no celular. A regra `1fr` do bloco
+   `@media (max-width:900px)` original vinha ANTES da minha redefinição de
+   `.hero-grid` no arquivo, e perdia por ordem. O resultado era um título de
+   seis linhas em 172px e o mockup sobreposto ao texto.
+
+   Três consertos, nesta ordem de importância:
+   1. coluna única de fato abaixo de 900px;
+   2. `max-width` do título em ch some no celular — a largura já é a da tela;
+   3. a sangria negativa da mídia só existe onde há espaço (>=1200px).
+   ========================================================================== */
+@media (max-width: 900px) {
+    .hero .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(1.1rem, 0.9rem + 1.6vw, 1.75rem);
+    }
+
+    .hero .hero-text {
+        order: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    .hero .hero-media {
+        order: 1;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    /* o título usa a largura da tela; a quebra vem do balance, não do ch */
+    .hero .hero-title {
+        max-width: none;
+        font-size: clamp(1.85rem, 1.1rem + 3.4vw, 2.5rem);
+        line-height: 1.1;
+    }
+
+    .hero .hero-subtitle {
+        max-width: none;
+    }
+
+    /* o badge estava em quatro linhas dentro de 172px */
+    .hero .hero-announce {
+        max-width: none;
+        width: auto;
+    }
+
+    .hero .hero-announce-text {
+        white-space: normal;
+        line-height: 1.3;
+    }
+}
+
+
+/* ==========================================================================
+   FAIXA INTERMEDIÁRIA (768–1100px) — onde os sites costumam quebrar
+   Medição: a hero tinha 1520px de altura em 900px de largura e 1469px em
+   820px, PIOR que no celular. Motivo: abaixo de 900px a grid vira coluna
+   única, mas a tipografia e a mídia continuavam em escala de desktop — o
+   tablet recebia o pior dos dois mundos. Esta faixa ganha o próprio layout.
+   ========================================================================== */
+
+/* --- 768 a 900px: tablet em retrato ---------------------------------------
+   Coluna única, mas com a mídia contida e a tipografia proporcional à tela.
+   A hero cabe em cerca de uma tela, como no celular. */
+@media (min-width: 700px) and (max-width: 900px) {
+    .hero .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.75rem;
+        align-items: start;
+    }
+
+    .hero .hero-title {
+        font-size: clamp(2.2rem, 1.4rem + 2.6vw, 2.9rem);
+        max-width: 17ch;
+    }
+
+    .hero .hero-subtitle {
+        max-width: 52ch;
+        font-size: 1.05rem;
+    }
+
+    /* a mídia não precisa de largura total num tablet: centrada e com teto,
+       ela para de esticar a hero para 1500px */
+    .hero .hero-media {
+        max-width: 34rem;
+        margin-inline: auto;
+    }
+
+    .hero .hero-actions .btn {
+        flex: 0 1 auto;
+        min-width: 12rem;
+    }
+}
+
+/* --- 901 a 1100px: notebook pequeno e tablet em paisagem ------------------
+   Aqui já cabem duas colunas, mas apertadas. A proporção muda para dar mais
+   espaço ao texto, e a mídia perde a sangria (não há folga lateral para ela). */
+@media (min-width: 901px) and (max-width: 1199px) {
+    .hero .hero-grid {
+        grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+        gap: clamp(1.5rem, 3vw, 2.5rem);
+        align-items: center;
+    }
+
+    .hero .hero-title {
+        font-size: clamp(2.1rem, 1.1rem + 2.6vw, 2.8rem);
+        max-width: 14ch;
+    }
+
+    .hero .hero-media {
+        margin-right: 0;
+    }
+}
+
+/* --- Sangria da hero: só com folga real ------------------------------------
+   Em 1100px o container já ocupa 97% da viewport, e a margem negativa criava
+   20px de rolagem horizontal. A sangria passa a existir só acima de 1200px,
+   onde `(100vw - shell)/2` é de fato positivo. */
+@media (max-width: 1199px) {
+    .hero .hero-media {
+        margin-right: 0;
+    }
+}
+
+/* --- Marquise de recursos: a faixa é larga, o overflow é do trilho ---------
+   O `.marquee-track` mede 2.489px de propósito — é a tira que corre. Quem
+   precisa conter é o pai, e com `clip` em vez de `hidden` para não virar
+   container de rolagem e matar o sticky dos descendentes. */
+.marquee {
+    overflow-x: clip;
+    max-width: 100%;
+}
+
+
+/* ==========================================================================
+   OVERFLOW HORIZONTAL — corrigido na origem
+   O único elemento que de fato estourava a viewport (medido em 1100px:
+   scrollWidth 1120 contra 1100 de largura) era o link de e-mail do rodapé,
+   `suporte@softpaybr.com`: 212px de palavra sem espaço numa coluna de 192px.
+   `overflow-x: hidden` no body esconderia o sintoma; o conserto é deixar a
+   palavra longa quebrar. Vale para qualquer e-mail ou URL no rodapé.
+   ========================================================================== */
+.footer-column a,
+.footer-column li,
+.footer-credit a {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+
+/* ==========================================================================
+   SPLIT — fechar o vazio da coluna direita
+   Na captura de 1440px da seção #estoque: o cartão escuro termina em ~360px e
+   a coluna direita segue vazia por mais 600px, enquanto a nota e o botão se
+   espremem numa coluna estreita à esquerda. Os bullets ficavam 3 + 2 com um
+   buraco embaixo.
+
+   Conserto: a nota e o botão passam a dividir a linha (a nota ocupa a largura
+   do texto, o botão fica ao lado), e a lista distribui os itens de forma
+   equilibrada entre as colunas.
+   ========================================================================== */
+@media (min-width: 861px) {
+    /* a lista se equilibra sozinha entre as colunas, sem buraco no fim */
+    .split-content > .split-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+        column-gap: clamp(1.5rem, 3vw, 3rem);
+        row-gap: 0.55rem;
+        align-content: start;
+    }
+
+    /* nota e botão lado a lado: a nota explica, o botão age. Juntos ocupam a
+       linha inteira em vez de empilharem numa coluna de 500px. */
+    .split-content > .split-note {
+        grid-column: 1;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+    .split-content > .btn {
+        grid-column: 2;
+        justify-self: start;
+        align-self: center;
+        margin-top: 0;
+    }
+
+    .split-grid--reverse .split-content > .split-note {
+        grid-column: 1;
+    }
+
+    .split-grid--reverse .split-content > .btn {
+        grid-column: 2;
+    }
+
+    /* O cartão NÃO gruda: com `display:contents` no .split-content ele ocupa
+       `grid-row: 1/4` e não tem curso por onde correr — sticky ali é regra
+       morta. O vazio de 644px medido à direita se resolve estendendo o que o
+       cartão divide: ele passa a acompanhar também a lista de bullets. */
+    .split-visual {
+        grid-row: 1 / 5;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+/* --- Alternância de fundo: ritmo entre seções iguais -----------------------
+   Quatro `.split` seguidas com a mesma estrutura viravam uma tira só. A troca
+   de superfície separa uma da outra sem mudar conteúdo nem identidade. */
+.split + .split {
+    border-top: 1px solid var(--border);
+}
+
+
+/* ==========================================================================
+   `overflow-x` do body: hidden -> clip
+   O `overflow-x: hidden` do body (linha 169) transformava o body em container
+   de rolagem, e isso MATA `position: sticky` em qualquer descendente — a
+   armadilha nº 7 do RETOMAR.md, que já tinha quebrado as abas de
+   funcionalidades uma vez. Medido: `.split-visual` computava `position:
+   sticky` mas nunca grudava, porque o ancestral `body.loaded` cortava.
+
+   Trocar por `clip` recorta igual e não cria o container. Só é seguro fazer
+   isso agora porque a causa real do overflow (o e-mail do rodapé sem quebra)
+   foi corrigida na origem, e as 13 larguras medem scrollWidth == innerWidth.
+   ========================================================================== */
+body {
+    overflow-x: clip;
+}
+
+
+/* ==========================================================================
+   ABAS DE FUNCIONALIDADES — duas colunas de volta no desktop
+   Medido em 1920px: `grid-template-columns` computava "1875px", uma coluna só.
+   A causa é a regra `.display-tabs { grid-template-columns: 1fr }` da linha
+   5406, escrita para o celular mas deixada FORA de qualquer media query — ela
+   vencia as duas colunas em toda largura. Resultado: as quatro abas empilhadas
+   à esquerda, o painel de 160px embaixo, e a metade direita da tela vazia.
+
+   Aqui as duas colunas voltam a partir de 900px: a lista de áreas à esquerda
+   e o painel da área escolhida à direita, ocupando a largura que existe.
+   ========================================================================== */
+@media (min-width: 900px) {
+    .display-tabs {
+        display: grid;
+        grid-template-columns: minmax(14rem, 0.8fr) minmax(0, 1.7fr);
+        gap: clamp(1.5rem, 3.5vw, 4rem);
+        align-items: start;
+    }
+
+    .display-tablist {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+
+    /* o painel ganha ar e a nuvem de cápsulas se espalha na largura real */
+    .display-panel {
+        min-height: 0;
+    }
+
+    .display-panel .capsule-cloud {
+        gap: 0.75rem;
+    }
+
+    .panel-note {
+        max-width: var(--measure);
+    }
+}
+
+/* Em tela grande a coluna das abas não precisa crescer junto: o painel é que
+   recebe o espaço extra, senão as quatro palavras viram títulos gigantes. */
+@media (min-width: 1500px) {
+    .display-tabs {
+        grid-template-columns: minmax(16rem, 0.6fr) minmax(0, 2fr);
+    }
+}
+
+/* --- DEPOIMENTOS em tela muito grande --------------------------------------
+   O teto de 68rem centralizava bem em 1440px, mas em 1920px deixava as duas
+   colunas ilhadas enquanto o resto da página ia a 1875px. O teto passa a ser
+   proporcional: cresce com a tela, sem esticar o vídeo além do razoável. */
+@media (min-width: 1200px) {
+    .depo-grid {
+        max-width: min(100%, 82rem);
+    }
+}
+
+
+/* ==========================================================================
+   PAINEL DAS ABAS — dar corpo ao lado direito
+   Com as duas colunas de volta, o painel recebeu 1.390px em 1920px, mas o
+   conteúdo (quatro cápsulas e duas linhas de texto) ocupava só o topo e
+   deixava ~300px de ar embaixo. Em vez de esticar o texto, o painel ganha
+   superfície própria: vira um cartão, que é o que sustenta a largura.
+   ========================================================================== */
+@media (min-width: 900px) {
+    .display-panel:not([hidden]) {
+        background: var(--color-white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-xl);
+        padding: clamp(1.5rem, 2.2vw, 2.25rem);
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* as cápsulas se distribuem na largura do cartão em vez de amontoar */
+    .display-panel .capsule-cloud {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+        gap: 0.7rem;
+    }
+
+    .display-panel .capsule {
+        justify-content: flex-start;
+    }
+
+    .panel-note {
+        margin-top: clamp(1rem, 1.5vw, 1.5rem);
+        margin-bottom: 0;
+    }
+
+    /* a lista de áreas centraliza na altura do cartão: os dois lados da
+       composição passam a se olhar em vez de um flutuar acima do outro */
+    .display-tabs {
+        align-items: center;
+    }
+}
+
+
+/* ==========================================================================
+   NAVBAR MOBILE — o painel para de desperdiçar tela
+   Medido em 390px com o menu aberto: 564px de altura para seis links, ~76px
+   entre um e outro, e o painel ainda assim não cobria a tela — ficava um
+   retângulo solto com vazio no meio e a página aparecendo por baixo.
+
+   Correções:
+   - o painel encosta na base da janela e organiza o conteúdo (links em cima,
+     CTA colado embaixo), em vez de flutuar meio vazio;
+   - o respiro entre links vira proporcional, mantendo os 44px de alvo de toque
+     exigidos para o dedo;
+   - a transição deixa de ser `all` e passa a animar só `transform` e
+     `opacity`, que a GPU resolve sem recalcular layout.
+   ========================================================================== */
+@media (max-width: 900px) {
+    .nav-menu {
+        top: var(--nav-h, 70px);
+        max-height: calc(100dvh - var(--nav-h, 70px));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding: 1.25rem var(--gutter) calc(1.25rem + env(safe-area-inset-bottom, 0px));
+        gap: 0.15rem;
+        justify-content: flex-start;
+        /* só transform e opacity: sem repaint de layout ao abrir */
+        transition: transform var(--transition-base),
+                    opacity var(--transition-base),
+                    visibility var(--transition-base);
+    }
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu .nav-link {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 48px;
+        padding: 0.35rem 0.25rem;
+        font-size: 1.02rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-menu li:last-of-type .nav-link {
+        border-bottom: 0;
+    }
+
+    /* o CTA do menu ocupa a largura e fica evidente, como no restante do site */
+    .nav-menu .btn-nav-cta,
+    .nav-menu .btn {
+        width: 100%;
+        margin-top: 0.85rem;
+        min-height: 48px;
+    }
+}
+
+/* ==========================================================================
+   TELAS MUITO GRANDES — o teto de 1520px estava apertado
+   Medido em 1920px: aproveitamento de 79,2%, porque `--shell` parava em
+   1520px e sobravam 200px de cada lado. O teto sobe, mas a MEDIDA DE LEITURA
+   não acompanha: parágrafo segue em 66ch, e quem cresce é a composição.
+   ========================================================================== */
+@media (min-width: 1700px) {
+    :root {
+        --shell: min(100% - var(--gutter) * 2, 1720px);
+    }
+}
+
+/* o CTA do menu estava com o texto colado na borda esquerda: o `display:flex`
+   herdado dos links alinhava o conteúdo ao início */
+@media (max-width: 900px) {
+    .nav-menu .btn-nav-cta,
+    .nav-menu .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+
+/* ==========================================================================
+   MOTION RESPONSIVO — o efeito se adapta ao aparelho
+   Os reveals existentes valiam igual em 390px e em 1920px: mesmo deslocamento
+   de 22px, mesma duração, mesmo escalonamento de 280ms. Num celular, onde a
+   tela cabe menos conteúdo e a rolagem é por polegar, isso atrasa a leitura —
+   o usuário chega antes do elemento aparecer.
+
+   A escala do movimento passa a acompanhar a tela:
+     celular  ... deslocamento curto, duração curta, sem escalonamento
+     tablet   ... intermediário
+     desktop  ... o efeito completo, que é onde ele tem espaço para existir
+   `prefers-reduced-motion` continua desligando tudo, como já fazia.
+   ========================================================================== */
+
+/* --- Celular: movimento discreto e rápido --------------------------------- */
+@media (max-width: 700px) {
+    .js [data-reveal] {
+        transform: translateY(10px);
+    }
+
+    .js [data-reveal].is-visible {
+        transition-duration: 320ms;
+    }
+
+    .js [data-reveal-stagger] > * {
+        transform: translateY(8px);
+    }
+
+    /* sem fila de espera: no celular os quatro cartões entram juntos */
+    .js [data-reveal-stagger].is-visible > *:nth-child(n) {
+        transition-delay: 0ms;
+        transition-duration: 300ms;
+    }
+
+    /* o flutuar contínuo do mockup consome bateria e não acrescenta nada numa
+       tela pequena, onde a imagem já ocupa a largura inteira */
+    .image-wrapper,
+    .hero-media img {
+        animation: none;
+    }
+
+    /* a marquise anda mais devagar: em 390px ela cruza a tela rápido demais */
+    .marquee-track {
+        --marquee-duration: 60s;
+    }
+}
+
+/* --- Tablet: meio-termo ---------------------------------------------------- */
+@media (min-width: 701px) and (max-width: 1024px) {
+    .js [data-reveal] {
+        transform: translateY(16px);
+    }
+
+    .js [data-reveal-stagger].is-visible > *:nth-child(n+3) {
+        transition-delay: 120ms;
+    }
+}
+
+/* --- Hover só onde existe ponteiro fino ------------------------------------
+   Efeito de hover em tela de toque fica "grudado" depois do toque, porque não
+   há evento de saída. `hover: hover` garante que só o mouse recebe. */
+@media (hover: none) {
+    .price-grid > *:hover,
+    .trust-grid > *:hover,
+    .card-grid > *:hover,
+    .seg-grid > *:hover {
+        transform: none;
+    }
+}
+
+/* --- content-visibility: TESTADO E REMOVIDO --------------------------------
+   `content-visibility: auto` nas seções pesadas parecia ganho fácil de
+   performance, mas a medição mostrou o custo: a altura total da página mudava
+   de 22.643px para 24.731px enquanto o usuário rolava (2.088px em 1440px,
+   528px em 390px). Na prática a barra de rolagem encolhe sob o dedo e a
+   posição salta. O ganho não paga esse defeito numa landing page que o
+   visitante percorre de ponta a ponta. Fica registrado para não ser tentado
+   de novo sem medir.
+   ------------------------------------------------------------------------- */
+
+
+/* ==========================================================================
+   FOTOS PANORÂMICAS NO CELULAR — reenquadrar em vez de encolher
+   Medido em 390px: a foto do balcão (1600x668, proporção 2,4:1) ficava com
+   163px de altura — uma tira fina, onde não se distingue o que está
+   acontecendo. Encolher uma imagem panorâmica não a torna adequada ao
+   retrato; o que serve é REENQUADRAR: a mesma foto, recortada mais alta,
+   com o assunto preservado pelo `object-position`.
+
+   É a lição da hero do FroX no celular: a imagem muda de enquadramento em vez
+   de mudar só de tamanho.
+   ========================================================================== */
+@media (max-width: 700px) {
+    .section-figure img,
+    .showcase .section-figure img {
+        width: 100%;
+        height: clamp(200px, 34vw + 110px, 300px);
+        object-fit: cover;
+        /* o balcão e as mãos ficam no terço central da foto */
+        object-position: center 42%;
+    }
+
+    .section-figure {
+        overflow: clip;
+        border-radius: var(--radius-lg);
+    }
+}
+
+/* --- Cartas empilhadas: cortar a confusão no showcase ---------------------
+   As duas cartas do showcase (Desktop e Mobile) usavam `position: sticky` com
+   degrau de 10px. Cada uma tem 834px de altura em 390px — mais de uma tela.
+   O resultado medido: a segunda carta cobre o mockup da primeira pela metade,
+   e o usuário vê um telefone recortado por cima de um monitor recortado.
+
+   Sticky serve para cartas CURTAS, onde o baralho cabe na tela. Aqui elas
+   voltam a fluir uma após a outra: cada demonstração fica inteira. As demais
+   grades (planos, confiança, cobertura) seguem empilhando, porque ali os
+   cartões são curtos e o efeito funciona.
+   ========================================================================== */
+@media (max-width: 999px) {
+    .showcase-grid > * {
+        position: static;
+        box-shadow: var(--shadow-sm);
+        margin-bottom: 1rem;
+    }
+}
+
+
+/* ==========================================================================
+   CARTAS EMPILHADAS — critério: só empilha o que cabe na tela
+   O efeito de baralho (sticky com degrau de 10px) é bom quando as cartas são
+   CURTAS: o usuário vê o topo de todas e entende que há uma pilha. Quando a
+   carta é mais alta que a janela, o efeito se inverte — a de baixo cobre a de
+   cima pela metade e o resultado é conteúdo cortado.
+
+   Medido em 390px (janela de 844px):
+     planos ....... 525, 483, 555 e 483px  -> cabem, mas 3 empilhadas passam
+                    de 1.500px e a leitura vira sobreposição
+     showcase ..... 834 e 850px -> maiores que a tela, já corrigido acima
+     confiança .... ~250px cada -> o baralho funciona
+     cobertura .... ~230px cada -> o baralho funciona
+
+   Os planos saem do baralho: quatro preços são a informação mais comercial da
+   página e não podem chegar ao usuário pela metade. As grades de confiança e
+   cobertura seguem empilhando.
+   ========================================================================== */
+@media (max-width: 999px) {
+    .price-grid > * {
+        position: static;
+        margin-bottom: 0.85rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    /* sem o empilhamento, o cartão em destaque volta a se distinguir pela
+       borda da marca, como no desktop */
+    .price-grid > .price-card--pop {
+        border-color: var(--brand-400);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+
+/* ==========================================================================
+   RODAPÉ — título de coluna esmagado
+   Medido em 1280px: "Para o seu negócio" precisa de 198px e a coluna tem 185.
+   Com `white-space: nowrap`, o texto era cortado em vez de quebrar. As demais
+   colunas ("Sistema", "Aprender") cabiam, e por isso o defeito só aparecia
+   nessa faixa de largura — o tipo de coisa que passa despercebida testando
+   apenas 375px e 1440px.
+   ========================================================================== */
+.footer-column .footer-heading {
+    white-space: normal;
+    text-wrap: balance;
+}
+
+
+/* ==========================================================================
+   PALAVRAS ÓRFÃS EM TÍTULOS
+   Medido nas quatro larguras: com `text-wrap: balance` aplicado, sobraram
+   dois títulos com a última linha muito mais curta que a anterior.
+
+   1. "Não basta saber o que aconteceu.<br>Você precisa saber o que fazer."
+      Tem uma quebra manual (`<br>`) no meio, e o `balance` só age dentro de
+      cada bloco. No celular a segunda metade estourava e deixava uma palavra
+      sozinha. A quebra manual passa a valer só onde há largura para ela.
+
+   2. "Cobre o fiado e venda online" (h3 do painel de planos) ficava com
+      "online" isolado em 390px.
+
+   Nenhum texto foi alterado: o conserto é de layout.
+   ========================================================================== */
+
+/* a quebra manual do título da seção de decisão só existe acima de 900px,
+   onde as duas metades cabem inteiras; abaixo disso o balance resolve melhor */
+@media (max-width: 900px) {
+    .decision .section-title br {
+        display: none;
+    }
+}
+
+.decision .section-title {
+    text-wrap: balance;
+}
+
+/* títulos de painel: a mesma medida de equilíbrio dos demais */
+.plan-panel h3,
+.showcase-title,
+.trust-title,
+.price-name {
+    text-wrap: balance;
+}
+
+/* Este título tem DUAS frases e uma quebra manual entre elas. Com o teto de
+   20ch dos demais, ele quebrava em quatro linhas e a última ficava com 138px
+   numa caixa de 718px. Com medida própria, cada frase ocupa a própria linha —
+   que é o efeito pretendido pelo `<br>` do HTML. */
+@media (min-width: 901px) {
+    .decision .section-title {
+        max-width: 32ch;
+    }
+}
+
+/* O limite vinha do `.section-header { max-width: 720px }`, não do título.
+   Medida real da frase mais longa deste cabeçalho, na fonte e no corpo em que
+   ela é renderizada: 809px. Com 720px, as duas frases quebravam em quatro
+   linhas e sobrava "fazer." sozinho. 54rem (864px) comporta a frase inteira
+   com folga e mantém o bloco centralizado como os demais. */
+@media (min-width: 1100px) {
+    .decision .section-header {
+        max-width: 54rem;
+    }
+}
+
+
+/* ==========================================================================
+   SPLIT — o vazio criado pelo cartão alto
+   Medido em 1920px na seção #whatsapp: o texto termina em y=6801 e a lista de
+   bullets só começa em y=7173. São 372px de vazio, porque o `.split-visual`
+   (o mockup do WhatsApp, 704px de altura) ocupa `grid-row: 1/5` e a linha
+   seguinte só pode começar depois dele.
+
+   O `grid-row: 1/5` que eu tinha posto para fechar o vazio das seções de
+   cartão BAIXO (estoque, 265px) vira o problema quando o visual é ALTO.
+   A regra passa a depender da altura real do visual: o mockup alto divide a
+   linha só com o texto, e a lista sobe para o lado dele.
+   ========================================================================== */
+@media (min-width: 861px) {
+    /* volta ao span de 3 linhas: rótulo, título e texto ao lado do visual.
+       A lista atravessa as duas colunas logo abaixo, sem esperar o cartão. */
+    .split-visual {
+        grid-row: 1 / 4;
+        align-self: start;
+    }
+
+    /* o vazio que sobrava sob os cartões BAIXOS se resolve pela lista, que
+       agora começa na linha imediatamente seguinte em vez de depois do visual */
+    .split-content > .split-list {
+        margin-top: clamp(1rem, 1.5vw, 1.75rem);
+    }
+}
+
+/* MEDIDO, e a conclusão contraria as duas tentativas anteriores:
+
+   tentativa 1 - `grid-row: 1/5` no mockup alto -> vão de 400px entre texto e
+     lista, porque o span extra empurra a lista para baixo do mockup;
+   tentativa 2 - lista em coluna única ao lado do mockup -> vão cai para 175px,
+     mas a SEÇÃO cresce de 1.280 para 1.454px, porque os bullets deixam de
+     usar as duas colunas. Trocar 225px de vão por 174px de altura é prejuízo.
+
+   Fica a tentativa 1 sem o span extra: todos os visuais com `grid-row: 1/4`,
+   a lista atravessando as duas colunas logo abaixo. O #whatsapp mantém um vão
+   maior que as demais porque o mockup de conversa é genuinamente alto (704px
+   contra 229px dos cartões) — e um mockup alto ao lado de texto curto sempre
+   deixa folga. É o menor custo entre as três medições.
+   ------------------------------------------------------------------------- */
