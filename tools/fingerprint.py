@@ -21,7 +21,20 @@ RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 ARQUIVOS = ["style.css", "script.js"]
 
 # Imagens grandes e servidas com cache imutável. Caminho relativo a public/.
-IMAGENS = ["assets/COmputador.webp"]
+IMAGENS = [
+    "assets/COmputador.webp",
+    # Redimensionadas em 2026-09-09 (4,8 MB -> 86 KB nos avatares; celular.webp
+    # 1,5 MB -> 55 KB). Sem o hash aqui, quem ja visitou o site continuaria
+    # baixando os arquivos antigos por ate um ano, e a otimizacao nao chegaria
+    # a ninguem — o mesmo caso da COmputador.webp descrito acima.
+    "assets/logo.png",
+    "assets/celular.webp",
+    "assets/+100/logo_boutique.png",
+    "assets/+100/logo_cosmeticos.png",
+    "assets/+100/logo_minimercado.png",
+    "assets/+100/logo_padaria.png",
+    "assets/+100/logo_oficina.png",
+]
 
 
 def hash_de(caminho):

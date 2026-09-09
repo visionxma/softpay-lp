@@ -9512,3 +9512,48 @@ body {
     from { opacity: 0; transform: translateY(6px); }
     to   { opacity: 1; transform: none; }
 }
+
+/* =====================================================================
+   ACESSIBILIDADE — área de toque dos links de texto
+   =====================================================================
+   Links dentro de parágrafo herdam a altura da linha (16–18px), muito
+   abaixo dos 44px que o dedo precisa. A correção NÃO pode engordar a
+   linha: isso empurraria o layout inteiro. Então a área tocável cresce
+   por pseudo-elemento, que não ocupa espaço no fluxo.
+
+   As folgas são assimétricas de propósito, medidas em 390px:
+   .split-more   → 9,6px até o botão acima; estica 8 acima e 18 abaixo
+   .footer-credit → 3,2px até os links legais acima; estica 3 e 25
+   Esticar mais invadiria o alvo do vizinho e trocaria um defeito por outro.
+   ===================================================================== */
+.split-more a,
+.footer-credit a {
+    position: relative;
+}
+
+.split-more a::after,
+.footer-credit a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.split-more a::after {
+    top: -8px;
+    bottom: -18px;   /* 18 + 8 + 18 = 44px */
+}
+
+.footer-credit a::after {
+    top: -3px;
+    bottom: -25px;   /* 16 + 3 + 25 = 44px */
+}
+
+/* Em telas com ponteiro fino (mouse), a área estendida não é necessária e
+   só atrapalharia o hover de elementos vizinhos. */
+@media (hover: hover) and (pointer: fine) {
+    .split-more a::after,
+    .footer-credit a::after {
+        content: none;
+    }
+}

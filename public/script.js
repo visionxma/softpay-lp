@@ -128,7 +128,12 @@ window.addEventListener('scroll', () => {
 mobileMenuToggle?.addEventListener('click', () => {
     mobileMenuToggle.classList.toggle('active');
     navMenu?.classList.toggle('active');
-    document.body.style.overflow = navMenu?.classList.contains('active') ? 'hidden' : '';
+    // o leitor de tela precisa saber se o menu esta aberto, e o rotulo tem de
+    // dizer o que o proximo toque faz
+    const aberto = !!navMenu?.classList.contains('active');
+    mobileMenuToggle.setAttribute('aria-expanded', String(aberto));
+    mobileMenuToggle.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
+    document.body.style.overflow = aberto ? 'hidden' : '';
 });
 
 // ========== Close Mobile Menu on Link Click ==========
@@ -136,6 +141,8 @@ navLinks.forEach(link => {
     link.addEventListener('click', () => {
         mobileMenuToggle?.classList.remove('active');
         navMenu?.classList.remove('active');
+        mobileMenuToggle?.setAttribute('aria-expanded', 'false');
+        mobileMenuToggle?.setAttribute('aria-label', 'Abrir menu');
         document.body.style.overflow = '';
     });
 });

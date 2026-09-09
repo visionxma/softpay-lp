@@ -24,3 +24,6 @@ npm-debug.log*
 # Cache do Python
 __pycache__/
 *.pyc
+
+# backup local de imagens antes de otimizar (nao versionar)
+.backup-imagens-*/
