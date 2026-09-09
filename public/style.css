@@ -7905,3 +7905,1610 @@ body {
         transform: none;
     }
 }
+
+
+/* ==========================================================================
+   CELULAR — reconstrução da experiência mobile (2026-09-09)
+   Tudo aqui vale SÓ até 767.98px. Nada desta camada toca o desktop: as
+   poucas regras fora da media query abaixo apenas ESCONDEM no desktop os
+   controles que só existem para o celular (toggle dos planos, "ver mais"
+   do FAQ, atalhos e linha legal do rodapé).
+
+   Medido antes, em 390px: 27.450px de página (32,5 telas), quatro
+   carrosséis horizontais (números, segmentos, depoimentos, conteúdo), FAQ
+   com 30 perguntas abertas de uma vez, rodapé de 1.900px, hero de 1.150px
+   com o mockup empilhado embaixo do texto.
+
+   O princípio: mesma informação, outra COMPOSIÇÃO. Grades de duas colunas
+   onde o cartão é curto, cartão horizontal (ícone + texto) onde o texto é
+   longo, detalhe secundário atrás de um toque, e o mockup do computador
+   como FUNDO da hero em vez de um bloco abaixo dela.
+   ========================================================================== */
+
+/* controles exclusivos do celular: invisíveis em qualquer outra largura */
+.price-toggle,
+.faq-more-wrap,
+.footer-quick,
+.footer-legal-mobile {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+
+    /* --- 0. TOKENS DO CELULAR ------------------------------------------- */
+    :root {
+        --gutter: 1.125rem;           /* 18px de margem: a largura útil é o bem mais escasso */
+        --block-x: 0.375rem;          /* respiro do bloco arredondado até a borda da tela */
+        --rhythm: 2.25rem;            /* respiro entre seções: 36px, antes 48 */
+        --rhythm-tight: 1.1rem;
+        --section-y: 2rem;            /* padding interno dos blocos: 32px, antes 40 */
+        --nav-h: 60px;                /* navbar compacta (medida abaixo) */
+        --sticky-h: 58px;             /* barra fixa de CTA no rodapé */
+        --hero-bg-alpha: 0.32;
+    }
+
+    /* o conteúdo alinha sempre a 18px da borda da tela, esteja ele numa
+       seção comum ou dentro de um bloco arredondado (que tem 6px de margem) */
+    .section-block {
+        margin: 0 var(--block-x) 0.5rem;
+        border-radius: 1.25rem;
+    }
+
+    .section-block .container {
+        width: calc(100% - (var(--gutter) - var(--block-x)) * 2);
+    }
+
+    body {
+        padding-bottom: var(--sticky-h);
+    }
+
+    /* --- 1. NAVBAR: 60px, logo legível, alvo de toque de 44px ----------- */
+    .navbar .nav-wrapper {
+        padding: 0.5rem 0;
+        min-height: var(--nav-h);
+    }
+
+    .navbar .logo-img {
+        height: 32px;
+    }
+
+    .navbar .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        margin-right: -0.5rem;
+        padding: 0;
+        border-radius: var(--radius-md);
+    }
+
+    .navbar .mobile-menu-toggle span {
+        width: 22px;
+        height: 2px;
+    }
+
+    .navbar .mobile-menu-toggle.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar .mobile-menu-toggle.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* painel do menu: encosta na navbar nova, sem vão */
+    .nav-menu {
+        top: var(--nav-h);
+        max-height: calc(100dvh - var(--nav-h));
+        padding: 0.75rem var(--gutter) calc(1rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    .nav-menu .nav-link {
+        min-height: 46px;
+        font-size: 1rem;
+    }
+
+    .nav-menu .btn-nav-cta,
+    .nav-menu .btn {
+        margin-top: 0.75rem;
+    }
+
+    /* --- 2. BARRA FIXA DE CTA: mais baixa, mesma função ------------------ */
+    .mobile-sticky-cta {
+        padding: 0.4rem 0.75rem calc(0.4rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    .mobile-sticky-btn {
+        padding: 0.65rem 1rem;
+        font-size: 0.92rem;
+        border-radius: 10px;
+    }
+
+    .whatsapp-float {
+        right: 0.85rem;
+        bottom: calc(var(--sticky-h) + 0.6rem + env(safe-area-inset-bottom, 0px));
+    }
+
+    /* --- 3. HERO: o mockup vira fundo, o texto vira a composição --------- */
+    #hero.hero {
+        padding: calc(var(--nav-h) + 1.1rem) 0 1.75rem;
+        min-height: 0;
+        overflow: hidden;   /* o mockup pode sangrar para fora da hero, nunca da página */
+    }
+
+    #hero .hero-grid {
+        display: block;
+    }
+
+    #hero .hero-text {
+        position: relative;
+        z-index: 1;
+        max-width: none;
+        padding-bottom: 0;
+    }
+
+    /* o mockup atrás do conteúdo: grande, ancorado à direita e embaixo,
+       translúcido, e com máscara que o dissolve na direção do texto. O que
+       fica visível é o canto do monitor — profundidade, não uma segunda
+       imagem disputando com o título. */
+    #hero .hero-media {
+        position: absolute;
+        z-index: 0;
+        /* a TELA do monitor fica atrás do título e do subtítulo (metade
+           direita, onde a máscara deixa aparecer); a barra de tarefas cai
+           atrás do CTA e o pé do monitor se dissolve sob a prova social */
+        inset: calc(var(--nav-h) - 6px) -32% auto auto;
+        width: 132%;
+        max-width: none;
+        margin: 0;
+        opacity: var(--hero-bg-alpha);
+        pointer-events: none;
+        user-select: none;
+        -webkit-mask-image:
+            linear-gradient(to right, transparent 0%, #000 44%),
+            linear-gradient(to bottom, #000 52%, transparent 96%);
+        -webkit-mask-composite: source-in;
+        mask-image:
+            linear-gradient(to right, transparent 0%, #000 44%),
+            linear-gradient(to bottom, #000 52%, transparent 96%);
+        mask-composite: intersect;
+        animation: heroBgIn 1100ms var(--e-out) 60ms both;
+    }
+
+    #hero .hero-media img {
+        width: 100%;
+        height: auto;
+        display: block;
+        animation: none;
+    }
+
+    #hero .hero-announce {
+        gap: 0.4rem;
+        padding: 0.22rem 0.65rem 0.22rem 0.28rem;
+        font-size: 0.74rem;
+        min-height: 40px;
+        max-width: 100%;
+    }
+
+    #hero .hero-announce-tag {
+        padding: 0.16rem 0.5rem;
+        font-size: 0.62rem;
+    }
+
+    #hero .hero-title {
+        margin: 0.9rem 0 0.65rem;
+        font-size: clamp(1.9rem, 1.15rem + 3.7vw, 2.4rem);
+        line-height: 1.07;
+        letter-spacing: -0.03em;
+        max-width: none;
+    }
+
+    #hero .hero-subtitle {
+        margin: 0 0 1rem;
+        font-size: 0.98rem;
+        line-height: 1.5;
+        max-width: none;
+    }
+
+    #hero .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-bottom: 0.8rem;
+    }
+
+    #hero .hero-actions .btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 50px;
+        padding: 0.8rem 1rem;
+        font-size: 0.96rem;
+    }
+
+    #hero .hero-actions .btn-secondary {
+        min-height: 46px;
+        background: rgba(255, 255, 255, 0.82);
+    }
+
+    #hero .hero-offer {
+        margin: 0 0 0.9rem;
+        font-size: 0.82rem;
+    }
+
+    #hero .hero-proof {
+        gap: 0.6rem;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    #hero .hero-proof-avatars img {
+        width: 28px;
+        height: 28px;
+    }
+
+    #hero .hero-proof-avatars img + img {
+        margin-left: -8px;
+    }
+
+    #hero .hero-proof p {
+        font-size: 0.82rem;
+        line-height: 1.35;
+    }
+
+    /* entrada do texto: rápida, escalonada, sem esperar ninguém */
+    #hero .hero-text > * {
+        animation: heroTextIn 420ms var(--e-out) both;
+    }
+
+    #hero .hero-text > :nth-child(2) { animation-delay: 50ms; }
+    #hero .hero-text > :nth-child(3) { animation-delay: 100ms; }
+    #hero .hero-text > :nth-child(4) { animation-delay: 150ms; }
+    #hero .hero-text > :nth-child(5) { animation-delay: 190ms; }
+    #hero .hero-text > :nth-child(6) { animation-delay: 230ms; }
+
+    /* --- 4. CABEÇALHO DE SEÇÃO E TIPOGRAFIA ----------------------------- */
+    .section-header {
+        margin-bottom: 1.1rem;
+    }
+
+    .section-label {
+        font-size: 0.62rem;
+        letter-spacing: 0.14rem;
+        padding: 0.2rem 0.7rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.55rem, 1.05rem + 2.7vw, 1.95rem);
+        line-height: 1.12;
+        letter-spacing: -0.024em;
+    }
+
+    .section-header .section-title {
+        margin: 0.45rem 0 0.5rem !important;   /* vence o margin-top inline de dois títulos */
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .faq-footer {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .faq-footer a {
+        padding-block: 0.6rem;   /* link em frase corrida: alvo de 40px sem mover o texto */
+    }
+
+    /* --- 5. RECURSOS (marquise) ----------------------------------------- */
+    #recursos .section-title {
+        margin-bottom: 0.9rem !important;
+    }
+
+    #recursos .marquee {
+        padding: 0.28rem 0;
+    }
+
+    #recursos .capsule {
+        padding: 0.35rem 0.9rem 0.35rem 0.35rem;
+        font-size: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    #recursos .capsule-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    #recursos .capsule-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    #recursos .capsule-photo {
+        height: 40px;
+        width: 88px;
+    }
+
+    #recursos .container:last-child {
+        margin-top: 1rem !important;
+    }
+
+    #recursos .container:last-child .btn {
+        padding: 0.65rem 1.1rem;
+        font-size: 0.88rem;
+    }
+
+    /* --- 6. NÚMEROS: grade 2x2 em vez de carrossel ---------------------- */
+    .stats-bar {
+        padding-block: 1.25rem;
+    }
+
+    .stats-bar .stats-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.9rem 0.5rem;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        scroll-snap-type: none;
+    }
+
+    .stats-bar .stat-item {
+        flex: none;
+        min-width: 0;
+        padding: 0;
+        scroll-snap-align: none;
+    }
+
+    .stats-bar .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .stats-bar .stat-label {
+        font-size: 0.78rem;
+        margin-top: 0.15rem;
+        line-height: 1.35;
+    }
+
+    .cm-dots {
+        display: none !important;
+    }
+
+    /* --- 7. PLANOS: cartão compacto, lista de recursos atrás de um toque --
+       Preço, nome, para quem é e o CTA ficam sempre visíveis; a lista
+       completa abre no "Ver o que inclui". O plano em destaque nasce
+       aberto, para mostrar o que a lista contém. */
+    #pricing .price-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.65rem;
+    }
+
+    #pricing .price-card {
+        position: static;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "tag    tag"
+            "name   value"
+            "desc   value"
+            "users  users"
+            "cta    toggle"
+            "list   list";
+        column-gap: 0.75rem;
+        row-gap: 0.25rem;
+        align-items: start;
+        padding: 0.9rem 0.95rem 1rem;
+        margin: 0;
+        border-radius: 1rem;
+    }
+
+    #pricing .price-tag {
+        grid-area: tag;
+        justify-self: start;
+        margin-bottom: 0.2rem;
+        font-size: 0.64rem;
+    }
+
+    #pricing .price-icon {
+        display: none;
+    }
+
+    #pricing .price-name {
+        grid-area: name;
+        font-size: 1.12rem;
+        line-height: 1.2;
+        align-self: end;
+    }
+
+    #pricing .price-desc {
+        grid-area: desc;
+        min-height: 0;
+        margin: 0;
+        font-size: 0.84rem;
+        line-height: 1.4;
+    }
+
+    #pricing .price-value {
+        grid-area: value;
+        justify-self: end;
+        align-self: start;
+        margin: 0;
+        font-size: 1.85rem;
+        white-space: nowrap;
+    }
+
+    #pricing .price-cur {
+        margin-top: 0.2rem;
+        font-size: 0.8rem;
+    }
+
+    #pricing .price-per {
+        font-size: 0.78rem;
+    }
+
+    #pricing .price-users {
+        grid-area: users;
+        margin-top: 0.15rem;
+        font-size: 0.68rem;
+    }
+
+    #pricing .price-cta {
+        grid-area: cta;
+        width: 100%;
+        margin: 0.5rem 0 0;
+        padding: 0.7rem 0.9rem;
+        font-size: 0.88rem;
+        min-height: 44px;
+    }
+
+    #pricing .price-toggle {
+        grid-area: toggle;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        align-self: stretch;
+        margin-top: 0.5rem;
+        padding: 0 0.7rem;
+        min-height: 44px;
+        font: inherit;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1;
+        white-space: nowrap;
+        color: var(--brand-700);
+        background: var(--surface-tint-soft);
+        border: 1px solid var(--brand-100);
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+    }
+
+    #pricing .price-toggle svg {
+        width: 14px;
+        height: 14px;
+        flex: 0 0 auto;
+        transition: transform var(--transition-fast);
+    }
+
+    #pricing .price-card.is-open .price-toggle svg {
+        transform: rotate(180deg);
+    }
+
+    #pricing .price-list {
+        grid-area: list;
+        margin-top: 0.45rem;
+        padding-top: 0.7rem;
+        gap: 0.4rem;
+    }
+
+    #pricing .price-list li {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    #pricing .price-list svg {
+        width: 15px;
+        height: 15px;
+        margin-top: 2px;
+    }
+
+    .has-js #pricing .price-card:not(.is-open) .price-list {
+        display: none;
+    }
+
+    #pricing .price-card.is-open .price-list {
+        animation: faqIn 300ms var(--e-out) both;
+    }
+
+    #pricing .plans-trust-line {
+        margin-top: 1rem;
+        font-size: 0.84rem;
+    }
+
+    #pricing .plans-support-note {
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    /* --- 8. SEGMENTOS: grade 2x3 de cartões curtos + destaque ----------- */
+    #segmentos .seg-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        scroll-snap-type: none;
+    }
+
+    #segmentos .seg-card {
+        flex: none;
+        min-width: 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: "icone" "nome" "desc";
+        row-gap: 0.3rem;
+        padding: 0.85rem 0.85rem 0.9rem;
+        border-radius: 0.9rem;
+        scroll-snap-align: none;
+    }
+
+    #segmentos .seg-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    #segmentos .seg-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    #segmentos .seg-name {
+        font-size: 0.95rem;
+        line-height: 1.2;
+        margin-top: 0.2rem;
+    }
+
+    #segmentos .seg-desc {
+        font-size: 0.78rem;
+        line-height: 1.4;
+    }
+
+    #segmentos .seg-go {
+        display: none;
+    }
+
+    #segmentos .seg-feature {
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 0.8rem;
+        margin-top: 0.6rem;
+        padding: 1rem;
+        border-radius: 0.9rem;
+    }
+
+    #segmentos .seg-feature-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    #segmentos .seg-feature-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    #segmentos .seg-feature-text strong {
+        font-size: 1rem;
+        margin-bottom: 0.15rem;
+    }
+
+    #segmentos .seg-feature-text span {
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    #segmentos .seg-feature-go {
+        grid-column: 2;
+        font-size: 0.84rem;
+    }
+
+    /* --- 9. DIFERENCIAL: a conta cabe numa tela -------------------------- */
+    #numeros .insight-card {
+        padding: 1rem 0.9rem 1.1rem;
+        border-radius: 1rem;
+    }
+
+    #numeros .example-badge {
+        font-size: 0.64rem;
+    }
+
+    #numeros .insight-question {
+        margin: 0.55rem 0 0.8rem;
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+
+    #numeros .calc--flow {
+        gap: 0.15rem;
+    }
+
+    #numeros .calc-step {
+        padding: 0.55rem 0.7rem;
+        gap: 0.6rem;
+        border-radius: 0.6rem;
+    }
+
+    #numeros .calc-step .calc-label {
+        font-size: 0.82rem;
+        line-height: 1.3;
+    }
+
+    #numeros .calc-step .calc-value {
+        font-size: 0.95rem;
+    }
+
+    #numeros .calc-step--final .calc-value {
+        font-size: 1.05rem;
+    }
+
+    #numeros .calc-op {
+        font-size: 0.9rem;
+        line-height: 1;
+    }
+
+    #numeros .calc-note {
+        margin-top: 0.7rem;
+        font-size: 0.74rem;
+        line-height: 1.4;
+        max-width: none;
+    }
+
+    /* --- 10. SEÇÕES DIVIDIDAS (estoque, WhatsApp, fiado, loja online) ---- */
+    .split .split-grid {
+        gap: 0.9rem;
+    }
+
+    .split .split-title {
+        margin: 0.45rem 0 0.55rem;
+        font-size: clamp(1.5rem, 1.05rem + 2.4vw, 1.85rem);
+        line-height: 1.12;
+        letter-spacing: -0.024em;
+    }
+
+    .split .split-text {
+        margin-bottom: 0.75rem;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .split .split-list li {
+        margin-bottom: 0.4rem;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .split .split-note {
+        margin: 0.6rem 0 0.8rem;
+        padding: 0.6rem 0.75rem;
+        font-size: 0.8rem;
+        line-height: 1.4;
+        max-width: none;
+    }
+
+    .split .split-content .btn {
+        padding: 0.7rem 1.1rem;
+        font-size: 0.9rem;
+    }
+
+    .split .split-more {
+        margin-top: 0.6rem;
+        font-size: 0.88rem;
+    }
+
+    .split .split-visual {
+        position: static;
+    }
+
+    .split .stat-card {
+        padding: 1rem 1rem 1.1rem;
+        border-radius: 1rem;
+    }
+
+    .split .stat-card-label {
+        margin-bottom: 0.4rem;
+        font-size: 0.64rem;
+    }
+
+    .split .stat-card-question {
+        margin-bottom: 0.4rem;
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    .split .stat-card-answer {
+        font-size: 0.86rem;
+        line-height: 1.5;
+    }
+
+    #whatsapp .wa {
+        font-size: 0.8rem;
+    }
+
+    #whatsapp .wa-caption {
+        margin-top: 0.6rem;
+        font-size: 0.76rem;
+        line-height: 1.4;
+    }
+
+    /* --- 11. DECISÃO: número ao lado do título, não em cima ------------- */
+    #decisao .decision-steps {
+        gap: 0.55rem;
+    }
+
+    #decisao .decision-step {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 0.8rem;
+        row-gap: 0.15rem;
+        padding: 0.85rem 0.9rem;
+        border-top-width: 3px;
+        border-radius: 0.8rem;
+    }
+
+    #decisao .decision-number {
+        grid-row: 1 / 3;
+        width: 34px;
+        height: 34px;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    #decisao .decision-title {
+        align-self: center;
+        margin: 0;
+        font-size: 1.02rem;
+    }
+
+    #decisao .decision-text {
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    /* --- 12. COBERTURA: mapa menor, legenda em linha --------------------- */
+    #cobertura .coverage-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    #cobertura .coverage-grid > * {
+        position: static;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    #cobertura .coverage-content .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    #cobertura .coverage-list {
+        margin-top: 0.75rem;
+        gap: 0.45rem;
+    }
+
+    #cobertura .coverage-list li {
+        font-size: 0.86rem;
+    }
+
+    #cobertura .coverage-content > p:last-child {
+        margin-top: 0.7rem !important;
+    }
+
+    #cobertura .map-wrap {
+        max-width: none;
+        padding: 0.75rem 0.75rem 0.85rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    #cobertura .map-brasil {
+        max-width: 240px;
+        margin-inline: auto;
+    }
+
+    #cobertura .uf-legend {
+        margin-top: 0.5rem;
+        gap: 0.3rem 0.4rem;
+        justify-content: center;
+    }
+
+    #cobertura .uf-legend li {
+        font-size: 0.76rem;
+    }
+
+    #cobertura .uf-chip {
+        font-size: 0.64rem;
+        padding: 0.1rem 0.4rem;
+    }
+
+    #cobertura .map-caption {
+        margin-top: 0.5rem;
+        font-size: 0.72rem;
+        line-height: 1.4;
+        max-width: none;
+    }
+
+    /* --- 13. DEPOIMENTOS: os dois vídeos lado a lado, sem carrossel ------ */
+    #testimonials .depo-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+        max-width: none;
+        scroll-snap-type: none;
+    }
+
+    #testimonials .depo-grid > .depo-card {
+        flex: none;
+        min-width: 0;
+        margin: 0;
+        border-radius: 0.9rem;
+        scroll-snap-align: none;
+    }
+
+    #testimonials .depo-card .depo-video {
+        max-height: none;
+        height: auto;
+        aspect-ratio: 608 / 1080;
+    }
+
+    #testimonials .depo-body {
+        padding: 0.7rem 0.7rem 0.8rem;
+    }
+
+    #testimonials .depo-quote {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        line-height: 1.45;
+    }
+
+    #testimonials .depo-name {
+        font-size: 0.85rem;
+    }
+
+    #testimonials .depo-business {
+        font-size: 0.72rem;
+    }
+
+    /* --- 14. FUNCIONALIDADES (abas) -------------------------------------- */
+    #features .display-tablist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.1rem 0.9rem;
+    }
+
+    #features .display-tab {
+        min-height: 40px;
+        font-size: 1.3rem;
+    }
+
+    #features .display-panel {
+        min-height: 0;
+        padding: 0.85rem 0.8rem;
+    }
+
+    #features .capsule-cloud {
+        gap: 0.45rem;
+    }
+
+    #features .panel-note {
+        margin-top: 0.6rem;
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    #features .faq-footer {
+        margin-top: 1rem !important;
+    }
+
+    /* --- 15. DEMONSTRAÇÃO: mockup e texto na mesma composição ------------
+       A foto panorâmica sai (o mockup já é o visual da seção). O monitor
+       aparece só pela tela, recortado; o celular fica ao lado do texto. */
+    #showcase .section-figure {
+        display: none;
+    }
+
+    #showcase .showcase-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    #showcase .showcase-grid > * {
+        position: static;
+        margin: 0;
+    }
+
+    #showcase .showcase-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    #showcase .showcase-content {
+        gap: 0.5rem;
+    }
+
+    #showcase .showcase-title {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    #showcase .showcase-description {
+        font-size: 0.88rem;
+        line-height: 1.45;
+        max-width: none;
+    }
+
+    #showcase .showcase-features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.3rem 0.6rem;
+    }
+
+    #showcase .showcase-features li {
+        padding-left: 1.1rem;
+        font-size: 0.84rem;
+        line-height: 1.35;
+    }
+
+    #showcase .showcase-desktop .showcase-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: 0.6rem;
+    }
+
+    #showcase .showcase-mobile {
+        grid-template-columns: minmax(0, 1fr) 38%;
+        grid-template-areas: "content image";
+        align-items: center;
+        column-gap: 0.9rem;
+    }
+
+    #showcase .showcase-mobile .showcase-content {
+        grid-area: content;
+    }
+
+    #showcase .showcase-mobile .showcase-image {
+        grid-area: image;
+    }
+
+    #showcase .showcase-mobile .showcase-features {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- 16. EQUIPE E SEGURANÇA: cartão horizontal (ícone + texto) ------- */
+    .trust .trust-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.55rem;
+    }
+
+    .trust .trust-grid > * {
+        position: static;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    .trust .trust-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 0.8rem;
+        row-gap: 0.15rem;
+        align-items: start;
+        padding: 0.85rem 0.9rem;
+        border-radius: 0.8rem;
+    }
+
+    .trust .trust-icon {
+        grid-row: 1 / 3;
+        width: 38px;
+        height: 38px;
+        margin: 0;
+    }
+
+    .trust .trust-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .trust .trust-title {
+        align-self: center;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .trust .trust-text {
+        font-size: 0.86rem;
+        line-height: 1.45;
+    }
+
+    /* --- 17. SUPORTE ------------------------------------------------------ */
+    #suporte .support-title {
+        font-size: clamp(1.4rem, 1rem + 2.3vw, 1.7rem);
+        line-height: 1.15;
+    }
+
+    #suporte .support-text {
+        font-size: 0.92rem;
+        line-height: 1.5;
+        max-width: none;
+    }
+
+    #suporte .support-actions {
+        gap: 0.6rem;
+    }
+
+    #suporte .support-actions .btn {
+        width: 100%;
+    }
+
+    #suporte .support-meta {
+        font-size: 0.8rem;
+    }
+
+    /* --- 18. POR ONDE COMEÇAR: painéis mais densos ----------------------- */
+    #benefits .plan-duo {
+        gap: 0.7rem;
+    }
+
+    #benefits .plan-duo .plan-panel {
+        gap: 0.5rem;
+        padding: 1.1rem 1rem 1.15rem;
+        border-radius: 1.1rem;
+    }
+
+    #benefits .plan-panel h3 {
+        font-size: 1.35rem;
+    }
+
+    #benefits .plan-panel-desc {
+        font-size: 0.9rem;
+        line-height: 1.45;
+    }
+
+    #benefits .plan-panel-inner {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 0.2rem 0.6rem;
+        padding: 0.65rem 0.85rem;
+        border-radius: 0.8rem;
+    }
+
+    #benefits .panel-price {
+        font-size: 1.5rem;
+    }
+
+    #benefits .panel-price-note {
+        font-size: 0.78rem;
+    }
+
+    #benefits .plan-duo .plan-panel-list {
+        gap: 0.3rem;
+    }
+
+    #benefits .plan-duo .plan-panel-list li {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    #benefits .plan-panel-list svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    #benefits .plan-panel .btn {
+        width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #benefits .link-arrow {
+        min-height: 40px;
+        font-size: 0.86rem;
+    }
+
+    #benefits .faq-footer {
+        margin-top: 1rem !important;
+    }
+
+    /* --- 19. FAQ: quatro perguntas à vista, o resto atrás de um toque ---- */
+    #faq .faq-aside .section-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    #faq .faq-list {
+        gap: 0.35rem;
+    }
+
+    #faq.faq--split .faq-question {
+        padding: 0.72rem 2rem 0.72rem 0;
+        min-height: 44px;
+        font-size: 0.94rem;
+        line-height: 1.35;
+    }
+
+    #faq.faq--split .faq-answer {
+        padding: 0 0 0.8rem;
+    }
+
+    #faq .faq-answer p {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .has-js #faq .faq-list[data-faq-collapsible]:not(.is-expanded) > .faq-item:nth-child(n+5) {
+        display: none;
+    }
+
+    #faq .faq-list.is-expanded > .faq-item:nth-child(n+5) {
+        animation: faqIn 340ms var(--e-out) both;
+    }
+
+    #faq .faq-more-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.85rem;
+    }
+
+    #faq .faq-more {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        min-height: 44px;
+        padding: 0.5rem 1.15rem;
+        font: inherit;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--brand-700);
+        background: var(--color-white);
+        border: 1px solid var(--brand-200);
+        border-radius: var(--radius-pill);
+        box-shadow: var(--shadow-sm);
+        cursor: pointer;
+    }
+
+    #faq .faq-more svg {
+        width: 15px;
+        height: 15px;
+        transition: transform var(--transition-fast);
+    }
+
+    #faq .faq-more[aria-expanded="true"] svg {
+        transform: rotate(180deg);
+    }
+
+    #faq .faq-footer {
+        margin-top: 1rem !important;
+    }
+
+    /* --- 20. CONTEÚDO: grade 2 colunas de links compactos ---------------- */
+    #conteudo-seo .card-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.55rem;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        scroll-snap-type: none;
+    }
+
+    #conteudo-seo .card-grid li {
+        flex: none;
+        min-width: 0;
+        scroll-snap-align: none;
+    }
+
+    /* sete itens em duas colunas: o último ocupa a linha inteira */
+    #conteudo-seo .card-grid li:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+    }
+
+    #conteudo-seo .card-grid li a {
+        height: 100%;
+        padding: 0.75rem 0.8rem;
+        border-radius: 0.7rem;
+    }
+
+    #conteudo-seo .card-grid strong {
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+        line-height: 1.3;
+    }
+
+    #conteudo-seo .card-grid span {
+        font-size: 0.76rem;
+        line-height: 1.4;
+    }
+
+    #conteudo-seo .faq-footer {
+        margin-top: 0.9rem !important;
+    }
+
+    /* --- 21. CTA FINAL ---------------------------------------------------- */
+    #cta.cta-section {
+        padding-block: 2rem 1.75rem;
+    }
+
+    #cta .cta-title {
+        font-size: clamp(1.5rem, 1.1rem + 2.4vw, 1.85rem);
+        line-height: 1.15;
+    }
+
+    #cta .cta-subtitle {
+        margin-bottom: 1.1rem;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    #cta .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    #cta .cta-buttons .btn-primary {
+        width: 100%;
+    }
+
+    #cta .cta-buttons .btn-secondary {
+        width: auto;
+        min-height: 44px;
+        padding: 0.6rem 1.4rem;
+    }
+
+    /* --- 22. RODAPÉ: marca curta, atalhos, grupos em acordeão ------------ */
+    .footer {
+        padding: 1.6rem 0 1.1rem;
+    }
+
+    .footer .footer-content {
+        display: block;
+        margin-bottom: 0.9rem;
+    }
+
+    .footer .footer-brand {
+        gap: 0.55rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .footer .footer-logo {
+        max-width: 118px;
+    }
+
+    .footer .footer-description {
+        max-width: none;
+        font-size: 0.84rem;
+        line-height: 1.5;
+    }
+
+    .footer .footer-company {
+        font-size: 0.74rem;
+        line-height: 1.5;
+    }
+
+    .footer .footer-quick {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.45rem;
+        margin-bottom: 0.9rem;
+    }
+
+    .footer .footer-quick a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 0.5rem 0.4rem;
+        border-radius: 0.7rem;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: var(--color-white);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .footer .footer-links {
+        display: block;
+    }
+
+    .footer .footer-column {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer .footer-column:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer .footer-column .footer-heading {
+        margin: 0;
+        font-size: 0.8rem;
+        letter-spacing: 0.05em;
+    }
+
+    .footer .footer-toggle {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+        min-height: 48px;
+        padding: 0;
+        background: none;
+        border: 0;
+        color: inherit;
+        font: inherit;
+        text-transform: inherit;
+        letter-spacing: inherit;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .footer .footer-toggle::after {
+        content: "";
+        flex: 0 0 auto;
+        width: 0.45rem;
+        height: 0.45rem;
+        margin-right: 0.35rem;
+        border-right: 2px solid rgba(255, 255, 255, 0.6);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+        transform: translateY(-2px) rotate(45deg);
+        transition: transform var(--transition-fast);
+    }
+
+    .footer .footer-column.is-open .footer-toggle::after {
+        transform: translateY(2px) rotate(-135deg);
+    }
+
+    .has-js .footer .footer-column:not(.is-open) > ul {
+        display: none;
+    }
+
+    .footer .footer-column.is-open > ul {
+        animation: faqIn 260ms var(--e-out) both;
+    }
+
+    .footer .footer-column ul {
+        gap: 0;
+        padding: 0 0 0.6rem;
+    }
+
+    .footer .footer-column ul + .footer-heading,
+    .footer .footer-column .footer-heading--sub,
+    .footer .footer-column .footer-heading--sub + ul {
+        display: none;   /* os links legais ficam na linha compacta do fim */
+    }
+
+    .footer .footer-column a {
+        display: block;
+        padding: 0.42rem 0;
+        font-size: 0.88rem;
+    }
+
+    .footer .footer-bottom {
+        flex-direction: column;
+        gap: 0.2rem;
+        padding-top: 0.85rem;
+        font-size: 0.76rem;
+        text-align: center;
+    }
+
+    .footer .footer-bottom p {
+        margin: 0;
+    }
+
+    .footer .footer-legal-mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 1rem;
+    }
+
+    .footer .footer-legal-mobile a {
+        display: inline-block;
+        padding: 0.65rem 0;
+        color: rgba(255, 255, 255, 0.75);
+        font-size: 0.78rem;
+        text-decoration: none;
+    }
+
+    .footer .footer-credit {
+        font-size: 0.78rem;
+    }
+
+    /* --- 23. TELAS DE 320px: onde duas colunas não cabem ----------------- */
+    @media (max-width: 359.98px) {
+        #segmentos .seg-grid {
+            grid-template-columns: 1fr;
+        }
+
+        #segmentos .seg-card {
+            grid-template-columns: auto 1fr;
+            grid-template-areas: "icone nome" "icone desc";
+            column-gap: 0.7rem;
+            row-gap: 0.15rem;
+        }
+
+        #segmentos .seg-name {
+            margin-top: 0;
+        }
+
+        #testimonials .depo-grid {
+            grid-template-columns: 1fr;
+        }
+
+        #testimonials .depo-card .depo-video {
+            max-height: 56vh;
+            object-fit: cover;
+        }
+
+        #conteudo-seo .card-grid {
+            grid-template-columns: 1fr;
+        }
+
+        #conteudo-seo .card-grid li:last-child:nth-child(odd) {
+            grid-column: auto;
+        }
+
+        #showcase .showcase-mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas: "image" "content";
+        }
+
+        #showcase .showcase-mobile .showcase-image {
+            max-width: 58%;
+            margin-inline: auto;
+        }
+
+        #showcase .showcase-features {
+            grid-template-columns: 1fr;
+        }
+
+        #pricing .price-card {
+            grid-template-areas:
+                "tag    tag"
+                "name   value"
+                "desc   desc"
+                "users  users"
+                "cta    cta"
+                "toggle toggle"
+                "list   list";
+        }
+
+        #pricing .price-toggle {
+            margin-top: 0.35rem;
+            min-height: 40px;
+        }
+
+        .footer .footer-quick {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .footer .footer-quick a:last-child {
+            grid-column: 1 / -1;
+        }
+    }
+
+    /* --- 24. REVELAÇÃO POR SEÇÃO — variações discretas, só no celular ----
+       A base (.js [data-reveal]) já existe. Aqui entram as variantes que
+       o script marca no celular: máscara para títulos, blur leve para
+       números, deslize lateral para passos, profundidade para mockups e
+       escalonamento curto para grades. Tudo em transform/opacity (e
+       clip-path/filter só onde o elemento é pequeno), sem will-change
+       permanente: em celular ele custa memória de vídeo. */
+    .js [data-reveal] {
+        transform: translateY(12px);
+        will-change: auto;
+    }
+
+    .js [data-reveal="left"]  { transform: translateX(-14px); }
+    .js [data-reveal="zoom"]  { transform: scale(0.965); }
+    .js [data-reveal="depth"] { transform: scale(1.045); }
+    .js [data-reveal="blur"]  { transform: translateY(6px); filter: blur(5px); }
+
+    .js [data-reveal="mask"] {
+        opacity: 1;
+        transform: none;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    .js [data-reveal].is-visible {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        clip-path: inset(0 0 0 0);
+        transition:
+            opacity 380ms var(--e-out),
+            transform 440ms var(--e-out),
+            filter 380ms var(--e-out),
+            clip-path 560ms var(--e-out);
+    }
+
+    .js [data-reveal-stagger] > * {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    .js [data-reveal-stagger="left"] > * { transform: translateX(-12px); }
+    .js [data-reveal-stagger="zoom"] > * { transform: scale(0.97); }
+    .js [data-reveal-stagger="blur"] > * { transform: translateY(6px); filter: blur(4px); }
+
+    .js [data-reveal-stagger].is-visible > * {
+        opacity: 1;
+        transform: none;
+        filter: none;
+        transition:
+            opacity 360ms var(--e-out),
+            transform 400ms var(--e-out),
+            filter 360ms var(--e-out);
+    }
+
+    .js [data-reveal-stagger].is-visible > *:nth-child(1) { transition-delay: 0ms; }
+    .js [data-reveal-stagger].is-visible > *:nth-child(2) { transition-delay: 45ms; }
+    .js [data-reveal-stagger].is-visible > *:nth-child(3) { transition-delay: 90ms; }
+    .js [data-reveal-stagger].is-visible > *:nth-child(4) { transition-delay: 135ms; }
+    .js [data-reveal-stagger].is-visible > *:nth-child(5) { transition-delay: 180ms; }
+    .js [data-reveal-stagger].is-visible > *:nth-child(n+6) { transition-delay: 210ms; }
+
+    /* a marquise em movimento reduzido vira grade estática: sem as cópias
+       usadas pelo loop, senão são 1.900px de cápsulas repetidas */
+    @media (prefers-reduced-motion: reduce) {
+        #recursos .marquee-track > :nth-child(n+9) {
+            display: none;
+        }
+
+        #hero .hero-text > *,
+        #hero .hero-media {
+            animation: none;
+        }
+
+        #faq .faq-list.is-expanded > .faq-item:nth-child(n+5),
+        #pricing .price-card.is-open .price-list,
+        .footer .footer-column.is-open > ul {
+            animation: none;
+        }
+    }
+}
+
+@keyframes heroTextIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes heroBgIn {
+    from { opacity: 0; transform: scale(1.06) translateY(16px); }
+    to   { opacity: var(--hero-bg-alpha, 0.3); transform: none; }
+}
+
+@keyframes faqIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+}

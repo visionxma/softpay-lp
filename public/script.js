@@ -648,6 +648,10 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
     if (menosMovimento) return;
     raiz.classList.add('js');
 
+    // No celular a marcação é outra (ver REVELAÇÃO NO CELULAR, no fim do
+    // arquivo): cada bloco recebe uma variação própria. Aqui só o desktop.
+    if (window.matchMedia('(max-width: 767.98px)').matches) return;
+
     var SELETORES = [
         '.section-header',
         '.pricing-card',
@@ -785,4 +789,202 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
         clearTimeout(window.__cmDotsT);
         window.__cmDotsT = setTimeout(aplicar, 200);
     });
+})();
+
+
+/* ===========================================================================
+   CELULAR — controles da reconstrução mobile (2026-09-09)
+   Tudo aqui é progressivo: sem JavaScript, planos, FAQ e rodapé aparecem
+   inteiros (o CSS só esconde quando o <html> tem a classe .has-js).
+   =========================================================================== */
+document.documentElement.classList.add('has-js');
+
+(function () {
+    var celular = window.matchMedia('(max-width: 767.98px)');
+
+    /* --- Planos: "Ver o que inclui" abre a lista de recursos do cartão ---- */
+    document.querySelectorAll('.price-toggle').forEach(function (btn) {
+        var card = btn.closest('.price-card');
+        var rotulo = btn.querySelector('.price-toggle-label');
+        if (!card) return;
+        btn.addEventListener('click', function () {
+            var aberto = card.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+            if (rotulo) rotulo.textContent = aberto ? 'Ocultar detalhes' : 'Ver o que inclui';
+        });
+    });
+
+    /* --- FAQ: quatro perguntas à vista; "Ver mais" revela o resto -------- */
+    (function () {
+        var lista = document.querySelector('.faq-list[data-faq-collapsible]');
+        var btn = document.querySelector('.faq-more');
+        if (!lista || !btn) return;
+        var rotulo = btn.querySelector('.faq-more-label');
+
+        btn.addEventListener('click', function () {
+            var aberto = lista.classList.toggle('is-expanded');
+            btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+            if (rotulo) rotulo.textContent = aberto ? 'Ver menos' : 'Ver mais perguntas';
+            if (!aberto) {
+                // ao recolher, a página encolhe de repente: a lista volta para
+                // a vista, em vez de deixar o leitor no meio de outra seção
+                var navH = parseFloat(getComputedStyle(document.documentElement)
+                              .getPropertyValue('--nav-h')) || 60;
+                var topo = lista.getBoundingClientRect().top + window.pageYOffset - navH - 12;
+                if (lista.getBoundingClientRect().top < 0) {
+                    window.scrollTo({ top: topo, behavior: 'auto' });
+                }
+                btn.focus({ preventScroll: true });
+            }
+        });
+    })();
+
+    /* --- Rodapé: cada grupo de links vira acordeão, só no celular --------
+       O título <h3> recebe um <button> por dentro enquanto a tela é
+       estreita; ao voltar ao desktop, o texto puro é restaurado. Assim o
+       DOM do desktop fica exatamente como era. */
+    var colunas = [].slice.call(document.querySelectorAll('.footer .footer-column'));
+
+    function montarRodape() {
+        colunas.forEach(function (col, i) {
+            var titulo = col.querySelector('.footer-heading:not(.footer-heading--sub)');
+            var lista = col.querySelector(':scope > ul');
+            if (!titulo || !lista || titulo.querySelector('.footer-toggle')) return;
+            if (!lista.id) lista.id = 'footer-lista-' + (i + 1);
+            var texto = titulo.textContent;
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'footer-toggle';
+            btn.textContent = texto;
+            btn.setAttribute('aria-expanded', 'false');
+            btn.setAttribute('aria-controls', lista.id);
+            titulo.textContent = '';
+            titulo.appendChild(btn);
+            btn.addEventListener('click', function () {
+                var aberto = col.classList.toggle('is-open');
+                btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+            });
+        });
+    }
+
+    function desmontarRodape() {
+        colunas.forEach(function (col) {
+            var btn = col.querySelector('.footer-toggle');
+            if (!btn) return;
+            var titulo = btn.parentNode;
+            titulo.textContent = btn.textContent;
+            col.classList.remove('is-open');
+        });
+    }
+
+    function aplicarRodape() {
+        if (celular.matches) montarRodape(); else desmontarRodape();
+    }
+
+    aplicarRodape();
+    if (celular.addEventListener) celular.addEventListener('change', aplicarRodape);
+})();
+
+/* ---------------------------------------------------------------------------
+   REVELAÇÃO NO CELULAR
+   Mesmas proteções da revelação de desktop (acima): só esconde com a classe
+   .js, sem IntersectionObserver mostra tudo, e uma rede de segurança no
+   scroll. A diferença é a marcação: no celular cada bloco recebe uma
+   variação (máscara, blur, lateral, profundidade, escalonamento) para a
+   página ter continuidade sem repetir o mesmo movimento em tudo.
+   --------------------------------------------------------------------------- */
+(function () {
+    var raiz = document.documentElement;
+    if (!window.matchMedia('(max-width: 767.98px)').matches) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    raiz.classList.add('js');
+
+    // [seletor, tipo, variação]. "stagger" escalona os filhos diretos.
+    var MAPA = [
+        ['.section-header',                       'stagger', ''],
+        ['.stats-bar .stats-grid',                'stagger', 'blur'],
+        ['#recursos .container:last-child',       'reveal',  ''],
+        ['#pricing .price-grid',                  'stagger', ''],
+        ['#pricing .plans-trust-line',            'reveal',  ''],
+        ['#pricing .plans-support-note',          'reveal',  ''],
+        ['#segmentos .seg-grid',                  'stagger', 'zoom'],
+        ['#segmentos .seg-feature',               'reveal',  'zoom'],
+        ['#numeros .insight-card',                'reveal',  ''],
+        ['#numeros .calc--flow',                  'stagger', 'left'],
+        ['.split .section-label',                 'reveal',  ''],
+        ['.split .split-title',                   'reveal',  'mask'],
+        ['.split .split-text',                    'reveal',  ''],
+        ['.split .split-list',                    'stagger', 'left'],
+        ['.split .split-note',                    'reveal',  ''],
+        ['.split .split-content > .btn',          'reveal',  ''],
+        ['.split .split-more',                    'reveal',  ''],
+        ['.split .split-visual',                  'reveal',  'zoom'],
+        ['#decisao .decision-steps',              'stagger', 'left'],
+        ['#cobertura .coverage-content',          'stagger', ''],
+        ['#cobertura .map-wrap',                  'reveal',  'depth'],
+        ['#testimonials .depo-grid',              'stagger', 'zoom'],
+        ['#features .display-tabs',               'reveal',  ''],
+        ['#features .faq-footer',                 'reveal',  ''],
+        ['#showcase .showcase-content',           'stagger', ''],
+        ['#showcase .showcase-image',             'reveal',  'depth'],
+        ['.trust .trust-grid',                    'stagger', 'left'],
+        ['#suporte .support-inner',               'stagger', ''],
+        ['#benefits .plan-duo',                   'stagger', ''],
+        ['#benefits .faq-footer',                 'reveal',  ''],
+        ['#faq .faq-aside',                       'stagger', ''],
+        ['#faq .faq-list',                        'stagger', ''],
+        ['#faq .faq-more-wrap',                   'reveal',  ''],
+        ['#faq .faq-footer',                      'reveal',  ''],
+        ['#conteudo-seo .card-grid',              'stagger', 'zoom'],
+        ['#conteudo-seo .faq-footer',             'reveal',  ''],
+        ['#cta .cta-content',                     'stagger', ''],
+        ['.footer .footer-brand',                 'reveal',  ''],
+        ['.footer .footer-quick',                 'stagger', ''],
+        ['.footer .footer-links',                 'reveal',  '']
+    ];
+
+    var itens = [];
+    MAPA.forEach(function (regra) {
+        [].forEach.call(document.querySelectorAll(regra[0]), function (el) {
+            if (el.closest('#hero, .navbar, .whatsapp-float, .mobile-sticky-cta')) return;
+            if (el.hasAttribute('data-reveal') || el.hasAttribute('data-reveal-stagger')) return;
+            // o que já está na primeira tela nasce visível
+            if (el.getBoundingClientRect().top <= window.innerHeight * 0.9) return;
+            el.setAttribute(regra[1] === 'stagger' ? 'data-reveal-stagger' : 'data-reveal', regra[2]);
+            itens.push(el);
+        });
+    });
+
+    function mostrar(el) {
+        if (el.classList.contains('is-visible')) return;
+        el.classList.add('is-visible');
+    }
+
+    if (!('IntersectionObserver' in window)) {
+        itens.forEach(mostrar);
+        return;
+    }
+
+    var io = new IntersectionObserver(function (entradas) {
+        entradas.forEach(function (e) {
+            if (!e.isIntersecting && e.intersectionRatio === 0) return;
+            mostrar(e.target);
+            io.unobserve(e.target);
+        });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+
+    itens.forEach(function (el) { io.observe(el); });
+
+    var varrendo = false;
+    function varrer() {
+        varrendo = false;
+        var limite = window.innerHeight + 160;
+        itens.forEach(function (el) {
+            if (el.classList.contains('is-visible')) return;
+            if (el.getBoundingClientRect().top < limite) { mostrar(el); io.unobserve(el); }
+        });
+    }
+    window.addEventListener('scroll', function () {
+        if (!varrendo) { varrendo = true; requestAnimationFrame(varrer); }
+    }, { passive: true });
 })();
