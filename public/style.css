@@ -7799,3 +7799,109 @@ body {
    contra 229px dos cartões) — e um mockup alto ao lado de texto curto sempre
    deixa folga. É o menor custo entre as três medições.
    ------------------------------------------------------------------------- */
+
+
+/* ==========================================================================
+   FLUTUANTES — os dois se sobrepunham em todo o desktop
+   Medido em 1280, 1440 e 1920px, ANTES: o balão do WhatsApp ia de x=1109 a
+   x=1416 (307px) e o `.float-cta` "Começar grátis" nascia em x=1160, ou seja,
+   DENTRO do balão. O botão de conversão ficava por cima do texto de
+   atendimento em todas as larguras de desktop.
+
+   A causa: `.float-cta` se afastava 76px da borda para desviar do ÍCONE do
+   WhatsApp (56px), mas o balão de 240px ao lado do ícone nunca entrou na conta.
+
+   Três decisões, e o porquê de cada uma:
+
+   1. Os dois passam a se EMPILHAR VERTICALMENTE, cada um no seu canto, com a
+      posição de um calculada a partir da altura do outro. Sem número mágico.
+   2. O balão deixa de ser permanente e vira convite no hover ou no foco — o
+      comportamento de qualquer widget de atendimento. Fecha a sobreposição e
+      devolve o canto da tela ao conteúdo.
+   3. A animação anima `opacity` e `transform`, NUNCA `max-width`. Animar a
+      largura foi a origem dos defeitos que medi nas tentativas anteriores: com
+      `overflow: hidden` para esconder, o recorte também cortava a ALTURA e a
+      frase "Fale conosco!" sumia; sem ele, o texto quebrava numa coluna de
+      63px de largura. `transform` não recalcula layout e é o que a GPU resolve.
+
+   O texto permanece no HTML em todos os estados: leitor de tela e indexação
+   continuam vendo a mensagem inteira.
+   ========================================================================== */
+
+:root {
+    --float-gap: clamp(1rem, 2vw, 1.75rem);   /* margem até a borda da janela */
+    --wa-size: 56px;                          /* diâmetro do botão redondo */
+}
+
+/* --- WhatsApp -------------------------------------------------------------- */
+.whatsapp-float {
+    right: var(--float-gap);
+    bottom: var(--float-gap);
+    align-items: center;
+    /* sem pulso perpétuo: movimento contínuo no canto compete com a leitura,
+       e é o tipo de efeito que esta reconstrução evitou no resto da página */
+    animation: none;
+}
+
+.whatsapp-bubble {
+    /* o balão tem tamanho real o tempo todo — o que muda é a visibilidade.
+       Assim ele nunca é recortado nem espremido numa coluna. */
+    width: max-content;
+    max-width: 15rem;
+    white-space: normal;
+    line-height: 1.35;
+    /* escondido sem ocupar espaço no fluxo, e sem `display:none` (que
+       impediria a transição) */
+    position: absolute;
+    right: calc(var(--wa-size) + 0.6rem);
+    top: 50%;
+    opacity: 0;
+    transform: translateY(-50%) translateX(0.5rem);
+    pointer-events: none;
+    transition: opacity var(--transition-base),
+                transform var(--transition-base);
+}
+
+.whatsapp-float:hover .whatsapp-bubble,
+.whatsapp-float:focus-visible .whatsapp-bubble,
+.whatsapp-float:focus-within .whatsapp-bubble {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+}
+
+/* --- CTA de conversão: canto próprio, acima do botão redondo ---------------- */
+.float-cta {
+    right: var(--float-gap);
+    bottom: calc(var(--float-gap) + var(--wa-size) + 0.75rem);
+}
+
+/* --- Telas pequenas: um flutuante por vez ---------------------------------- */
+@media (max-width: 768px) {
+    /* o `.float-cta` já sai (a barra fixa do rodapé cumpre o papel) e o
+       WhatsApp sobe para não brigar com ela */
+    .whatsapp-float {
+        right: 1rem;
+        /* Medido em 390px: a barra fixa do rodapé tem 84px e começa em y=760;
+           com `bottom: 84px` o botão terminava exatamente em 760 — folga zero,
+           os dois encostados. O respiro entra explicitamente. */
+        bottom: calc(84px + 0.75rem + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+/* --- Menos movimento: aparece sem deslizar --------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp-bubble {
+        transition: opacity var(--transition-fast);
+        transform: translateY(-50%);
+    }
+
+    .whatsapp-float:hover .whatsapp-bubble,
+    .whatsapp-float:focus-visible .whatsapp-bubble,
+    .whatsapp-float:focus-within .whatsapp-bubble {
+        transform: translateY(-50%);
+    }
+
+    .whatsapp-float:hover .whatsapp-icon {
+        transform: none;
+    }
+}
