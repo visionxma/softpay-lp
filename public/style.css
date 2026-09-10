@@ -9053,60 +9053,95 @@ body {
     }
 
     /* --- 18. POR ONDE COMEÇAR: painéis mais densos ----------------------- */
+    /* Os dois planos lado a lado, como no desktop: comparar preco e o que cada
+       um inclui exige ver os dois ao mesmo tempo. Empilhados, era preciso
+       rolar de um para o outro e guardar de cabeca.
+       Cabe porque nenhuma palavra do conteudo passa de 145px, o texto util de
+       uma coluna de 171px (medido nos 19 rotulos dos dois paineis). */
     #benefits .plan-duo {
-        gap: 0.7rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;      /* os dois cartoes terminam na mesma linha */
+        gap: 0.55rem;
     }
 
     #benefits .plan-duo .plan-panel {
-        gap: 0.5rem;
-        padding: 1.1rem 1rem 1.15rem;
-        border-radius: 1.1rem;
+        min-width: 0;              /* filho de grade encolhe em vez de estourar */
+        gap: 0.4rem;
+        padding: 0.85rem 0.7rem 0.9rem;
+        border-radius: 0.9rem;
+    }
+
+    /* O plano recomendado se destaca como no #pricing: borda da marca e sombra
+       — o mesmo sinal que o site ja usa em .price-card--pop, para nao inventar
+       uma segunda linguagem de destaque. */
+    #benefits .plan-duo .plan-panel--dark {
+        border: 2px solid var(--brand-400);
+        box-shadow: 0 8px 24px rgba(7, 43, 69, 0.22);
     }
 
     #benefits .plan-panel h3 {
-        font-size: 1.35rem;
+        font-size: 1rem;
+        line-height: 1.25;
     }
 
     #benefits .plan-panel-desc {
-        font-size: 0.9rem;
-        line-height: 1.45;
+        font-size: 0.78rem;
+        line-height: 1.4;
     }
 
     #benefits .plan-panel-inner {
         display: flex;
-        align-items: baseline;
-        flex-wrap: wrap;
-        gap: 0.2rem 0.6rem;
-        padding: 0.65rem 0.85rem;
-        border-radius: 0.8rem;
+        flex-direction: column;    /* em 145px o preco e a nota nao cabem lado a lado */
+        align-items: flex-start;
+        gap: 0.1rem;
+        padding: 0.5rem 0.6rem;
+        border-radius: 0.6rem;
     }
 
     #benefits .panel-price {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        line-height: 1.1;
     }
 
     #benefits .panel-price-note {
-        font-size: 0.78rem;
+        font-size: 0.68rem;
+        line-height: 1.3;
+    }
+
+    #benefits .panel-tag {
+        font-size: 0.6rem;
+        letter-spacing: 0.04em;
+        padding: 0.2rem 0.5rem;
     }
 
     #benefits .plan-duo .plan-panel-list {
-        gap: 0.3rem;
+        gap: 0.28rem;
     }
 
     #benefits .plan-duo .plan-panel-list li {
-        font-size: 0.85rem;
-        line-height: 1.4;
+        font-size: 0.72rem;
+        line-height: 1.35;
+        gap: 0.3rem;
     }
 
     #benefits .plan-panel-list svg {
-        width: 17px;
-        height: 17px;
+        width: 13px;
+        height: 13px;
+        margin-top: 0.12rem;
     }
 
+    /* O rotulo do botao quebra em duas linhas em vez de ser cortado: em 146px
+       "Comecar gratis por 7 dias" pede 148px numa linha so. Encurtar a fonte
+       ate caber deixaria o texto menor que o resto do cartao. */
     #benefits .plan-panel .btn {
         width: 100%;
-        padding: 0.7rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.55rem 0.4rem;
+        font-size: 0.76rem;
+        line-height: 1.25;
+        white-space: normal;
+        text-align: center;
+        min-height: 44px;          /* o alvo do dedo nao encolhe junto com a fonte */
     }
 
     #benefits .link-arrow {
