@@ -473,10 +473,17 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
 
     var querMenosMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
     var telaLarga = window.matchMedia('(min-width: 901px)');
+    /* O celular também roda o trilho (2026-09-10): as abas viram uma coluna à
+       esquerda e trocam com o scroll, como no desktop. Abaixo de 360px fica
+       de fora — ali a tela é curta e o miolo fixo não caberia sem cortar o
+       painel. O tablet (768–900px) segue como antes, por clique. */
+    var celularTrilho = window.matchMedia('(min-width: 360px) and (max-width: 767.98px)');
     var suportaSticky = CSS.supports && CSS.supports('position', 'sticky');
 
     function podeLigar() {
-        return suportaSticky && telaLarga.matches && !querMenosMovimento.matches;
+        return suportaSticky
+            && (telaLarga.matches || celularTrilho.matches)
+            && !querMenosMovimento.matches;
     }
 
     document.documentElement.style.setProperty('--tabs-count', abas.length);
@@ -557,6 +564,7 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
     if (querMenosMovimento.addEventListener) {
         querMenosMovimento.addEventListener('change', aplicarModo);
         telaLarga.addEventListener('change', aplicarModo);
+        celularTrilho.addEventListener('change', aplicarModo);
     }
 })();
 
@@ -807,9 +815,25 @@ document.querySelectorAll('.tablist, .display-tablist').forEach(function (lista)
 document.documentElement.classList.add('has-js');
 
 (function () {
+    /* --- Planos: "Ver o que inclui" abre a lista de recursos do cartão ----
+       No celular os planos são uma pilha e o cartão recomendado ("Mais
+       popular") nasce com a lista aberta — é o argumento mais forte que ele
+       tem. Abrir outro plano fecha o que estava aberto: com quatro listas
+       abertas ao mesmo tempo a seção virava um paredão de 2.000px e o plano
+       seguinte saía da tela. No desktop nada disso vale: lá a lista aparece
+       sempre e a classe `is-open` não muda o layout. */
     var celular = window.matchMedia('(max-width: 767.98px)');
 
-    /* --- Planos: "Ver o que inclui" abre a lista de recursos do cartão ---- */
+    function fecharPlano(card) {
+        if (!card || !card.classList.contains('is-open')) return;
+        card.classList.remove('is-open');
+        var btn = card.querySelector('.price-toggle');
+        if (!btn) return;
+        btn.setAttribute('aria-expanded', 'false');
+        var rot = btn.querySelector('.price-toggle-label');
+        if (rot) rot.textContent = 'Ver o que inclui';
+    }
+
     document.querySelectorAll('.price-toggle').forEach(function (btn) {
         var card = btn.closest('.price-card');
         var rotulo = btn.querySelector('.price-toggle-label');
@@ -818,6 +842,11 @@ document.documentElement.classList.add('has-js');
             var aberto = card.classList.toggle('is-open');
             btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
             if (rotulo) rotulo.textContent = aberto ? 'Ocultar detalhes' : 'Ver o que inclui';
+            if (aberto && celular.matches) {
+                document.querySelectorAll('#pricing .price-card.is-open').forEach(function (outro) {
+                    if (outro !== card) fecharPlano(outro);
+                });
+            }
         });
     });
 

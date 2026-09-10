@@ -9052,105 +9052,218 @@ body {
         font-size: 0.8rem;
     }
 
-    /* --- 18. POR ONDE COMEÇAR: painéis mais densos ----------------------- */
-    /* Os dois planos lado a lado, como no desktop: comparar preco e o que cada
-       um inclui exige ver os dois ao mesmo tempo. Empilhados, era preciso
-       rolar de um para o outro e guardar de cabeca.
-       Cabe porque nenhuma palavra do conteudo passa de 145px, o texto util de
-       uma coluna de 171px (medido nos 19 rotulos dos dois paineis). */
+    /* --- 18. POR ONDE COMEÇAR: um painel por linha, hierarquia declarada --
+       Os dois painéis JÁ ESTIVERAM lado a lado aqui (10/09/2026, de manhã):
+       cada um ficava com 171px, o título perdia impacto, cada benefício
+       quebrava em três linhas e o rótulo do botão em duas. Comparar dois
+       cartões espremidos custa mais esforço do que rolar de um para o outro,
+       então a comparação passou a ser vertical — e o que era largura virou
+       hierarquia dentro de cada painel.
+
+       A ordem de atenção é imposta por `order`, não pelo HTML (que continua
+       intacto): contexto → título → descrição → PREÇO → CTA → benefícios →
+       ação secundária. O CTA sobe para antes da lista porque a decisão se
+       toma no preço; a lista é a justificativa, lida depois. A lista não é
+       focável, então a ordem do teclado (botão → link) não muda.
+
+       O painel escuro deixou de ser um bloco chapado: a borda azul de 2px e a
+       sombra dura saíram, entrou um degradê do azul-noite da marca com borda
+       de 1px em branco translúcido, e o CTA virou BRANCO — sobre fundo escuro
+       é o maior contraste possível, e é ali que o reforço do plano avançado
+       aparece, sem inventar uma segunda linguagem de destaque. */
     #benefits .plan-duo {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: stretch;      /* os dois cartoes terminam na mesma linha */
-        gap: 0.55rem;
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+        align-items: stretch;
     }
 
     #benefits .plan-duo .plan-panel {
-        min-width: 0;              /* filho de grade encolhe em vez de estourar */
-        gap: 0.4rem;
-        padding: 0.85rem 0.7rem 0.9rem;
-        border-radius: 0.9rem;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 1.15rem 1.1rem 1.2rem;
+        border-radius: 1.15rem;
     }
 
-    /* O plano recomendado se destaca como no #pricing: borda da marca e sombra
-       — o mesmo sinal que o site ja usa em .price-card--pop, para nao inventar
-       uma segunda linguagem de destaque. */
-    #benefits .plan-duo .plan-panel--dark {
-        border: 2px solid var(--brand-400);
-        box-shadow: 0 8px 24px rgba(7, 43, 69, 0.22);
+    /* --- ordem de atenção (o HTML não muda) ------------------------------ */
+    #benefits .plan-panel .panel-tag        { order: 1; }
+    #benefits .plan-panel h3                { order: 2; }
+    #benefits .plan-panel .plan-panel-desc  { order: 3; }
+    #benefits .plan-panel .plan-panel-inner { order: 4; }
+    #benefits .plan-panel .btn              { order: 5; }
+    #benefits .plan-panel .plan-panel-list  { order: 6; }
+    #benefits .plan-panel .link-arrow       { order: 7; }
+
+    /* --- contexto: presente, mas nunca mais forte que o preço ----------- */
+    #benefits .panel-tag {
+        margin: 0 0 0.65rem;
+        padding: 0.26rem 0.6rem;
+        font-size: 0.64rem;
+        letter-spacing: 0.06em;
+        line-height: 1.2;
     }
 
     #benefits .plan-panel h3 {
-        font-size: 1rem;
-        line-height: 1.25;
+        margin: 0;
+        font-size: 1.42rem;
+        line-height: 1.15;
+        letter-spacing: -0.024em;
     }
 
     #benefits .plan-panel-desc {
-        font-size: 0.78rem;
-        line-height: 1.4;
+        margin: 0.5rem 0 0;
+        max-width: 46ch;
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 
+    /* --- preço: o número é o maior elemento do painel -------------------- */
     #benefits .plan-panel-inner {
         display: flex;
-        flex-direction: column;    /* em 145px o preco e a nota nao cabem lado a lado */
+        flex-direction: column;
         align-items: flex-start;
-        gap: 0.1rem;
-        padding: 0.5rem 0.6rem;
-        border-radius: 0.6rem;
+        gap: 0.15rem;
+        margin: 0.95rem 0 0;
+        padding: 0.8rem 0.9rem 0.85rem;
+        border-radius: 0.85rem;
     }
 
     #benefits .panel-price {
-        font-size: 1.2rem;
-        line-height: 1.1;
+        font-size: 2.1rem;
+        line-height: 1;
+    }
+
+    #benefits .panel-price span {
+        font-size: 0.9rem;
     }
 
     #benefits .panel-price-note {
-        font-size: 0.68rem;
-        line-height: 1.3;
+        font-size: 0.8rem;
+        line-height: 1.35;
     }
 
-    #benefits .panel-tag {
-        font-size: 0.6rem;
-        letter-spacing: 0.04em;
-        padding: 0.2rem 0.5rem;
+    /* --- CTA: uma linha, alvo generoso, igual nos dois painéis ---------- */
+    #benefits .plan-panel .btn {
+        order: 5;
+        align-self: stretch;
+        width: 100%;
+        margin: 0.9rem 0 0;
+        padding: 0.9rem 1rem;
+        font-size: 0.98rem;
+        font-weight: 700;
+        line-height: 1.2;
+        white-space: nowrap;       /* em 330px de painel o rótulo cabe inteiro */
+        text-align: center;
+        min-height: 50px;
     }
 
+    /* --- benefícios: ícone de 18px, linha confortável, sem quebra à toa -- */
     #benefits .plan-duo .plan-panel-list {
-        gap: 0.28rem;
+        flex: 0 0 auto;
+        margin: 1.05rem 0 0;
+        padding-top: 1rem;
+        border-top: 1px solid var(--brand-100);
+        gap: 0.7rem;
     }
 
     #benefits .plan-duo .plan-panel-list li {
-        font-size: 0.72rem;
-        line-height: 1.35;
-        gap: 0.3rem;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.9rem;
+        line-height: 1.45;
     }
 
     #benefits .plan-panel-list svg {
-        width: 13px;
-        height: 13px;
-        margin-top: 0.12rem;
+        width: 18px;
+        height: 18px;
+        margin-top: 1px;
     }
 
-    /* O rotulo do botao quebra em duas linhas em vez de ser cortado: em 146px
-       "Comecar gratis por 7 dias" pede 148px numa linha so. Encurtar a fonte
-       ate caber deixaria o texto menor que o resto do cartao. */
-    #benefits .plan-panel .btn {
-        width: 100%;
-        padding: 0.55rem 0.4rem;
-        font-size: 0.76rem;
-        line-height: 1.25;
-        white-space: normal;
-        text-align: center;
-        min-height: 44px;          /* o alvo do dedo nao encolhe junto com a fonte */
+    /* --- ação secundária: fácil de achar, sem disputar com o CTA --------
+       `display: block` e não `inline-flex`: como flex, o rótulo é uma caixa e
+       a seta é outra, então em 320px — onde "Ver como funciona numa loja
+       pequena" quebra em duas linhas — a seta ficava sozinha, centralizada à
+       direita do bloco. Em fluxo normal ela acompanha a última linha. O alvo
+       de toque vem do `padding-block`, que substitui o `min-height` perdido. */
+    #benefits .plan-panel .link-arrow {
+        align-self: flex-start;
+        display: block;
+        max-width: 100%;
+        margin-top: 0.85rem;
+        padding-block: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        line-height: 1.35;
     }
 
-    #benefits .link-arrow {
-        min-height: 40px;
-        font-size: 0.86rem;
+    #benefits .plan-panel .link-arrow::after {
+        margin-left: 0.35rem;
+    }
+
+    /* --- O PAINEL QUE JÁ CRESCEU: escuro sem peso ----------------------- */
+    #benefits .plan-duo .plan-panel--dark {
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background:
+            linear-gradient(165deg, var(--surface-dark) 0%, var(--surface-darker) 62%);
+        box-shadow: 0 10px 28px rgba(7, 43, 69, 0.18);
+    }
+
+    #benefits .plan-panel--dark .panel-tag--light {
+        background: rgba(255, 255, 255, 0.16);
+        color: var(--color-white);
+    }
+
+    #benefits .plan-panel--dark .plan-panel-desc {
+        color: rgba(255, 255, 255, 0.82);
+    }
+
+    #benefits .plan-panel--dark .plan-panel-inner {
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    #benefits .plan-panel--dark .panel-price-note {
+        color: rgba(255, 255, 255, 0.76);
+    }
+
+    #benefits .plan-duo .plan-panel--dark .plan-panel-list {
+        border-top-color: rgba(255, 255, 255, 0.16);
+    }
+
+    #benefits .plan-panel--dark .plan-panel-list li {
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* "Tudo do Comércio, mais:" é divisória, não benefício: fecha o que veio
+       do plano anterior e abre o que só existe aqui */
+    #benefits .plan-panel--dark .plan-panel-list li:first-child {
+        padding-bottom: 0.7rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        color: var(--color-white);
+        font-size: 0.88rem;
+    }
+
+    #benefits .plan-panel--dark .plan-panel-list li:first-child svg {
+        opacity: 0.55;
+    }
+
+    /* sobre fundo escuro o botão branco é o contraste máximo — e é aqui que
+       mora o reforço do plano mais avançado */
+    #benefits .plan-panel--dark .btn.btn-primary {
+        background: var(--color-white);
+        border-color: var(--color-white);
+        color: var(--brand-800);
+        box-shadow: 0 8px 20px rgba(3, 22, 37, 0.28);
+    }
+
+    #benefits .plan-panel--dark .link-arrow--light {
+        color: var(--brand-200);
     }
 
     #benefits .faq-footer {
-        margin-top: 1rem !important;
+        margin-top: 1.15rem !important;
     }
 
     /* --- 19. FAQ: cada pergunta num cartão, cabeçalho centrado ----------
@@ -9765,5 +9878,565 @@ body {
 
     .footer .footer-column .footer-heading {
         padding-top: 0.6rem;
+    }
+}
+
+/* ==========================================================================
+   PLANOS NO CELULAR — composição própria (2026-09-10)
+   ==========================================================================
+   Não é o desktop reduzido nem uma tabela adaptada: no celular a seção vira
+   uma PILHA de cartões em largura cheia, com a mesma ordem de leitura em
+   todos eles — selo → nome → preço → usuários → CTA → "Ver o que inclui" —
+   para o olho comparar quatro planos descendo em linha reta.
+
+   Decisões de composição, na ordem em que o olho encontra:
+
+   1. LARGURA — um cartão por linha, 18px de margem lateral (--gutter), a
+      mesma dos demais blocos da página. Nada lado a lado: em 390px cada
+      cartão tinha 113px e o nome do plano encostava nas duas bordas.
+   2. PREÇO — mora na mesma linha do nome, alinhado à direita e ancorado pela
+      base: o número é o maior elemento do cartão (1.95rem), "R$" e "/mês"
+      ficam menores e em cinza, sem perder a leitura "R$ 89/mês". Assim
+      "quanto custa" e "qual plano é" entram juntos, numa varredura só.
+   3. USUÁRIOS — pílula discreta, não texto solto: é o dado que responde
+      "cabe minha equipe?" e precisa ser achado sem ler o cartão inteiro.
+   4. CTA — "Testar grátis" em largura cheia e 48px de altura em todos os
+      cartões; a diferença de peso entre planos vem da cor, não do tamanho.
+   5. "VER O QUE INCLUI" — ação secundária declarada: sem caixa preenchida,
+      só rótulo azul e chevron, alinhada à esquerda com o resto. Não compete
+      com o CTA e continua com 44px de alvo de toque.
+
+   O PLANO POPULAR é o ponto focal, por acúmulo de sinais discretos:
+   borda de 2px no azul da marca, filete de acento no topo do cartão, fundo
+   levemente tingido, selo sólido (azul cheio, texto branco) em vez de
+   pastel, sombra um pouco mais alta e o único CTA em azul preenchido. Ele
+   também é o único que nasce com a lista de recursos aberta — o
+   "o que eu ganho" já visível é o argumento mais forte que ele tem. Nenhuma
+   animação nova: só cor, peso e elevação.
+
+   Nada aqui existe fora da media query: o desktop segue com os quatro
+   cartões em quatro colunas, intocado.
+   ========================================================================== */
+@media (max-width: 767.98px) {
+
+    /* o cabeçalho fixo cobria o rótulo "PLANOS" e o topo do título quando se
+       chegava por âncora (#pricing, menu, links do rodapé) */
+    #pricing {
+        scroll-margin-top: calc(var(--nav-h) + 0.75rem);
+        margin-bottom: 0.9rem;     /* respiro até o bloco de Segmentos, antes 8px */
+    }
+
+    /* ritmo do cabeçalho: rótulo → título → subtítulo → primeiro cartão */
+    #pricing .section-header {
+        margin-bottom: 1.35rem;
+    }
+
+    #pricing .section-header .section-title {
+        margin: 0.5rem 0 0.75rem !important;   /* 12px até o subtítulo, antes 9 */
+    }
+
+    #pricing .section-subtitle {
+        max-width: 34ch;
+        margin-inline: auto;
+    }
+
+    /* --- a pilha ---------------------------------------------------------- */
+    #pricing .price-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;                 /* 16px: cartões separados, sem parecerem soltos */
+        align-items: stretch;
+    }
+
+    /* --- o cartão: uma ordem de leitura só, igual nos quatro ------------- */
+    /* `position: static` NÃO é decoração: a camada de cartas empilhadas
+       (max-width:999px) deixa um `top: calc(--nav-h + 14px + --i*10px)` nos
+       filhos da grade. Com `relative` esse `top` volta a valer e empurra cada
+       cartão 74px, 84px, 94px… para baixo — medido: o ERP Completo saía da
+       grade e cobria a linha "Sem cartão de crédito · Cancele quando quiser". */
+    #pricing .price-card {
+        position: static;
+        top: auto;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            "tag    tag"
+            "name   value"
+            "desc   desc"
+            "users  users"
+            "cta    cta"
+            "toggle toggle"
+            "list   list";
+        column-gap: 0.85rem;
+        row-gap: 0;
+        align-items: start;
+        margin: 0;
+        padding: 1.05rem 1.05rem 1.1rem;
+        border-radius: 1.15rem;
+        box-shadow: var(--shadow-sm);
+    }
+
+    #pricing .price-icon {
+        display: none;                     /* o selo já identifica o plano */
+    }
+
+    #pricing .price-tag {
+        grid-area: tag;
+        justify-self: start;
+        margin: 0 0 0.6rem;
+        padding: 0.24rem 0.6rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.06em;
+    }
+
+    #pricing .price-name {
+        grid-area: name;
+        align-self: end;
+        font-size: 1.22rem;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+    }
+
+    #pricing .price-desc {
+        grid-area: desc;
+        min-height: 0;
+        max-width: 42ch;
+        margin: 0.4rem 0 0;
+        font-size: 0.87rem;
+        line-height: 1.45;
+        color: var(--color-muted);
+    }
+
+    /* preço na mesma linha do nome, base alinhada com a base dele: o número é
+       o maior elemento do cartão e entra na mesma varredura do nome do plano */
+    #pricing .price-value {
+        grid-area: value;
+        justify-self: end;
+        align-self: end;
+        margin: 0;
+        font-size: 1.95rem;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    #pricing .price-cur {
+        align-self: baseline;
+        margin-top: 0;
+        font-size: 0.78rem;
+        font-weight: 700;
+    }
+
+    #pricing .price-per {
+        font-size: 0.76rem;
+        font-weight: 600;
+    }
+
+    /* "cabe minha equipe?" — pílula, não texto solto no meio do cartão */
+    #pricing .price-users {
+        grid-area: users;
+        justify-self: start;
+        margin: 0.85rem 0 0;
+        padding: 0.26rem 0.6rem;
+        border-radius: var(--radius-pill);
+        background: var(--color-gray-100);
+        color: var(--color-gray-600);
+        font-size: 0.66rem;
+        letter-spacing: 0.04em;
+    }
+
+    #pricing .price-cta {
+        grid-area: cta;
+        width: 100%;
+        margin: 0.95rem 0 0;
+        padding: 0.85rem 1rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        min-height: 48px;
+    }
+
+    /* Os CTAs dos planos comuns não podem parecer botão fantasma: ganham
+       fundo tingido, borda da marca e texto azul — claramente acionáveis.
+       A hierarquia contra o plano recomendado vem da COR (azul-claro contra
+       azul cheio), não do tamanho: os quatro têm a mesma altura e largura. */
+    #pricing .price-card:not(.price-card--pop) .price-cta {
+        background: var(--surface-tint);
+        border: 1.5px solid var(--brand-200);
+        color: var(--brand-700);
+    }
+
+    /* ação secundária declarada: sem caixa cheia, não disputa com o CTA */
+    #pricing .price-toggle {
+        grid-area: toggle;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.35rem;
+        justify-self: stretch;
+        margin: 0.15rem 0 0;
+        padding: 0.5rem 0.6rem;
+        min-height: 44px;
+        font: inherit;
+        font-size: 0.85rem;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--brand-700);
+        background: transparent;
+        border: 0;
+        border-radius: var(--radius-pill);
+        cursor: pointer;
+    }
+
+    #pricing .price-toggle svg {
+        width: 15px;
+        height: 15px;
+        flex: 0 0 auto;
+        transition: transform var(--transition-fast);
+    }
+
+    #pricing .price-card.is-open .price-toggle svg {
+        transform: rotate(180deg);
+    }
+
+    #pricing .price-list {
+        grid-area: list;
+        margin: 0.35rem 0 0;
+        padding-top: 0.85rem;
+        gap: 0.55rem;
+    }
+
+    #pricing .price-list li {
+        font-size: 0.875rem;
+        line-height: 1.45;
+    }
+
+    #pricing .price-list svg {
+        width: 16px;
+        height: 16px;
+        margin-top: 2px;
+    }
+
+    .has-js #pricing .price-card:not(.is-open) .price-list {
+        display: none;
+    }
+
+    #pricing .price-card.is-open .price-list {
+        animation: faqIn 300ms var(--e-out) both;
+    }
+
+    /* --- O PLANO RECOMENDADO -------------------------------------------- */
+    #pricing .price-card--pop {
+        padding: 1.2rem 1.1rem 1.25rem;      /* um pouco mais largo por dentro */
+        border: 2px solid var(--brand-400);
+        background:
+            linear-gradient(180deg, var(--surface-tint) 0%, var(--color-white) 52%);
+        box-shadow: var(--shadow-lg);
+    }
+
+    /* selo sólido: o único preenchido, contra os pastéis dos outros planos */
+    #pricing .price-card--pop .price-tag--pop {
+        background: var(--brand-600);
+        color: var(--color-white);
+        box-shadow: 0 2px 8px rgba(6, 115, 188, 0.28);
+    }
+
+    #pricing .price-card--pop .price-name {
+        font-size: 1.3rem;
+    }
+
+    #pricing .price-card--pop .price-value {
+        font-size: 2.1rem;
+        color: var(--brand-800);
+    }
+
+    #pricing .price-card--pop .price-users {
+        background: var(--brand-100);
+        color: var(--brand-700);
+    }
+
+    /* o CTA de maior peso da seção — os outros seguem contornados */
+    #pricing .price-card--pop .price-cta {
+        box-shadow: 0 8px 20px rgba(6, 115, 188, 0.26);
+    }
+
+    #pricing .price-card--pop .price-list {
+        border-top-color: var(--brand-100);
+    }
+
+    /* --- 320px: onde o preço grande e o nome não dividem a linha --------- */
+    @media (max-width: 359.98px) {
+        #pricing .price-card {
+            grid-template-columns: minmax(0, 1fr);
+            grid-template-areas:
+                "tag"
+                "name"
+                "value"
+                "desc"
+                "users"
+                "cta"
+                "toggle"
+                "list";
+            padding: 0.95rem 0.9rem 1rem;
+        }
+
+        #pricing .price-value {
+            justify-self: start;
+            margin-top: 0.4rem;
+        }
+
+        #pricing .price-desc {
+            margin-top: 0.45rem;
+        }
+
+        #pricing .price-name,
+        #pricing .price-card--pop .price-name {
+            font-size: 1.15rem;
+        }
+    }
+}
+
+/* ==========================================================================
+   RÓTULOS DE SEÇÃO NO CELULAR: todos centralizados (2026-09-10)
+   ==========================================================================
+   Medido em 390px: 13 dos 19 rótulos ("PLANOS", "SEGMENTOS", "DEPOIMENTOS"…)
+   nascem centralizados porque vivem num `.section-header`; os outros seis
+   ficavam à esquerda por herdarem o alinhamento de um layout de DUAS COLUNAS
+   — "ESTOQUE", "NOVIDADE", "FIADO" e "LOJA ONLINE" (`.split-content`),
+   "ATENDIMENTO" (`.coverage-content`) e "FUNCIONALIDADES" (um
+   `.section-header` com `text-align:left` no atributo style). Empilhado, a
+   coluna virou a largura inteira e esse alinhamento perdeu o motivo: ficava
+   um rótulo colado na margem esquerda no meio de uma página centralizada.
+
+   Centraliza o CABEÇALHO — rótulo, título e parágrafo de abertura. Lista de
+   recursos, nota e botão continuam à esquerda: texto corrido em bandeira
+   centralizada custa legibilidade, e é justamente o que as seções já
+   centralizadas fazem.
+
+   Seletores por classe, não por id: assim vale para as páginas internas
+   (guias, segmentos, soluções) que usam a mesma marcação. Fora do celular
+   nada muda — no desktop o texto divide a linha com a imagem e o alinhamento
+   à esquerda é o correto.
+   ========================================================================== */
+@media (max-width: 767.98px) {
+
+    /* O alinhamento tem de vir do PAI: `.section-label` é `inline-block`, e
+       `text-align`/`margin-inline: auto` aplicados nele mesmo não movem a
+       caixa — centralizam o texto dentro dela. Então o container centraliza e
+       o que precisa ficar em bandeira à esquerda é devolvido logo abaixo. */
+    .split .split-content,
+    .coverage-content,
+    .features .section-header {
+        text-align: center !important;   /* vence o text-align inline do #features */
+        margin-inline: auto !important;
+    }
+
+    .features .section-header {
+        max-width: none !important;      /* o style inline trava em 640px */
+    }
+
+    .coverage-content > .section-subtitle,
+    .features .section-header > .section-subtitle {
+        margin-inline: auto !important;  /* vence o margin-left:0 inline */
+    }
+
+    /* de volta à esquerda: lista de recursos, nota, botão e o que mais o
+       painel tiver. Texto corrido centralizado custa legibilidade — o
+       cabeçalho é o que centraliza, como nas seções que já eram centradas. */
+    /* Nas seções divididas o parágrafo de abertura tem 4 a 6 linhas em 390px:
+       centralizado, cada linha começa num ponto diferente e a leitura custa.
+       Centralizam o rótulo e o título; o corpo do texto fica em bandeira à
+       esquerda. Em `.coverage-content` e no `#features` o parágrafo é o
+       `.section-subtitle` curto — o mesmo elemento que já vem centralizado nas
+       outras seções — e continua centralizado. */
+    .split .split-content > *:not(.section-label):not(.split-title),
+    .coverage-content > *:not(.section-label):not(.section-title):not(.section-subtitle) {
+        text-align: left;
+    }
+}
+
+/* ==========================================================================
+   FUNCIONALIDADES NO CELULAR: abas na lateral, trocadas pelo scroll
+   (2026-09-10)
+   ==========================================================================
+   No desktop esta seção já funciona assim: o trilho é mais alto que a tela, o
+   miolo fica preso (`position: sticky`) e o JS troca a aba ativa conforme o
+   avanço da rolagem. No celular o efeito estava desligado por uma media query
+   `max-width: 900px` que zerava a altura do trilho e soltava o pin — as abas
+   viravam uma linha rolável no topo.
+
+   Aqui o trilho volta a valer no celular, com a coluna de abas à ESQUERDA e o
+   painel da área ativa à direita, na mesma linha. A trilha vertical de
+   progresso (o filete com o marcador) reaparece, então dá para ver em que
+   ponto dos quatro a rolagem está.
+
+   Duas fronteiras, de propósito:
+   · abaixo de 360px o trilho fica DESLIGADO (o JS também) — a tela é curta e
+     o miolo preso cortaria o painel; lá seguem as abas por clique;
+   · `prefers-reduced-motion: reduce` continua desligando tudo — quem pediu
+     menos movimento não é levado a uma tela que prende a rolagem.
+
+   Alturas em `svh` (small viewport height) e não `vh`: no celular a barra de
+   endereço entra e sai, e com `vh` o miolo preso pulava a cada mudança.
+   ========================================================================== */
+@media (min-width: 360px) and (max-width: 767.98px) and (prefers-reduced-motion: no-preference) {
+
+    /* --- o trilho e o miolo preso ---------------------------------------- */
+    .js-tabs-scroll .tabs-scroll[data-tabs-scroll] {
+        /* uma tela para a primeira aba + 44svh de curso para cada troca */
+        height: calc(100svh + (var(--tabs-count, 4) - 1) * 44svh);
+    }
+
+    .js-tabs-scroll .tabs-pin {
+        position: sticky;
+        top: 0;
+        min-height: 100svh;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        /* o miolo fica entre a navbar fixa e a barra de CTA do rodapé */
+        padding: calc(var(--nav-h) + 0.5rem) 0 calc(var(--sticky-h) + 0.5rem);
+        box-sizing: border-box;
+    }
+
+    .js-tabs-scroll .tabs-pin > .container {
+        width: calc(100% - (var(--gutter) - var(--block-x)) * 2);
+    }
+
+    .js-tabs-scroll .features .tabs-pin > .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    /* --- abas à esquerda, painel à direita ------------------------------- */
+    #features .display-tabs {
+        display: grid;
+        grid-template-columns: minmax(0, 104px) minmax(0, 1fr);
+        gap: 0.95rem;
+        align-items: start;
+        margin-top: 0.5rem;
+    }
+
+    #features .display-tablist {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0.1rem;
+        padding-left: 0.7rem;      /* faixa da trilha de progresso */
+    }
+
+    /* a trilha e o marcador voltam a aparecer (a media de 900px os esconde) */
+    .js-tabs-scroll #features .display-tablist::before {
+        display: block;
+        left: 0;
+        top: 0.3rem;
+        bottom: 0.3rem;
+        width: 2px;
+    }
+
+    .js-tabs-scroll #features .tabs-progress {
+        display: block;
+        left: 0;
+        width: 2px;
+    }
+
+    /* as abas são o herói da seção (no desktop vão a 2,2rem): aqui ficam no
+       maior corpo que a coluna de 104px aceita sem quebrar "Clientes" */
+    #features .display-tab {
+        font-size: 1.12rem;
+        line-height: 1.2;
+        text-align: left;
+        padding: 0.65rem 0;
+        min-height: 46px;          /* alvo do dedo: a aba continua clicável */
+    }
+
+    /* --- painel: cápsulas mais enxutas para caber na coluna da direita --- */
+    /* altura reservada para o painel mais alto (Gestão, com cinco cápsulas):
+       sem ela a página pulava a cada troca de aba */
+    #features .display-panel {
+        min-height: 264px;
+    }
+
+    #features .capsule-cloud {
+        gap: 0.45rem;
+    }
+
+    #features .capsule {
+        gap: 0.5rem;
+        padding: 0.38rem 0.8rem 0.38rem 0.38rem;
+        font-size: 0.88rem;
+    }
+
+    #features .capsule-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    #features .capsule-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    #features .panel-note {
+        margin-top: 0.85rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* o rodapé da seção não entra no miolo preso: ficaria competindo com o
+       painel na altura de tela que sobra */
+    .js-tabs-scroll #features .tabs-pin .faq-footer {
+        margin-top: 1rem !important;
+        font-size: 0.84rem;
+        text-align: center !important;   /* acompanha o cabeçalho centralizado */
+    }
+
+    /* --- TELA CURTA (640px de altura e menos) ---------------------------
+       Medido num 360x640: o miolo preso tem 522px úteis entre a navbar e a
+       barra de CTA, e o painel de Gestão (cinco cápsulas + nota) empurrava o
+       "Veja cada recurso nas páginas de solução" para trás da barra. Nada é
+       escondido — o conteúdo é compactado até caber. */
+    @media (max-height: 700px) {
+        #features .display-tab {
+            font-size: 1.05rem;
+            padding: 0.5rem 0;
+            min-height: 44px;
+        }
+
+        #features .display-panel {
+            min-height: 226px;
+        }
+
+        #features .capsule-cloud {
+            gap: 0.32rem;
+        }
+
+        #features .capsule {
+            padding: 0.3rem 0.7rem 0.3rem 0.3rem;
+            font-size: 0.82rem;
+        }
+
+        #features .capsule-icon {
+            width: 27px;
+            height: 27px;
+        }
+
+        #features .capsule-icon svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        #features .panel-note {
+            margin-top: 0.6rem;
+            font-size: 0.83rem;
+            line-height: 1.4;
+        }
+
+        .js-tabs-scroll #features .tabs-pin .faq-footer {
+            margin-top: 0.7rem !important;
+            font-size: 0.8rem;
+        }
+
+        #features .section-header {
+            margin-bottom: 0.75rem;
+        }
     }
 }
