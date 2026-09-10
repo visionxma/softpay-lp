@@ -9242,29 +9242,48 @@ body {
        largura em que o rotulo mais longo cabe inteiro em 13px.
        O principio trazido da referencia e a GRADE — os links a vista, densos —
        nao o tamanho da fonte nem a contagem de colunas. */
+    /* Um grupo por faixa, links correndo na horizontal.
+       Por que nao mais colunas: medido em 390px, quatro colunas dariam 82px
+       cada e cinco rotulos nao caberiam nem em fonte 11px — "O que e sistema
+       de gestao" sozinho precisa de 151px. A largura acabou; o que sobrava
+       era a altura. Empilhado, cada link gastava uma faixa inteira de 40px
+       mesmo quando o texto ocupava um terco da linha. Correndo na horizontal,
+       cinco links cabem em duas linhas em vez de cinco. */
     .footer .footer-links {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.15rem 1rem;
-        align-items: start;
+        display: block;
     }
 
     .footer .footer-column {
-        min-width: 0;          /* filho de grade encolhe em vez de estourar */
-        padding-bottom: 0.5rem;
+        min-width: 0;
+        padding: 0;
     }
 
+    /* O respiro fica ANTES do titulo, nunca depois: assim cada titulo pertence
+       visualmente ao grupo que vem abaixo dele. Com o espaco distribuido por
+       igual, a ultima linha de um grupo encostava no titulo do seguinte e nao
+       se sabia a quem o link pertencia. */
     .footer .footer-column .footer-heading {
-        margin: 0 0 0.15rem;
-        padding-top: 0.55rem;
-        font-size: 0.72rem;
-        letter-spacing: 0.06em;
-        opacity: 0.62;         /* o titulo organiza, o link e que se le */
+        margin: 0;
+        padding-top: 0.95rem;
+        line-height: 1.3;
+        font-size: 0.66rem;
+        letter-spacing: 0.07em;
+        opacity: 0.5;          /* o titulo so organiza; o link e que se le */
+    }
+
+    .footer .footer-column:first-child .footer-heading {
+        padding-top: 0.35rem;  /* o primeiro ja tem o respiro do bloco da marca */
     }
 
     .footer .footer-column ul {
-        gap: 0;
+        display: flex;
+        flex-direction: row;   /* a regra base do rodape define column: sem isto os links continuam empilhados */
+        flex-wrap: wrap;
+        align-items: baseline;
+        column-gap: 0.8rem;    /* respiro suficiente para o dedo separar um do outro */
+        row-gap: 0;
         padding: 0;
+        margin: 0;
     }
 
     .footer .footer-column ul + .footer-heading,
@@ -9273,20 +9292,17 @@ body {
         display: none;   /* os links legais ficam na linha compacta do fim */
     }
 
-    /* 44px de area tocavel com 13px de texto: a altura vem do line-height, nao
-       de padding — assim o alvo continua confortavel e a lista fica densa. */
+    /* Numa faixa horizontal a area tocavel nao pode vir de min-height: isso
+       esticaria a linha inteira. Vem do padding vertical, que da 34px de alvo
+       mantendo as linhas juntas. */
     .footer .footer-column a {
-        display: flex;
-        align-items: center;
-        padding: 0.35rem 0;
-        min-height: 40px;      /* mesma altura de .hero-announce e .price-toggle */
-        line-height: 1.3;      /* o texto fica junto; a altura vem do min-height */
-        font-size: 0.82rem;
-        /* Sem nowrap/ellipsis: em 320px a coluna cai para ~134px e cortava
-           "WhatsApp (86) 99819-3851" em 34px. Esconder o proprio conteudo e
-           pior que gastar uma segunda linha nas telas mais estreitas — em
-           390px praticamente tudo continua cabendo numa linha so. */
-        overflow-wrap: anywhere;   /* 'suporte@softpaybr.com' nao tem espaco onde quebrar */
+        display: inline-block;
+        padding: 0.52rem 0;    /* 32px de alvo — abaixo disso a auditoria marca
+                                  como grave, e economizar 38px de rodape nao
+                                  justifica encolher o alvo do dedo */
+        line-height: 1.25;
+        font-size: 0.8rem;
+        white-space: nowrap;   /* o rotulo nao parte no meio: ele pula para a proxima linha inteiro */
     }
 
     .footer .footer-bottom {
@@ -9539,11 +9555,14 @@ body {
    documento inteiro em 3px. O ponto de quebra vem da medida, nao da tabela de
    larguras habituais. */
 @media (max-width: 359.98px) {
-    .footer .footer-links {
-        grid-template-columns: 1fr;
+    /* Em 320px cabem menos rotulos por linha, entao a faixa quebra mais vezes.
+       Nada a corrigir na grade — ela nao existe mais; so o respiro entre
+       vizinhos aumenta um pouco para o dedo nao errar de link. */
+    .footer .footer-column ul {
+        column-gap: 0.7rem;
     }
 
     .footer .footer-column a {
-        min-height: 44px;   /* em coluna unica sobra largura: o alvo volta a 44 */
+        font-size: 0.78rem;
     }
 }
