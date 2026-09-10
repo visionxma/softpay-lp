@@ -1122,6 +1122,61 @@ section {
     color: var(--color-primary-light);
 }
 
+/* ---------------------------------------------------------------------------
+   RODAPÉ INFERIOR — canais e assinatura
+   Vale em qualquer largura. O bloco do celular abaixo só reposiciona; se o
+   tamanho dos ícones morasse lá dentro, no desktop os SVG nasceriam sem
+   dimensão e o rodapé inchava (medido: 770px -> 1316px).
+   --------------------------------------------------------------------------- */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-social a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform var(--transition-fast);
+}
+
+.footer-social a:hover {
+    transform: translateY(-2px);
+}
+
+.footer-social svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Assinatura da VisionX no formato do visionxma.com: ícone X + copyright +
+   CNPJ numa linha. Discreta de propósito — quem assina não disputa atenção
+   com o produto. */
+.footer-by {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-by:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-by .footer-x {
+    flex: 0 0 auto;
+    width: 13px;
+    height: 13px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding-top: var(--spacing-lg);
@@ -9242,19 +9297,25 @@ body {
        largura em que o rotulo mais longo cabe inteiro em 13px.
        O principio trazido da referencia e a GRADE — os links a vista, densos —
        nao o tamanho da fonte nem a contagem de colunas. */
-    /* Um grupo por faixa, links correndo na horizontal.
-       Por que nao mais colunas: medido em 390px, quatro colunas dariam 82px
-       cada e cinco rotulos nao caberiam nem em fonte 11px — "O que e sistema
-       de gestao" sozinho precisa de 151px. A largura acabou; o que sobrava
-       era a altura. Empilhado, cada link gastava uma faixa inteira de 40px
-       mesmo quando o texto ocupava um terco da linha. Correndo na horizontal,
-       cinco links cabem em duas linhas em vez de cinco. */
+    /* Quatro grupos lado a lado, no padrao do rodape de site.froxbr.com.
+       A coluna vertical se le de relance — o olho desce uma lista — enquanto
+       links correndo na horizontal obrigam a procurar onde um grupo termina.
+       Cabe porque o rotulo quebra ENTRE PALAVRAS: medido em 390px, a coluna
+       fica com 82px e nenhuma palavra isolada passa disso ("Distribuidora",
+       a maior, tem 74px). A referencia recorre a hifenizacao e parte palavra
+       no meio ("Demons-tracao", "Privacida-de"); aqui isso nao e preciso. */
     .footer .footer-links {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        /* 0.34rem entre colunas: o vao precisa render 3,5px por coluna para
+           "softpaybr.com" (86px) caber inteiro. Com 0.5rem a coluna ficava em
+           82,5px e o dominio partia como "softpaybr.co / m". */
+        gap: 0 0.34rem;
+        align-items: start;
     }
 
     .footer .footer-column {
-        min-width: 0;
+        min-width: 0;          /* filho de grade encolhe em vez de estourar */
         padding: 0;
     }
 
@@ -9262,55 +9323,93 @@ body {
        visualmente ao grupo que vem abaixo dele. Com o espaco distribuido por
        igual, a ultima linha de um grupo encostava no titulo do seguinte e nao
        se sabia a quem o link pertencia. */
+    /* Reserva a altura de duas linhas: "Para o seu negocio" quebra e os
+       demais nao, e sem isso cada lista comecava numa altura diferente — o
+       tipo de desalinhamento que faz a tela parecer montada, nao projetada. */
     .footer .footer-column .footer-heading {
-        margin: 0;
-        padding-top: 0.95rem;
-        line-height: 1.3;
-        font-size: 0.66rem;
-        letter-spacing: 0.07em;
+        margin: 0 0 0.2rem;
+        padding-top: 0.2rem;
+        min-height: calc(2 * 1.25 * 0.63rem);
+        line-height: 1.25;
+        font-size: 0.63rem;
+        letter-spacing: 0.05em;
         opacity: 0.5;          /* o titulo so organiza; o link e que se le */
-    }
-
-    .footer .footer-column:first-child .footer-heading {
-        padding-top: 0.35rem;  /* o primeiro ja tem o respiro do bloco da marca */
+        overflow-wrap: break-word;
     }
 
     .footer .footer-column ul {
         display: flex;
-        flex-direction: row;   /* a regra base do rodape define column: sem isto os links continuam empilhados */
-        flex-wrap: wrap;
-        align-items: baseline;
-        column-gap: 0.8rem;    /* respiro suficiente para o dedo separar um do outro */
-        row-gap: 0;
+        flex-direction: column;
+        gap: 0;
         padding: 0;
         margin: 0;
     }
 
-    .footer .footer-column ul + .footer-heading,
-    .footer .footer-column .footer-heading--sub,
-    .footer .footer-column .footer-heading--sub + ul {
-        display: none;   /* os links legais ficam na linha compacta do fim */
+    /* Termos, Privacidade e Reembolso passam a viver na propria coluna, como
+       na referencia. Antes ficavam numa linha solta no rodape de baixo, que
+       agora e so assinatura. */
+    .footer .footer-column .footer-heading--sub {
+        padding-top: 0.7rem;
+        min-height: 0;
     }
 
-    /* Numa faixa horizontal a area tocavel nao pode vir de min-height: isso
-       esticaria a linha inteira. Vem do padding vertical, que da 34px de alvo
-       mantendo as linhas juntas. */
+    .footer .footer-legal-mobile {
+        display: none;
+    }
+
+    /* O alvo vem do padding: um rotulo de uma linha fica com 32px, e o de duas
+       cresce sozinho. Sem hyphens: a quebra acontece entre palavras, nunca no
+       meio de uma delas. */
     .footer .footer-column a {
-        display: inline-block;
-        padding: 0.52rem 0;    /* 32px de alvo — abaixo disso a auditoria marca
-                                  como grave, e economizar 38px de rodape nao
-                                  justifica encolher o alvo do dedo */
-        line-height: 1.25;
-        font-size: 0.8rem;
-        white-space: nowrap;   /* o rotulo nao parte no meio: ele pula para a proxima linha inteiro */
+        display: block;
+        padding: 0.53rem 0;    /* 32px de alvo com a fonte em 11,7px */
+        line-height: 1.3;
+        font-size: 0.73rem;
+        hyphens: none;
+        overflow-wrap: break-word;   /* rede de seguranca para palavra unica gigante */
     }
 
     .footer .footer-bottom {
         flex-direction: column;
-        gap: 0.2rem;
-        padding-top: 0.85rem;
-        font-size: 0.76rem;
+        align-items: center;
+        gap: 0.85rem;
+        padding-top: 1rem;
         text-align: center;
+    }
+
+    .footer .footer-copy {
+        font-size: 0.7rem;
+        opacity: 0.55;
+    }
+
+    .footer .footer-social {
+        gap: 0.75rem;
+    }
+
+    .footer .footer-social a {
+        width: 44px;          /* icone e alvo ao mesmo tempo: 44px de dedo */
+        height: 44px;
+    }
+
+    .footer .footer-social a:hover {
+        transform: none;      /* nao ha ponteiro para pairar */
+    }
+
+    .footer .footer-social a:active {
+        transform: scale(0.94);
+    }
+
+    .footer .footer-by {
+        align-items: flex-start;
+        justify-content: center;
+        max-width: 34ch;      /* 30ch partia a assinatura em tres linhas */
+        font-size: 0.66rem;
+    }
+
+    .footer .footer-by .footer-x {
+        width: 12px;
+        height: 12px;
+        margin-top: 0.12rem;   /* alinha o X pela primeira linha do texto */
     }
 
     .footer .footer-bottom p {
@@ -9555,14 +9654,14 @@ body {
    documento inteiro em 3px. O ponto de quebra vem da medida, nao da tabela de
    larguras habituais. */
 @media (max-width: 359.98px) {
-    /* Em 320px cabem menos rotulos por linha, entao a faixa quebra mais vezes.
-       Nada a corrigir na grade — ela nao existe mais; so o respiro entre
-       vizinhos aumenta um pouco para o dedo nao errar de link. */
-    .footer .footer-column ul {
-        column-gap: 0.7rem;
+    /* Em 320px a coluna cairia para 66px e rotulos de tres linhas viravam
+       quatro. Duas colunas por linha devolvem 137px a cada uma. */
+    .footer .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 0.75rem;
     }
 
-    .footer .footer-column a {
-        font-size: 0.78rem;
+    .footer .footer-column .footer-heading {
+        padding-top: 0.6rem;
     }
 }
