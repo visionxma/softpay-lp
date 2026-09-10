@@ -821,6 +821,25 @@ document.documentElement.classList.add('has-js');
         });
     });
 
+    /* --- FAQ: uma resposta aberta por vez -------------------------------
+       Com várias abertas ao mesmo tempo a lista virava um paredão e a pergunta
+       seguinte saía da tela. Abrir uma fecha a anterior — o leitor não precisa
+       lembrar de fechar o que já leu.
+       Feito em JS e não pelo atributo `name` dos <details>, que só existe em
+       navegadores recentes: aqui vale em todos. */
+    (function () {
+        var listaFaq = document.querySelector('#faq .faq-list');
+        if (!listaFaq) return;
+        listaFaq.addEventListener('toggle', function (ev) {
+            var alvo = ev.target;
+            if (!alvo || alvo.tagName !== 'DETAILS' || !alvo.open) return;
+            var irmaos = listaFaq.querySelectorAll('details[open]');
+            for (var i = 0; i < irmaos.length; i++) {
+                if (irmaos[i] !== alvo) irmaos[i].open = false;
+            }
+        }, true);   // captura: o evento toggle não sobe pela árvore
+    })();
+
     /* --- FAQ: quatro perguntas à vista; "Ver mais" revela o resto -------- */
     (function () {
         var lista = document.querySelector('.faq-list[data-faq-collapsible]');

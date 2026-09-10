@@ -204,7 +204,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="/style.css?v=332583f7ab" />
+    <link rel="stylesheet" href="/style.css?v=7f59cc57d7" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -353,7 +353,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
     <a href="%(app)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
 
-    <script src="/script.js?v=3b543e7289"></script>
+    <script src="/script.js?v=454ad97461"></script>
 </body>
 
 </html>

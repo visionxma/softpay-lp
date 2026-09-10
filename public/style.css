@@ -9146,6 +9146,12 @@ body {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        /* A regra base .faq-list traz `margin: 0 auto`. Margem automatica
+           ABSORVE o espaco livre e impede o item de esticar na grade: a lista
+           ficava com a largura do texto mais longo (260px numa coluna de
+           354px) e so parecia certa quando uma resposta aberta empurrava o
+           conteudo. Zerar a margem lateral devolve o estiramento. */
+        margin-inline: 0;
     }
 
     #faq.faq--split .faq-item {
