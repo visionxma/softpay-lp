@@ -8927,16 +8927,11 @@ body {
         line-height: 1.35;
     }
 
-    /* As duas variantes usam a MESMA composicao: texto a esquerda, aparelho
-       ao lado. Antes so a Versao Mobile fazia isso — a Versao Desktop caia na
-       regra base (uma coluna) e empilhava o monitor embaixo, ocupando a
-       largura toda.
-       A coluna da arte e maior aqui (44% contra 38%) porque o monitor e quase
-       quadrado (proporcao 0,95) enquanto o celular e alto (0,80): na mesma
-       fatia, o monitor sairia menor que o celular. */
+    /* No mobile, o monitor fica à esquerda e o texto à direita.
+       A arte usa 44% da largura para acomodar o monitor inteiro. */
     #showcase .showcase-desktop {
-        grid-template-columns: minmax(0, 1fr) 44%;
-        grid-template-areas: "content image";
+        grid-template-columns: 44% minmax(0, 1fr);
+        grid-template-areas: "image content";   /* a arte vem primeiro aqui */
         align-items: center;
         column-gap: 0.9rem;
     }
@@ -8965,6 +8960,7 @@ body {
         aspect-ratio: auto;
         object-fit: contain;
         border-radius: 0.6rem;
+
     }
 
     #showcase .showcase-mobile {

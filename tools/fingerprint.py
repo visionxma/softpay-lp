@@ -23,6 +23,8 @@ ARQUIVOS = ["style.css", "script.js"]
 # Imagens grandes e servidas com cache imutável. Caminho relativo a public/.
 IMAGENS = [
     "assets/COmputador.webp",
+    # arte do monitor virado para a direita, usada so no celular
+    "assets/computador-mobile-direita.webp",
     # Redimensionadas em 2026-09-09 (4,8 MB -> 86 KB nos avatares; celular.webp
     # 1,5 MB -> 55 KB). Sem o hash aqui, quem ja visitou o site continuaria
     # baixando os arquivos antigos por ate um ano, e a otimizacao nao chegaria
