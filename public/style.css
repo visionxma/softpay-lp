@@ -8086,62 +8086,77 @@ body {
         bottom: calc(var(--sticky-h) + 0.6rem + env(safe-area-inset-bottom, 0px));
     }
 
-    /* --- 3. HERO: o mockup vira fundo, o texto vira a composição --------- */
+    /* --- 3. HERO: uma tela, texto centralizado, arte fechando a base ----
+       ==================================================================
+       Duas medições guiaram esta composição.
+
+       A primeira, do estado anterior: a hero tinha 576px em 390x844 para
+       723px úteis (entre a navbar de 60px e a barra de CTA de 58px) — 235px
+       sobrando, 355px em 430x932. A seção seguinte subia para a primeira
+       tela e disputava com o título.
+
+       A segunda, do FroX (site.froxbr.com, medido em 390x844 com o Design
+       Engine): a hero dele usa **100% da largura** com o texto CENTRALIZADO
+       e uma foto em largura cheia ANCORADA NA BASE, sangrando de borda a
+       borda, com o texto acima dela. Nada de imagem cortada num canto: o que
+       preenche a tela é a arte, de ponta a ponta.
+
+       O que foi trazido de lá (estrutura, não estilo):
+       · texto centralizado — sem isso, metade da linha fica morta à direita
+         do título e do subtítulo;
+       · arte em largura cheia na base, sangrando, fechando a primeira tela;
+       · a arte é protagonista, não fantasma: opacidade cheia e enquadrada.
+
+       O que NÃO foi trazido: a paleta e a foto de contexto do FroX (a nossa
+       arte é a tela do produto), os selos em pílula sobre a imagem (o nosso
+       lugar de prova social é a linha de logotipos) e o topbar vermelho.
+
+       A arte do celular é um recorte próprio, `assets/hero-pdv-mobile.webp`
+       (1224x605, 53 KB), servido por `<picture>` só até 767.98px — o monitor
+       inteiro (1224x1285) tinha o pé recortado pelo enquadramento e pesava
+       113 KB para mostrar menos.
+
+       `svh` (small viewport height) e não `vh`: com `vh` a hero pularia
+       quando a barra de endereço do celular entra e sai. */
     #hero.hero {
-        padding: calc(var(--nav-h) + 1.1rem) 0 1.75rem;
-        min-height: 0;
-        overflow: hidden;   /* o mockup pode sangrar para fora da hero, nunca da página */
+        min-height: 100svh;
+        display: flex;
+        align-items: stretch;
+        padding: calc(var(--nav-h) + 0.75rem) 0 calc(var(--sticky-h) + 0.4rem);
+        overflow: hidden;
+    }
+
+    #hero > .container {
+        display: flex;
     }
 
     #hero .hero-grid {
-        display: block;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 0;
     }
 
     #hero .hero-text {
         position: relative;
         z-index: 1;
+        display: flex;
+        flex: 1;              /* sem isto o bloco não estica e as âncoras
+                                 `margin-top: auto` não têm espaço para
+                                 distribuir (medido: 113px de folga morta
+                                 abaixo da prova social em 390x844) */
+        flex-direction: column;
         max-width: none;
         padding-bottom: 0;
+        text-align: center;
     }
 
-    /* o mockup atrás do conteúdo: grande, ancorado à direita e embaixo,
-       translúcido, e com máscara que o dissolve na direção do texto. O que
-       fica visível é o canto do monitor — profundidade, não uma segunda
-       imagem disputando com o título. */
-    #hero .hero-media {
-        position: absolute;
-        z-index: 0;
-        /* a TELA do monitor fica atrás do título e do subtítulo (metade
-           direita, onde a máscara deixa aparecer); a barra de tarefas cai
-           atrás do CTA e o pé do monitor se dissolve sob a prova social */
-        inset: calc(var(--nav-h) - 6px) -32% auto auto;
-        width: 132%;
-        max-width: none;
-        margin: 0;
-        opacity: var(--hero-bg-alpha);
-        pointer-events: none;
-        user-select: none;
-        -webkit-mask-image:
-            linear-gradient(to right, transparent 0%, #000 44%),
-            linear-gradient(to bottom, #000 52%, transparent 96%);
-        -webkit-mask-composite: source-in;
-        mask-image:
-            linear-gradient(to right, transparent 0%, #000 44%),
-            linear-gradient(to bottom, #000 52%, transparent 96%);
-        mask-composite: intersect;
-        animation: heroBgIn 1100ms var(--e-out) 60ms both;
-    }
-
-    #hero .hero-media img {
-        width: 100%;
-        height: auto;
-        display: block;
-        animation: none;
-    }
-
+    /* a pílula e a prova social são inline-block/flex: `text-align` no pai não
+       move a caixa delas, então cada uma se centraliza por conta */
     #hero .hero-announce {
+        align-self: center;
         gap: 0.4rem;
-        padding: 0.22rem 0.65rem 0.22rem 0.28rem;
+        padding: 0.22rem 0.7rem 0.22rem 0.3rem;
         font-size: 0.74rem;
         min-height: 40px;
         max-width: 100%;
@@ -8153,18 +8168,19 @@ body {
     }
 
     #hero .hero-title {
-        margin: 0.9rem 0 0.65rem;
-        font-size: clamp(1.9rem, 1.15rem + 3.7vw, 2.4rem);
-        line-height: 1.07;
-        letter-spacing: -0.03em;
+        margin: 1.05rem 0 0.7rem;
+        font-size: clamp(2.2rem, 1.35rem + 5.6vw, 2.9rem);
+        line-height: 1.04;
+        letter-spacing: -0.032em;
         max-width: none;
+        text-wrap: balance;   /* sem isto a última linha fica órfã e curta */
     }
 
     #hero .hero-subtitle {
-        margin: 0 0 1rem;
-        font-size: 0.98rem;
+        margin: 0 auto 1.1rem;
+        max-width: 34ch;      /* linha de leitura confortável, centralizada */
+        font-size: 1.02rem;
         line-height: 1.5;
-        max-width: none;
     }
 
     #hero .hero-actions {
@@ -8188,14 +8204,17 @@ body {
     }
 
     #hero .hero-offer {
-        margin: 0 0 0.9rem;
+        margin: 0 0 0.75rem;
+        justify-content: center;
         font-size: 0.82rem;
     }
 
     #hero .hero-proof {
-        gap: 0.6rem;
+        justify-content: center;
+        gap: 0.55rem;
         flex-wrap: nowrap;
         align-items: center;
+        text-align: left;     /* a frase ao lado dos logotipos segue em bandeira */
     }
 
     #hero .hero-proof-avatars img {
@@ -8208,8 +8227,32 @@ body {
     }
 
     #hero .hero-proof p {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
         line-height: 1.35;
+    }
+
+    /* --- a arte do computador NÃO aparece no celular --------------------
+       Decisão do Victor em 10/09/2026: "apague esse desktop de fundo aí".
+       Ela já tinha sido fantasma atrás do texto e depois faixa sangrando na
+       base; nas duas formas competia com o título. No celular a hero é só
+       tipografia, e a tela do produto continua aparecendo mais abaixo, na
+       seção Demonstração. No tablet e no desktop nada muda: lá a arte é a
+       coluna direita da hero.
+       O `<picture>` do HTML mantém o `<source>` do celular apontando para o
+       recorte leve: com `display: none` o Chrome ainda baixa a imagem
+       escolhida, e nesse caso ela pesa 53 KB em vez de 113 KB. */
+    #hero .hero-media {
+        display: none;
+    }
+
+    /* Sem a arte, o bloco de texto é CENTRALIZADO na tela em vez de esticado.
+       Medido: com âncoras `margin-top: auto` o espaço extra de 220px se
+       acumulava em dois vãos e abria um buraco entre o subtítulo e os botões —
+       o mesmo "espaço mal aproveitado" que a versão anterior tinha. Centrado,
+       a folga vira margem simétrica em cima e embaixo (76px em 390x844), e o
+       conteúdo lê como um bloco só. */
+    #hero .hero-text {
+        justify-content: center;
     }
 
     /* entrada do texto: rápida, escalonada, sem esperar ninguém */
@@ -8222,6 +8265,135 @@ body {
     #hero .hero-text > :nth-child(4) { animation-delay: 150ms; }
     #hero .hero-text > :nth-child(5) { animation-delay: 190ms; }
     #hero .hero-text > :nth-child(6) { animation-delay: 230ms; }
+
+    /* --- a hero por ALTURA de tela -------------------------------------
+       O clamp do título resolve a largura, não a altura. Os cortes saíram da
+       medição: em 375x667 a prova social caía 39px abaixo da barra de CTA com
+       o corpo grande, e em 320x568, 166px. */
+    @media (max-height: 779px) {
+        #hero .hero-title {
+            margin: 0.8rem 0 0.6rem;
+            font-size: clamp(1.95rem, 1.2rem + 4vw, 2.35rem);
+            line-height: 1.06;
+        }
+
+        #hero .hero-subtitle {
+            margin: 0 auto 0.85rem;
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        #hero .hero-announce {
+            min-height: 38px;
+            font-size: 0.72rem;
+        }
+
+        #hero .hero-actions .btn {
+            min-height: 47px;
+            padding: 0.7rem 1rem;
+        }
+
+        #hero .hero-actions .btn-secondary {
+            min-height: 44px;
+        }
+
+        #hero .hero-offer {
+            margin: 0 0 0.65rem;
+            font-size: 0.79rem;
+        }
+
+    }
+
+    /* tela baixa (640–699px): a arte encolhe primeiro, o texto depois */
+    @media (max-height: 699px) {
+        #hero.hero {
+            padding: calc(var(--nav-h) + 0.5rem) 0 calc(var(--sticky-h) + 0.3rem);
+        }
+
+        #hero .hero-title {
+            margin: 0.7rem 0 0.5rem;
+            font-size: clamp(1.8rem, 1.1rem + 3.4vw, 2.1rem);
+        }
+
+        #hero .hero-subtitle {
+            margin: 0 auto 0.7rem;
+            font-size: 0.92rem;
+            line-height: 1.42;
+        }
+
+        #hero .hero-proof-avatars img {
+            width: 26px;
+            height: 26px;
+        }
+
+        #hero .hero-proof p {
+            font-size: 0.78rem;
+        }
+
+    }
+
+    /* tela muito curta (até 619px, iPhone SE de 568px e celular em paisagem):
+       447px úteis não cabem o texto inteiro. A hero volta à altura natural e
+       a arte sai — ela é ilustração, e cortar a prova social seria perder
+       informação de verdade. */
+    @media (max-height: 619px) {
+        #hero.hero {
+            min-height: 0;
+            padding: calc(var(--nav-h) + 0.45rem) 0 1.3rem;
+        }
+
+        #hero .hero-title,
+        #hero .hero-actions {
+            margin-top: 0;        /* sem tela sobrando, não há o que distribuir */
+        }
+    }
+
+    /* Tela alta (820px para cima: iPhone 14/15/Pro Max, Android grande).
+       Sem a arte do computador, quem preenche a tela é a tipografia: medido em
+       430x932, o bloco centralizado deixava 123px de folga em cima e 115 em
+       baixo. Título maior e respiros maiores usam esse espaço sem abrir vão
+       entre os blocos — a folga cai para cerca de 70px de cada lado. */
+    @media (min-height: 820px) {
+        #hero .hero-title {
+            margin: 1.5rem 0 1rem;
+            font-size: clamp(2.5rem, 1.5rem + 6.2vw, 3.15rem);
+        }
+
+        #hero .hero-subtitle {
+            margin: 0 auto 1.5rem;
+            font-size: 1.08rem;
+            line-height: 1.52;
+        }
+
+        #hero .hero-actions {
+            gap: 0.6rem;
+            margin-bottom: 1rem;
+        }
+
+        #hero .hero-actions .btn {
+            min-height: 54px;
+            font-size: 1rem;
+        }
+
+        #hero .hero-actions .btn-secondary {
+            min-height: 50px;
+        }
+
+        #hero .hero-offer {
+            margin: 0 0 1rem;
+            font-size: 0.86rem;
+        }
+
+        #hero .hero-proof-avatars img {
+            width: 30px;
+            height: 30px;
+        }
+
+        #hero .hero-proof p {
+            font-size: 0.84rem;
+        }
+
+    }
 
     /* --- 4. CABEÇALHO DE SEÇÃO E TIPOGRAFIA ----------------------------- */
     .section-header {

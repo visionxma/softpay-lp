@@ -39,12 +39,14 @@
     <meta name="twitter:image" content="https://site.softpaybr.com/assets/COmputador.webp?v=84785b8377" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="/assets/COmputador.webp?v=84785b8377" fetchpriority="high" />
+    <!-- Preload só acima de 768px: no celular a arte da hero não aparece, e
+         sem o `media` o aparelho baixava 113 KB para nada. -->
+    <link rel="preload" as="image" href="/assets/COmputador.webp?v=84785b8377" fetchpriority="high" media="(min-width: 768px)" />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         media="print" onload="this.media='all';this.onload=null" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="style.css?v=00e77f716c" />
+    <link rel="stylesheet" href="style.css?v=24691462ae" />
     <link rel="icon" href="assets/icones e favicon.svg" type="image/x-icon">
 
     <!-- Meta Pixel Code -->
@@ -570,8 +572,20 @@
                 </div>
 
                 <div class="hero-media">
-                    <img src="assets/COmputador.webp?v=84785b8377" width="1224" height="1285" fetchpriority="high" decoding="async"
-                        alt="Painel do SoftPay aberto no computador, com o PDV e o resumo de vendas da loja" />
+                    <!-- No celular a arte não aparece (decisão de 10/09/2026) e o
+                         CSS a esconde. Mesmo escondida, o Chrome baixaria a
+                         imagem escolhida pelo <picture>, então o <source> do
+                         celular aponta para um GIF 1x1 transparente em base64:
+                         peso zero e nenhuma requisição. (Em data URI dentro de
+                         `srcset` não pode haver espaço nem vírgula — o
+                         atributo usa os dois como separador e a fonte é
+                         descartada em silêncio, voltando a baixar os 110 KB.) Acima de 768px vale o <img>,
+                         que é a coluna direita da hero. -->
+                    <picture>
+                        <source media="(max-width: 767.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="1" height="1" />
+                        <img src="assets/COmputador.webp?v=84785b8377" width="1224" height="1285" fetchpriority="high" decoding="async"
+                            alt="Painel do SoftPay aberto no computador, com o PDV e o resumo de vendas da loja" />
+                    </picture>
                 </div>
             </div>
         </div>

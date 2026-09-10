@@ -27,3 +27,6 @@ __pycache__/
 
 # backup local de imagens antes de otimizar (nao versionar)
 .backup-imagens-*/
+
+# backup local feito antes de editar (o historico do git ja cobre)
+*.bak-*
