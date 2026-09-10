@@ -846,33 +846,15 @@ document.documentElement.classList.add('has-js');
         });
     })();
 
-    /* --- Rodapé: cada grupo de links vira acordeão, só no celular --------
-       O título <h3> recebe um <button> por dentro enquanto a tela é
-       estreita; ao voltar ao desktop, o texto puro é restaurado. Assim o
-       DOM do desktop fica exatamente como era. */
+    /* --- Rodapé: grupos lado a lado no celular, sem acordeão -------------
+       Os quatro grupos ficavam empilhados e fechados: era preciso um toque
+       para ver cada lista, e mesmo assim a coluna única gastava altura. Numa
+       grade de duas colunas os 30 links aparecem de uma vez, na mesma altura
+       que o acordeão fechado ocupava. Sem lista escondida, o acordeão perde a
+       função — e a montagem do <button> foi removida junto.
+       A limpeza (desmontarRodape) continua: quem já tinha a página aberta com
+       o botão montado precisa recuperar o título em texto puro. */
     var colunas = [].slice.call(document.querySelectorAll('.footer .footer-column'));
-
-    function montarRodape() {
-        colunas.forEach(function (col, i) {
-            var titulo = col.querySelector('.footer-heading:not(.footer-heading--sub)');
-            var lista = col.querySelector(':scope > ul');
-            if (!titulo || !lista || titulo.querySelector('.footer-toggle')) return;
-            if (!lista.id) lista.id = 'footer-lista-' + (i + 1);
-            var texto = titulo.textContent;
-            var btn = document.createElement('button');
-            btn.type = 'button';
-            btn.className = 'footer-toggle';
-            btn.textContent = texto;
-            btn.setAttribute('aria-expanded', 'false');
-            btn.setAttribute('aria-controls', lista.id);
-            titulo.textContent = '';
-            titulo.appendChild(btn);
-            btn.addEventListener('click', function () {
-                var aberto = col.classList.toggle('is-open');
-                btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
-            });
-        });
-    }
 
     function desmontarRodape() {
         colunas.forEach(function (col) {
@@ -884,12 +866,7 @@ document.documentElement.classList.add('has-js');
         });
     }
 
-    function aplicarRodape() {
-        if (celular.matches) montarRodape(); else desmontarRodape();
-    }
-
-    aplicarRodape();
-    if (celular.addEventListener) celular.addEventListener('change', aplicarRodape);
+    desmontarRodape();
 })();
 
 /* ---------------------------------------------------------------------------
