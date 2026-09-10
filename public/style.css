@@ -8927,12 +8927,16 @@ body {
         line-height: 1.35;
     }
 
+    /* A arte tem o monitor inteiro, com o pe, em 1224x1285 (proporcao 0,95).
+       Forcar 16/10 com object-fit: cover recortava justamente a base — o
+       monitor aparecia cortado no meio, sem o pe. Nao ha espaco morto a
+       aparar nessa imagem: a proporcao dela mesma e o enquadramento certo,
+       como ja acontece com o celular na Versao Mobile. */
     #showcase .showcase-desktop .showcase-image img {
         width: 100%;
         height: auto;
-        aspect-ratio: 16 / 10;
-        object-fit: cover;
-        object-position: top center;
+        aspect-ratio: auto;
+        object-fit: contain;
         border-radius: 0.6rem;
     }
 
