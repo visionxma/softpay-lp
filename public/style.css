@@ -8927,11 +8927,38 @@ body {
         line-height: 1.35;
     }
 
+    /* As duas variantes usam a MESMA composicao: texto a esquerda, aparelho
+       ao lado. Antes so a Versao Mobile fazia isso — a Versao Desktop caia na
+       regra base (uma coluna) e empilhava o monitor embaixo, ocupando a
+       largura toda.
+       A coluna da arte e maior aqui (44% contra 38%) porque o monitor e quase
+       quadrado (proporcao 0,95) enquanto o celular e alto (0,80): na mesma
+       fatia, o monitor sairia menor que o celular. */
+    #showcase .showcase-desktop {
+        grid-template-columns: minmax(0, 1fr) 44%;
+        grid-template-areas: "content image";
+        align-items: center;
+        column-gap: 0.9rem;
+    }
+
+    #showcase .showcase-desktop .showcase-content {
+        grid-area: content;
+    }
+
+    #showcase .showcase-desktop .showcase-image {
+        grid-area: image;
+    }
+
+    /* Com a arte ao lado, o texto fica em ~56% da largura: duas colunas de
+       itens espremeriam "Lancamento de Vendas" em tres linhas. */
+    #showcase .showcase-desktop .showcase-features {
+        grid-template-columns: 1fr;
+    }
+
     /* A arte tem o monitor inteiro, com o pe, em 1224x1285 (proporcao 0,95).
        Forcar 16/10 com object-fit: cover recortava justamente a base — o
        monitor aparecia cortado no meio, sem o pe. Nao ha espaco morto a
-       aparar nessa imagem: a proporcao dela mesma e o enquadramento certo,
-       como ja acontece com o celular na Versao Mobile. */
+       aparar: a proporcao dela mesma e o enquadramento certo. */
     #showcase .showcase-desktop .showcase-image img {
         width: 100%;
         height: auto;
