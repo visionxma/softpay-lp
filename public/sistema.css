@@ -1151,26 +1151,27 @@ a.so-leitor:focus {
     .abas--rolagem { display: block; }
     .abas--rolagem .abas__trilho { display: grid; grid-template-columns: 22rem 1fr; gap: var(--sp-7); align-items: start; }
     .abas--rolagem .abas__botoes {
-        /* São TRÊS estados, e `position: sticky` só entrega dois.
-           Medido: com sticky a coluna desliza 2.450px — a altura do bloco
-           (2.768) menos a dela (318) — e depois solta. Nos últimos 318px ela
-           sobe e sai da tela em vez de acompanhar até o fim dos tópicos.
+        /* Posicionar por JavaScript a cada quadro trazia tremor: medido, saltos
+           de até 55px entre quadros. A rolagem roda no compositor e o transform
+           escrito por script chega um quadro atrasado, então a coluna "persegue"
+           a página em vez de acompanhar.
 
-           Aqui ela fica no fluxo, no topo do bloco, e cena.js escreve
-           `--desloca` a cada quadro:
-             · 0 no começo — alinhada ao primeiro tópico, para o visitante ligar
-               "PDV e caixa" ao painel do lado;
-             · acompanhando o centro da tela no meio do caminho;
-             · travado no fim, para ela terminar junto com o último tópico.
-           É transform, então não recalcula layout. */
-        position: relative;
+           `position: sticky` roda no próprio compositor — sem atraso e sem
+           tremor. O `top` é a posição em que ela gruda, e essa posição é o
+           centro da tela; daí saem os três estados sozinhos:
+             · no começo ela está no fluxo, na linha do primeiro tópico;
+             · gruda centralizada e acompanha os painéis que passam;
+             · desce junto quando o bloco termina.
+           --meia-coluna é metade da altura dela, medida no navegador (a altura
+           depende da fonte carregada). O max() evita que ela grude atrás da
+           navbar em tela baixa. */
+        position: sticky;
+        top: max(calc(var(--nav-h) + 1rem), calc(50svh - var(--meia-coluna, 10rem)));
         align-self: start;
         display: flex;
         flex-direction: column;
         align-items: stretch;
         gap: 0.25rem;
-        transform: translate3d(0, var(--desloca, 0px), 0);
-        will-change: transform;
     }
     .abas--rolagem .abas__painels { display: grid; gap: var(--sp-6); }
     .abas--rolagem .painel { min-height: 26rem; }
