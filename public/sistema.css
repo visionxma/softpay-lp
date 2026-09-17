@@ -352,7 +352,14 @@ p:last-child { margin-bottom: 0; }
     color: var(--tinta); cursor: pointer;
 }
 @media (min-width: 62rem) {
-    .nav__menu { display: flex; align-items: center; gap: var(--sp-1); }
+    .nav__menu {
+        display: flex; align-items: center; gap: var(--sp-2);
+        /* centro real da barra: o menu sai do fluxo lateral e se ancora no
+           meio, então não depende da largura do logotipo nem dos botões */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     .nav__hamburguer { display: none; }
     .nav__entrar { display: inline-flex; }
 }
@@ -1488,3 +1495,34 @@ a.so-leitor:focus {
         transform: translateY(-2px);
     }
 }
+
+
+/* ==========================================================================
+   23. PASSAGEM ENTRE O ESCURO E O CLARO
+   --------------------------------------------------------------------------
+   Medido no rodapé do hero: em y=826 a cor é (8,20,33) e em y=828 salta para
+   (244,247,250). Um corte seco entre duas cores opostas, sem um pixel de
+   transição — o olho lê isso como uma borda branca aparecendo.
+
+   A passagem agora é um degradê de 96px do próprio azul-noite para a cor da
+   seção seguinte, desenhado DENTRO do bloco escuro. Não muda altura, não entra
+   no fluxo e fica abaixo do conteúdo. */
+.hero, .secao--escura, .momento { position: relative; }
+
+.hero::after,
+.secao--escura[data-passagem]::after,
+.momento[data-passagem]::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 6rem;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(180deg,
+        rgba(6, 18, 31, 0) 0%,
+        rgba(50, 74, 96, 0.28) 46%,
+        rgba(160, 180, 196, 0.62) 74%,
+        var(--nevoa) 100%);
+}
+/* o conteúdo continua por cima da passagem */
+.hero > .shell, .secao--escura > .shell, .momento > .shell { position: relative; z-index: 1; }

@@ -49,8 +49,8 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
   de comanda de mesa, ficha de delivery ou agendamento de horário usa outro
   tipo de produto.
 - **Não cobra taxa de implantação e não exige contrato de fidelidade.**
-- A **emissão fiscal (NF-e e NFC-e) está em ativação.** A situação para cada
-  caso deve ser confirmada com o suporte antes da contratação.
+- A **emissão de NF-e e NFC-e** está disponível nos planos Nota Fiscal e ERP
+  Completo, com cadastro fiscal e pacote do contador incluídos.
 
 ## Para quem é
 
