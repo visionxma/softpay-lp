@@ -646,7 +646,7 @@ p:last-child { margin-bottom: 0; }
 
 .plano__tag {
     justify-self: start;
-    padding: 0.25rem 0.625rem; border-radius: var(--r-pill);
+    padding: 0.375rem 0.75rem; border-radius: var(--r-pill);
     background: var(--nevoa-2); color: var(--tinta-2);
     font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
 }
@@ -999,7 +999,7 @@ a.so-leitor:focus {
 
 .pdv__rodape {
     display: flex; align-items: baseline; gap: var(--sp-2);
-    padding: 0.75rem 0.625rem 0.25rem;
+    padding: 0.75rem 0.625rem 0.5rem;
     border-top: 2px solid var(--nevoa-2);
 }
 .pdv__rodape > span { font-size: var(--t-xs); color: var(--tinta-3); text-transform: uppercase; letter-spacing: 0.1em; }
@@ -1012,14 +1012,17 @@ a.so-leitor:focus {
 }
 .pdv__selo {
     display: flex; align-items: center; justify-content: center; gap: var(--sp-2);
-    padding: 0.5rem; border-radius: var(--r-sm);
+    padding: 0.625rem 0.875rem; border-radius: var(--r-sm);
     background: var(--nevoa); color: var(--tinta-3);
-    font-size: var(--t-xs); font-weight: 700;
-    letter-spacing: 0.1em; text-transform: uppercase;
+    font-size: var(--t-xs); font-weight: 600;
     transition: background-color 0.3s linear, color 0.3s linear;
 }
+.pdv__selo b {
+    font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.pdv__selo span { color: inherit; opacity: 0.8; }
 .pdv__selo.aceso { background: #E6F8EE; color: #067A4C; }
-.pdv__selo.aceso::before { content: "✓ "; }
+.pdv__selo.aceso::before { content: "✓"; font-weight: 700; }
 
 /* --------------------------------------------------------------- HOLOFOTE
    Uma luz fraca que segue o cursor. Só com mouse, e só onde ajuda a dar
