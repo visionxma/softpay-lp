@@ -26,11 +26,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        media="print" onload="this.media='all';this.onload=null" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="/style.css?v=24691462ae" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
+    <link rel="stylesheet" href="/sistema.css" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -169,29 +167,46 @@
 </head>
 
 <body>
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
 
-    <nav class="navbar navbar--solid" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo-container">
-                    <a href="/"><img src="/assets/logo.png?v=b522f770c5" width="150" height="40"
-                        alt="SoftPay — sistema de gestão para pequenos negócios" class="logo-img" /></a>
-                </div>
-                <ul class="nav-menu nav-menu--simple">
-                    <li><a href="/segmentos/" class="nav-link">Segmentos</a></li>
-                    <li><a href="/solucoes/" class="nav-link">Soluções</a></li>
-                    <li><a href="/guias/" class="nav-link">Guias</a></li>
-                    <li><a href="/blog/" class="nav-link">Blog</a></li>
-                    <li><a href="/#pricing" class="nav-link">Preços</a></li>
-                    <li><a href="https://www.softpaybr.com/auth" class="nav-link btn-nav-cta">Teste Grátis 7 Dias</a></li>
-                </ul>
-            </div>
+    <nav class="nav" aria-label="Principal">
+        <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
+            <img src="/assets/logo-232.png" width="232" height="84" alt="SoftPay" />
+        </a>
+
+        <div class="nav__menu">
+            <a class="nav__link" href="/solucoes/">Soluções</a>
+            <a class="nav__link" href="/segmentos/">Segmentos</a>
+            <a class="nav__link" href="/guias/">Guias</a>
+            <a class="nav__link" href="/#planos">Planos</a>
+        </div>
+
+        <div class="nav__acoes">
+            <a class="nav__link nav__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
+            <a class="btn btn--acao" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
+            <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
+                aria-label="Abrir menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+            </button>
         </div>
     </nav>
 
+    <div class="gaveta" id="gaveta" data-aberta="nao">
+        <a href="/solucoes/">Soluções</a>
+        <a href="/segmentos/">Segmentos</a>
+        <a href="/guias/">Guias</a>
+        <a href="/blog/">Blog</a>
+        <a href="/perguntas/">Perguntas</a>
+        <a href="/#planos">Planos</a>
+        <a href="https://www.softpaybr.com/auth">Entrar</a>
+        <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth">Começar grátis</a>
+    </div>
+
     <main id="conteudo" class="page">
-      <div class="container container--article">
+      <div class="shell shell--leitura">
         <nav class="breadcrumb" aria-label="Você está aqui">
                 <ol>
                   <li><a href="/">Início</a></li>
@@ -201,7 +216,7 @@
               </nav>
 
         <header class="page-header">
-          <h1 class="page-title">Como organizar uma loja</h1>
+          <h1 class="page-title display">Como organizar uma loja</h1>
           <p class="page-intro">Resposta curta: organize uma coisa de cada vez, na ordem em que cada uma sustenta a próxima. Tentar arrumar tudo no mesmo mês é o motivo mais comum de desistir na segunda semana.</p>
         </header>
 
@@ -240,11 +255,11 @@
           <table class="page-table">
             <thead><tr><th>Período</th><th>Foco</th><th>Resultado esperado</th></tr></thead>
             <tbody>
-            <tr><td>Semana 1</td><td>Cadastro dos itens de maior giro</td><td>Vendas já passam pelo sistema</td></tr>
-            <tr><td>Semana 2</td><td>Rotina de caixa e fechamento diário</td><td>Caixa começa a bater</td></tr>
-            <tr><td>Semana 3</td><td>Fiado em aberto lançado</td><td>Total a receber visível</td></tr>
-            <tr><td>Semana 4</td><td>Conferência de estoque dos itens A</td><td>Estoque confiável no que importa</td></tr>
-            <tr><td>Mês 2</td><td>Leitura de margem e curva ABC</td><td>Decisão de compra com base em dado</td></tr>
+            <tr><td data-rotulo="Período">Semana 1</td><td data-rotulo="Foco">Cadastro dos itens de maior giro</td><td data-rotulo="Resultado esperado">Vendas já passam pelo sistema</td></tr>
+            <tr><td data-rotulo="Período">Semana 2</td><td data-rotulo="Foco">Rotina de caixa e fechamento diário</td><td data-rotulo="Resultado esperado">Caixa começa a bater</td></tr>
+            <tr><td data-rotulo="Período">Semana 3</td><td data-rotulo="Foco">Fiado em aberto lançado</td><td data-rotulo="Resultado esperado">Total a receber visível</td></tr>
+            <tr><td data-rotulo="Período">Semana 4</td><td data-rotulo="Foco">Conferência de estoque dos itens A</td><td data-rotulo="Resultado esperado">Estoque confiável no que importa</td></tr>
+            <tr><td data-rotulo="Período">Mês 2</td><td data-rotulo="Foco">Leitura de margem e curva ABC</td><td data-rotulo="Resultado esperado">Decisão de compra com base em dado</td></tr>
             </tbody>
           </table>
         </div>
@@ -293,13 +308,13 @@
       </section>
 
         <aside class="page-cta">
-          <h2>Comece pela etapa 1 hoje</h2>
+          <h2 class="display display--cartao">Comece pela etapa 1 hoje</h2>
           <p>Cadastre os produtos que você vende toda semana e passe as vendas do dia pelo sistema.</p>
           <div class="page-cta-actions">
-            <a href="https://www.softpaybr.com/auth" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
-            <a href="https://wa.me/5586998193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
+            <a href="https://www.softpaybr.com/auth" class="btn btn--acao btn--grande" data-track="complete-registration">Começar grátis</a>
+            <a href="https://wa.me/5586998193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20SoftPay." target="_blank" rel="noopener" class="btn btn--linha btn--grande" data-track="whatsapp-support">Falar com o suporte</a>
           </div>
-          <p class="page-cta-note">7 dias grátis · sem cartão · sem compromisso</p>
+          <p class="page-cta-note">7 dias grátis · sem cartão · sem fidelidade</p>
         </aside>
 
       <section class="page-related">
@@ -314,89 +329,76 @@
       </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="/assets/logo.png?v=b522f770c5" alt="SoftPay" class="footer-logo" width="150" height="40" loading="lazy" />
-                    <p class="footer-description">
-                        O SoftPay é um sistema de gestão para pequenos negócios brasileiros.
-                        PDV, estoque, caixa, fiado, notas fiscais, clientes e loja online em um
-                        só lugar, acessado pelo navegador, com suporte humano e atendimento
-                        em todo o Brasil.
+    <footer class="rodape">
+        <div class="shell">
+            <div class="rodape__grade">
+                <div class="rodape__marca">
+                    <img src="/assets/logo-claro-232.png" width="232" height="84" loading="lazy"
+                         style="height: 2rem; width: auto; margin-bottom: var(--sp-3)" alt="SoftPay" />
+                    <p class="apoio" style="color: rgba(255,255,255,0.72); max-width: 32ch">
+                        Sistema de gestão em nuvem para comércio: PDV, estoque, caixa, fiado,
+                        nota fiscal e loja online.
                     </p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Soluções</h3>
-                        <ul>
-                            <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
-                            <li><a href="/solucoes/sistema-de-estoque/">Controle de estoque</a></li>
-                            <li><a href="/solucoes/controle-de-fiado/">Controle de fiado</a></li>
-                            <li><a href="/solucoes/loja-online/">Loja online</a></li>
-                            <li><a href="/solucoes/">Ver todas</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Para o seu negócio</h3>
-                        <ul>
-                            <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
-                            <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
-                            <li><a href="/segmentos/papelaria/">Papelaria</a></li>
-                            <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
-                            <li><a href="/segmentos/">Ver todos</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Conteúdo</h3>
-                        <ul>
-                            <li><a href="/sistema-de-gestao-para-pequenos-negocios/">O que é sistema de gestão</a></li>
-                            <li><a href="/guias/">Guias</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li><a href="/perguntas/">Perguntas</a></li>
-                            <li><a href="/sobre/">Sobre</a></li>
-                            <li><a href="/contato/">Contato</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Legal</h3>
-                        <ul>
-                            <li><a href="/termos">Termos de Uso</a></li>
-                            <li><a href="/privacidade">Política de Privacidade</a></li>
-                            <li><a href="/reembolso">Política de Reembolso</a></li>
-                        </ul>
-                    </div>
+
+                <div>
+                    <h3>Soluções</h3>
+                    <ul>
+                        <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
+                        <li><a href="/solucoes/sistema-de-estoque/">Estoque</a></li>
+                        <li><a href="/solucoes/controle-de-fiado/">Fiado</a></li>
+                        <li><a href="/solucoes/loja-online/">Loja online</a></li>
+                        <li><a href="/solucoes/nfe/">NF-e</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Para quem</h3>
+                    <ul>
+                        <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
+                        <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
+                        <li><a href="/segmentos/farmacia/">Farmácia</a></li>
+                        <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
+                        <li><a href="/segmentos/papelaria/">Papelaria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Aprender</h3>
+                    <ul>
+                        <li><a href="/guias/como-sair-do-caderno/">Sair do caderno</a></li>
+                        <li><a href="/guias/como-controlar-estoque/">Controlar estoque</a></li>
+                        <li><a href="/guias/como-calcular-margem-de-lucro/">Calcular margem</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/perguntas/">Perguntas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>SoftPay</h3>
+                    <ul>
+                        <li><a href="/sobre/">Sobre</a></li>
+                        <li><a href="/contato/">Contato</a></li>
+                        <li><a href="/termos.html">Termos</a></li>
+                        <li><a href="/privacidade.html">Privacidade</a></li>
+                        <li><a href="/reembolso.html">Reembolso</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <small class="footer-copy">&copy; 2026 SoftPay. Todos os direitos reservados.</small>
 
-                <!-- Canais de contato com o mesmo peso visual: quem prefere
-                     mensagem e quem prefere escrever chegam pelo mesmo lugar.
-                     Sem Instagram: o SoftPay nao tem perfil, e inventar um
-                     icone que leva a lugar nenhum e pior que nao ter. -->
-                <div class="footer-social">
-                    <a href="https://wa.me/5586998193851" target="_blank" rel="noopener" aria-label="WhatsApp do SoftPay">
-                        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-                            <circle cx="16" cy="16" r="16" fill="#25D366"></circle>
-                            <path fill="#fff" d="M16.001 6.5c-5.24 0-9.5 4.26-9.5 9.5 0 1.67.44 3.3 1.28 4.74L6.5 25.5l4.9-1.26a9.46 9.46 0 0 0 4.6 1.18c5.24 0 9.5-4.26 9.5-9.5s-4.26-9.42-9.5-9.42zm0 17.3c-1.5 0-2.97-.4-4.25-1.17l-.31-.18-2.91.75.78-2.83-.2-.3a7.63 7.63 0 0 1-1.17-4.07c0-4.23 3.44-7.67 7.67-7.67s7.67 3.44 7.67 7.67-3.45 7.8-7.28 7.8zm4.26-5.74c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.52.12-.15.23-.6.76-.73.91-.13.15-.27.17-.5.06-.23-.12-.98-.36-1.87-1.15-.69-.62-1.16-1.39-1.3-1.62-.13-.23-.01-.36.1-.48.11-.11.23-.27.35-.4.12-.14.15-.24.23-.39.08-.15.04-.29-.02-.4-.06-.12-.52-1.26-.72-1.72-.19-.45-.38-.39-.52-.4-.13 0-.29-.01-.45-.01s-.4.06-.62.29c-.21.23-.82.81-.82 1.98s.84 2.29.96 2.45c.12.15 1.66 2.54 4.04 3.56.56.24 1 .39 1.34.5.56.18 1.08.15 1.48.09.45-.07 1.38-.56 1.58-1.11.2-.54.2-1 .14-1.1-.06-.1-.21-.16-.44-.28z"></path>
-                        </svg>
-                    </a>
-                    <a href="mailto:suporte@softpaybr.com" aria-label="E-mail do SoftPay: suporte@softpaybr.com">
-                        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
-                            <circle cx="16" cy="16" r="16" fill="#1B72C4"></circle>
-                            <path fill="#fff" d="M8.4 10.6h15.2c.77 0 1.4.63 1.4 1.4v8c0 .77-.63 1.4-1.4 1.4H8.4c-.77 0-1.4-.63-1.4-1.4v-8c0-.77.63-1.4 1.4-1.4zm7.6 6.02 6.6-4.22H9.4l6.6 4.22zm0 1.66-7.2-4.6V20h14.4v-6.32l-7.2 4.6z"></path>
-                        </svg>
-                    </a>
-                </div>
+            <div class="rodape__base">
+                <p class="rodape__produto">
+                    &copy; <span data-ano>2026</span> SoftPay &middot; Pedreiras, MA &middot; <a
+                        href="mailto:suporte@softpaybr.com">suporte@softpaybr.com</a> &middot; <a
+                        href="https://wa.me/5586998193851" target="_blank" rel="noopener">WhatsApp (86) 99819-3851</a>
+                </p>
 
-                <!-- Assinatura da VisionX no mesmo formato do visionxma.com:
-                     icone X + copyright + CNPJ, tudo numa linha. -->
-                <a class="footer-by" href="https://visionxma.com/" target="_blank" rel="noopener">
-                    <svg class="footer-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path d="M3 2h5.2l4 6.1L16.4 2H21l-6.4 9.4L21.4 22h-5.2l-4.3-6.6L7.3 22H2.7l6.7-10L3 2z" fill="currentColor"></path>
+                <a class="rodape__visionx" href="https://visionxma.com/" target="_blank" rel="noopener">
+                    <svg class="rodape__x" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M3 2h5.2l4 6.1L16.4 2H21l-6.4 9.4L21.4 22h-5.2l-4.3-6.6L7.3 22H2.7l6.7-10L3 2z" fill="currentColor"/>
                     </svg>
-                    <span>&copy; 2026 VisionX &middot; Todos os direitos reservados. &middot; CNPJ 61.427.918/0001-06</span>
+                    <span>&copy; <span data-ano>2026</span> VisionX &middot; Todos os direitos reservados.
+                        <i>&middot;</i> CNPJ 61.427.918/0001-06</span>
                 </a>
             </div>
         </div>
@@ -412,7 +414,7 @@
 
     <a href="https://www.softpaybr.com/auth" class="float-cta" data-track="complete-registration">Começar grátis</a>
 
-    <script src="/script.js?v=6a175e0b70"></script>
+    <script src="/efeitos.js" defer></script>
 </body>
 
 </html>

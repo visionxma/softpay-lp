@@ -62,9 +62,13 @@ def exemplo(titulo, linhas, rodape=None):
 
 
 def tabela(cabecalho, linhas):
+    # data-rotulo repete o nome da coluna em cada célula: é o que permite a
+    # tabela virar cartão por linha no celular, em vez de rolagem lateral
+    # (doutrina do Victor, 15/09/2026).
     th = "".join("<th>%s</th>" % c for c in cabecalho)
     trs = "\n".join("            <tr>%s</tr>" %
-                    "".join("<td>%s</td>" % c for c in l) for l in linhas)
+                    "".join('<td data-rotulo="%s">%s</td>' % (cabecalho[i] if i < len(cabecalho) else "", c)
+                            for i, c in enumerate(l)) for l in linhas)
     return ('        <div class="table-wrap">\n          <table class="page-table">\n'
             '            <thead><tr>%s</tr></thead>\n            <tbody>\n%s\n            </tbody>\n'
             '          </table>\n        </div>' % (th, trs))

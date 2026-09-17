@@ -1929,3 +1929,317 @@ a.so-leitor:focus {
     font-size: var(--t-xs); line-height: 1.5; text-align: center;
     color: rgba(255, 255, 255, 0.5);
 }
+
+
+/* ==========================================================================
+   25. PÁGINAS INTERNAS
+   --------------------------------------------------------------------------
+   São 70 páginas — segmentos, soluções, guias, perguntas, comparativos e blog
+   — todas saídas do mesmo `tools/template.py`. Até 17/09/2026 elas carregavam
+   `/style.css` (279 KB) e a fonte Plus Jakarta Sans, enquanto a home já usava
+   este arquivo com Archivo e Geist: o site tinha duas identidades, e quem caía
+   numa página interna pela busca não reconhecia a marca da home.
+
+   Aqui elas passam a usar o mesmo sistema. O vocabulário de classes do corpo
+   (`page-section`, `page-list`, `calc-*`, `card-grid`…) foi MANTIDO de
+   propósito: assim as 70 páginas de conteúdo não precisaram ser reescritas —
+   só o esqueleto do template e este bloco de estilo.
+
+   A largura de leitura é 46rem. O `.shell` da home tem 75rem, que serve para
+   grade e fotografia; texto corrido a 75rem passa de 120 caracteres por linha
+   e ninguém lê. Grade, tabela e figura rompem essa largura de volta.
+   ========================================================================== */
+.page { padding-block: calc(var(--nav-h) + var(--sp-6)) var(--sp-sec); }
+
+.shell--leitura { max-width: 46rem; }
+
+/* --------------------------------------------------------- MIGALHAS */
+.breadcrumb { margin-bottom: var(--sp-5); font-size: var(--t-sm); }
+.breadcrumb ol {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem;
+    margin: 0; padding: 0; list-style: none;
+}
+.breadcrumb li { display: flex; align-items: center; gap: 0.35rem; color: var(--tinta-3); }
+.breadcrumb li + li::before { content: "/"; color: var(--linha-forte); }
+.breadcrumb a { color: var(--tinta-2); text-decoration: none; }
+.breadcrumb a:hover { color: var(--azul); text-decoration: underline; }
+.breadcrumb [aria-current] { color: var(--tinta); font-weight: 500; }
+
+/* ------------------------------------------------- CABEÇA DA PÁGINA */
+.page-header { margin-bottom: var(--sp-6); }
+.page-title {
+    font-size: var(--t-2xl); line-height: 0.96;
+    margin: 0 0 var(--sp-4);
+    text-wrap: balance;
+}
+.page-intro {
+    margin: 0; font-size: var(--t-lg); line-height: 1.5;
+    color: var(--tinta-2); max-width: 60ch;
+}
+
+/* ------------------------------------------------------- O CONTEÚDO */
+.page-section { margin-bottom: var(--sp-7); scroll-margin-top: calc(var(--nav-h) + 1rem); }
+.page-section > h2 {
+    font-family: var(--display); font-stretch: 78%; font-weight: 800;
+    font-size: var(--t-xl); line-height: 1.05;
+    margin: 0 0 var(--sp-4);
+    text-transform: none;
+}
+.page-section h3 {
+    font-size: var(--t-lg); font-weight: 700; line-height: 1.25;
+    margin: var(--sp-5) 0 var(--sp-3);
+}
+.page-section p { margin: 0 0 var(--sp-4); line-height: 1.65; }
+.page-section p:last-child { margin-bottom: 0; }
+.page-section a { color: var(--azul); text-underline-offset: 2px; }
+
+.page-list, .page-steps { margin: 0 0 var(--sp-4); padding: 0; display: grid; gap: var(--sp-3); }
+.page-list { list-style: none; }
+.page-list li {
+    position: relative; padding-left: 1.75rem; line-height: 1.6;
+}
+.page-list li::before {
+    content: ""; position: absolute; left: 0; top: 0.55em;
+    width: 0.5rem; height: 0.5rem; border-radius: 50%;
+    background: var(--azul);
+}
+.page-steps { counter-reset: passo; list-style: none; }
+.page-steps li {
+    counter-increment: passo;
+    position: relative; padding-left: 2.5rem; line-height: 1.6;
+    min-height: 1.75rem;
+}
+.page-steps li::before {
+    content: counter(passo);
+    position: absolute; left: 0; top: -0.1em;
+    display: grid; place-items: center;
+    width: 1.75rem; height: 1.75rem; border-radius: 50%;
+    background: var(--acento-vapor); color: var(--azul);
+    font-size: var(--t-sm); font-weight: 700;
+}
+
+/* Aviso: o mesmo cartão da home, com a barra da cor de atenção. */
+.page-note {
+    margin: var(--sp-5) 0; padding: var(--sp-4) var(--sp-5);
+    border-radius: var(--r-md);
+    border-left: 3px solid var(--acento);
+    background: var(--sup-alt);
+}
+.page-note strong { display: block; margin-bottom: 0.35rem; }
+.page-note p { margin: 0; font-size: var(--t-sm); color: var(--tinta-2); }
+
+/* Exemplo de conta: é o bloco que mais convence nos guias de dinheiro. */
+.page-example {
+    margin: var(--sp-5) 0; padding: var(--sp-5);
+    border: 1px solid var(--linha); border-radius: var(--r-md);
+    background: var(--branco);
+    box-shadow: var(--sombra-1);
+}
+.example-badge {
+    display: inline-block; margin-bottom: var(--sp-3);
+    padding: 0.2rem 0.6rem; border-radius: var(--r-pill);
+    background: var(--acento-vapor); color: var(--azul);
+    font-size: var(--t-xs); font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase;
+}
+.page-example h3 { margin: 0 0 var(--sp-4); font-size: var(--t-lg); }
+.calc { display: grid; gap: 0; }
+.calc-row {
+    display: flex; justify-content: space-between; align-items: baseline; gap: var(--sp-4);
+    padding: 0.6rem 0; border-bottom: 1px solid var(--linha);
+}
+.calc-row:last-child { border-bottom: 0; }
+.calc-label { color: var(--tinta-2); font-size: var(--t-sm); }
+.calc-value { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.calc-row--minus .calc-value { color: var(--atencao); }
+.calc-row--result { border-top: 1px solid var(--linha-forte); }
+.calc-row--result .calc-label, .calc-row--result .calc-value { font-weight: 700; }
+.calc-row--final .calc-value { color: var(--ok); font-size: var(--t-lg); }
+.calc-note { margin: var(--sp-3) 0 0; font-size: var(--t-xs); color: var(--tinta-3); }
+
+/* TABELA
+   Sem `overflow` no invólucro: esconder estouro é curativo, e a doutrina do
+   Victor veta rolagem lateral no celular. Os cantos são arredondados pela
+   própria tabela (border-collapse: separate) e, abaixo de 40rem, cada LINHA
+   vira um cartão com o nome da coluna ao lado do valor — o `data-rotulo` que
+   o tools/blocks.py escreve em cada célula. */
+.table-wrap { margin: var(--sp-5) 0; }
+.page-table {
+    width: 100%; font-size: var(--t-sm);
+    border-collapse: separate; border-spacing: 0;
+    border: 1px solid var(--linha); border-radius: var(--r-md);
+}
+.page-table th, .page-table td { padding: 0.75rem 1rem; text-align: left; }
+.page-table thead th {
+    background: var(--sup-alt); font-weight: 700;
+    border-bottom: 1px solid var(--linha);
+}
+.page-table thead th:first-child { border-top-left-radius: var(--r-md); }
+.page-table thead th:last-child  { border-top-right-radius: var(--r-md); }
+.page-table tbody tr + tr td { border-top: 1px solid var(--linha); }
+.page-table td:first-child { font-weight: 500; }
+
+@media (max-width: 39.99rem) {
+    .page-table, .page-table tbody, .page-table tr, .page-table td { display: block; }
+    /* O cabeçalho sai de vez, e não escondido fora da tela: cada célula já
+       carrega o nome da coluna no data-rotulo, então nada se perde para quem
+       usa leitor de tela. Escondido com position:absolute, os <th> vazavam
+       para fora da página — 89px de estouro em 360px, medido em 13 páginas. */
+    .page-table thead { display: none; }
+    .page-table { border: 0; }
+    .page-table tbody tr {
+        margin-bottom: var(--sp-3); padding: var(--sp-2) var(--sp-4);
+        border: 1px solid var(--linha); border-radius: var(--r-md);
+        background: var(--branco);
+    }
+    .page-table tbody tr + tr td { border-top: 0; }
+    .page-table td {
+        display: flex; flex-wrap: wrap;
+        justify-content: space-between; align-items: baseline;
+        column-gap: var(--sp-4); row-gap: 0.15rem;
+        padding: 0.5rem 0; border-bottom: 1px solid var(--linha);
+        min-width: 0; overflow-wrap: anywhere;
+    }
+    .page-table tr td:last-child { border-bottom: 0; }
+    /* rótulo e valor encolhem e, se não couberem lado a lado, empilham — sem
+       isso a célula não cedia e a tabela vazava 48px em 360px (medido) */
+    .page-table td::before {
+        content: attr(data-rotulo);
+        flex: 0 1 auto; min-width: 0;
+        color: var(--tinta-3); font-weight: 400;
+    }
+    .page-table td:first-child { font-weight: 700; }
+}
+
+.card-grid {
+    display: grid; gap: var(--sp-3); margin: var(--sp-5) 0; padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+}
+@media (min-width: 48rem) { .card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.card-grid li > a, .card-grid li > div {
+    display: grid; gap: 0.35rem; height: 100%; align-content: start;
+    padding: var(--sp-4);
+    border: 1px solid var(--linha); border-radius: var(--r-md);
+    background: var(--branco); color: inherit; text-decoration: none;
+    transition: border-color 0.2s linear, transform 0.2s var(--mola);
+}
+.card-grid strong { font-size: var(--t-md); }
+.card-grid span { font-size: var(--t-sm); color: var(--tinta-2); line-height: 1.5; }
+@media (hover: hover) and (pointer: fine) {
+    .card-grid li > a:hover { border-color: var(--azul); transform: translateY(-2px); }
+}
+
+.page-figure { margin: var(--sp-5) 0; }
+.page-figure img {
+    width: 100%; height: auto; display: block;
+    border-radius: var(--r-md); box-shadow: var(--sombra-2);
+}
+.page-figure figcaption {
+    margin-top: var(--sp-3); font-size: var(--t-sm); color: var(--tinta-3);
+}
+
+.page-sources { margin-top: var(--sp-6); font-size: var(--t-sm); color: var(--tinta-3); }
+.page-sources a { color: var(--tinta-2); }
+
+/* ------------------------------------------------------- FAQ DA PÁGINA */
+.page-faq { margin: var(--sp-7) 0; scroll-margin-top: calc(var(--nav-h) + 1rem); }
+.faq-layout { display: grid; gap: var(--sp-5); }
+@media (min-width: 60rem) { .faq-layout { grid-template-columns: 0.7fr 1.3fr; gap: var(--sp-6); } }
+.faq-aside h2 {
+    font-family: var(--display); font-stretch: 78%; font-weight: 800;
+    font-size: var(--t-xl); line-height: 1.05; margin: 0 0 var(--sp-3);
+}
+.faq-aside p { margin: 0; color: var(--tinta-2); font-size: var(--t-sm); line-height: 1.6; }
+.faq-list { display: grid; gap: 0; }
+.faq-item { border-top: 1px solid var(--linha); }
+.faq-item:last-child { border-bottom: 1px solid var(--linha); }
+.faq-question {
+    display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4);
+    min-height: 3.25rem; padding: var(--sp-4) 0;
+    font-weight: 600; cursor: pointer; list-style: none;
+}
+.faq-question::-webkit-details-marker { display: none; }
+.faq-question::after {
+    content: ""; flex: none;
+    width: 0.625rem; height: 0.625rem;
+    border-right: 2px solid var(--tinta-3); border-bottom: 2px solid var(--tinta-3);
+    transform: rotate(45deg) translateY(-0.15rem);
+    transition: transform 0.25s var(--mola);
+}
+.faq-item[open] .faq-question::after { transform: rotate(-135deg) translateY(-0.15rem); }
+.faq-answer { padding: 0 0 var(--sp-4); }
+.faq-answer p { margin: 0; color: var(--tinta-2); line-height: 1.65; }
+@media (prefers-reduced-motion: reduce) { .faq-question::after { transition: none; } }
+
+/* ------------------------------------------------------ CHAMADA E FIM */
+.page-cta {
+    margin: var(--sp-7) 0;
+    padding: var(--sp-6);
+    border-radius: var(--r-lg);
+    background: var(--noite); color: var(--branco);
+    text-align: center;
+}
+.page-cta h2 { margin: 0 0 var(--sp-3); color: var(--branco); }
+.page-cta > p { margin: 0 auto var(--sp-5); max-width: 46ch; color: rgba(255, 255, 255, 0.82); }
+.page-cta-actions {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-3);
+}
+.page-cta-actions > * { flex: 1 1 11rem; }
+@media (min-width: 40rem) { .page-cta-actions > * { flex: 0 0 auto; } }
+.page-cta .btn--linha { border-color: rgba(255, 255, 255, 0.4); color: var(--branco); }
+.page-cta-note {
+    margin: var(--sp-4) 0 0; font-size: var(--t-xs);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.page-related { margin-top: var(--sp-7); }
+.page-related h2 {
+    font-family: var(--display); font-stretch: 78%; font-weight: 800;
+    font-size: var(--t-lg); margin: 0 0 var(--sp-4);
+}
+.related-grid {
+    display: grid; gap: var(--sp-3); margin: 0; padding: 0; list-style: none;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 48rem) { .related-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.related-grid a {
+    display: block; height: 100%; padding: var(--sp-4);
+    border: 1px solid var(--linha); border-radius: var(--r-md);
+    color: inherit; text-decoration: none; font-size: var(--t-sm); line-height: 1.45;
+    transition: border-color 0.2s linear, transform 0.2s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) {
+    .related-grid a:hover { border-color: var(--azul); transform: translateY(-2px); }
+}
+
+/* A ação flutuante do celular. Ela existia nas internas sem estilo próprio e
+   ficava com 18px de altura — 25px de alvo, contra os 44 do mínimo (medido
+   pelo de audit). Vira pílula, à esquerda, para não brigar com o WhatsApp. */
+.float-cta {
+    position: fixed; left: var(--gutter); bottom: max(var(--gutter), env(safe-area-inset-bottom));
+    z-index: 40;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 2.75rem; padding: 0.7rem 1.25rem;
+    border-radius: var(--r-pill);
+    background: var(--azul); color: var(--branco);
+    font-size: var(--t-sm); font-weight: 600; text-decoration: none;
+    box-shadow: 0 12px 28px -10px rgba(6, 18, 31, 0.55);
+    transition: transform 0.2s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) { .float-cta:hover { transform: translateY(-2px); } }
+@media (min-width: 62rem) { .float-cta { display: none; } }
+@media (prefers-reduced-motion: reduce) { .float-cta { transition: none; } }
+
+/* Botão flutuante do WhatsApp: já existia nas internas, agora no tom do sistema */
+.whatsapp-float {
+    position: fixed; right: var(--gutter); bottom: max(var(--gutter), env(safe-area-inset-bottom));
+    z-index: 40;
+    display: grid; place-items: center;
+    width: 3.25rem; height: 3.25rem; border-radius: 50%;
+    background: #25D366; color: #fff;
+    box-shadow: 0 12px 28px -10px rgba(6, 18, 31, 0.55);
+    transition: transform 0.2s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) { .whatsapp-float:hover { transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) { .whatsapp-float { transition: none; } }

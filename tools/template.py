@@ -200,11 +200,9 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        media="print" onload="this.media='all';this.onload=null" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" /></noscript>
-    <link rel="stylesheet" href="/style.css?v=24691462ae" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
+    <link rel="stylesheet" href="/sistema.css" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -231,33 +229,50 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 </head>
 
 <body>
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
 
-    <nav class="navbar navbar--solid" id="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo-container">
-                    <a href="/"><img src="/assets/logo.png?v=b522f770c5" width="150" height="40"
-                        alt="SoftPay — sistema de gestão para pequenos negócios" class="logo-img" /></a>
-                </div>
-                <ul class="nav-menu nav-menu--simple">
-                    <li><a href="/segmentos/" class="nav-link">Segmentos</a></li>
-                    <li><a href="/solucoes/" class="nav-link">Soluções</a></li>
-                    <li><a href="/guias/" class="nav-link">Guias</a></li>
-                    <li><a href="/blog/" class="nav-link">Blog</a></li>
-                    <li><a href="/#pricing" class="nav-link">Preços</a></li>
-                    <li><a href="%(app)s" class="nav-link btn-nav-cta">Teste Grátis 7 Dias</a></li>
-                </ul>
-            </div>
+    <nav class="nav" aria-label="Principal">
+        <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
+            <img src="/assets/logo-232.png" width="232" height="84" alt="SoftPay" />
+        </a>
+
+        <div class="nav__menu">
+            <a class="nav__link" href="/solucoes/">Soluções</a>
+            <a class="nav__link" href="/segmentos/">Segmentos</a>
+            <a class="nav__link" href="/guias/">Guias</a>
+            <a class="nav__link" href="/#planos">Planos</a>
+        </div>
+
+        <div class="nav__acoes">
+            <a class="nav__link nav__entrar" href="%(app)s">Entrar</a>
+            <a class="btn btn--acao" href="%(app)s" data-track="complete-registration">Testar grátis</a>
+            <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
+                aria-label="Abrir menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+            </button>
         </div>
     </nav>
 
+    <div class="gaveta" id="gaveta" data-aberta="nao">
+        <a href="/solucoes/">Soluções</a>
+        <a href="/segmentos/">Segmentos</a>
+        <a href="/guias/">Guias</a>
+        <a href="/blog/">Blog</a>
+        <a href="/perguntas/">Perguntas</a>
+        <a href="/#planos">Planos</a>
+        <a href="%(app)s">Entrar</a>
+        <a class="btn btn--acao btn--grande" href="%(app)s">Começar grátis</a>
+    </div>
+
     <main id="conteudo" class="page">
-      <div class="container container--article">
+      <div class="shell shell--leitura">
         %(bc)s
 
         <header class="page-header">
-          <h1 class="page-title">%(h1)s</h1>
+          <h1 class="page-title display">%(h1)s</h1>
           <p class="page-intro">%(intro)s</p>
         </header>
 
@@ -265,80 +280,89 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 %(corpo)s
 %(faq)s
         <aside class="page-cta">
-          <h2>%(cta_title)s</h2>
+          <h2 class="display display--cartao">%(cta_title)s</h2>
           <p>%(cta_text)s</p>
           <div class="page-cta-actions">
-            <a href="%(app)s" class="btn btn-primary btn-large" data-track="complete-registration">Começar grátis por 7 dias</a>
-            <a href="%(wpp)s" target="_blank" rel="noopener" class="btn btn-secondary" data-track="whatsapp-support">Falar com o suporte</a>
+            <a href="%(app)s" class="btn btn--acao btn--grande" data-track="complete-registration">Começar grátis</a>
+            <a href="%(wpp)s" target="_blank" rel="noopener" class="btn btn--linha btn--grande" data-track="whatsapp-support">Falar com o suporte</a>
           </div>
-          <p class="page-cta-note">7 dias grátis · sem cartão · sem compromisso</p>
+          <p class="page-cta-note">7 dias grátis · sem cartão · sem fidelidade</p>
         </aside>
 %(rel)s
       </div>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="/assets/logo.png?v=b522f770c5" alt="SoftPay" class="footer-logo" width="150" height="40" loading="lazy" />
-                    <p class="footer-description">
-                        O SoftPay é um sistema de gestão para pequenos negócios brasileiros.
-                        PDV, estoque, caixa, fiado, notas fiscais, clientes e loja online em um
-                        só lugar, acessado pelo navegador, com suporte humano e atendimento
-                        em todo o Brasil.
+    <footer class="rodape">
+        <div class="shell">
+            <div class="rodape__grade">
+                <div class="rodape__marca">
+                    <img src="/assets/logo-claro-232.png" width="232" height="84" loading="lazy"
+                         style="height: 2rem; width: auto; margin-bottom: var(--sp-3)" alt="SoftPay" />
+                    <p class="apoio" style="color: rgba(255,255,255,0.72); max-width: 32ch">
+                        Sistema de gestão em nuvem para comércio: PDV, estoque, caixa, fiado,
+                        nota fiscal e loja online.
                     </p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Soluções</h3>
-                        <ul>
-                            <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
-                            <li><a href="/solucoes/sistema-de-estoque/">Controle de estoque</a></li>
-                            <li><a href="/solucoes/controle-de-fiado/">Controle de fiado</a></li>
-                            <li><a href="/solucoes/loja-online/">Loja online</a></li>
-                            <li><a href="/solucoes/">Ver todas</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Para o seu negócio</h3>
-                        <ul>
-                            <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
-                            <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
-                            <li><a href="/segmentos/papelaria/">Papelaria</a></li>
-                            <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
-                            <li><a href="/segmentos/">Ver todos</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Conteúdo</h3>
-                        <ul>
-                            <li><a href="/sistema-de-gestao-para-pequenos-negocios/">O que é sistema de gestão</a></li>
-                            <li><a href="/guias/">Guias</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            <li><a href="/perguntas/">Perguntas</a></li>
-                            <li><a href="/sobre/">Sobre</a></li>
-                            <li><a href="/contato/">Contato</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h3 class="footer-heading">Legal</h3>
-                        <ul>
-                            <li><a href="/termos">Termos de Uso</a></li>
-                            <li><a href="/privacidade">Política de Privacidade</a></li>
-                            <li><a href="/reembolso">Política de Reembolso</a></li>
-                        </ul>
-                    </div>
+
+                <div>
+                    <h3>Soluções</h3>
+                    <ul>
+                        <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
+                        <li><a href="/solucoes/sistema-de-estoque/">Estoque</a></li>
+                        <li><a href="/solucoes/controle-de-fiado/">Fiado</a></li>
+                        <li><a href="/solucoes/loja-online/">Loja online</a></li>
+                        <li><a href="/solucoes/nfe/">NF-e</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Para quem</h3>
+                    <ul>
+                        <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
+                        <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
+                        <li><a href="/segmentos/farmacia/">Farmácia</a></li>
+                        <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
+                        <li><a href="/segmentos/papelaria/">Papelaria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Aprender</h3>
+                    <ul>
+                        <li><a href="/guias/como-sair-do-caderno/">Sair do caderno</a></li>
+                        <li><a href="/guias/como-controlar-estoque/">Controlar estoque</a></li>
+                        <li><a href="/guias/como-calcular-margem-de-lucro/">Calcular margem</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/perguntas/">Perguntas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>SoftPay</h3>
+                    <ul>
+                        <li><a href="/sobre/">Sobre</a></li>
+                        <li><a href="/contato/">Contato</a></li>
+                        <li><a href="/termos.html">Termos</a></li>
+                        <li><a href="/privacidade.html">Privacidade</a></li>
+                        <li><a href="/reembolso.html">Reembolso</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p class="footer-company">
-                    SoftPay é um produto de<br>
-                    <strong>VisionX Inova Simples (IS)</strong><br>
-                    CNPJ: 61.427.918/0001-06<br>
-                    Pedreiras/MA · Brasil
+
+            <div class="rodape__base">
+                <p class="rodape__produto">
+                    &copy; <span data-ano>2026</span> SoftPay &middot; Pedreiras, MA &middot; <a
+                        href="mailto:suporte@softpaybr.com">suporte@softpaybr.com</a> &middot; <a
+                        href="https://wa.me/5586998193851" target="_blank" rel="noopener">WhatsApp (86) 99819-3851</a>
                 </p>
-                <p>&copy; 2026 SoftPay · Todos os direitos reservados</p>
+
+                <a class="rodape__visionx" href="https://visionxma.com/" target="_blank" rel="noopener">
+                    <svg class="rodape__x" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M3 2h5.2l4 6.1L16.4 2H21l-6.4 9.4L21.4 22h-5.2l-4.3-6.6L7.3 22H2.7l6.7-10L3 2z" fill="currentColor"/>
+                    </svg>
+                    <span>&copy; <span data-ano>2026</span> VisionX &middot; Todos os direitos reservados.
+                        <i>&middot;</i> CNPJ 61.427.918/0001-06</span>
+                </a>
             </div>
         </div>
     </footer>
@@ -353,7 +377,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
     <a href="%(app)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
 
-    <script src="/script.js?v=6a175e0b70"></script>
+    <script src="/efeitos.js" defer></script>
 </body>
 
 </html>
