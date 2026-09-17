@@ -1,25 +1,46 @@
 # A família de aparelhos do hero
 
-`aparelhos-chroma.png` é a cena crua: monitor, notebook, tablet e celular, com
-**todas as telas em verde chroma** e o fundo em **magenta**. Gerada no codex em
-17/09/2026, a partir da referência que o Victor mandou (a home da TriboPay).
+`aparelhos-cores.png` é a cena crua: monitor, notebook, tablet e celular, com
+**uma cor chroma diferente em cada tela** e o fundo em magenta. Gerada no codex
+em 17/09/2026, a partir da referência que o Victor mandou (a home da TriboPay).
 
-`aparelhos-corte.png` é o resultado: as capturas REAIS do sistema entraram
-dentro de cada tela por transformação de perspectiva, o fundo magenta virou
-transparente e o esverdeado das bordas foi neutralizado.
+| tela | cor chroma | matiz |
+|---|---|---|
+| monitor | verde `#00FF00` | 95–150 |
+| notebook | ciano `#00FFFF` | 165–200 |
+| tablet | amarelo `#FFFF00` | 45–70 |
+| celular | laranja `#FF8000` | 15–42 |
+| fundo | magenta `#FF00FF` | 280–330 |
 
-## Como refazer (o caminho todo está no histórico desta sessão)
+`aparelhos3.png` é o resultado, com fundo transparente.
 
-1. Detectar as regiões verdes e rotular os componentes conexos.
-2. Para cada região, achar os quatro cantos pelo ponto mais próximo de cada
-   canto do bounding box. **Não use os extremos de (x+y) e (x−y)**: numa tela
-   quase alinhada aos eixos eles devolvem o mesmo canto duas vezes.
-3. A tela do monitor fica parcialmente coberta pelo notebook e pelo tablet, e o
-   canto inferior-esquerdo dela não existe na máscara. Estime por paralelogramo:
-   `bl = tl + (br − tr)`. O que ficar fora da máscara não aparece.
-4. Dilatar a máscara verde ~4px antes de colar: a borda entre a tela e a moldura
-   tem antisserrilhado, e sem dilatar sobra um fio verde em volta de cada tela.
-5. Fundo magenta → alfa; despill do verde e do magenta nas bordas.
+## Por que uma cor por tela
+
+A primeira versão usou verde em todas. **Não funciona**: as telas do monitor e
+do notebook se tocam na cena, a rotulagem de componentes conexos não separa os
+limites com segurança, e a composição vazou — o menu do sistema apareceu pintado
+fora da moldura do monitor. Com uma cor por tela a segmentação é direta e não há
+ambiguidade.
+
+## O caminho, passo a passo
+
+1. Segmentar por **matiz** (HSV), não por comparação de canais RGB: amarelo e
+   laranja se confundem em RGB (o amarelo captura o laranja).
+2. Achar os quatro cantos de cada tela pelo ponto mais próximo de cada canto do
+   bounding box. Guardar a **distância** até esse canto: se for grande, o canto
+   está coberto por outro aparelho.
+3. Reconstruir o canto coberto por paralelogramo (`bl = tl + br − tr`). O
+   monitor tem DOIS cantos cobertos (pelo notebook e pelo tablet): ali a base é
+   medida numa coluna livre, entre os dois.
+4. Compor por transformação de perspectiva, com a tela fonte em 2x o tamanho do
+   destino para não perder nitidez.
+5. Máscara = cor daquela tela, dilatada **2px**, ∩ o quadrilátero. A dilatação
+   tapa o fio de chroma do antisserrilhado; mais que isso e a tela invade a
+   moldura.
+6. Fundo magenta → alfa.
+7. Limpar o chroma que sobrou **só FORA das áreas pintadas**. Limpar dentro
+   apaga o que é verde no próprio sistema — foi assim que o selo "Aberto" do
+   caixa sumiu na segunda tentativa.
 
 ## Que tela vai em cada aparelho
 
