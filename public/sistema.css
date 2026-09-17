@@ -390,7 +390,7 @@ p:last-child { margin-bottom: 0; }
     position: relative;
     display: grid;
     align-items: end;
-    min-height: 0;                    /* altura do conteúdo, nunca 100vh */
+    min-height: 0;                    /* no celular: a altura do conteúdo */
     padding-block: calc(var(--nav-h) + 3.5rem) var(--sp-7);
     color: var(--branco);
     background: var(--noite);
@@ -967,10 +967,20 @@ a.so-leitor:focus {
 
 /* ---------------------------------------------- HERO: uma cena, não um bloco */
 @media (min-width: 48rem) {
-    .hero {
-        min-height: min(92svh, 52rem);
-        align-items: center;
-    }
+    .hero { align-items: center; }
+}
+/* Tablet: quase uma tela, com teto, para não esticar em tela alta. */
+@media (min-width: 48rem) and (max-width: 61.99rem) {
+    .hero { min-height: min(92svh, 52rem); }
+}
+/* Desktop: a tela INTEIRA. A doutrina geral é "hero com a altura do conteúdo,
+   nunca 100vh", e ela continua valendo no celular — lá forçar uma tela só
+   alonga a página. No desktop o Victor pediu o contrário (17/09/2026): com
+   `min(92svh, 52rem)` o hero ficava em 715px numa janela de 777px, e nos 62px
+   que sobravam aparecia a faixa clara da seção seguinte. O fundo do hero tem de
+   ser um só, de ponta a ponta. */
+@media (min-width: 62rem) {
+    .hero { min-height: 100svh; }
 }
 /* No celular continua com a altura do conteúdo: "cabe em uma tela", nunca
    "ocupa uma tela". */
