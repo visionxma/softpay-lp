@@ -544,20 +544,21 @@ p:last-child { margin-bottom: 0; }
 }
 .aba {
     display: inline-flex; align-items: center; gap: var(--sp-2);
+    text-decoration: none;
     min-height: 2.75rem; padding: 0.5rem 1rem;
     background: var(--branco); color: var(--tinta-2);
     border: 1px solid var(--linha); border-radius: var(--r-pill);
     font-size: var(--t-sm); font-weight: 600; cursor: pointer;
     transition: background-color 0.16s linear, color 0.16s linear, border-color 0.16s linear;
 }
-.aba[aria-selected="true"] {
+.aba[aria-current="true"] {
     background: var(--noite); color: var(--branco); border-color: var(--noite);
 }
 .aba__ponto {
     width: 0.5rem; height: 0.5rem; border-radius: var(--r-pill);
     background: var(--linha-forte);
 }
-.aba[aria-selected="true"] .aba__ponto { background: var(--acento); }
+.aba[aria-current="true"] .aba__ponto { background: var(--acento); }
 
 .painel[hidden] { display: none; }
 .painel {
@@ -931,7 +932,7 @@ a.so-leitor:focus {
         color: var(--nevoa-2);
         transition: color 0.26s linear, transform 0.26s var(--mola);
     }
-    .aba[aria-selected="true"] {
+    .aba[aria-current="true"] {
         background: none; color: var(--azul);
         transform: translateX(6px);
     }
@@ -940,7 +941,7 @@ a.so-leitor:focus {
 }
 @media (min-width: 64rem) and (hover: hover) and (pointer: fine) {
     .aba:hover { color: var(--linha-forte); }
-    .aba[aria-selected="true"]:hover { color: var(--azul); }
+    .aba[aria-current="true"]:hover { color: var(--azul); }
 }
 
 /* ------------------------------------------------------ CENA: o PDV vendendo
@@ -1122,21 +1123,8 @@ a.so-leitor:focus {
     background: linear-gradient(180deg, rgba(6,18,31,0) 0%, rgba(6,18,31,0) 62%, rgba(6,18,31,0.9) 100%);
 }
 
-.hero__peca { margin: 0; display: grid; place-items: center; }
-.hero__peca img {
-    width: 100%; max-width: 40rem; height: auto;
-    /* o render tem fundo escuro próprio: a máscara apaga as bordas para ele
-       assentar no fundo da seção em vez de virar um retângulo colado */
-    mix-blend-mode: screen;
-    -webkit-mask-image: radial-gradient(68% 72% at 50% 47%, #000 38%, rgba(0,0,0,0.72) 66%, transparent 86%);
-    mask-image: radial-gradient(68% 72% at 50% 47%, #000 38%, rgba(0,0,0,0.72) 66%, transparent 86%);
-}
-@media (min-width: 62rem) {
-    .hero__peca img { max-width: none; transform: scale(1.1); }
-}
-@media (prefers-reduced-motion: no-preference) {
-    .hero__peca img { animation: flutuar 7s ease-in-out infinite; }
-}
+/* (.hero__peca saiu: a peça do hero é o desktop, em .hero__tela) */
+
 @keyframes flutuar {
     0%, 100% { translate: 0 0; }
     50%      { translate: 0 -14px; }
@@ -1149,8 +1137,12 @@ a.so-leitor:focus {
     .abas--rolagem { display: block; }
     .abas--rolagem .abas__trilho { display: grid; grid-template-columns: 22rem 1fr; gap: var(--sp-7); align-items: start; }
     .abas--rolagem .abas__botoes {
-        position: sticky; top: calc(var(--nav-h) + 3rem);
-        flex-direction: column; align-items: stretch; gap: 0;
+        position: sticky;
+        /* alinhada ao meio da tela, que é onde a faixa que escolhe o tópico
+           passa — assim o rótulo aceso fica na altura do painel dele */
+        top: 50vh;
+        transform: translateY(-50%);
+        flex-direction: column; align-items: stretch; gap: 0.25rem;
     }
     .abas--rolagem .abas__painels { display: grid; gap: var(--sp-6); }
     .abas--rolagem .painel { min-height: 26rem; }
@@ -1188,9 +1180,9 @@ a.so-leitor:focus {
    a foto: era ela ocupar a mesma área da peça 3D, duas imagens brigando.
    Agora ela cobre o lado do texto e se apaga antes da peça. */
 .hero__foto {
-    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 42%, rgba(0,0,0,0.35) 62%, transparent 80%);
-    mask-image: linear-gradient(90deg, #000 0%, #000 42%, rgba(0,0,0,0.35) 62%, transparent 80%);
-    object-position: 38% 50%;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.92) 28%, rgba(0,0,0,0.55) 48%, rgba(0,0,0,0.22) 66%, transparent 88%);
+    mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.92) 28%, rgba(0,0,0,0.55) 48%, rgba(0,0,0,0.22) 66%, transparent 88%);
+    object-position: 34% 50%;
 }
 @media (max-width: 61.99rem) {
     /* no celular a peça fica embaixo do texto: a foto volta a cobrir tudo */
@@ -1202,7 +1194,7 @@ a.so-leitor:focus {
 .hero__veu {
     background:
         linear-gradient(180deg, rgba(6,18,31,0.72) 0%, rgba(6,18,31,0.44) 44%, rgba(6,18,31,0.92) 100%),
-        linear-gradient(94deg, rgba(6,18,31,0.9) 0%, rgba(6,18,31,0.42) 52%, rgba(6,18,31,0.72) 78%, rgba(6,18,31,0.94) 100%);
+        linear-gradient(94deg, rgba(6,18,31,0.88) 0%, rgba(6,18,31,0.5) 42%, rgba(6,18,31,0.66) 68%, rgba(6,18,31,0.8) 100%);
 }
 
 
@@ -1261,10 +1253,10 @@ a.so-leitor:focus {
 @media (min-width: 62rem) {
     .hero__grade { grid-template-columns: 0.86fr 1.14fr; }
     .hero__tela {
-        perspective: 2000px;
-        width: calc(100% + 16vw);
-        margin-right: calc(-16vw);
+        width: calc(100% + 10vw);
+        margin-right: -10vw;
         justify-self: end;
+        align-self: center;
     }
     .monitor { max-width: none; transform: rotateY(-7deg) rotateX(1.5deg); }
 }
@@ -1276,4 +1268,35 @@ a.so-leitor:focus {
 }
 @media (prefers-reduced-motion: reduce) {
     .monitor { animation: none; }
+}
+
+
+/* ------------------------------------------- O DESKTOP
+   A moldura de monitor feita em CSS era chapada. Esta é a peça: monitor
+   renderizado, com a captura do sistema encaixada na tela por transformação de
+   perspectiva. O fundo dela é preto, então a mistura `screen` faz o preto sumir
+   e sobra o monitor — sem retângulo, sem lavar o fundo da seção. */
+.hero__tela .monitor,
+.hero__tela .monitor__base { display: none; }
+
+.hero__tela picture,
+.hero__tela img {
+    display: block; width: 100%; height: auto;
+}
+@media (min-width: 62rem) {
+    /* o monitor tem fundo transparente: flutua sobre a cena, com sombra própria */
+    .hero__tela img {
+        filter: drop-shadow(0 46px 70px rgba(0, 0, 0, 0.62));
+        max-height: 74vh;
+        width: auto;
+        margin-left: auto;
+    }
+}
+@media (max-width: 61.99rem) {
+    /* no celular é um recorte de tela clara: ganha moldura e sombra */
+    .hero__tela img {
+        border-radius: var(--r-md);
+        box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.7);
+    }
+    .hero__tela { max-width: 26rem; margin-inline: auto; }
 }
