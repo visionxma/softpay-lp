@@ -124,6 +124,10 @@
         contadores.forEach(function (el) { obsN.observe(el); });
     }
 
+    /* --- 7. Ano do rodapé: escrito à mão ele fica velho em 1º de janeiro --- */
+    var anoAgora = String(new Date().getFullYear());
+    document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent = anoAgora; });
+
     /* --- 7. Barra fixa de ação no celular, depois que o hero sai da tela --- */
     var barra = document.querySelector('.cta-fixa');
     var hero = document.querySelector('.hero');

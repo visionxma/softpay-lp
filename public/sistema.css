@@ -769,15 +769,42 @@ p:last-child { margin-bottom: 0; }
     color: var(--branco); margin-bottom: var(--sp-3);
 }
 .rodape ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
-.rodape a {
+.rodape ul a {
     display: flex; align-items: center; min-height: 2.75rem;
     color: rgba(255, 255, 255, 0.72); text-decoration: none; font-size: var(--t-sm);
 }
-@media (hover: hover) and (pointer: fine) { .rodape a:hover { color: var(--acento); } }
+.rodape a { color: rgba(255, 255, 255, 0.72); text-decoration: none; }
+@media (hover: hover) and (pointer: fine) { .rodape ul a:hover { color: var(--acento); } }
 .rodape__base {
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: var(--sp-3) var(--sp-5);
     margin-top: var(--sp-6); padding-top: var(--sp-5);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
     font-size: var(--t-xs); line-height: 1.6;
+}
+.rodape__produto { margin: 0; }
+.rodape__produto a { color: inherit; text-decoration: none; }
+@media (hover: hover) and (pointer: fine) {
+    .rodape__produto a:hover { color: var(--acento); }
+}
+
+/* Assinatura oficial da VisionX — a mesma do rodapé do visionxma.com, usada
+   igual em todo produto (a LP do FroX é a referência viva). Não se reescreve,
+   se reusa: o SoftPay assina o produto, a VisionX assina o SoftPay. */
+.rodape__visionx {
+    display: inline-flex; align-items: center; gap: var(--sp-2);
+    min-height: 44px; padding-inline: 0.25rem;
+    color: rgba(255, 255, 255, 0.62);
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.rodape__x {
+    flex: none; width: 13px; height: 13px;
+    color: var(--branco); opacity: 0.9;
+}
+.rodape__visionx i { font-style: normal; opacity: 0.55; margin-inline: 2px; }
+@media (hover: hover) and (pointer: fine) {
+    .rodape__visionx:hover { color: var(--branco); }
 }
 
 /* ------------------------------------------------- 17. CTA FIXA (celular) */
