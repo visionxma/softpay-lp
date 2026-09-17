@@ -1615,7 +1615,13 @@ a.so-leitor:focus {
 
    A passagem agora é um degradê de 96px do próprio azul-noite para a cor da
    seção seguinte, desenhado DENTRO do bloco escuro. Não muda altura, não entra
-   no fluxo e fica abaixo do conteúdo. */
+   no fluxo e fica abaixo do conteúdo.
+
+   `data-passagem` só entra no bloco escuro cujo VIZINHO DE BAIXO é claro. Em
+   17/09/2026 o #para-quem estava com o atributo e o que vem depois dele é a
+   fotografia em sangria do bloco .momento: o degradê clareava até quase branco
+   e morria em cima de uma foto escura — uma faixa branca no meio do nada, logo
+   abaixo da linha de "também atende". O atributo saiu de lá. */
 .hero, .secao--escura, .momento { position: relative; }
 
 .hero::after,
