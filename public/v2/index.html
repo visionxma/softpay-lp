@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Sistema de Gestão para Comércio | SoftPay</title>
+    <meta name="description"
+        content="PDV, estoque, caixa, fiado, nota fiscal e loja online no mesmo sistema. Teste o SoftPay grátis por 7 dias, sem cartão de crédito." />
+
+    <!-- PREVIEW: esta é a proposta de rebranding, servida em /v2/ enquanto a
+         home de produção segue em /. Fica fora do índice do Google para não
+         competir com a home nem duplicar conteúdo. Ao promover para a raiz,
+         trocar por: index, follow, max-snippet:-1, max-image-preview:large -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#06121F" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="/assets/lojistas/loja-de-roupas.webp" fetchpriority="high" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400..700&display=swap" />
+    <link rel="stylesheet" href="sistema.css?v=1" />
+    <link rel="icon" href="/assets/icones e favicon.svg" />
+</head>
+
+<body>
+    <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ======================================================= NAVEGAÇÃO -->
+    <nav class="nav" aria-label="Principal">
+        <a class="nav__logo" href="/v2/" aria-label="SoftPay, página inicial">
+            <img src="/assets/logo-232.png" width="232" height="84" alt="SoftPay" />
+        </a>
+
+        <div class="nav__menu">
+            <a class="nav__link" href="#sistema">O sistema</a>
+            <a class="nav__link" href="#para-quem">Para quem é</a>
+            <a class="nav__link" href="#planos">Planos</a>
+            <a class="nav__link" href="#duvidas">Dúvidas</a>
+        </div>
+
+        <div class="nav__acoes">
+            <a class="nav__link nav__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
+            <a class="btn btn--acao" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
+            <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
+                aria-label="Abrir menu">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="gaveta" id="gaveta" data-aberta="nao">
+        <a href="#sistema">O sistema</a>
+        <a href="#para-quem">Para quem é</a>
+        <a href="#planos">Planos</a>
+        <a href="#depoimentos">Quem já usa</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="https://www.softpaybr.com/auth">Entrar</a>
+        <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth">Começar grátis</a>
+    </div>
+
+    <main id="conteudo">
+
+        <!-- ============================================================ HERO -->
+        <section class="hero">
+            <img class="hero__foto" src="/assets/lojistas/loja-de-roupas.webp" width="1600" height="667"
+                fetchpriority="high" decoding="async"
+                alt="Lojista conferindo as peças da arara com um tablet na mão" />
+            <div class="hero__veu"></div>
+
+            <div class="shell">
+                <div class="hero__conteudo">
+                    <a class="hero__selo" href="/solucoes/bot-whatsapp/">
+                        <b>Novo</b>
+                        <span>Registre a venda falando no WhatsApp</span>
+                    </a>
+
+                    <h1 class="display display--hero">
+                        <span class="acento--em-escuro">Sua loja inteira</span><br />
+                        em uma tela só
+                    </h1>
+
+                    <p class="hero__sub">
+                        PDV, estoque, caixa, fiado, nota fiscal e loja online no mesmo
+                        sistema — e um painel que mostra o que fazer com esses números.
+                    </p>
+
+                    <div class="cluster cluster--cta">
+                        <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth"
+                            data-track="complete-registration">Começar grátis</a>
+                        <a class="btn btn--fantasma-claro btn--grande" href="#planos">Ver planos</a>
+                    </div>
+
+                    <p class="hero__nota">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        7 dias grátis · sem cartão · sem fidelidade
+                    </p>
+
+                    <div class="hero__prova">
+                        <div class="hero__prova-fotos">
+                            <img src="/assets/+100/logo_boutique.png" width="34" height="34" loading="lazy" decoding="async" alt="" />
+                            <img src="/assets/+100/logo_cosmeticos.png" width="34" height="34" loading="lazy" decoding="async" alt="" />
+                            <img src="/assets/+100/logo_minimercado.png" width="34" height="34" loading="lazy" decoding="async" alt="" />
+                            <img src="/assets/+100/logo_padaria.png" width="34" height="34" loading="lazy" decoding="async" alt="" />
+                            <img src="/assets/+100/logo_oficina.png" width="34" height="34" loading="lazy" decoding="async" alt="" />
+                        </div>
+                        <p><strong>Mais de 100 lojistas</strong> já organizam as vendas com o SoftPay</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================== ESTEIRA + NÚMEROS -->
+        <section class="secao secao--alt brilho">
+            <div class="shell cabeca-secao cabeca-secao--centro">
+                <p class="rotulo">Tudo em um lugar só</p>
+                <h2 class="display display--secao">O que a sua loja precisa,<br />sem sistema extra</h2>
+            </div>
+
+            <!-- Duas esteiras em sentidos opostos: todos os recursos aparecem sem
+                 ocupar 12 linhas de grade. A lista está duplicada no HTML porque
+                 a animação translada 50% do trilho. -->
+            <div class="esteira sangria">
+                <div class="esteira__trilho" role="list" aria-label="Recursos do SoftPay" style="--dur: 52s">
+                    <span class="pilula" role="listitem"><span class="pilula__marca">🛒</span>PDV / frente de caixa</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/mercadinho.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">📦</span>Controle de estoque</span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">💰</span>Caixa e sangria</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/papelaria.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">📒</span>Caderninho de fiado</span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">👥</span>Clientes e CRM</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/farmacia.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">📈</span>Curva ABC</span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">🏷️</span>Atacado e varejo</span>
+                    <!-- cópia visual para a animação: invisível ao leitor de tela -->
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">🛒</span>PDV / frente de caixa</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/mercadinho.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">📦</span>Controle de estoque</span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">💰</span>Caixa e sangria</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/papelaria.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">📒</span>Caderninho de fiado</span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">👥</span>Clientes e CRM</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/farmacia.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">📈</span>Curva ABC</span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">🏷️</span>Atacado e varejo</span>
+                </div>
+            </div>
+
+            <div class="esteira esteira--volta sangria" style="margin-top: .5rem">
+                <div class="esteira__trilho" role="list" aria-label="Mais recursos do SoftPay" style="--dur: 58s">
+                    <span class="pilula" role="listitem"><span class="pilula__marca">🧾</span>NF-e e NFC-e</span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">🛍️</span>Loja online com Pix</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/loja-de-variedades.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">💬</span>Venda pelo WhatsApp</span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">🎟️</span>Cupons e fidelidade</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/distribuidora.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">🏬</span>Filiais</span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">👤</span>Acesso por funcionário</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/loja-de-joias.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" role="listitem"><span class="pilula__marca">☁️</span>Backup automático</span>
+                    <!-- cópia visual para a animação: invisível ao leitor de tela -->
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">🧾</span>NF-e e NFC-e</span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">🛍️</span>Loja online com Pix</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/loja-de-variedades.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">💬</span>Venda pelo WhatsApp</span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">🎟️</span>Cupons e fidelidade</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/distribuidora.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">🏬</span>Filiais</span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">👤</span>Acesso por funcionário</span>
+                    <span class="pilula pilula--foto" aria-hidden="true"><img src="/assets/lojistas/pilulas/loja-de-joias.webp" width="224" height="96" loading="lazy" alt="" /></span>
+                    <span class="pilula" aria-hidden="true"><span class="pilula__marca">☁️</span>Backup automático</span>
+                </div>
+            </div>
+
+
+            <div class="shell" style="margin-top: var(--sp-6)">
+                <div class="quad">
+                    <div class="numero revelar">
+                        <span class="numero__valor" data-conta="100" data-prefixo="+">+100</span>
+                        <span class="numero__rotulo">lojistas usando o SoftPay</span>
+                    </div>
+                    <div class="numero revelar">
+                        <span class="numero__valor">7 dias</span>
+                        <span class="numero__rotulo">de teste grátis, sem cartão</span>
+                    </div>
+                    <div class="numero revelar">
+                        <span class="numero__valor">R$&nbsp;65</span>
+                        <span class="numero__rotulo">por mês no plano de entrada</span>
+                    </div>
+                    <div class="numero revelar">
+                        <span class="numero__valor">Brasil</span>
+                        <span class="numero__rotulo">atendimento nacional por WhatsApp</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================ O SISTEMA POR DENTRO -->
+        <section class="secao" id="sistema">
+            <div class="shell">
+                <div class="cabeca-secao">
+                    <p class="rotulo">O sistema por dentro</p>
+                    <h2 class="display display--secao">Cada parte da loja,<br />no lugar dela</h2>
+                    <p class="grande leitura">
+                        Seis frentes que costumam viver em cadernos, planilhas e aplicativos
+                        separados. Aqui elas conversam entre si: a venda baixa o estoque,
+                        alimenta o caixa e aparece no relatório.
+                    </p>
+                </div>
+
+                <div class="abas">
+                    <div class="abas__botoes" role="tablist" aria-label="Partes do sistema">
+                        <button class="aba" type="button" role="tab" id="aba-pdv" aria-controls="painel-pdv" aria-selected="true">
+                            <span class="aba__ponto"></span>PDV e caixa</button>
+                        <button class="aba" type="button" role="tab" id="aba-estoque" aria-controls="painel-estoque" aria-selected="false" tabindex="-1">
+                            <span class="aba__ponto"></span>Estoque</button>
+                        <button class="aba" type="button" role="tab" id="aba-fiado" aria-controls="painel-fiado" aria-selected="false" tabindex="-1">
+                            <span class="aba__ponto"></span>Fiado</button>
+                        <button class="aba" type="button" role="tab" id="aba-whats" aria-controls="painel-whats" aria-selected="false" tabindex="-1">
+                            <span class="aba__ponto"></span>WhatsApp</button>
+                        <button class="aba" type="button" role="tab" id="aba-loja" aria-controls="painel-loja" aria-selected="false" tabindex="-1">
+                            <span class="aba__ponto"></span>Loja online</button>
+                        <button class="aba" type="button" role="tab" id="aba-nota" aria-controls="painel-nota" aria-selected="false" tabindex="-1">
+                            <span class="aba__ponto"></span>Nota fiscal</button>
+                    </div>
+
+                    <!-- PDV -->
+                    <div class="painel" id="painel-pdv" role="tabpanel" aria-labelledby="aba-pdv">
+                        <div>
+                            <h3 class="display display--cartao">Venda em segundos,<br />caixa fechado sem susto</h3>
+                            <p class="apoio">
+                                Leitor de código de barras, busca por nome, desconto e finalização
+                                em uma tela. No fim do dia o caixa fecha com sangria, suprimento e
+                                o que entrou por cada forma de pagamento.
+                            </p>
+                            <ul class="painel__lista">
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cada venda baixa o estoque na hora</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dinheiro, Pix, cartão, fiado e misto</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Funciona no computador do balcão e no celular</li>
+                            </ul>
+                            <a class="link-seta" href="/solucoes/sistema-pdv/">Ver o PDV por inteiro
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <figure class="painel__figura">
+                            <img src="/assets/COmputador.webp" width="1224" height="1285" loading="lazy" decoding="async"
+                                alt="Tela do PDV do SoftPay com a lista de produtos e o carrinho da venda" />
+                        </figure>
+                    </div>
+
+                    <!-- ESTOQUE -->
+                    <div class="painel" id="painel-estoque" role="tabpanel" aria-labelledby="aba-estoque" hidden>
+                        <div>
+                            <h3 class="display display--cartao">O estoque bate<br />com a prateleira</h3>
+                            <p class="apoio">
+                                Entrada, saída, custo e preço de venda por produto — com variação de
+                                tamanho e cor quando a loja precisa. A curva ABC mostra quais itens
+                                realmente sustentam o faturamento.
+                            </p>
+                            <ul class="painel__lista">
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Aviso de item acabando</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custo e margem por produto</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Curva ABC: o que gira e o que empata dinheiro</li>
+                            </ul>
+                            <a class="link-seta" href="/solucoes/sistema-de-estoque/">Ver o controle de estoque
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <figure class="painel__figura">
+                            <img src="/assets/lojistas/loja-de-variedades.webp" width="1600" height="667" loading="lazy" decoding="async"
+                                alt="Lojista organizando as prateleiras de uma loja de variedades" />
+                        </figure>
+                    </div>
+
+                    <!-- FIADO -->
+                    <div class="painel" id="painel-fiado" role="tabpanel" aria-labelledby="aba-fiado" hidden>
+                        <div>
+                            <h3 class="display display--cartao">O fiado sai do caderno<br />e cobra sozinho</h3>
+                            <p class="apoio">
+                                Cada cliente tem a conta dele, com o que deve e desde quando. A partir
+                                do plano Loja, o sistema manda o link de pagamento Pix pelo WhatsApp e
+                                dá a conta por paga quando o dinheiro cai.
+                            </p>
+                            <ul class="painel__lista">
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Quem deve, quanto e há quantos dias</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cobrança por link Pix no WhatsApp</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Baixa automática quando o Pix cai</li>
+                            </ul>
+                            <a class="link-seta" href="/solucoes/controle-de-fiado/">Ver o controle de fiado
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <figure class="painel__figura">
+                            <img src="/assets/lojistas/mercadinho.webp" width="1600" height="667" loading="lazy" decoding="async"
+                                alt="Atendimento no balcão de um mercadinho" />
+                        </figure>
+                    </div>
+
+                    <!-- WHATSAPP -->
+                    <div class="painel" id="painel-whats" role="tabpanel" aria-labelledby="aba-whats" hidden>
+                        <div>
+                            <h3 class="display display--cartao">Registre a venda<br />falando no WhatsApp</h3>
+                            <p class="apoio">
+                                Mande um áudio ou uma mensagem dizendo o que vendeu. O SoftPay entende,
+                                registra a venda, baixa o estoque e responde confirmando — sem você
+                                largar o balcão para abrir o sistema.
+                            </p>
+                            <ul class="painel__lista">
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Funciona por texto ou áudio</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Consulta preço e saldo na hora</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Disponível a partir do plano Loja</li>
+                            </ul>
+                            <a class="link-seta" href="/solucoes/bot-whatsapp/">Ver como funciona
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <figure class="painel__figura">
+                            <img src="/assets/celular.webp" width="800" height="900" loading="lazy" decoding="async"
+                                alt="SoftPay aberto na tela de um celular" />
+                        </figure>
+                    </div>
+
+                    <!-- LOJA ONLINE -->
+                    <div class="painel" id="painel-loja" role="tabpanel" aria-labelledby="aba-loja" hidden>
+                        <div>
+                            <h3 class="display display--cartao">Sua vitrine na internet,<br />com o estoque que já existe</h3>
+                            <p class="apoio">
+                                A loja online usa o catálogo que você já cadastrou: o mesmo produto, o
+                                mesmo preço, o mesmo saldo. O cliente paga por Pix e a confirmação
+                                chega sozinha, sem você conferir extrato.
+                            </p>
+                            <ul class="painel__lista">
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Catálogo e loja saem do mesmo cadastro</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Pix com confirmação automática</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cupom e programa de fidelidade</li>
+                            </ul>
+                            <a class="link-seta" href="/solucoes/loja-online/">Ver a loja online
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <figure class="painel__figura">
+                            <img src="/assets/lojistas/cosmeticos-e-perfumaria.webp" width="1600" height="667" loading="lazy" decoding="async"
+                                alt="Loja de cosméticos e perfumaria com produtos expostos" />
+                        </figure>
+                    </div>
+
+                    <!-- NOTA FISCAL -->
+                    <div class="painel" id="painel-nota" role="tabpanel" aria-labelledby="aba-nota" hidden>
+                        <div>
+                            <h3 class="display display--cartao">Nota fiscal sem<br />depender do escritório</h3>
+                            <p class="apoio">
+                                Emissão de NFC-e e NF-e a partir da própria venda, com cadastro fiscal
+                                e pacote do contador incluídos. Você também vê e manifesta as notas que
+                                os fornecedores emitem contra o seu CNPJ.
+                            </p>
+                            <ul class="painel__lista">
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>NFC-e, NF-e, NFS-e e MDF-e (em ativação)</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Notas recebidas: ver e manifestar</li>
+                                <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Planos Nota Fiscal e ERP Completo</li>
+                            </ul>
+                            <p class="apoio" style="color: var(--atencao)">
+                                A emissão fiscal está em ativação. Confirme a situação do seu caso com o
+                                suporte antes de contratar.
+                            </p>
+                            <a class="link-seta" href="/solucoes/nfe/">Ver a emissão de nota
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        </div>
+                        <figure class="painel__figura">
+                            <img src="/assets/lojistas/distribuidora.webp" width="1600" height="667" loading="lazy" decoding="async"
+                                alt="Conferência de mercadorias em uma distribuidora" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================= PARA QUEM É -->
+        <section class="secao secao--escura" id="para-quem" style="padding-bottom: 0">
+            <div class="shell cabeca-secao cabeca-secao--centro">
+                <p class="rotulo rotulo--claro">Para quem é</p>
+                <h2 class="display display--secao">Comércio que vende<br />produto com estoque</h2>
+                <p class="grande leitura leitura--centro">
+                    Quem já usa o SoftPay todo dia, do balcão ao fechamento do caixa.
+                </p>
+            </div>
+
+            <div class="vitrine sangria">
+                <a class="vitrine__item" href="/segmentos/mercadinho/">
+                    <img src="/assets/lojistas/vitrine/mercadinho-640.webp"
+                         srcset="/assets/lojistas/vitrine/mercadinho-640.webp 640w, /assets/lojistas/vitrine/mercadinho-960.webp 960w, /assets/lojistas/mercadinho.webp 1600w"
+                         sizes="(min-width: 72rem) 17vw, (min-width: 48rem) 33vw, 50vw"
+                         width="1600" height="667" loading="lazy" decoding="async" alt="Mercadinho" />
+                    <span class="vitrine__nome">Mercadinho</span>
+                </a>
+                <a class="vitrine__item" href="/segmentos/loja-de-roupas/">
+                    <img src="/assets/lojistas/vitrine/loja-de-roupas-640.webp"
+                         srcset="/assets/lojistas/vitrine/loja-de-roupas-640.webp 640w, /assets/lojistas/vitrine/loja-de-roupas-960.webp 960w, /assets/lojistas/loja-de-roupas.webp 1600w"
+                         sizes="(min-width: 72rem) 17vw, (min-width: 48rem) 33vw, 50vw"
+                         width="1600" height="667" loading="lazy" decoding="async" alt="Loja de roupas" />
+                    <span class="vitrine__nome">Loja de roupas</span>
+                </a>
+                <a class="vitrine__item" href="/segmentos/farmacia/">
+                    <img src="/assets/lojistas/vitrine/farmacia-640.webp"
+                         srcset="/assets/lojistas/vitrine/farmacia-640.webp 640w, /assets/lojistas/vitrine/farmacia-960.webp 960w, /assets/lojistas/farmacia.webp 1600w"
+                         sizes="(min-width: 72rem) 17vw, (min-width: 48rem) 33vw, 50vw"
+                         width="1600" height="667" loading="lazy" decoding="async" alt="Farmácia" />
+                    <span class="vitrine__nome">Farmácia</span>
+                </a>
+                <a class="vitrine__item" href="/segmentos/distribuidora/">
+                    <img src="/assets/lojistas/vitrine/distribuidora-640.webp"
+                         srcset="/assets/lojistas/vitrine/distribuidora-640.webp 640w, /assets/lojistas/vitrine/distribuidora-960.webp 960w, /assets/lojistas/distribuidora.webp 1600w"
+                         sizes="(min-width: 72rem) 17vw, (min-width: 48rem) 33vw, 50vw"
+                         width="1600" height="667" loading="lazy" decoding="async" alt="Distribuidora" />
+                    <span class="vitrine__nome">Distribuidora</span>
+                </a>
+                <a class="vitrine__item" href="/segmentos/papelaria/">
+                    <img src="/assets/lojistas/vitrine/papelaria-640.webp"
+                         srcset="/assets/lojistas/vitrine/papelaria-640.webp 640w, /assets/lojistas/vitrine/papelaria-960.webp 960w, /assets/lojistas/papelaria.webp 1600w"
+                         sizes="(min-width: 72rem) 17vw, (min-width: 48rem) 33vw, 50vw"
+                         width="1600" height="667" loading="lazy" decoding="async" alt="Papelaria" />
+                    <span class="vitrine__nome">Papelaria</span>
+                </a>
+                <a class="vitrine__item" href="/segmentos/loja-de-variedades/">
+                    <img src="/assets/lojistas/vitrine/loja-de-variedades-640.webp"
+                         srcset="/assets/lojistas/vitrine/loja-de-variedades-640.webp 640w, /assets/lojistas/vitrine/loja-de-variedades-960.webp 960w, /assets/lojistas/loja-de-variedades.webp 1600w"
+                         sizes="(min-width: 72rem) 17vw, (min-width: 48rem) 33vw, 50vw"
+                         width="1600" height="667" loading="lazy" decoding="async" alt="Loja de variedades" />
+                    <span class="vitrine__nome">Variedades</span>
+                </a>
+            </div>
+
+            <div class="shell" style="padding-block: var(--sp-5)">
+                <div class="cluster" style="justify-content: center">
+                    <a class="pilula" href="/segmentos/loja-de-celulares-e-acessorios/">Celulares e acessórios</a>
+                    <a class="pilula" href="/segmentos/loja-de-autopecas/">Autopeças</a>
+                    <a class="pilula" href="/segmentos/materiais-de-construcao/">Materiais de construção</a>
+                    <a class="pilula" href="/segmentos/loja-de-joias/">Joias</a>
+                    <a class="pilula" href="/segmentos/empresas-com-filiais/">Empresas com filiais</a>
+                    <a class="pilula" href="/segmentos/pequeno-comercio/">Comércio em geral</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================== PLANOS -->
+        <section class="secao" id="planos">
+            <div class="shell">
+                <div class="cabeca-secao cabeca-secao--centro">
+                    <p class="rotulo">Planos</p>
+                    <h2 class="display display--secao">Experimente antes<br />de pagar</h2>
+                    <p class="grande leitura leitura--centro">
+                        7 dias com acesso aos recursos do plano, sem cartão de crédito.
+                        Você escolhe depois de testar.
+                    </p>
+                </div>
+
+                <div class="planos">
+                    <!-- destaque: largura toda no celular, coluna normal no desktop -->
+                    <article class="plano plano--destaque">
+                        <span class="plano__tag">Mais popular</span>
+                        <h3 class="plano__nome">Loja</h3>
+                        <p class="plano__desc">Recupere o dinheiro do fiado e venda online com Pix.</p>
+                        <p class="plano__preco">R$&nbsp;89 <span class="plano__ciclo">/mês · até 3 usuários</span></p>
+                        <ul class="plano__inclui">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo do Comércio</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Fiado que cobra sozinho (link Pix)</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Loja online com Pix automático</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Estoque avançado e curva ABC</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Venda pelo WhatsApp</li>
+                        </ul>
+                        <a class="btn btn--acao btn--bloco" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
+                    </article>
+
+                    <article class="plano">
+                        <span class="plano__tag">Só a nota</span>
+                        <h3 class="plano__nome">Nota Fiscal</h3>
+                        <p class="plano__desc">Preencha o formulário e emita. Sem PDV nem estoque.</p>
+                        <p class="plano__preco">R$&nbsp;65 <span class="plano__ciclo">/mês · até 2</span></p>
+                        <ul class="plano__inclui">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>NFC-e, NF-e, NFS-e e MDF-e</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Notas recebidas: ver e manifestar</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cadastro fiscal + pacote do contador</li>
+                        </ul>
+                        <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
+                    </article>
+
+                    <article class="plano">
+                        <span class="plano__tag">Para começar</span>
+                        <h3 class="plano__nome">Comércio</h3>
+                        <p class="plano__desc">Seu caixa e o caderninho de fiado, num app só.</p>
+                        <p class="plano__preco">R$&nbsp;69 <span class="plano__ciclo">/mês · 1 usuário</span></p>
+                        <ul class="plano__inclui">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>PDV e caixa completo</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Caderninho de fiado</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Estoque essencial</li>
+                        </ul>
+                        <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
+                    </article>
+
+                    <article class="plano">
+                        <span class="plano__tag">Com nota</span>
+                        <h3 class="plano__nome">ERP Completo</h3>
+                        <p class="plano__desc">Tudo da Loja mais a emissão de nota fiscal.</p>
+                        <p class="plano__preco">R$&nbsp;109 <span class="plano__ciclo">/mês · até 10</span></p>
+                        <ul class="plano__inclui">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Tudo da Loja</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Emissão de NFC-e e NF-e</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Equipe ampliada</li>
+                        </ul>
+                        <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
+                    </article>
+                </div>
+
+                <p class="apoio" style="text-align: center; margin-top: var(--sp-4)">
+                    Sem cartão de crédito · Cancele quando quiser ·
+                    <a href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support">Ajuda para configurar no WhatsApp</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ====================================================== DEPOIMENTOS -->
+        <section class="secao secao--alt" id="depoimentos">
+            <div class="shell">
+                <div class="cabeca-secao">
+                    <p class="rotulo">Quem já usa</p>
+                    <h2 class="display display--secao">Lojistas contando<br />o que mudou</h2>
+                </div>
+
+                <div class="dividido dividido--texto-maior">
+                    <div class="duo">
+                        <article class="depo revelar">
+                            <video class="depo__video" src="/assets/depoimentos/gabriel-landim.mp4"
+                                poster="/assets/depoimentos/gabriel-landim.webp" controls preload="none"
+                                playsinline aria-label="Depoimento em vídeo de Gabriel Landim"></video>
+                            <p class="depo__texto">
+                                “Antes eu só sabia quanto tinha vendido no fim do mês. Agora vejo no dia.”
+                            </p>
+                            <div class="depo__quem">
+                                <img src="/assets/depoimentos/gabriel-landim.webp" width="36" height="36" loading="lazy" alt="" />
+                                <span><b>Gabriel Landim</b><span>Cliente SoftPay</span></span>
+                            </div>
+                        </article>
+
+                        <article class="depo revelar">
+                            <video class="depo__video" src="/assets/depoimentos/neto-rn-grifes.mp4"
+                                poster="/assets/depoimentos/neto-rn-grifes.webp" controls preload="none"
+                                playsinline aria-label="Depoimento em vídeo de Neto, da RN Grifes"></video>
+                            <p class="depo__texto">
+                                “O fiado saiu do caderno. Hoje o cliente recebe o link e paga por Pix.”
+                            </p>
+                            <div class="depo__quem">
+                                <img src="/assets/depoimentos/neto-rn-grifes.webp" width="36" height="36" loading="lazy" alt="" />
+                                <span><b>Neto</b><span>RN Grifes</span></span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="pilha">
+                        <div class="duo">
+                            <div class="numero"><span class="numero__valor">Humano</span><span class="numero__rotulo">suporte por WhatsApp, feito por gente da equipe</span></div>
+                            <div class="numero"><span class="numero__valor">Nuvem</span><span class="numero__rotulo">dados no Supabase, com backup automático</span></div>
+                            <div class="numero"><span class="numero__valor">Navegador</span><span class="numero__rotulo">nada para instalar, nem servidor na loja</span></div>
+                            <div class="numero"><span class="numero__valor">Sem taxa</span><span class="numero__rotulo">nenhuma cobrança de implantação</span></div>
+                        </div>
+                        <p class="apoio">
+                            O SoftPay registra a venda e o recebimento. Ele não processa cartão:
+                            não substitui a maquininha, trabalha junto com ela.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================== DÚVIDAS -->
+        <section class="secao" id="duvidas">
+            <div class="shell">
+                <div class="cabeca-secao">
+                    <p class="rotulo">Perguntas frequentes</p>
+                    <h2 class="display display--secao">Ficou com dúvida<br />sobre o SoftPay?</h2>
+                </div>
+
+                <div class="faq">
+                    <details class="faq__item" name="faq">
+                        <summary>O que é o SoftPay?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>O SoftPay é um sistema de gestão para comércio. Ele reúne PDV, controle de estoque, caixa, fiado, clientes (CRM), notas fiscais e loja online em um único lugar, acessado pelo navegador.</p></div>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>Quanto custa o SoftPay?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>São quatro planos mensais: Nota Fiscal por R$ 65/mês, Comércio por R$ 69/mês, Loja por R$ 89/mês e ERP Completo por R$ 109/mês. Todos podem ser testados por 7 dias grátis antes de qualquer pagamento.</p></div>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>Precisa de cartão de crédito para testar?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Não. O cadastro para o teste de 7 dias não pede cartão de crédito.</p></div>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>Preciso instalar alguma coisa?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Não. O SoftPay funciona pelo navegador, no computador do balcão e no celular. Não é necessário instalar programa nem manter um servidor na loja.</p></div>
+                    </details>
+                    <details class="faq__item" name="faq">
+                        <summary>Meus dados ficam seguros?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Os dados ficam em banco de dados na nuvem, sobre infraestrutura Supabase, com backup automático e acesso individual por usuário. Nenhum sistema pode prometer segurança absoluta, mas seus dados não dependem do computador da loja.</p></div>
+                    </details>
+
+                    <!-- as demais, escondidas até o "ver mais": estão no HTML, então
+                         o buscador lê todas -->
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>Para quem o SoftPay serve?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Para comércios com estoque: mercadinhos, lojas de roupas, lojas de variedades, papelarias, farmácias, distribuidoras e lojas em geral. O perfil mais comum é a loja que quer sair do caderno ou da planilha.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>Posso usar no celular?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim. O SoftPay roda no navegador do celular, sem precisar instalar aplicativo, com os recursos essenciais do dia a dia da loja.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>Posso cadastrar funcionários?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim, com multi-login: cada pessoa entra com o próprio acesso. A quantidade depende do plano — 1 no Comércio, até 3 no Loja e até 10 no ERP Completo. O plano Nota Fiscal permite até 2.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>Posso controlar mais de uma loja ou filial?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim. O SoftPay permite controlar filiais dentro da mesma conta, sem precisar contratar um sistema separado para cada ponto de venda.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>O SoftPay emite NF-e e NFC-e?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim, nos planos Nota Fiscal e ERP Completo, que incluem cadastro fiscal e pacote do contador. A emissão de NFC-e, NF-e, NFS-e e MDF-e está em ativação — confirme com o suporte a situação para o seu caso antes de contratar.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>Posso migrar de outro sistema ou de uma planilha?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim. A importação de dados está disponível a partir do plano Loja, e o suporte orienta como organizar o arquivo dos seus produtos. Fale com o suporte antes de migrar para conferir o formato.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>É difícil aprender a usar?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>O SoftPay foi feito para quem nunca usou sistema de gestão: a tela é organizada e a operação de venda é direta. Além disso, o suporte humano ajuda na configuração inicial pelo WhatsApp.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>O suporte é humano?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim. O atendimento é feito por pessoas da equipe, pelo WhatsApp, e não por robô de autoatendimento.</p></div>
+                    </details>
+                    <details class="faq__item faq__extra" name="faq" hidden>
+                        <summary>Funciona em todo o Brasil?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+                        <div><p>Sim. O sistema é usado pela internet e o atendimento é nacional.</p></div>
+                    </details>
+                </div>
+
+                <div class="cluster" style="margin-top: var(--sp-5)">
+                    <button class="btn btn--linha" type="button" data-ver-mais=".faq__extra">Ver mais perguntas (+9)</button>
+                    <a class="link-seta" href="/perguntas/">Todas as perguntas
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================== CTA FINAL -->
+        <section class="secao secao--escura brilho">
+            <div class="shell cabeca-secao--centro">
+                <h2 class="display display--secao">Comece hoje.<br /><span class="acento--em-escuro">Sem cartão.</span></h2>
+                <p class="grande leitura leitura--centro" style="margin-bottom: var(--sp-5)">
+                    Sete dias com o sistema inteiro aberto. Se não servir para a sua loja,
+                    é só não continuar — não pedimos cartão nem contrato.
+                </p>
+                <div class="cluster cluster--cta" style="justify-content: center">
+                    <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Começar grátis</a>
+                    <a class="btn btn--fantasma-claro btn--grande" href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================== RODAPÉ -->
+    <footer class="rodape">
+        <div class="shell">
+            <div class="rodape__grade">
+                <div class="rodape__marca">
+                    <img src="/assets/logo-claro-232.png" width="232" height="84" loading="lazy"
+                         style="height: 2rem; width: auto; margin-bottom: var(--sp-3)" alt="SoftPay" />
+                    <p class="apoio" style="color: rgba(255,255,255,.72); max-width: 32ch">
+                        Sistema de gestão em nuvem para comércio: PDV, estoque, caixa, fiado,
+                        nota fiscal e loja online.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Soluções</h3>
+                    <ul>
+                        <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
+                        <li><a href="/solucoes/sistema-de-estoque/">Estoque</a></li>
+                        <li><a href="/solucoes/controle-de-fiado/">Fiado</a></li>
+                        <li><a href="/solucoes/loja-online/">Loja online</a></li>
+                        <li><a href="/solucoes/nfe/">NF-e</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Para quem</h3>
+                    <ul>
+                        <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
+                        <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
+                        <li><a href="/segmentos/farmacia/">Farmácia</a></li>
+                        <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
+                        <li><a href="/segmentos/papelaria/">Papelaria</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Aprender</h3>
+                    <ul>
+                        <li><a href="/guias/como-sair-do-caderno/">Sair do caderno</a></li>
+                        <li><a href="/guias/como-controlar-estoque/">Controlar estoque</a></li>
+                        <li><a href="/guias/como-calcular-margem-de-lucro/">Calcular margem</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/perguntas/">Perguntas</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>SoftPay</h3>
+                    <ul>
+                        <li><a href="/sobre/">Sobre</a></li>
+                        <li><a href="/contato/">Contato</a></li>
+                        <li><a href="/termos.html">Termos</a></li>
+                        <li><a href="/privacidade.html">Privacidade</a></li>
+                        <li><a href="/reembolso.html">Reembolso</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="rodape__base">
+                © 2026 SoftPay · um produto <strong style="color: var(--branco)">VisionX</strong> ·
+                VisionX Inova Simples (IS) · CNPJ 61.427.918/0001-06 · Pedreiras, MA ·
+                suporte@softpaybr.com · WhatsApp (86) 99819-3851
+            </p>
+        </div>
+    </footer>
+
+    <!-- Barra de ação do celular: aparece quando o hero sai da tela -->
+    <div class="cta-fixa" data-visivel="nao">
+        <a class="btn btn--acao" href="https://www.softpaybr.com/auth" data-track="complete-registration">Começar grátis</a>
+        <a class="btn btn--linha" href="#planos">Planos</a>
+    </div>
+
+    <script src="efeitos.js?v=1" defer></script>
+</body>
+
+</html>
