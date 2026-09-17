@@ -40,7 +40,7 @@
     <link rel="preload" as="image" href="/assets/aparelhos.webp?v=0621df5b2c" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=e588a36508" />
+    <link rel="stylesheet" href="sistema.css?v=76b2bca3ae" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -162,22 +162,60 @@
                 </div>
 
                 <figure class="hero__tela">
-                    <!-- A família de aparelhos. Os quatro foram renderizados com as
-                         telas em chroma e as capturas REAIS do sistema entraram dentro
-                         por transformação de perspectiva, encaixadas nos quatro cantos
-                         medidos de cada tela: o PDV no monitor, o estoque no notebook,
-                         o catálogo no tablet e o carrinho no celular. Nada de interface
-                         desenhada — é o sistema que o lojista vai abrir.
-                         No celular a peça inteira ficaria ilegível, então entra só o
-                         recorte da área que convence. -->
-                    <picture>
-                        <source media="(min-width: 62rem)"
-                                srcset="/assets/aparelhos-900.webp?v=3fb8bfaff0 900w, /assets/aparelhos.webp?v=0621df5b2c 1500w"
-                                sizes="56vw" width="1500" height="755" />
-                        <img src="/assets/sistema/pdv-celular.webp?v=ee711d3f0c"
-                             width="900" height="786" fetchpriority="high" decoding="async"
-                             alt="O SoftPay aberto em quatro aparelhos: o PDV no monitor, o controle de estoque no notebook, o catálogo no tablet e o carrinho de uma venda no celular" />
-                    </picture>
+                    <!-- A FAMÍLIA DE APARELHOS, EM CSS.
+                         A primeira versão era uma imagem: os aparelhos vinham de um
+                         render e as telas entravam dentro por transformação de
+                         perspectiva. Duas coisas se perdiam ali — a moldura ficava na
+                         resolução do render (o Victor apontou as bordas) e a captura
+                         passava por um warp que come nitidez.
+
+                         Aqui a moldura é feita com borda, raio e gradiente: é vetorial,
+                         fica nítida em qualquer tela e em qualquer densidade. E a
+                         captura entra como <img> no tamanho nativo, sem deformação —
+                         o que o navegador serve é o que o lojista vê no sistema. -->
+                    <div class="aparelhos" aria-label="O SoftPay aberto em quatro aparelhos">
+                        <div class="ap ap--monitor">
+                            <div class="ap__tela">
+                                <picture>
+                                    <!-- abaixo de 62rem o monitor é o único aparelho à vista,
+                                         e a tela inteira do PDV ficaria ilegível: entra o
+                                         recorte da área que convence -->
+                                    <source media="(max-width: 61.99rem)" srcset="/assets/sistema/pdv-celular.webp?v=ee711d3f0c" width="900" height="786" />
+                                    <img src="/assets/sistema/pdv.webp?v=4737e8d2c1" width="1400" height="845"
+                                         fetchpriority="high" decoding="async"
+                                         alt="O PDV do SoftPay num monitor, com o carrinho fechando em R$ 414,60" />
+                                </picture>
+                            </div>
+                            <span class="ap__pescoco" aria-hidden="true"></span>
+                            <span class="ap__base" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="ap ap--note">
+                            <div class="ap__tela">
+                                <img src="/assets/sistema/estoque.webp?v=96843ec6cc" width="1400" height="845"
+                                     loading="lazy" decoding="async"
+                                     alt="O controle de estoque do SoftPay num notebook" />
+                            </div>
+                            <span class="ap__teclado" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="ap ap--tablet">
+                            <div class="ap__tela">
+                                <img src="/assets/sistema/catalogo.webp?v=5adc7aa999" width="1400" height="845"
+                                     loading="lazy" decoding="async"
+                                     alt="O catálogo da loja online do SoftPay num tablet" />
+                            </div>
+                        </div>
+
+                        <div class="ap ap--fone">
+                            <span class="ap__notch" aria-hidden="true"></span>
+                            <div class="ap__tela">
+                                <img src="/assets/sistema/pdv-celular.webp?v=ee711d3f0c" width="900" height="786"
+                                     loading="lazy" decoding="async"
+                                     alt="O carrinho de uma venda do SoftPay num celular" />
+                            </div>
+                        </div>
+                    </div>
                 </figure>
             </div>
         </section>

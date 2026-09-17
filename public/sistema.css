@@ -1450,22 +1450,12 @@ a.so-leitor:focus {
 .hero__tela img {
     display: block; width: 100%; height: auto;
 }
-@media (min-width: 62rem) {
-    /* o monitor tem fundo transparente: flutua sobre a cena, com sombra própria */
-    .hero__tela img {
-        filter: drop-shadow(0 46px 70px rgba(0, 0, 0, 0.62));
-        max-height: 74vh;
-        width: auto;
-        margin-left: auto;
-    }
-}
+/* (As regras que davam sombra e teto de altura à imagem do hero saíram: a peça
+   deixou de ser UMA imagem e virou quatro aparelhos desenhados, cada um com a
+   própria moldura e a própria sombra. Aplicadas às capturas de dentro, elas
+   punham sombra em cada tela e quebravam o enquadramento.) */
 @media (max-width: 61.99rem) {
-    /* no celular é um recorte de tela clara: ganha moldura e sombra */
-    .hero__tela img {
-        border-radius: var(--r-md);
-        box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.7);
-    }
-    .hero__tela { max-width: 26rem; margin-inline: auto; }
+    .hero__tela { width: 100%; max-width: 26rem; margin-inline: auto; }
 }
 
 
@@ -2362,3 +2352,139 @@ a.so-leitor:focus {
     font-size: var(--t-sm); line-height: 1.55; color: var(--tinta-2);
 }
 .garantias__nota b { color: var(--tinta); }
+
+
+/* ==========================================================================
+   27. A FAMÍLIA DE APARELHOS DO HERO
+   --------------------------------------------------------------------------
+   Referência: a home da TriboPay, que o Victor mandou — monitor, notebook,
+   tablet e celular juntos, cada um com o produto rodando.
+
+   A primeira versão foi feita como IMAGEM: os aparelhos vinham de um render e
+   as capturas entravam dentro por transformação de perspectiva. Duas coisas se
+   perdiam. A moldura ficava presa à resolução do render, e numa tela de alta
+   densidade as bordas amoleciam — foi o que o Victor apontou. E a captura
+   passava por um warp, que come nitidez antes mesmo de o navegador redimensionar.
+
+   Aqui a moldura é desenhada: borda, raio, gradiente e sombra. É vetorial,
+   fica nítida em qualquer densidade, pesa alguns bytes e dá controle de cada
+   milímetro do acabamento. A captura entra como <img> no tamanho nativo, sem
+   deformação nenhuma: o que o navegador serve é o que o lojista vê no sistema.
+   ========================================================================== */
+.aparelhos {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    container-type: inline-size;
+}
+
+/* -------------------------------------------------------- a peça em comum */
+.ap { position: absolute; }
+.ap__tela {
+    position: relative; overflow: hidden;
+    background: var(--noite-2);
+}
+.ap__tela picture { display: block; }
+.ap__tela img { display: block; width: 100%; height: auto; }
+
+/* --------------------------------------------------------------- MONITOR */
+.ap--monitor { left: 31%; top: 0; width: 55%; }
+.ap--monitor .ap__tela {
+    border: 0.7cqw solid #1A1D22;
+    border-bottom-width: 1.4cqw;
+    border-radius: 0.9cqw;
+    box-shadow:
+        0 0 0 0.12cqw rgba(255, 255, 255, 0.22),
+        0 4cqw 7cqw -2.4cqw rgba(0, 0, 0, 0.75);
+}
+/* pescoço e base: chapa de alumínio, como no aparelho de verdade */
+.ap--monitor .ap__pescoco {
+    display: block; width: 7%; height: 4.6cqw; margin: 0 auto;
+    background: linear-gradient(90deg, #6E747C 0%, #C9CFD6 38%, #9AA1A9 62%, #5F656D 100%);
+}
+.ap--monitor .ap__base {
+    display: block; width: 26%; height: 0.9cqw; margin: 0 auto;
+    border-radius: 0 0 0.5cqw 0.5cqw;
+    background: linear-gradient(180deg, #AEB5BD 0%, #71777F 100%);
+    box-shadow: 0 1.2cqw 2.4cqw -0.8cqw rgba(0, 0, 0, 0.7);
+}
+
+/* -------------------------------------------------------------- NOTEBOOK */
+/* o notebook entra na frente, mas mordendo só a ponta do monitor — na
+   referência ele cobre pouco, e é isso que deixa o PDV legível */
+.ap--note { left: 0; bottom: 3%; width: 41%; }
+.ap--note .ap__tela {
+    border: 0.55cqw solid #17191E;
+    border-bottom-width: 1.1cqw;
+    border-radius: 0.7cqw 0.7cqw 0 0;
+    box-shadow:
+        0 0 0 0.1cqw rgba(255, 255, 255, 0.2),
+        0 3cqw 6cqw -2cqw rgba(0, 0, 0, 0.7);
+}
+/* a base do teclado, em trapézio: é o que dá a perspectiva sem foto */
+.ap--note .ap__teclado {
+    display: block; height: 1.5cqw;
+    margin: 0 -6.5%;
+    background: linear-gradient(180deg, #C2C8D0 0%, #8E949C 55%, #6A7078 100%);
+    clip-path: polygon(6.2% 0, 93.8% 0, 100% 100%, 0 100%);
+    border-radius: 0 0 0.45cqw 0.45cqw;
+}
+
+/* ---------------------------------------------------------------- TABLET */
+.ap--tablet { right: 8.5%; bottom: 7%; width: 18%; }
+.ap--tablet .ap__tela {
+    border: 0.6cqw solid #17191E;
+    border-radius: 1.1cqw;
+    box-shadow:
+        0 0 0 0.1cqw rgba(255, 255, 255, 0.2),
+        0 2.6cqw 5cqw -1.8cqw rgba(0, 0, 0, 0.72);
+    aspect-ratio: 3 / 4;
+}
+/* A captura é larga e a tela é retrato: ela entra por `cover`, ancorada no
+   lado que interessa, em vez de esticada. No tablet é a esquerda (menu e
+   conteúdo do catálogo); no celular é a direita (a coluna do carrinho). */
+.ap--tablet .ap__tela img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 18% 0;
+}
+
+/* --------------------------------------------------------------- CELULAR */
+.ap--fone { right: 0; bottom: 1%; width: 8.4%; }
+.ap--fone .ap__tela {
+    border: 0.42cqw solid #14161A;
+    border-radius: 1.5cqw;
+    box-shadow:
+        0 0 0 0.09cqw rgba(255, 255, 255, 0.26),
+        0 2.2cqw 4.4cqw -1.6cqw rgba(0, 0, 0, 0.75);
+    aspect-ratio: 9 / 19.5;
+}
+.ap--fone .ap__tela img {
+    width: 100%; height: 100%; object-fit: cover; object-position: 88% 0;
+}
+.ap--fone .ap__notch {
+    position: absolute; z-index: 2; left: 50%; top: 0.42cqw;
+    width: 38%; height: 0.75cqw; transform: translateX(-50%);
+    background: #14161A; border-radius: 0 0 0.5cqw 0.5cqw;
+}
+
+/* Flutua devagar, em tempos diferentes: a peça fica viva sem chamar mais
+   atenção que o título. */
+@media (prefers-reduced-motion: no-preference) {
+    .ap--monitor { animation: flutuar 9s ease-in-out infinite; }
+    .ap--note    { animation: flutuar 11s ease-in-out infinite 0.8s; }
+    .ap--tablet  { animation: flutuar 10s ease-in-out infinite 1.6s; }
+    .ap--fone    { animation: flutuar 12s ease-in-out infinite 2.4s; }
+}
+
+/* Abaixo de 62rem o hero mostra só a captura do PDV, como antes: quatro
+   aparelhos em 390px de largura seriam ilegíveis. */
+@media (max-width: 61.99rem) {
+    /* o .hero__tela é um grid com place-items:center, que dá ao filho a largura
+       do CONTEÚDO — e os aparelhos são todos absolutos, então a caixa colapsava
+       para zero (medido em 390px). Aqui ela volta a ocupar a linha inteira. */
+    .hero__tela { justify-items: stretch; }
+    .aparelhos { aspect-ratio: auto; width: 100%; }
+    .ap--note, .ap--tablet, .ap--fone { display: none; }
+    .ap--monitor { position: static; width: 100%; }
+    .ap--monitor .ap__pescoco, .ap--monitor .ap__base { display: none; }
+    .ap--monitor .ap__tela { border-width: 3px; border-bottom-width: 3px; border-radius: 0.75rem; }
+}

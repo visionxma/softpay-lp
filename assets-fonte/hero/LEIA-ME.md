@@ -1,54 +1,56 @@
-# A família de aparelhos do hero
+# A peça do hero: quatro aparelhos, desenhados em CSS
 
-`aparelhos-cores.png` é a cena crua: monitor, notebook, tablet e celular, com
-**uma cor chroma diferente em cada tela** e o fundo em magenta. Gerada no codex
-em 17/09/2026, a partir da referência que o Victor mandou (a home da TriboPay).
+Referência: a home da TriboPay, que o Victor mandou — monitor, notebook, tablet
+e celular juntos, cada um com o produto rodando.
 
-| tela | cor chroma | matiz |
-|---|---|---|
-| monitor | verde `#00FF00` | 95–150 |
-| notebook | ciano `#00FFFF` | 165–200 |
-| tablet | amarelo `#FFFF00` | 45–70 |
-| celular | laranja `#FF8000` | 15–42 |
-| fundo | magenta `#FF00FF` | 280–330 |
+## Por que NÃO é uma imagem
 
-`aparelhos3.png` é o resultado, com fundo transparente.
+A primeira versão foi feita como render: os aparelhos vinham do codex com as
+telas em chroma e as capturas entravam dentro por transformação de perspectiva.
+Funcionou, mas duas coisas se perdiam e o Victor apontou as duas (17/09/2026):
 
-## Por que uma cor por tela
+1. **A moldura ficava presa à resolução do render.** Numa tela de alta
+   densidade as bordas amoleciam. Ampliar não resolve: não há detalhe para
+   recuperar.
+2. **A captura passava por um warp**, que come nitidez antes mesmo de o
+   navegador redimensionar.
 
-A primeira versão usou verde em todas. **Não funciona**: as telas do monitor e
-do notebook se tocam na cena, a rotulagem de componentes conexos não separa os
-limites com segurança, e a composição vazou — o menu do sistema apareceu pintado
-fora da moldura do monitor. Com uma cor por tela a segmentação é direta e não há
-ambiguidade.
+Hoje a moldura é desenhada em CSS — borda, raio, gradiente e sombra. É
+vetorial: nítida em qualquer densidade, pesa alguns bytes, e cada milímetro do
+acabamento é ajustável. A captura entra como `<img>` no tamanho nativo, sem
+deformação nenhuma.
 
-## O caminho, passo a passo
+As medidas estão todas em `cqw` (por cento da largura do contêiner), então a
+peça inteira escala junto e nada quebra em nenhuma largura.
 
-1. Segmentar por **matiz** (HSV), não por comparação de canais RGB: amarelo e
-   laranja se confundem em RGB (o amarelo captura o laranja).
-2. Achar os quatro cantos de cada tela pelo ponto mais próximo de cada canto do
-   bounding box. Guardar a **distância** até esse canto: se for grande, o canto
-   está coberto por outro aparelho.
-3. Reconstruir o canto coberto por paralelogramo (`bl = tl + br − tr`). O
-   monitor tem DOIS cantos cobertos (pelo notebook e pelo tablet): ali a base é
-   medida numa coluna livre, entre os dois.
-4. Compor por transformação de perspectiva, com a tela fonte em 2x o tamanho do
-   destino para não perder nitidez.
-5. Máscara = cor daquela tela, dilatada **2px**, ∩ o quadrilátero. A dilatação
-   tapa o fio de chroma do antisserrilhado; mais que isso e a tela invade a
-   moldura.
-6. Fundo magenta → alfa.
-7. Limpar o chroma que sobrou **só FORA das áreas pintadas**. Limpar dentro
-   apaga o que é verde no próprio sistema — foi assim que o selo "Aberto" do
-   caixa sumiu na segunda tentativa.
+Os arquivos do render antigo (`aparelhos-cores.png`, `aparelhos3.png`) ficam
+aqui como registro do caminho anterior; o site não usa nenhum dos dois.
 
 ## Que tela vai em cada aparelho
 
-| aparelho | tela | de onde |
+| aparelho | tela | arquivo |
 |---|---|---|
-| monitor | PDV com o carrinho em R$ 414,60 | `assets/sistema/pdv.webp` |
+| monitor | PDV, carrinho em R$ 414,60 | `assets/sistema/pdv.webp` |
 | notebook | controle de estoque | `assets/sistema/estoque.webp` |
 | tablet | catálogo da loja online | `assets/sistema/catalogo.webp` |
-| celular | a coluna do carrinho | recorte vertical de `pdv.webp` |
+| celular | o carrinho de uma venda | `assets/sistema/pdv-celular.webp` |
 
-Nenhuma interface foi desenhada: é o sistema que o lojista vai abrir.
+Tablet e celular têm tela em retrato e a captura é larga: ela entra por
+`object-fit: cover`, ancorada no lado que interessa (esquerda no tablet, onde
+está o menu do catálogo; direita no celular, onde está o carrinho).
+
+Abaixo de 62rem só o monitor aparece, e a captura dele vira o recorte
+`pdv-celular.webp` — a tela inteira do PDV em 390px seria ilegível.
+
+## O que ainda falta (depende do Victor)
+
+As capturas em `assets/sistema/` têm **1400x845**. Para "acima de 4K", como o
+Victor pediu, e para cada aparelho mostrar o layout RESPONSIVO dele (o sistema
+em largura de tablet, o sistema em largura de celular), é preciso recapturar o
+sistema logado em cada viewport com `deviceScaleFactor` 2 ou 3.
+
+O login em https://www.softpaybr.com/auth passou a exigir **captcha da
+Cloudflare** ("Confirme que é humano"), e o botão Entrar só habilita depois do
+clique. Conta e senha estão em `~/.claude/credenciais/softpay.md`. Basta o
+Victor dar esse clique uma vez com o navegador do agente aberto
+(`de browser start`) que a sessão fica salva no perfil e eu recapturo tudo.
