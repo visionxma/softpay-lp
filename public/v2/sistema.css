@@ -1066,10 +1066,10 @@ a.so-leitor:focus {
     .hero__conteudo { max-width: 36rem; }
     .hero__sub { max-width: 32ch; }
     /* o display cede um degrau para caber em duas linhas ao lado da tela */
-    .hero .display--hero { font-size: clamp(2.75rem, 1.5rem + 2.2vw, 3.75rem); }
+    .hero .display--hero { font-size: clamp(2.5rem, 1.35rem + 1.95vw, 3.25rem); }
 }
 @media (min-width: 90rem) {
-    .hero .display--hero { font-size: 4.25rem; }
+    .hero .display--hero { font-size: 3.75rem; }
 }
 
 /* A cena flutua: perspectiva leve, sombra funda e um halo azul atrás, para
@@ -1251,10 +1251,9 @@ a.so-leitor:focus {
 }
 
 @media (min-width: 62rem) {
-    .hero__grade { grid-template-columns: 0.86fr 1.14fr; }
+    .hero__grade { grid-template-columns: 0.82fr 1.18fr; column-gap: var(--sp-5); }
     .hero__tela {
-        width: calc(100% + 10vw);
-        margin-right: -10vw;
+        width: 100%;
         justify-self: end;
         align-self: center;
     }
