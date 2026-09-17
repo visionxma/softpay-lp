@@ -1151,16 +1151,17 @@ a.so-leitor:focus {
     .abas--rolagem { display: block; }
     .abas--rolagem .abas__trilho { display: grid; grid-template-columns: 22rem 1fr; gap: var(--sp-7); align-items: start; }
     .abas--rolagem .abas__botoes {
+        /* A lista nasce junto com o primeiro tópico, logo abaixo do subtítulo da
+           seção — e não no meio da tela. A versão anterior tinha `height: 100svh`
+           para centralizar na janela, e era isso que empurrava "PDV e caixa" para
+           baixo, longe do conteúdo que ele nomeia.
+           Alinhada ao topo e grudando um pouco abaixo da navbar, ela acompanha a
+           rolagem sem nunca sair do espaço que é dela. */
         position: sticky;
-        top: 0;
-        /* a caixa tem a altura da janela e centraliza por dentro: o rótulo aceso
-           fica na altura do meio da tela, que é onde a faixa de escolha passa,
-           sem que a coluna precise ser deslocada para fora do espaço dela */
-        height: 100vh;
-        height: 100svh;
+        top: calc(var(--nav-h) + 2.5rem);
+        align-self: start;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: stretch;
         gap: 0.25rem;
     }
