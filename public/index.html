@@ -40,7 +40,7 @@
     <link rel="preload" as="image" href="/assets/desktop.webp?v=2760ee4db0" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400..700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=5e88d2864d" />
+    <link rel="stylesheet" href="sistema.css?v=1593d0c9b2" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -558,9 +558,25 @@
                     </p>
                 </div>
 
+                <!-- Três planos do mesmo trilho, com o recomendado no MEIO e
+                     maior: é onde o olho vai primeiro numa tabela de preço. No
+                     celular ele sobe para a largura toda e os outros dois
+                     dividem a linha. -->
                 <div class="planos">
-                    <!-- destaque: largura toda no celular, coluna normal no desktop -->
-                    <article class="plano plano--destaque" data-inclina>
+<article class="plano">
+                        <span class="plano__tag">Para começar</span>
+                        <h3 class="plano__nome">Comércio</h3>
+                        <p class="plano__desc">Seu caixa e o caderninho de fiado, num app só.</p>
+                        <p class="plano__preco">R$&nbsp;69 <span class="plano__ciclo">/mês · 1 usuário</span></p>
+                        <ul class="plano__inclui">
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>PDV e caixa completo</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Caderninho de fiado</li>
+                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Estoque essencial</li>
+                        </ul>
+                        <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
+                    </article>
+
+<article class="plano plano--destaque" data-inclina>
                         <span class="plano__tag">Mais popular</span>
                         <h3 class="plano__nome">Loja</h3>
                         <p class="plano__desc">Recupere o dinheiro do fiado e venda online com Pix.</p>
@@ -575,33 +591,7 @@
                         <a class="btn btn--acao btn--bloco" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
                     </article>
 
-                    <article class="plano">
-                        <span class="plano__tag">Só a nota</span>
-                        <h3 class="plano__nome">Nota Fiscal</h3>
-                        <p class="plano__desc">Preencha o formulário e emita. Sem PDV nem estoque.</p>
-                        <p class="plano__preco">R$&nbsp;65 <span class="plano__ciclo">/mês · até 2</span></p>
-                        <ul class="plano__inclui">
-                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>NFC-e, NF-e, NFS-e e MDF-e</li>
-                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Notas recebidas: ver e manifestar</li>
-                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cadastro fiscal + pacote do contador</li>
-                        </ul>
-                        <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
-                    </article>
-
-                    <article class="plano">
-                        <span class="plano__tag">Para começar</span>
-                        <h3 class="plano__nome">Comércio</h3>
-                        <p class="plano__desc">Seu caixa e o caderninho de fiado, num app só.</p>
-                        <p class="plano__preco">R$&nbsp;69 <span class="plano__ciclo">/mês · 1 usuário</span></p>
-                        <ul class="plano__inclui">
-                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>PDV e caixa completo</li>
-                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Caderninho de fiado</li>
-                            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Estoque essencial</li>
-                        </ul>
-                        <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
-                    </article>
-
-                    <article class="plano">
+<article class="plano">
                         <span class="plano__tag">Com nota</span>
                         <h3 class="plano__nome">ERP Completo</h3>
                         <p class="plano__desc">Tudo da Loja mais a emissão de nota fiscal.</p>
@@ -614,6 +604,22 @@
                         <a class="btn btn--linha btn--bloco" href="https://www.softpaybr.com/auth">Testar grátis</a>
                     </article>
                 </div>
+
+                <aside class="plano-parte">
+                    <div class="plano-parte__texto">
+                        <span class="plano__tag">Só a nota</span>
+                        <h3 class="plano-parte__nome">Nota Fiscal</h3>
+                        <p class="apoio">
+                            Só precisa emitir nota? Este plano é só isso: você preenche o
+                            formulário e emite, sem PDV e sem estoque. NFC-e, NF-e, NFS-e e
+                            MDF-e, notas recebidas e o pacote do contador.
+                        </p>
+                    </div>
+                    <div class="plano-parte__acao">
+                        <p class="plano__preco">R$&nbsp;65 <span class="plano__ciclo">/mês · até 2</span></p>
+                        <a class="btn btn--linha" href="https://www.softpaybr.com/auth">Testar grátis</a>
+                    </div>
+                </aside>
 
                 <p class="apoio" style="text-align: center; margin-top: var(--sp-4)">
                     Sem cartão de crédito · Cancele quando quiser ·

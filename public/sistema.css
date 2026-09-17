@@ -623,8 +623,15 @@ p:last-child { margin-bottom: 0; }
 
 /* --------------------------------------------------------- 13. PLANOS */
 .planos { display: grid; gap: var(--sp-3); grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 64rem) {
-    .planos { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--sp-4); align-items: stretch; }
+@media (min-width: 48rem) {
+    /* Três do mesmo trilho, com o recomendado NO MEIO — é para onde o olho vai
+       primeiro numa tabela de preço, e é o que a maioria deve escolher.
+       A coluna do meio é mais larga, não só mais escura. */
+    .planos {
+        grid-template-columns: 1fr 1.18fr 1fr;
+        gap: var(--sp-4);
+        align-items: center;
+    }
 }
 
 .plano {
@@ -634,14 +641,39 @@ p:last-child { margin-bottom: 0; }
     border: 1px solid var(--linha);
     border-radius: var(--r-md);
 }
-/* Destaque na largura toda no celular; os outros dividem a linha.
-   Trilho com rolagem lateral é vetado em planos. */
+/* No celular ele ocupa a linha toda e vem primeiro; do tablet para cima vai
+   para o meio e domina pelo tamanho. Trilho com rolagem lateral é vetado. */
 .plano--destaque {
-    order: -1;
+    grid-column: 1 / -1; order: -1;
     background: var(--noite); color: var(--branco); border-color: var(--noite);
 }
-@media (min-width: 64rem) {
-    .plano--destaque { order: 0; }
+@media (min-width: 48rem) {
+    .plano--destaque {
+        grid-column: auto;
+        order: 0;                         /* volta para o meio, na ordem do HTML */
+        position: relative;
+        z-index: 2;
+        padding: var(--sp-6) var(--sp-5);
+        border-radius: var(--r-lg);
+        box-shadow: 0 32px 64px -24px rgba(6, 18, 31, 0.55);
+    }
+    /* os vizinhos recuam um pouco, para o do meio dominar sem gritar */
+    .planos > .plano:not(.plano--destaque) {
+        transform: scale(0.965);
+        transform-origin: center;
+    }
+    .plano--destaque .plano__nome { font-size: var(--t-xl); }
+    .plano--destaque .plano__preco { font-size: clamp(2rem, 1.4rem + 1.6vw, 2.75rem); }
+    /* a etiqueta senta sobre a borda de cima, como um selo */
+    .plano--destaque .plano__tag {
+        position: absolute; top: 0; left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        box-shadow: 0 8px 20px -6px rgba(29, 161, 242, 0.55);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .planos > .plano:not(.plano--destaque) { transform: none; }
 }
 .plano--destaque .plano__nome,
 .plano--destaque .plano__preco { color: var(--branco); }
@@ -1328,3 +1360,35 @@ a.so-leitor:focus {
     }
     .hero__tela { max-width: 26rem; margin-inline: auto; }
 }
+
+
+/* ------------------------------------------- PLANO À PARTE (só nota fiscal)
+   Ele não é do mesmo trilho dos outros três: não tem PDV nem estoque, serve a
+   quem só precisa emitir. Fora da grade, o recomendado pode ficar no meio dos
+   três — que é onde o olho vai numa tabela de preço. */
+.plano-parte {
+    display: grid;
+    gap: var(--sp-4);
+    align-items: center;
+    margin-top: var(--sp-5);
+    padding: var(--sp-5);
+    background: var(--nevoa);
+    border: 1px solid var(--linha);
+    border-radius: var(--r-md);
+}
+@media (min-width: 48rem) {
+    .plano-parte { grid-template-columns: 1fr auto; gap: var(--sp-6); }
+}
+.plano-parte__texto { display: grid; gap: var(--sp-2); justify-items: start; }
+.plano-parte__nome {
+    font-family: var(--display); font-stretch: 74%; font-weight: 800;
+    font-size: var(--t-lg); text-transform: uppercase; line-height: 1; margin: 0;
+}
+.plano-parte__texto .apoio { max-width: 62ch; }
+.plano-parte__acao {
+    display: grid; gap: var(--sp-3); justify-items: start;
+}
+@media (min-width: 48rem) {
+    .plano-parte__acao { justify-items: end; text-align: right; }
+}
+.plano-parte__acao .plano__preco { margin: 0; }
