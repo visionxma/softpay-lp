@@ -1774,9 +1774,12 @@ a.so-leitor:focus {
     /* é um botão: no toque o balão abre ao tocar, e não fica aberto de saída —
        com oito pinos, oito balões abertos ao mesmo tempo viram uma mancha e
        ainda estouram a página (medido: 26px a 360px). */
-    padding: 0; border: 0; background: none; cursor: pointer;
+    /* O avatar tem 30px no celular, mas o alvo de toque tem de ter 44: o padding
+       cresce a área tocável sem inchar o desenho (medido pelo de audit). */
+    padding: 7px; border: 0; background: none; cursor: pointer;
     line-height: 0;
 }
+@media (min-width: 62rem) { .mapa__pino { padding: 3px; } }
 .mapa__pino:focus-visible { outline: 2px solid var(--acento); outline-offset: 4px; border-radius: 50%; }
 /* o pino sob o ponteiro vem para a frente dos vizinhos */
 @media (hover: hover) and (pointer: fine) {
