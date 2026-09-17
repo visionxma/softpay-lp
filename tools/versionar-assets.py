@@ -15,11 +15,15 @@ def carimbar(html_path):
     html = html_path.read_text()
     trocas = 0
 
+    raiz = html_path.parent
+    while raiz.name and raiz.name != 'public':
+        raiz = raiz.parent
+
     def novo_hash(arquivo):
-        alvo = base / arquivo
-        if not alvo.exists():
-            return None
-        return hashlib.sha256(alvo.read_bytes()).hexdigest()[:10]
+        for alvo in (base / arquivo, raiz / arquivo):
+            if alvo.exists() and alvo.is_file():
+                return hashlib.sha256(alvo.read_bytes()).hexdigest()[:10]
+        return None
 
     def sub(m):
         nonlocal trocas
@@ -30,7 +34,21 @@ def carimbar(html_path):
         trocas += 1
         return f'{arquivo}?v={h}'
 
-    html = re.sub(r'([\w./-]+\.(?:css|js))\?v=([\w]+)', sub, html)
+    EXT = r'(?:css|js|webp|png|jpe?g|svg)'
+    # com versão já presente
+    html = re.sub(r'([\w./+-]+\.' + EXT + r')\?v=([\w]+)', sub, html)
+    # e sem versão nenhuma, dentro de src/srcset/href
+    def primeira_vez(m):
+        nonlocal trocas
+        arquivo = m.group(1)
+        if '?' in arquivo or arquivo.startswith('http'):
+            return m.group(0)
+        h = novo_hash(arquivo.lstrip('/'))
+        if h is None:
+            return m.group(0)
+        trocas += 1
+        return f'{arquivo}?v={h}'
+    html = re.sub(r'(?<=[="\s])(/[\w./+-]+\.' + EXT + r')(?=[\s"\',)])', primeira_vez, html)
     if trocas:
         html_path.write_text(html)
     return trocas
