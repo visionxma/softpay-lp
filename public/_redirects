@@ -7,6 +7,11 @@
 # aí ela deixa de ser resolvida no caminho rápido.
 
 # --- Regras exatas ---
+# A proposta de rebranding virou a home em 17/09/2026: quem tiver o link antigo
+# com /v2/ vai para a raiz, e o Google entende a mudança de endereço.
+/v2                /                                   301
+/v2/*              /                                   301
+
 
 # Áreas de aplicação não existem neste site — vão para o app
 /auth              https://www.softpaybr.com/auth      302

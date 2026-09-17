@@ -1152,11 +1152,17 @@ a.so-leitor:focus {
     .abas--rolagem .abas__trilho { display: grid; grid-template-columns: 22rem 1fr; gap: var(--sp-7); align-items: start; }
     .abas--rolagem .abas__botoes {
         position: sticky;
-        /* alinhada ao meio da tela, que é onde a faixa que escolhe o tópico
-           passa — assim o rótulo aceso fica na altura do painel dele */
-        top: 50vh;
-        transform: translateY(-50%);
-        flex-direction: column; align-items: stretch; gap: 0.25rem;
+        top: 0;
+        /* a caixa tem a altura da janela e centraliza por dentro: o rótulo aceso
+           fica na altura do meio da tela, que é onde a faixa de escolha passa,
+           sem que a coluna precise ser deslocada para fora do espaço dela */
+        height: 100vh;
+        height: 100svh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0.25rem;
     }
     .abas--rolagem .abas__painels { display: grid; gap: var(--sp-6); }
     .abas--rolagem .painel { min-height: 26rem; }
