@@ -1232,12 +1232,10 @@ a.so-leitor:focus {
     box-shadow: 0 40px 80px -28px rgba(0, 0, 0, 0.7);
     transform: perspective(1400px) rotateX(var(--rx, 2.2deg)) rotateY(var(--ry, -7deg)) translateZ(0);
 }
-.hero .pdv::before {
-    content: ""; position: absolute; inset: -14% -10% -18%; z-index: -1;
-    background: radial-gradient(60% 55% at 50% 50%, rgba(29, 161, 242, 0.34), transparent 72%);
-    filter: blur(28px);
-    pointer-events: none;
-}
+/* (O halo azul atrás da peça do hero saiu em 17/09/2026. Ele era um
+   radial-gradient com blur, e o `overflow: hidden` do hero cortava o desfoque
+   numa reta: em vez de brilho, virava um retângulo azul claro com borda dura
+   no meio do azul-noite. O Victor pediu para tirar.) */
 @media (max-width: 61.99rem) {
     .hero .pdv { transform: none; max-width: 26rem; }
     .hero .pdv::before { display: none; }
@@ -1403,13 +1401,7 @@ a.so-leitor:focus {
     border-radius: 0 0 0.5rem 0.5rem;
 }
 /* o brilho fica ATRÁS do monitor, não por cima do fundo inteiro */
-.monitor::before {
-    content: ""; position: absolute; inset: 6% -8% -12%;
-    z-index: -1;
-    background: radial-gradient(52% 46% at 50% 55%, rgba(29, 161, 242, 0.3), transparent 70%);
-    filter: blur(34px);
-    pointer-events: none;
-}
+/* (O mesmo halo, atrás do monitor, saiu pelo mesmo motivo.) */
 
 @media (min-width: 62rem) {
     .hero__grade { grid-template-columns: 0.82fr 1.18fr; column-gap: var(--sp-5); }
