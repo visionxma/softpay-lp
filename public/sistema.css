@@ -1412,23 +1412,29 @@ a.so-leitor:focus {
 /* o brilho fica ATRÁS do monitor, não por cima do fundo inteiro */
 /* (O mesmo halo, atrás do monitor, saiu pelo mesmo motivo.) */
 
+/* A FAMÍLIA DE APARELHOS
+   A peça antiga era só o monitor, com proporção 1,09 — alta e estreita, e por
+   isso cabia na coluna. A de agora tem quatro aparelhos lado a lado e proporção
+   1,99: no mesmo espaço ela encolhia e perdia a leitura das telas. A coluna
+   dela cresce, e a peça sangra para fora do shell à direita, que é onde há
+   espaço sobrando. */
 @media (min-width: 62rem) {
-    .hero__grade { grid-template-columns: 0.82fr 1.18fr; column-gap: var(--sp-5); }
+    .hero__grade { grid-template-columns: 0.8fr 1.2fr; column-gap: var(--sp-4); }
     .hero__tela {
-        width: 100%;
+        width: calc(100% + var(--gutter) + 4vw);
+        margin-right: calc((var(--gutter) + 4vw) * -1);
         justify-self: end;
         align-self: center;
     }
-    .monitor { max-width: none; transform: rotateY(-7deg) rotateX(1.5deg); }
+    .hero__tela img { width: 100%; height: auto; }
 }
 @media (min-width: 100rem) {
-    .hero__tela { width: calc(100% + 8vw); margin-right: -8vw; }
+    .hero__tela { width: calc(100% + var(--gutter) + 7vw); margin-right: calc((var(--gutter) + 7vw) * -1); }
 }
+/* Flutua devagar: a peça é o assunto do hero e um movimento mínimo diz que ela
+   está viva, sem tirar a atenção do título. */
 @media (prefers-reduced-motion: no-preference) and (min-width: 62rem) {
-    .monitor { animation: flutuar 8s ease-in-out infinite; }
-}
-@media (prefers-reduced-motion: reduce) {
-    .monitor { animation: none; }
+    .hero__tela img { animation: flutuar 9s ease-in-out infinite; }
 }
 
 

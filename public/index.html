@@ -37,10 +37,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="image" href="/assets/lojistas/loja-de-roupas.webp?v=7a30b36651" fetchpriority="high" />
     <link rel="preload" as="image" href="/assets/sistema/pdv-celular.webp?v=ee711d3f0c" fetchpriority="high" media="(max-width: 61.99rem)" />
-    <link rel="preload" as="image" href="/assets/desktop.webp?v=e9a78a25ba" fetchpriority="high" media="(min-width: 62rem)" />
+    <link rel="preload" as="image" href="/assets/aparelhos.webp?v=c2f824dc5f" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=c7a4b32086" />
+    <link rel="stylesheet" href="sistema.css?v=e588a36508" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -162,18 +162,21 @@
                 </div>
 
                 <figure class="hero__tela">
-                    <!-- Desktop de verdade: o monitor foi renderizado com a tela em
-                         chroma e a captura do sistema entrou dentro por transformação
-                         de perspectiva, encaixada nos quatro cantos reais da tela.
-                         No celular a peça inteira ficaria ilegível, então entra um
+                    <!-- A família de aparelhos. Os quatro foram renderizados com as
+                         telas em chroma e as capturas REAIS do sistema entraram dentro
+                         por transformação de perspectiva, encaixadas nos quatro cantos
+                         medidos de cada tela: o PDV no monitor, o estoque no notebook,
+                         o catálogo no tablet e o carrinho no celular. Nada de interface
+                         desenhada — é o sistema que o lojista vai abrir.
+                         No celular a peça inteira ficaria ilegível, então entra só o
                          recorte da área que convence. -->
                     <picture>
                         <source media="(min-width: 62rem)"
-                                srcset="/assets/desktop-900.webp?v=690927941e 900w, /assets/desktop.webp?v=e9a78a25ba 1500w"
-                                sizes="56vw" width="1500" height="1000" />
+                                srcset="/assets/aparelhos-900.webp?v=ba8eee7d27 900w, /assets/aparelhos.webp?v=c2f824dc5f 1500w"
+                                sizes="56vw" width="1500" height="755" />
                         <img src="/assets/sistema/pdv-celular.webp?v=ee711d3f0c"
                              width="900" height="786" fetchpriority="high" decoding="async"
-                             alt="SoftPay aberto num monitor: produtos da loja à esquerda e o carrinho com quatro itens somando R$ 414,60 à direita" />
+                             alt="O SoftPay aberto em quatro aparelhos: o PDV no monitor, o controle de estoque no notebook, o catálogo no tablet e o carrinho de uma venda no celular" />
                     </picture>
                 </figure>
             </div>
