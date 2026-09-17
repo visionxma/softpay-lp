@@ -6,7 +6,7 @@ do visitante recorrente continua com o CSS velho em cache (a Cloudflare serve
 `max-age=14400`, quatro horas) e a página aparece quebrada só para quem já
 visitou — o caso mais difícil de perceber, porque em aba anônima está tudo bem.
 
-Uso:  python3 tools/versionar-assets.py public/v2/index.html
+Uso:  python3 tools/versionar-assets.py public/index.html
 """
 import hashlib, pathlib, re, sys
 
@@ -20,6 +20,11 @@ def carimbar(html_path):
         raiz = raiz.parent
 
     def novo_hash(arquivo):
+        # O caminho no HTML começa com "/" (raiz do site). Sem tirar a barra,
+        # pathlib trata como absoluto do disco, não acha o arquivo e devolve
+        # None — e o ?v= antigo fica para trás, que é justamente o bug que
+        # este script existe para evitar.
+        arquivo = arquivo.lstrip('/')
         for alvo in (base / arquivo, raiz / arquivo):
             if alvo.exists() and alvo.is_file():
                 return hashlib.sha256(alvo.read_bytes()).hexdigest()[:10]
@@ -54,7 +59,7 @@ def carimbar(html_path):
     return trocas
 
 if __name__ == '__main__':
-    alvos = sys.argv[1:] or ['public/v2/index.html']
+    alvos = sys.argv[1:] or ['public/index.html']
     total = 0
     for a in alvos:
         p = pathlib.Path(a)

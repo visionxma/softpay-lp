@@ -30,3 +30,6 @@ __pycache__/
 
 # backup local feito antes de editar (o historico do git ja cobre)
 *.bak-*
+
+# backups de trabalho locais
+.backup-*/

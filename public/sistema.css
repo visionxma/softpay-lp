@@ -599,15 +599,18 @@ p:last-child { margin-bottom: 0; }
 .painel__lista svg { color: var(--azul); margin-top: 0.2rem; }
 
 /* ------------------------------------------------------- 12. SEGMENTOS */
-.vitrine { display: grid; gap: 2px; grid-template-columns: repeat(2, 1fr); }
-@media (min-width: 48rem) { .vitrine { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 72rem) { .vitrine { grid-template-columns: repeat(6, 1fr); } }
+/* minmax(0, 1fr) e não 1fr: com `1fr` a coluna não pode encolher abaixo do
+   min-content do cartão, e o cartão tem proporção fixa — em 1280px isso
+   estourava a página em 28px (medido 17/09/2026). */
+.vitrine { display: grid; gap: 2px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 48rem) { .vitrine { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 72rem) { .vitrine { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 
 .vitrine__item {
     position: relative; display: block; overflow: hidden;
-    min-height: 11rem; text-decoration: none; color: var(--branco); isolation: isolate;
+    aspect-ratio: 4 / 5; text-decoration: none; color: var(--branco); isolation: isolate;
 }
-@media (min-width: 72rem) { .vitrine__item { min-height: 20rem; } }
+@media (min-width: 48rem) { .vitrine__item { aspect-ratio: 3 / 4; } }
 .vitrine__item img {
     position: absolute; inset: 0; z-index: -2;
     width: 100%; height: 100%; object-fit: cover;
@@ -617,10 +620,13 @@ p:last-child { margin-bottom: 0; }
     content: ""; position: absolute; inset: 0; z-index: -1;
     background: linear-gradient(0deg, rgba(6,18,31,0.88) 0%, rgba(6,18,31,0.28) 62%, rgba(6,18,31,0.12) 100%);
 }
-.vitrine__nome {
+.vitrine__rotulo {
     position: absolute; inset: auto 0 0; padding: var(--sp-3);
+    display: flex; flex-direction: column; gap: 0.35rem;
+}
+.vitrine__nome {
     font-family: var(--display); font-stretch: 70%; font-weight: 800;
-    font-size: var(--t-md); line-height: 0.95; text-transform: uppercase;
+    font-size: var(--t-md); line-height: 1.02; text-transform: uppercase;
     color: var(--branco);
 }
 @media (min-width: 72rem) { .vitrine__nome { font-size: var(--t-lg); } }
@@ -1455,9 +1461,11 @@ a.so-leitor:focus {
      pessoa pela metade.
    ========================================================================== */
 
-/* As pontas puxam o enquadramento para dentro, já que a sangria corta um lado */
-.vitrine__item:first-child img  { object-position: 66% 50%; }
-.vitrine__item:last-child  img  { object-position: 34% 50%; }
+/* As pontas puxam o enquadramento para dentro, já que a sangria corta um lado.
+   Com o recorte em retrato a folga lateral é pequena: 60/40 basta para a
+   pessoa não ficar pela metade na borda da tela. */
+.vitrine__item:first-child img  { object-position: 60% 50%; }
+.vitrine__item:last-child  img  { object-position: 40% 50%; }
 
 /* O véu escurece no repouso e clareia no hover: a fotografia ganha a frente
    quando o ponteiro chega, em vez de ficar sempre atrás do mesmo preto. */
@@ -1465,8 +1473,8 @@ a.so-leitor:focus {
     background: linear-gradient(0deg,
         rgba(6,18,31,0.94) 0%,
         rgba(6,18,31,0.58) 42%,
-        rgba(6,18,31,0.22) 72%,
-        rgba(6,18,31,0.34) 100%);
+        rgba(6,18,31,0.20) 68%,
+        rgba(6,18,31,0.52) 100%);
     transition: opacity 0.4s var(--mola);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -1475,10 +1483,33 @@ a.so-leitor:focus {
 
 /* O nome ganha respiro e uma seta que entra no hover — o cartão passa a dizer
    que leva a uma página. */
+.vitrine__rotulo { padding: var(--sp-4) var(--sp-3); }
 .vitrine__nome {
     display: flex; align-items: center; gap: 0.4rem;
-    padding: var(--sp-4) var(--sp-3);
     text-shadow: 0 2px 12px rgba(6, 18, 31, 0.6);
+}
+
+/* SELO DE CLIENTE REAL
+   Três destas fotografias não são de banco de imagem: são lojistas que usam o
+   SoftPay. Isso vale mais que a fotografia em si, então o cartão diz de quem é
+   — em corpo pequeno, acima do nome do segmento, para não competir com ele. */
+.vitrine__selo {
+    /* No ALTO do cartão, não colado no nome: assim os três selos ficam na
+       mesma linha entre si e o nome do segmento continua alinhado pela base,
+       mesmo quando ele quebra em duas linhas ("Celulares e acessórios"). */
+    position: absolute; inset: 0 var(--sp-3) auto;
+    padding-top: var(--sp-3);
+    display: flex; align-items: center; gap: 0.4rem;
+    font-size: var(--t-xs); font-weight: 600;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 10px rgba(6, 18, 31, 0.9), 0 0 24px rgba(6, 18, 31, 0.6);
+}
+.vitrine__selo::before {
+    content: ""; flex: none;
+    width: 0.4rem; height: 0.4rem; border-radius: 50%;
+    background: var(--acento);
+    box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.25);
 }
 .vitrine__nome::after {
     content: "→";
@@ -1495,32 +1526,83 @@ a.so-leitor:focus {
 }
 
 /* ---------------------------------------- A LINHA DE "TAMBÉM ATENDE"
-   Em vidro, não em branco sólido: o fundo escuro continua sendo o assunto e as
-   fotografias seguem dominando. */
-.vitrine-mais {
-    display: flex; flex-wrap: wrap; gap: var(--sp-2);
-    justify-content: center; align-items: center;
+   Era uma fileira de pílulas de vidro: seis caixas de borda arredondada
+   disputando atenção com as seis fotografias logo acima, e sem hierarquia
+   nenhuma entre o rótulo e os nomes.
+
+   Agora é uma frase. "Também atende:" em corpo pequeno e caixa alta, e os
+   segmentos como uma enumeração tipográfica separada por um fio vertical —
+   a mesma forma de uma linha de texto, que é o que ela é. Sem caixa, sem
+   borda, sem vidro: a lista pesa o quanto deve pesar, e as fotografias
+   continuam sendo o assunto da seção.
+   ========================================================================== */
+.atende {
+    display: flex; flex-wrap: wrap;
+    justify-content: center; align-items: baseline;
+    column-gap: 0; row-gap: 0.35rem;
+    margin: 0;
+    font-size: var(--t-md);
+    line-height: 1.6;
+    text-align: center;
 }
-.vitrine-mais__rotulo {
-    font-size: var(--t-xs); font-weight: 600;
-    letter-spacing: 0.14em; text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.55);
-    margin: 0 var(--sp-2) 0 0;
+.atende__rotulo {
+    margin-right: 0.85rem;
+    font-size: var(--t-xs); font-weight: 700;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--acento-forte);
+    white-space: nowrap;
 }
-#para-quem .pilula {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.18);
-    color: rgba(255, 255, 255, 0.88);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    transition: background-color 0.2s linear, border-color 0.2s linear, transform 0.2s var(--mola);
+.atende__nome {
+    position: relative;
+    padding: 0.1rem 0.85rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s linear;
+}
+/* O fio entre um nome e o próximo — nunca antes do primeiro, nem no começo de
+   uma fileira nova quando a lista quebra (daí a altura curta e o alinhamento
+   pela linha de base). */
+.atende__nome + .atende__nome::before {
+    content: ""; position: absolute; left: 0; top: 50%;
+    width: 1px; height: 0.95em; transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.22);
+}
+/* O sublinhado cresce do centro: diz que é link sem precisar de caixa. */
+.atende__nome::after {
+    content: ""; position: absolute;
+    left: 0.85rem; right: 0.85rem; bottom: -0.1rem; height: 2px;
+    background: var(--acento);
+    transform: scaleX(0); transform-origin: 50% 50%;
+    transition: transform 0.28s var(--mola);
 }
 @media (hover: hover) and (pointer: fine) {
-    #para-quem .pilula:hover {
-        background: rgba(255, 255, 255, 0.14);
-        border-color: rgba(255, 255, 255, 0.4);
-        transform: translateY(-2px);
+    .atende__nome:hover { color: var(--branco); }
+    .atende__nome:hover::after { transform: scaleX(1); }
+}
+.atende__nome:focus-visible { color: var(--branco); }
+.atende__nome:focus-visible::after { transform: scaleX(1); }
+
+/* No celular a frase vira duas colunas de nomes: mesmo conteúdo, sem virar
+   uma pilha de seis linhas soltas (doutrina de composição compacta). */
+@media (max-width: 47.99rem) {
+    .atende { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
+    .atende__rotulo {
+        grid-column: 1 / -1; margin: 0 0 var(--sp-2);
+        text-align: center;
     }
+    .atende__nome {
+        padding: 0.55rem 0.5rem;
+        white-space: normal; text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .atende__nome:nth-child(odd)  { border-left: 1px solid rgba(255, 255, 255, 0.1); }
+    .atende__nome + .atende__nome::before { content: none; }
+    .atende__nome::after { left: 0.5rem; right: 0.5rem; bottom: 0.3rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .atende__nome, .atende__nome::after { transition: none; }
 }
 
 
