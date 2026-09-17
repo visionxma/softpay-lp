@@ -288,17 +288,36 @@
             }
         }
 
-        if ('IntersectionObserver' in window) {
-            // a faixa central da tela é quem decide: o painel que a cruza é o ativo
-            var obs = new IntersectionObserver(function (entradas) {
-                var melhor = null;
-                entradas.forEach(function (e) {
-                    if (e.isIntersecting && (!melhor || e.intersectionRatio > melhor.intersectionRatio)) melhor = e;
-                });
-                if (melhor) acender(painels.indexOf(melhor.target));
-            }, { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.01, 0.5, 1] });
-            painels.forEach(function (p) { obs.observe(p); });
+        /* Qual tópico acende é uma pergunta de geometria: qual painel ocupa o
+           meio da tela. O IntersectionObserver respondia por intersectionRatio,
+           que é relativo ao tamanho de CADA painel — e eles têm alturas
+           diferentes, então o painel mais alto perdia o desempate mesmo
+           dominando a faixa. Medido em 1920x1080: "Loja online" no meio da tela
+           e "Nota fiscal" aceso.
+
+           Agora a conta é direta e determinística: o painel que contém o meio
+           da tela; se nenhum contém (estamos num vão entre dois), o de borda
+           mais próxima. Roda uma vez por quadro. */
+        var pedido = false;
+        function escolher() {
+            var meio = window.innerHeight / 2;
+            var melhor = -1, menorDist = Infinity;
+            for (var k = 0; k < painels.length; k++) {
+                var r = painels[k].getBoundingClientRect();
+                if (r.top <= meio && r.bottom >= meio) { melhor = k; break; }
+                var dist = r.top > meio ? r.top - meio : meio - r.bottom;
+                if (dist < menorDist) { menorDist = dist; melhor = k; }
+            }
+            acender(melhor);
         }
+        function aoRolar() {
+            if (pedido) return;
+            pedido = true;
+            requestAnimationFrame(function () { pedido = false; escolher(); });
+        }
+        window.addEventListener('scroll', aoRolar, { passive: true });
+        window.addEventListener('resize', aoRolar);
+        escolher();
 
         // clique e teclado continuam valendo: levam a rolagem até o painel
         abas.forEach(function (aba, i) {
