@@ -313,10 +313,39 @@
         function aoRolar() {
             if (pedido) return;
             pedido = true;
-            requestAnimationFrame(function () { pedido = false; escolher(); });
+            requestAnimationFrame(function () { pedido = false; posicionar(); escolher(); });
         }
+        /* --- Posição da coluna: os três estados que o sticky não dá ---
+           1. começo  — parada no topo do bloco, na linha do primeiro tópico;
+           2. meio    — acompanhando, centrada na altura da tela;
+           3. fim     — travada, terminando junto com o último tópico.
+           O valor vai para --desloca e o CSS aplica como translate3d. */
+        var colunaEl = bloco.querySelector('.abas__botoes');
+        var trilhoEl = bloco.querySelector('.abas__trilho');
+
+        function posicionar() {
+            if (!colunaEl || !trilhoEl) return;
+            if (!window.matchMedia('(min-width: 64rem)').matches) {
+                colunaEl.style.setProperty('--desloca', '0px');
+                return;
+            }
+            var t = trilhoEl.getBoundingClientRect();
+            var alturaColuna = colunaEl.offsetHeight;
+            // onde o topo da coluna precisaria estar para ela ficar centrada
+            var alvo = (window.innerHeight - alturaColuna) / 2 - t.top;
+            // e o quanto ela pode andar sem sair do bloco
+            var limite = trilhoEl.offsetHeight - alturaColuna;
+            var d = Math.max(0, Math.min(alvo, limite));
+            colunaEl.style.setProperty('--desloca', d.toFixed(1) + 'px');
+        }
+
+        if ('ResizeObserver' in window) new ResizeObserver(posicionar).observe(colunaEl);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(posicionar);
+        window.addEventListener('resize', posicionar);
+
         window.addEventListener('scroll', aoRolar, { passive: true });
         window.addEventListener('resize', aoRolar);
+        posicionar();
         escolher();
 
         // clique e teclado continuam valendo: levam a rolagem até o painel
