@@ -622,12 +622,39 @@ p:last-child { margin-bottom: 0; }
     aspect-ratio: 3 / 4; text-decoration: none; color: var(--branco); isolation: isolate;
 }
 @media (min-width: 48rem) { .vitrine__item { aspect-ratio: 3 / 5; } }
-@media (min-width: 72rem) {
+/* ACORDEÃO (só onde existe ponteiro fino)
+   Medido no print da referência: o painel aberto tem 620px contra 345px dos
+   outros — 1,8 vez. Enquanto o ponteiro não entra na fileira, o PRIMEIRO fica
+   aberto, para a seção já chegar mostrando do que se trata; assim que o
+   ponteiro entra, quem manda é o painel sob ele. */
+@media (min-width: 72rem) and (hover: hover) and (pointer: fine) {
+    .vitrine {
+        display: flex;
+        height: min(100svh, 52rem);
+        min-height: 34rem;
+    }
+    .vitrine__item {
+        flex: 1 1 0; min-width: 0;
+        aspect-ratio: auto; height: 100%;
+        /* o tipo para de ser proporcional ao painel: senão ele cresceria e
+           encolheria junto com a expansão, e a referência mantém tamanho fixo */
+        container-type: normal;
+        transition: flex-grow 0.55s var(--mola);
+    }
+    .vitrine:not(:hover) > .vitrine__item:first-child,
+    .vitrine__item:hover,
+    .vitrine__item:focus-visible { flex-grow: 1.8; }
+}
+/* Sem ponteiro (toque) não há acordeão: seis painéis altos iguais. */
+@media (min-width: 72rem) and (not ((hover: hover) and (pointer: fine))) {
     .vitrine__item {
         aspect-ratio: auto;
         height: min(100svh, 52rem);
         min-height: 34rem;
     }
+}
+@media (prefers-reduced-motion: reduce) {
+    .vitrine__item { transition: none; }
 }
 .vitrine__item img {
     position: absolute; inset: 0; z-index: -2;
@@ -645,13 +672,22 @@ p:last-child { margin-bottom: 0; }
    cai sobre o tronco e o balcão. */
 .vitrine__rotulo {
     /* Fora do desktop o painel é curto (3:4) e o rosto ocupa quase tudo: o nome
-       volta para o pé, sobre o assentamento escuro. A 8% do pé ele caía no
-       queixo do lojista (medido em 390px). */
+       fica no pé, sobre o assentamento escuro. A 8% do pé ele caía no queixo do
+       lojista (medido em 390px). */
     position: absolute; inset: auto 0 0; padding: var(--sp-3) var(--sp-2);
     display: grid; justify-items: center;
 }
+/* No desktop, como na referência: nome no meio do painel e a ação logo abaixo.
+   A referência põe o texto a 42,6% do topo; aqui é 52%, porque as fotografias
+   são retratos mais fechados e a 42% o nome cai na boca do lojista. */
 @media (min-width: 72rem) {
-    .vitrine__rotulo { inset: auto var(--sp-2) 8%; padding: 0; }
+    .vitrine__rotulo {
+        /* 60% e não os 42,6% da referência: lá as pessoas estão em plano médio
+           e o texto passa ao lado do rosto; aqui são retratos e a 52% o nome
+           caía na boca (medido em 1440px). */
+        inset: 60% 0.5rem auto; padding: 0;
+        display: grid; justify-items: center; gap: var(--sp-3);
+    }
 }
 .vitrine__nome {
     font-family: var(--display); font-stretch: 62%; font-weight: 800;
@@ -1502,27 +1538,34 @@ a.so-leitor:focus {
     content: ""; position: absolute; inset: 0; z-index: -1;
     background: var(--noite-3);
     mix-blend-mode: multiply;
-    opacity: 0.34;
+    opacity: 0.20;
     transition: opacity 0.4s var(--mola);
 }
 .vitrine__item::after {
+    /* Na referência a fotografia é clara e o assentamento quase não aparece: o
+       rótulo se sustenta pela cor dele, não por escurecer a cena. Aqui sobrou
+       só o necessário — um respiro no alto para o selo e outro no pé. */
     background: linear-gradient(180deg,
-        rgba(6,18,31,0.70) 0%,
-        rgba(6,18,31,0.18) 24%,
-        rgba(6,18,31,0.34) 58%,
-        rgba(6,18,31,0.88) 100%);
+        rgba(6,18,31,0.58) 0%,
+        rgba(6,18,31,0.06) 22%,
+        rgba(6,18,31,0.16) 52%,
+        rgba(6,18,31,0.62) 100%);
     transition: opacity 0.4s var(--mola);
 }
 /* Os painéis se encostam (gap 0, como na referência). Um fio de um pixel
    impede que duas fotografias de brilho parecido virem uma mancha só. */
 .vitrine__item + .vitrine__item { box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.1); }
 @media (hover: hover) and (pointer: fine) {
-    .vitrine__item:hover::before { opacity: 0.22; }
-    .vitrine__item:hover::after  { opacity: 0.6; }
+    .vitrine__item:hover::before { opacity: 0.08; }
+    .vitrine__item:hover::after  { opacity: 0.75; }
 }
 
 /* O nome sobre a fotografia, com sombra própria para não depender do véu. */
-.vitrine__nome { text-shadow: 0 3px 18px rgba(6, 18, 31, 0.75); }
+.vitrine__nome {
+    /* Com a fotografia clara, quem garante a leitura é a sombra do próprio
+       tipo, não o véu por cima da cena. */
+    text-shadow: 0 2px 10px rgba(6, 18, 31, 0.85), 0 6px 34px rgba(6, 18, 31, 0.7);
+}
 
 /* SELO DE CLIENTE REAL
    Três destas fotografias não são de banco de imagem: são lojistas que usam o
@@ -1545,26 +1588,50 @@ a.so-leitor:focus {
     background: var(--acento);
     box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.25);
 }
-/* A seta é uma linha à parte, abaixo do nome, que sobe no hover: o painel diz
-   que leva a uma página sem sujar o tipo grande. */
+/* A ação. Na referência é uma pílula de vidro com "Saiba mais" e um chevron,
+   e ela só existe no painel aberto — é o que diz qual painel está ativo. */
 .vitrine__seta {
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    margin-top: var(--sp-3);
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    min-height: 2.75rem; padding: 0.55rem 1rem 0.55rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, 0.14);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     font-size: var(--t-sm); font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    opacity: 0; transform: translateY(6px);
-    transition: opacity 0.3s linear, transform 0.3s var(--mola);
+    color: var(--branco);
+    white-space: nowrap;
+    transition: opacity 0.35s linear, transform 0.35s var(--mola),
+                background-color 0.2s linear;
 }
-@media (hover: hover) and (pointer: fine) {
-    .vitrine__item:hover .vitrine__seta { opacity: 1; transform: none; }
-}
-.vitrine__item:focus-visible .vitrine__seta { opacity: 1; transform: none; }
-/* Sem ponteiro (celular e tablet) não existe hover: a seta fica sempre visível. */
-@media not all and (hover: hover) {
-    .vitrine__seta { opacity: 1; transform: none; }
+.vitrine__seta svg { flex: 0 0 auto; }
+
+/* Fora do acordeão (toque e telas menores) a pílula fica sempre visível, no
+   rodapé do cartão, junto do nome. */
+.vitrine__rotulo .vitrine__seta { margin-top: var(--sp-2); }
+
+@media (min-width: 72rem) and (hover: hover) and (pointer: fine) {
+    /* Teto medido no painel FECHADO do acordeão, que é o estreito: 212px menos
+       o respiro deixam 196px úteis, e "VARIEDADES" ocupa 228px a 48px. A 28px
+       ela mede 133px e a mais larga da fileira ("PAPELARIA") mede 117px — todas
+       cabem. Acima disso o nome sangra para fora do painel. */
+    .vitrine__nome { font-size: 1.75rem; transition: font-size 0.55s var(--mola); }
+    /* O painel aberto tem 365px úteis contra 196px: o nome dele cresce junto.
+       A 34px o rótulo mais longo desta fileira ("Celulares e acessórios") mede
+       341px — ainda dentro dos 365. */
+    .vitrine:not(:hover) > .vitrine__item:first-child .vitrine__nome,
+    .vitrine__item:hover .vitrine__nome,
+    .vitrine__item:focus-visible .vitrine__nome { font-size: 2.125rem; }
+
+    .vitrine__seta { opacity: 0; transform: translateY(10px); margin-top: 0; }
+    .vitrine:not(:hover) > .vitrine__item:first-child .vitrine__seta,
+    .vitrine__item:hover .vitrine__seta,
+    .vitrine__item:focus-visible .vitrine__seta { opacity: 1; transform: none; }
+    .vitrine__item:hover .vitrine__seta { background: rgba(255, 255, 255, 0.22); }
 }
 @media (prefers-reduced-motion: reduce) {
-    .vitrine__seta { transition: none; }
+    .vitrine__nome { transition: none; }
+    .vitrine__seta { transition: none; transform: none; }
     .vitrine__item::before, .vitrine__item::after { transition: none; }
 }
 
