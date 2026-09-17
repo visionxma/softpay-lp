@@ -919,14 +919,13 @@ body { padding-bottom: 0; }
     .btn, .cartao, .vitrine__item img { transition: none; }
 }
 
-/* Faixa de brilho de borda a borda, que se apaga antes das pontas. */
-.brilho { position: relative; isolation: isolate; }
-.brilho::before {
-    content: ""; position: absolute; z-index: -1;
-    inset: -20% 0 auto; height: 60%;
-    background: radial-gradient(60% 100% at 50% 0%, rgba(29, 161, 242, 0.14), transparent 70%);
-    pointer-events: none;
-}
+/* (A faixa de brilho saiu em 17/09/2026. Ela tinha `inset: -20% 0 auto`, ou
+   seja, começava 20% ACIMA do topo da própria seção — e o que subia manchava de
+   azul claro o rodapé da seção de cima: o pé do hero e o pé do bloco de
+   dúvidas, logo abaixo do "Ver mais perguntas". Era esse o azul claro que o
+   Victor apontou. A classe `.brilho` continua no HTML sem efeito; o realce das
+   seções vem da cor de fundo e do tipo, não de um halo que vaza.) */
+.brilho { position: relative; }
 
 .so-leitor {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
