@@ -18,10 +18,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="image" href="/assets/lojistas/loja-de-roupas.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="/assets/hero-3d.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/sistema/pdv-celular.webp" fetchpriority="high" media="(max-width: 61.99rem)" />
+    <link rel="preload" as="image" href="/assets/sistema/pdv.webp" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400..700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=de51c24397" />
+    <link rel="stylesheet" href="sistema.css?v=2c8542ab23" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 </head>
 
@@ -117,12 +118,23 @@
                     </div>
                 </div>
 
-                <figure class="hero__peca">
-                    <img src="/assets/hero-3d.webp"
-                         srcset="/assets/hero-3d-700.webp 700w, /assets/hero-3d.webp 1100w"
-                         sizes="(min-width: 62rem) 46vw, 88vw"
-                         width="1100" height="718" fetchpriority="high" decoding="async"
-                         alt="Terminal de caixa do SoftPay com o painel de vendas na tela e, ao redor, o cupom fiscal, as caixas do estoque, o QR do Pix e o gráfico de faturamento" />
+                <figure class="hero__tela">
+                    <div class="monitor">
+                        <div class="monitor__moldura">
+                            <!-- A tela inteira em 340px ficaria a 21% do tamanho, ilegível.
+                                 No celular entra um recorte da área que convence: os produtos
+                                 e o carrinho com o total. -->
+                            <picture>
+                                <source media="(min-width: 62rem)"
+                                        srcset="/assets/sistema/pdv-800.webp 800w, /assets/sistema/pdv.webp 1400w"
+                                        sizes="52vw" width="1400" height="845" />
+                                <img src="/assets/sistema/pdv-celular.webp"
+                                     width="900" height="786" fetchpriority="high" decoding="async"
+                                     alt="Frente de caixa do SoftPay: produtos da loja à esquerda e o carrinho com quatro itens somando R$ 414,60 à direita" />
+                            </picture>
+                        </div>
+                        <span class="monitor__base" aria-hidden="true"></span>
+                    </div>
                 </figure>
             </div>
         </section>
@@ -332,8 +344,11 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
-                            <img src="/assets/lojistas/loja-de-variedades.webp" width="1600" height="667" loading="lazy" decoding="async"
-                                alt="Lojista organizando as prateleiras de uma loja de variedades" />
+                            <img src="/assets/sistema/estoque.webp"
+                                 srcset="/assets/sistema/estoque-800.webp 800w, /assets/sistema/estoque.webp 1400w"
+                                 sizes="(min-width: 60rem) 48vw, 92vw"
+                                 width="1400" height="845" loading="lazy" decoding="async"
+                                 alt="Tela de controle de estoque do SoftPay, com saldo, custo e preço de varejo de cada produto" />
                         </figure>
                     </section>
 
@@ -355,8 +370,11 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
-                            <img src="/assets/lojistas/mercadinho.webp" width="1600" height="667" loading="lazy" decoding="async"
-                                alt="Atendimento no balcão de um mercadinho" />
+                            <img src="/assets/sistema/clientes.webp"
+                                 srcset="/assets/sistema/clientes-800.webp 800w, /assets/sistema/clientes.webp 1400w"
+                                 sizes="(min-width: 60rem) 48vw, 92vw"
+                                 width="1400" height="845" loading="lazy" decoding="async"
+                                 alt="Tela de clientes e fiado do SoftPay" />
                         </figure>
                     </section>
 
@@ -401,8 +419,11 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
-                            <img src="/assets/lojistas/cosmeticos-e-perfumaria.webp" width="1600" height="667" loading="lazy" decoding="async"
-                                alt="Loja de cosméticos e perfumaria com produtos expostos" />
+                            <img src="/assets/sistema/catalogo.webp"
+                                 srcset="/assets/sistema/catalogo-800.webp 800w, /assets/sistema/catalogo.webp 1400w"
+                                 sizes="(min-width: 60rem) 48vw, 92vw"
+                                 width="1400" height="845" loading="lazy" decoding="async"
+                                 alt="Catálogo online do SoftPay, montado a partir do estoque já cadastrado" />
                         </figure>
                     </section>
 
@@ -428,8 +449,11 @@
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
-                            <img src="/assets/lojistas/distribuidora.webp" width="1600" height="667" loading="lazy" decoding="async"
-                                alt="Conferência de mercadorias em uma distribuidora" />
+                            <img src="/assets/sistema/fiscal.webp"
+                                 srcset="/assets/sistema/fiscal-800.webp 800w, /assets/sistema/fiscal.webp 1400w"
+                                 sizes="(min-width: 60rem) 48vw, 92vw"
+                                 width="1400" height="845" loading="lazy" decoding="async"
+                                 alt="Tela de notas fiscais do SoftPay" />
                         </figure>
                     </section>
                     </div>

@@ -1064,11 +1064,11 @@ a.so-leitor:focus {
     .hero__grade { grid-template-columns: 1.08fr 0.92fr; gap: var(--sp-6); }
     .hero__conteudo { max-width: 36rem; }
     .hero__sub { max-width: 32ch; }
-    /* o display cede um degrau para caber em duas linhas ao lado da cena */
-    .hero .display--hero { font-size: clamp(3.25rem, 1.9rem + 2.9vw, 4.75rem); }
+    /* o display cede um degrau para caber em duas linhas ao lado da tela */
+    .hero .display--hero { font-size: clamp(2.75rem, 1.5rem + 2.2vw, 3.75rem); }
 }
 @media (min-width: 90rem) {
-    .hero .display--hero { font-size: 5.25rem; }
+    .hero .display--hero { font-size: 4.25rem; }
 }
 
 /* A cena flutua: perspectiva leve, sombra funda e um halo azul atrás, para
@@ -1203,4 +1203,77 @@ a.so-leitor:focus {
     background:
         linear-gradient(180deg, rgba(6,18,31,0.72) 0%, rgba(6,18,31,0.44) 44%, rgba(6,18,31,0.92) 100%),
         linear-gradient(94deg, rgba(6,18,31,0.9) 0%, rgba(6,18,31,0.42) 52%, rgba(6,18,31,0.72) 78%, rgba(6,18,31,0.94) 100%);
+}
+
+
+/* ==========================================================================
+   21. A TELA DO SISTEMA NO HERO
+   --------------------------------------------------------------------------
+   O render 3D não dizia o que o produto faz — "não dá nem de entender o que é"
+   (Victor, 17/09/2026). Quem convence é a tela de verdade: produtos da loja,
+   carrinho com quatro itens, R$ 414,60, botão de finalizar. Capturada do
+   sistema em produção.
+
+   E a cor: a mistura `screen` do render clareava um retângulo inteiro do fundo,
+   deixando um bloco cinza-azulado no meio do hero. O fundo volta a ser o
+   azul-noite limpo, com um brilho atrás do monitor — e nada mais.
+   ========================================================================== */
+
+.hero { background: var(--noite); }
+
+.hero__tela { margin: 0; display: grid; place-items: center; }
+
+/* Moldura de monitor: dá escala e diz "isto é uma tela", sem precisar de
+   render. Feita com borda e sombra, não com imagem. */
+.monitor { position: relative; width: 100%; max-width: 42rem; }
+.monitor__moldura {
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem;
+    background: linear-gradient(180deg, #1B2C3D 0%, #0E1D2B 100%);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0.875rem;
+    box-shadow:
+        0 2px 0 rgba(255, 255, 255, 0.08) inset,
+        0 44px 90px -30px rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+}
+.monitor__moldura img,
+.monitor__moldura picture {
+    display: block; width: 100%; height: auto;
+    border-radius: 0.5rem;
+}
+/* pezinho do monitor */
+.monitor__base {
+    display: block; width: 28%; height: 0.75rem; margin: 0 auto;
+    background: linear-gradient(180deg, #16283A 0%, #0A1622 100%);
+    border: 1px solid rgba(255,255,255,0.1); border-top: 0;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+/* o brilho fica ATRÁS do monitor, não por cima do fundo inteiro */
+.monitor::before {
+    content: ""; position: absolute; inset: 6% -8% -12%;
+    z-index: -1;
+    background: radial-gradient(52% 46% at 50% 55%, rgba(29, 161, 242, 0.3), transparent 70%);
+    filter: blur(34px);
+    pointer-events: none;
+}
+
+@media (min-width: 62rem) {
+    .hero__grade { grid-template-columns: 0.86fr 1.14fr; }
+    .hero__tela {
+        perspective: 2000px;
+        width: calc(100% + 16vw);
+        margin-right: calc(-16vw);
+        justify-self: end;
+    }
+    .monitor { max-width: none; transform: rotateY(-7deg) rotateX(1.5deg); }
+}
+@media (min-width: 100rem) {
+    .hero__tela { width: calc(100% + 8vw); margin-right: -8vw; }
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 62rem) {
+    .monitor { animation: flutuar 8s ease-in-out infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .monitor { animation: none; }
 }
