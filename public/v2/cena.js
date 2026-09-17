@@ -251,6 +251,68 @@
 
     document.querySelectorAll('[data-pdv]').forEach(pdv);
 
+
+    /* ============================================ 7. ABAS PELA ROLAGEM
+       Fazer o visitante clicar em seis tópicos para descobrir o que cada um
+       diz é o contrário de intuitivo — quem lê uma página de venda não caça
+       informação. Aqui a rolagem escolhe a aba: o painel que está no meio da
+       tela acende o rótulo correspondente, e o conteúdo dele já está ao lado.
+       O clique continua funcionando, para quem quiser saltar.
+
+       Sem JavaScript, todos os painéis aparecem empilhados e legíveis — o
+       comportamento de rolagem é um ganho, não um requisito. */
+    (function abasPorRolagem() {
+        var bloco = document.querySelector('.abas--rolagem');
+        if (!bloco) return;
+
+        var abas = [].slice.call(bloco.querySelectorAll('.abas__botoes .aba'));
+        var painels = abas.map(function (a) {
+            return document.getElementById(a.getAttribute('href').slice(1));
+        });
+        if (!abas.length || painels.some(function (p) { return !p; })) return;
+
+        var atual = -1;
+        function acender(i) {
+            if (i === atual || i < 0) return;
+            atual = i;
+            abas.forEach(function (aba, k) {
+                if (k === i) aba.setAttribute('aria-current', 'true');
+                else aba.removeAttribute('aria-current');
+            });
+            // no celular a fila de pílulas rola junto, para a ativa ficar à vista
+            var trilho = bloco.querySelector('.abas__botoes');
+            if (trilho && trilho.scrollWidth > trilho.clientWidth) {
+                var alvo = abas[i];
+                var meio = alvo.offsetLeft - (trilho.clientWidth - alvo.offsetWidth) / 2;
+                trilho.scrollTo({ left: Math.max(0, meio), behavior: calmo ? 'auto' : 'smooth' });
+            }
+        }
+
+        if ('IntersectionObserver' in window) {
+            // a faixa central da tela é quem decide: o painel que a cruza é o ativo
+            var obs = new IntersectionObserver(function (entradas) {
+                var melhor = null;
+                entradas.forEach(function (e) {
+                    if (e.isIntersecting && (!melhor || e.intersectionRatio > melhor.intersectionRatio)) melhor = e;
+                });
+                if (melhor) acender(painels.indexOf(melhor.target));
+            }, { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.01, 0.5, 1] });
+            painels.forEach(function (p) { obs.observe(p); });
+        }
+
+        // clique e teclado continuam valendo: levam a rolagem até o painel
+        abas.forEach(function (aba, i) {
+            aba.addEventListener('click', function (e) {
+                e.preventDefault();
+                acender(i);
+                painels[i].scrollIntoView({ block: 'center', behavior: calmo ? 'auto' : 'smooth' });
+            });
+
+        });
+
+        acender(0);
+    })();
+
     /* ============================================== 6. NAVBAR APÓS O HERO */
     var nav = document.querySelector('.nav');
     if (nav && hero && 'IntersectionObserver' in window) {

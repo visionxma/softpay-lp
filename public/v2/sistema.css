@@ -538,6 +538,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ------------------------------------------------- 11. ABAS (o sistema) */
 .abas { display: grid; gap: var(--sp-4); }
+.abas > *, .abas__trilho > * { min-width: 0; }
 .abas__botoes {
     display: flex; flex-wrap: wrap; gap: var(--sp-2);
 }
@@ -560,13 +561,13 @@ p:last-child { margin-bottom: 0; }
 
 .painel[hidden] { display: none; }
 .painel {
-    display: grid; gap: var(--sp-5);
-    padding: var(--sp-5);
+    display: grid; gap: var(--sp-4);
+    padding: var(--sp-4);
     background: var(--nevoa);
     border-radius: var(--r-lg);
 }
 @media (min-width: 60rem) {
-    .painel { grid-template-columns: 0.9fr 1.1fr; align-items: center; padding: var(--sp-6); }
+    .painel { grid-template-columns: 0.9fr 1.1fr; align-items: center; gap: var(--sp-5); padding: var(--sp-6); }
 }
 .painel__figura {
     margin: 0; border-radius: var(--r-md); overflow: hidden;
@@ -574,9 +575,13 @@ p:last-child { margin-bottom: 0; }
 }
 .painel__figura img {
     width: 100%;
-    aspect-ratio: 5 / 4;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    object-position: 50% 0;
+    object-position: 50% 30%;
+}
+@media (min-width: 60rem) {
+    /* no desktop cada painel tem a tela só para ele: a proporção pode abrir */
+    .painel__figura img { aspect-ratio: 5 / 4; object-position: 50% 0; }
 }
 .painel__lista { display: grid; gap: var(--sp-2); margin: 0; padding: 0; list-style: none; }
 .painel__lista li {
@@ -1092,3 +1097,110 @@ a.so-leitor:focus {
 .hero__fluxo { opacity: 1; }
 
 /* Com a cena ao lado, o véu pode ser mais forte à direita sem apagar a foto. */
+
+
+/* ==========================================================================
+   20. HERO COM A PEÇA, E ABAS QUE TROCAM COM A ROLAGEM
+   --------------------------------------------------------------------------
+   Duas correções do Victor em 17/09/2026:
+
+   1. A fotografia atrás da peça 3D virava ruído — duas imagens disputando a
+      mesma área. O hero agora é azul-noite com a malha de pontos, e a
+      fotografia de lojista continua nas faixas de tela cheia, onde ela conta
+      alguma coisa.
+
+   2. As abas trocavam só no clique. Fazer o visitante clicar em seis tópicos
+      para descobrir o que cada um diz é o contrário de intuitivo: quem lê uma
+      página de venda não caça informação, ela tem de vir. Agora a rolagem
+      troca a aba, e o conteúdo dela aparece ao lado. O clique continua
+      funcionando para quem quiser saltar.
+   ========================================================================== */
+
+.hero { background: var(--noite); }
+.hero__veu {
+    /* sem fotografia, o véu vira só um assentamento de cor no rodapé */
+    background: linear-gradient(180deg, rgba(6,18,31,0) 0%, rgba(6,18,31,0) 62%, rgba(6,18,31,0.9) 100%);
+}
+
+.hero__peca { margin: 0; display: grid; place-items: center; }
+.hero__peca img {
+    width: 100%; max-width: 40rem; height: auto;
+    /* o render tem fundo escuro próprio: a máscara apaga as bordas para ele
+       assentar no fundo da seção em vez de virar um retângulo colado */
+    mix-blend-mode: screen;
+    -webkit-mask-image: radial-gradient(68% 72% at 50% 47%, #000 38%, rgba(0,0,0,0.72) 66%, transparent 86%);
+    mask-image: radial-gradient(68% 72% at 50% 47%, #000 38%, rgba(0,0,0,0.72) 66%, transparent 86%);
+}
+@media (min-width: 62rem) {
+    .hero__peca img { max-width: none; transform: scale(1.1); }
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero__peca img { animation: flutuar 7s ease-in-out infinite; }
+}
+@keyframes flutuar {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -14px; }
+}
+
+/* ------------------------------------------------- ABAS PELA ROLAGEM
+   O bloco fica alto de propósito: cada aba tem um trecho de rolagem só dela.
+   A coluna da esquerda gruda (sticky) enquanto os trechos passam. */
+@media (min-width: 64rem) {
+    .abas--rolagem { display: block; }
+    .abas--rolagem .abas__trilho { display: grid; grid-template-columns: 22rem 1fr; gap: var(--sp-7); align-items: start; }
+    .abas--rolagem .abas__botoes {
+        position: sticky; top: calc(var(--nav-h) + 3rem);
+        flex-direction: column; align-items: stretch; gap: 0;
+    }
+    .abas--rolagem .abas__painels { display: grid; gap: var(--sp-6); }
+    .abas--rolagem .painel { min-height: 26rem; }
+    /* na rolagem todos os painéis existem ao mesmo tempo: o que manda é a
+       posição, não o clique */
+    .abas--rolagem .painel[hidden] { display: grid; }
+}
+
+/* No celular a coluna sticky não cabe: as pílulas viram um trilho de rolagem
+   horizontal que acompanha a aba ativa, e os painéis seguem um abaixo do outro. */
+@media (max-width: 63.99rem) {
+    .abas--rolagem .abas__botoes {
+        min-width: 0;          /* sem isto, o trilho estica o grid e a página rola de lado */
+        max-width: 100vw;
+        position: sticky; top: calc(var(--nav-h) + 0.5rem); z-index: 40;
+        margin-inline: calc(var(--gutter) * -1);
+        padding: var(--sp-2) var(--gutter);
+        background: rgba(255, 255, 255, 0.92);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+    }
+    .abas--rolagem .abas__botoes::-webkit-scrollbar { display: none; }
+    .abas--rolagem .aba { flex: 0 0 auto; }
+    .abas--rolagem .abas__painels { display: grid; gap: var(--sp-5); }
+    .abas--rolagem .painel[hidden] { display: grid; }
+}
+
+
+/* ---------------------------------------- A FOTO E A PEÇA, sem disputa
+   A fotografia diz para quem o produto serve — é o que faz o visitante
+   entender a proposta em um segundo, e por isso fica. O erro anterior não era
+   a foto: era ela ocupar a mesma área da peça 3D, duas imagens brigando.
+   Agora ela cobre o lado do texto e se apaga antes da peça. */
+.hero__foto {
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 42%, rgba(0,0,0,0.35) 62%, transparent 80%);
+    mask-image: linear-gradient(90deg, #000 0%, #000 42%, rgba(0,0,0,0.35) 62%, transparent 80%);
+    object-position: 38% 50%;
+}
+@media (max-width: 61.99rem) {
+    /* no celular a peça fica embaixo do texto: a foto volta a cobrir tudo */
+    .hero__foto {
+        -webkit-mask-image: none; mask-image: none;
+        object-position: 62% 50%;
+    }
+}
+.hero__veu {
+    background:
+        linear-gradient(180deg, rgba(6,18,31,0.72) 0%, rgba(6,18,31,0.44) 44%, rgba(6,18,31,0.92) 100%),
+        linear-gradient(94deg, rgba(6,18,31,0.9) 0%, rgba(6,18,31,0.42) 52%, rgba(6,18,31,0.72) 78%, rgba(6,18,31,0.94) 100%);
+}

@@ -48,28 +48,8 @@
         });
     }
 
-    /* --- 3. Abas do bloco "o sistema por dentro" --- */
-    var abas = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
-    function trocar(alvo) {
-        abas.forEach(function (aba) {
-            var ativa = aba === alvo;
-            aba.setAttribute('aria-selected', String(ativa));
-            aba.tabIndex = ativa ? 0 : -1;
-            var painel = document.getElementById(aba.getAttribute('aria-controls'));
-            if (painel) painel.hidden = !ativa;
-        });
-    }
-    abas.forEach(function (aba, i) {
-        aba.addEventListener('click', function () { trocar(aba); });
-        aba.addEventListener('keydown', function (e) {
-            var passo = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
-            if (!passo) return;
-            e.preventDefault();
-            var proxima = abas[(i + passo + abas.length) % abas.length];
-            proxima.focus();
-            trocar(proxima);
-        });
-    });
+    /* --- 3. (vago) O bloco "o sistema por dentro" deixou de ser um tablist:
+       virou índice lateral que a rolagem controla, em cena.js. --- */
 
     /* --- 4. FAQ: abrir uma fecha a outra (fallback do name= em <details>) --- */
     var suporta = (function () {

@@ -18,9 +18,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="image" href="/assets/lojistas/loja-de-roupas.webp" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-3d.webp" fetchpriority="high" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400..700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=3a9d578fc8" />
+    <link rel="stylesheet" href="sistema.css?v=de51c24397" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 </head>
 
@@ -116,39 +117,13 @@
                     </div>
                 </div>
 
-                    <!-- A frente de caixa desenhada, não fotografada: ela opera
-                         sozinha quando entra na tela. Mostra o que o sistema FAZ,
-                         que uma foto de monitor não mostra. Os valores são de
-                         exemplo e estão no HTML, legíveis sem JavaScript. -->
-                    <div class="pdv" data-pdv data-inclina role="img"
-                         aria-label="Demonstração da frente de caixa do SoftPay: três itens somam R$ 26,50 e a venda é finalizada">
-                        <div class="pdv__barra">
-                            <span class="pdv__ponto" aria-hidden="true"></span>
-                            <b>CAIXA ABERTO</b>
-                            <span>Venda #000412</span>
-                        </div>
-                        <div class="pdv__corpo">
-                            <div class="pdv__lista">
-                                <div class="pdv__item" data-valor="10.00">
-                                    <span><b>Água Mar Doce s/ gás</b><i>789110710162 · 1 un</i></span>
-                                    <em>R$ 10,00</em>
-                                </div>
-                                <div class="pdv__item" data-valor="11.50">
-                                    <span><b>Prestígio Coco 33g</b><i>789110710884 · 2 un</i></span>
-                                    <em>R$ 11,50</em>
-                                </div>
-                                <div class="pdv__item" data-valor="5.00">
-                                    <span><b>Snickers 45g</b><i>789110711003 · 1 un</i></span>
-                                    <em>R$ 5,00</em>
-                                </div>
-                            </div>
-                            <div class="pdv__rodape">
-                                <span><b data-pdv-conta>3</b> itens</span>
-                                <strong class="pdv__total">R$&nbsp;<span data-pdv-total>26,50</span></strong>
-                            </div>
-                            <p class="pdv__selo aceso"><b>Venda finalizada</b> <span>estoque baixado</span></p>
-                        </div>
-                    </div>
+                <figure class="hero__peca">
+                    <img src="/assets/hero-3d.webp"
+                         srcset="/assets/hero-3d-700.webp 700w, /assets/hero-3d.webp 1100w"
+                         sizes="(min-width: 62rem) 46vw, 88vw"
+                         width="1100" height="718" fetchpriority="high" decoding="async"
+                         alt="Terminal de caixa do SoftPay com o painel de vendas na tela e, ao redor, o cupom fiscal, as caixas do estoque, o QR do Pix e o gráfico de faturamento" />
+                </figure>
             </div>
         </section>
 
@@ -268,26 +243,29 @@
                     </p>
                 </div>
 
-                <div class="abas">
-                    <div class="abas__botoes" role="tablist" aria-label="Partes do sistema">
-                        <button class="aba" type="button" role="tab" id="aba-pdv" aria-controls="painel-pdv" aria-selected="true">
-                            <span class="aba__ponto"></span>PDV e caixa</button>
-                        <button class="aba" type="button" role="tab" id="aba-estoque" aria-controls="painel-estoque" aria-selected="false" tabindex="-1">
-                            <span class="aba__ponto"></span>Estoque</button>
-                        <button class="aba" type="button" role="tab" id="aba-fiado" aria-controls="painel-fiado" aria-selected="false" tabindex="-1">
-                            <span class="aba__ponto"></span>Fiado</button>
-                        <button class="aba" type="button" role="tab" id="aba-whats" aria-controls="painel-whats" aria-selected="false" tabindex="-1">
-                            <span class="aba__ponto"></span>WhatsApp</button>
-                        <button class="aba" type="button" role="tab" id="aba-loja" aria-controls="painel-loja" aria-selected="false" tabindex="-1">
-                            <span class="aba__ponto"></span>Loja online</button>
-                        <button class="aba" type="button" role="tab" id="aba-nota" aria-controls="painel-nota" aria-selected="false" tabindex="-1">
-                            <span class="aba__ponto"></span>Nota fiscal</button>
-                    </div>
+                <div class="abas abas--rolagem">
+                    <div class="abas__trilho">
+                    <nav class="abas__botoes" aria-label="Partes do sistema">
+                        <a class="aba" id="aba-pdv" href="#painel-pdv" aria-current="true">
+                            <span class="aba__ponto"></span>PDV e caixa</a>
+                        <a class="aba" id="aba-estoque" href="#painel-estoque">
+                            <span class="aba__ponto"></span>Estoque</a>
+                        <a class="aba" id="aba-fiado" href="#painel-fiado">
+                            <span class="aba__ponto"></span>Fiado</a>
+                        <a class="aba" id="aba-whats" href="#painel-whats">
+                            <span class="aba__ponto"></span>WhatsApp</a>
+                        <a class="aba" id="aba-loja" href="#painel-loja">
+                            <span class="aba__ponto"></span>Loja online</a>
+                        <a class="aba" id="aba-nota" href="#painel-nota">
+                            <span class="aba__ponto"></span>Nota fiscal</a>
+                    </nav>
+
+                    <div class="abas__painels">
 
                     <!-- PDV -->
-                    <div class="painel" id="painel-pdv" role="tabpanel" aria-labelledby="aba-pdv">
+                    <section class="painel" id="painel-pdv" aria-labelledby="painel-pdv-titulo">
                         <div>
-                            <h3 class="display display--cartao">Venda rápida,<br />caixa fechado sem susto</h3>
+                            <h3 class="display display--cartao" id="painel-pdv-titulo">Venda rápida,<br />caixa fechado sem susto</h3>
                             <p class="apoio">
                                 Leitor de código de barras, busca por nome, desconto e finalização
                                 em uma tela. No fim do dia o caixa fecha com sangria, suprimento e
@@ -301,16 +279,45 @@
                             <a class="link-seta" href="/solucoes/sistema-pdv/">Ver o PDV por inteiro
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
-                        <figure class="painel__figura">
-                            <img src="/assets/COmputador.webp" width="1224" height="1285" loading="lazy" decoding="async"
-                                alt="Tela do PDV do SoftPay aberta no computador do balcão" />
-                        </figure>
-                    </div>
+                        <!-- A frente de caixa desenhada, não fotografada: ela opera
+                             sozinha quando entra na tela. Mostra o que o sistema FAZ,
+                             que uma foto de monitor não mostra. Os valores são de
+                             exemplo e estão no HTML, legíveis sem JavaScript. -->
+                        <div class="pdv" data-pdv data-inclina role="img"
+                             aria-label="Demonstração da frente de caixa do SoftPay: três itens somam R$ 26,50 e a venda é finalizada">
+                            <div class="pdv__barra">
+                                <span class="pdv__ponto" aria-hidden="true"></span>
+                                <b>CAIXA ABERTO</b>
+                                <span>Venda #000412</span>
+                            </div>
+                            <div class="pdv__corpo">
+                                <div class="pdv__lista">
+                                    <div class="pdv__item" data-valor="10.00">
+                                        <span><b>Água Mar Doce s/ gás</b><i>789110710162 · 1 un</i></span>
+                                        <em>R$ 10,00</em>
+                                    </div>
+                                    <div class="pdv__item" data-valor="11.50">
+                                        <span><b>Prestígio Coco 33g</b><i>789110710884 · 2 un</i></span>
+                                        <em>R$ 11,50</em>
+                                    </div>
+                                    <div class="pdv__item" data-valor="5.00">
+                                        <span><b>Snickers 45g</b><i>789110711003 · 1 un</i></span>
+                                        <em>R$ 5,00</em>
+                                    </div>
+                                </div>
+                                <div class="pdv__rodape">
+                                    <span><b data-pdv-conta>3</b> itens</span>
+                                    <strong class="pdv__total">R$&nbsp;<span data-pdv-total>26,50</span></strong>
+                                </div>
+                                <p class="pdv__selo aceso"><b>Venda finalizada</b> <span>estoque baixado</span></p>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- ESTOQUE -->
-                    <div class="painel" id="painel-estoque" role="tabpanel" aria-labelledby="aba-estoque" hidden>
+                    <section class="painel" id="painel-estoque" aria-labelledby="painel-estoque-titulo">
                         <div>
-                            <h3 class="display display--cartao">O estoque bate<br />com a prateleira</h3>
+                            <h3 class="display display--cartao" id="painel-estoque-titulo">O estoque bate<br />com a prateleira</h3>
                             <p class="apoio">
                                 Entrada, saída, custo e preço de venda por produto — com variação de
                                 tamanho e cor quando a loja precisa. A curva ABC mostra quais itens
@@ -328,12 +335,12 @@
                             <img src="/assets/lojistas/loja-de-variedades.webp" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Lojista organizando as prateleiras de uma loja de variedades" />
                         </figure>
-                    </div>
+                    </section>
 
                     <!-- FIADO -->
-                    <div class="painel" id="painel-fiado" role="tabpanel" aria-labelledby="aba-fiado" hidden>
+                    <section class="painel" id="painel-fiado" aria-labelledby="painel-fiado-titulo">
                         <div>
-                            <h3 class="display display--cartao">O fiado sai do caderno<br />e cobra sozinho</h3>
+                            <h3 class="display display--cartao" id="painel-fiado-titulo">O fiado sai do caderno<br />e cobra sozinho</h3>
                             <p class="apoio">
                                 Cada cliente tem a conta dele, com o que deve e desde quando. A partir
                                 do plano Loja, o sistema manda o link de pagamento Pix pelo WhatsApp e
@@ -351,12 +358,12 @@
                             <img src="/assets/lojistas/mercadinho.webp" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Atendimento no balcão de um mercadinho" />
                         </figure>
-                    </div>
+                    </section>
 
                     <!-- WHATSAPP -->
-                    <div class="painel" id="painel-whats" role="tabpanel" aria-labelledby="aba-whats" hidden>
+                    <section class="painel" id="painel-whats" aria-labelledby="painel-whats-titulo">
                         <div>
-                            <h3 class="display display--cartao">Registre a venda<br />falando no WhatsApp</h3>
+                            <h3 class="display display--cartao" id="painel-whats-titulo">Registre a venda<br />falando no WhatsApp</h3>
                             <p class="apoio">
                                 Mande um áudio ou uma mensagem dizendo o que vendeu. O SoftPay entende,
                                 registra a venda, baixa o estoque e responde confirmando — sem você
@@ -374,12 +381,12 @@
                             <img src="/assets/celular.webp" width="800" height="900" loading="lazy" decoding="async"
                                 alt="SoftPay aberto na tela de um celular" />
                         </figure>
-                    </div>
+                    </section>
 
                     <!-- LOJA ONLINE -->
-                    <div class="painel" id="painel-loja" role="tabpanel" aria-labelledby="aba-loja" hidden>
+                    <section class="painel" id="painel-loja" aria-labelledby="painel-loja-titulo">
                         <div>
-                            <h3 class="display display--cartao">Sua vitrine na internet,<br />com o estoque que já existe</h3>
+                            <h3 class="display display--cartao" id="painel-loja-titulo">Sua vitrine na internet,<br />com o estoque que já existe</h3>
                             <p class="apoio">
                                 A loja online usa o catálogo que você já cadastrou: o mesmo produto, o
                                 mesmo preço, o mesmo saldo. O cliente paga por Pix e a confirmação
@@ -397,12 +404,12 @@
                             <img src="/assets/lojistas/cosmeticos-e-perfumaria.webp" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Loja de cosméticos e perfumaria com produtos expostos" />
                         </figure>
-                    </div>
+                    </section>
 
                     <!-- NOTA FISCAL -->
-                    <div class="painel" id="painel-nota" role="tabpanel" aria-labelledby="aba-nota" hidden>
+                    <section class="painel" id="painel-nota" aria-labelledby="painel-nota-titulo">
                         <div>
-                            <h3 class="display display--cartao">Nota fiscal sem<br />depender do escritório</h3>
+                            <h3 class="display display--cartao" id="painel-nota-titulo">Nota fiscal sem<br />depender do escritório</h3>
                             <p class="apoio">
                                 Emissão de NFC-e e NF-e a partir da própria venda, com cadastro fiscal
                                 e pacote do contador incluídos. Você também vê e manifesta as notas que
@@ -424,6 +431,8 @@
                             <img src="/assets/lojistas/distribuidora.webp" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Conferência de mercadorias em uma distribuidora" />
                         </figure>
+                    </section>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -808,8 +817,8 @@
         <a class="btn btn--linha" href="#planos">Planos</a>
     </div>
 
-    <script src="efeitos.js?v=9427310e5c" defer></script>
-    <script src="cena.js?v=85181f5964" defer></script>
+    <script src="efeitos.js?v=46f7c4b379" defer></script>
+    <script src="cena.js?v=a8306970c6" defer></script>
 </body>
 
 </html>
