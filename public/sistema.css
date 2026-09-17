@@ -909,16 +909,6 @@ a.so-leitor:focus {
 }
 .hero__conteudo { opacity: var(--recuo, 1); }
 
-/* A malha de pontos fica entre a foto e o véu: a cena respira sem disputar
-   com o texto. */
-.hero__fluxo {
-    position: absolute; inset: 0; z-index: -1;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    opacity: 0.85;
-    mix-blend-mode: screen;
-}
-
 /* Título que entra palavra a palavra. Sem JS, as palavras não existem como
    span e o h1 aparece normalmente. */
 .display--hero .linha { display: block; }
@@ -1178,10 +1168,6 @@ a.so-leitor:focus {
     .hero .pdv { transform: none; max-width: 26rem; }
     .hero .pdv::before { display: none; }
 }
-
-/* A malha precisa aparecer: sobre foto escura, 0.85 de opacidade com mistura
-   de tela ainda some. */
-.hero__fluxo { opacity: 1; }
 
 /* Com a cena ao lado, o véu pode ser mais forte à direita sem apagar a foto. */
 
@@ -1624,7 +1610,10 @@ a.so-leitor:focus {
    abaixo da linha de "também atende". O atributo saiu de lá. */
 .hero, .secao--escura, .momento { position: relative; }
 
-.hero::after,
+/* O hero saiu do degradê (17/09/2026): com 96px clareando até quase branco, a
+   faixa subia por cima da prova social e do pedestal do monitor — era ela a
+   "borda branca" que incomodava, não o corte. O hero termina no azul-noite e a
+   seção seguinte começa na cor dela. */
 .secao--escura[data-passagem]::after,
 .momento[data-passagem]::after {
     content: "";
@@ -1640,4 +1629,4 @@ a.so-leitor:focus {
         var(--nevoa) 100%);
 }
 /* o conteúdo continua por cima da passagem */
-.hero > .shell, .secao--escura > .shell, .momento > .shell { position: relative; z-index: 1; }
+.secao--escura > .shell, .momento > .shell { position: relative; z-index: 1; }

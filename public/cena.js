@@ -5,9 +5,8 @@
    pseudo-elemento. Nenhum conteúdo depende deste arquivo para existir: o HTML
    é inteiro e legível sem JavaScript.
 
-   Com "reduzir movimento" ligado: o fluxo do hero fica parado num quadro, o
-   PDV mostra a venda já fechada, os contadores mostram o número final e não há
-   inclinação nem holofote.
+   Com "reduzir movimento" ligado: o PDV mostra a venda já fechada, os
+   contadores mostram o número final e não há inclinação nem holofote.
    ========================================================================== */
 (function () {
     'use strict';
@@ -15,94 +14,10 @@
     var calmo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var comMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-    /* ====================================================== 1. FLUXO DO HERO
-       Uma malha de pontos em perspectiva, como o balcão visto de cima: cada
-       ponto é uma venda entrando. A onda percorre da esquerda para a direita,
-       e a fileira da frente pulsa mais forte — é o caixa de hoje.
-       Custo: um canvas de 1.5x no máximo, parado quando sai da tela ou a aba
-       vai para o fundo. */
-    function fluxo(canvas) {
-        var ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        var w = 0, h = 0, dpr = 1, raf = 0, visivel = true, t0 = performance.now();
-
-        function medir() {
-            var r = canvas.getBoundingClientRect();
-            dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-            w = r.width; h = r.height;
-            canvas.width = Math.round(w * dpr);
-            canvas.height = Math.round(h * dpr);
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        }
-
-        function desenhar(agora) {
-            var t = (agora - t0) / 1000;
-            ctx.clearRect(0, 0, w, h);
-
-            var estreito = w < 640;
-            var cols = estreito ? 30 : 60;
-            var linhas = estreito ? 14 : 20;
-            var horizonte = h * 0.42;
-            var base = h * 1.04;
-
-            for (var j = 0; j < linhas; j++) {
-                var z = j / (linhas - 1);          // 0 = fundo, 1 = frente
-                var p = 0.2 + z * z * 0.8;          // perspectiva
-                var yBase = horizonte + (base - horizonte) * z * z;
-                var alfa = (0.05 + z * 0.4) * (estreito ? 0.8 : 1);
-
-                for (var i = 0; i < cols; i++) {
-                    var x0 = (i / (cols - 1) - 0.5) * 2;   // -1..1
-                    // duas ondas somadas: o fluxo nunca repete o mesmo desenho
-                    var onda = Math.sin(x0 * 2.6 + t * 0.5 + z * 3.4) * 0.6
-                             + Math.cos(x0 * 1.4 - t * 0.28 + z * 5.2) * 0.4;
-                    // pulso que atravessa a malha: a "venda" passando pelo caixa
-                    var fase = (t * 0.22 + z * 0.35) % 1;
-                    var dist = Math.abs(((x0 + 1) / 2) - fase);
-                    var pulso = Math.max(0, 1 - dist * 7);
-
-                    var x = w / 2 + x0 * w * 0.92 * (0.6 + p * 0.7);
-                    var y = yBase - onda * 26 * p;
-                    var tam = Math.max(1, (1.8 + pulso * 2.4) * p);
-                    var a = Math.min(0.85, alfa + pulso * 0.5);
-
-                    // do azul profundo no fundo ao azul do logotipo na frente
-                    var cr = Math.round(12 + (29 - 12) * (z * 0.7 + pulso * 0.3));
-                    var cg = Math.round(92 + (161 - 92) * (z * 0.7 + pulso * 0.3));
-                    var cb = Math.round(158 + (242 - 158) * (z * 0.7 + pulso * 0.3));
-
-                    ctx.fillStyle = 'rgba(' + cr + ',' + cg + ',' + cb + ',' + a.toFixed(3) + ')';
-                    ctx.fillRect(x, y, tam, tam);
-                }
-            }
-        }
-
-        function laco(agora) {
-            desenhar(agora);
-            raf = (visivel && !document.hidden) ? requestAnimationFrame(laco) : 0;
-        }
-        function ligar() {
-            if (!raf && !calmo && visivel && !document.hidden) raf = requestAnimationFrame(laco);
-        }
-
-        medir();
-        desenhar(performance.now());   // com movimento reduzido, fica neste quadro
-        if ('IntersectionObserver' in window) {
-            new IntersectionObserver(function (e) {
-                visivel = e[0].isIntersecting;
-                if (visivel) ligar(); else { cancelAnimationFrame(raf); raf = 0; }
-            }).observe(canvas);
-        }
-        if ('ResizeObserver' in window) {
-            new ResizeObserver(function () { medir(); desenhar(performance.now()); }).observe(canvas);
-        }
-        document.addEventListener('visibilitychange', ligar);
-        ligar();
-    }
-
-    var tela = document.querySelector('[data-fluxo]');
-    if (tela) fluxo(tela);
+    /* (1. FLUXO DO HERO saiu em 17/09/2026: a malha de pontos em perspectiva
+       desenhada em canvas virava um chuvisco brilhante atrás do texto e do
+       monitor. O Victor pediu para tirar. O hero fica com a fotografia, o véu
+       e o movimento do próprio conteúdo.) */
 
     /* ================================================== 2. TÍTULO QUE ENTRA
        Palavra a palavra, de baixo para cima. O texto inteiro já está no HTML:
