@@ -1392,3 +1392,15 @@ a.so-leitor:focus {
     .plano-parte__acao { justify-items: end; text-align: right; }
 }
 .plano-parte__acao .plano__preco { margin: 0; }
+
+
+/* --------------------------------------------- "VER MAIS PERGUNTAS"
+   Um botão só, centralizado sob as duas colunas. Antes havia dois controles
+   lado a lado fazendo a mesma coisa ("Ver mais perguntas" e "Todas as
+   perguntas"), encostados na margem esquerda. */
+.faq__mais-perguntas {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--sp-6);
+}
+.faq__mais-perguntas .btn { min-width: 16rem; }

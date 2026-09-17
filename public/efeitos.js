@@ -66,12 +66,36 @@
         });
     }
 
-    /* --- 5. "Ver mais": revela o resto sem recarregar --- */
+    /* --- 5. "Ver mais": revela o resto sem recarregar ---
+       O número sai da contagem real dos itens escondidos. Escrito à mão ele
+       desatualiza: estava "(+9)" com dez perguntas atrás do botão. */
     document.querySelectorAll('[data-ver-mais]').forEach(function (btn) {
+        var alvo = btn.getAttribute('data-ver-mais');
+        var conta = btn.querySelector('[data-ver-mais-conta]');
+        var sexta = document.querySelector('[data-faq-sexta]');
+        var faq = document.querySelector('.faq');
+        var aberto = false;
+
+        /* O número à vista acompanha as colunas: em duas ou três, seis — para
+           nenhuma fileira terminar capenga. Em uma coluna só, cinco. Por isso a
+           sexta pergunta entra ou sai do grupo escondido conforme a largura. */
+        function ajustar() {
+            if (aberto || !faq) return;
+            var colunas = getComputedStyle(faq).gridTemplateColumns.split(' ').length;
+            if (sexta) sexta.hidden = colunas < 2;
+            var quantos = document.querySelectorAll(alvo).length + (sexta && sexta.hidden ? 1 : 0);
+            if (conta) conta.textContent = '(+' + quantos + ')';
+            btn.hidden = quantos === 0;
+        }
+        ajustar();
+        window.addEventListener('resize', ajustar);
+
         btn.addEventListener('click', function () {
-            document.querySelectorAll(btn.getAttribute('data-ver-mais'))
-                .forEach(function (el) { el.hidden = false; });
-            btn.remove();
+            aberto = true;
+            if (sexta) sexta.hidden = false;
+            document.querySelectorAll(alvo).forEach(function (el) { el.hidden = false; });
+            var caixa = btn.closest('.faq__mais-perguntas');
+            (caixa || btn).remove();
         });
     });
 
