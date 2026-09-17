@@ -124,6 +124,27 @@
         contadores.forEach(function (el) { obsN.observe(el); });
     }
 
+    /* --- 7. Mapa: a lista de estados acende o estado no mapa ---
+       O caminho de volta também vale: passar pelo estado acende o nome. Sem
+       este bloco a seção continua inteira e legível — a lista é só uma lista
+       e o mapa continua com os títulos que o leitor de tela anuncia. */
+    var ufsLista = document.querySelectorAll('.mapa__ufs button[data-realce]');
+    if (ufsLista.length) {
+        ufsLista.forEach(function (btn) {
+            var uf = btn.getAttribute('data-realce');
+            var caminho = document.querySelector('.mapa__svg .uf--ativo[data-uf="' + uf + '"]');
+            if (!caminho) return;
+            function acender()  { caminho.classList.add('uf--realce'); btn.classList.add('e-realce'); }
+            function apagar()   { caminho.classList.remove('uf--realce'); btn.classList.remove('e-realce'); }
+            btn.addEventListener('mouseenter', acender);
+            btn.addEventListener('mouseleave', apagar);
+            btn.addEventListener('focus', acender);
+            btn.addEventListener('blur', apagar);
+            caminho.addEventListener('mouseenter', acender);
+            caminho.addEventListener('mouseleave', apagar);
+        });
+    }
+
     /* --- 7. Ano do rodapé: escrito à mão ele fica velho em 1º de janeiro --- */
     var anoAgora = String(new Date().getFullYear());
     document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent = anoAgora; });

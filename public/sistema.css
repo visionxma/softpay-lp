@@ -1681,3 +1681,227 @@ a.so-leitor:focus {
 }
 /* o conteúdo continua por cima da passagem */
 .secao--escura > .shell, .momento > .shell { position: relative; z-index: 1; }
+
+
+/* ==========================================================================
+   24. O MAPA — ONDE O SOFTPAY JÁ ESTÁ
+   --------------------------------------------------------------------------
+   Referência medida ao vivo em stone.com.br/?hsd=a (1440x1000, 17/09/2026):
+   seção de 1360x854, título de 72px condensado a 62,5% na cor da marca, texto
+   em coluna estreita à esquerda, mapa ocupando 75% da largura à direita, e três
+   números de 72px no pé (9.0, +5.500, 5 SEGS).
+
+   O que veio: a composição (texto estreito + mapa dominante + números no pé) e
+   a ideia de pôr GENTE no mapa, que é o que prende — polígono não emociona.
+
+   O que foi feito melhor, de propósito:
+     · O mapa dela é um PNG de 1013x784 com os pinos chapados dentro. Aqui é
+       SVG: cada estado é um caminho com <title>, quem usa leitor de tela ouve
+       a lista, a peça é nítida em qualquer tela e pesa uma fração.
+     · Os rostos dela são de banco de imagem, anônimos. Aqui são três lojistas
+       de verdade, com nome e depoimento em vídeo na própria página.
+     · O número dela ("+5.500 cidades") é de cobertura de maquininha. O número
+       honesto aqui é o de estados onde JÁ EXISTE loja usando — oito — mais o
+       argumento que a Stone não tem: não é preciso representante na cidade.
+   ========================================================================== */
+.mapa__grade { display: grid; gap: var(--sp-6); align-items: center; }
+@media (min-width: 62rem) {
+    /* texto estreito, mapa dominante — a proporção da referência */
+    .mapa__grade { grid-template-columns: 0.82fr 1.18fr; gap: var(--sp-7); }
+}
+
+.mapa__lista { display: grid; gap: var(--sp-2); margin: var(--sp-5) 0 var(--sp-5); padding: 0; list-style: none; }
+.mapa__lista li {
+    display: grid; grid-template-columns: auto 1fr; gap: var(--sp-2);
+    align-items: start; font-size: var(--t-sm); color: rgba(255, 255, 255, 0.86);
+}
+.mapa__lista svg { color: var(--acento); margin-top: 0.2rem; }
+@media (min-width: 30rem) and (max-width: 61.99rem) {
+    /* no celular largo e no tablet os três itens cabem em duas colunas */
+    .mapa__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--sp-4); }
+    .mapa__lista li:last-child { grid-column: 1 / -1; }
+}
+
+/* ---------------------------------------------------------------- A PEÇA */
+.mapa__peca { position: relative; margin: 0 auto; width: 100%; max-width: 44rem; }
+.mapa__svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+/* Estado sem loja: só o contorno, para o Brasil existir sem competir. */
+.mapa__svg .uf {
+    fill: rgba(255, 255, 255, 0.045);
+    stroke: rgba(255, 255, 255, 0.16);
+    stroke-width: 1;
+    stroke-linejoin: round;
+    transition: fill 0.3s linear;
+}
+/* Estado com loja: o azul do logotipo, que é onde o olho tem de cair. */
+.mapa__svg .uf--ativo {
+    fill: var(--azul);
+    stroke: var(--acento);
+    stroke-width: 1.4;
+}
+@media (hover: hover) and (pointer: fine) {
+    .mapa__svg .uf--ativo:hover { fill: var(--acento); }
+}
+
+/* --------------------------------------------------------------- OS PULSOS
+   Um ponto por estado aceso. O halo cresce e some — é o sinal de "tem gente
+   vendendo aqui agora", e some inteiro com "menos movimento". */
+.mapa__pulso {
+    position: absolute; left: var(--x); top: var(--y);
+    width: 0.625rem; height: 0.625rem; margin: -0.3125rem 0 0 -0.3125rem;
+    border-radius: 50%;
+    background: var(--acento);
+    box-shadow: 0 0 0 3px rgba(6, 18, 31, 0.55);
+}
+.mapa__pulso::after {
+    content: ""; position: absolute; inset: -0.25rem;
+    border-radius: 50%; border: 1.5px solid var(--acento);
+    opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .mapa__pulso::after { animation: mapa-pulso 3.2s ease-out infinite; }
+    .mapa__pulso:nth-of-type(2n)::after { animation-delay: 0.7s; }
+    .mapa__pulso:nth-of-type(3n)::after { animation-delay: 1.4s; }
+    .mapa__pulso:nth-of-type(5n)::after { animation-delay: 2.1s; }
+}
+@keyframes mapa-pulso {
+    0%   { transform: scale(0.6); opacity: 0.9; }
+    70%  { transform: scale(2.6); opacity: 0; }
+    100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* ----------------------------------------------------------------- O PINO
+   Onde há lojista com depoimento, o ponto vira rosto. Três avatares
+   sobrepostos, do mesmo jeito que a prova social do hero. */
+.mapa__pino {
+    position: absolute; left: var(--x); top: var(--y);
+    transform: translate(-50%, -50%);
+}
+.mapa__rostos { display: flex; }
+.mapa__rostos img {
+    width: 2.25rem; height: 2.25rem; border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--branco);
+    box-shadow: 0 8px 20px -6px rgba(6, 18, 31, 0.9);
+    background: var(--noite-2);
+}
+.mapa__rostos img + img { margin-left: -0.8rem; }
+@media (min-width: 62rem) {
+    /* 2,5rem e não 3,25: com três avatares sobrepostos, o pino tem de caber
+       DENTRO do Maranhão — a 3,25rem ele transbordava para o Piauí. */
+    .mapa__rostos img { width: 2.5rem; height: 2.5rem; }
+    .mapa__rostos img + img { margin-left: -0.9rem; }
+}
+
+.mapa__balao {
+    position: absolute; left: 50%; bottom: calc(100% + 0.6rem);
+    transform: translateX(-50%);
+    width: max-content; max-width: min(15rem, 50vw);
+    padding: var(--sp-3);
+    border-radius: var(--r-sm);
+    background: var(--branco); color: var(--tinta);
+    box-shadow: 0 18px 40px -16px rgba(6, 18, 31, 0.8);
+    font-size: var(--t-xs); line-height: 1.4;
+    text-align: left;
+}
+.mapa__balao b { display: block; font-size: var(--t-sm); margin-bottom: 0.15rem; }
+.mapa__balao::after {
+    content: ""; position: absolute; top: 100%; left: 50%;
+    width: 0.625rem; height: 0.625rem; margin-left: -0.3125rem;
+    background: var(--branco); transform: rotate(45deg) translateY(-0.3125rem);
+}
+/* O pino está a 69,6% da largura do mapa, então um balão centrado nele só cabe
+   se tiver no máximo o dobro da folga do lado mais curto — 61% da largura do
+   mapa. Daí o teto de 50vw: em 320px (o caso mais apertado) dá 160px contra
+   178px de folga. Medido: 0 de estouro de 320 a 1440. */
+
+/* No toque o balão fica sempre visível, e aí ele tem de cair para BAIXO do
+   pino: o Maranhão está a 28,6% da altura do mapa e um balão de 96px acima
+   dele saía por cima da peça (medido em 390px). */
+@media not all and (hover: hover) {
+    .mapa__balao { top: calc(100% + 0.6rem); bottom: auto; }
+    .mapa__balao::after {
+        top: auto; bottom: 100%;
+        transform: rotate(45deg) translateY(0.3125rem);
+    }
+}
+/* No desktop o balão só aparece quando o ponteiro chega; no toque ele fica. */
+@media (hover: hover) and (pointer: fine) {
+    .mapa__balao {
+        opacity: 0; transform: translateX(-50%) translateY(6px);
+        transition: opacity 0.28s linear, transform 0.28s var(--mola);
+        pointer-events: none;
+    }
+    .mapa__pino:hover .mapa__balao,
+    .mapa__pino:focus-within .mapa__balao { opacity: 1; transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .mapa__balao { transition: none; }
+}
+
+/* -------------------------------------------------------------- OS NÚMEROS */
+.mapa__numeros {
+    display: grid; gap: var(--sp-5);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: var(--sp-7);
+    padding-top: var(--sp-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+@media (min-width: 48rem) { .mapa__numeros { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.mapa__numeros > div:last-child { grid-column: 1 / -1; }
+@media (min-width: 48rem) { .mapa__numeros > div:last-child { grid-column: auto; } }
+.mapa__numeros b {
+    display: block;
+    font-family: var(--display); font-stretch: 62%; font-weight: 800;
+    font-size: var(--t-2xl); line-height: 0.9;
+    color: var(--acento);
+}
+.mapa__numeros span {
+    display: block; margin-top: var(--sp-2);
+    font-size: var(--t-sm); color: rgba(255, 255, 255, 0.8);
+    max-width: 20ch;
+}
+
+/* -------------------------------------------------------- A LISTA DE ESTADOS
+   O que falta na referência: oito manchas acesas e nenhuma legenda — dá para
+   ver que tem cobertura, não dá para saber ONDE. Aqui a lista diz os nomes, e
+   passar por um nome acende o estado no mapa (e o contrário também). */
+.mapa__ufs {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: var(--sp-2) var(--sp-3);
+    /* 34rem faz a lista quebrar 4 e 4 em vez de 6 e 2, que deixava dois nomes
+       órfãos na segunda fileira (medido em 1440px). */
+    max-width: 34rem; margin: var(--sp-5) auto 0; padding: 0;
+    list-style: none;
+}
+.mapa__ufs button {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    min-height: 2.25rem; padding: 0.35rem 0.5rem;
+    border: 0; background: none;
+    font: inherit; font-size: var(--t-sm); font-weight: 500;
+    color: rgba(255, 255, 255, 0.72);
+    cursor: pointer;
+    transition: color 0.2s linear;
+}
+.mapa__ufs button::before {
+    content: ""; flex: none;
+    width: 0.5rem; height: 0.5rem; border-radius: 50%;
+    background: var(--azul);
+    border: 1px solid var(--acento);
+    transition: background-color 0.2s linear, transform 0.2s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) {
+    .mapa__ufs button:hover { color: var(--branco); }
+    .mapa__ufs button:hover::before { background: var(--acento); transform: scale(1.35); }
+}
+.mapa__ufs button:focus-visible { color: var(--branco); outline: 2px solid var(--acento); outline-offset: 3px; }
+
+/* o estado realçado pela lista */
+.mapa__svg .uf--realce { fill: var(--acento); }
+
+@media (prefers-reduced-motion: reduce) {
+    .mapa__ufs button, .mapa__ufs button::before { transition: none; }
+}
+.mapa__ufs button.e-realce { color: var(--branco); }
+.mapa__ufs button.e-realce::before { background: var(--acento); transform: scale(1.35); }
