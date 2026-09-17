@@ -599,18 +599,36 @@ p:last-child { margin-bottom: 0; }
 .painel__lista svg { color: var(--azul); margin-top: 0.2rem; }
 
 /* ------------------------------------------------------- 12. SEGMENTOS */
-/* minmax(0, 1fr) e não 1fr: com `1fr` a coluna não pode encolher abaixo do
-   min-content do cartão, e o cartão tem proporção fixa — em 1280px isso
-   estourava a página em 28px (medido 17/09/2026). */
-.vitrine { display: grid; gap: 2px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Medido em stone.com.br/?hsd=a (1440x1200, 17/09/2026): painéis de 288x1200,
+   um quinto da largura por uma tela inteira de altura — proporção 0,24 —,
+   encostados um no outro, com o nome do segmento em 72px condensado a 62,5%,
+   peso 700, entrelinha 0,9, na cor da marca, centrado nos dois eixos.
+
+   Aqui são seis painéis em vez de cinco, e a cor é o azul do logotipo. O que
+   não veio: a altura de tela no celular. Seis painéis de uma tela cada dariam
+   três telas de rolagem só nesta seção — a doutrina do Victor veta. No celular
+   o painel é 3:4 e ficam dois lado a lado.
+
+   minmax(0, 1fr) e não 1fr: com `1fr` a coluna não encolhe abaixo do
+   min-content do cartão, que tem proporção fixa — em 1280px isso estourava a
+   página em 28px (medido 17/09/2026). */
+.vitrine { display: grid; gap: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 48rem) { .vitrine { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 72rem) { .vitrine { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 
 .vitrine__item {
     position: relative; display: block; overflow: hidden;
-    aspect-ratio: 4 / 5; text-decoration: none; color: var(--branco); isolation: isolate;
+    container-type: inline-size;      /* o tipo é proporcional ao painel, em cqw */
+    aspect-ratio: 3 / 4; text-decoration: none; color: var(--branco); isolation: isolate;
 }
-@media (min-width: 48rem) { .vitrine__item { aspect-ratio: 3 / 4; } }
+@media (min-width: 48rem) { .vitrine__item { aspect-ratio: 3 / 5; } }
+@media (min-width: 72rem) {
+    .vitrine__item {
+        aspect-ratio: auto;
+        height: min(100svh, 52rem);
+        min-height: 34rem;
+    }
+}
 .vitrine__item img {
     position: absolute; inset: 0; z-index: -2;
     width: 100%; height: 100%; object-fit: cover;
@@ -620,16 +638,34 @@ p:last-child { margin-bottom: 0; }
     content: ""; position: absolute; inset: 0; z-index: -1;
     background: linear-gradient(0deg, rgba(6,18,31,0.88) 0%, rgba(6,18,31,0.28) 62%, rgba(6,18,31,0.12) 100%);
 }
+/* O nome no MEIO do painel, como na referência — não colado no rodapé. */
+/* Na referência o nome está a 42,6% do topo — no meio do painel. Aqui não dá:
+   as fotografias são retratos fechados de lojista, e a 42% o texto cai em cima
+   da boca (medido em 1440px). O rótulo é ancorado pela BASE, a 12% do pé, onde
+   cai sobre o tronco e o balcão. */
 .vitrine__rotulo {
-    position: absolute; inset: auto 0 0; padding: var(--sp-3);
-    display: flex; flex-direction: column; gap: 0.35rem;
+    /* Fora do desktop o painel é curto (3:4) e o rosto ocupa quase tudo: o nome
+       volta para o pé, sobre o assentamento escuro. A 8% do pé ele caía no
+       queixo do lojista (medido em 390px). */
+    position: absolute; inset: auto 0 0; padding: var(--sp-3) var(--sp-2);
+    display: grid; justify-items: center;
+}
+@media (min-width: 72rem) {
+    .vitrine__rotulo { inset: auto var(--sp-2) 8%; padding: 0; }
 }
 .vitrine__nome {
-    font-family: var(--display); font-stretch: 70%; font-weight: 800;
-    font-size: var(--t-md); line-height: 1.02; text-transform: uppercase;
-    color: var(--branco);
+    font-family: var(--display); font-stretch: 62%; font-weight: 800;
+    /* 14cqw é o teto medido: é o tamanho em que o rótulo mais largo desta
+       fileira ("ACESSÓRIOS", "VARIEDADES") ainda cabe na largura do painel.
+       A Stone consegue 25cqw porque a ABCGravity dela é quase duas vezes mais
+       estreita que a Archivo no mínimo do eixo de largura (medido: 794px contra
+       400px para treze letras a 100px). Sem essa fonte, 14cqw é o limite —
+       aumentar daqui faz o nome sangrar. */
+    font-size: min(14cqw, 3rem);
+    line-height: 0.88; text-transform: uppercase; text-align: center;
+    letter-spacing: -0.01em;
+    color: var(--acento);
 }
-@media (min-width: 72rem) { .vitrine__nome { font-size: var(--t-lg); } }
 @media (hover: hover) and (pointer: fine) {
     .vitrine__item:hover img { transform: scale(1.06); }
 }
@@ -1453,39 +1489,51 @@ a.so-leitor:focus {
 .vitrine__item:first-child img  { object-position: 60% 50%; }
 .vitrine__item:last-child  img  { object-position: 40% 50%; }
 
-/* O véu escurece no repouso e clareia no hover: a fotografia ganha a frente
-   quando o ponteiro chega, em vez de ficar sempre atrás do mesmo preto. */
-.vitrine__item::after {
-    background: linear-gradient(0deg,
-        rgba(6,18,31,0.94) 0%,
-        rgba(6,18,31,0.58) 42%,
-        rgba(6,18,31,0.20) 68%,
-        rgba(6,18,31,0.52) 100%);
+/* O véu. Na Stone as cinco fotografias são tingidas do mesmo verde: é isso que
+   faz a fileira ler como uma peça só, e não como cinco fotos diferentes coladas.
+   Aqui o tingimento é o azul da marca, forte o bastante para unificar e fraco o
+   bastante para o rosto do lojista continuar reconhecível — três destes são
+   clientes de verdade, e descaracterizá-los anularia o selo.
+
+   Duas camadas: o tom chapado (multiply) e um assentamento vertical que segura
+   o selo no alto e o pé do painel. No hover o véu recua e a fotografia vem à
+   frente. */
+.vitrine__item::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: var(--noite-3);
+    mix-blend-mode: multiply;
+    opacity: 0.34;
     transition: opacity 0.4s var(--mola);
 }
+.vitrine__item::after {
+    background: linear-gradient(180deg,
+        rgba(6,18,31,0.70) 0%,
+        rgba(6,18,31,0.18) 24%,
+        rgba(6,18,31,0.34) 58%,
+        rgba(6,18,31,0.88) 100%);
+    transition: opacity 0.4s var(--mola);
+}
+/* Os painéis se encostam (gap 0, como na referência). Um fio de um pixel
+   impede que duas fotografias de brilho parecido virem uma mancha só. */
+.vitrine__item + .vitrine__item { box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.1); }
 @media (hover: hover) and (pointer: fine) {
-    .vitrine__item:hover::after { opacity: 0.72; }
+    .vitrine__item:hover::before { opacity: 0.22; }
+    .vitrine__item:hover::after  { opacity: 0.6; }
 }
 
-/* O nome ganha respiro e uma seta que entra no hover — o cartão passa a dizer
-   que leva a uma página. */
-.vitrine__rotulo { padding: var(--sp-4) var(--sp-3); }
-.vitrine__nome {
-    display: flex; align-items: center; gap: 0.4rem;
-    text-shadow: 0 2px 12px rgba(6, 18, 31, 0.6);
-}
+/* O nome sobre a fotografia, com sombra própria para não depender do véu. */
+.vitrine__nome { text-shadow: 0 3px 18px rgba(6, 18, 31, 0.75); }
 
 /* SELO DE CLIENTE REAL
    Três destas fotografias não são de banco de imagem: são lojistas que usam o
    SoftPay. Isso vale mais que a fotografia em si, então o cartão diz de quem é
    — em corpo pequeno, acima do nome do segmento, para não competir com ele. */
 .vitrine__selo {
-    /* No ALTO do cartão, não colado no nome: assim os três selos ficam na
-       mesma linha entre si e o nome do segmento continua alinhado pela base,
-       mesmo quando ele quebra em duas linhas ("Celulares e acessórios"). */
+    /* No ALTO do painel e centrado como o nome: é legenda do painel inteiro.
+       Assim os três selos ficam na mesma linha entre si. */
     position: absolute; inset: 0 var(--sp-3) auto;
-    padding-top: var(--sp-3);
-    display: flex; align-items: center; gap: 0.4rem;
+    padding-top: var(--sp-4);
+    display: flex; align-items: center; justify-content: center; gap: 0.4rem;
     font-size: var(--t-xs); font-weight: 600;
     letter-spacing: 0.06em;
     color: rgba(255, 255, 255, 0.95);
@@ -1497,18 +1545,27 @@ a.so-leitor:focus {
     background: var(--acento);
     box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.25);
 }
-.vitrine__nome::after {
-    content: "→";
-    font-family: var(--fonte); font-weight: 600;
-    opacity: 0; transform: translateX(-6px);
+/* A seta é uma linha à parte, abaixo do nome, que sobe no hover: o painel diz
+   que leva a uma página sem sujar o tipo grande. */
+.vitrine__seta {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    margin-top: var(--sp-3);
+    font-size: var(--t-sm); font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0; transform: translateY(6px);
     transition: opacity 0.3s linear, transform 0.3s var(--mola);
 }
 @media (hover: hover) and (pointer: fine) {
-    .vitrine__item:hover .vitrine__nome::after { opacity: 1; transform: none; }
+    .vitrine__item:hover .vitrine__seta { opacity: 1; transform: none; }
+}
+.vitrine__item:focus-visible .vitrine__seta { opacity: 1; transform: none; }
+/* Sem ponteiro (celular e tablet) não existe hover: a seta fica sempre visível. */
+@media not all and (hover: hover) {
+    .vitrine__seta { opacity: 1; transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-    .vitrine__nome::after { transition: none; }
-    .vitrine__item::after { transition: none; }
+    .vitrine__seta { transition: none; }
+    .vitrine__item::before, .vitrine__item::after { transition: none; }
 }
 
 /* ---------------------------------------- A LINHA DE "TAMBÉM ATENDE"
@@ -1526,7 +1583,10 @@ a.so-leitor:focus {
     display: flex; flex-wrap: wrap;
     justify-content: center; align-items: baseline;
     column-gap: 0; row-gap: 0.35rem;
-    margin: 0;
+    /* Oito nomes não cabem numa linha de 1184px: sem teto, sete iam para a
+       primeira e um ficava órfão na segunda. Com 54rem a quebra sai 4 e 4. */
+    max-width: 48rem; margin-inline: auto;
+    margin-block: 0;
     font-size: var(--t-md);
     line-height: 1.6;
     text-align: center;
