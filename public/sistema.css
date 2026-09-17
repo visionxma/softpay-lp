@@ -641,7 +641,9 @@ p:last-child { margin-bottom: 0; }
         container-type: normal;
         transition: flex-grow 0.55s var(--mola);
     }
-    .vitrine:not(:hover) > .vitrine__item:first-child,
+    /* Nenhum painel vem aberto: a fileira começa igual e só abre o que estiver
+       sob o ponteiro. (A referência abre o primeiro de saída; o Victor não
+       quis — 17/09/2026.) */
     .vitrine__item:hover,
     .vitrine__item:focus-visible { flex-grow: 1.8; }
 }
@@ -1619,12 +1621,10 @@ a.so-leitor:focus {
     /* O painel aberto tem 365px úteis contra 196px: o nome dele cresce junto.
        A 34px o rótulo mais longo desta fileira ("Celulares e acessórios") mede
        341px — ainda dentro dos 365. */
-    .vitrine:not(:hover) > .vitrine__item:first-child .vitrine__nome,
     .vitrine__item:hover .vitrine__nome,
     .vitrine__item:focus-visible .vitrine__nome { font-size: 2.125rem; }
 
     .vitrine__seta { opacity: 0; transform: translateY(10px); margin-top: 0; }
-    .vitrine:not(:hover) > .vitrine__item:first-child .vitrine__seta,
     .vitrine__item:hover .vitrine__seta,
     .vitrine__item:focus-visible .vitrine__seta { opacity: 1; transform: none; }
     .vitrine__item:hover .vitrine__seta { background: rgba(255, 255, 255, 0.22); }
@@ -2243,3 +2243,115 @@ a.so-leitor:focus {
 }
 @media (hover: hover) and (pointer: fine) { .whatsapp-float:hover { transform: scale(1.06); } }
 @media (prefers-reduced-motion: reduce) { .whatsapp-float { transition: none; } }
+
+
+/* ==========================================================================
+   26. AS GARANTIAS (ao lado dos depoimentos)
+   --------------------------------------------------------------------------
+   Eram quatro caixas soltas feitas com `.numero` — um componente que existe
+   para NÚMERO ("+100", "8") e estava sendo usado com palavra. O resultado era
+   um título gigante em cima de uma linha miúda, sem ícone e sem hierarquia,
+   num bloco que não se parecia com nada mais da página.
+
+   Agora é um bloco só, e ele empresta o que a página já usa em outros lugares:
+   o disco de vapor azul com ícone de traço das pílulas da esteira, o fio fino
+   entre itens da antiga linha de segmentos, e o rótulo em caixa alta das
+   cabeças de seção. É isso que o faz parecer parte da LP, e não um encarte.
+   ========================================================================== */
+.garantias {
+    display: grid; align-content: start; gap: var(--sp-4);
+    padding: var(--sp-5);
+    background: var(--branco);
+    border: 1px solid var(--linha);
+    border-radius: var(--r-lg);
+    box-shadow: var(--sombra-1);
+}
+@media (min-width: 48rem) { .garantias { padding: var(--sp-6); } }
+
+.garantias__lista { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+
+.garantia {
+    display: grid; grid-template-columns: auto 1fr; gap: var(--sp-4);
+    align-items: start;
+    padding: var(--sp-5) 0;
+}
+.garantia + .garantia { border-top: 1px solid var(--linha); }
+.garantia:first-child { padding-top: 0; }
+.garantia:last-child { padding-bottom: 0; }
+
+/* A CENA
+   Não é ícone de catálogo: cada uma desenha o que a frase diz, e tem uma parte
+   que se move — os pontinhos de quem está digitando, o dado subindo para a
+   nuvem, a página que carrega, o preço que zera. É SVG, então carrega junto com
+   o HTML, é nítida em qualquer tela e muda de cor com a marca.
+   Tudo o que se move está dentro de `prefers-reduced-motion: no-preference`;
+   com movimento reduzido a cena fica parada e continua legível. */
+.cena {
+    display: grid; place-items: center;
+    width: 3.25rem; height: 3.25rem; flex: 0 0 auto;
+    border-radius: var(--r-md);
+    background: linear-gradient(160deg, var(--acento-vapor), #F7FBFE);
+    border: 1px solid var(--linha);
+    color: var(--azul);
+}
+.cena svg { width: 2.25rem; height: 2.25rem; display: block; }
+
+@media (prefers-reduced-motion: no-preference) {
+    /* 1. quem responde é gente: os três pontos de "digitando" */
+    .cena__ponto { animation: cena-digita 1.5s ease-in-out infinite; }
+    .cena__ponto--2 { animation-delay: 0.18s; }
+    .cena__ponto--3 { animation-delay: 0.36s; }
+
+    /* 2. a loja não fica no computador: o dado sobe para a nuvem */
+    .cena__sobe { animation: cena-sobe 2.4s ease-in-out infinite; }
+    .cena__sobe--2 { animation-delay: 0.35s; }
+    .cena__sobe--3 { animation-delay: 0.7s; }
+
+    /* 3. abre e usa: a barra da página preenchendo */
+    .cena__carrega {
+        stroke-dasharray: 22; stroke-dashoffset: 22;
+        animation: cena-carrega 2.6s ease-in-out infinite;
+    }
+
+    /* 4. começar não custa nada: o preço que assenta em zero */
+    .cena__zero { animation: cena-zero 3.2s ease-in-out infinite; }
+}
+@keyframes cena-digita {
+    0%, 60%, 100% { opacity: 0.35; transform: translateY(0); }
+    30%           { opacity: 1;    transform: translateY(-2px); }
+}
+@keyframes cena-sobe {
+    0%        { opacity: 0;   transform: translateY(4px); }
+    25%, 55%  { opacity: 0.9; transform: translateY(0); }
+    80%, 100% { opacity: 0;   transform: translateY(-4px); }
+}
+@keyframes cena-carrega {
+    0%        { stroke-dashoffset: 22; }
+    55%, 80%  { stroke-dashoffset: 0; }
+    100%      { stroke-dashoffset: 0; }
+}
+@keyframes cena-zero {
+    0%, 70%, 100% { opacity: 1; transform: none; }
+    80%           { opacity: 1; transform: scale(1.1); }
+}
+.garantia__texto {
+    display: block;
+    font-size: var(--t-sm); line-height: 1.5; color: var(--tinta-2);
+}
+.garantia__texto b {
+    display: block; margin-bottom: 0.15rem;
+    font-size: var(--t-md); font-weight: 700; color: var(--tinta);
+}
+
+/* A ressalva fecha o bloco. Ela é a frase mais honesta da página — o SoftPay
+   não substitui a maquininha — e por isso ganha destaque próprio em vez de
+   virar rodapé em cinza claro. */
+.garantias__nota {
+    margin: 0;
+    padding: var(--sp-4);
+    border-radius: var(--r-md);
+    border-left: 3px solid var(--acento);
+    background: var(--sup-alt);
+    font-size: var(--t-sm); line-height: 1.55; color: var(--tinta-2);
+}
+.garantias__nota b { color: var(--tinta); }
