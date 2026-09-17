@@ -1404,3 +1404,87 @@ a.so-leitor:focus {
     margin-top: var(--sp-6);
 }
 .faq__mais-perguntas .btn { min-width: 16rem; }
+
+
+/* ==========================================================================
+   22. VITRINE DE SEGMENTOS — refinamento
+   --------------------------------------------------------------------------
+   O que estava errado, medido:
+   · as pílulas eram branco sólido (#FFF) sobre o azul-noite #06121F: gritavam
+     mais que as fotografias, que são o assunto da seção, e pareciam vindas de
+     outro sistema;
+   · o nome ficava chapado sobre a foto, sem sinal de que o cartão leva a algum
+     lugar;
+   · o gradiente era o mesmo parado no repouso e no hover — o cartão não
+     respondia ao ponteiro;
+   · a primeira e a última fotografia, cortadas pela sangria, mostravam a
+     pessoa pela metade.
+   ========================================================================== */
+
+/* As pontas puxam o enquadramento para dentro, já que a sangria corta um lado */
+.vitrine__item:first-child img  { object-position: 66% 50%; }
+.vitrine__item:last-child  img  { object-position: 34% 50%; }
+
+/* O véu escurece no repouso e clareia no hover: a fotografia ganha a frente
+   quando o ponteiro chega, em vez de ficar sempre atrás do mesmo preto. */
+.vitrine__item::after {
+    background: linear-gradient(0deg,
+        rgba(6,18,31,0.94) 0%,
+        rgba(6,18,31,0.58) 42%,
+        rgba(6,18,31,0.22) 72%,
+        rgba(6,18,31,0.34) 100%);
+    transition: opacity 0.4s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) {
+    .vitrine__item:hover::after { opacity: 0.72; }
+}
+
+/* O nome ganha respiro e uma seta que entra no hover — o cartão passa a dizer
+   que leva a uma página. */
+.vitrine__nome {
+    display: flex; align-items: center; gap: 0.4rem;
+    padding: var(--sp-4) var(--sp-3);
+    text-shadow: 0 2px 12px rgba(6, 18, 31, 0.6);
+}
+.vitrine__nome::after {
+    content: "→";
+    font-family: var(--fonte); font-weight: 600;
+    opacity: 0; transform: translateX(-6px);
+    transition: opacity 0.3s linear, transform 0.3s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) {
+    .vitrine__item:hover .vitrine__nome::after { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .vitrine__nome::after { transition: none; }
+    .vitrine__item::after { transition: none; }
+}
+
+/* ---------------------------------------- A LINHA DE "TAMBÉM ATENDE"
+   Em vidro, não em branco sólido: o fundo escuro continua sendo o assunto e as
+   fotografias seguem dominando. */
+.vitrine-mais {
+    display: flex; flex-wrap: wrap; gap: var(--sp-2);
+    justify-content: center; align-items: center;
+}
+.vitrine-mais__rotulo {
+    font-size: var(--t-xs); font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 var(--sp-2) 0 0;
+}
+#para-quem .pilula {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    transition: background-color 0.2s linear, border-color 0.2s linear, transform 0.2s var(--mola);
+}
+@media (hover: hover) and (pointer: fine) {
+    #para-quem .pilula:hover {
+        background: rgba(255, 255, 255, 0.14);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: translateY(-2px);
+    }
+}
