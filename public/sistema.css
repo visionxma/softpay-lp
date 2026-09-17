@@ -1744,31 +1744,25 @@ a.so-leitor:focus {
     .mapa__svg .uf--ativo:hover { fill: var(--acento); }
 }
 
-/* --------------------------------------------------------------- OS PULSOS
-   Um ponto por estado aceso. O halo cresce e some — é o sinal de "tem gente
-   vendendo aqui agora", e some inteiro com "menos movimento". */
-.mapa__pulso {
-    position: absolute; left: var(--x); top: var(--y);
-    width: 0.625rem; height: 0.625rem; margin: -0.3125rem 0 0 -0.3125rem;
-    border-radius: 50%;
-    background: var(--acento);
-    box-shadow: 0 0 0 3px rgba(6, 18, 31, 0.55);
-}
-.mapa__pulso::after {
-    content: ""; position: absolute; inset: -0.25rem;
+/* ---------------------------------------------------------------- O HALO
+   Atrás de cada rosto, um anel que cresce e some: é o sinal de "tem gente
+   vendendo aqui agora". Some inteiro com "menos movimento". */
+.mapa__rostos::before {
+    content: ""; position: absolute; inset: -0.35rem;
     border-radius: 50%; border: 1.5px solid var(--acento);
-    opacity: 0;
+    opacity: 0; pointer-events: none;
 }
 @media (prefers-reduced-motion: no-preference) {
-    .mapa__pulso::after { animation: mapa-pulso 3.2s ease-out infinite; }
-    .mapa__pulso:nth-of-type(2n)::after { animation-delay: 0.7s; }
-    .mapa__pulso:nth-of-type(3n)::after { animation-delay: 1.4s; }
-    .mapa__pulso:nth-of-type(5n)::after { animation-delay: 2.1s; }
+    .mapa__rostos::before { animation: mapa-pulso 3.4s ease-out infinite; }
+    .mapa__pino:nth-of-type(2n) .mapa__rostos::before { animation-delay: 0.6s; }
+    .mapa__pino:nth-of-type(3n) .mapa__rostos::before { animation-delay: 1.3s; }
+    .mapa__pino:nth-of-type(5n) .mapa__rostos::before { animation-delay: 2.0s; }
+    .mapa__pino:nth-of-type(7n) .mapa__rostos::before { animation-delay: 2.6s; }
 }
 @keyframes mapa-pulso {
-    0%   { transform: scale(0.6); opacity: 0.9; }
-    70%  { transform: scale(2.6); opacity: 0; }
-    100% { transform: scale(2.6); opacity: 0; }
+    0%   { transform: scale(0.85); opacity: 0.85; }
+    70%  { transform: scale(1.9);  opacity: 0; }
+    100% { transform: scale(1.9);  opacity: 0; }
 }
 
 /* ----------------------------------------------------------------- O PINO
@@ -1777,20 +1771,34 @@ a.so-leitor:focus {
 .mapa__pino {
     position: absolute; left: var(--x); top: var(--y);
     transform: translate(-50%, -50%);
+    /* é um botão: no toque o balão abre ao tocar, e não fica aberto de saída —
+       com oito pinos, oito balões abertos ao mesmo tempo viram uma mancha e
+       ainda estouram a página (medido: 26px a 360px). */
+    padding: 0; border: 0; background: none; cursor: pointer;
+    line-height: 0;
 }
-.mapa__rostos { display: flex; }
+.mapa__pino:focus-visible { outline: 2px solid var(--acento); outline-offset: 4px; border-radius: 50%; }
+/* o pino sob o ponteiro vem para a frente dos vizinhos */
+@media (hover: hover) and (pointer: fine) {
+    .mapa__pino:hover, .mapa__pino:focus-within { z-index: 3; }
+}
+.mapa__rostos { position: relative; display: flex; }
 .mapa__rostos img {
-    width: 2.25rem; height: 2.25rem; border-radius: 50%;
+    width: 1.875rem; height: 1.875rem; border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--branco);
     box-shadow: 0 8px 20px -6px rgba(6, 18, 31, 0.9);
     background: var(--noite-2);
 }
-.mapa__rostos img + img { margin-left: -0.8rem; }
+.mapa__rostos img + img { margin-left: -0.7rem; }
+/* O Maranhão tem três lojistas com depoimento: o pino dele é maior, e é o
+   único que traz nome de gente. */
+.mapa__pino--tres .mapa__rostos img { width: 2rem; height: 2rem; }
 @media (min-width: 62rem) {
+    .mapa__rostos img { width: 2.375rem; height: 2.375rem; }
     /* 2,5rem e não 3,25: com três avatares sobrepostos, o pino tem de caber
        DENTRO do Maranhão — a 3,25rem ele transbordava para o Piauí. */
-    .mapa__rostos img { width: 2.5rem; height: 2.5rem; }
+    .mapa__pino--tres .mapa__rostos img { width: 2.5rem; height: 2.5rem; }
     .mapa__rostos img + img { margin-left: -0.9rem; }
 }
 
@@ -1816,26 +1824,30 @@ a.so-leitor:focus {
    mapa. Daí o teto de 50vw: em 320px (o caso mais apertado) dá 160px contra
    178px de folga. Medido: 0 de estouro de 320 a 1440. */
 
-/* No toque o balão fica sempre visível, e aí ele tem de cair para BAIXO do
-   pino: o Maranhão está a 28,6% da altura do mapa e um balão de 96px acima
-   dele saía por cima da peça (medido em 390px). */
-@media not all and (hover: hover) {
-    .mapa__balao { top: calc(100% + 0.6rem); bottom: auto; }
-    .mapa__balao::after {
-        top: auto; bottom: 100%;
-        transform: rotate(45deg) translateY(0.3125rem);
-    }
+/* Nos pinos do topo do mapa (acima de 40% da altura) o balão cai para BAIXO:
+   acima deles não há espaço dentro da peça. */
+.mapa__pino--baixo .mapa__balao { top: calc(100% + 0.6rem); bottom: auto; }
+.mapa__pino--baixo .mapa__balao::after {
+    top: auto; bottom: 100%;
+    transform: rotate(45deg) translateY(0.3125rem);
 }
-/* No desktop o balão só aparece quando o ponteiro chega; no toque ele fica. */
-@media (hover: hover) and (pointer: fine) {
-    .mapa__balao {
-        opacity: 0; transform: translateX(-50%) translateY(6px);
-        transition: opacity 0.28s linear, transform 0.28s var(--mola);
-        pointer-events: none;
-    }
-    .mapa__pino:hover .mapa__balao,
-    .mapa__pino:focus-within .mapa__balao { opacity: 1; transform: translateX(-50%); }
+/* O balão fica fechado até o ponteiro chegar ou o dedo tocar. */
+.mapa__balao {
+    opacity: 0; pointer-events: none;
+    transform: translateX(-50%) translateY(6px);
+    transition: opacity 0.28s linear, transform 0.28s var(--mola);
 }
+.mapa__pino:hover .mapa__balao,
+.mapa__pino:focus .mapa__balao,
+.mapa__pino:focus-within .mapa__balao { opacity: 1; transform: translateX(-50%); }
+
+/* Pino na metade direita do mapa: o balão cresce para a esquerda, senão sai
+   pela borda da página (Pernambuco está a 85,4% da largura). */
+.mapa__pino--dir .mapa__balao { left: auto; right: 0; transform: translateY(6px); }
+.mapa__pino--dir:hover .mapa__balao,
+.mapa__pino--dir:focus .mapa__balao,
+.mapa__pino--dir:focus-within .mapa__balao { transform: none; }
+.mapa__pino--dir .mapa__balao::after { left: auto; right: 1rem; margin-left: 0; }
 @media (prefers-reduced-motion: reduce) {
     .mapa__balao { transition: none; }
 }
@@ -1905,3 +1917,12 @@ a.so-leitor:focus {
 }
 .mapa__ufs button.e-realce { color: var(--branco); }
 .mapa__ufs button.e-realce::before { background: var(--acento); transform: scale(1.35); }
+
+/* Nota de integridade: sete dos oito retratos são pessoas geradas, e a página
+   diz isso. O que o mapa afirma — que ali existe loja usando — é verdade nos
+   oito. Sem esta linha, o rosto passaria por cliente identificado. */
+.mapa__nota {
+    max-width: 44rem; margin: var(--sp-4) auto 0;
+    font-size: var(--t-xs); line-height: 1.5; text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
