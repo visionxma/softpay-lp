@@ -1431,11 +1431,10 @@ a.so-leitor:focus {
 @media (min-width: 100rem) {
     .hero__tela { width: calc(100% + var(--gutter) + 7vw); margin-right: calc((var(--gutter) + 7vw) * -1); }
 }
-/* Flutua devagar: a peça é o assunto do hero e um movimento mínimo diz que ela
-   está viva, sem tirar a atenção do título. */
-@media (prefers-reduced-motion: no-preference) and (min-width: 62rem) {
-    .hero__tela img { animation: flutuar 9s ease-in-out infinite; }
-}
+/* (Esta regra flutuava a IMAGEM do hero, quando a peça inteira era uma imagem
+   só. Com os aparelhos desenhados, ela passou a pegar as quatro capturas de
+   DENTRO das molduras: a tela pulava dentro do aparelho parado. Quem flutua
+   agora é o aparelho inteiro — bloco 27. Removida em 17/09/2026.) */
 
 
 /* ------------------------------------------- O DESKTOP
