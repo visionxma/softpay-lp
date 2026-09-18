@@ -2439,12 +2439,18 @@ a.so-leitor:focus {
         0 2.6cqw 5cqw -1.8cqw rgba(0, 0, 0, 0.72);
     aspect-ratio: 3 / 4;
 }
-/* A captura é larga e a tela é retrato: ela entra por `cover`, ancorada no
-   lado que interessa, em vez de esticada. No tablet é a esquerda (menu e
-   conteúdo do catálogo); no celular é a direita (a coluna do carrinho). */
-.ap--tablet .ap__tela img {
-    width: 100%; height: 100%; object-fit: cover; object-position: 18% 0;
-}
+/* Tablet e celular recebem RECORTES DEDICADOS, na proporção exata da tela de
+   cada um (3:4 e 9:19,5), gerados a partir das capturas do sistema. Antes eles
+   usavam a captura de desktop inteira com `object-fit: cover`, que mostrava um
+   pedaço arbitrário e ilegível — o Victor apontou.
+
+   No tablet é o painel financeiro: 138 vendas, R$ 19.393,90 de faturamento e a
+   pizza por forma de pagamento — números grandes, que se leem no tamanho em que
+   o aparelho aparece. No celular é a coluna do carrinho, que já nasce vertical.
+
+   (Não é o catálogo: aquela captura traz "Sua loja ainda não está no ar", e
+   essa não é a frase para estar num hero.) */
+.ap--tablet .ap__tela img { width: 100%; height: 100%; object-fit: cover; }
 
 /* --------------------------------------------------------------- CELULAR */
 .ap--fone { right: 0; bottom: 1%; width: 8.4%; }
@@ -2456,13 +2462,13 @@ a.so-leitor:focus {
         0 2.2cqw 4.4cqw -1.6cqw rgba(0, 0, 0, 0.75);
     aspect-ratio: 9 / 19.5;
 }
-.ap--fone .ap__tela img {
-    width: 100%; height: 100%; object-fit: cover; object-position: 88% 0;
-}
+.ap--fone .ap__tela img { width: 100%; height: 100%; object-fit: cover; }
+/* A ilha do celular: estreita e curta, para não comer o cabeçalho da tela —
+   a 38% de largura ela cobria a palavra "Carrinho". */
 .ap--fone .ap__notch {
-    position: absolute; z-index: 2; left: 50%; top: 0.42cqw;
-    width: 38%; height: 0.75cqw; transform: translateX(-50%);
-    background: #14161A; border-radius: 0 0 0.5cqw 0.5cqw;
+    position: absolute; z-index: 2; left: 50%; top: 0.9cqw;
+    width: 20%; height: 0.5cqw; transform: translateX(-50%);
+    background: #14161A; border-radius: 0.5cqw;
 }
 
 /* Flutua devagar, em tempos diferentes: a peça fica viva sem chamar mais
