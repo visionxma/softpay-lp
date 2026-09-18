@@ -2634,36 +2634,104 @@ a.so-leitor:focus {
     .hero {
         min-height: 100svh;
         align-items: stretch;
-        padding-block: calc(var(--nav-h) + 1.25rem) 0;
+        /* o rodapé da hero deixa de ser zero: a seção seguinte sobe 1,5rem
+           sobre ela (a pilha de cartões), e sem essa folga os dois chips da
+           base do aparelho ficavam cortados pela borda arredondada de cima */
+        padding-block: calc(var(--nav-h) + 1.25rem) var(--sp-5);
     }
-    .hero__grade {
-        align-content: space-between;
-        gap: var(--sp-4);
-        height: 100%;
-    }
-    .hero__selo { margin-bottom: var(--sp-3); min-height: 2rem; font-size: 0.8125rem; }
-    .hero .display--hero { font-size: clamp(2.375rem, 1.5rem + 3.9vw, 3rem); margin-bottom: var(--sp-3); }
-    .hero__sub {
-        font-size: 1.0625rem; line-height: 1.5;
-        max-width: 38ch; margin-bottom: var(--sp-4);
-    }
-    .hero .btn--grande { min-height: 3rem; padding-inline: 1.125rem; font-size: 0.9375rem; }
-    .hero__nota { margin-top: var(--sp-3); font-size: 0.8125rem; }
-    .hero__prova {
-        margin-top: var(--sp-4); padding-top: var(--sp-4);
-        gap: var(--sp-2);
-    }
-    .hero__prova-fotos img { width: 1.75rem; height: 1.75rem; }
-    .hero__prova-fotos img + img { margin-left: -0.5rem; }
-    .hero__prova p { font-size: 0.8125rem; line-height: 1.4; }
+    .hero__grade { align-content: start; gap: var(--sp-5); height: 100%; }
 
-    /* o aparelho encosta na base e é cortado por ela: continuidade, não corte
-       acidental — o .hero já tem overflow: hidden */
+    /* A tipografia NÃO encolhe. A versão anterior apertava display, subtítulo e
+       botões para forçar tudo dentro de uma tela — e o Victor cortou na hora
+       (18/09): "no celular não é para espremer a hero, hero é para ficar foda".
+       O display fica em 44→56px, o subtítulo no tamanho de subtítulo, os botões
+       grandes. A tela cheia continua valendo pelo `min-height`: o que muda é
+       que o aparelho passa a ficar PARCIALMENTE abaixo da dobra, deitado — e é
+       justamente esse pedaço que faz rolar. */
+    .hero__selo { margin-bottom: var(--sp-4); }
+    .hero .display--hero { font-size: clamp(2.75rem, 1.55rem + 5.3vw, 3.5rem); margin-bottom: var(--sp-4); }
+    .hero__sub { max-width: 32ch; margin-bottom: var(--sp-5); }
+    .hero__prova { margin-top: var(--sp-5); padding-top: var(--sp-5); }
+    .hero__prova-fotos img { width: 2rem; height: 2rem; }
+
+    /* O APARELHO QUE LEVANTA
+       O comportamento é o da hero do AlyMaps, que o Victor guardou como
+       referência: a peça entra DEITADA, inclinada para trás, e vai ficando de
+       pé conforme a pessoa rola. Quem conduz é a rolagem (view timeline), não
+       um temporizador — então a peça nunca se mexe sozinha, e onde o navegador
+       não suporta ela já nasce de pé, sem nada quebrado.
+
+       `transform-origin: 50% 100%` é o que faz a peça girar apoiada na base,
+       como uma tampa de notebook abrindo; girando pelo centro ela afundaria no
+       texto. */
     .hero__tela {
+        position: relative;
         align-self: end;
-        margin-bottom: -2rem;
         max-width: 26rem;
+        perspective: 1400px;
     }
+    .hero__tela .aparelhos { transform-origin: 50% 100%; }
+}
+@media (max-width: 61.99rem) and (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        .hero__tela .aparelhos {
+            animation: aparelho-levanta linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 42%;
+        }
+        @keyframes aparelho-levanta {
+            from { transform: rotateX(26deg) scale(0.94); }
+            to   { transform: rotateX(0deg) scale(1); }
+        }
+        /* a sombra cresce junto: peça deitada projeta perto, peça de pé projeta
+           longe — sem isso o movimento parece um decalque girando */
+        .ap--monitor .ap__tela {
+            animation: sombra-levanta linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 42%;
+        }
+        @keyframes sombra-levanta {
+            from { box-shadow: 0 10px 20px -14px rgba(0, 0, 0, 0.8); }
+            to   { box-shadow: 0 40px 70px -24px rgba(0, 0, 0, 0.85); }
+        }
+    }
+    /* o flutuar do bloco 27 é para o desktop, onde são quatro aparelhos soltos.
+       Aqui a peça é uma só e quem manda nela é a rolagem. */
+    .hero__tela .ap--monitor { animation: none; }
+}
+
+/* Os dois dados que boiam ao lado da peça: mesma ideia dos chips da hero do
+   AlyMaps, mas com número que a captura mostra de verdade — R$ 414,60 é o
+   total do carrinho que está na tela, e os 4 itens são os mesmos. Chip que
+   anuncia o que a imagem não mostra é enfeite; este confirma. */
+.hero__chip {
+    display: none;
+    position: absolute; z-index: 3;
+    padding: 0.5rem 0.75rem;
+    background: rgba(11, 32, 51, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: var(--r-sm);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.9);
+    line-height: 1.25; text-align: left;
+}
+.hero__chip b { display: block; font-size: 0.875rem; color: var(--branco); }
+.hero__chip span { font-size: 0.6875rem; color: rgba(255, 255, 255, 0.72); }
+@media (max-width: 61.99rem) {
+    /* Na base, um em cada metade — é a posição que a referência usa no celular.
+       Espalhados pelas laterais eles caíam em cima do carrinho e tapavam
+       justamente o que a captura tem de melhor. */
+    .hero__chip {
+        display: grid; justify-items: center; text-align: center;
+        bottom: 5%; width: calc(50% - 0.35rem);
+    }
+    .hero__chip--a { left: 0; }
+    .hero__chip--b { right: 0; }
+}
+@media (max-width: 61.99rem) and (prefers-reduced-motion: no-preference) {
+    .hero__chip--a { animation: boia 6s ease-in-out infinite; }
+    .hero__chip--b { animation: boia 7s ease-in-out -2.5s infinite; }
+    @keyframes boia { 50% { transform: translateY(-7px); } }
 }
 
 
