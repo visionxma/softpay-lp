@@ -216,14 +216,20 @@
         var pedido = false;
         function escolher() {
             var meio = window.innerHeight / 2;
-            var melhor = -1, menorDist = Infinity;
+            var contido = -1, melhor = -1, menorDist = Infinity;
             for (var k = 0; k < painels.length; k++) {
                 var r = painels[k].getBoundingClientRect();
-                if (r.top <= meio && r.bottom >= meio) { melhor = k; break; }
+                /* O ÚLTIMO que contém o meio, não o primeiro. No desktop os
+                   painéis estão em fila e só um contém — tanto faz. No celular
+                   eles viraram uma pilha: vários ficam grudados no topo ao
+                   mesmo tempo e todos contêm o meio da tela. O que a pessoa vê
+                   é o de cima, que é o de maior índice. Com `break` no
+                   primeiro, a aba acesa era sempre "PDV e caixa". */
+                if (r.top <= meio && r.bottom >= meio) { contido = k; continue; }
                 var dist = r.top > meio ? r.top - meio : meio - r.bottom;
                 if (dist < menorDist) { menorDist = dist; melhor = k; }
             }
-            acender(melhor);
+            acender(contido >= 0 ? contido : melhor);
         }
         function aoRolar() {
             if (pedido) return;

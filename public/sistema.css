@@ -2518,3 +2518,320 @@ a.so-leitor:focus {
     width: 100%; height: auto;
     border-radius: 0;
 }
+
+
+/* ==========================================================================
+   28. A CAMADA DO CELULAR
+   --------------------------------------------------------------------------
+   Pedido do Victor (18/09/2026): "a mesma experiência que tem no desktop,
+   transformada para todos os outros dispositivos, e perfeita para cada um.
+   Com efeitos perfeitos para cada um. Com legibilidade. Com menos rolagem.
+   Que a pessoa não canse. A hero preenchendo a tela logo de começo, e cada
+   uma das outras com efeito de card empilhado."
+
+   O que estava errado, medido antes de mexer (390px):
+     · página com 13.858px — 17,3 telas, contra 13,0 no desktop
+     · rodapé com 874px (o desktop tem 419): 27 links a 44px de altura cada,
+       uma escada de duas colunas que ocupa mais de uma tela inteira
+     · hero com 1.165px: 1,4 tela, então ela NUNCA aparece inteira — o
+       aparelho fica cortado e o visitante começa a página no meio dela
+     · #sistema com 3.853px: seis painéis em fila, 4,6 telas de rolagem por
+       uma ideia só
+
+   Esta camada não é um "mobile menor": é a composição do celular. Tudo aqui
+   está dentro de media query — regra de composição fora de media query é o
+   defeito mais caro que já pagamos neste projeto.
+   ========================================================================== */
+
+/* ------------------------------------------------------------------ RODAPÉ
+   O padrão veio do rodapé do FroX, que o Victor aprovou no celular: as quatro
+   colunas ficam LADO A LADO e o link perde os 44px de altura, que aqui só
+   serviam para esticar a coluna. O alvo de toque continua confortável pelo
+   espaçamento entre linhas — cada link tem 22px de caixa e 10px de respiro. */
+@media (max-width: 47.99rem) {
+    .rodape { padding-block: var(--sp-6) var(--sp-4); }
+    .rodape__grade {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        /* o espaço entre linhas é ZERO de propósito: as colunas abaixo usam
+           subgrid e herdariam esse gap entre CADA link, abrindo 24px onde só
+           precisa de ar entre a marca e os títulos */
+        gap: 0 0.625rem;
+    }
+    .rodape__marca { grid-column: 1 / -1; margin-bottom: var(--sp-5); }
+    .rodape__marca img { height: 1.75rem !important; margin-bottom: var(--sp-2) !important; }
+    .rodape__marca p { font-size: 0.75rem; line-height: 1.5; max-width: 44ch; }
+
+    .rodape h3 {
+        font-size: var(--t-xs); letter-spacing: 0.06em;
+        margin-bottom: 0;   /* o alvo de 44px do primeiro link já dá o respiro */
+        line-height: 1.3;
+    }
+    /* O FroX chega a 11,5px com 25px de caixa, e visualmente fica ótimo — mas
+       ali o dedo erra. Aqui o link mantém os 44px de alvo e ganha corpo de
+       12,5px: a economia de altura vem das quatro colunas lado a lado, não de
+       espremer o que a pessoa precisa ler e acertar. Contra o rodapé antigo
+       ainda são 284px a menos. */
+    .rodape ul a {
+        display: flex; align-items: center;
+        min-height: 2.75rem; padding-block: 2px;
+        font-size: 0.78125rem; line-height: 1.25;
+        /* "Privacidade" e "Controlar estoque" quebram dentro da coluna em vez
+           de encostar na vizinha; o hífen deixa a quebra legível. */
+        hyphens: auto;
+    }
+    .rodape__base {
+        margin-top: var(--sp-5); padding-top: var(--sp-4);
+        justify-content: center; text-align: center;
+        gap: var(--sp-2);
+        font-size: var(--t-xs);
+    }
+    /* o e-mail não tem onde quebrar e é mais largo que a coluna em 320px */
+    .rodape__produto { overflow-wrap: anywhere; }
+    .rodape__visionx { min-height: 0; padding-block: 0.375rem; }
+}
+/* As quatro colunas do celular só se alinham de verdade com subgrid: sem ele,
+   "PARA QUEM" quebra em duas linhas e empurra a coluna inteira para baixo,
+   deixando as fileiras em degrau. Com subgrid, o título de cada coluna e cada
+   uma das cinco linhas de link dividem a MESMA fileira nas quatro colunas —
+   é o que faz o rodapé ser lido numa varredura só. */
+@media (min-width: 23.5rem) and (max-width: 47.99rem) {
+    .rodape__grade { grid-template-rows: auto repeat(6, auto); }
+    .rodape__marca { grid-row: 1; }
+    .rodape__grade > div:not(.rodape__marca) {
+        display: grid; grid-row: 2 / span 6; grid-template-rows: subgrid;
+    }
+    .rodape__grade > div:not(.rodape__marca) > ul {
+        display: grid; grid-row: 2 / span 5; grid-template-rows: subgrid;
+    }
+}
+/* Até 375px a coluna cairia para 66px: "SOLUÇÕES" sozinho mede 80px e invadia
+   a coluna vizinha, e "Distribuidora" saía cortada no meio pelo hífen. Duas
+   colunas de 155px resolvem — é uma fileira a mais de altura, e vale.
+   O subgrid acima NÃO entra aqui de propósito: ele prende os quatro grupos na
+   mesma fileira, e com duas colunas isso criava colunas implícitas de 42px. */
+@media (max-width: 23.4375rem) {
+    .rodape__grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--sp-4) 0.625rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------- HERO
+   "A hero com certeza preencher a tela logo de começo."
+
+   A doutrina da casa diz o contrário para o celular — hero com a altura do
+   conteúdo, porque forçar uma tela costuma só alongar a página. Aqui o pedido
+   é explícito e vence, mas com uma condição que eu mesma imponho: se ela vai
+   ocupar a tela, tem de CABER na tela. De nada adianta 100svh com o conteúdo
+   transbordando — seria o defeito de antes com outro nome.
+
+   Por isso o texto encolhe junto: display de 52px para 42px, subtítulo no
+   corpo do texto, botões médios, prova social em uma linha. O aparelho fica
+   colado na base e sangra 2rem para fora: o corte é o que diz "tem mais
+   página aqui embaixo". */
+@media (max-width: 61.99rem) {
+    .hero {
+        min-height: 100svh;
+        align-items: stretch;
+        padding-block: calc(var(--nav-h) + 1.25rem) 0;
+    }
+    .hero__grade {
+        align-content: space-between;
+        gap: var(--sp-4);
+        height: 100%;
+    }
+    .hero__selo { margin-bottom: var(--sp-3); min-height: 2rem; font-size: 0.8125rem; }
+    .hero .display--hero { font-size: clamp(2.375rem, 1.5rem + 3.9vw, 3rem); margin-bottom: var(--sp-3); }
+    .hero__sub {
+        font-size: 1.0625rem; line-height: 1.5;
+        max-width: 38ch; margin-bottom: var(--sp-4);
+    }
+    .hero .btn--grande { min-height: 3rem; padding-inline: 1.125rem; font-size: 0.9375rem; }
+    .hero__nota { margin-top: var(--sp-3); font-size: 0.8125rem; }
+    .hero__prova {
+        margin-top: var(--sp-4); padding-top: var(--sp-4);
+        gap: var(--sp-2);
+    }
+    .hero__prova-fotos img { width: 1.75rem; height: 1.75rem; }
+    .hero__prova-fotos img + img { margin-left: -0.5rem; }
+    .hero__prova p { font-size: 0.8125rem; line-height: 1.4; }
+
+    /* o aparelho encosta na base e é cortado por ela: continuidade, não corte
+       acidental — o .hero já tem overflow: hidden */
+    .hero__tela {
+        align-self: end;
+        margin-bottom: -2rem;
+        max-width: 26rem;
+    }
+}
+
+
+/* ------------------------------------------------- O SISTEMA, EM BARALHO
+   "Cada uma das outras deve ter efeito de card empilhado."
+
+   Os seis painéis eram uma fila: 3.853px, 4,6 telas de rolagem por uma ideia
+   só, e a cada rolada o anterior sumia por cima sem que nada acontecesse.
+   Aqui cada painel gruda no topo e o seguinte SOBE POR CIMA dele — a pilha se
+   monta enquanto a pessoa rola, e o que já passou continua visível como uma
+   borda acumulada no alto, igual a um baralho na mão.
+
+   É sticky puro: sem JS, sem evento de rolagem, funciona em qualquer celular
+   e não custa nada de desempenho. O `top` cresce 6px por painel — é o que
+   deixa a beirada do anterior à mostra em vez de ser encoberta. */
+@media (max-width: 61.99rem) {
+    .abas--rolagem .abas__painels { display: block; }
+
+    .painel {
+        position: sticky;
+        top: calc(var(--nav-h) + 4.25rem);
+        margin-bottom: var(--sp-4);
+        border: 1px solid var(--linha);
+        /* a sombra para CIMA é o que faz o cartão novo parecer estar na frente */
+        box-shadow: 0 -14px 34px -22px rgba(6, 18, 31, 0.55), var(--sombra-2);
+    }
+    .painel:nth-child(2) { top: calc(var(--nav-h) + 4.25rem + 6px); }
+    .painel:nth-child(3) { top: calc(var(--nav-h) + 4.25rem + 12px); }
+    .painel:nth-child(4) { top: calc(var(--nav-h) + 4.25rem + 18px); }
+    .painel:nth-child(5) { top: calc(var(--nav-h) + 4.25rem + 24px); }
+    .painel:nth-child(6) { top: calc(var(--nav-h) + 4.25rem + 30px); }
+    /* o último não tem quem o cubra: fica com respiro normal */
+    .painel:last-child { margin-bottom: 0; }
+
+    /* O cartão precisa caber na tela COM a pilha em cima: se passar disso, a
+       pessoa rola dentro de um cartão que já está grudado e o efeito vira
+       travamento. Daí o aperto — texto menor, figura mais baixa, lista mais
+       junta. */
+    /* Todos com a MESMA altura: sem isso, um cartão mais alto continua
+       aparecendo por baixo do mais curto que subiu na frente, e a pilha vira
+       uma sobra de texto solta no meio da tela. */
+    .painel {
+        padding: var(--sp-4) var(--sp-4) var(--sp-5); gap: var(--sp-3);
+        min-height: 33rem; align-content: start;
+    }
+    .painel .display--cartao { font-size: 1.375rem; line-height: 1.14; }
+    .painel .apoio { font-size: 0.875rem; line-height: 1.5; }
+    .painel__lista { gap: 0.375rem; }
+    .painel__lista li { font-size: 0.8125rem; line-height: 1.35; }
+    .painel__figura img { aspect-ratio: 16 / 9; }
+    .painel .link-seta { font-size: 0.875rem; }
+
+    /* a figura vai para o TOPO do cartão: é ela que identifica o painel
+       quando só a beirada está à mostra */
+    .painel > div { order: 2; }
+    .painel__figura { order: 1; }
+}
+
+/* Movimento: o cartão entra subindo, e quem pede menos movimento recebe só o
+   fade. A pilha em si não é animação — é posição — então continua inteira. */
+@media (max-width: 61.99rem) and (prefers-reduced-motion: no-preference) {
+    .painel { transition: box-shadow 0.3s linear; }
+}
+
+
+/* --------------------------------------------- MENOS ROLAGEM, MAIS LEITURA
+   "Com menos rolagem também. Que seja algo que a pessoa não canse."
+
+   Onde o celular gastava altura sem entregar informação: o display de seção em
+   38px ocupava duas ou três linhas em 390px, e o parágrafo de apoio vinha em
+   22px, tamanho de subtítulo de hero. Aqui a cabeça de seção fica no corpo do
+   texto — continua maior que o corpo, mas para de ser um bloco de 200px antes
+   de qualquer conteúdo. */
+@media (max-width: 61.99rem) {
+    .display--secao { font-size: clamp(1.875rem, 1.2rem + 3vw, 2.25rem); }
+    .cabeca-secao { margin-bottom: var(--sp-5); }
+    .cabeca-secao .grande { font-size: 1rem; line-height: 1.5; }
+}
+
+/* ------------------------------------------------ AS GARANTIAS, LADO A LADO
+   Quatro itens curtos em fila vertical são quatro linhas de 100% de largura —
+   exatamente o que a doutrina proíbe. Em duas colunas eles cabem numa
+   varredura só, com a cena animada em cima do texto em vez de ao lado. */
+@media (max-width: 61.99rem) {
+    .garantias { padding: var(--sp-4); gap: var(--sp-3); }
+    .garantias__lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--sp-4) var(--sp-3);
+    }
+    .garantia {
+        grid-template-columns: 1fr;
+        gap: var(--sp-2);
+        padding: 0;
+        /* sem isto o item mais curto da dupla estica as duas linhas para
+           preencher a altura da fileira, e o texto desce 46px em relação ao
+           vizinho — os ícones alinhados e os títulos não */
+        align-content: start;
+    }
+    .garantia + .garantia { border-top: 0; }
+    .cena { width: 2.5rem; height: 2.5rem; border-radius: var(--r-sm); }
+    .cena svg { width: 1.625rem; height: 1.625rem; }
+    .garantia__texto b, .garantia__texto strong { font-size: 0.9375rem; }
+    .garantia__texto { font-size: 0.8125rem; line-height: 1.45; }
+}
+
+
+/* ------------------------------------------------ EFEITOS QUE SÃO ENTREGA
+   No celular não dá para contar com hover: o que existe é o toque e a rolagem.
+   Então é neles que o movimento mora.
+
+   1. O fio de progresso. Diz quanto falta, e faz a página parecer curta porque
+      a pessoa vê o fim se aproximar. É CSS puro com scroll timeline — nenhum
+      ouvinte de rolagem, nenhum quadro gasto em JS. Onde o navegador não
+      suporta, simplesmente não existe, e nada mais muda.
+   2. O toque. Todo cartão e todo botão afunda 1,5% quando o dedo encosta: é o
+      retorno que o celular dá no lugar do hover.
+   3. A vitrine. O nome do segmento fica sobre fotografia real, e em algumas
+      delas a prateleira é clara — o assentamento do pé ganha peso para o azul
+      não se perder no fundo. */
+@media (max-width: 61.99rem) {
+    @supports (animation-timeline: scroll()) {
+        @media (prefers-reduced-motion: no-preference) {
+            body::before {
+                content: "";
+                position: fixed; inset: 0 0 auto 0; z-index: 200;
+                height: 2px;
+                background: linear-gradient(90deg, var(--acento) 0%, var(--azul) 100%);
+                transform: scaleX(0); transform-origin: 0 50%;
+                animation: fio-de-leitura linear both;
+                animation-timeline: scroll(root);
+            }
+            @keyframes fio-de-leitura {
+                from { transform: scaleX(0); }
+                to   { transform: scaleX(1); }
+            }
+        }
+    }
+
+    .painel:active,
+    .cartao:active,
+    .plano:active,
+    .depo:active { transform: scale(0.985); }
+    .painel, .cartao, .plano, .depo { transition: transform 0.16s var(--mola); }
+
+    .vitrine__item::after {
+        background: linear-gradient(180deg,
+            rgba(6,18,31,0.58) 0%,
+            rgba(6,18,31,0.10) 20%,
+            rgba(6,18,31,0.38) 48%,
+            rgba(6,18,31,0.82) 100%);
+    }
+    .vitrine__item::before { opacity: 0.26; }
+}
+@media (max-width: 61.99rem) and (prefers-reduced-motion: reduce) {
+    .painel, .cartao, .plano, .depo { transition: none; }
+    .painel:active, .cartao:active, .plano:active, .depo:active { transform: none; }
+}
+
+/* A peça do PDV é um monitor em perspectiva, sem proporção fixa: no celular ela
+   sozinha passava de 297px e deixava o primeiro cartão da pilha 80px mais alto
+   que os outros cinco — pilha desalinhada é pilha torta. */
+@media (max-width: 61.99rem) {
+    .painel__figura--tela img { max-height: 11rem; width: auto; margin-inline: auto; }
+}
+
+/* Tablet: a mesma hero, com o aparelho maior. Em 768px de largura o monitor de
+   26rem deixava um vão de 200px entre a prova social e ele — espaço que no
+   celular não existe e aqui sobrava. */
+@media (min-width: 37.5rem) and (max-width: 61.99rem) {
+    .hero__tela { max-width: 34rem; margin-bottom: -2.5rem; }
+}
