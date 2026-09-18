@@ -2494,48 +2494,27 @@ a.so-leitor:focus {
     .ap--monitor .ap__tela { border-width: 3px; border-bottom-width: 3px; border-radius: 0.75rem; }
 }
 
-/* ------------------------------------------- A TELA DENTRO DO PAINEL
+/* ------------------------------------------- A PEÇA DENTRO DO PAINEL
    O painel do PDV mostrava um mockup com o navegador inteiro à vista, a barra
    de tarefas do Windows embaixo e o carrinho VAZIO — três coisas que não
-   deviam aparecer numa página de venda. Aqui ele usa a mesma moldura desenhada
-   do hero, com a captura real dentro. */
+   deviam aparecer numa página de venda.
+
+   Agora usa a mesma pegada do celular do painel do WhatsApp, que o Victor
+   aprovou: peça em perspectiva, fundo transparente, sombra própria, com a
+   captura REAL do sistema dentro. O monitor está virado para a esquerda — ele
+   fica à direita do texto, então a tela olha para quem lê, nunca para fora da
+   página (regra permanente do Victor sobre perspectiva). */
 .painel__figura--tela {
-    background: linear-gradient(160deg, var(--acento-vapor) 0%, var(--nevoa) 100%);
-    border: 1px solid var(--linha);
-    padding: var(--sp-5) var(--sp-5) var(--sp-4);
+    background: none;
+    border: 0;
+    box-shadow: none;
+    overflow: visible;
     display: grid; place-items: center;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: auto;
 }
-@media (min-width: 60rem) { .painel__figura--tela { aspect-ratio: 5 / 4; } }
-/* No celular a figura é baixa e o pé não cabe: sai, e a tela ganha o espaço. */
-@media (max-width: 59.99rem) {
-    .ap--painel { width: 100%; }
-    .ap--painel .ap__pescoco, .ap--painel .ap__base { display: none; }
-}
-/* A regra geral do painel recorta a figura em 5:4 com `cover`. Aqui não pode:
-   a tela do sistema tem de aparecer INTEIRA, senão some o menu de um lado e o
-   carrinho do outro. */
 .painel__figura--tela img {
     aspect-ratio: auto !important;
     object-fit: contain !important;
     width: 100%; height: auto;
-}
-.ap--painel { position: static; width: 92%; container-type: inline-size; }
-.ap--painel .ap__tela {
-    border: 0.8cqw solid #1A1D22;
-    border-bottom-width: 1.6cqw;
-    border-radius: 1cqw;
-    box-shadow:
-        0 0 0 0.14cqw rgba(255, 255, 255, 0.5),
-        0 3cqw 6cqw -2cqw rgba(6, 18, 31, 0.4);
-}
-.ap--painel .ap__pescoco {
-    display: block; width: 8%; height: 5cqw; margin: 0 auto;
-    background: linear-gradient(90deg, #6E747C 0%, #C9CFD6 38%, #9AA1A9 62%, #5F656D 100%);
-}
-.ap--painel .ap__base {
-    display: block; width: 28%; height: 1cqw; margin: 0 auto;
-    border-radius: 0 0 0.6cqw 0.6cqw;
-    background: linear-gradient(180deg, #AEB5BD 0%, #71777F 100%);
-    box-shadow: 0 1.2cqw 2.4cqw -0.9cqw rgba(6, 18, 31, 0.45);
+    border-radius: 0;
 }
