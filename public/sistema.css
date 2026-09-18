@@ -3235,3 +3235,47 @@ a.so-leitor:focus {
     /* a barra de controles acompanha a nova peça */
     .controles { margin-top: -1.25rem; }
 }
+
+
+/* ==========================================================================
+   31. A PEÇA VOLTA A SER RENDER — E DESTA VEZ EM RESOLUÇÃO DE VERDADE
+   --------------------------------------------------------------------------
+   "As molduras ainda estão péssimas" (Victor, 18/09/2026). Estavam mesmo: um
+   bezel de 2,4cqw desenhado com `border` é uma tira de cor chapada — não tem
+   chanfro, não tem reflexo de metal, não tem o brilho que corre na quina. De
+   perto, qualquer moldura CSS entrega que é CSS.
+
+   Em 17/09 eu tinha ido para o CSS porque o render anterior tinha borda mole.
+   O erro não era o método: era a resolução. A peça de agora sai em 1774px de
+   largura para ser exibida em 790 (2,2x) e em 1448 para ser exibida em 400
+   (3,6x) — sobra pixel em qualquer densidade.
+
+   As telas são as capturas REAIS do sistema, encaixadas por transformação de
+   perspectiva sobre o chroma de cada aparelho (tools/peca-hero.py). Não passa
+   por warp de distorção: a matriz é medida nos quatro cantos da tela, e num
+   render frontal ela é quase a identidade — a nitidez da captura chega
+   inteira do outro lado.
+
+   Isto substitui os bezels dos blocos 27 e 30. As regras de lá continuam no
+   arquivo porque o markup `.ap` sumiu junto e elas não têm mais alvo.
+   ========================================================================== */
+.aparelhos {
+    display: block;
+    width: 100%;
+    /* a sombra colorida da referência, agora sobre a silhueta recortada em vez
+       de uma caixa retangular — é o que a peça com alpha permite */
+    filter:
+        drop-shadow(0 18px 28px rgba(29, 161, 242, 0.28))
+        drop-shadow(0 30px 50px rgba(0, 0, 0, 0.55));
+}
+.aparelhos img { display: block; width: 100%; height: auto; }
+
+/* no celular a peça é a de dois aparelhos (4:3) e o palco acompanha */
+@media (max-width: 61.99rem) {
+    .aparelhos { aspect-ratio: auto; }
+    .hero__tela { max-width: 24rem; }
+    .controles { margin-top: -1.75rem; }
+}
+@media (min-width: 62rem) {
+    .hero__tela { perspective: 2200px; }
+}

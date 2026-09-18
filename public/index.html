@@ -40,7 +40,7 @@
     <link rel="preload" as="image" href="/assets/sistema/pdv.webp?v=4737e8d2c1" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=c432b72855" />
+    <link rel="stylesheet" href="sistema.css?v=adfad1b5ae" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -174,49 +174,25 @@
                          fica nítida em qualquer tela e em qualquer densidade. E a
                          captura entra como <img> no tamanho nativo, sem deformação —
                          o que o navegador serve é o que o lojista vê no sistema. -->
-                    <div class="aparelhos" aria-label="O SoftPay aberto em quatro aparelhos">
-                        <div class="ap ap--monitor">
-                            <div class="ap__tela">
-                                <picture>
-                                    <!-- abaixo de 62rem o monitor é o único aparelho à vista,
-                                         e a tela inteira do PDV ficaria ilegível: entra o
-                                         recorte da área que convence -->
-                                    <source media="(max-width: 61.99rem)" srcset="/assets/sistema/pdv-celular.webp?v=ee711d3f0c" width="900" height="786" />
-                                    <img src="/assets/sistema/pdv.webp?v=4737e8d2c1" width="1400" height="845"
-                                         fetchpriority="high" decoding="async"
-                                         alt="O PDV do SoftPay num monitor, com o carrinho fechando em R$ 414,60" />
-                                </picture>
-                            </div>
-                            <span class="ap__pescoco" aria-hidden="true"></span>
-                            <span class="ap__base" aria-hidden="true"></span>
-                        </div>
+                    <!-- A PEÇA: RENDER COM AS CAPTURAS REAIS ENCAIXADAS.
+                         As molduras voltaram a ser render (o Victor reprovou as de
+                         CSS em 18/09: "as molduras ainda estão péssimas"). A peça
+                         sai do gerador com cada tela pintada numa cor de chroma
+                         diferente; `tools/peca-hero.py` mede os quatro cantos de
+                         cada chroma e encaixa a captura REAL por transformação de
+                         perspectiva, depois recorta o fundo preto preservando a
+                         sombra de contato. Nenhuma tela é desenho: é o sistema.
 
-                        <div class="ap ap--note">
-                            <div class="ap__tela">
-                                <img src="/assets/sistema/estoque.webp?v=96843ec6cc" width="1400" height="845"
-                                     loading="lazy" decoding="async"
-                                     alt="O controle de estoque do SoftPay num notebook" />
-                            </div>
-                            <span class="ap__teclado" aria-hidden="true"></span>
-                        </div>
-
-                        <div class="ap ap--tablet">
-                            <div class="ap__tela">
-                                <img src="/assets/sistema/tablet-financeiro.webp?v=21027c6649" width="1268" height="1690"
-                                     loading="lazy" decoding="async"
-                                     alt="O painel financeiro do SoftPay num tablet: 138 vendas, R$ 19.393,90 de faturamento e a divisão por forma de pagamento" />
-                            </div>
-                        </div>
-
-                        <div class="ap ap--fone">
-                            <span class="ap__notch" aria-hidden="true"></span>
-                            <div class="ap__tela">
-                                <img src="/assets/sistema/celular-carrinho.webp?v=40e8e11ed7" width="690" height="1498"
-                                     loading="lazy" decoding="async"
-                                     alt="O carrinho de uma venda no celular: quatro itens somando R$ 414,60 e o botão de finalizar" />
-                            </div>
-                        </div>
-                    </div>
+                         Duas composições, porque a largura muda o que cabe:
+                         quatro aparelhos no desktop, monitor + celular no celular
+                         e no tablet. -->
+                    <picture class="aparelhos">
+                        <source media="(min-width: 62rem)" srcset="/assets/hero/aparelhos-4.webp?v=eff8b07dd2" width="1774" height="887" />
+                        <source media="(min-width: 30rem)" srcset="/assets/hero/aparelhos-2.webp?v=9186095a33" width="1448" height="1086" />
+                        <img src="/assets/hero/aparelhos-2-1200.webp?v=08523623b2" width="1200" height="900"
+                             fetchpriority="high" decoding="async"
+                             alt="O SoftPay aberto num monitor e num celular: o PDV com o carrinho fechando em R$ 414,60" />
+                    </picture>
 
                     <!-- A BARRA DE CONTROLES CRUZANDO A PEÇA.
                          É o elemento que segura a hero da referência (AlyMaps): a
