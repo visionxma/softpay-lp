@@ -40,7 +40,7 @@
     <link rel="preload" as="image" href="/assets/sistema/pdv.webp?v=4737e8d2c1" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=433d5eb048" />
+    <link rel="stylesheet" href="sistema.css?v=2ad2a2c67d" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -122,7 +122,7 @@
                 <div class="hero__conteudo">
                     <a class="hero__selo" href="/solucoes/bot-whatsapp/">
                         <b>Novo</b>
-                        <span>Registre a venda falando no WhatsApp</span>
+                        <span data-digita="Registre a venda falando no WhatsApp">Registre a venda falando no WhatsApp</span>
                     </a>
 
                     <h1 class="display display--hero" data-entra>
@@ -162,6 +162,7 @@
                 </div>
 
                 <figure class="hero__tela">
+                    <span class="hero__luz" aria-hidden="true"></span>
                     <!-- A FAMÍLIA DE APARELHOS, EM CSS.
                          A primeira versão era uma imagem: os aparelhos vinham de um
                          render e as telas entravam dentro por transformação de
@@ -217,15 +218,30 @@
                         </div>
                     </div>
 
-                    <!-- Os dois dados que boiam ao lado da peça no celular. O número
-                         é o da própria captura: o carrinho fecha em R$ 414,60 com
-                         quatro itens, e é isso que o chip repete. -->
-                    <span class="hero__chip hero__chip--a" aria-hidden="true">
-                        <b>R$&nbsp;414,60</b><span>venda fechada</span>
-                    </span>
-                    <span class="hero__chip hero__chip--b" aria-hidden="true">
-                        <b>−4 itens</b><span>o estoque baixou junto</span>
-                    </span>
+                    <!-- A BARRA DE CONTROLES CRUZANDO A PEÇA.
+                         É o elemento que segura a hero da referência (AlyMaps): a
+                         peça não fica sozinha no ar, ela é atravessada por uma barra
+                         que mostra o produto FUNCIONANDO. Aqui os quatro controles
+                         são os do SoftPay, e o número é o da própria captura — o
+                         carrinho que está na tela fecha em R$ 414,60. -->
+                    <div class="controles" aria-hidden="true">
+                        <div class="ctl">
+                            <b>Venda no balcão</b>
+                            <span class="ctl__linha"><span class="ctl__mini">leitor + busca</span><span class="chave is-on"><i></i></span></span>
+                        </div>
+                        <div class="ctl">
+                            <b>Baixa no estoque</b>
+                            <span class="ctl__linha"><span class="ctl__mini">na hora</span><span class="chave is-on"><i></i></span></span>
+                        </div>
+                        <div class="ctl">
+                            <b>Fiado com link Pix</b>
+                            <span class="ctl__linha"><span class="trilho"><i></i></span><em>3/4</em></span>
+                        </div>
+                        <div class="ctl">
+                            <b>Venda fechada</b>
+                            <span class="ctl__linha"><em class="ctl__valor">R$&nbsp;414,60</em></span>
+                        </div>
+                    </div>
                 </figure>
             </div>
         </section>
@@ -1141,7 +1157,7 @@
     </div>
 
     <script src="efeitos.js?v=36a79266ae" defer></script>
-    <script src="cena.js?v=d7d8df052c" defer></script>
+    <script src="cena.js?v=e63cc49288" defer></script>
 </body>
 
 </html>

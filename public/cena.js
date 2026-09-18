@@ -267,6 +267,66 @@
         acender(0);
     })();
 
+    /* ======================================= 5b. O RÓTULO QUE SE DIGITA
+       Padrão da hero do AlyMaps: o texto já está inteiro no HTML (robô e
+       leitor de tela leem o texto final); o script apaga e redigita uma vez,
+       com o cursor piscando enquanto escreve. Com "reduzir movimento" nada
+       acontece — o texto fica como veio. */
+    if (!calmo) {
+        document.querySelectorAll('[data-digita]').forEach(function (el) {
+            var final = el.getAttribute('data-digita');
+            var i = 0, t = 0;
+            el.classList.add('digitando');
+            el.textContent = '';
+            function passo() {
+                i += 1;
+                el.textContent = final.slice(0, i);
+                if (i < final.length) t = setTimeout(passo, 34 + Math.random() * 38);
+                else t = setTimeout(function () { el.classList.remove('digitando'); }, 1200);
+            }
+            t = setTimeout(passo, 420);
+        });
+    }
+
+    /* ============================================ 5c. O ÍMÃ DO BOTÃO
+       O botão principal da hero se desloca um pouco na direção do ponteiro e
+       volta sozinho quando ele sai. Só com ponteiro fino: no celular não há
+       para onde puxar. O deslocamento vai para --bx/--by e quem move é o CSS,
+       então isto não escreve `style.transform` e não briga com o :active. */
+    if (comMouse && !calmo) {
+        var botoes = document.querySelectorAll('.hero .btn--acao');
+        var alcance = 90;   // px de distância em que o botão começa a sentir
+        var pedido = false, ponteiro = null;
+        function soltar(b) {
+            b.style.setProperty('--bx', '0px');
+            b.style.setProperty('--by', '0px');
+        }
+        function pintar() {
+            pedido = false;
+            if (!ponteiro) return;
+            botoes.forEach(function (b) {
+                var r = b.getBoundingClientRect();
+                var dx = ponteiro.clientX - (r.left + r.width / 2);
+                var dy = ponteiro.clientY - (r.top + r.height / 2);
+                var dist = Math.hypot(dx, dy);
+                if (dist > r.width / 2 + alcance) { soltar(b); return; }
+                var lim = function (v) { return Math.max(-12, Math.min(12, v)); };
+                b.style.setProperty('--bx', lim(dx * 0.16).toFixed(1) + 'px');
+                b.style.setProperty('--by', lim(dy * 0.3).toFixed(1) + 'px');
+            });
+        }
+        if (botoes.length) {
+            window.addEventListener('pointermove', function (e) {
+                ponteiro = e;
+                if (!pedido) { pedido = true; requestAnimationFrame(pintar); }
+            }, { passive: true });
+            window.addEventListener('pointerleave', function () {
+                ponteiro = null;
+                botoes.forEach(soltar);
+            });
+        }
+    }
+
     /* ============================================== 6. NAVBAR APÓS O HERO */
     var nav = document.querySelector('.nav');
     if (nav && hero && 'IntersectionObserver' in window) {

@@ -2667,9 +2667,12 @@ a.so-leitor:focus {
     .hero__tela {
         position: relative;
         align-self: end;
-        max-width: 26rem;
+        max-width: 23rem;
         perspective: 1400px;
     }
+    /* a barra entra logo abaixo da peça e precisa de chão: sem esta folga ela
+       era cortada pela borda arredondada da seção seguinte */
+    .hero { padding-bottom: var(--sp-6); }
     .hero__tela .aparelhos { transform-origin: 50% 100%; }
 }
 @media (max-width: 61.99rem) and (prefers-reduced-motion: no-preference) {
@@ -2699,41 +2702,6 @@ a.so-leitor:focus {
        Aqui a peça é uma só e quem manda nela é a rolagem. */
     .hero__tela .ap--monitor { animation: none; }
 }
-
-/* Os dois dados que boiam ao lado da peça: mesma ideia dos chips da hero do
-   AlyMaps, mas com número que a captura mostra de verdade — R$ 414,60 é o
-   total do carrinho que está na tela, e os 4 itens são os mesmos. Chip que
-   anuncia o que a imagem não mostra é enfeite; este confirma. */
-.hero__chip {
-    display: none;
-    position: absolute; z-index: 3;
-    padding: 0.5rem 0.75rem;
-    background: rgba(11, 32, 51, 0.92);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: var(--r-sm);
-    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-    box-shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.9);
-    line-height: 1.25; text-align: left;
-}
-.hero__chip b { display: block; font-size: 0.875rem; color: var(--branco); }
-.hero__chip span { font-size: 0.6875rem; color: rgba(255, 255, 255, 0.72); }
-@media (max-width: 61.99rem) {
-    /* Na base, um em cada metade — é a posição que a referência usa no celular.
-       Espalhados pelas laterais eles caíam em cima do carrinho e tapavam
-       justamente o que a captura tem de melhor. */
-    .hero__chip {
-        display: grid; justify-items: center; text-align: center;
-        bottom: 5%; width: calc(50% - 0.35rem);
-    }
-    .hero__chip--a { left: 0; }
-    .hero__chip--b { right: 0; }
-}
-@media (max-width: 61.99rem) and (prefers-reduced-motion: no-preference) {
-    .hero__chip--a { animation: boia 6s ease-in-out infinite; }
-    .hero__chip--b { animation: boia 7s ease-in-out -2.5s infinite; }
-    @keyframes boia { 50% { transform: translateY(-7px); } }
-}
-
 
 /* ------------------------------------------------- O SISTEMA, EM BARALHO
    "Cada uma das outras deve ter efeito de card empilhado."
@@ -3007,4 +2975,180 @@ a.so-leitor:focus {
     .pilula__marca { width: 1.75rem; height: 1.75rem; }
     .pilula__marca svg { width: 1rem; height: 1rem; }
     .pilula--foto img { width: 5.25rem; height: 2.625rem; }
+}
+
+
+/* ==========================================================================
+   29. A HERO NO NÍVEL DA REFERÊNCIA
+   --------------------------------------------------------------------------
+   Pedido do Victor (18/09/2026): "quero o mesmo nível de animação do AlyMaps,
+   tanto no desktop quanto no celular, em qualquer aparelho. E diferente dele,
+   no SoftPay eu quero MOLDURA — no AlyMaps não tem."
+
+   O que a hero da referência tem, medido em lp-spy-radar/src/landing.css:
+     1. onda de partículas em canvas no fundo
+     2. rótulo que se digita sozinho
+     3. palco: peça + foco de luz por trás, os dois respirando juntos
+     4. barra de controles do produto ATRAVESSANDO a peça
+     5. botão com brilho varrendo e ímã que segue o ponteiro
+
+   O item 1 NÃO volta: esse canvas já existiu aqui e o Victor mandou tirar em
+   17/09 ("chuvisco brilhante atrás do texto e do monitor"). O que ele viu de
+   ruim naquela versão era a malha de pontos por cima da FOTOGRAFIA — o AlyMaps
+   tem fundo escuro liso, e por isso lá ela funciona. Os outros quatro vêm, e o
+   lugar dele fica com o foco de luz, que é luz e não chuvisco.
+
+   A moldura fica, e é a diferença pedida: no AlyMaps a peça flutua sem
+   moldura; aqui o monitor, o notebook, o tablet e o celular continuam
+   desenhados com borda, raio e pescoço.
+   ========================================================================== */
+
+/* --------------------------------------------------------- 1. O FOCO DE LUZ */
+.hero__luz {
+    position: absolute; z-index: -1;
+    inset: 6% 12% 14%;
+    border-radius: 50%;
+    background: radial-gradient(closest-side,
+        rgba(29, 161, 242, 0.42), rgba(12, 92, 158, 0.22) 55%, transparent);
+    filter: blur(34px);
+    pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero__luz { animation: luz-respira 7s ease-in-out infinite; }
+    @keyframes luz-respira { 50% { opacity: 0.62; transform: scale(0.93); } }
+}
+
+/* ------------------------------------------- 2. A BARRA QUE CRUZA A PEÇA */
+.controles {
+    position: relative; z-index: 3;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px;
+    margin: -1.75rem auto 0; max-width: 34rem;
+    overflow: hidden;
+    border-radius: var(--r-md);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.9);
+}
+.controles > * { min-width: 0; }
+.ctl {
+    display: grid; justify-items: center; align-content: center; gap: 0.3rem;
+    padding: 0.55rem 0.4rem;
+    background: rgba(11, 32, 51, 0.94);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    text-align: center;
+}
+.ctl b {
+    font-size: 0.75rem; font-weight: 600; line-height: 1.25;
+    color: var(--branco);
+}
+.ctl__linha { display: inline-flex; align-items: center; gap: 0.5rem; }
+.ctl__mini { font-size: 0.6875rem; color: rgba(255, 255, 255, 0.64); }
+.ctl em {
+    font-style: normal; font-weight: 700; font-size: 0.8125rem;
+    letter-spacing: 0.04em; color: var(--branco);
+}
+.ctl__valor { font-family: var(--display); font-stretch: 78%; font-size: 1rem !important; color: var(--acento) !important; }
+
+/* a chave: o estado ligado é o do produto — a venda baixa o estoque sozinha */
+.chave {
+    position: relative; display: inline-block;
+    width: 2.25rem; height: 1.25rem; border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, 0.22);
+}
+.chave i {
+    position: absolute; top: 3px; left: 3px;
+    width: 0.875rem; height: 0.875rem; border-radius: 50%;
+    background: var(--branco); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s var(--mola);
+}
+.chave.is-on { background: var(--acento); box-shadow: 0 0 14px rgba(29, 161, 242, 0.5); }
+.chave.is-on i { transform: translateX(1rem); }
+
+.trilho {
+    position: relative; display: inline-block;
+    width: 3.75rem; height: 5px; border-radius: var(--r-pill);
+    background: rgba(255, 255, 255, 0.85);
+}
+.trilho i {
+    position: absolute; top: 50%; left: 74%;
+    width: 1rem; height: 1rem; border-radius: 50%;
+    background: var(--acento); border: 3px solid var(--branco);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 12px rgba(29, 161, 242, 0.6);
+}
+
+@media (min-width: 48rem) {
+    .controles { grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: -3rem; max-width: 46rem; }
+    .ctl { padding: 0.8rem 0.5rem; gap: 0.45rem; }
+    .ctl b { font-size: 0.8125rem; }
+}
+@media (min-width: 62rem) {
+    /* No desktop a peça são quatro aparelhos, e a largura toda da barra
+       enterrava o tablet e o celular inteiros. Medido em 1440px: o tablet
+       começa em x=1192 e o celular em x=1335, dentro de uma peça que vai até
+       1401. A barra fica com 33rem alinhada à ESQUERDA, cruzando o pé do
+       notebook — os dois aparelhos da direita continuam à vista. */
+    .controles {
+        max-width: none; width: min(100%, 33rem);
+        margin: -3.5rem auto 0 0;
+    }
+    .hero__tela { padding-bottom: 2rem; }
+}
+
+/* ------------------------------------- 3. O BOTÃO COM BRILHO E COM ÍMÃ
+   O brilho varre sozinho de tempos em tempos (o visitante de celular nunca
+   passa o mouse, e sem isso o botão fica inerte). O ímã é escrito pelo JS em
+   --bx/--by e só existe onde há ponteiro fino. */
+.hero .btn--acao {
+    position: relative;
+    transform: translate(var(--bx, 0px), var(--by, 0px));
+    background-image:
+        linear-gradient(100deg, transparent 35%, rgba(255, 255, 255, 0.38) 50%, transparent 65%),
+        linear-gradient(0deg, var(--acento), var(--acento));
+    background-size: 250% 100%, 100% 100%;
+    background-position: 140% 0, 0 0;
+    background-repeat: no-repeat;
+    box-shadow: 0 12px 34px -10px rgba(29, 161, 242, 0.55), 0 1px 0 rgba(255, 255, 255, 0.3) inset;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .hero .btn--acao { animation: btn-brilho 4.5s ease-in-out 1.2s infinite; }
+    @keyframes btn-brilho {
+        0%, 62% { background-position: 140% 0, 0 0; }
+        92%, 100% { background-position: -40% 0, 0 0; }
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .hero .btn--acao:hover { filter: brightness(1.06) saturate(1.08); }
+}
+.hero .btn--acao:active { transform: translate(var(--bx, 0px), var(--by, 0px)) scale(0.97); }
+
+/* ------------------------------------------ 4. O RÓTULO QUE SE DIGITA */
+.hero__selo span[data-digita] { display: inline-block; min-height: 1.2em; }
+.hero__selo span.digitando::after {
+    content: ""; display: inline-block;
+    width: 2px; height: 1em; margin-left: 3px; vertical-align: -0.12em;
+    background: var(--acento);
+    animation: cursor-pisca 1s steps(1) infinite;
+}
+@keyframes cursor-pisca { 50% { opacity: 0; } }
+
+/* ------------------------------ 5. A PEÇA LEVANTANDO TAMBÉM NO DESKTOP
+   No celular quem conduz é a rolagem (bloco 28). No desktop a hero já está na
+   tela quando a página abre, então não há rolagem para conduzir nada: a peça
+   levanta uma vez, na entrada, e só depois começa a flutuar. */
+@media (min-width: 62rem) and (prefers-reduced-motion: no-preference) {
+    .hero__tela { perspective: 2200px; }
+    .aparelhos {
+        transform-origin: 50% 88%;
+        animation: peca-entra 1.1s var(--mola) both;
+    }
+    @keyframes peca-entra {
+        from { transform: rotateX(17deg) scale(0.95); opacity: 0; }
+        to   { transform: rotateX(0deg) scale(1); opacity: 1; }
+    }
+    /* o flutuar de cada aparelho começa depois que a peça terminou de subir */
+    .ap--monitor { animation-delay: 1.1s; }
+    .ap--note    { animation-delay: 1.9s; }
+    .ap--tablet  { animation-delay: 2.7s; }
+    .ap--fone    { animation-delay: 3.5s; }
 }
