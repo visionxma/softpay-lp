@@ -31,7 +31,9 @@ from PIL import Image
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 CHROMA = RAIZ / 'assets-fonte/hero/aparelhos-2-chroma.png'
-PDV = RAIZ / 'public/assets/sistema/pdv.webp'
+CAP = RAIZ / 'assets-fonte/hero/capturas'
+PDV = CAP / 'pdv-1440-dpr2.png'          # 2880x1704 — PDV a 1440px, densidade 2
+CARRINHO = CAP / 'carrinho-390-dpr3.png'  # 1170x2532 — carrinho no layout de celular, densidade 3
 SAIDA = RAIZ / 'public/assets/hero'
 
 def dilatar(m, n=2):
@@ -70,18 +72,27 @@ def main():
     a = np.asarray(peca).astype(np.int16); R, G, B = a[..., 0], a[..., 1], a[..., 2]
     verde = (G > 150) & (R < 120) & (B < 120)
     magenta = (R > 150) & (B > 150) & (G < 120)
-    pdv = Image.open(PDV).convert('RGB')                       # 1400x845
+    pdv = Image.open(PDV).convert('RGB')                       # 2880x1704
 
     # MONITOR: PDV inteiro, cortando só o rodapé até a proporção da tela
     _, (x0, y0, x1, y1) = cantos(dilatar(verde)); prop = (x1 - x0 + 1) / (y1 - y0 + 1)
-    monitor = pdv.crop((0, 0, 1400, round(1400 / prop)))
+    monitor = pdv.crop((0, 0, pdv.width, min(pdv.height, round(pdv.width / prop))))
 
-    # CELULAR: painel do carrinho + faixa branca no alto para o entalhe
+    # CELULAR: o carrinho no layout de CELULAR do próprio sistema (capturado a
+    # 390px, densidade 3), sem a sombra da gaveta na borda esquerda e com uma
+    # faixa no alto para o entalhe da câmera não cobrir o "4 itens"
     _, (x0, y0, x1, y1) = cantos(dilatar(magenta)); prop_c = (x1 - x0 + 1) / (y1 - y0 + 1)
-    carrinho = pdv.crop((1036, 100, 1400, 845))                # 364x745
-    alto = round(carrinho.width / prop_c)
-    celular = Image.new('RGB', (carrinho.width, alto), (255, 255, 255))
-    celular.paste(carrinho, (0, alto - carrinho.height))
+    car = Image.open(CARRINHO).convert('RGB')
+    car = car.crop((20, 0, car.width, car.height))
+    # a captura é um pouco mais alta que a proporção da tela: ela entra pela
+    # ALTURA (nada do rodapé do carrinho — Limpar e Finalizar — fica de fora) e
+    # sobra uma margem estreita dos lados, na cor do fundo do painel
+    larg = car.width; alto = round(larg / prop_c)
+    faixa = round(alto * 0.045)
+    esc = (alto - faixa) / car.height
+    car2 = car.resize((round(car.width * esc), alto - faixa), Image.LANCZOS)
+    celular = Image.new('RGB', (larg, alto), car.getpixel((car.width // 2, 8)))
+    celular.paste(car2, ((larg - car2.width) // 2, faixa))
 
     base = peca.copy()
     print('monitor', encaixar(base, verde, monitor), 'de', monitor.size)

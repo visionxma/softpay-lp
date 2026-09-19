@@ -72,3 +72,19 @@ que o desktop voltar a usar render.
   3D, o Chrome rasteriza em baixa resolução e as telas viram mancha no meio da
   rolagem (medido lado a lado em DPR 3). A sombra é uma elipse em
   `.hero__tela::after`.
+
+### Capturas reais (19/09/2026, noite)
+
+O Victor destravou o captcha do login no navegador do agente e as telas passaram
+a vir do sistema de verdade, em `assets-fonte/hero/capturas/`:
+
+- `pdv-1440-dpr2.png` — `/vendas` a 1440x852, densidade 2 (2880x1704), com o
+  carrinho montado na loja de demonstração (4 itens, R$ 414,60). Vai no monitor.
+- `carrinho-390-dpr3.png` — o carrinho no layout de CELULAR do sistema (a gaveta
+  que abre pelo botão flutuante), mesma venda. Vai no celular.
+- `vendas-390-dpr3.png` — a grade de produtos no layout de celular (reserva).
+
+Como capturar de novo: navegador do agente logado (`de browser start`), aba de
+fundo por `abaSemFoco()`, `Emulation.setDeviceMetricsOverride` na largura
+desejada. Os cliques nos produtos só montam o carrinho — nunca finalizar venda.
+A sessão do painel `/admin` tem dados reais de clientes: não fotografar.
