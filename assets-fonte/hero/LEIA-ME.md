@@ -54,3 +54,21 @@ Cloudflare** ("Confirme que é humano"), e o botão Entrar só habilita depois d
 clique. Conta e senha estão em `~/.claude/credenciais/softpay.md`. Basta o
 Victor dar esse clique uma vez com o navegador do agente aberto
 (`de browser start`) que a sessão fica salva no perfil e eu recapturo tudo.
+
+## A peça do celular (19/09/2026)
+
+Abaixo de 62rem a hero mostra `public/assets/hero/aparelhos-2*.webp`: monitor +
+celular renderizados, com as telas do sistema encaixadas. A fonte é
+`aparelhos-2-chroma.png` (render do codex de 18/09, tela do monitor em verde puro
+e a do celular em magenta puro) e o script é `tools/peca-hero-celular.py`.
+`aparelhos-4-chroma.png` é a versão de quatro aparelhos, guardada para o dia em
+que o desktop voltar a usar render.
+
+- Monitor: o PDV **inteiro** (`pdv.webp`), só com o rodapé cortado para bater a
+  proporção da tela. Recorte do meio deixava cartões e preços partidos na borda.
+- Celular: o painel do carrinho recortado do mesmo PDV, com faixa branca no alto
+  para o entalhe da câmera. A mesma venda de R$ 414,60 nas duas telas.
+- **Sem `filter: drop-shadow` na imagem.** Com filtro numa imagem que anima em
+  3D, o Chrome rasteriza em baixa resolução e as telas viram mancha no meio da
+  rolagem (medido lado a lado em DPR 3). A sombra é uma elipse em
+  `.hero__tela::after`.

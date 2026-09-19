@@ -3591,3 +3591,37 @@ a.so-leitor:focus {
     #onde .mapa__lista li { grid-template-columns: auto auto; justify-content: center; text-align: left; }
     #onde .link-seta { justify-content: center; }
 }
+
+
+/* ---------------------------------------- A PEÇA DO CELULAR, NÍTIDA
+   "Corrige as imagens que estão dentro do monitor e do celular" (Victor,
+   19/09/2026). Eram dois defeitos somados:
+
+   1. CONTEÚDO — o monitor mostrava um recorte do meio do PDV, com cartões de
+      produto cortados na esquerda e preços do carrinho na direita; o celular
+      mostrava uma captura que já vinha cortada na borda esquerda. Refeito em
+      tools/peca-hero-celular.py: o monitor mostra o PDV inteiro e o celular o
+      painel do carrinho completo, a mesma venda de R$ 414,60 nos dois.
+
+   2. BORRÃO — medido lado a lado no meio da rolagem (DPR 3): com
+      `filter: drop-shadow` numa imagem que está animando em 3D, o Chrome
+      rasteriza a camada em baixa resolução e o texto das telas vira mancha.
+      Sem o filtro, a mesma animação sai nítida. A sombra sai da imagem e vira
+      uma elipse própria embaixo da peça (desfoque por gradiente, não por
+      filtro), e o foco de luz atrás continua. Vale até o tablet, onde a mesma
+   peça aparece. */
+@media (max-width: 61.99rem) {
+    .hero__tela img.hero__peca { filter: none; }
+    .hero__tela::after {
+        content: ""; position: absolute; z-index: -1;
+        left: 8%; right: 8%; bottom: 1%; height: 14%;
+        border-radius: 50%;
+        background: radial-gradient(closest-side,
+            rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.25) 55%, transparent);
+        pointer-events: none;
+    }
+    .hero__luz {
+        background: radial-gradient(closest-side,
+            rgba(29, 161, 242, 0.5), rgba(12, 92, 158, 0.24) 55%, transparent);
+    }
+}
