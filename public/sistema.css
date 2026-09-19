@@ -3153,3 +3153,92 @@ a.so-leitor:focus {
 @media (max-width: 61.99rem) {
     #onde[data-passagem]::after { content: none; }
 }
+
+
+/* ==========================================================================
+   30. A BARRA DO TOPO E A BARRA DE BAIXO, MINIMALISTAS (celular)
+   --------------------------------------------------------------------------
+   "Deixe ambos mais minimalistas e intuitivos" (Victor, 19/09/2026, prints do
+   iPhone). O que pesava nas duas:
+
+   · TOPO: uma pílula branca de ~62px com logotipo, um botão "Testar grátis"
+     do tamanho de um CTA de hero e um hambúrguer num círculo cinza. Três
+     blocos de peso igual brigando numa faixa de 358px.
+   · BAIXO: um painel cinza de largura inteira, com borda em cima, e dois
+     botões de 48px — ocupava 80px da tela o tempo todo.
+   · E os dois ao mesmo tempo mostravam o MESMO convite ("Testar grátis" em
+     cima, "Começar grátis" embaixo). Dois botões iguais não é reforço, é ruído.
+
+   O que muda:
+   · Um convite de cada vez. Enquanto a hero está na tela, o convite mora no
+     topo. Quando a barra de baixo aparece, ele sai do topo — a ação fica onde
+     o polegar está, e o topo vira só logotipo e menu. Isso é `:has()` lendo o
+     mesmo estado que o JS já escreve na barra (`data-visivel`), sem JS novo.
+   · Topo mais baixo (52px), logotipo menor, botão compacto, hambúrguer sem o
+     círculo de fundo — só o ícone, com o alvo de toque de 44px preservado.
+   · Baixo vira uma pílula flutuante escura, com respiro das bordas e da
+     área de segurança do iPhone, em vez de um painel colado no rodapé. O
+     botão principal ocupa a maior parte; "Planos" vira um botão de texto ao
+     lado, sem contorno.
+   ========================================================================== */
+@media (max-width: 61.99rem) {
+    /* ---- TOPO ---- */
+    .nav {
+        inset: max(0.5rem, env(safe-area-inset-top)) var(--gutter) auto;
+        min-height: 0;
+        gap: var(--sp-2);
+        padding: 0.25rem 0.25rem 0.25rem 1rem;
+    }
+    .nav__logo img { height: 1.5rem; }
+    .nav__acoes { gap: 0.25rem; }
+    .nav .btn--acao {
+        min-height: 2.75rem;
+        padding-inline: 1rem;
+        font-size: 0.875rem;
+    }
+    .nav__hamburguer,
+    .nav[data-solida="nao"] .nav__hamburguer {
+        width: 2.75rem; height: 2.75rem;
+        background: transparent;
+    }
+    /* um convite de cada vez */
+    body:has(.cta-fixa[data-visivel="sim"]) .nav .btn--acao { display: none; }
+
+    /* ---- BAIXO ---- */
+    .cta-fixa {
+        inset: auto var(--gutter) max(0.75rem, env(safe-area-inset-bottom));
+        gap: 0.25rem;
+        padding: 0.3125rem;
+        background: rgba(6, 18, 31, 0.9);
+        -webkit-backdrop-filter: blur(14px) saturate(1.4);
+        backdrop-filter: blur(14px) saturate(1.4);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--r-pill);
+        box-shadow: 0 16px 36px -14px rgba(6, 18, 31, 0.6);
+        /* sai por baixo com folga suficiente para a sombra sumir junto */
+        transform: translateY(calc(100% + 2rem));
+    }
+    .cta-fixa[data-visivel="sim"] { transform: translateY(0); }
+    .cta-fixa > .btn {
+        min-height: 2.75rem;
+        font-size: 0.9375rem;
+    }
+    .cta-fixa > .btn--acao { flex: 1.8 1 0; }
+    .cta-fixa > .btn--linha {
+        flex: 1 1 0;
+        background: transparent;
+        border-color: transparent;
+        color: rgba(255, 255, 255, 0.86);
+    }
+}
+@media (max-width: 61.99rem) and (hover: hover) and (pointer: fine) {
+    .cta-fixa > .btn--linha:hover { color: var(--branco); background: rgba(255, 255, 255, 0.08); }
+}
+
+/* A barra do topo encolheu de ~62px para 54px (mais 8px de respiro do topo).
+   `--nav-h` é a medida que o trilho de abas, a pilha de painéis, a gaveta, o
+   respiro da hero e a âncora de rolagem usam para não ficar por baixo dela —
+   sem acompanhar, sobrava um vão de 17px entre a barra e o trilho de abas. */
+@media (max-width: 61.99rem) {
+    :root { --nav-h: 3.875rem; }
+}
