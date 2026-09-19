@@ -3163,3 +3163,61 @@ a.so-leitor:focus {
         box-shadow: none;
     }
 }
+
+/* ---------------------------------------------- OS NÚMEROS DO MAPA
+   Print do Victor (19/09/2026): "corrija o design destes números". Eram três
+   números em duas colunas — o "0" caía sozinho numa terceira fileira, com o
+   dobro de largura dos outros e o texto espremido à esquerda, e um fio
+   atravessava a seção acima deles. Três itens em duas colunas é exatamente a
+   linha órfã que a doutrina proíbe.
+
+   Agora é uma faixa só, três colunas iguais dentro de um painel, separadas por
+   fio de 1px (o `gap` de 1px mostra o fundo do painel entre as células). Tudo
+   centralizado: número em cima, legenda embaixo, como placar. O contador
+   animado (`data-conta`) continua funcionando — não mudou markup nenhum. */
+@media (max-width: 47.99rem) {
+    .mapa__numeros {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: var(--sp-6);
+        padding: 0;
+        border-top: 0;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: var(--r-md);
+        overflow: hidden;
+        /* o shell dá o respiro lateral; a faixa respeita a mesma borda */
+        width: calc(100% - 2 * var(--gutter));
+        padding-inline: 0;
+    }
+    .mapa__numeros > div,
+    .mapa__numeros > div:last-child {
+        grid-column: auto;
+        display: grid; justify-items: center; align-content: start;
+        padding: var(--sp-4) var(--sp-2);
+        background: var(--noite);
+        text-align: center;
+    }
+    .mapa__numeros b { font-size: 2.375rem; }
+    .mapa__numeros span {
+        margin-top: var(--sp-2);
+        font-size: 0.75rem; line-height: 1.4;
+        max-width: none;
+        color: rgba(255, 255, 255, 0.72);
+    }
+}
+
+/* ------------------------------------ A EMENDA "ONDE" → "PLANOS"
+   Mesmo print: o fim do bloco escuro tinha um degradê de 6rem clareando até
+   cinza (o `data-passagem`) e, em cima dele, "Planos" subia arredondado. Os
+   dois juntos faziam uma faixa cinza suja entre o azul-noite e o branco.
+   No celular os dois saem: o escuro termina escuro e "Planos" começa reto,
+   como as outras emendas que o Victor já mandou endireitar. */
+@media (max-width: 61.99rem) {
+    #onde[data-passagem]::after { content: none; }
+    #onde + #planos {
+        border-radius: 0;
+        margin-top: 0;
+        box-shadow: none;
+    }
+}
