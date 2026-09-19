@@ -3411,3 +3411,54 @@ a.so-leitor:focus {
         @keyframes painel-nome { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
     }
 }
+
+
+/* ------------------------------------------------ OS LOJISTAS EMBARALHAM
+   Pedido do Victor (19/09/2026): em vez de subirem como a pilha do "sistema
+   por dentro" — a mesma sensação duas vezes na página —, os lojistas entram
+   DE LADO, como carta sendo embaralhada.
+
+   Como a rolagem é vertical e o movimento tem de parecer horizontal: cada
+   painel tem 100svh, então a fase de ENTRADA dele na tela (view timeline,
+   `entry 0%` → `entry 100%`) dura exatamente uma tela de rolagem, e nela o
+   painel sobe 100svh sozinho. O `translateY(-100%)` no início da animação
+   devolve essa subida inteira: o painel fica desenhado no topo o tempo todo e
+   o único movimento que sobra é o lateral. Linear com linear, a conta fecha
+   em todos os pontos, não só no começo e no fim.
+
+   · Alternam de lado — o 2º vem da direita, o 3º da esquerda, e assim por
+     diante — com 7° de giro que se desfaz na chegada: é o que dá o "embaralhar".
+   · O 1º NÃO embaralha: ele entra normal, subindo junto com o título da
+     seção. Se entrasse de lado, cobriria o título antes de a pessoa lê-lo.
+   · A sombra acompanha o lado de onde a carta chega.
+   · `overflow-x: clip` na vitrine segura a carta que está fora da tela sem
+     criar contêiner de rolagem — `hidden` mataria o sticky.
+   · Com "reduzir movimento", ou sem suporte a scroll timeline, continua a
+     pilha que sobe, que já funciona sozinha. */
+@media (max-width: 47.99rem) {
+    #para-quem .vitrine { overflow-x: clip; }
+}
+@media (max-width: 47.99rem) and (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        #para-quem .vitrine__item:nth-child(n + 2) {
+            animation: carta-direita linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 100%;
+            box-shadow: -34px 0 60px -24px rgba(0, 0, 0, 0.75);
+        }
+        #para-quem .vitrine__item:nth-child(odd):nth-child(n + 3) {
+            animation-name: carta-esquerda;
+            box-shadow: 34px 0 60px -24px rgba(0, 0, 0, 0.75);
+        }
+        @keyframes carta-direita {
+            from { transform: translateY(-100%) translateX(108%) rotate(7deg); }
+            to   { transform: none; }
+        }
+        @keyframes carta-esquerda {
+            from { transform: translateY(-100%) translateX(-108%) rotate(-7deg); }
+            to   { transform: none; }
+        }
+        /* o giro acontece em torno do pé da carta, como na mão */
+        #para-quem .vitrine__item { transform-origin: 50% 100%; }
+    }
+}
