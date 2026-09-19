@@ -3322,3 +3322,92 @@ a.so-leitor:focus {
     #duvidas .faq__item > div { text-align: center; }
     #duvidas .faq__item p { max-width: 36ch; margin-inline: auto; }
 }
+
+
+/* ==========================================================================
+   32. "PARA QUEM É" EM TELA CHEIA, EMPILHANDO (celular)
+   --------------------------------------------------------------------------
+   Pedido do Victor (19/09/2026): no desktop os lojistas aparecem em painéis
+   verticais grandes, da altura da tela. No celular eles viravam uma grade
+   2x3 de cartões pequenos. Ele quer o mesmo impacto no celular, com o
+   comportamento da pilha do "sistema por dentro": cada lojista ocupa o
+   aparelho INTEIRO, gruda no topo, e o próximo sobe por cima conforme a
+   rolagem.
+
+   · Cada painel tem 100svh (a altura "pequena" da tela: não pula quando a
+     barra do Safari aparece e some) e gruda em top: 0. Os seis são irmãos no
+     mesmo contêiner, então o de baixo pinta por cima do de cima — a pilha sai
+     da ordem do documento, sem z-index.
+   · A foto não é a mesma da grade. Esticar o recorte 3:4 de 1000px até a
+     altura de um iPhone dava 1,9x de ampliação pelo navegador — mole. Cada
+     lojista ganhou um recorte próprio em retrato alto (tools/tela-cheia.py):
+     rosto com 25% da largura da tela, centrado, a 36% da altura da foto, o
+     MESMO padrão nos seis, e ampliado 4x com Real-ESRGAN antes de reduzir
+     para 1170px (DPR 3) e 780px (DPR 2).
+   · A foto ocupa os 78% de cima e se dissolve no azul-noite; o nome e o
+     botão ficam no chão escuro, acima da pílula flutuante de "Começar
+     grátis", e nunca em cima do rosto.
+   · Cada painel entra com a foto fechando o zoom e o nome subindo — conduzido
+     pela rolagem (view timeline), não por tempo.
+   ========================================================================== */
+@media (max-width: 47.99rem) {
+    #para-quem .vitrine { display: block; }
+    #para-quem .vitrine__item {
+        position: sticky; top: 0;
+        height: 100svh; aspect-ratio: auto;
+        container-type: inline-size;
+        background: var(--noite);
+        /* a sombra para cima é o que separa o painel que chega do que ficou */
+        box-shadow: 0 -28px 50px -18px rgba(0, 0, 0, 0.7);
+    }
+    #para-quem .vitrine__item + .vitrine__item { box-shadow: 0 -28px 50px -18px rgba(0, 0, 0, 0.7); }
+    #para-quem .vitrine__item img {
+        inset: 0 0 auto 0; height: 78%;
+        object-fit: cover; object-position: 50% 36%;
+    }
+    #para-quem .vitrine__item::after {
+        background: linear-gradient(180deg,
+            rgba(6, 18, 31, 0.62) 0%,
+            rgba(6, 18, 31, 0) 20%,
+            rgba(6, 18, 31, 0) 48%,
+            rgba(6, 18, 31, 0.78) 68%,
+            var(--noite) 78%,
+            var(--noite) 100%);
+    }
+    #para-quem .vitrine__item::before { content: none; }
+
+    /* o selo "cliente" fica logo abaixo da barra do topo */
+    #para-quem .vitrine__selo {
+        padding-top: calc(var(--nav-h) + 1rem);
+        font-size: 0.8125rem;
+    }
+    /* nome e botão no chão escuro, acima da pílula flutuante (58px + 12px de
+       respiro + a área de segurança do iPhone) */
+    #para-quem .vitrine__rotulo {
+        inset: auto 0 0;
+        padding: 0 var(--gutter) calc(5.5rem + env(safe-area-inset-bottom));
+        gap: var(--sp-4);
+    }
+    #para-quem .vitrine__nome { font-size: min(15cqw, 4rem); }
+    #para-quem .vitrine__rotulo .vitrine__seta {
+        margin-top: 0;
+        min-height: 3rem; padding-inline: 1.5rem 1.25rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 47.99rem) and (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        #para-quem .vitrine__item img {
+            animation: painel-foto linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 100%;
+        }
+        @keyframes painel-foto { from { transform: scale(1.14); } to { transform: none; } }
+        #para-quem .vitrine__rotulo {
+            animation: painel-nome linear both;
+            animation-timeline: view();
+            animation-range: entry 40% entry 100%;
+        }
+        @keyframes painel-nome { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+    }
+}
