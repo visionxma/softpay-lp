@@ -3830,3 +3830,45 @@ a.so-leitor:focus {
         font-size: 0.75rem; line-height: 1.5;
     }
 }
+
+
+/* ------------------------------------------ A LOJISTA DA HERO, À VISTA
+   "No monitor e no notebook é visível a foto daquela mulher de fundo; no
+   mobile não. Deve ter uma estratégia para que seja visível e tenha a ver com
+   o que a LP oferta" (Victor, 19/09/2026).
+
+   Por que sumia: a foto é horizontal (1600x668) e, cobrindo uma hero de
+   celular em pé, sobrava uma fatia de ~15% da largura — o ombro e o braço, sem
+   o rosto — sob um véu de 72% a 92%.
+
+   Agora ela tem a própria faixa: um recorte enquadrado na lojista segurando o
+   tablet (a pessoa usando o sistema, que é o que a página vende), ampliado
+   com Real-ESRGAN, no topo da hero. O véu deixa a faixa aberta e só escurece
+   na borda de cima (para a barra ler) e embaixo, onde a foto se dissolve no
+   azul-noite e o texto começa. */
+@media (max-width: 47.99rem) {
+    .hero__foto {
+        inset: 0 0 auto 0;
+        height: 50svh;
+        object-fit: cover; object-position: 50% 0;
+    }
+    .hero__veu {
+        background: linear-gradient(180deg,
+            rgba(6, 18, 31, 0.55) 0,
+            rgba(6, 18, 31, 0.06) 12svh,
+            rgba(6, 18, 31, 0.10) 26svh,
+            rgba(6, 18, 31, 0.80) 38svh,
+            var(--noite) 48svh,
+            var(--noite) 100%);
+    }
+    /* o texto começa onde a foto se dissolve */
+    .hero { padding-top: 33svh; }
+    .hero__conteudo { min-height: 0; }
+    .hero .cluster--cta { margin-top: 0; }
+    .hero__prova { margin-top: var(--sp-5); }
+    .hero__selo { margin-bottom: var(--sp-4); }
+    /* o título acompanha a altura da tela, para os botões caberem na primeira
+       tela também nos celulares baixos */
+    .hero .display--hero { font-size: min(19.5vw, 5.5rem, 8.4svh); }
+    .hero__sub { margin-bottom: var(--sp-5); }
+}

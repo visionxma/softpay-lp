@@ -40,7 +40,7 @@
     <link rel="preload" as="image" href="/assets/sistema/pdv.webp?v=4737e8d2c1" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=1aee076c3e" />
+    <link rel="stylesheet" href="sistema.css?v=afb79ff692" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -113,9 +113,13 @@
 
         <!-- ============================================================ HERO -->
         <section class="hero">
-            <img class="hero__foto" src="/assets/lojistas/loja-de-roupas.webp?v=7a30b36651" width="1600" height="667"
+            <picture>
+                <!-- no celular a lojista ganha a própria faixa no topo, enquadrada nela com o tablet -->
+                <source media="(max-width: 47.99rem)" srcset="/assets/lojistas/tela/hero-lojista-780.webp?v=c307e52d4e 780w, /assets/lojistas/tela/hero-lojista-1170.webp?v=dcabe1a08a 1170w" sizes="100vw" width="1170" height="1086" />
+                <img class="hero__foto" src="/assets/lojistas/loja-de-roupas.webp?v=7a30b36651" width="1600" height="667"
                 fetchpriority="high" decoding="async"
                 alt="Lojista conferindo as peças da arara com um tablet na mão" />
+            </picture>
             <div class="hero__veu"></div>
 
             <div class="shell hero__grade">
