@@ -3150,3 +3150,16 @@ a.so-leitor:focus {
     }
     main > section:not(.hero)::before { content: none; }
 }
+
+/* A emenda entre a vitrine ("Para quem é") e o momento "A loja na sua mão"
+   (print do Victor, 19/09/2026): o momento subia 1,5rem arredondado POR CIMA
+   das fotos e cortava ao meio os botões "Ver o sistema" da última fileira.
+   Foto sobre foto não tem degrau para o cartão empilhado mostrar — só corte.
+   A emenda fica reta, como as duas seções vizinhas já ficaram. */
+@media (max-width: 61.99rem) {
+    #para-quem + .momento {
+        border-radius: 0;
+        margin-top: 0;
+        box-shadow: none;
+    }
+}
