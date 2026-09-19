@@ -150,11 +150,26 @@
     document.querySelectorAll('[data-ano]').forEach(function (el) { el.textContent = anoAgora; });
 
     /* --- 7. Barra fixa de ação no celular, depois que o hero sai da tela --- */
+    /* Ela também sai quando o FIM da página aparece: o bloco final já tem
+       "Começar grátis" e "WhatsApp", e o rodapé embaixo dele tem a assinatura
+       da VisionX — que a pílula flutuante cobria inteira (medido em 390px:
+       barra de 774 a 832, assinatura de 777 a 820). */
     var barra = document.querySelector('.cta-fixa');
     var hero = document.querySelector('.hero');
+    var fim = document.querySelectorAll('main > section:last-of-type, footer.rodape');
     if (barra && hero && 'IntersectionObserver' in window) {
+        var heroVisivel = true, fimVisivel = {};
+        function aplicar() {
+            var algumFim = Object.keys(fimVisivel).some(function (k) { return fimVisivel[k]; });
+            barra.setAttribute('data-visivel', (heroVisivel || algumFim) ? 'nao' : 'sim');
+        }
         new IntersectionObserver(function (itens) {
-            barra.setAttribute('data-visivel', itens[0].isIntersecting ? 'nao' : 'sim');
+            heroVisivel = itens[0].isIntersecting; aplicar();
         }, { threshold: 0 }).observe(hero);
+        var io = new IntersectionObserver(function (itens) {
+            itens.forEach(function (it) { fimVisivel[it.target.dataset.fimId] = it.isIntersecting; });
+            aplicar();
+        }, { threshold: 0 });
+        fim.forEach(function (el, i) { el.dataset.fimId = 'f' + i; io.observe(el); });
     }
 })();

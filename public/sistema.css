@@ -2940,7 +2940,7 @@ a.so-leitor:focus {
    barra de controles e o foco de luz existem só no celular. Sem estes três
    `display: none` o markup deles continuava ocupando altura lá — medido: a
    página de 1440px subiu de 11.731 para 12.104px. */
-.hero__tela img.hero__peca, .controles, .hero__luz { display: none; }
+.hero__tela img.hero__peca, .hero__luz { display: none; }
 /* a especificidade aqui não é capricho: `.hero__tela img` (0,2,0) existe desde
    o bloco 21 e vencia um `.hero__peca` (0,1,0) — a peça continuava visível no
    desktop, somando 264px à hero, e o guard acusou. */
@@ -2964,57 +2964,6 @@ a.so-leitor:focus {
             rgba(29, 161, 242, 0.42), rgba(12, 92, 158, 0.22) 55%, transparent);
         filter: blur(34px);
         pointer-events: none;
-    }
-
-    /* ---- a barra de controles cruzando a peça ---- */
-    .controles {
-        position: relative; z-index: 3;
-        display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px;
-        margin: -1.75rem auto 0; max-width: 34rem;
-        overflow: hidden;
-        border-radius: var(--r-md);
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.9);
-    }
-    .controles > * { min-width: 0; }
-    .ctl {
-        display: grid; justify-items: center; align-content: center; gap: 0.3rem;
-        padding: 0.55rem 0.4rem;
-        background: rgba(11, 32, 51, 0.94);
-        -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-        text-align: center;
-    }
-    .ctl b { font-size: 0.75rem; font-weight: 600; line-height: 1.25; color: var(--branco); }
-    .ctl__linha { display: inline-flex; align-items: center; gap: 0.5rem; }
-    .ctl__mini { font-size: 0.6875rem; color: rgba(255, 255, 255, 0.64); }
-    .ctl em { font-style: normal; font-weight: 700; font-size: 0.8125rem; letter-spacing: 0.04em; color: var(--branco); }
-    /* `.ctl em` é (0,1,1) e vencia `.ctl__valor` (0,1,0): o valor saía branco */
-    .ctl em.ctl__valor { font-family: var(--display); font-stretch: 78%; font-size: 1rem; color: var(--acento); }
-
-    .chave {
-        position: relative; display: inline-block;
-        width: 2.25rem; height: 1.25rem; border-radius: var(--r-pill);
-        background: rgba(255, 255, 255, 0.22);
-    }
-    .chave i {
-        position: absolute; top: 3px; left: 3px;
-        width: 0.875rem; height: 0.875rem; border-radius: 50%;
-        background: var(--branco); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-    }
-    .chave.is-on { background: var(--acento); box-shadow: 0 0 14px rgba(29, 161, 242, 0.5); }
-    .chave.is-on i { transform: translateX(1rem); }
-    .trilho {
-        position: relative; display: inline-block;
-        width: 3.75rem; height: 5px; border-radius: var(--r-pill);
-        background: rgba(255, 255, 255, 0.85);
-    }
-    .trilho i {
-        position: absolute; top: 50%; left: 74%;
-        width: 1rem; height: 1rem; border-radius: 50%;
-        background: var(--acento); border: 3px solid var(--branco);
-        transform: translate(-50%, -50%);
-        box-shadow: 0 0 12px rgba(29, 161, 242, 0.6);
     }
 
     /* ---- o botão com o brilho que varre (o ímã é do ponteiro, não existe aqui) ---- */
@@ -3063,15 +3012,12 @@ a.so-leitor:focus {
     .hero__luz { animation: luz-respira 7s ease-in-out infinite; }
     @keyframes luz-respira { 50% { opacity: 0.62; transform: scale(0.93); } }
 
-    .controles { animation: barra-boia 7s ease-in-out -2.5s infinite; }
-    @keyframes barra-boia { 50% { transform: translateY(-8px); } }
 
     .hero .btn--acao { animation: btn-brilho 4.5s ease-in-out 1.2s infinite; }
     @keyframes btn-brilho {
         0%, 62% { background-position: 140% 0, 0 0; }
         92%, 100% { background-position: -40% 0, 0 0; }
     }
-    .chave i { transition: transform 0.4s var(--mola); }
 }
 
 
@@ -3318,4 +3264,38 @@ a.so-leitor:focus {
         width: 0.75rem; height: 0.75rem; margin-right: 0.375rem;
     }
     .rodape__visionx i { display: block; height: 0; overflow: hidden; }
+}
+
+
+/* (A barra de controles que cruzava a peça da hero no celular saiu em
+   19/09/2026: "isso aqui tá com cara de IA". Estava mesmo — eram quatro
+   controles falsos, chave, trilho e valor desenhados em CSS imitando a hero do
+   AlyMaps, que lá mostram filtros REAIS do produto. Aqui nenhum deles era um
+   controle do SoftPay que a pessoa encontraria igual no sistema. A peça
+   renderizada, com as capturas de verdade, já diz o que o produto faz.) */
+
+/* ------------------------------------------ A BASE DO RODAPÉ NO CELULAR
+   "A referência da VisionX não está visível; deve ficar perfeita, perto da do
+   SoftPay, minimalista igual à do desktop" (Victor, 19/09/2026).
+
+   Não estava visível por dois motivos: a pílula flutuante de baixo cobria a
+   assinatura inteira (resolvido no efeitos.js — a pílula sai quando o fim da
+   página aparece), e ela ficava longe do copyright do SoftPay, com a fileira
+   de ícones no meio.
+
+   Agora os ícones vêm primeiro e as duas assinaturas ficam juntas embaixo,
+   coladas, no mesmo tamanho e na mesma cor — como no desktop, onde elas
+   dividem a mesma linha. */
+@media (max-width: 47.99rem) {
+    .rodape__base { gap: 0; }
+    .rodape__social { order: 1; margin-bottom: var(--sp-3); }
+    .rodape__produto { order: 2; }
+    .rodape__visionx { order: 3; }
+    .rodape__produto,
+    .rodape__visionx {
+        font-size: 0.6875rem; line-height: 1.6;
+        color: rgba(255, 255, 255, 0.62);
+        padding-block: 0;
+    }
+    .rodape__visionx .rodape__x { color: var(--branco); opacity: 0.85; }
 }
