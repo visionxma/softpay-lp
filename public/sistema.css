@@ -2845,45 +2845,15 @@ a.so-leitor:focus {
 }
 
 
-/* ----------------------------------------- A PÁGINA INTEIRA COMO BARALHO
-   "Cada uma das outras deve ter efeito de card empilhado."
+/* (O bloco "A PÁGINA INTEIRA COMO BARALHO" saiu em 19/09/2026. Ele fazia
+   cada seção do celular subir 1,5rem arredondada sobre a anterior, com sombra
+   e um fio de luz no topo. O Victor foi mandando endireitar emenda por emenda
+   — "Para quem é", "Onde", vitrine → momento, "Onde" → "Planos" — e cobrou:
+   "essas bordas arredondadas nas seções não é interessante, você já deveria
+   ter corrigido todas logo". Estava certo: o defeito era o bloco, não as
+   emendas. Todas as seções voltam a se encontrar em linha reta.
+   A pilha de painéis do #sistema é outra coisa e continua.) */
 
-   A pilha do #sistema resolve os seis painéis, mas o pedido era a página. Aqui
-   cada seção sobe 1,5rem sobre a anterior com o topo arredondado e uma sombra
-   projetada para cima: a página inteira vira uma pilha de cartões, e a troca de
-   seção deixa de ser uma emenda reta entre duas cores.
-
-   Sem `overflow: hidden` em nenhuma delas — o raio corta o fundo, que é o que
-   interessa, e cortar o conteúdo mataria a pilha sticky dos painéis e o trilho
-   de abas (elemento sticky dentro de caixa com overflow não gruda).
-
-   E dá altura de volta: são 1,5rem a menos por emenda, 240px no total. */
-@media (max-width: 61.99rem) {
-    main > section:not(.hero),
-    .rodape {
-        position: relative;
-        margin-top: -1.5rem;
-        border-radius: 1.75rem 1.75rem 0 0;
-        box-shadow: 0 -16px 30px -18px rgba(6, 18, 31, 0.45);
-    }
-    /* a seção clara logo abaixo de outra clara não teria contraste para o
-       degrau aparecer: um fio de luz no topo desenha a borda do cartão */
-    main > section:not(.hero)::before {
-        content: ""; position: absolute; inset: 0 0 auto 0; height: 1px;
-        border-radius: inherit;
-        background: linear-gradient(90deg,
-            transparent 0%, rgba(255, 255, 255, 0.5) 18%,
-            rgba(255, 255, 255, 0.5) 82%, transparent 100%);
-        pointer-events: none;
-    }
-    .secao--escura::before, .momento::before {
-        background: linear-gradient(90deg,
-            transparent 0%, rgba(255, 255, 255, 0.14) 18%,
-            rgba(255, 255, 255, 0.14) 82%, transparent 100%);
-    }
-    /* o CTA final e o rodapé são o fundo da pilha: um só bloco escuro */
-    .rodape { box-shadow: none; border-radius: 0; margin-top: 0; }
-}
 
 /* ---------------------------------------------- A FOTO QUE RESPIRA (momento)
    As duas seções de fotografia em sangria eram imagem parada. Agora a foto
@@ -3131,39 +3101,6 @@ a.so-leitor:focus {
 }
 
 
-/* ------------------------------------ "PARA QUEM É" E "ONDE" FICAM RETAS
-   Pedido do Victor (19/09/2026, prints do iPhone): tirar a borda arredondada
-   de "Para quem é" e de "Onde o SoftPay já está", e tirar a linha clara que
-   corria no topo das seções.
-
-   Nas duas, sai o conjunto inteiro do efeito de cartão empilhado — raio,
-   subida de 1,5rem sobre a anterior e sombra para cima. Tirar só o raio
-   deixaria a sobreposição cortando 24px reto da seção de cima, sem motivo
-   visível. A linha era o fio de luz do `::before`, que só aparecia de fato
-   sobre fundo escuro; sai de todas as seções, porque nas claras ele já era
-   invisível e nas escuras virava a régua branca do print. */
-@media (max-width: 61.99rem) {
-    #para-quem, #onde {
-        border-radius: 0;
-        margin-top: 0;
-        box-shadow: none;
-    }
-    main > section:not(.hero)::before { content: none; }
-}
-
-/* A emenda entre a vitrine ("Para quem é") e o momento "A loja na sua mão"
-   (print do Victor, 19/09/2026): o momento subia 1,5rem arredondado POR CIMA
-   das fotos e cortava ao meio os botões "Ver o sistema" da última fileira.
-   Foto sobre foto não tem degrau para o cartão empilhado mostrar — só corte.
-   A emenda fica reta, como as duas seções vizinhas já ficaram. */
-@media (max-width: 61.99rem) {
-    #para-quem + .momento {
-        border-radius: 0;
-        margin-top: 0;
-        box-shadow: none;
-    }
-}
-
 /* ---------------------------------------------- OS NÚMEROS DO MAPA
    Print do Victor (19/09/2026): "corrija o design destes números". Eram três
    números em duas colunas — o "0" caía sozinho numa terceira fileira, com o
@@ -3215,9 +3152,4 @@ a.so-leitor:focus {
    como as outras emendas que o Victor já mandou endireitar. */
 @media (max-width: 61.99rem) {
     #onde[data-passagem]::after { content: none; }
-    #onde + #planos {
-        border-radius: 0;
-        margin-top: 0;
-        box-shadow: none;
-    }
 }
