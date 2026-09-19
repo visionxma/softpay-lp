@@ -3103,3 +3103,29 @@ a.so-leitor:focus {
     }
     .chave i { transition: transform 0.4s var(--mola); }
 }
+
+
+/* ------------------------------------------ O TRILHO DE ABAS SEM BARRA
+   No iPhone aparecia uma barra de rolagem embaixo das pílulas (PDV e caixa,
+   Estoque, Fiado…) enquanto o trilho corria — print do Victor, 19/09/2026.
+   `scrollbar-width: none` e `::-webkit-scrollbar { display: none }` já estavam
+   lá, e o Safari do iOS ignora os dois: o indicador dele é desenhado pelo
+   sistema, por cima do conteúdo, e não obedece a CSS de barra.
+
+   O que funciona em qualquer navegador é tirar o indicador do lugar visível:
+   o trilho ganha 12px a mais de respiro embaixo (é ali, na borda de baixo da
+   área rolável, que o indicador é pintado), o `clip-path` corta exatamente
+   esses 12px, e a margem negativa devolve a altura — nada se mexe na página.
+   Não dá para fazer com `overflow: hidden` num pai: o trilho é sticky, e
+   elemento sticky dentro de caixa com overflow para de grudar. */
+@media (max-width: 63.99rem) {
+    .abas--rolagem .abas__botoes {
+        padding-bottom: calc(var(--sp-2) + 12px);
+        margin-bottom: -12px;
+        clip-path: inset(0 0 12px 0);
+    }
+    .abas--rolagem .abas__botoes::-webkit-scrollbar {
+        display: none; width: 0; height: 0; background: transparent;
+        -webkit-appearance: none;
+    }
+}
