@@ -3625,3 +3625,162 @@ a.so-leitor:focus {
             rgba(29, 161, 242, 0.5), rgba(12, 92, 158, 0.24) 55%, transparent);
     }
 }
+
+
+/* ---------------------------------------------- O CONVITE FINAL (celular)
+   Print do Victor (19/09/2026): "deixe intuitivo e minimalista, o do WhatsApp
+   deve ficar verde". Medido antes: "Começar grátis" quebrava em duas linhas e
+   ficava mais alto que o "WhatsApp" ao lado, e o WhatsApp era um botão cinza
+   que não dizia de longe o que era.
+
+   · Os dois na mesma altura (52px), uma linha cada, lado a lado — o mesmo par
+     da hero, para o fim da página falar a mesma língua do começo.
+   · WhatsApp no verde da marca (#25D366) com o ícone dela: reconhecido antes
+     de ser lido. Texto escuro, como no botão azul ao lado — branco sobre esse
+     verde dá 2:1 de contraste; o azul-noite dá 10:1.
+   · O ícone só aparece aqui: no desktop o botão continua como estava. */
+.btn__icone { display: none; }
+@media (max-width: 47.99rem) {
+    .cta-final .cluster--cta {
+        display: flex; flex-wrap: nowrap; gap: var(--sp-2);
+        width: 100%;
+    }
+    .cta-final .cluster--cta .btn {
+        min-height: 3.25rem; height: 3.25rem;
+        padding-inline: 1rem;
+        font-size: 1rem; white-space: nowrap;
+        flex: 1 1 0;
+    }
+    .cta-final .btn--whats {
+        gap: 0.5rem;
+        background: #25D366; border-color: #25D366;
+        color: var(--noite);
+        box-shadow: 0 12px 30px -12px rgba(37, 211, 102, 0.55);
+    }
+    .cta-final .btn--whats .btn__icone { display: block; flex: none; }
+    .cta-final .btn--whats:active { transform: scale(0.97); }
+}
+@media (max-width: 47.99rem) and (hover: hover) and (pointer: fine) {
+    .cta-final .btn--whats:hover { background: #2EE072; border-color: #2EE072; }
+}
+
+
+/* ==========================================================================
+   34. PLANOS, GARANTIAS E FAQ MAIS LIMPOS (celular)
+   --------------------------------------------------------------------------
+   Três prints do Victor (19/09/2026).
+
+   PLANOS — "dá para tornar esses três mais minimalistas e bonitos". Medido
+   antes em 390px: 762px só nos três cartões. Nos dois lado a lado (colunas de
+   ~150px) tudo quebrava: a descrição em três linhas, cada item da lista em
+   duas, e o "Testar grátis" em DUAS linhas num botão de 64px. A etiqueta era
+   uma pílula cinza pesando tanto quanto o nome.
+   · Etiqueta vira texto pequeno em caixa alta, sem pílula.
+   · Nos dois cartões menores a descrição sai da vista: o nome, a etiqueta e a
+     lista já dizem o mesmo, e é ela que empurrava o preço para baixo. (Continua
+     no HTML; no destaque ela fica.)
+   · Lista em 13px, botão de 44px numa linha só.
+   · "Nota fiscal" vira faixa compacta: texto em 13px e preço e botão lado a
+     lado no pé.
+   · O link "Ajuda para configurar no WhatsApp" perde o azul e o sublinhado
+     do navegador.
+
+   SEM PEGADINHA — "diferente do desktop, aqui não está legal; sem ocupar
+   tanto espaço". Eram quatro itens em duas colunas de ~150px: título em duas
+   linhas, texto em cinco a seis, 635px. Vira lista: ícone à esquerda, título e
+   texto à direita na largura toda (o texto cai para três linhas), fio fino
+   entre os itens — o formato de lista de garantias.
+
+   FAQ — "deixe as linhas divisórias um pouco mais visíveis e coloque uma em
+   cima da 1ª pergunta".
+   ========================================================================== */
+@media (max-width: 47.99rem) {
+    /* ---------------- PLANOS ---------------- */
+    .planos { gap: var(--sp-2); }
+    .plano { gap: var(--sp-2); padding: var(--sp-4); border-radius: var(--r-md); }
+    .plano--destaque { padding: var(--sp-5) var(--sp-4); gap: var(--sp-3); }
+    .plano__tag,
+    .plano--destaque .plano__tag {
+        padding: 0; background: none; border-radius: 0;
+        font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em;
+        color: var(--tinta-3);
+    }
+    .plano--destaque .plano__tag { color: var(--acento); }
+    .plano__nome { font-size: 1.25rem; }
+    .plano:not(.plano--destaque) .plano__desc { display: none; }
+    .plano--destaque .plano__desc { font-size: 0.875rem; color: rgba(255, 255, 255, 0.72); }
+    .plano__preco { font-size: 1.875rem; margin-top: var(--sp-1); }
+    .plano:not(.plano--destaque) .plano__preco { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+    .plano__ciclo { font-size: 0.75rem; }
+    .plano__inclui { gap: 0.375rem; margin-block: var(--sp-1); }
+    .plano__inclui li { font-size: 0.8125rem; line-height: 1.35; gap: 0.375rem; }
+    .plano__inclui svg { width: 13px; height: 13px; margin-top: 0.15rem; }
+    .plano .btn {
+        min-height: 2.75rem; height: 2.75rem; padding-inline: 0.75rem;
+        font-size: 0.875rem; white-space: nowrap;
+        margin-top: var(--sp-2);
+    }
+    .plano--destaque .btn { min-height: 3rem; height: 3rem; font-size: 0.9375rem; }
+
+    .plano-parte {
+        display: grid; gap: var(--sp-2);
+        margin-top: var(--sp-2);
+        padding: var(--sp-4);
+    }
+    .plano-parte__texto { gap: var(--sp-1); }
+    .plano-parte__nome { font-size: 1.25rem; }
+    .plano-parte__texto .apoio { font-size: 0.8125rem; line-height: 1.45; }
+    .plano-parte__acao {
+        display: flex; align-items: center; justify-content: space-between;
+        gap: var(--sp-3); margin-top: var(--sp-1);
+    }
+    .plano-parte__acao .plano__preco { font-size: 1.625rem; }
+    .plano-parte__acao .btn {
+        min-height: 2.75rem; height: 2.75rem; padding-inline: 1.25rem;
+        font-size: 0.875rem; white-space: nowrap;
+    }
+
+    .planos__rodape { font-size: 0.75rem !important; line-height: 1.6; color: var(--tinta-3); }
+    .planos__rodape a { color: var(--azul); text-decoration: none; font-weight: 600; white-space: nowrap; }
+
+    /* ---------------- SEM PEGADINHA ---------------- */
+    .garantias { padding: var(--sp-4) var(--sp-4) var(--sp-3); gap: var(--sp-2); }
+    .garantias__lista { grid-template-columns: 1fr; gap: 0; }
+    .garantia {
+        grid-template-columns: auto 1fr;
+        align-items: start; gap: var(--sp-3);
+        padding: var(--sp-3) 0;
+    }
+    .garantia + .garantia { border-top: 1px solid var(--linha); }
+    .garantia:first-child { padding-top: var(--sp-2); }
+    .cena { width: 2.25rem; height: 2.25rem; border-radius: var(--r-sm); }
+    .cena svg { width: 1.5rem; height: 1.5rem; }
+    .garantia__texto { font-size: 0.8125rem; line-height: 1.45; }
+    .garantia__texto b { font-size: 0.9375rem; margin-bottom: 0.1rem; }
+    .garantias__nota { font-size: 0.8125rem; line-height: 1.5; padding: var(--sp-3) var(--sp-3) var(--sp-3) var(--sp-4); margin-top: var(--sp-1); }
+
+    /* ---------------- FAQ ---------------- */
+    #duvidas .faq__item { border-bottom-color: var(--linha-forte); }
+    #duvidas .faq > .faq__item:first-child { border-top: 1px solid var(--linha-forte); }
+}
+/* O ritmo do cartão de plano vem só do `gap`: as margens herdadas de camadas
+   anteriores abriam ~35px entre o preço e a lista. O botão dos dois cartões
+   menores desce para o pé (margin-top: auto), e os dois ficam na mesma linha
+   mesmo quando uma lista quebra mais que a outra. */
+@media (max-width: 47.99rem) {
+    .plano > * { margin-block: 0; }
+    .plano { gap: var(--sp-2); }
+    .plano__preco { margin-top: var(--sp-1); }
+    .plano__inclui { margin-top: var(--sp-2); }
+    .plano .btn { margin-top: auto; }
+    .plano__inclui + .btn { margin-top: max(var(--sp-3), auto); }
+    .plano:not(.plano--destaque) .btn { margin-top: auto; }
+    .plano:not(.plano--destaque) .plano__inclui { margin-bottom: var(--sp-3); }
+    .plano--destaque .plano__inclui { margin-bottom: var(--sp-2); }
+}
+/* grade não distribui `margin: auto` entre linhas; em coluna flex, sim — é o
+   que leva os dois botões para o pé na mesma altura */
+@media (max-width: 47.99rem) {
+    .plano:not(.plano--destaque) { display: flex; flex-direction: column; }
+    .plano:not(.plano--destaque) .plano__tag { align-self: flex-start; }
+}

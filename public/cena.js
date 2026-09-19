@@ -277,7 +277,26 @@
             aba.addEventListener('click', function (e) {
                 e.preventDefault();
                 acender(i);
-                painels[i].scrollIntoView({ block: 'center', behavior: calmo ? 'auto' : 'smooth' });
+                if (!trilhoGruda.matches) {
+                    painels[i].scrollIntoView({ block: 'center', behavior: calmo ? 'auto' : 'smooth' });
+                    return;
+                }
+                /* No celular os painéis são uma pilha sticky, e `scrollIntoView`
+                   num elemento grudado não funciona para trás: ele já se
+                   considera "à vista" na posição em que ficou preso, e a página
+                   não se move (medido: tocar em Estoque estando em Loja online
+                   deixava o WhatsApp na tela). A conta é feita na posição
+                   NATURAL: o topo do contêiner (que não gruda) mais a altura e
+                   a margem de cada painel anterior; menos o `top` do sticky
+                   daquele painel — é a rolagem exata em que ele encosta no
+                   lugar dele na pilha. */
+                var cont = painels[0].parentElement;
+                var natural = cont.getBoundingClientRect().top + window.scrollY;
+                for (var k = 0; k < i; k++) {
+                    natural += painels[k].offsetHeight + (parseFloat(getComputedStyle(painels[k]).marginBottom) || 0);
+                }
+                var topoFixo = parseFloat(getComputedStyle(painels[i]).top) || 0;
+                window.scrollTo({ top: Math.round(natural - topoFixo), behavior: calmo ? 'auto' : 'smooth' });
             });
 
         });
