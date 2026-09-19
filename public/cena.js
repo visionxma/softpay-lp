@@ -272,7 +272,9 @@
        leitor de tela leem o texto final); o script apaga e redigita uma vez,
        com o cursor piscando enquanto escreve. Com "reduzir movimento" nada
        acontece — o texto fica como veio. */
-    if (!calmo) {
+    /* só no celular: no desktop o Victor mandou devolver a hero ao que era */
+    var soCelular = window.matchMedia('(max-width: 61.99rem)').matches;
+    if (!calmo && soCelular) {
         document.querySelectorAll('[data-digita]').forEach(function (el) {
             var final = el.getAttribute('data-digita');
             var i = 0, t = 0;
@@ -293,7 +295,7 @@
        volta sozinho quando ele sai. Só com ponteiro fino: no celular não há
        para onde puxar. O deslocamento vai para --bx/--by e quem move é o CSS,
        então isto não escreve `style.transform` e não briga com o :active. */
-    if (comMouse && !calmo) {
+    if (false && comMouse && !calmo) {   /* ímã desligado: era efeito de desktop */
         var botoes = document.querySelectorAll('.hero .btn--acao');
         var alcance = 90;   // px de distância em que o botão começa a sentir
         var pedido = false, ponteiro = null;
