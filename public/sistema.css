@@ -3299,3 +3299,26 @@ a.so-leitor:focus {
     }
     .rodape__visionx .rodape__x { color: var(--branco); opacity: 0.85; }
 }
+
+
+/* ------------------------------------------------ O FAQ CENTRALIZADO (celular)
+   Pedido do Victor (19/09/2026): centralizar "Perguntas frequentes" e as
+   perguntas. A cabeça da seção centraliza como as de "Planos" e "Tudo em um
+   lugar só". Na pergunta, o texto vai para o centro e o "+" sai do fluxo e
+   fica ancorado à direita — com o mesmo respiro dos dois lados, para o texto
+   ficar no centro de verdade e não no centro do que sobra depois do ícone. A
+   resposta acompanha, centralizada e com largura de leitura. */
+@media (max-width: 47.99rem) {
+    #duvidas .cabeca-secao { text-align: center; }
+    #duvidas .faq__item > summary {
+        position: relative;
+        justify-content: center; text-align: center;
+        padding-inline: 2.25rem;
+    }
+    #duvidas .faq__mais {
+        position: absolute; right: 0; top: 50%;
+        margin-top: -0.75rem;
+    }
+    #duvidas .faq__item > div { text-align: center; }
+    #duvidas .faq__item p { max-width: 36ch; margin-inline: auto; }
+}

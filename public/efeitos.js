@@ -69,9 +69,15 @@
     /* --- 5. "Ver mais": revela o resto sem recarregar ---
        O número sai da contagem real dos itens escondidos. Escrito à mão ele
        desatualiza: estava "(+9)" com dez perguntas atrás do botão. */
+    /* Ida e volta (19/09/2026, pedido do Victor): depois de "Ver mais" o botão
+       fica e vira "Ver menos", e recolhe tudo de novo — antes ele sumia e não
+       havia como fechar a lista comprida. Ao recolher, a página rola até o
+       botão continuar à vista, senão a pessoa fica olhando para a seção
+       seguinte sem entender para onde as perguntas foram. */
     document.querySelectorAll('[data-ver-mais]').forEach(function (btn) {
         var alvo = btn.getAttribute('data-ver-mais');
         var conta = btn.querySelector('[data-ver-mais-conta]');
+        var rotulo = btn.querySelector('[data-ver-mais-rotulo]');
         var sexta = document.querySelector('[data-faq-sexta]');
         var faq = document.querySelector('.faq');
         var aberto = false;
@@ -91,11 +97,21 @@
         window.addEventListener('resize', ajustar);
 
         btn.addEventListener('click', function () {
-            aberto = true;
-            if (sexta) sexta.hidden = false;
-            document.querySelectorAll(alvo).forEach(function (el) { el.hidden = false; });
-            var caixa = btn.closest('.faq__mais-perguntas');
-            (caixa || btn).remove();
+            aberto = !aberto;
+            var extras = document.querySelectorAll(alvo);
+            if (aberto) {
+                if (sexta) sexta.hidden = false;
+                extras.forEach(function (el) { el.hidden = false; });
+                if (rotulo) rotulo.textContent = 'Ver menos perguntas';
+                if (conta) conta.textContent = '';
+            } else {
+                extras.forEach(function (el) { el.hidden = true; el.open = false; });
+                if (sexta) sexta.open = false;
+                if (rotulo) rotulo.textContent = 'Ver mais perguntas';
+                ajustar();
+                btn.scrollIntoView({ block: 'center', behavior: calmo ? 'auto' : 'smooth' });
+            }
+            btn.setAttribute('aria-expanded', aberto ? 'true' : 'false');
         });
     });
 
