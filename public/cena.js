@@ -213,6 +213,23 @@
            Agora a conta é direta e determinística: o painel que contém o meio
            da tela; se nenhum contém (estamos num vão entre dois), o de borda
            mais próxima. Roda uma vez por quadro. */
+        /* O trilho de tópicos some quando o ÚLTIMO painel chega ao topo
+           (pedido do Victor, 19/09/2026): dali para baixo não há mais tópico
+           para trocar, e o trilho grudado só tapava o começo do cartão. Volta
+           quando a pessoa rola para cima. Só onde o trilho é sticky (abaixo de
+           64rem); no desktop a coluna de tópicos é outra composição. */
+        var trilhoEl = bloco.querySelector('.abas__botoes');
+        var trilhoGruda = window.matchMedia('(max-width: 63.99rem)');
+        function recolherTrilho() {
+            if (!trilhoEl) return;
+            if (!trilhoGruda.matches) { trilhoEl.removeAttribute('data-some'); return; }
+            var ultimo = painels[painels.length - 1];
+            var topoFixo = parseFloat(getComputedStyle(ultimo).top) || 0;
+            var chegou = ultimo.getBoundingClientRect().top <= topoFixo + 1;
+            if (chegou) trilhoEl.setAttribute('data-some', '');
+            else trilhoEl.removeAttribute('data-some');
+        }
+
         var pedido = false;
         function escolher() {
             var meio = window.innerHeight / 2;
@@ -230,6 +247,7 @@
                 if (dist < menorDist) { menorDist = dist; melhor = k; }
             }
             acender(contido >= 0 ? contido : melhor);
+            recolherTrilho();
         }
         function aoRolar() {
             if (pedido) return;

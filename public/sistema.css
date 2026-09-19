@@ -3462,3 +3462,22 @@ a.so-leitor:focus {
         #para-quem .vitrine__item { transform-origin: 50% 100%; }
     }
 }
+
+
+/* O trilho de tópicos sai de cena quando o último painel chega ao topo — o
+   JS (cena.js, recolherTrilho) marca `data-some`. Ele sobe para baixo da barra
+   do topo e apaga; volta do mesmo jeito ao rolar para cima. */
+@media (max-width: 63.99rem) {
+    .abas--rolagem .abas__botoes {
+        transition: transform 0.32s var(--mola), opacity 0.22s linear;
+    }
+    .abas--rolagem .abas__botoes[data-some] {
+        transform: translateY(-110%);
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+@media (max-width: 63.99rem) and (prefers-reduced-motion: reduce) {
+    .abas--rolagem .abas__botoes { transition: opacity 0.2s linear; }
+    .abas--rolagem .abas__botoes[data-some] { transform: none; }
+}
