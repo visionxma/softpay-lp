@@ -3784,3 +3784,49 @@ a.so-leitor:focus {
     .plano:not(.plano--destaque) { display: flex; flex-direction: column; }
     .plano:not(.plano--destaque) .plano__tag { align-self: flex-start; }
 }
+
+
+/* -------------------------------------- SEM PEGADINHA, EM QUATRO BLOCOS
+   "Continua ruim; tem que ter uma estratégia para não pegar esse espaço, nem
+   que retire" (Victor, 19/09/2026). No desktop o bloco vive ao lado dos vídeos
+   do Landim e do Neto e o texto longo cabe; no celular ele virava uma coluna
+   de 585px de parágrafos.
+
+   A estratégia: no celular a garantia é a PROMESSA, não a explicação. Ficam o
+   ícone e o título de cada uma — "Quem responde é gente", "A loja não fica no
+   computador", "Abre e usa, como o WhatsApp Web", "Começar não custa nada" —
+   em quatro blocos 2x2, que se leem numa passada de olho. O texto explicativo
+   sai da vista (continua no HTML e no leitor de tela) porque o FAQ, logo
+   abaixo, responde as mesmas quatro coisas: suporte humano, instalação,
+   segurança dos dados e cartão. A ressalva da maquininha fica, em uma frase
+   curta: é a informação que evita cliente frustrado. */
+@media (max-width: 47.99rem) {
+    .garantias { padding: var(--sp-4); gap: var(--sp-3); }
+    .garantias__lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--sp-2);
+    }
+    .garantia,
+    .garantia:first-child {
+        display: grid; grid-template-columns: 1fr;
+        align-content: start; gap: var(--sp-2);
+        padding: var(--sp-3);
+        background: var(--nevoa);
+        border-radius: var(--r-sm);
+    }
+    .garantia + .garantia { border-top: 0; }
+    .cena { width: 2rem; height: 2rem; }
+    .cena svg { width: 1.375rem; height: 1.375rem; }
+    /* só o título: o texto que vem depois do <b> some sem sair do HTML */
+    .garantia__texto { font-size: 0; line-height: 0; }
+    .garantia__texto b {
+        display: block; margin: 0;
+        font-size: 0.875rem; line-height: 1.3; font-weight: 700;
+        color: var(--tinta);
+    }
+    .garantias__nota {
+        margin-top: 0;
+        padding: var(--sp-2) var(--sp-3) var(--sp-2) var(--sp-3);
+        font-size: 0.75rem; line-height: 1.5;
+    }
+}
