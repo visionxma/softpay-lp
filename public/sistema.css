@@ -3129,3 +3129,24 @@ a.so-leitor:focus {
         -webkit-appearance: none;
     }
 }
+
+
+/* ------------------------------------ "PARA QUEM É" E "ONDE" FICAM RETAS
+   Pedido do Victor (19/09/2026, prints do iPhone): tirar a borda arredondada
+   de "Para quem é" e de "Onde o SoftPay já está", e tirar a linha clara que
+   corria no topo das seções.
+
+   Nas duas, sai o conjunto inteiro do efeito de cartão empilhado — raio,
+   subida de 1,5rem sobre a anterior e sombra para cima. Tirar só o raio
+   deixaria a sobreposição cortando 24px reto da seção de cima, sem motivo
+   visível. A linha era o fio de luz do `::before`, que só aparecia de fato
+   sobre fundo escuro; sai de todas as seções, porque nas claras ele já era
+   invisível e nas escuras virava a régua branca do print. */
+@media (max-width: 61.99rem) {
+    #para-quem, #onde {
+        border-radius: 0;
+        margin-top: 0;
+        box-shadow: none;
+    }
+    main > section:not(.hero)::before { content: none; }
+}
