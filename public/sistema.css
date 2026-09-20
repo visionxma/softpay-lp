@@ -488,8 +488,15 @@ p:last-child { margin-bottom: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .esteira__trilho { animation: none; }
-    .esteira { overflow-x: auto; }
+    .esteira__trilho {
+        animation: none;
+        /* 20/09/2026: era `overflow-x: auto` na esteira — trilho parado com
+           rolagem lateral dentro do componente, que a doutrina proibe, e as
+           pilulas do fim saiam da viewport. Paradas, elas quebram em linhas e
+           aparecem todas. */
+        flex-wrap: wrap; width: 100%; justify-content: center;
+    }
+    .esteira { overflow: hidden; }
 }
 
 /* --------------------------------------------------------- 9. NÚMEROS */
@@ -3235,8 +3242,12 @@ a.so-leitor:focus {
         margin-bottom: 0.25rem;
     }
     .rodape ul a {
-        min-height: 0;
-        padding-block: 0.4375rem;
+        /* 20/09/2026: aqui estava `min-height: 0`, que zerava os 44px decididos
+           na camada de cima e deixava o link com 30,3px de caixa — o dedo erra
+           e acerta o vizinho. O alvo volta a 44px; a altura do rodape cresce
+           pouco porque as quatro colunas ficam lado a lado. */
+        min-height: 2.75rem;
+        padding-block: 2px;
         font-size: 0.78125rem; line-height: 1.3;
         color: rgba(255, 255, 255, 0.78);
     }
