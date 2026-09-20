@@ -35,7 +35,7 @@ CHROMA = RAIZ / 'assets-fonte/hero/aparelhos-2-chroma.png'
 CAP = RAIZ / 'assets-fonte/hero/capturas'
 # argumento 1: outra captura do balcão (para comparar larguras antes de escolher)
 # argumento 2: outra pasta de saída (para não sobrescrever o que está no ar)
-PDV = CAP / (sys.argv[1] if len(sys.argv) > 1 else 'balcao-1280-dpr2.png')
+PDV = CAP / (sys.argv[1] if len(sys.argv) > 1 else 'balcao-1366-dpr2.png')
 CARRINHO = CAP / 'carrinho-390-dpr3.png'  # 1170x2532 — carrinho no layout de celular, densidade 3
 SAIDA = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else RAIZ / 'public/assets/hero'
 
@@ -72,29 +72,76 @@ def encaixar(base, mask, tela):
     base.paste(warp, (x0, y0), Image.fromarray((mask[y0:y1 + 1, x0:x1 + 1] * 255).astype('uint8')))
     return lw, lh
 
+def apagar_fileira_parcial(pdv):
+    """Tira a fileira de produtos que fica PELA METADE no pé da grade.
+
+    A 1366px cabem 3 fileiras inteiras e o topo de uma quarta. Essa quarta
+    começa em "PRODUTO TESTE" — item da loja de demonstração que fica legível
+    no tamanho real do celular (conferido: recorte da faixa no tamanho real,
+    ampliado 3x) e não pode aparecer numa peça de venda.
+
+    Nenhuma largura resolve: o cabeçalho do caixa só para de colidir a partir
+    de ~1366 (a 1280 o selo de latência sai "239m" com o "s" tapado pelo ícone
+    do Operador), e a essa altura a quarta fileira já espia. A janela em que as
+    duas coisas ficam certas não existe.
+
+    Então a fileira sai da IMAGEM, não do sistema: a faixa dela é pintada com o
+    cinza do próprio fundo da grade, medido ali do lado. A grade passa a
+    terminar depois da terceira fileira, com margem antes da barra de totais —
+    que é como um app de verdade fica quando a lista acaba. Nada é inventado:
+    só deixa de aparecer conteúdo que estava cortado.
+
+    Medido no perfil de cor da captura (fração de branco por linha, x a partir
+    do fim da barra lateral): cartões da 3ª fileira até y=1342, vão cinza da
+    grade 1346-1368, fileira parcial 1369-1429, barra de totais a partir de
+    1430. Recapturou? refazer essa medição, não confiar nos números.
+    """
+    MENU, Y0, Y1 = 240 * 2, 1344, 1430
+    if pdv.size != (2732, 1614):
+        return pdv          # outra captura: as medidas acima não valem
+    fundo = pdv.getpixel((1000, 1356))                      # o cinza do vão da grade
+    pdv = pdv.copy()
+    pdv.paste(Image.new('RGB', (pdv.width - MENU, Y1 - Y0), fundo), (MENU, Y0))
+    return pdv
+
 def main():
     peca = Image.open(CHROMA).convert('RGB')
     a = np.asarray(peca).astype(np.int16); R, G, B = a[..., 0], a[..., 1], a[..., 2]
     verde = (G > 150) & (R < 120) & (B < 120)
     magenta = (R > 150) & (B > 150) & (G < 120)
-    pdv = Image.open(PDV).convert('RGB')                       # 2880x1704
+    pdv = apagar_fileira_parcial(Image.open(PDV).convert('RGB'))   # 2732x1614
 
     # MONITOR: o BALCÃO — barra lateral, busca e a grade de produtos, com o
     # carrinho recolhido pelo próprio sistema (o carrinho fica no celular, que
     # cobre o canto direito do monitor).
     #
     # A LARGURA DA CAPTURA é o que decide se a peça fica bonita, e não a
-    # nitidez. A barra lateral do sistema é fixa em 240px: ela come 23% da tela
-    # a 1024, 19% a 1280 e 17% a 1440. A 1024 a interface aparecia AMPLIADA —
-    # três colunas de produto, a terceira cortada pelo celular e a segunda
-    # fileira partida pela borda: cara de print com zoom, não de monitor.
-    # A 1440 a letra encolhe sem ganhar nada, a quarta fileira fica partida no
-    # meio e o "PRODUTO TESTE" do catálogo entra na vitrine.
-    # 1280x758 é o ponto: quatro colunas, três fileiras inteiras, rodapé de
-    # atalhos visível e o preço ainda legível no render de 390px. Comparado
-    # lado a lado no tamanho real antes de escolher.
+    # nitidez. Duas coisas dependem dela, e as duas têm de ser conferidas
+    # AMPLIADAS antes de publicar:
+    #
+    # 1. ESCALA. A barra lateral do sistema é fixa em 240px: come 23% da tela a
+    #    1024, 19% a 1280, 18% a 1366, 16% a 1536. A 1024 a interface aparecia
+    #    ampliada — três colunas, a terceira cortada pelo celular e a segunda
+    #    fileira partida na borda: cara de print com zoom, não de monitor.
+    #
+    # 2. O CABEÇALHO DO CAIXA. Ele ganha itens conforme a largura, e a 1280 os
+    #    itens COLIDEM: o selo de latência sai escrito "239m" com o "s" tapado
+    #    pelo ícone do Operador. É bug do sistema, não do recorte — e foi
+    #    exatamente o que o Victor apontou no print de 20/09. A 1024 não
+    #    aparecia porque o "Operador" nem era renderizado.
+    #
+    # 1366x807 é o ponto: cabeçalho completo e sem sobreposição (268ms ·
+    # Operador · 02:53 · Sangria · Suprimento · Histórico · Fechar), barra
+    # lateral em 18% e o preço ainda legível no render de 390px. A 1536 o
+    # cabeçalho também fica limpo, mas abre um vão vazio no meio.
+    #
+    # O celular MORDE o monitor de y=46% para baixo, cobrindo de 89,6% a 100%
+    # da largura (medido na máscara verde do chroma). Nenhuma largura alinha
+    # uma borda de coluna com esses 89,6%, então a última coluna sempre entra
+    # parcialmente por baixo do celular — o que se controla é que ela seja a
+    # QUARTA, e não a terceira.
     _, (x0, y0, x1, y1) = cantos(dilatar(verde)); prop = (x1 - x0 + 1) / (y1 - y0 + 1)
-    # a captura já vem na proporção da tela (1280x758 = 1,69): entra inteira,
+    # a captura já vem na proporção da tela (1366x807 = 1,69): entra inteira,
     # com rodapé e tudo — nada cortado pela borda do monitor
     monitor = pdv.crop((0, 0, pdv.width, min(pdv.height, round(pdv.width / prop))))
 

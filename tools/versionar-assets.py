@@ -6,7 +6,8 @@ do visitante recorrente continua com o CSS velho em cache (a Cloudflare serve
 `max-age=14400`, quatro horas) e a página aparece quebrada só para quem já
 visitou — o caso mais difícil de perceber, porque em aba anônima está tudo bem.
 
-Uso:  python3 tools/versionar-assets.py public/index.html
+Uso:  python3 tools/versionar-assets.py            # todas as páginas
+      python3 tools/versionar-assets.py public/index.html  # só uma
 """
 import hashlib, pathlib, re, sys
 
@@ -59,7 +60,12 @@ def carimbar(html_path):
     return trocas
 
 if __name__ == '__main__':
-    alvos = sys.argv[1:] or ['public/index.html']
+    # Sem argumento, TODAS as páginas. O padrão anterior era só o index.html e
+    # isso mordeu em 20/09/2026: o CSS mudou, o index saiu carimbado e as
+    # outras 72 páginas ficaram apontando para o hash velho — com `max-age` de
+    # um ano no `_headers`, quem já tinha visitado ficaria com o arquivo antigo
+    # para sempre. Carimbar a mais não custa nada; carimbar a menos é invisível.
+    alvos = sys.argv[1:] or sorted(str(f) for f in pathlib.Path('public').rglob('*.html'))
     total = 0
     for a in alvos:
         p = pathlib.Path(a)

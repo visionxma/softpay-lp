@@ -3884,3 +3884,20 @@ a.so-leitor:focus {
 }
 .related-grid strong { font-size: var(--t-md); line-height: 1.3; }
 .related-grid span { font-size: var(--t-sm); color: var(--tinta-2); line-height: 1.5; }
+
+/* ================================================================== 35
+   SEM ZOOM NO CELULAR — pedido do Victor (20/09/2026)
+
+   `pan-x pan-y` diz ao navegador: rolagem sim, pinça e toque duplo não.
+   É o único caminho que funciona no iPhone, porque o Safari ignora o
+   `user-scalable=no` da meta viewport desde o iOS 10. A meta continua lá
+   (resolve no Android) e o `efeitos.js` cobre o Safari antigo pelos
+   eventos `gesture*`.
+
+   Vale só no ponteiro grosso: no desktop o zoom do navegador continua
+   inteiro, e quem usa lupa do sistema operacional não é afetado — o
+   `touch-action` só governa o toque na tela.
+   ================================================================== */
+@media (pointer: coarse) {
+    html { touch-action: pan-x pan-y; }
+}

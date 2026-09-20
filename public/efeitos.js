@@ -188,4 +188,29 @@
         }, { threshold: 0 });
         fim.forEach(function (el, i) { el.dataset.fimId = 'f' + i; io.observe(el); });
     }
+
+    /* --- 8. Sem zoom no celular (pedido do Victor, 20/09/2026) ---
+       A meta viewport com `user-scalable=no` resolve no Android, mas o Safari
+       do iPhone IGNORA esse atributo desde o iOS 10. Então o bloqueio de
+       verdade é aqui:
+       · `touch-action: pan-x pan-y` (bloco 35 do sistema.css) tira a pinça e
+         o zoom de toque duplo sem atrapalhar a rolagem;
+       · os eventos `gesture*` são da Apple e cobrem o Safari antigo, que ainda
+         não respeita `touch-action`;
+       · o toque duplo só é barrado quando NÃO cai num elemento clicável, para
+         não engolir o segundo toque em botão e link. */
+    ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (nome) {
+        document.addEventListener(nome, function (e) { e.preventDefault(); }, { passive: false });
+    });
+    document.addEventListener('touchmove', function (e) {
+        if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
+    var ultimoToque = 0;
+    document.addEventListener('touchend', function (e) {
+        var agora = Date.now();
+        var alvo = e.target;
+        var clicavel = alvo && alvo.closest && alvo.closest('a, button, input, select, textarea, label, summary, [role="button"], [tabindex]');
+        if (!clicavel && agora - ultimoToque < 320) e.preventDefault();
+        ultimoToque = agora;
+    }, { passive: false });
 })();
