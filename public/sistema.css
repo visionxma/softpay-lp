@@ -3870,3 +3870,17 @@ a.so-leitor:focus {
             rgba(6, 18, 31, 0) 72%);
     }
 }
+
+
+/* --------------------------------------- "CONTINUE POR AQUI": TÍTULO E LINHA
+   Print do Victor (20/09/2026): "Controle de estoqueA baixa automática". O
+   cartão era `display: block` com `<strong>` e `<span>` dentro — dois
+   elementos EM LINHA, que se emendam sem espaço nenhum. O mesmo markup já
+   aparecia certo no `.card-grid`, que é grade com `gap`; aqui faltou. Agora os
+   dois viram linhas separadas, com a hierarquia do cartão: nome em corpo de
+   texto, descrição menor e em cinza. */
+.related-grid a {
+    display: grid; gap: 0.35rem; align-content: start;
+}
+.related-grid strong { font-size: var(--t-md); line-height: 1.3; }
+.related-grid span { font-size: var(--t-sm); color: var(--tinta-2); line-height: 1.5; }
