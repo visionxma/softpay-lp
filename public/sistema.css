@@ -487,16 +487,21 @@ p:last-child { margin-bottom: 0; }
     border-radius: var(--r-pill);
 }
 
+/* Esteira parada (quem pediu menos movimento) — 20/09/2026.
+   Antes virava `overflow-x: auto`: rolagem lateral dentro do componente, que a
+   doutrina proibe, com a ultima pilula fora da viewport em 360px. Trocar por
+   quebra de linha sozinha nao servia: o trilho tem o dobro de pilulas (o eco
+   que faz a animacao dar a volta em translateX -50%), entao no desktop crescia
+   248px e o auditor ainda acusava 2.326px de conteudo cortado.
+   Parado, o eco nao serve para nada: some, e as 17 pilulas reais quebram em
+   linhas. Nada rola, nada fica escondido. */
 @media (prefers-reduced-motion: reduce) {
+    .esteira { overflow: hidden; }
     .esteira__trilho {
         animation: none;
-        /* 20/09/2026: era `overflow-x: auto` na esteira — trilho parado com
-           rolagem lateral dentro do componente, que a doutrina proibe, e as
-           pilulas do fim saiam da viewport. Paradas, elas quebram em linhas e
-           aparecem todas. */
         flex-wrap: wrap; width: 100%; justify-content: center;
     }
-    .esteira { overflow: hidden; }
+    .esteira__trilho > [data-eco] { display: none; }
 }
 
 /* --------------------------------------------------------- 9. NÚMEROS */
