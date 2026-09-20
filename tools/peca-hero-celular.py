@@ -32,7 +32,7 @@ from PIL import Image, ImageFilter
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 CHROMA = RAIZ / 'assets-fonte/hero/aparelhos-2-chroma.png'
 CAP = RAIZ / 'assets-fonte/hero/capturas'
-PDV = CAP / 'pdv-1152-dpr2.png'          # 2304x1364 — PDV a 1152px (interface maior na tela pequena)
+PDV = CAP / 'balcao-1024-dpr2.png'       # 2048x1212 — o balcão a 1024px, com o carrinho recolhido pelo próprio sistema
 CARRINHO = CAP / 'carrinho-390-dpr3.png'  # 1170x2532 — carrinho no layout de celular, densidade 3
 SAIDA = RAIZ / 'public/assets/hero'
 
@@ -76,8 +76,15 @@ def main():
     magenta = (R > 150) & (B > 150) & (G < 120)
     pdv = Image.open(PDV).convert('RGB')                       # 2880x1704
 
-    # MONITOR: PDV inteiro, cortando só o rodapé até a proporção da tela
+    # MONITOR: o BALCÃO — barra lateral, busca e a grade de produtos, cortando
+    # exatamente onde começa a coluna do carrinho (x=793 de 1152, medido na
+    # página). O carrinho fica no celular, que cobre o canto direito do monitor:
+    # antes ele tapava metade da coluna do carrinho e a tela grande parecia
+    # cortada pela metade. De quebra, mostrar menos coisa aumenta a letra: a
+    # redução até o monitor de 253px cai de 4,5x para 3,1x.
     _, (x0, y0, x1, y1) = cantos(dilatar(verde)); prop = (x1 - x0 + 1) / (y1 - y0 + 1)
+    # a captura já vem na proporção da tela (1024x606 = 1,69): entra inteira,
+    # com rodapé e tudo — nada cortado pela borda do monitor
     monitor = pdv.crop((0, 0, pdv.width, min(pdv.height, round(pdv.width / prop))))
 
     # CELULAR: o carrinho no layout de CELULAR do próprio sistema (capturado a

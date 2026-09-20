@@ -105,3 +105,28 @@ tamanho real:
 
 `de browser stop`/`navegador.close()` fecham o Chrome do agente e derrubam a
 sessão: nos roteiros de captura, **nunca fechar o navegador**.
+
+### O balcão em 1024px, com o carrinho recolhido (20/09/2026)
+
+"Essa daqui tá péssima." O 1152px resolveu a nitidez, mas não a **composição**:
+o celular fica por cima do canto direito do monitor e tapava justamente a
+coluna do carrinho (começa em x=793 de 1152, medido na página). A tela grande
+aparecia partida ao meio, com metade de uma coluna de itens escapando por trás
+do celular — e a mesma venda estava duplicada nos dois aparelhos.
+
+A saída veio do próprio sistema: abaixo de um certo espaço, o `/vendas`
+**recolhe o carrinho** num botão flutuante e a grade de produtos ocupa a tela
+toda. É um estado real do produto, não um truque de foto. A captura passou a
+ser `balcao-1024-dpr2.png` — `/vendas` a **1024x606, densidade 2** (2048x1212,
+já na proporção 1,69 da tela do monitor: entra inteira, sem corte de rodapé).
+
+O que muda na peça:
+
+- **monitor = o balcão** (menu, busca, filtros, grade de produtos, teclas de
+  atalho no rodapé) e **celular = o carrinho** daquela mesma venda. Um aparelho
+  não repete mais o outro: juntos contam a venda inteira.
+- redução até o monitor de 253px cai de 4,5x para **3,1x** — a letra do nome do
+  produto e do preço fica legível em 390px (conferido com recorte em DPR 3).
+
+Antes de fotografar, esperar o selo de latência do sistema ficar **verde**
+(< 350ms): num print, o badge laranja de 900ms lê como sistema lento.
