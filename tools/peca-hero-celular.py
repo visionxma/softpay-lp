@@ -26,15 +26,18 @@ Saída: public/assets/hero/aparelhos-2.webp (1448) e aparelhos-2-1200.webp.
 Uso: python3 tools/peca-hero-celular.py   (Pillow + numpy)
 """
 import pathlib
+import sys
 import numpy as np
 from PIL import Image, ImageFilter
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 CHROMA = RAIZ / 'assets-fonte/hero/aparelhos-2-chroma.png'
 CAP = RAIZ / 'assets-fonte/hero/capturas'
-PDV = CAP / 'balcao-1024-dpr2.png'       # 2048x1212 — o balcão a 1024px, com o carrinho recolhido pelo próprio sistema
+# argumento 1: outra captura do balcão (para comparar larguras antes de escolher)
+# argumento 2: outra pasta de saída (para não sobrescrever o que está no ar)
+PDV = CAP / (sys.argv[1] if len(sys.argv) > 1 else 'balcao-1280-dpr2.png')
 CARRINHO = CAP / 'carrinho-390-dpr3.png'  # 1170x2532 — carrinho no layout de celular, densidade 3
-SAIDA = RAIZ / 'public/assets/hero'
+SAIDA = pathlib.Path(sys.argv[2]) if len(sys.argv) > 2 else RAIZ / 'public/assets/hero'
 
 def dilatar(m, n=2):
     for _ in range(n):
@@ -76,14 +79,22 @@ def main():
     magenta = (R > 150) & (B > 150) & (G < 120)
     pdv = Image.open(PDV).convert('RGB')                       # 2880x1704
 
-    # MONITOR: o BALCÃO — barra lateral, busca e a grade de produtos, cortando
-    # exatamente onde começa a coluna do carrinho (x=793 de 1152, medido na
-    # página). O carrinho fica no celular, que cobre o canto direito do monitor:
-    # antes ele tapava metade da coluna do carrinho e a tela grande parecia
-    # cortada pela metade. De quebra, mostrar menos coisa aumenta a letra: a
-    # redução até o monitor de 253px cai de 4,5x para 3,1x.
+    # MONITOR: o BALCÃO — barra lateral, busca e a grade de produtos, com o
+    # carrinho recolhido pelo próprio sistema (o carrinho fica no celular, que
+    # cobre o canto direito do monitor).
+    #
+    # A LARGURA DA CAPTURA é o que decide se a peça fica bonita, e não a
+    # nitidez. A barra lateral do sistema é fixa em 240px: ela come 23% da tela
+    # a 1024, 19% a 1280 e 17% a 1440. A 1024 a interface aparecia AMPLIADA —
+    # três colunas de produto, a terceira cortada pelo celular e a segunda
+    # fileira partida pela borda: cara de print com zoom, não de monitor.
+    # A 1440 a letra encolhe sem ganhar nada, a quarta fileira fica partida no
+    # meio e o "PRODUTO TESTE" do catálogo entra na vitrine.
+    # 1280x758 é o ponto: quatro colunas, três fileiras inteiras, rodapé de
+    # atalhos visível e o preço ainda legível no render de 390px. Comparado
+    # lado a lado no tamanho real antes de escolher.
     _, (x0, y0, x1, y1) = cantos(dilatar(verde)); prop = (x1 - x0 + 1) / (y1 - y0 + 1)
-    # a captura já vem na proporção da tela (1024x606 = 1,69): entra inteira,
+    # a captura já vem na proporção da tela (1280x758 = 1,69): entra inteira,
     # com rodapé e tudo — nada cortado pela borda do monitor
     monitor = pdv.crop((0, 0, pdv.width, min(pdv.height, round(pdv.width / prop))))
 

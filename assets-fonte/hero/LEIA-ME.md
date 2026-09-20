@@ -130,3 +130,28 @@ O que muda na peça:
 
 Antes de fotografar, esperar o selo de latência do sistema ficar **verde**
 (< 350ms): num print, o badge laranja de 900ms lê como sistema lento.
+
+### A largura da captura é o que decide (20/09/2026, segunda rodada)
+
+"Só diminuir a dimensão para ficar legal." Ele estava certo: o problema nunca
+foi nitidez, era **escala**. A barra lateral do sistema é fixa em **240px**, e é
+ela que denuncia o zoom — come **23%** da tela a 1024, **19%** a 1280 e **17%**
+a 1440. A 1024 a peça mostrava três colunas de produto (a terceira cortada pelo
+celular) e uma fileira partida na borda de baixo: cara de print ampliado.
+
+Capturei 1280x758 e 1440x852 e montei as três peças, renderizadas lado a lado
+na largura real da hero (351px CSS, DPR 3) antes de escolher:
+
+| captura | como fica no monitor de 351px |
+|---|---|
+| 1024x606 | 3 colunas, a 3ª cortada, fileira partida — **ampliada demais** |
+| **1280x758** | **4 colunas, 3 fileiras inteiras, rodapé de atalhos, preço legível** |
+| 1440x852 | letra menor sem ganho, 4ª fileira partida no meio, "PRODUTO TESTE" entra na vitrine |
+
+Ficou **1280x758, densidade 2**. As capturas de 1024 e 1440 foram apagadas: só
+a que está em uso fica no repositório.
+
+O script aceita argumentos para essa comparação sem sobrescrever o que está no
+ar: `python3 tools/peca-hero-celular.py <captura.png> <pasta-de-saida>`.
+Precisa de numpy e Pillow, que não estão no Python do sistema —
+`uv run --with numpy --with pillow python tools/peca-hero-celular.py`.
