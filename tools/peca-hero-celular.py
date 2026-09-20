@@ -27,12 +27,12 @@ Uso: python3 tools/peca-hero-celular.py   (Pillow + numpy)
 """
 import pathlib
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 CHROMA = RAIZ / 'assets-fonte/hero/aparelhos-2-chroma.png'
 CAP = RAIZ / 'assets-fonte/hero/capturas'
-PDV = CAP / 'pdv-1440-dpr2.png'          # 2880x1704 — PDV a 1440px, densidade 2
+PDV = CAP / 'pdv-1152-dpr2.png'          # 2304x1364 — PDV a 1152px (interface maior na tela pequena)
 CARRINHO = CAP / 'carrinho-390-dpr3.png'  # 1170x2532 — carrinho no layout de celular, densidade 3
 SAIDA = RAIZ / 'public/assets/hero'
 
@@ -61,7 +61,9 @@ def encaixar(base, mask, tela):
     quad, (x0, y0, x1, y1) = cantos(mask)
     lw, lh = x1 - x0 + 1, y1 - y0 + 1
     # cobre a caixa exatamente: a tela já vem na proporção certa
-    img = tela.resize((lw, lh), Image.LANCZOS)
+    # a redução é grande (o PDV inteiro cabe num monitor de 253px na página):
+    # sem realce, o traço fino da fonte some e a tela vira mancha cinza
+    img = tela.resize((lw, lh), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.1, percent=85, threshold=2))
     c = coef([(x - x0, y - y0) for x, y in quad], [(0, 0), (lw - 1, 0), (lw - 1, lh - 1), (0, lh - 1)])
     warp = img.transform((lw, lh), Image.PERSPECTIVE, tuple(c), Image.BICUBIC)
     base.paste(warp, (x0, y0), Image.fromarray((mask[y0:y1 + 1, x0:x1 + 1] * 255).astype('uint8')))
@@ -103,7 +105,10 @@ def main():
     alpha[dilatar(verde) | dilatar(magenta)] = 1.0
     final = Image.fromarray(np.dstack([arr, alpha * 255]).astype('uint8'), 'RGBA')
     final.save(SAIDA / 'aparelhos-2.webp', quality=88, method=6)
-    final.resize((1200, round(1200 * final.height / final.width)), Image.LANCZOS).save(SAIDA / 'aparelhos-2-1200.webp', quality=88, method=6)
+    menor = final.resize((1200, round(1200 * final.height / final.width)), Image.LANCZOS)
+    rgb = Image.merge('RGB', menor.split()[:3]).filter(ImageFilter.UnsharpMask(radius=0.8, percent=60, threshold=2))
+    menor = Image.merge('RGBA', (*rgb.split(), menor.split()[3]))
+    menor.save(SAIDA / 'aparelhos-2-1200.webp', quality=90, method=6)
     final.save('/tmp/peca2-final.png')
     print('ok')
 

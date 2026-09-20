@@ -88,3 +88,20 @@ Como capturar de novo: navegador do agente logado (`de browser start`), aba de
 fundo por `abaSemFoco()`, `Emulation.setDeviceMetricsOverride` na largura
 desejada. Os cliques nos produtos só montam o carrinho — nunca finalizar venda.
 A sessão do painel `/admin` tem dados reais de clientes: não fotografar.
+
+### Por que 1152px e não 1440 (20/09/2026)
+
+O Victor: "as imagens dentro dos aparelhos continuam um lixo". Não era o
+arquivo: o PDV inteiro cabe num monitor de 253px na página — 5,7x de redução a
+1440px, que apaga o traço fino da fonte. Três medidas, medidas lado a lado em
+tamanho real:
+
+1. capturar o sistema a **1152px** em vez de 1440 (mesma interface, menos
+   elementos por tela — a letra chega 25% maior no destino);
+2. **realce de nitidez** (unsharp) depois de cada redução, no encaixe da tela e
+   na versão de 1200px;
+3. rolar a grade de produtos e o carrinho de volta ao **topo** antes de
+   fotografar — os cliques que montam a venda deixam os dois rolados.
+
+`de browser stop`/`navegador.close()` fecham o Chrome do agente e derrubam a
+sessão: nos roteiros de captura, **nunca fechar o navegador**.
