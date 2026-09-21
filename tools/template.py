@@ -177,6 +177,14 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
 <head>
     <meta charset="UTF-8" />
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MCJHLF3Q');</script>
+    <!-- End Google Tag Manager -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <title>%(title)s</title>
     <meta name="description" content="%(description)s" />
@@ -229,6 +237,11 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCJHLF3Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
 
     <nav class="nav" aria-label="Principal">
@@ -382,6 +395,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <a href="%(app)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
 
     <script src="/efeitos.js" defer></script>
+    <script src="/rastreio.js" defer></script>
 </body>
 
 </html>
