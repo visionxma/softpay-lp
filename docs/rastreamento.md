@@ -128,6 +128,42 @@ Fontes: [developers.facebook.com — Handling Duplicate Pixel and Conversions AP
 (setup only-pixel perde mais da metade das conversões; dedup obrigatória ao
 rodar os dois juntos).
 
+## O funil entre os dois domínios
+
+**Medido no ar em 21/09/2026**, com a coleta abortada:
+
+| URL do aplicativo | pixels que carregam |
+|---|---|
+| `/auth` | `1476552610693219` |
+| `/auth?ref=alexandrehen_cf9e` | `1476552610693219`, `26424939163836170` |
+| `/auth?utm_source=meta&fbclid=…` | `1476552610693219` |
+
+O aplicativo **já dispara** `CompleteRegistration` e `StartTrial` no cadastro,
+com Advanced Matching, e o StartTrial sai pelos dois lados com o mesmo
+`event_id` (navegador e Conversions API). Isso está certo e existe desde antes.
+
+O que faltava era o **pixel da campanha** (`26424939163836170`) estar presente na
+hora do cadastro: ele só armava com o `ref` de um link específico, e a LP mandava
+todo mundo para `/auth` sem marca nenhuma. Na prática, a campanha via o clique
+aqui e nunca o cadastro lá.
+
+**Como ficou:** a LP marca a saída dos botões de cadastro com `sp_lp=1`, e o
+aplicativo tem a entrada correspondente na tabela de pixels de link. "Entrar"
+sai sem a marca — é cliente voltando para a conta, não é aquisição.
+
+### `ref` e `utm_campaign` NÃO viajam daqui. Nunca.
+
+No aplicativo, `?ref=` é o código da Plataforma de Parceiros: vira
+`accounts.affiliate_ref` no cadastro e **paga comissão em dinheiro**. E
+`utm_campaign` é o substituto documentado dele (`src/lib/partnerTracking.ts`,
+"doc 03 §2.2"). Repassar o nome da campanha faria todo cadastro vindo de anúncio
+nascer atribuído a um afiliado que não existe — e conta que nasce com
+`affiliate_ref` fica de fora do programa Indique e Ganhe.
+
+Viajam: `utm_source`, `utm_medium`, `utm_content`, `utm_term`, `utm_id`,
+`utm_source_platform`, `utm_creative_format`, `utm_marketing_tactic`, `fbclid`,
+`gclid`, `wbraid`, `gbraid`, `ttclid` e `msclkid`.
+
 ## A origem da visita viaja junto
 
 `rastreio.js` copia `utm_*`, `fbclid`, `gclid`, `ttclid`, `msclkid` e `ref` da
@@ -141,11 +177,12 @@ para qualquer relatório que leia `utm_*`.
 
 ## O que falta, e de quem depende
 
-1. **Evento de conta criada no aplicativo** (`www.softpaybr.com/auth`). Hoje o
-   funil do site termina no clique. Enquanto o cadastro não empurrar
-   `{ event: 'conta_criada', meta_evento: 'CompleteRegistration', event_id: … }`,
-   ninguém mede quantos cliques viram conta. **Depende do aplicativo.**
-2. **Conversions API.** Ver acima. **Depende de servidor + token.**
+1. **Merge do PR no aplicativo** (`visionxma/softpay`, branch
+   `rastreio/pixel-da-campanha-na-lp`). Sem ele, o `sp_lp=1` que a LP já manda
+   não arma nada do outro lado e o funil continua cortado.
+2. **GA4 e GTM não existem no aplicativo** — medido: `dataLayer` inexistente,
+   nenhum contêiner. O funil do GA4 morre na fronteira dos domínios.
+   **Depende dos sócios.**
 3. **Consentimento (LGPD).** Está pronto e desligado —
    `window.SOFTPAY_CONSENTIMENTO` no `<head>`. Ligar reduz a conversão
    atribuída: quem recusar sai da atribuição. **Decisão dos sócios + gestor.**
