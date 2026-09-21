@@ -39,8 +39,30 @@
 
     window.dataLayer = window.dataLayer || [];
 
-    var APP = /(^|\.)softpaybr\.com$/i;              // domínio do aplicativo
-    var UTM = /^(utm_[a-z]+|fbclid|gclid|ttclid|msclkid|ref)$/i;
+    // Só o aplicativo. `(^|\.)softpaybr\.com` aceitava também
+    // site.softpaybr.com: numa URL de prévia do Cloudflare o `location.hostname`
+    // é outro, a guarda de mesmo domínio não pega, e os links institucionais
+    // recebiam parâmetro de campanha à toa.
+    var APP = /^(www\.)?softpaybr\.com$/i;
+    // O que viaja para o aplicativo. Repare no que NÃO está aqui:
+    //
+    //   `ref` e `utm_campaign` — no aplicativo, `?ref=` é o código da
+    //   Plataforma de Parceiros, que paga COMISSÃO EM DINHEIRO, e
+    //   `utm_campaign` é o substituto dele (src/lib/partnerTracking.ts, "doc 03
+    //   §2.2: o `ref` explícito vence; `utm_campaign` é o fallback"). O valor
+    //   vai para `accounts.affiliate_ref` no cadastro, e conta que nasce com
+    //   `affiliate_ref` fica de fora do programa Indique e Ganhe.
+    //
+    //   Ou seja: repassar o nome da campanha faria todo cadastro vindo de
+    //   anúncio nascer atribuído a um afiliado que não existe. O próprio
+    //   aplicativo já tinha tropeçado nessa classe de defeito e documentou a
+    //   exceção da vitrine do lojista pelo mesmo motivo.
+    //
+    // Quem decide pagar comissão é a Plataforma de Parceiros, não a LP.
+    // wbraid e gbraid: em iOS o Google Ads manda esses no lugar do gclid.
+    // source_platform, creative_format e marketing_tactic são UTMs de nome
+    // composto — `utm_[a-z]+` não pegava o segundo sublinhado.
+    var UTM = /^(utm_(source|medium|content|term|id|source_platform|creative_format|marketing_tactic)|fbclid|gclid|wbraid|gbraid|ttclid|msclkid)$/i;
 
     // O relógio só corre com a aba à vista. Sem isso, uma aba aberta em segundo
     // plano acumularia 30 segundos sozinha e a "visita qualificada" passaria a
@@ -55,8 +77,15 @@
     // Voltar pelo botão do navegador restaura a página do cache (bfcache): sem
     // zerar aqui, o visitante que foi ao cadastro e voltou apareceria com
     // minutos de leitura que não existiram.
+    // `voltou` é lido pelos vigias: restaurar do bfcache zera o relógio, e a
+    // profundidade da visita anterior tem de zerar junto — senão 50% rolados
+    // antes de sair se somam a 30 s depois de voltar e sai um Lead que não
+    // aconteceu.
+    var reinicios = [];
     window.addEventListener('pageshow', function (ev) {
-        if (ev.persisted) { acumulado = 0; desde = Date.now(); }
+        if (!ev.persisted) return;
+        acumulado = 0; desde = Date.now();
+        for (var i = 0; i < reinicios.length; i++) { try { reinicios[i](); } catch (e) {} }
     });
 
     /* ---------- identificador único, para o dia do CAPI ---------- */
@@ -77,11 +106,13 @@
         var de = document.documentElement;
         var rolavel = de.scrollHeight - window.innerHeight;
         if (rolavel <= 0) return 100;
-        return Math.min(100, Math.round((window.scrollY / rolavel) * 100));
+        return Math.min(100, Math.floor((window.scrollY / rolavel) * 100));
     }
 
+    // floor, não round: com round, 29,6 s viravam 30 e o evento saía antes da
+    // condição ser cumprida de verdade.
     function segundos() {
-        return Math.round((acumulado + (desde ? Date.now() - desde : 0)) / 1000);
+        return Math.floor((acumulado + (desde ? Date.now() - desde : 0)) / 1000);
     }
 
     // Rótulo humano de onde o botão estava. As peças flutuantes vêm primeiro:
@@ -177,9 +208,17 @@
     // Dois eventos, não um: o botão do meio (abrir em nova aba) NÃO dispara
     // 'click' no Chrome desde a versão 55 — dispara 'auxclick'. Quem compara
     // preço costuma abrir o cadastro em aba nova, e esse clique estava sumindo.
+    // Clique duplo num link que abre em nova aba mandava dois eventos, com
+    // event_id diferentes — a Meta contaria as duas intenções. Meio segundo de
+    // carência por elemento resolve sem esconder clique legítimo em outro botão.
+    var ultimo = { el: null, quando: 0 };
+
     function noClique(ev) {
         var a = ev.target.closest && ev.target.closest('a[href]');
         if (!a) return;
+        var agora = Date.now();
+        if (ultimo.el === a && agora - ultimo.quando < 500) return;
+        ultimo.el = a; ultimo.quando = agora;
 
         var href = a.getAttribute('href') || '';
 
@@ -218,20 +257,35 @@
         // razão máxima possível era 0,59 em 360px — uma linha a mais num cartão
         // e o evento pararia de disparar sem ninguém perceber. O que interessa
         // é quanto da TELA a tabela de preço ocupa.
+        // A lista de limiares é da SEÇÃO; a condição é em pixels da TELA. Com
+        // poucos limiares as duas não conversam: na seção medida (1.223px de
+        // altura em 390px), metade da tela são 422px, ou razão 0,345 — entre o
+        // aviso de 0,25 e o de 0,5. Quem parasse ali não receberia aviso nenhum
+        // e o evento sumia. Passo de 0,02 = aviso a cada ~24px.
+        var limiares = [];
+        for (var k = 0; k <= 50; k++) limiares.push(k / 50);
+
         var relogio = null;
+        function desarma() { if (relogio) { clearTimeout(relogio); relogio = null; } }
+        // O segundo de leitura não vale com a aba escondida: mostrar a seção,
+        // trocar de aba e o evento sair sozinho seria contar o que ninguém viu.
+        document.addEventListener('visibilitychange', function () {
+            if (document.visibilityState !== 'visible') desarma();
+        });
+
         var obs = new IntersectionObserver(function (itens) {
             itens.forEach(function (i) {
                 var visivel = i.intersectionRect.height;
                 var basta = Math.min(window.innerHeight * 0.5, i.boundingClientRect.height * 0.5);
-                if (i.isIntersecting && visivel >= basta) {
+                if (i.isIntersecting && visivel >= basta && document.visibilityState === 'visible') {
                     if (relogio) return;
                     relogio = setTimeout(function () {
                         empurra('viu_planos', 'ViewContent', { content_name: 'Planos', content_type: 'pricing' });
                         obs.disconnect();
                     }, 1000);
-                } else if (relogio) { clearTimeout(relogio); relogio = null; }
+                } else { desarma(); }
             });
-        }, { threshold: [0, 0.1, 0.25, 0.5, 0.75, 1] });
+        }, { threshold: limiares });
         obs.observe(alvo);
     }
 
@@ -260,12 +314,14 @@
                 empurra('visita_qualificada', 'Lead', { profundidade_max: maxProf });
                 para();
             }
+            // Desistir depois de 10 minutos DE ABA À VISTA, não de relógio: com
+            // relógio, quem deixa a aba aberta atrás de outra por dez minutos e
+            // volta para ler perdia o evento sem nunca ter lido nada.
+            if (!pronto && segundos() >= 600) para();
         }
         window.addEventListener('scroll', olha, { passive: true });
         t = setInterval(olha, 5000);
-        // Quem passou 10 minutos à vista sem chegar à metade não vai chegar.
-        // Desistir é o que impede um temporizador de sobreviver a aba esquecida.
-        setTimeout(function () { if (!pronto) para(); }, 10 * 60 * 1000);
+        reinicios.push(function () { maxProf = 0; });
     }
 
     // Página de conteúdo lida de verdade (15 s e um quarto rolado), não uma
@@ -273,19 +329,29 @@
     function vigiaLeitura() {
         var tipo = tipoDaPagina();
         if (!/^(guias|blog|comparativos|solucoes|segmentos|perguntas)/.test(tipo)) return;
-        var pronto = false, t = null;
+        var pronto = false, t = null, maxProf = 0;
         function para() { pronto = true; if (t) { clearInterval(t); t = null; } }
+        // Guarda a profundidade MÁXIMA: quem desce a 30%, volta ao topo e só
+        // então completa os 15 segundos já leu — olhar só a posição atual, de
+        // três em três segundos, perdia esse visitante.
+        function marca() { maxProf = Math.max(maxProf, profundidade()); }
+        window.addEventListener('scroll', marca, { passive: true });
+        reinicios.push(function () { maxProf = 0; });
+
         t = setInterval(function () {
             if (pronto) { para(); return; }
-            if (segundos() >= 15 && profundidade() >= 25) {
+            marca();
+            if (segundos() >= 15 && maxProf >= 25) {
                 empurra('leu_conteudo', 'ViewContent', {
                     content_name: (document.title || '').split('|')[0].trim().slice(0, 80),
-                    content_type: tipo
+                    content_type: tipo,
+                    profundidade_max: maxProf
                 });
                 para();
+                window.removeEventListener('scroll', marca);
             }
+            if (!pronto && segundos() >= 600) { para(); window.removeEventListener('scroll', marca); }
         }, 3000);
-        setTimeout(function () { if (!pronto) para(); }, 10 * 60 * 1000);
     }
 
     /* ---------- a origem da visita viaja junto para o aplicativo ---------- */
@@ -298,13 +364,22 @@
         var atual = new URLSearchParams(location.search);
         var levar = [];
         atual.forEach(function (v, k) { if (UTM.test(k)) levar.push([k, v]); });
-        if (!levar.length) return;
 
         var links = document.querySelectorAll('a[href]');
         for (var i = 0; i < links.length; i++) {
             var a = links[i], u;
             try { u = new URL(a.href, location.href); } catch (e) { continue; }
             if (!APP.test(u.hostname) || u.hostname === location.hostname) continue;
+
+            // `sp_lp=1` arma o pixel da campanha no aplicativo (a tabela LINKS
+            // do index.html dele). Sem esta marca o pixel da campanha via o
+            // clique aqui e nunca o cadastro lá — medido em 21/09/2026: /auth
+            // carregava só o pixel próprio do SoftPay.
+            //
+            // Só nos botões de CADASTRO. "Entrar" é cliente voltando para a
+            // conta: não é aquisição e não entra no público da campanha.
+            if (!ehEntrar(a)) u.searchParams.set('sp_lp', '1');
+
             for (var j = 0; j < levar.length; j++) {
                 if (!u.searchParams.has(levar[j][0])) u.searchParams.set(levar[j][0], levar[j][1]);
             }
