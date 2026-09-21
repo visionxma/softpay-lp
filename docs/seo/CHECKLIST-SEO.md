@@ -45,7 +45,7 @@
 ```bash
 python3 tools/build.py           # gera as páginas a partir de tools/c_*.py
 python3 tools/sitemap.py         # regenera o sitemap (com extensão de imagem)
-python3 tools/fingerprint.py     # versiona CSS/JS pelo hash do conteúdo
+python3 tools/versionar-assets.py  # versiona CSS/JS/imagem pelo hash do conteúdo
 python3 tools/verifica.py        # auditoria: estrutura, metadata, links, schema
 python3 tools/mapa_interlinks.py # regenera o mapa de links
 ```

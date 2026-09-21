@@ -168,7 +168,7 @@ sips -g pixelWidth -g pixelHeight public/assets/lojistas/pet-shop.webp
 
 Depois é só me avisar: eu ligo cada foto à sua página (campo `figura` em
 `tools/c_segmentos.py`, com o `alt` acima), rodo `build.py`, `sitemap.py`,
-`fingerprint.py` e `verifica.py`, e publico.
+`versionar-assets.py` e `verifica.py`, e publico.
 
 ## Diversidade — de propósito
 

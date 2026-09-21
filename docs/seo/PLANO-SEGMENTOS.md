@@ -156,7 +156,7 @@ credibilidade que o §32 do briefing pede.
       tabela e diz para quem o SoftPay **não** serve
 - [x] Bot do WhatsApp citado em mercadinho, distribuidora, farmácia, variedades e
       papelaria — os segmentos escritos antes de ele existir
-- [x] `build.py`, `sitemap.py`, `fingerprint.py`, `verifica.py` e `mapa_interlinks.py`
+- [x] `build.py`, `sitemap.py`, `versionar-assets.py`, `verifica.py` e `mapa_interlinks.py`
       rodados: **54 páginas, 53 URLs no sitemap, 1440 links internos, 0 órfãs**
 - [x] Piloto validada visualmente em desktop e mobile
 

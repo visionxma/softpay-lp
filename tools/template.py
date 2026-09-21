@@ -177,6 +177,14 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
 <head>
     <meta charset="UTF-8" />
+    <!-- Consentimento (LGPD). Ligue trocando false por true — aqui e em
+         tools/template.py. Desligado, nada muda: consentimento.js sai na
+         primeira linha. Ligado, o GTM sobe em modo negado (Consent Mode v2) e o
+         Pixel fica com consent revoke até o visitante aceitar. -->
+    <script>window.SOFTPAY_CONSENTIMENTO=false;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){window.dataLayer.push(arguments)};gtag('consent','default',{ad_storage:'denied',
+    ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500})}</script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -185,7 +193,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     })(window,document,'script','dataLayer','GTM-MCJHLF3Q');</script>
     <!-- End Google Tag Manager -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>%(title)s</title>
     <meta name="description" content="%(description)s" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -227,6 +235,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    if (window.SOFTPAY_CONSENTIMENTO) fbq('consent', 'revoke');
     fbq('init', '1476552610693219');
     fbq('init', '26424939163836170');
     fbq('track', 'PageView');
@@ -396,6 +405,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
     <script src="/efeitos.js" defer></script>
     <script src="/rastreio.js" defer></script>
+    <script src="/consentimento.js" defer></script>
 </body>
 
 </html>

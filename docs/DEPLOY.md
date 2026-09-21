@@ -121,6 +121,6 @@ npx wrangler pages deploy public --project-name=softpay-lp
 - **Cache de um ano em `/assets/*`.** Ao trocar uma imagem, use um nome de
   arquivo novo, senão o navegador segue com a antiga.
 - **`style.css` e `script.js` são versionados pelo hash do conteúdo.**
-  Depois de editá-los, rode `python3 tools/fingerprint.py`. Já aconteceu de
+  Depois de editá-los, rode `python3 tools/versionar-assets.py`. Já aconteceu de
   o CSS novo ficar preso atrás do cache de um dia com o HTML novo já no ar —
-  o fingerprint existe para isso não repetir.
+  o versionar-assets existe para isso não repetir.

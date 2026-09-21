@@ -3,6 +3,14 @@
 
 <head>
     <meta charset="UTF-8" />
+    <!-- Consentimento (LGPD). Ligue trocando false por true — aqui e em
+         tools/template.py. Desligado, nada muda: consentimento.js sai na
+         primeira linha. Ligado, o GTM sobe em modo negado (Consent Mode v2) e o
+         Pixel fica com consent revoke até o visitante aceitar. -->
+    <script>window.SOFTPAY_CONSENTIMENTO=false;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){window.dataLayer.push(arguments)};gtag('consent','default',{ad_storage:'denied',
+    ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500})}</script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,7 +19,7 @@
     })(window,document,'script','dataLayer','GTM-MCJHLF3Q');</script>
     <!-- End Google Tag Manager -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>Sistema para Farmácia: Gestão Comercial e PDV | SoftPay</title>
     <meta name="description" content="Sistema para farmácia com PDV, controle de estoque, caixa, clientes e notas fiscais. Gestão comercial do balcão, sem substituir o SNGPC. Teste grátis 7 dias." />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -36,7 +44,7 @@
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="/sistema.css?v=8e9608aba8" />
+    <link rel="stylesheet" href="/sistema.css?v=23de96b92c" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -175,6 +183,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    if (window.SOFTPAY_CONSENTIMENTO) fbq('consent', 'revoke');
     fbq('init', '1476552610693219');
     fbq('init', '26424939163836170');
     fbq('track', 'PageView');
@@ -506,6 +515,7 @@
 
     <script src="/efeitos.js?v=1b28950e4e" defer></script>
     <script src="/rastreio.js?v=45aa350fa3" defer></script>
+    <script src="/consentimento.js?v=63d0b07560" defer></script>
 </body>
 
 </html>

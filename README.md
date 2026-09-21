@@ -76,7 +76,7 @@ está em **[`docs/DEPLOY.md`](docs/DEPLOY.md)**.
 python3 tools/build.py
 
 # 2. editou style.css ou script.js?
-python3 tools/fingerprint.py
+python3 tools/versionar-assets.py
 
 # 3. sempre, antes de commitar
 python3 tools/verifica.py
@@ -96,7 +96,7 @@ git add -A && git commit -m "..." && git push
 - **Cache:** HTML sempre revalida; `assets/` tem cache de um ano. Ao trocar uma
   imagem, use um nome de arquivo novo.
 - **`style.css` e `script.js` são versionados pelo hash do conteúdo.**
-  Depois de editá-los, rode `python3 tools/fingerprint.py`: ele recalcula o
+  Depois de editá-los, rode `python3 tools/versionar-assets.py`: ele recalcula o
   `?v=` em todas as páginas. Sem isso, o cache de um dia do `_headers` serve
   a versão antiga e o layout quebra.
 

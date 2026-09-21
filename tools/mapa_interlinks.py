@@ -30,7 +30,7 @@ def main():
         for m in re.finditer(r'<a[^>]+href="(/[^"#?]*)"[^>]*>(.*?)</a>', s, re.S):
             destino = m.group(1)
             anchor = re.sub(r"<[^>]+>", "", m.group(2)).strip()
-            if destino.startswith("/assets/") or destino in ("/style.css", "/script.js") or not anchor:
+            if destino.startswith("/assets/") or destino in ("/sistema.css", "/legal.css", "/efeitos.js", "/cena.js", "/rastreio.js") or not anchor:
                 continue
             links.append((rota(f), destino, anchor))
     os.chdir(RAIZ)

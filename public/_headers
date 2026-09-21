@@ -14,10 +14,21 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# CSS/JS: versionados por query string (?v=N). Um dia de cache com revalidação.
-/style.css
+# CSS/JS: versionados pelo hash do conteúdo (?v=<hash>), por
+# tools/versionar-assets.py. Um dia de cache com revalidação.
+# Os nomes aqui têm de ser os arquivos que as páginas realmente carregam:
+# até 21/09/2026 esta lista ainda citava style.css e script.js, mortos desde a
+# migração para sistema.css — e sistema.css, efeitos.js, cena.js e rastreio.js,
+# que são os vivos, caíam no padrão do Cloudflare sem passar por aqui.
+/sistema.css
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
-/script.js
+/legal.css
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/efeitos.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/cena.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/rastreio.js
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Imagens e ícones: nomes estáveis, cache longo

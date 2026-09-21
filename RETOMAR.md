@@ -40,7 +40,7 @@ git clone https://github.com/visionxma/softpay-lp.git /tmp/lp && cd /tmp/lp
 rsync -a --exclude .git --exclude .wrangler --exclude __pycache__ \
       "/Users/alexandrehenrique/Documents/Alexandre Henrique/Projetos Code/SoftPay - LP/softpay-lp/" .
 python3 tools/build.py && python3 tools/sitemap.py && \
-python3 tools/fingerprint.py && python3 tools/verifica.py
+python3 tools/versionar-assets.py && python3 tools/verifica.py
 git add -A && git commit -m "..." && git push origin main
 ```
 
@@ -114,7 +114,7 @@ registro pelo WhatsApp.
 ```bash
 python3 tools/build.py            # gera as páginas a partir de tools/c_*.py
 python3 tools/sitemap.py          # regenera o sitemap
-python3 tools/fingerprint.py      # versiona CSS/JS — OBRIGATÓRIO após editar CSS/JS
+python3 tools/versionar-assets.py # versiona CSS/JS — OBRIGATÓRIO após editar CSS/JS
 python3 tools/verifica.py         # auditoria: estrutura, metadata, links, schema
 python3 tools/mapa_interlinks.py  # regenera o mapa de links internos
 ```
@@ -143,7 +143,7 @@ outro HTML — aí as media queries respondem à largura do iframe.
    e `.page-section` já zeram isso.
 3. **Nunca criar redirect `/termos → /termos.html`.** O `html_handling` do
    Cloudflare faz o caminho inverso; juntas, as duas regras dão loop infinito.
-4. **Sempre rodar `fingerprint.py` após mexer em CSS ou JS.** Sem isso, o cache
+4. **Sempre rodar `versionar-assets.py` após mexer em CSS ou JS.** Sem isso, o cache
    de um dia serve a versão antiga e o layout quebra para quem visita.
 5. **`compatibility_date` do wrangler** não pode ser mais nova que o binário.
    Use `--compatibility-date=2026-07-01`.

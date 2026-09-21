@@ -142,7 +142,7 @@ prompts acima já alternam de propósito.
    ```
 4. **Escreva um `alt` descritivo em cada uma** — é exigência de acessibilidade
    e conta para SEO (§35 do briefing).
-5. Rode `python3 tools/fingerprint.py` e publique.
+5. Rode `python3 tools/versionar-assets.py` e publique.
 
 ## O que mais ganharia com foto real
 

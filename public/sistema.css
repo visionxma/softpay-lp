@@ -3917,3 +3917,38 @@ a.so-leitor:focus {
 @media (pointer: coarse) {
     html { touch-action: pan-x pan-y; }
 }
+
+
+/* ------------------------------------- ALVO DE TOQUE SEM MEXER NO DESENHO
+   Medido em 21/09/2026, em aparelho de toque: o logotipo do cabeçalho (66×24),
+   o selo "Novo" do hero (99×37), a assinatura da VisionX no rodapé (276×35) e
+   os links do menu de desktop (38px de altura) ficavam abaixo dos 44px de alvo
+   de toque exigidos pela doutrina.
+
+   Aumentar a altura deles moveria o desenho que já foi ajustado à mão — o
+   rodapé compacto do celular, inclusive, é decisão registrada (o `min-height:0`
+   da linha ~2602 existe de propósito). Então a área clicável cresce POR FORA,
+   com um ::after posicionado que não ocupa espaço no fluxo: nenhum pixel
+   visível muda de lugar, e o dedo passa a ter os 44px.
+
+   Só em `pointer: coarse` — no mouse não há o que corrigir, e assim não há
+   risco de a área invisível roubar clique de vizinho no desktop. */
+@media (pointer: coarse) {
+    .nav__logo,
+    .nav__link,
+    .hero__selo,
+    .rodape__visionx { position: relative; }
+
+    .nav__logo::after,
+    .nav__link::after,
+    .hero__selo::after,
+    .rodape__visionx::after {
+        content: "";
+        position: absolute;
+        inset-inline: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        min-height: 44px;
+    }
+}
