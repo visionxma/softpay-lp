@@ -181,7 +181,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
          tools/template.py. Desligado, nada muda: consentimento.js sai na
          primeira linha. Ligado, o GTM sobe em modo negado (Consent Mode v2) e o
          Pixel fica com consent revoke até o visitante aceitar. -->
-    <script>window.SOFTPAY_CONSENTIMENTO=false;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
+    <script>window.SOFTPAY_CONSENTIMENTO=true;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
     window.gtag=function(){window.dataLayer.push(arguments)};gtag('consent','default',{ad_storage:'denied',
     ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500})}</script>
 
@@ -366,6 +366,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                         <li><a href="/contato/">Contato</a></li>
                         <li><a href="/termos.html">Termos</a></li>
                         <li><a href="/privacidade.html">Privacidade</a></li>
+                        <li><a href="#cookies" data-cookies>Cookies</a></li>
                         <li><a href="/reembolso.html">Reembolso</a></li>
                     </ul>
                 </div>

@@ -480,7 +480,56 @@
         };
     }
 
-    function comeca() { repassa(); vigiaPlanos(); vigiaQualificada(); vigiaLeitura(); inspetor(); }
+    /* ---------- "Fale agora": o formulário vira conversa ---------- */
+
+    // Não existe servidor aqui, e nem precisa: o canal de atendimento é o
+    // WhatsApp. O formulário monta a mensagem e abre a conversa com o texto
+    // pronto — sem caixa de spam, sem chave de API, e o lead cai onde alguém
+    // responde. O evento sai antes de abrir a janela.
+    function formulario() {
+        var f = document.querySelector('form[data-formulario]');
+        if (!f) return;
+        var nota = f.querySelector('[data-fala-nota]');
+        var notaOriginal = nota ? nota.textContent : '';
+
+        function erro(campo, msg) {
+            campo.setAttribute('aria-invalid', 'true');
+            if (nota) { nota.textContent = msg; nota.setAttribute('data-erro', ''); }
+            campo.focus();
+        }
+
+        f.addEventListener('input', function (ev) {
+            if (ev.target.getAttribute('aria-invalid')) {
+                ev.target.removeAttribute('aria-invalid');
+                if (nota) { nota.textContent = notaOriginal; nota.removeAttribute('data-erro'); }
+            }
+        });
+
+        f.addEventListener('submit', function (ev) {
+            ev.preventDefault();
+            var nome = f.elements.nome, negocio = f.elements.negocio, duvida = f.elements.duvida;
+
+            if (!nome.value.trim()) return erro(nome, 'Só falta o seu nome.');
+            if (!negocio.value) return erro(negocio, 'Escolha o tipo do seu negócio.');
+
+            var linhas = ['Oi! Sou ' + nome.value.trim() + ', tenho ' + negocio.value.toLowerCase() + '.'];
+            if (duvida.value.trim()) linhas.push(duvida.value.trim());
+            else linhas.push('Quero saber sobre o SoftPay.');
+
+            empurra('envio_formulario', 'Lead', {
+                cta_texto: 'Abrir conversa',
+                cta_local: 'formulario-contato',
+                form_negocio: negocio.value,
+                form_com_duvida: duvida.value.trim() ? 'sim' : 'nao'
+            });
+
+            window.open('https://wa.me/5586998193851?text=' + encodeURIComponent(linhas.join('\n')),
+                        '_blank', 'noopener');
+            if (nota) nota.textContent = 'Pronto — a conversa abriu numa aba nova.';
+        });
+    }
+
+    function comeca() { repassa(); vigiaPlanos(); vigiaQualificada(); vigiaLeitura(); formulario(); inspetor(); }
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', comeca);

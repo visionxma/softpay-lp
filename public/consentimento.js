@@ -17,8 +17,22 @@
     'use strict';
     if (!window.SOFTPAY_CONSENTIMENTO) return;
 
+    // ESTILO precisa ser atribuído ANTES do `return` de quem já escolheu: quem
+    // já aceitou ou recusou sai cedo, e se a folha de estilo ficasse depois
+    // disso, reabrir a escolha pelo link do rodapé injetaria `undefined`.
+    // Declaração de função é içada; atribuição de `var`, não.
+
     var CHAVE = 'softpay-consentimento';
     var POLITICA = '/privacidade';
+
+    // Microsoft Clarity — mapa de calor e gravação de sessão. Cole aqui o ID do
+    // projeto (Configurações → Setup, o código dentro de clarity("set", ...)).
+    // Vazio: não carrega nada.
+    //
+    // Fica AQUI, e não no <head>, de propósito: gravação de sessão é cookie não
+    // essencial, então só pode subir depois do aceite. Quem recusa nunca é
+    // gravado.
+    var CLARITY = '';
 
     function lido() {
         try { return localStorage.getItem(CHAVE); } catch (e) { return null; }
@@ -36,12 +50,20 @@
         });
         if (typeof window.fbq === 'function') window.fbq('consent', aceitou ? 'grant' : 'revoke');
         window.dataLayer.push({ event: 'consentimento', consentimento_escolha: aceitou ? 'aceito' : 'recusado' });
+        if (aceitou) sobeClarity();
     }
 
-    var escolha = lido();
-    if (escolha === 'aceito' || escolha === 'recusado') {
-        aplica(escolha === 'aceito');
-        return;
+    // Carrega uma vez só. Quem aceita, recusa e aceita de novo na mesma aba não
+    // pode acabar com dois gravadores na página.
+    var clarityNoAr = false;
+    function sobeClarity() {
+        if (!CLARITY || clarityNoAr) return;
+        clarityNoAr = true;
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+            t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', CLARITY);
     }
 
     var ESTILO = [
@@ -71,10 +93,34 @@
         '.co-barra[data-visivel="sim"]{opacity:1}}'
     ].join('');
 
+    // Revogar tem de ser tão fácil quanto aceitar — a ANPD pede que o titular
+    // possa retirar o consentimento "de forma facilitada e gratuita". Qualquer
+    // link com href="#cookies" ou [data-cookies] reabre a escolha, em qualquer
+    // página. É o que o rodapé e a Política de Privacidade usam.
+    document.addEventListener('click', function (ev) {
+        var a = ev.target.closest && ev.target.closest('[data-cookies], a[href="#cookies"]');
+        if (!a) return;
+        ev.preventDefault();
+        try { localStorage.removeItem(CHAVE); } catch (e) {}
+        var velho = document.querySelector('.co-barra');
+        if (velho) velho.remove();
+        monta();
+    });
+
+    var escolha = lido();
+    if (escolha === 'aceito' || escolha === 'recusado') {
+        aplica(escolha === 'aceito');
+        return;
+    }
+
+
     function monta() {
-        var st = document.createElement('style');
-        st.textContent = ESTILO;
-        document.head.appendChild(st);
+        if (!document.getElementById('co-estilo')) {
+            var st = document.createElement('style');
+            st.id = 'co-estilo';
+            st.textContent = ESTILO;
+            document.head.appendChild(st);
+        }
 
         var barra = document.createElement('div');
         barra.className = 'co-barra';

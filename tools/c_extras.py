@@ -194,13 +194,49 @@ dict(
   intro="Atendimento humano, pelo WhatsApp, para dúvidas antes de contratar e para o dia a dia de quem já usa.",
   breadcrumbs=[("Contato", None)],
   blocks=[
-    sec("Canais de atendimento",
+    sec("Fale agora",
+      """
+      <form class="fala" data-formulario novalidate>
+        <div class="fala__par">
+          <label class="fala__campo">
+            <span>Seu nome</span>
+            <input name="nome" type="text" autocomplete="name" required placeholder="Como te chamamos" />
+          </label>
+          <label class="fala__campo">
+            <span>Seu negócio</span>
+            <select name="negocio" required>
+              <option value="">Escolha</option>
+              <option>Mercadinho</option>
+              <option>Loja de roupas</option>
+              <option>Farmácia</option>
+              <option>Distribuidora</option>
+              <option>Papelaria</option>
+              <option>Celulares e acessórios</option>
+              <option>Materiais de construção</option>
+              <option>Autopeças</option>
+              <option>Pet shop</option>
+              <option>Outro</option>
+            </select>
+          </label>
+        </div>
+        <label class="fala__campo">
+          <span>O que você quer saber <i>(opcional)</i></span>
+          <textarea name="duvida" rows="2" placeholder="Ex.: emito NF-e no meu estado?"></textarea>
+        </label>
+        <button class="btn btn--acao fala__enviar" type="submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.1-1.3A9.9 9.9 0 1 0 12 2zm0 18.1a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.2.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.8.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3z"/></svg>
+          Abrir conversa
+        </button>
+        <p class="fala__nota" data-fala-nota>Abre o WhatsApp com a sua mensagem pronta. Responde gente, não robô.</p>
+      </form>
+      """,
+    ),
+    sec("Outros canais",
       cards([
         ("WhatsApp", "(86) 9 9819-3851 — canal principal, atendimento humano"),
         ("E-mail", "suporte@softpaybr.com"),
         ("Perguntas frequentes", "Respostas diretas às dúvidas mais comuns"),
       ]),
-      p("O WhatsApp é o caminho mais rápido: <a href=\"https://wa.me/5586998193851\" target=\"_blank\" rel=\"noopener\">clique aqui para abrir a conversa</a>."),
     ),
     sec("Antes de contratar, pergunte",
       p("Se algum recurso é decisivo para a sua operação, confirme antes de assinar. As perguntas que mais valem a pena fazer:"),

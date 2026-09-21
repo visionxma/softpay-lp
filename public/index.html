@@ -7,7 +7,7 @@
          tools/template.py. Desligado, nada muda: consentimento.js sai na
          primeira linha. Ligado, o GTM sobe em modo negado (Consent Mode v2) e o
          Pixel fica com consent revoke até o visitante aceitar. -->
-    <script>window.SOFTPAY_CONSENTIMENTO=false;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
+    <script>window.SOFTPAY_CONSENTIMENTO=true;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
     window.gtag=function(){window.dataLayer.push(arguments)};gtag('consent','default',{ad_storage:'denied',
     ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500})}</script>
 
@@ -56,7 +56,7 @@
     <link rel="preload" as="image" href="/assets/sistema/pdv.webp?v=4737e8d2c1" fetchpriority="high" media="(min-width: 62rem)" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="sistema.css?v=23de96b92c" />
+    <link rel="stylesheet" href="sistema.css?v=e02300ae95" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -171,7 +171,7 @@
                             stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="20 6 9 17 4 12" />
                         </svg>
-                        7 dias grátis · sem cartão · sem fidelidade
+                        7 dias grátis · <b>a partir de R$&nbsp;69/mês</b> · sem cartão
                     </p>
 
                     <div class="hero__prova">
@@ -1161,6 +1161,7 @@
                         <li><a href="/contato/">Contato</a></li>
                         <li><a href="/termos.html">Termos</a></li>
                         <li><a href="/privacidade.html">Privacidade</a></li>
+                        <li><a href="#cookies" data-cookies>Cookies</a></li>
                         <li><a href="/reembolso.html">Reembolso</a></li>
                     </ul>
                 </div>
@@ -1196,8 +1197,8 @@
 
     <script src="efeitos.js?v=1b28950e4e" defer></script>
     <script src="cena.js?v=ddc62e4d13" defer></script>
-    <script src="/rastreio.js?v=07fec01ff6" defer></script>
-    <script src="/consentimento.js?v=63d0b07560" defer></script>
+    <script src="/rastreio.js?v=3455011df1" defer></script>
+    <script src="/consentimento.js?v=341e654eb0" defer></script>
 </body>
 
 </html>

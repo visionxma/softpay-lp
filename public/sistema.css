@@ -3952,3 +3952,59 @@ a.so-leitor:focus {
         min-height: 44px;
     }
 }
+
+
+/* ---------------------------------------------- FORMULÁRIO "FALE AGORA"
+   Não manda e-mail: monta a mensagem e abre o WhatsApp, que é o canal onde
+   eles de fato respondem. Sem servidor, sem chave, sem caixa de spam — e o
+   lead cai onde alguém lê. Três campos, dois deles lado a lado no celular:
+   campo curto sozinho numa linha de 100% é o que faz formulário cansar. */
+.fala { display: grid; gap: var(--sp-3); margin: 0 0 var(--sp-5); }
+
+.fala__par {
+    display: grid;
+    gap: var(--sp-3);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 9.5rem), 1fr));
+}
+
+.fala__campo { display: grid; gap: var(--sp-1); min-width: 0; }
+.fala__campo > span {
+    font-size: var(--t-xs); font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--tinta-3);
+}
+.fala__campo > span i { font-style: normal; opacity: 0.7; letter-spacing: 0; text-transform: none; }
+
+.fala__campo input,
+.fala__campo select,
+.fala__campo textarea {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.6rem 0.875rem;
+    border: 1px solid var(--linha-forte);
+    border-radius: var(--r-sm);
+    background: var(--branco);
+    color: var(--tinta);
+    font-family: inherit;
+    font-size: max(1rem, var(--t-md));   /* 16px: o iOS não dá zoom no foco */
+    line-height: 1.4;
+}
+.fala__campo textarea { resize: vertical; min-height: 4.5rem; }
+.fala__campo input::placeholder,
+.fala__campo textarea::placeholder { color: var(--tinta-3); }
+
+.fala__campo input:focus-visible,
+.fala__campo select:focus-visible,
+.fala__campo textarea:focus-visible {
+    outline: 3px solid var(--acento); outline-offset: 2px; border-color: var(--azul);
+}
+
+/* Campo que o navegador recusou: contorno, não texto novo — a mensagem já
+   está no `data-fala-nota`, e duplicar aviso é o que deixa cansativo. */
+.fala__campo [aria-invalid="true"] { border-color: var(--erro, #B42318); }
+
+.fala__enviar { gap: var(--sp-2); justify-self: start; }
+@media (max-width: 30rem) { .fala__enviar { justify-self: stretch; } }
+.fala__enviar svg { flex: none; }
+
+.fala__nota { margin: 0; font-size: var(--t-sm); color: var(--tinta-2); }
+.fala__nota[data-erro] { color: var(--erro, #B42318); font-weight: 600; }

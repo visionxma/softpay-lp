@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
-    <link rel="stylesheet" href="/sistema.css?v=23de96b92c" />
+    <link rel="stylesheet" href="/sistema.css?v=e02300ae95" />
     <link rel="stylesheet" href="/legal.css?v=623a82279d" />
     <link rel="stylesheet" href="/medicao.css?v=d8ae0de68f" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
@@ -42,7 +42,7 @@
                 <p class="legal-sumario__titulo">Neste documento</p>
                 <ol>
                     <li><a href="#ver-funcionando">1. Ver funcionando agora</a></li>
-                    <li><a href="#eventos">2. Os sete eventos</a></li>
+                    <li><a href="#eventos">2. Os oito eventos</a></li>
                     <li><a href="#campos">3. Campos de cada evento</a></li>
                     <li><a href="#uma-tag">4. Montar uma tag só</a></li>
                     <li><a href="#pixels">5. Mapa dos pixels</a></li>
@@ -82,7 +82,7 @@
                 </section>
 
                 <section id="eventos">
-                    <h2>2. Os sete eventos</h2>
+                    <h2>2. Os oito eventos</h2>
                     <p>
                         O site <strong>não</strong> dispara <code>fbq('track', …)</code> de conversão.
                         Ele empurra o evento na camada de dados e quem vira isso em tag é o container
@@ -118,6 +118,11 @@
                                 <td data-rotulo="Evento"><span class="med-ev">clique_whatsapp</span></td>
                                 <td data-rotulo="Meta"><span class="med-meta">Contact</span></td>
                                 <td data-rotulo="Quando" data-largo>qualquer link de WhatsApp: botão, bolha flutuante ou rodapé</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">envio_formulario</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">Lead</span></td>
+                                <td data-rotulo="Quando" data-largo>envio do formulário “Fale agora” da página de contato. Traz <code>form_negocio</code> e <code>form_com_duvida</code></td>
                             </tr>
                             <tr>
                                 <td data-rotulo="Evento"><span class="med-ev">clique_email</span></td>
@@ -165,7 +170,7 @@
                         <li>Em <strong>Acionadores</strong>, crie um <em>Evento personalizado</em> com a expressão regular ligada e este nome de evento:</li>
                         <li>Em <strong>Tags</strong>, crie uma <em>Meta Pixel — evento personalizado</em>: nome do evento <code>{{DLV - meta_evento}}</code>, <code>eventID</code> <code>{{DLV - event_id}}</code>, os parâmetros que interessarem, e o acionador do passo 2.</li>
                     </ol>
-                    <code class="med-cod">cta_teste_gratis|clique_whatsapp|clique_email|viu_planos|visita_qualificada|leu_conteudo</code>
+                    <code class="med-cod">cta_teste_gratis|clique_whatsapp|clique_email|envio_formulario|viu_planos|visita_qualificada|leu_conteudo</code>
                     <p>
                         <code>clique_entrar</code> fica de fora da expressão de propósito. E
                         <strong>rolagem e tempo você já tem de graça</strong>: use os acionadores
@@ -265,26 +270,25 @@
                     <h2>8. O que ainda falta</h2>
                     <ul>
                         <li>
-                            <span class="med-falta">Sem mapa de calor.</span> A home tem 19 telas de
-                            rolagem no celular e a tabela de preço começa a 77% da altura. Uma
-                            ferramenta de gravação mostraria onde o tráfego pago para de rolar.
-                        </li>
-                        <li>
-                            <span class="med-falta">Os planos só existem na home.</span> As outras 77
-                            páginas levam o visitante para a home antes do preço.
+                            <span class="med-falta">Mapa de calor sendo instalado.</span> A home tem
+                            19 telas de rolagem no celular. A gravação de sessão mostra onde o
+                            tráfego pago para — e ela só sobe depois do aceite de cookies.
                         </li>
                         <li>
                             <span class="med-falta">Sem GA4 no aplicativo.</span> Só a landing page tem
                             — o relatório do GA4 termina na fronteira entre os dois domínios.
                         </li>
                         <li>
-                            <span class="med-falta">Sem formulário de contato.</span> O contato é
-                            WhatsApp e e-mail, por isso não existe evento de envio de formulário.
+                            <span class="med-ok">Formulário no ar.</span> A página de contato tem o
+                            “Fale agora”: dois campos e um botão, que abre o WhatsApp com a mensagem
+                            pronta e dispara <code>envio_formulario</code>.
                         </li>
                         <li>
-                            <span class="med-falta">Aviso de cookies desligado.</span> Está pronto e
-                            desativado. Ligar reduz a conversão atribuída, porque quem recusar sai da
-                            atribuição — é decisão a combinar antes.
+                            <span class="med-ok">Aviso de cookies ligado.</span> Consentimento
+                            exigido antes de qualquer cookie não essencial. O Google sobe em modo
+                            negado (Consent Mode v2, ainda com conversões modeladas) e o Pixel fica
+                            com <code>consent: revoke</code> até o aceite. <strong>Quem recusar sai
+                            da atribuição</strong> — o volume atribuído cai, e é esperado.
                         </li>
                     </ul>
                 </section>
@@ -293,9 +297,10 @@
 
         <div class="legal-footer">
             <p>&copy; 2026 VisionX Inova Simples (IS) · CNPJ 61.427.918/0001-06</p>
+            <p><a href="#cookies" data-cookies>Preferências de cookies</a></p>
         </div>
     </div>
-    <script src="/rastreio.js?v=07fec01ff6" defer></script>
+    <script src="/rastreio.js?v=3455011df1" defer></script>
 </body>
 
 </html>

@@ -16,13 +16,14 @@ o `dataLayer`. Se a página disparasse e o GTM disparasse de novo, a mesma
 conversão contaria duas vezes e a campanha otimizaria por um número inflado.
 A única `fbq` que existe é o `PageView` do carregamento.
 
-## Os sete eventos
+## Os oito eventos
 
 | `event` | `meta_evento` | Quando dispara |
 |---|---|---|
 | `cta_teste_gratis` | `InitiateCheckout` | clique em botão que leva ao cadastro (`www.softpaybr.com/auth`), inclusive com o botão do meio (abrir em nova aba) |
 | `clique_whatsapp` | `Contact` | clique em qualquer link de WhatsApp |
 | `clique_email` | `Contact` | clique em `mailto:suporte@softpaybr.com` |
+| `envio_formulario` | `Lead` | envio do “Fale agora” em `/contato/`; traz `form_negocio` e `form_com_duvida` |
 | `clique_entrar` | — | clique em "Entrar". É login de cliente, **não é conversão** |
 | `viu_planos` | `ViewContent` | a tabela de preço ficou 50% visível por 1 segundo |
 | `visita_qualificada` | `Lead` | 30 segundos **de aba à vista** na página **e** metade dela rolada. Não dispara em página legal nem no 404 |
@@ -100,7 +101,7 @@ conjunto de anúncios) ·
    `profundidade_pct`, `segundos_na_pagina`, `cta_local`, `cta_plano`,
    `cta_texto`, `cta_destino`.
 2. **Acionador** → *Evento personalizado* → nome do evento com a expressão
-   regular ligada: `cta_teste_gratis|clique_whatsapp|clique_email|viu_planos|visita_qualificada|leu_conteudo`.
+   regular ligada: `cta_teste_gratis|clique_whatsapp|clique_email|envio_formulario|viu_planos|visita_qualificada|leu_conteudo`.
 3. **Tag** → *Meta Pixel — evento personalizado* →
    - nome do evento: `{{DLV - meta_evento}}`
    - `eventID`: `{{DLV - event_id}}`
