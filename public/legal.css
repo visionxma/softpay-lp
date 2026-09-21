@@ -1,0 +1,219 @@
+/* ==========================================================================
+   SoftPay — páginas legais (privacidade, termos, reembolso)
+
+   Estas três páginas vieram do site antigo e apontavam para um legal.css que
+   NUNCA existiu no repositório: no ar elas apareciam como HTML cru, com o
+   logotipo virando um triângulo preto de 900px. Este arquivo é esse CSS que
+   faltava, agora escrito sobre os tokens do sistema.css — as páginas passam a
+   ser do mesmo site, não órfãs do design anterior.
+
+   Depende de /sistema.css (tokens, reset e tipografia). Carregue os dois.
+   ========================================================================== */
+
+.legal-page { background: var(--fundo); }
+
+/* -------------------------------------------------------------- 1. TOPO */
+
+.legal-topo {
+    background: var(--noite);
+    color: var(--branco);
+    padding-block: clamp(1.75rem, 1rem + 3.4vw, 3.5rem) clamp(2rem, 1.2rem + 3.8vw, 4rem);
+}
+
+.legal-back {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-2);
+    min-height: 2.75rem;            /* 44px de alvo de toque */
+    padding-inline: var(--sp-3);
+    margin-left: calc(var(--sp-3) * -1);
+    border-radius: var(--r-pill);
+    color: var(--acento-forte);
+    font-size: var(--t-sm);
+    font-weight: 600;
+    text-decoration: none;
+}
+.legal-back svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+@media (hover: hover) and (pointer: fine) {
+    .legal-back:hover { background: rgba(255, 255, 255, 0.1); }
+}
+.legal-back:active { transform: scale(0.98); }
+
+.legal-title {
+    font-family: var(--display);
+    font-weight: 800;
+    font-stretch: 68%;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-size: var(--t-2xl);
+    margin: var(--sp-5) 0 var(--sp-3);
+    text-wrap: balance;
+}
+
+.legal-updated {
+    margin: 0;
+    font-size: var(--t-sm);
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* ------------------------------------------------- 2. CORPO E SUMÁRIO */
+
+.legal-container {
+    width: 100%;
+    max-width: var(--shell);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+}
+
+.legal-corpo {
+    padding-block: clamp(2rem, 1.2rem + 3.8vw, 4rem);
+    display: grid;
+    gap: clamp(1.5rem, 1rem + 2.2vw, 3rem);
+}
+
+/* A partir de 64rem o sumário vira trilho fixo ao lado do texto: o documento
+   tem 12 seções e, sem ele, achar a cláusula significa rolar às cegas. */
+@media (min-width: 64rem) {
+    .legal-corpo { grid-template-columns: 16rem minmax(0, 1fr); }
+}
+
+.legal-sumario {
+    align-self: start;
+    background: var(--nevoa);
+    border: 1px solid var(--linha);
+    border-radius: var(--r-md);
+    padding: var(--sp-4);
+}
+@media (min-width: 64rem) {
+    .legal-sumario { background: none; border: 0; padding: 0; }
+}
+
+@media (min-width: 64rem) {
+    .legal-sumario {
+        position: sticky;
+        top: var(--sp-5);
+    }
+}
+
+.legal-sumario__titulo {
+    font-size: var(--t-xs);
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--azul);
+    margin: 0 0 var(--sp-3);
+}
+
+.legal-sumario ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* No celular as 12 entradas são curtas: duas colunas em vez de doze
+       linhas soltas ocupando meia tela. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+    gap: var(--sp-1) var(--sp-4);
+}
+@media (min-width: 64rem) {
+    .legal-sumario ol { grid-template-columns: 1fr; }
+}
+
+.legal-sumario a {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    font-size: var(--t-sm);
+    color: var(--tinta-2);
+    text-decoration: none;
+}
+@media (min-width: 64rem) {
+    .legal-sumario a { border-bottom: 1px solid var(--linha); }
+    .legal-sumario li:last-child a { border-bottom: 0; }
+}
+@media (hover: hover) and (pointer: fine) {
+    .legal-sumario a:hover { color: var(--azul); }
+}
+
+/* ------------------------------------------------------------ 3. TEXTO */
+
+.legal-content { max-width: 68ch; }
+
+.legal-content section { scroll-margin-top: var(--sp-5); }
+.legal-content section + section { margin-top: var(--sp-6); }
+
+.legal-content h2 {
+    font-size: var(--t-lg);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--tinta);
+    margin: 0 0 var(--sp-3);
+    padding-top: var(--sp-4);
+    border-top: 2px solid var(--nevoa-2);
+}
+.legal-content section:first-child h2 { padding-top: 0; border-top: 0; }
+
+.legal-content h3 {
+    font-size: var(--t-md);
+    font-weight: 700;
+    margin: var(--sp-5) 0 var(--sp-2);
+}
+
+.legal-content p { color: var(--tinta-2); }
+
+.legal-content ul {
+    margin: 0 0 var(--sp-4);
+    padding-left: 1.25rem;
+    color: var(--tinta-2);
+}
+.legal-content li { margin-bottom: var(--sp-2); }
+.legal-content li:last-child { margin-bottom: 0; }
+
+.legal-content strong { color: var(--tinta); font-weight: 600; }
+
+.legal-content a {
+    color: var(--azul);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    overflow-wrap: anywhere;      /* e-mail e URL longos não estouram em 360px */
+}
+
+/* A ficha do controlador: 5 pares curtos. Lado a lado já em 360px. */
+.legal-content .list-none {
+    list-style: none;
+    padding: 0;
+    margin-bottom: var(--sp-4);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+    gap: var(--sp-3);
+    background: var(--nevoa);
+    border: 1px solid var(--linha);
+    border-radius: var(--r-md);
+    padding: var(--sp-4);
+}
+.legal-content .list-none li {
+    margin: 0;
+    font-size: var(--t-sm);
+    line-height: 1.45;
+}
+.legal-content .list-none strong { display: block; color: var(--tinta-3); font-weight: 600; }
+.legal-content .list-none li:last-child { grid-column: 1 / -1; }
+
+/* ----------------------------------------------------------- 4. RODAPÉ */
+
+.legal-footer {
+    border-top: 1px solid var(--linha);
+    padding-block: var(--sp-5) clamp(var(--sp-6), 2rem + env(safe-area-inset-bottom, 0px), 4rem);
+}
+.legal-footer p {
+    margin: 0;
+    font-size: var(--t-sm);
+    color: var(--tinta-3);
+}
