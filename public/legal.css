@@ -79,6 +79,13 @@
     gap: clamp(1.5rem, 1rem + 2.2vw, 3rem);
 }
 
+/* Filho de grade nasce com `min-width: auto`, ou seja, não encolhe abaixo do
+   próprio min-content. Numa página só de parágrafo isso nunca aparece; basta
+   uma tabela ou um trecho de código dentro do texto para a coluna esticar e a
+   página inteira ganhar rolagem lateral. Medido em 21/09/2026 na /medicao/:
+   341px de estouro em 360px, e o sumário virando 4 colunas. */
+.legal-corpo > * { min-width: 0; }
+
 /* A partir de 64rem o sumário vira trilho fixo ao lado do texto: o documento
    tem 12 seções e, sem ele, achar a cláusula significa rolar às cegas. */
 @media (min-width: 64rem) {

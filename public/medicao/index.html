@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Medição da landing page · SoftPay</title>
+    <meta name="description" content="Contrato de rastreamento da LP do SoftPay: eventos publicados no dataLayer, receita de tag no GTM e mapa de pixels." />
+
+    <!-- Página interna de trabalho. Fora do sitemap, fora do menu, e explicitamente
+         fora do índice dos buscadores e dos rastreadores de IA. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="theme-color" content="#06121F" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
+    <link rel="stylesheet" href="/sistema.css?v=23de96b92c" />
+    <link rel="stylesheet" href="/legal.css?v=623a82279d" />
+    <link rel="stylesheet" href="/medicao.css?v=d8ae0de68f" />
+    <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
+</head>
+
+<body class="legal-page">
+    <header class="legal-topo">
+        <div class="legal-container">
+            <a href="/" class="legal-back">
+                <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                Voltar para o site
+            </a>
+
+            <h1 class="legal-title">Medição da landing page</h1>
+            <p class="legal-updated">Contrato de rastreamento · atualizado em 21/09/2026</p>
+        </div>
+    </header>
+
+    <div class="legal-container">
+        <div class="legal-corpo">
+            <nav class="legal-sumario" aria-label="Sumário do documento">
+                <p class="legal-sumario__titulo">Neste documento</p>
+                <ol>
+                    <li><a href="#ver-funcionando">1. Ver funcionando agora</a></li>
+                    <li><a href="#eventos">2. Os sete eventos</a></li>
+                    <li><a href="#campos">3. Campos de cada evento</a></li>
+                    <li><a href="#uma-tag">4. Montar uma tag só</a></li>
+                    <li><a href="#pixels">5. Mapa dos pixels</a></li>
+                    <li><a href="#meio-de-funil">6. Por que há evento de meio de funil</a></li>
+                    <li><a href="#capi">7. Quando ligarem a Conversions API</a></li>
+                    <li><a href="#falta">8. O que ainda falta</a></li>
+                </ol>
+            </nav>
+
+            <div class="legal-content">
+                <section id="ver-funcionando">
+                    <h2>1. Ver funcionando agora</h2>
+                    <p>
+                        Abra o site com <code>?sp_debug=1</code> no fim do endereço. Um painel
+                        aparece no rodapé e mostra <strong>cada evento no instante em que
+                        acontece</strong>, com todos os campos. Ele só observa a camada de dados:
+                        não dispara nada, não conta visita, não suja relatório.
+                    </p>
+                    <div class="med-acoes">
+                        <a class="med-btn med-btn--acao" href="/?sp_debug=1">Abrir a home</a>
+                        <a class="med-btn" href="/?sp_debug=1#planos">Ir aos planos</a>
+                        <a class="med-btn" href="/guias/como-controlar-estoque/?sp_debug=1">Página de conteúdo</a>
+                    </div>
+                    <p>
+                        Na home, role até a tabela de preço e clique em <em>Testar grátis</em>: você
+                        verá <code>viu_planos</code> e <code>cta_teste_gratis</code> nascerem. Depois
+                        de 30 segundos com metade da página rolada, nasce
+                        <code>visita_qualificada</code>. O painel fecha no × e não volta na mesma aba.
+                    </p>
+                    <div class="med-aviso">
+                        <p>
+                            <strong>Para testar sem contaminar os relatórios:</strong> a página conta
+                            visita normalmente. Se for fazer muitos testes seguidos, use o Preview do
+                            GTM, que marca a sessão como depuração.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="eventos">
+                    <h2>2. Os sete eventos</h2>
+                    <p>
+                        O site <strong>não</strong> dispara <code>fbq('track', …)</code> de conversão.
+                        Ele empurra o evento na camada de dados e quem vira isso em tag é o container
+                        <strong>GTM-MCJHLF3Q</strong>. Se os dois disparassem, a mesma conversão
+                        contaria duas vezes e a campanha otimizaria por um número inflado.
+                    </p>
+                    <table class="med-tabela">
+                        <thead>
+                            <tr><th>Evento</th><th>Evento padrão da Meta</th><th>Quando dispara</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">cta_teste_gratis</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">InitiateCheckout</span></td>
+                                <td data-rotulo="Quando" data-largo>clique em botão que leva ao cadastro, inclusive com o botão do meio (abrir em nova aba)</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">viu_planos</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">ViewContent</span></td>
+                                <td data-rotulo="Quando" data-largo>a tabela de preço ocupou metade da tela por 1 segundo</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">visita_qualificada</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">Lead</span></td>
+                                <td data-rotulo="Quando" data-largo>30 segundos de aba à vista <strong>e</strong> metade da página rolada. Não dispara em página legal nem no 404</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">leu_conteudo</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">ViewContent</span></td>
+                                <td data-rotulo="Quando" data-largo>15 segundos <strong>e</strong> um quarto rolado, em guia, blog, comparativo, solução, segmento ou pergunta</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">clique_whatsapp</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">Contact</span></td>
+                                <td data-rotulo="Quando" data-largo>qualquer link de WhatsApp: botão, bolha flutuante ou rodapé</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">clique_email</span></td>
+                                <td data-rotulo="Meta"><span class="med-meta">Contact</span></td>
+                                <td data-rotulo="Quando" data-largo>clique em suporte@softpaybr.com</td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Evento"><span class="med-ev">clique_entrar</span></td>
+                                <td data-rotulo="Meta"><span class="med-nao">nenhum</span></td>
+                                <td data-rotulo="Quando" data-largo>clique em “Entrar”. É cliente voltando para a conta — <strong>não é conversão</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="campos">
+                    <h2>3. Campos de cada evento</h2>
+                    <p>Todos os sete carregam:</p>
+                    <ul>
+                        <li><strong>meta_evento</strong> — o nome do evento padrão da Meta, já pronto.</li>
+                        <li><strong>event_id</strong> — identificador único, para deduplicar com a Conversions API.</li>
+                        <li><strong>pagina</strong> — o caminho, por exemplo <code>/solucoes/sistema-pdv/</code>.</li>
+                        <li><strong>pagina_tipo</strong> — <code>home</code>, <code>segmentos</code>, <code>solucoes-interna</code>, <code>blog</code>, <code>legal</code>…</li>
+                        <li><strong>origem</strong> — <code>meta</code>, <code>google-ads</code>, <code>tiktok</code>, o <code>utm_source</code>, o site de onde veio, ou <code>direto</code>.</li>
+                        <li><strong>profundidade_pct</strong> — quanto da página já estava rolado.</li>
+                        <li><strong>segundos_na_pagina</strong> — tempo até o evento, contado <strong>só com a aba à vista</strong>.</li>
+                    </ul>
+                    <p>Os eventos de clique trazem ainda:</p>
+                    <ul>
+                        <li><strong>cta_texto</strong> — o texto do botão.</li>
+                        <li><strong>cta_local</strong> — <code>planos</code>, <code>menu</code>, <code>rodape</code>, <code>cta-final</code>, <code>cta-flutuante</code>, <code>barra-fixa</code>, <code>bolha-whatsapp</code>, <code>menu-celular</code>.</li>
+                        <li><strong>cta_destino</strong> — o endereço de saída.</li>
+                        <li><strong>cta_plano</strong> — só dentro de um cartão de plano: <code>Comércio</code>, <code>Loja</code>, <code>ERP Completo</code> ou <code>Nota Fiscal</code>.</li>
+                    </ul>
+                </section>
+
+                <section id="uma-tag">
+                    <h2>4. Montar uma tag só</h2>
+                    <p>
+                        Como o nome do evento da Meta vem dentro da própria camada de dados, não é
+                        preciso uma tag por evento:
+                    </p>
+                    <ol class="med-passos">
+                        <li>Em <strong>Variáveis</strong>, crie uma <em>Variável da camada de dados</em> para cada campo que for usar: <code>meta_evento</code>, <code>event_id</code>, <code>pagina</code>, <code>pagina_tipo</code>, <code>origem</code>, <code>profundidade_pct</code>, <code>segundos_na_pagina</code>, <code>cta_local</code>, <code>cta_plano</code>, <code>cta_texto</code>, <code>cta_destino</code>.</li>
+                        <li>Em <strong>Acionadores</strong>, crie um <em>Evento personalizado</em> com a expressão regular ligada e este nome de evento:</li>
+                        <li>Em <strong>Tags</strong>, crie uma <em>Meta Pixel — evento personalizado</em>: nome do evento <code>{{DLV - meta_evento}}</code>, <code>eventID</code> <code>{{DLV - event_id}}</code>, os parâmetros que interessarem, e o acionador do passo 2.</li>
+                    </ol>
+                    <code class="med-cod">cta_teste_gratis|clique_whatsapp|clique_email|viu_planos|visita_qualificada|leu_conteudo</code>
+                    <p>
+                        <code>clique_entrar</code> fica de fora da expressão de propósito. E
+                        <strong>rolagem e tempo você já tem de graça</strong>: use os acionadores
+                        embutidos de profundidade de rolagem e de temporizador do próprio GTM — não
+                        duplicamos o que a ferramenta já faz.
+                    </p>
+                </section>
+
+                <section id="pixels">
+                    <h2>5. Mapa dos pixels</h2>
+                    <p>
+                        A landing page fica em <code>site.softpaybr.com</code> e o cadastro em
+                        <code>www.softpaybr.com</code>. São aplicações diferentes, e é aí que o funil
+                        costuma se partir.
+                    </p>
+                    <table class="med-tabela">
+                        <thead>
+                            <tr><th>Onde</th><th>Pixel 1476552610693219</th><th>Pixel 26424939163836170</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-rotulo="Onde">Landing page, todas as 78 páginas</td>
+                                <td data-rotulo="Pixel próprio"><span class="med-ok">carrega</span></td>
+                                <td data-rotulo="Pixel da campanha"><span class="med-ok">carrega</span></td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Onde">Cadastro <code>/auth</code>, vindo da LP</td>
+                                <td data-rotulo="Pixel próprio"><span class="med-ok">carrega</span></td>
+                                <td data-rotulo="Pixel da campanha"><span class="med-ok">carrega</span></td>
+                            </tr>
+                            <tr>
+                                <td data-rotulo="Onde">Resto do aplicativo, já logado</td>
+                                <td data-rotulo="Pixel próprio"><span class="med-ok">carrega</span></td>
+                                <td data-rotulo="Pixel da campanha"><span class="med-nao">não carrega</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        O cadastro dispara <code>CompleteRegistration</code> e <code>StartTrial</code>
+                        com Advanced Matching, e o <code>StartTrial</code> sai pelos dois lados — do
+                        navegador e do servidor — com o mesmo <code>event_id</code>.
+                    </p>
+                    <div class="med-aviso">
+                        <p>
+                            <strong>Até 21/09/2026 isto estava quebrado.</strong> O pixel da campanha
+                            só carregava no cadastro para quem entrasse por um link específico, e a
+                            landing page mandava todo mundo sem essa marca. Na prática, a campanha via
+                            o clique aqui e <strong>nunca via o cadastro lá</strong>. Corrigido nos
+                            dois lados: os botões de cadastro saem marcados e o aplicativo reconhece a
+                            marca. Vale a pena conferir os números a partir desta data.
+                        </p>
+                    </div>
+                    <p>
+                        O pixel da campanha <strong>não</strong> entra na parte logada de propósito:
+                        lojista usando o sistema o dia inteiro encheria o público de quem já é cliente.
+                    </p>
+                </section>
+
+                <section id="meio-de-funil">
+                    <h2>6. Por que há evento de meio de funil</h2>
+                    <p>
+                        Um conjunto de anúncios precisa de cerca de <strong>50 eventos de otimização
+                        em 7 dias</strong> para sair da fase de aprendizado. Abaixo disso a entrega
+                        não estabiliza.
+                    </p>
+                    <p>
+                        O SoftPay fez 2 cadastros em 16/09 — cerca de 14 por semana. Otimizar pelo
+                        cadastro mantém a campanha em aprendizado limitado <strong>por
+                        aritmética</strong>, não por qualidade de anúncio.
+                    </p>
+                    <p>
+                        A saída é otimizar por um evento mais alto no funil. O risco conhecido é o
+                        oposto: evento fraco ensina o algoritmo a procurar quem faz o evento fraco e
+                        nunca compra. Por isso os três daqui exigem <strong>intenção</strong>, não
+                        presença — <code>cta_teste_gratis</code> é o passo imediatamente anterior à
+                        conversão, <code>viu_planos</code> exige a tabela de preço na tela, e
+                        <code>visita_qualificada</code> exige tempo de aba à vista somado a metade da
+                        página.
+                    </p>
+                    <p>
+                        <strong>Sugestão:</strong> otimizar por <code>InitiateCheckout</code> enquanto
+                        o cadastro não passar de 50 por semana, e trocar para o cadastro quando passar.
+                    </p>
+                </section>
+
+                <section id="capi">
+                    <h2>7. Quando ligarem a Conversions API</h2>
+                    <p>
+                        Todo evento já sai com <code>event_id</code>. Quando o servidor mandar o mesmo
+                        evento, use o mesmo valor nos dois lados — no <code>event_id</code> do
+                        servidor e no <code>eventID</code> do pixel. A Meta deduplica pelo par
+                        (<code>event_name</code>, <code>event_id</code>) e a conversão conta uma vez só.
+                    </p>
+                </section>
+
+                <section id="falta">
+                    <h2>8. O que ainda falta</h2>
+                    <ul>
+                        <li>
+                            <span class="med-falta">Sem mapa de calor.</span> A home tem 19 telas de
+                            rolagem no celular e a tabela de preço começa a 77% da altura. Uma
+                            ferramenta de gravação mostraria onde o tráfego pago para de rolar.
+                        </li>
+                        <li>
+                            <span class="med-falta">Os planos só existem na home.</span> As outras 77
+                            páginas levam o visitante para a home antes do preço.
+                        </li>
+                        <li>
+                            <span class="med-falta">Sem GA4 no aplicativo.</span> Só a landing page tem
+                            — o relatório do GA4 termina na fronteira entre os dois domínios.
+                        </li>
+                        <li>
+                            <span class="med-falta">Sem formulário de contato.</span> O contato é
+                            WhatsApp e e-mail, por isso não existe evento de envio de formulário.
+                        </li>
+                        <li>
+                            <span class="med-falta">Aviso de cookies desligado.</span> Está pronto e
+                            desativado. Ligar reduz a conversão atribuída, porque quem recusar sai da
+                            atribuição — é decisão a combinar antes.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="legal-footer">
+            <p>&copy; 2026 VisionX Inova Simples (IS) · CNPJ 61.427.918/0001-06</p>
+        </div>
+    </div>
+    <script src="/rastreio.js?v=07fec01ff6" defer></script>
+</body>
+
+</html>

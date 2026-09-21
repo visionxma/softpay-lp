@@ -387,7 +387,100 @@
         }
     }
 
-    function comeca() { repassa(); vigiaPlanos(); vigiaQualificada(); vigiaLeitura(); }
+    /* ---------- inspetor ao vivo: ?sp_debug=1 ---------- */
+
+    // Para o gestor de tráfego CONFERIR sem depender do Preview do GTM e sem
+    // sujar relatório: o painel só OBSERVA o dataLayer, nunca empurra nada.
+    // Navegue pelo site com ?sp_debug=1 e cada evento aparece na hora, com a
+    // carga inteira. Fecha no × e não volta na mesma aba.
+    function inspetor() {
+        if (!/[?&]sp_debug=1(&|$)/.test(location.search)) return;
+        try { if (sessionStorage.getItem('sp_debug_off') === '1') return; } catch (e) {}
+
+        var st = document.createElement('style');
+        st.textContent = [
+            '.sp-insp{position:fixed;z-index:2147483647;left:0;right:0;bottom:0;',
+            'max-height:min(58vh,32rem);display:flex;flex-direction:column;',
+            'background:#06121F;color:#fff;font:500 12px/1.45 ui-monospace,SFMono-Regular,Menlo,monospace;',
+            'box-shadow:0 -18px 44px -14px rgba(0,0,0,.6);',
+            'padding-bottom:env(safe-area-inset-bottom,0px)}',
+            '@media(min-width:56rem){.sp-insp{left:auto;width:31rem;bottom:1rem;right:1rem;border-radius:14px;overflow:hidden}}',
+            '.sp-insp__topo{display:flex;align-items:center;gap:.5rem;padding:.6rem .75rem;',
+            'background:#0B2033;border-bottom:1px solid rgba(255,255,255,.14);flex:none}',
+            '.sp-insp__t{font-weight:700;letter-spacing:.04em;text-transform:uppercase;font-size:11px;color:#7FC8F5}',
+            '.sp-insp__n{margin-left:auto;background:#1DA1F2;color:#06121F;border-radius:999px;',
+            'padding:.1rem .5rem;font-weight:700;font-size:11px}',
+            '.sp-insp__x{min-width:44px;min-height:32px;border:0;background:transparent;color:#fff;',
+            'font:inherit;font-size:18px;cursor:pointer;border-radius:8px}',
+            '.sp-insp__x:active{transform:scale(.94)}',
+            '.sp-insp__lista{overflow:auto;-webkit-overflow-scrolling:touch;padding:.5rem .75rem .75rem}',
+            '.sp-insp__vazio{opacity:.62;padding:.4rem 0}',
+            '.sp-insp__ev{border-top:1px solid rgba(255,255,255,.1);padding:.55rem 0}',
+            '.sp-insp__ev:first-child{border-top:0}',
+            '.sp-insp__nome{color:#7FC8F5;font-weight:700}',
+            '.sp-insp__meta{color:#8FE3B0}',
+            '.sp-insp__hora{opacity:.5;float:right}',
+            '.sp-insp__campos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));',
+            'gap:.15rem .75rem;margin-top:.3rem}',
+            '.sp-insp__k{opacity:.58}'
+        ].join('');
+        document.head.appendChild(st);
+
+        var caixa = document.createElement('div');
+        caixa.className = 'sp-insp';
+        caixa.setAttribute('role', 'log');
+        caixa.setAttribute('aria-label', 'Inspetor de eventos');
+        caixa.innerHTML =
+            '<div class="sp-insp__topo"><span class="sp-insp__t">Inspetor SoftPay</span>' +
+            '<span class="sp-insp__n" data-n>0</span>' +
+            '<button class="sp-insp__x" type="button" data-x aria-label="Fechar inspetor">&times;</button></div>' +
+            '<div class="sp-insp__lista" data-lista><div class="sp-insp__vazio">' +
+            'Nenhum evento ainda. Role até os planos, clique em “Testar grátis” ou no WhatsApp.' +
+            '</div></div>';
+        document.body.appendChild(caixa);
+
+        var lista = caixa.querySelector('[data-lista]');
+        var contador = caixa.querySelector('[data-n]');
+        var vazio = lista.firstChild;
+        var n = 0;
+
+        caixa.querySelector('[data-x]').addEventListener('click', function () {
+            try { sessionStorage.setItem('sp_debug_off', '1'); } catch (e) {}
+            caixa.remove();
+        });
+
+        function mostra(d) {
+            if (!d || typeof d.event !== 'string' || d.event.indexOf('gtm.') === 0) return;
+            if (vazio && vazio.parentNode) { vazio.remove(); vazio = null; }
+            n++; contador.textContent = String(n);
+            var campos = '';
+            for (var k in d) {
+                if (k === 'event' || k === 'meta_evento' || k === 'gtm.uniqueEventId') continue;
+                var v = String(d[k]);
+                campos += '<div><span class="sp-insp__k">' + k + '</span> ' +
+                          v.replace(/[<>&]/g, function (c) { return { '<': '&lt;', '>': '&gt;', '&': '&amp;' }[c]; }).slice(0, 90) + '</div>';
+            }
+            var linha = document.createElement('div');
+            linha.className = 'sp-insp__ev';
+            linha.innerHTML =
+                '<span class="sp-insp__hora">' + new Date().toLocaleTimeString('pt-BR') + '</span>' +
+                '<span class="sp-insp__nome">' + d.event + '</span>' +
+                (d.meta_evento ? ' <span class="sp-insp__meta">&rarr; ' + d.meta_evento + '</span>' : '') +
+                '<div class="sp-insp__campos">' + campos + '</div>';
+            lista.insertBefore(linha, lista.firstChild);
+        }
+
+        // O que já entrou antes do painel existir, e tudo que entrar depois.
+        for (var i = 0; i < window.dataLayer.length; i++) mostra(window.dataLayer[i]);
+        var empurrarOriginal = window.dataLayer.push;
+        window.dataLayer.push = function () {
+            var r = empurrarOriginal.apply(this, arguments);
+            for (var j = 0; j < arguments.length; j++) { try { mostra(arguments[j]); } catch (e) {} }
+            return r;
+        };
+    }
+
+    function comeca() { repassa(); vigiaPlanos(); vigiaQualificada(); vigiaLeitura(); inspetor(); }
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', comeca);

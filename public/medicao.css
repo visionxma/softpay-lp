@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Página /medicao/ — painel de conferência do rastreamento.
+
+   Depende de /sistema.css (tokens) e /legal.css (casca: topo escuro, sumário
+   grudado, mancha de leitura). Aqui só o que é desta página.
+   ========================================================================== */
+
+/* -------------------------------------------------- 1. TABELA DE EVENTOS
+   No celular vira cartão por linha, com o nome da coluna em cada valor —
+   tabela de 3 colunas em 360px seria rolagem lateral, que é vetada. */
+
+.med-tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 var(--sp-5);
+    /* fixed: sem isto, uma palavra longa de código define a largura mínima da
+       tabela e empurra a coluna da grade que a contém. */
+    table-layout: fixed;
+}
+.med-tabela tr, .med-tabela td, .med-tabela th { min-width: 0; }
+
+.med-tabela th { text-align: left; }
+
+.med-tabela thead { display: none; }
+
+.med-tabela tr {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+    gap: var(--sp-1) var(--sp-4);
+    padding: var(--sp-3) var(--sp-4);
+    border: 1px solid var(--linha);
+    border-radius: var(--r-md);
+    background: var(--nevoa);
+    margin-bottom: var(--sp-3);
+}
+
+.med-tabela td { padding: 0; font-size: var(--t-sm); line-height: 1.45; }
+
+.med-tabela td::before {
+    content: attr(data-rotulo);
+    display: block;
+    font-size: var(--t-xs);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tinta-3);
+}
+
+.med-tabela td[data-largo] { grid-column: 1 / -1; }
+
+@media (min-width: 48rem) {
+    .med-tabela thead { display: table-header-group; }
+    .med-tabela tr {
+        display: table-row;
+        background: none;
+        border: 0;
+        border-bottom: 1px solid var(--linha);
+        border-radius: 0;
+        margin: 0;
+    }
+    .med-tabela th,
+    .med-tabela td { display: table-cell; padding: var(--sp-3) var(--sp-4) var(--sp-3) 0; vertical-align: top; }
+    .med-tabela th {
+        font-size: var(--t-xs); font-weight: 600; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--tinta-3);
+        border-bottom: 2px solid var(--linha-forte);
+    }
+    .med-tabela td::before { display: none; }
+    .med-tabela td[data-largo] { display: table-cell; }
+}
+
+.med-ev   { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--azul); font-weight: 600; }
+.med-meta { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ok); font-weight: 600; }
+.med-nao  { color: var(--tinta-3); }
+
+/* ------------------------------------------------------- 2. BOTÕES DE TESTE
+   Pares lado a lado já em 360px: rótulo curto é requisito, não estilo. */
+
+.med-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin: 0 0 var(--sp-5);
+}
+.med-acoes > * { flex: 1 1 9rem; }
+@media (min-width: 48rem) { .med-acoes > * { flex: 0 0 auto; } }
+
+.med-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 2.75rem; padding: 0 1.15rem;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--linha-forte);
+    background: var(--branco); color: var(--tinta);
+    font-size: var(--t-sm); font-weight: 600; text-decoration: none;
+    text-align: center;
+    transition: transform 0.15s var(--mola);
+}
+.med-btn--acao { background: var(--azul); border-color: var(--azul); color: var(--branco); }
+.med-btn:active { transform: scale(0.98); }
+@media (hover: hover) and (pointer: fine) {
+    .med-btn:hover { border-color: var(--azul); }
+    .med-btn--acao:hover { background: var(--azul-forte); }
+}
+
+/* --------------------------------------------------------- 3. CÓDIGO E AVISO */
+
+.med-cod {
+    display: block;
+    background: var(--noite);
+    color: #CFE6F7;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.8125rem; line-height: 1.6;
+    padding: var(--sp-4);
+    border-radius: var(--r-md);
+    margin: 0 0 var(--sp-5);
+    overflow-x: auto;            /* código é a exceção permitida */
+    -webkit-overflow-scrolling: touch;
+}
+
+.med-aviso {
+    border-left: 3px solid var(--atencao);
+    background: #FFF8EF;
+    padding: var(--sp-4);
+    border-radius: 0 var(--r-md) var(--r-md) 0;
+    margin: 0 0 var(--sp-5);
+}
+.med-aviso p:last-child { margin-bottom: 0; }
+
+.med-ok    { color: var(--ok); font-weight: 600; }
+.med-falta { color: var(--atencao); font-weight: 600; }
+
+/* Passos numerados: no celular ficam em coluna, mas compactos, porque cada um
+   tem frase longa — dois deles lado a lado em 360px espremeria o texto. */
+.med-passos { counter-reset: p; list-style: none; padding: 0; margin: 0 0 var(--sp-5); }
+.med-passos li {
+    counter-increment: p;
+    display: grid;
+    grid-template-columns: 1.75rem 1fr;
+    gap: var(--sp-3);
+    align-items: start;
+    padding: var(--sp-3) 0;
+    border-top: 1px solid var(--linha);
+    font-size: var(--t-sm);
+}
+.med-passos li:first-child { border-top: 0; }
+.med-passos li::before {
+    content: counter(p);
+    display: grid; place-items: center;
+    width: 1.75rem; height: 1.75rem;
+    border-radius: 999px;
+    background: var(--azul); color: var(--branco);
+    font-size: var(--t-xs); font-weight: 700;
+}
+
+
+/* Nome de evento e de parâmetro são palavras longas sem espaço
+   (`utm_source_platform`, `visita_qualificada`): sem quebra forçada elas
+   estouram a mancha de leitura no celular. */
+.legal-content code,
+.med-tabela code,
+.med-ev, .med-meta { overflow-wrap: anywhere; }
