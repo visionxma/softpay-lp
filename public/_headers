@@ -30,6 +30,8 @@
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 /rastreio.js
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+/consentimento.js
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
 
 # Imagens e ícones: nomes estáveis, cache longo
 /assets/*
