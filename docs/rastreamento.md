@@ -187,11 +187,10 @@ para qualquer relatório que leia `utm_*`.
 3. **Consentimento (LGPD).** Está pronto e desligado —
    `window.SOFTPAY_CONSENTIMENTO` no `<head>`. Ligar reduz a conversão
    atribuída: quem recusar sai da atribuição. **Decisão dos sócios + gestor.**
-4. **Mapa de calor.** Bling e Nextar rodam Microsoft Clarity (grátis); aqui não
-   há nenhum. Numa home de **19,3 telas no celular** com a tabela de preço
-   começando a **77% da altura** (12.495px de 16.253px, medido em 390px), ver a
-   gravação é o que responde onde o tráfego pago morre. **Depende de criar a
-   conta.**
+4. **Mapa de calor: no ar.** Microsoft Clarity, projeto `ym1ookdh28`, conta
+   `visionxma@gmail.com`. Carrega **só depois do aceite de cookies** — gravação
+   de sessão é cookie não essencial. Numa home de **19,3 telas no celular** é o
+   que responde onde o tráfego pago para de rolar.
 
 ## Como conferir sem sujar o relatório
 

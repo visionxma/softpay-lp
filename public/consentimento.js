@@ -32,7 +32,7 @@
     // Fica AQUI, e não no <head>, de propósito: gravação de sessão é cookie não
     // essencial, então só pode subir depois do aceite. Quem recusa nunca é
     // gravado.
-    var CLARITY = '';
+    var CLARITY = 'ym1ookdh28';
 
     function lido() {
         try { return localStorage.getItem(CHAVE); } catch (e) { return null; }
