@@ -82,9 +82,17 @@ Três armadilhas desarmadas, para quem for mexer nisto depois:
   21/09/2026, a razão máxima possível era 0,59 em 360px. Uma linha a mais num
   cartão de plano e o evento pararia de disparar sem ninguém perceber.
 
-**Recomendação:** subir a campanha otimizando por `InitiateCheckout`
-(`cta_teste_gratis`) enquanto o volume de cadastro não chegar a 50 por semana, e
-trocar para o cadastro quando chegar.
+**Recomendação — e o "quando", que importa mais que o "o quê":** não troque o
+evento de otimização agora. Trocar **reseta a fase de aprendizado**, e a campanha
+acabou de passar a receber conversão de verdade (até 21/09 o pixel da campanha
+não via cadastro vindo da LP). Deixe rodar 1 a 2 semanas, olhe o volume real, e
+só então decida: perto de 50 por semana, não mexa; travado em ~14, aí vale testar
+`InitiateCheckout` sabendo do custo do reset.
+
+"Aprendizado limitado" é informação, não veredito: o ganho de sair costuma ser de
+5% a 10%, e evento fraco ensina o algoritmo a buscar quem nunca compra. Os
+eventos de meio de funil existem para estarem **prontos** quando a decisão
+chegar, e para diagnóstico — não porque a troca seja urgente.
 
 Fontes: [adlibrary.com/posts/meta-ads-learning-phase-50-events-guide](https://adlibrary.com/posts/meta-ads-learning-phase-50-events-guide)
 (o que conta para o limite: pixel, CAPI e conversões modeladas, no nível do
