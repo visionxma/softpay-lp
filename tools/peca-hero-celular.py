@@ -59,7 +59,17 @@ def coef(origem, destino):
         A.append([0, 0, 0, xd, yd, 1, -ys * xd, -ys * yd]); B.append(ys)
     return np.linalg.solve(np.array(A, float), np.array(B, float))
 
-def encaixar(base, mask, tela):
+def encaixar(base, mask, tela, reto=False):
+    """reto=True: a tela está de FRENTE e parcialmente COBERTA por outro aparelho.
+
+    Até 25/09/2026 o monitor também passava pela perspectiva, com os cantos
+    tirados da máscara verde. Só que o celular cobre o canto inferior direito
+    do monitor: o ponto verde mais perto desse canto ficava na borda do
+    celular, ~110px para a esquerda, e a perspectiva espremia a captura para
+    dentro daquele trapézio — o lado direito da tela saía TORTO (o Victor
+    apontou duas vezes). Tela de frente não tem perspectiva nenhuma: a captura
+    ocupa a caixa inteira e a máscara só recorta o que o celular tapa.
+    """
     mask = dilatar(mask)
     quad, (x0, y0, x1, y1) = cantos(mask)
     lw, lh = x1 - x0 + 1, y1 - y0 + 1
@@ -67,7 +77,13 @@ def encaixar(base, mask, tela):
     # a redução é grande (o PDV inteiro cabe num monitor de 253px na página):
     # sem realce, o traço fino da fonte some e a tela vira mancha cinza
     img = tela.resize((lw, lh), Image.LANCZOS).filter(ImageFilter.UnsharpMask(radius=1.1, percent=85, threshold=2))
-    c = coef([(x - x0, y - y0) for x, y in quad], [(0, 0), (lw - 1, 0), (lw - 1, lh - 1), (0, lh - 1)])
+    if reto:
+        base.paste(img, (x0, y0), Image.fromarray((mask[y0:y1 + 1, x0:x1 + 1] * 255).astype('uint8')))
+        return lw, lh
+    # PERSPECTIVE leva o pixel de SAÍDA (a caixa) ao de ENTRADA (a captura):
+    # origem = cantos da captura, destino = cantos medidos. Estava invertido até
+    # 25/09/2026; no celular, quase retangular, a diferença não aparecia.
+    c = coef([(0, 0), (lw - 1, 0), (lw - 1, lh - 1), (0, lh - 1)], [(x - x0, y - y0) for x, y in quad])
     warp = img.transform((lw, lh), Image.PERSPECTIVE, tuple(c), Image.BICUBIC)
     base.paste(warp, (x0, y0), Image.fromarray((mask[y0:y1 + 1, x0:x1 + 1] * 255).astype('uint8')))
     return lw, lh
@@ -162,12 +178,22 @@ def main():
     celular.paste(car2, ((larg - car2.width) // 2, faixa))
 
     base = peca.copy()
-    print('monitor', encaixar(base, verde, monitor), 'de', monitor.size)
+    print('monitor', encaixar(base, verde, monitor, reto=True), 'de', monitor.size)
     print('celular', encaixar(base, magenta, celular), 'de', celular.size)
 
     arr = np.asarray(base).astype(np.float32)
     alpha = np.clip((arr.max(axis=2) - 6.0) / 16.0, 0, 1)
     alpha[dilatar(verde) | dilatar(magenta)] = 1.0
+    # A sombra de contato do render vem com o grão do fundo preto: sobre o
+    # branco da página ela aparecia pontilhada (medido ampliado, 25/09/2026).
+    # Fora dos aparelhos o alfa é desfocado — sombra lisa —, e dentro deles
+    # (tudo o que tem luz de verdade) a borda continua nítida.
+    corpo = dilatar(arr.max(axis=2) > 48, 3)
+    liso = np.asarray(Image.fromarray((alpha * 255).astype('uint8')).filter(ImageFilter.GaussianBlur(5))).astype(np.float32) / 255
+    alpha = np.where(corpo, alpha, np.minimum(liso, 0.55))
+    # pixel de sombra pura (sem aparelho) vira cinza-noite, não o grão do render
+    sombra = ~corpo
+    arr[sombra] = [14, 22, 32]
     final = Image.fromarray(np.dstack([arr, alpha * 255]).astype('uint8'), 'RGBA')
     final.save(SAIDA / 'aparelhos-2.webp', quality=88, method=6)
     menor = final.resize((1200, round(1200 * final.height / final.width)), Image.LANCZOS)
