@@ -35,8 +35,9 @@
 .g-btn:hover { background-color: #084A81; }
 .g-btn.is-tertiary { color: var(--typography--text-color-dark); }
 .g-btn.is-secondary { color: var(--colors--brand-white); }
-.is-blue .g-btn:not(.is-wpp):not(.is-secondary) { background-color: #1DA1F2; color: #06121F; }
-.is-blue .g-btn:not(.is-wpp):not(.is-secondary):hover { background-color: #7FC8F5; }
+/* ação sobre o escuro: azul com texto branco (tinta escura no azul não realça — 25/09) */
+.is-blue .g-btn:not(.is-wpp):not(.is-secondary) { background-color: #1570C3; background-image: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%); color: #FFFFFF; text-shadow: 0 1px 0 rgba(3, 10, 18, .25); }
+.is-blue .g-btn:not(.is-wpp):not(.is-secondary):hover { background-color: #1676CA; background-image: linear-gradient(180deg, #1B84D8 0%, #1676CA 50%, #0F68B8 100%); }
 .g-chat-btn:hover { color: #06121F; }
 .slider-arrow-wrap { background-color: #0C5C9E; }
 .slider-arrow-wrap.swiper-button-disabled { cursor: default; }

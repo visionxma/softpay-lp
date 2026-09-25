@@ -331,14 +331,16 @@ p:last-child { margin-bottom: 0; }
     color: var(--branco);
     font-weight: 700;
 }
-/* Ação em fundo escuro: o azul do logotipo brilha, com tinta escura por cima
-   (6,67:1). É a mesma cor da marca, invertida pelo contexto. */
+/* Ação em fundo escuro: azul com texto BRANCO. Até 25/09/2026 era o azul do logotipo
+   com tinta escura por cima, e o Victor reprovou: preto no azul não realça. O degradê
+   fica escuro o bastante para o branco dar 4,6:1 no meio do botão. */
 .hero .btn--acao,
 .secao--escura .btn--acao,
 .plano--destaque .btn--acao,
 .gaveta .btn--acao {
-    background: var(--acento);
-    color: var(--noite);
+    background: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%);
+    color: var(--branco);
+    text-shadow: 0 1px 0 rgba(3, 10, 18, 0.25);
 }
 .btn--linha  { background: transparent; color: var(--tinta); border-color: var(--linha-forte); }
 .btn--fantasma-claro { background: rgba(255,255,255,0.14); color: var(--branco); border-color: rgba(255,255,255,0.55); }
@@ -348,7 +350,7 @@ p:last-child { margin-bottom: 0; }
 @media (hover: hover) and (pointer: fine) {
     .btn--acao:hover   { background: var(--azul-forte); transform: translateY(-2px); }
     .hero .btn--acao:hover, .secao--escura .btn--acao:hover,
-    .plano--destaque .btn--acao:hover, .gaveta .btn--acao:hover { background: #4FB6F5; }
+    .plano--destaque .btn--acao:hover, .gaveta .btn--acao:hover { background: linear-gradient(180deg, #1B84D8 0%, #1676CA 50%, #0F68B8 100%); }
     
     .btn--linha:hover  { border-color: var(--azul); color: var(--azul); }
     .btn--fantasma-claro:hover { background: rgba(255,255,255,0.2); }
@@ -485,7 +487,7 @@ p:last-child { margin-bottom: 0; }
 }
 .hero__selo b {
     padding: 0.125rem 0.5rem; border-radius: var(--r-pill);
-    background: var(--acento); color: var(--noite);
+    background: #1570C3; color: var(--branco);
     font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .hero__nota {
@@ -822,7 +824,7 @@ p:last-child { margin-bottom: 0; }
         position: absolute; top: 0; left: 50%;
         transform: translate(-50%, -50%);
         white-space: nowrap;
-        box-shadow: 0 8px 20px -6px rgba(29, 161, 242, 0.55);
+        box-shadow: 0 8px 20px -6px rgba(3, 10, 18, 0.55);
     }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -841,7 +843,7 @@ p:last-child { margin-bottom: 0; }
     background: var(--nevoa-2); color: var(--tinta-2);
     font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
 }
-.plano--destaque .plano__tag { background: var(--acento); color: var(--noite); }
+.plano--destaque .plano__tag { background: #1570C3; color: var(--branco); }
 .plano__nome  { font-family: var(--display); font-weight: 800;
                 font-size: calc(var(--t-lg) * var(--display-k)); text-transform: uppercase; line-height: 1; margin: 0; }
 .plano__desc  { font-size: var(--t-sm); color: var(--tinta-2); margin: 0; }

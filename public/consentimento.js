@@ -87,7 +87,7 @@
         'display:inline-flex;align-items:center;justify-content:center;',
         'transition:transform .15s cubic-bezier(.22,1,.36,1)}',
         '.co-btn:active{transform:scale(.98)}',
-        '.co-btn--sim{background:#1DA1F2;color:#06121F}',
+        '.co-btn--sim{background:#1570C3;color:#fff}',
         '.co-btn--nao{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}',
         '@media (prefers-reduced-motion:reduce){.co-barra{transition:opacity .2s linear;transform:none;opacity:0}',
         '.co-barra[data-visivel="sim"]{opacity:1}}'

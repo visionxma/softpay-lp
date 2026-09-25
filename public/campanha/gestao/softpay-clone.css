@@ -42,14 +42,15 @@ a.sp-logo-rodape { width: 150px !important; aspect-ratio: auto !important; heigh
 a.sp-logo-rodape img { object-fit: contain !important; }
 
 /* ------------------------------------------------ botão sobre o fundo escuro
-   No escuro, a ação é o acento do SoftPay com texto noite (contraste 7,0:1). */
+   No escuro, a ação é azul com texto BRANCO (tinta escura no azul não realça —
+   Victor, 25/09); o degradê fica escuro o bastante para o branco dar 4,6:1. */
 .framer-1ydvphp a.framer-ucRyg,
 .framer-1auis8u a.framer-ucRyg {
-    background: #1DA1F2 !important;
-    background-color: #1DA1F2 !important;
+    background: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%) !important;
+    background-color: #1570C3 !important;
 }
 .framer-1ydvphp a.framer-ucRyg p,
-.framer-1auis8u a.framer-ucRyg p { color: #06121F !important; }
+.framer-1auis8u a.framer-ucRyg p { color: #FFFFFF !important; text-shadow: 0 1px 0 rgba(3, 10, 18, .25); }
 
 /* ------------------------------------------------------ perguntas frequentes
    Abertura de verdade: a resposta vira uma grade de uma linha que vai de 0fr a 1fr

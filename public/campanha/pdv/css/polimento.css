@@ -347,34 +347,35 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [tabindex=
 }
 .sp-oferta span { font-size: .7rem; line-height: 1.15; color: rgba(255, 255, 255, .74); white-space: nowrap; }
 .sp-oferta b { font-size: 1rem; line-height: 1.1; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; }
-.sp-oferta.is-melhor { padding-top: 15px; background-color: #1DA1F2; color: #06121F; box-shadow: 0 0 0 2px #7FC8F5, 0 10px 20px -10px rgba(3, 10, 18, .6); }
-.sp-oferta.is-melhor span { color: rgba(6, 18, 31, .8); font-weight: 700; }
+.sp-oferta.is-melhor { padding-top: 15px; background-color: #1570C3; background-image: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%); color: #fff; text-shadow: 0 1px 0 rgba(3, 10, 18, .25); box-shadow: 0 0 0 2px #7FC8F5, 0 10px 20px -10px rgba(3, 10, 18, .6); }
+.sp-oferta.is-melhor span { color: rgba(255, 255, 255, .88); font-weight: 700; }
 .sp-oferta em {
   position: absolute; top: 0; left: 50%; transform: translate(-50%, -64%);
   padding: 2px 8px; border-radius: 999px; background: #fff; color: #0C5C9E;
   font-style: normal; font-size: .56rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap;
   box-shadow: 0 4px 10px -4px rgba(3, 10, 18, .6);
 }
-/* o botão: azul do SoftPay com uma luz que passa (fundo animado, nunca caixa por cima)
-   e a seta num círculo escuro que anda quando o ponteiro chega */
+/* o botão: azul do SoftPay com texto BRANCO (tinta escura no azul não realça — Victor,
+   25/09), uma luz que passa (fundo animado, nunca caixa por cima) e a seta num círculo
+   branco que anda quando o ponteiro chega */
 .sp-ofertas-btn {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   width: 100%; min-height: 56px; padding: 0 8px 0 22px; border: 0; border-radius: 999px; cursor: pointer;
-  font: inherit; font-weight: 800; font-size: 1.05rem; letter-spacing: -.005em; color: #06121F;
-  background-color: #1DA1F2;
-  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #54BBF6, #1DA1F2);
+  font: inherit; font-weight: 800; font-size: 1.08rem; letter-spacing: -.005em; color: #fff; text-shadow: 0 1px 0 rgba(3, 10, 18, .25);
+  background-color: #1570C3;
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .34) 50%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%);
   background-size: 260% 100%, 100% 100%; background-position: 130% 0, 0 0; background-repeat: no-repeat;
   box-shadow: 0 14px 26px -12px rgba(3, 10, 18, .7), inset 0 1px 0 rgba(255, 255, 255, .5);
   transition: transform 220ms var(--sp-ease), box-shadow 220ms ease;
 }
-.sp-ofertas-seta { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: #06121F; color: #fff; font-style: normal; transition: transform 280ms var(--sp-ease); }
+.sp-ofertas-seta { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: #fff; color: #0C5C9E; font-style: normal; box-shadow: 0 4px 10px -4px rgba(3, 10, 18, .5); transition: transform 280ms var(--sp-ease); }
 @media (prefers-reduced-motion: no-preference) {
   .sp-ofertas-btn { animation: sp-ofertas-luz 4.4s var(--sp-ease) 1.2s infinite; }
 }
 @keyframes sp-ofertas-luz { 0% { background-position: 130% 0, 0 0; } 36%, 100% { background-position: -30% 0, 0 0; } }
 @media (hover: hover) and (pointer: fine) {
   .sp-oferta:hover { transform: translateY(-2px); background-color: rgba(255, 255, 255, .17); }
-  .sp-oferta.is-melhor:hover { background-color: #54BBF6; }
+  .sp-oferta.is-melhor:hover { background-image: linear-gradient(180deg, #1B84D8 0%, #1676CA 50%, #0F68B8 100%); }
   .sp-ofertas-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 30px -12px rgba(3, 10, 18, .8), inset 0 1px 0 rgba(255, 255, 255, .5); }
   .sp-ofertas-btn:hover .sp-ofertas-seta { transform: translateX(4px); }
 }
@@ -383,7 +384,7 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [tabindex=
 /* o selo "Mais popular" também no cartão do plano Loja */
 .sp-popular {
   display: inline-block; vertical-align: middle; position: relative; top: -3px; margin-left: 10px;
-  padding: 4px 10px; border-radius: 999px; background: #1DA1F2; color: #06121F;
+  padding: 4px 10px; border-radius: 999px; background: #1570C3; color: #fff;
   font-size: .68rem; font-weight: 800; letter-spacing: .06em; line-height: 1.2; white-space: nowrap;
 }
 
@@ -440,20 +441,20 @@ html:has(.sp-planos[open]) { overflow: hidden; }
   background: radial-gradient(120% 80% at 50% 0%, #10355A 0%, #06121F 62%); color: #fff;
   box-shadow: 0 0 0 2px #1DA1F2, 0 30px 60px -28px rgba(3, 10, 18, .6); transform: translateY(-6px);
 }
-.sp-plano.is-melhor .sp-plano-tag { background: #1DA1F2; color: #06121F; }
+.sp-plano.is-melhor .sp-plano-tag { background: #1570C3; color: #fff; box-shadow: inset 0 0 0 1px rgba(127, 200, 245, .45); }
 .sp-plano.is-melhor .sp-plano-nome, .sp-plano.is-melhor .sp-plano-preco { color: #fff; }
 .sp-plano.is-melhor .sp-plano-desc, .sp-plano.is-melhor .sp-plano-mes { color: rgba(255, 255, 255, .76); }
 .sp-plano.is-melhor .sp-plano-usuarios { color: #7FC8F5; }
 .sp-plano.is-melhor .sp-plano-itens { color: rgba(255, 255, 255, .94); }
 .sp-plano.is-melhor .sp-plano-itens svg { color: #7FC8F5; }
-.sp-plano.is-melhor .sp-plano-cta { background: #1DA1F2; color: #06121F; box-shadow: 0 12px 22px -12px rgba(0, 0, 0, .6); }
+.sp-plano.is-melhor .sp-plano-cta { background: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%); color: #fff; text-shadow: 0 1px 0 rgba(3, 10, 18, .25); box-shadow: 0 12px 22px -12px rgba(0, 0, 0, .6), inset 0 1px 0 rgba(255, 255, 255, .28); }
 .sp-plano[data-plano="nota"] { grid-column: 1 / -1; background: #F4F7FA; }
 .sp-plano[data-plano="nota"] .sp-plano-cta { background: #fff; color: #06121F; box-shadow: inset 0 0 0 1.5px #06121F; }
 .sp-planos-pe { margin: 14px 0 0; text-align: center; font-size: .85rem; color: #46596B; }
 @media (hover: hover) and (pointer: fine) {
   .sp-planos-fechar:hover { background: #E8F3FB; transform: rotate(90deg); }
   .sp-plano-cta:hover { transform: translateY(-2px); background: #0C5C9E; }
-  .sp-plano.is-melhor .sp-plano-cta:hover { background: #54BBF6; }
+  .sp-plano.is-melhor .sp-plano-cta:hover { background: linear-gradient(180deg, #1B84D8 0%, #1676CA 50%, #0F68B8 100%); }
   .sp-plano[data-plano="nota"] .sp-plano-cta:hover { background: #06121F; color: #fff; }
 }
 .sp-plano-cta:active, .sp-planos-fechar:active { transform: scale(.97); }

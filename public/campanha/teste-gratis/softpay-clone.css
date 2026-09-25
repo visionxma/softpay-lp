@@ -72,7 +72,14 @@ a[data-botao]::after, .sp-seg::after, .sp-e5 > a::after {
   pointer-events: none;
   transition: opacity 220ms var(--sp-ease);
 }
-.bg-\[\#1DA1F2\][data-botao] { --sp-sombra: 0 18px 40px -12px rgba(29, 161, 242, .34); }
+.bg-\[\#1DA1F2\][data-botao] { --sp-sombra: 0 18px 36px -14px rgba(3, 10, 18, .55); }
+/* ação: azul com texto BRANCO. A referência (e a primeira versão daqui) punha tinta escura no
+   azul do logotipo, e o Victor reprovou em 25/09/2026: preto no azul não realça. O degradê fica
+   escuro o bastante para o branco dar 4,6:1 no meio do botão; o hover não clareia. */
+a[data-botao].bg-\[\#1DA1F2\] { background-color: #1570C3 !important; background-image: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%) !important; color: #fff !important; text-shadow: 0 1px 0 rgba(3, 10, 18, .25); }
+a[data-botao].bg-\[\#1DA1F2\] * { color: inherit !important; }
+a[data-botao].bg-\[\#1DA1F2\]:hover { background-color: #1676CA !important; background-image: linear-gradient(180deg, #1B84D8 0%, #1676CA 50%, #0F68B8 100%) !important; color: #fff !important; }
+a[data-botao].bg-\[\#1DA1F2\].sp-brilho { background-image: linear-gradient(110deg, transparent 0 44%, rgba(255, 255, 255, .34) 50%, transparent 56% 100%), linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%) !important; background-size: 250% 100%, 100% 100% !important; }
 .bg-\[\#0C5C9E\][data-botao] { --sp-sombra: 0 16px 34px -12px rgba(12, 92, 158, .34); }
 .sp-seg { --sp-sombra: 0 14px 28px -14px rgba(6, 18, 31, .28); }
 /* o ícone de entrada anda para a frente em vez de quicar sem parar */
@@ -169,6 +176,9 @@ nav a[href^="#"][aria-current="true"]::after { transform: scaleX(1); }
   box-shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 28px 56px -16px rgba(0, 0, 0, .6), 0 40px 90px -30px rgba(29, 161, 242, .2);
 }
 .sp-selo { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .5), 0 20px 44px -14px rgba(0, 0, 0, .55); }
+/* o selo "7 dias grátis, sem cartão" segue a mesma regra: azul com texto branco, nunca tinta escura no azul (25/09) */
+.sp-selo.bg-\[\#7FC8F5\] { background-color: #1570C3; background-image: linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%); }
+.sp-selo .text-\[\#06121F\] { color: #fff; text-shadow: 0 1px 0 rgba(3, 10, 18, .25); }
 /* até 1343px o selo passava 8px da borda da tela e era cortado (o cabeçalho corta o que sai):
    fica 8px para fora do print, dentro da margem de 16px */
 @media (max-width: 1343px) { .sp-selo { right: -8px; } }
