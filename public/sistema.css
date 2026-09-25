@@ -3729,7 +3729,7 @@ a.so-leitor:focus {
         gap: 0.5rem;
         background: #25D366; border-color: #25D366;
         color: var(--noite);
-        box-shadow: 0 12px 30px -12px rgba(37, 211, 102, 0.55);
+        box-shadow: 0 12px 26px -12px rgba(3, 10, 18, 0.6);   /* sombra escura: brilho verde era tell (anti-slop) */
     }
     .cta-final .btn--whats .btn__icone { display: block; flex: none; }
     .cta-final .btn--whats:active { transform: scale(0.97); }
@@ -4066,3 +4066,108 @@ a.so-leitor:focus {
 
 .fala__nota { margin: 0; font-size: var(--t-sm); color: var(--tinta-2); }
 .fala__nota[data-erro] { color: var(--erro, #B42318); font-weight: 600; }
+
+/* ==========================================================================
+   HERO NO PADRÃO DA STONE (25/09/2026)
+   Pedido do Victor: "mude a hero pela da stone" (stone.com.br/?hsd=a). É o clone
+   da estrutura medida lá, com o nosso conteúdo:
+   - vídeo de cortes em tela cheia, escurecido por filter: brightness(.3), e 87vh
+     de altura (a seção seguinte aparece embaixo, como lá);
+   - tudo no centro: título em duas linhas no display, 120/108px no computador e
+     80/72px no celular, a 1ª linha na cor da marca; apoio 20/26px (16/20,8 no
+     celular) a 70% de branco; um botão de 56px de altura, raio 20px, 24px de
+     respiro, rótulo 14px — azul com texto branco (regra de 25/09);
+   - seta de rolar que pulsa, entrada de 1s em sequência e, ao rolar, o bloco
+     encolhe e some (animation-timeline: view(), onde houver).
+   O vídeo é nosso (tools/hero-ritmo.py); o da Stone tem gente deles.
+   ========================================================================== */
+.hero.hero--video {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 87svh;
+    /* o bloco fica um pouco acima do meio, como lá (centro a 379px numa hero de 783px) */
+    padding: calc(var(--nav-h) + 0.5rem) var(--gutter) 6.5rem;
+    text-align: center;
+    background: var(--noite);
+}
+.hero--video .hero__poster,
+.hero--video .hero__video {
+    position: absolute; inset: 0; z-index: -1;
+    width: 100%; height: 100%;
+    filter: brightness(0.3);
+}
+.hero--video .hero__poster img { width: 100%; height: 100%; object-fit: cover; }
+.hero--video .hero__video { object-fit: cover; }
+.hero--video .hero__centro {
+    display: flex; flex-direction: column; align-items: center;
+    width: 100%; max-width: 60rem;
+}
+.hero--video .hero__titulo {
+    margin: 0 0 0.5rem;
+    font-family: var(--display); font-weight: 700; text-transform: uppercase;
+    font-size: clamp(5rem, 4.071rem + 3.81vw, 7.5rem);
+    line-height: 0.9; letter-spacing: -0.0036em;
+    color: var(--branco);
+}
+.hero--video .hero__titulo span { display: block; text-wrap: balance; }
+.hero--video .hero__marca { color: var(--acento); }
+.hero--video .hero__texto {
+    margin: 0 0 1.5rem; max-width: 52rem;
+    font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem); line-height: 1.3;
+    color: rgba(255, 255, 255, 0.7);
+    text-wrap: balance;
+}
+.hero--video .hero__cta {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 56px; padding: 0 24px; border-radius: 20px;
+    font-size: 0.875rem; font-weight: 600; line-height: 1.3; color: var(--branco);
+    text-decoration: none; text-shadow: 0 1px 0 rgba(3, 10, 18, 0.25);
+    background-color: #1570C3;
+    background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 60%),
+                      linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%);
+    background-size: 260% 100%, 100% 100%; background-position: 130% 0, 0 0; background-repeat: no-repeat;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 14px 28px -14px rgba(3, 10, 18, 0.8);
+    transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease;
+}
+.hero--video .hero__cta:active { transform: scale(0.98); }
+.hero--video .hero__cta:focus-visible { outline: 3px solid var(--branco); outline-offset: 3px; }
+.hero--video .hero__descer {
+    position: absolute; left: 50%; bottom: 1.25rem; translate: -50% 0;
+    display: grid; place-items: center; width: 44px; height: 44px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.hero--video .hero__descer:focus-visible { outline: 2px solid var(--branco); border-radius: 50%; }
+@media (hover: hover) and (pointer: fine) {
+    .hero--video .hero__cta:hover { transform: translateY(-2px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), 0 18px 32px -14px rgba(3, 10, 18, 0.9); }
+    .hero--video .hero__descer:hover { color: var(--branco); }
+}
+/* celular: como lá, a hero é a tela inteira, o bloco centrado abaixo do menu e o
+   botão ocupa a linha */
+@media (max-width: 47.99rem) {
+    .hero.hero--video { min-height: 100svh; padding: calc(var(--nav-h) + 0.75rem) var(--gutter) 4.5rem; }
+    .hero--video .hero__cta { width: 100%; }
+}
+
+/* movimento: entrada de 1s em sequência, luz no botão, seta que pulsa e o bloco
+   que encolhe e some ao rolar. Com "menos movimento": nada disso, e o vídeo para
+   no primeiro quadro (o pôster). */
+@media (prefers-reduced-motion: no-preference) {
+    .hero--video .hero__centro > * { animation: hero-entra 1s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .hero--video .hero__centro > :nth-child(2) { animation-delay: 0.12s; }
+    .hero--video .hero__centro > :nth-child(3) { animation-delay: 0.24s; }
+    .hero--video .hero__cta { animation: hero-entra 1s cubic-bezier(0.22, 1, 0.36, 1) 0.24s both, hero-luz 5s ease-in-out 1.6s infinite; }
+    .hero--video .hero__descer svg { animation: hero-descer 2s ease-in-out infinite; }
+    @supports (animation-timeline: view()) {
+        .hero--video .hero__centro {
+            animation: hero-sai linear both;
+            animation-timeline: view();
+            animation-range: exit 0% exit 100%;
+        }
+    }
+}
+@keyframes hero-entra { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+@keyframes hero-luz { 0% { background-position: 130% 0, 0 0; } 32%, 100% { background-position: -30% 0, 0 0; } }
+@keyframes hero-descer { 0%, 100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(6px); opacity: 1; } }
+@keyframes hero-sai { to { opacity: 0; transform: scale(0.9); } }
+@media (prefers-reduced-motion: reduce) {
+    .hero--video .hero__video { display: none; }
+}

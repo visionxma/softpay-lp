@@ -51,10 +51,9 @@
 
     <link rel="preload" href="/fontes/softpay-display-v1.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" as="image" href="/assets/lojistas/loja-de-roupas.webp?v=7a30b36651" fetchpriority="high" />
-    <link rel="preload" as="image" href="/assets/sistema/pdv-celular.webp?v=ee711d3f0c" fetchpriority="high" media="(max-width: 61.99rem)" />
-    <link rel="preload" as="image" href="/assets/sistema/pdv.webp?v=4737e8d2c1" fetchpriority="high" media="(min-width: 62rem)" />
-    <link rel="stylesheet" href="sistema.css?v=424bf82a50" />
+    <link rel="preload" as="image" href="/assets/hero/ritmo-poster-retrato.webp?v=c7bf39940f" fetchpriority="high" media="(max-width: 47.99rem)" />
+    <link rel="preload" as="image" href="/assets/hero/ritmo-poster.webp?v=69532422d0" fetchpriority="high" media="(min-width: 48rem)" />
+    <link rel="stylesheet" href="sistema.css?v=574dab2fcc" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -131,131 +130,37 @@
     <main id="conteudo">
 
         <!-- ============================================================ HERO -->
-        <section class="hero">
-            <picture>
-                <!-- no celular a lojista ganha a própria faixa no topo, enquadrada nela com o tablet -->
-                <source media="(max-width: 47.99rem)" srcset="/assets/lojistas/tela/hero-lojista-780.webp?v=c307e52d4e 780w, /assets/lojistas/tela/hero-lojista-1170.webp?v=dcabe1a08a 1170w" sizes="100vw" width="1170" height="1086" />
-                <img class="hero__foto" src="/assets/lojistas/loja-de-roupas.webp?v=7a30b36651" width="1600" height="667"
-                fetchpriority="high" decoding="async"
-                alt="Lojista conferindo as peças da arara com um tablet na mão" />
+        <section class="hero hero--video" aria-labelledby="hero-titulo">
+            <!-- HERO NO PADRÃO DA STONE (25/09/2026, pedido do Victor): vídeo de cortes em
+                 tela cheia, escurecido, e tudo no centro. O vídeo é nosso: os lojistas das
+                 fotos de segmento do próprio site, em cortes de 2 s (tools/hero-ritmo.py). -->
+            <!-- o primeiro quadro, por baixo do vídeo: aparece enquanto ele carrega, com o
+                 recorte certo para cada tela (o poster do <video> não aceita media) -->
+            <picture class="hero__poster" aria-hidden="true">
+                <source media="(max-width: 47.99rem)" srcset="/assets/hero/ritmo-poster-retrato.webp?v=c7bf39940f" width="720" height="1280" />
+                <img src="/assets/hero/ritmo-poster.webp?v=69532422d0" width="1280" height="720" alt="" fetchpriority="high" decoding="async" />
             </picture>
-            <div class="hero__veu"></div>
+            <video class="hero__video" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1">
+                <source src="/assets/hero/ritmo-retrato.mp4" type="video/mp4" media="(max-width: 47.99rem)" />
+                <source src="/assets/hero/ritmo-paisagem.mp4" type="video/mp4" />
+            </video>
 
-            <div class="shell hero__grade">
-                <div class="hero__conteudo">
-                    <a class="hero__selo" href="/solucoes/bot-whatsapp/">
-                        <b>Novo</b>
-                        <span data-digita="Registre a venda falando no WhatsApp">Registre a venda falando no WhatsApp</span>
-                    </a>
-
-                    <h1 class="display display--hero" data-entra>
-                        <span class="linha acento--em-escuro">Sua loja inteira</span>
-                        <span class="linha">em uma tela só</span>
-                    </h1>
-
-                    <p class="hero__sub">
-                        PDV, estoque, caixa, fiado, nota fiscal e loja online no mesmo
-                        sistema — e um painel que mostra o que fazer com esses números.
-                    </p>
-
-                    <div class="cluster cluster--cta">
-                        <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth"
-                            data-track="complete-registration">Começar grátis</a>
-                        <a class="btn btn--fantasma-claro btn--grande" href="#planos">Ver planos</a>
-                    </div>
-
-                    <p class="hero__nota">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                            <polyline points="20 6 9 17 4 12" />
-                        </svg>
-                        7 dias grátis · <b>a partir de R$&nbsp;69/mês</b> · sem cartão
-                    </p>
-
-                    <div class="hero__prova">
-                        <div class="hero__prova-fotos">
-                            <img src="/assets/+100/logo_boutique.png?v=9b5859f8d7" width="34" height="34" loading="lazy" decoding="async" alt="" />
-                            <img src="/assets/+100/logo_cosmeticos.png?v=a50569c0bc" width="34" height="34" loading="lazy" decoding="async" alt="" />
-                            <img src="/assets/+100/logo_minimercado.png?v=f2f9f5aad7" width="34" height="34" loading="lazy" decoding="async" alt="" />
-                            <img src="/assets/+100/logo_padaria.png?v=a98b05b65b" width="34" height="34" loading="lazy" decoding="async" alt="" />
-                            <img src="/assets/+100/logo_oficina.png?v=577bf88046" width="34" height="34" loading="lazy" decoding="async" alt="" />
-                        </div>
-                        <p><strong>Mais de 100 lojistas</strong> já organizam as vendas com o SoftPay</p>
-                    </div>
-                </div>
-
-                <figure class="hero__tela">
-                    <span class="hero__luz" aria-hidden="true"></span>
-                    <!-- A FAMÍLIA DE APARELHOS, EM CSS.
-                         A primeira versão era uma imagem: os aparelhos vinham de um
-                         render e as telas entravam dentro por transformação de
-                         perspectiva. Duas coisas se perdiam ali — a moldura ficava na
-                         resolução do render (o Victor apontou as bordas) e a captura
-                         passava por um warp que come nitidez.
-
-                         Aqui a moldura é feita com borda, raio e gradiente: é vetorial,
-                         fica nítida em qualquer tela e em qualquer densidade. E a
-                         captura entra como <img> no tamanho nativo, sem deformação —
-                         o que o navegador serve é o que o lojista vê no sistema. -->
-                    <!-- DESKTOP: os quatro aparelhos desenhados em CSS, exatamente
-                         como estavam antes de 18/09. O Victor mandou devolver o
-                         desktop ao que era e trabalhar só no celular. -->
-                    <div class="aparelhos" aria-label="O SoftPay aberto em quatro aparelhos">
-                        <div class="ap ap--monitor">
-                            <div class="ap__tela">
-                                <picture>
-                                    <!-- abaixo de 62rem o monitor é o único aparelho à vista,
-                                         e a tela inteira do PDV ficaria ilegível: entra o
-                                         recorte da área que convence -->
-                                    <source media="(max-width: 61.99rem)" srcset="/assets/sistema/pdv-celular.webp?v=ee711d3f0c" width="900" height="786" />
-                                    <img src="/assets/sistema/pdv.webp?v=4737e8d2c1" width="1400" height="845"
-                                         loading="lazy" decoding="async"
-                                         alt="O PDV do SoftPay num monitor, com o carrinho fechando em R$ 414,60" />
-                                </picture>
-                            </div>
-                            <span class="ap__pescoco" aria-hidden="true"></span>
-                            <span class="ap__base" aria-hidden="true"></span>
-                        </div>
-
-                        <div class="ap ap--note">
-                            <div class="ap__tela">
-                                <img src="/assets/sistema/estoque.webp?v=96843ec6cc" width="1400" height="845"
-                                     loading="lazy" decoding="async"
-                                     alt="O controle de estoque do SoftPay num notebook" />
-                            </div>
-                            <span class="ap__teclado" aria-hidden="true"></span>
-                        </div>
-
-                        <div class="ap ap--tablet">
-                            <div class="ap__tela">
-                                <img src="/assets/sistema/tablet-financeiro.webp?v=21027c6649" width="1268" height="1690"
-                                     loading="lazy" decoding="async"
-                                     alt="O painel financeiro do SoftPay num tablet: 138 vendas, R$ 19.393,90 de faturamento e a divisão por forma de pagamento" />
-                            </div>
-                        </div>
-
-                        <div class="ap ap--fone">
-                            <span class="ap__notch" aria-hidden="true"></span>
-                            <div class="ap__tela">
-                                <img src="/assets/sistema/celular-carrinho.webp?v=40e8e11ed7" width="690" height="1498"
-                                     loading="lazy" decoding="async"
-                                     alt="O carrinho de uma venda no celular: quatro itens somando R$ 414,60 e o botão de finalizar" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CELULAR E TABLET: a peça renderizada, com as capturas reais
-                         encaixadas nas telas por perspectiva (tools/peca-hero.py).
-                         É ela que resolve a moldura que ele apontou. -->
-                    <img class="hero__peca" src="/assets/hero/aparelhos-2-1200.webp?v=c0ea9f8cc0"
-                         width="1200" height="900" fetchpriority="high" decoding="async"
-                         alt="O SoftPay aberto num monitor e num celular: o PDV com o carrinho fechando em R$ 414,60" />
-                </figure>
+            <div class="hero__centro">
+                <h1 class="hero__titulo" id="hero-titulo">
+                    <span class="hero__marca">Sua loja inteira</span>
+                    <span>em uma tela só</span>
+                </h1>
+                <p class="hero__texto">PDV, estoque, fiado, nota fiscal e loja online direto no navegador. 7 dias grátis, sem cartão.</p>
+                <a class="hero__cta" href="https://www.softpaybr.com/auth" data-track="complete-registration">Começar grátis</a>
             </div>
+
+            <a class="hero__descer" href="#tudo-em-um-lugar" aria-label="Ver o que o SoftPay faz">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+            </a>
         </section>
 
         <!-- ================================================== ESTEIRA + NÚMEROS -->
-        <section class="secao secao--alt brilho">
+        <section class="secao secao--alt brilho" id="tudo-em-um-lugar">
             <div class="shell cabeca-secao cabeca-secao--centro">
                 <p class="rotulo">Tudo em um lugar só</p>
                 <h2 class="display display--secao">O que a sua loja precisa,<br />sem sistema extra</h2>
@@ -423,7 +328,7 @@
                         <div>
                             <h3 class="display display--cartao" id="painel-estoque-titulo">O estoque bate<br />com a prateleira</h3>
                             <p class="apoio">
-                                Entrada, saída, custo e preço de venda por produto — com variação de
+                                Entrada, saída, custo e preço de venda por produto, com variação de
                                 tamanho e cor quando a loja precisa. A curva ABC mostra quais itens
                                 realmente sustentam o faturamento.
                             </p>
@@ -470,7 +375,7 @@
                             <h3 class="display display--cartao" id="painel-whats-titulo">Registre a venda<br />falando no WhatsApp</h3>
                             <p class="apoio">
                                 Mande um áudio ou uma mensagem dizendo o que vendeu. O SoftPay entende,
-                                registra a venda, baixa o estoque e responde confirmando — sem você
+                                registra a venda, baixa o estoque e responde confirmando, sem você
                                 largar o balcão para abrir o sistema.
                             </p>
                             <ul class="painel__lista">
@@ -674,7 +579,7 @@
                     <p class="grande">
                         O SoftPay roda no navegador. Não precisa de representante na sua
                         cidade, nem de visita técnica para instalar: onde chega internet,
-                        chega o sistema — e o suporte é o mesmo para todo mundo.
+                        chega o sistema. E o suporte é o mesmo para todo mundo.
                     </p>
                     <ul class="mapa__lista">
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Suporte humano no WhatsApp, não robô</li>
@@ -786,7 +691,7 @@
                 </ul>
                 <p class="mapa__nota">
                     Os três lojistas do Maranhão são clientes reais, com depoimento em vídeo
-                    nesta página. Nos demais estados o retrato é ilustrativo — o que o mapa
+                    nesta página. Nos demais estados o retrato é ilustrativo: o que o mapa
                     afirma é que ali já existe loja usando o SoftPay.
                 </p>
             </div>
@@ -873,8 +778,8 @@
                 </aside>
 
                 <p class="apoio planos__rodape" style="text-align: center; margin-top: var(--sp-4)">
-                    Sem cartão de crédito · Cancele quando quiser ·
-                    <a href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support">Ajuda para configurar no WhatsApp</a>
+                    Sem cartão de crédito, cancele quando quiser e conte com
+                    <a href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support">ajuda para configurar no WhatsApp</a>.
                 </p>
             </div>
         </section>
@@ -945,7 +850,7 @@
                                 <span class="garantia__texto">
                                     <b>Quem responde é gente</b>
                                     Você manda mensagem no WhatsApp e fala com uma pessoa da
-                                    equipe — sem robô, sem número de protocolo e sem fila.
+                                    equipe, sem robô, sem número de protocolo e sem fila.
                                 </span>
                             </li>
 
@@ -962,7 +867,7 @@
                                 <span class="garantia__texto">
                                     <b>A loja não fica no computador</b>
                                     Se o computador quebrar, sumir ou ficar sem internet, você
-                                    abre em outro aparelho e está tudo lá — com cópia de
+                                    abre em outro aparelho e está tudo lá, com cópia de
                                     segurança feita sozinha, todo dia.
                                 </span>
                             </li>
@@ -1054,7 +959,7 @@
                     </details>
                     <details class="faq__item faq__extra" name="faq" hidden>
                         <summary>Posso cadastrar funcionários?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Sim, com multi-login: cada pessoa entra com o próprio acesso. A quantidade depende do plano — 1 no Comércio, até 3 no Loja e até 10 no ERP Completo. O plano Nota Fiscal permite até 2.</p></div>
+                        <div><p>Sim, com multi-login: cada pessoa entra com o próprio acesso. A quantidade depende do plano: 1 no Comércio, até 3 no Loja e até 10 no ERP Completo. O plano Nota Fiscal permite até 2.</p></div>
                     </details>
                     <details class="faq__item faq__extra" name="faq" hidden>
                         <summary>Posso controlar mais de uma loja ou filial?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
@@ -1096,7 +1001,7 @@
                 <h2 class="display display--secao">Comece hoje.<br /><span class="acento--em-escuro">Sem cartão.</span></h2>
                 <p class="grande leitura leitura--centro" style="margin-bottom: var(--sp-5)">
                     Sete dias com o sistema inteiro aberto. Se não servir para a sua loja,
-                    é só não continuar — não pedimos cartão nem contrato.
+                    é só não continuar. Não pedimos cartão nem contrato.
                 </p>
                 <div class="cluster cluster--cta" style="justify-content: center">
                     <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Começar grátis</a>
