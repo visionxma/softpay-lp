@@ -21,7 +21,53 @@
 
    Escala: 7 degraus (a Stone tem 6; o SoftPay antigo tinha 14).
    Sombras: 2 (o SoftPay antigo tinha 8).
+
+   Tipografia da Stone (25/09/2026): Roobert (Displaay) no texto e ABC Gravity
+   X Compressed (Dinamo) no display. As duas são pagas e o próprio arquivo da
+   Gravity proíbe hospedar em servidor público — então o desenho foi medido e
+   reproduzido com fontes OFL, glifo a glifo (mesma altura de maiúscula,
+   interseção sobre união dos pixels):
+     · SoftPay Display = Roboto Flex fixada em wdth 28 · wght 650 · opsz 144,
+       com o espaço estreitado ao da Gravity. Parecença 0,875 (a Archivo, que
+       estava aqui, dava 0,577). Mesma largura de frase: 1,004×.
+     · SoftPay Texto = Funnel Sans em 350/450/625/725, servida como
+       400/500/600/700 — os pesos que casam com os quatro da Roobert.
+       Parecença 0,81–0,87; largura de frase 0,99×.
+   Comprou a licença? Troque só os src do @font-face abaixo; os nomes de
+   família e o resto do arquivo não mudam.
    ========================================================================== */
+
+/* ----------------------------------------------------------------- 0. FONTES */
+@font-face {
+    font-family: 'SoftPay Display';
+    src: url('/fontes/softpay-display-v1.woff2') format('woff2');
+    font-weight: 100 900; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'SoftPay Texto';
+    src: url('/fontes/softpay-texto-400-v1.woff2') format('woff2');
+    font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'SoftPay Texto';
+    src: url('/fontes/softpay-texto-400-italico-v1.woff2') format('woff2');
+    font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+    font-family: 'SoftPay Texto';
+    src: url('/fontes/softpay-texto-500-v1.woff2') format('woff2');
+    font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'SoftPay Texto';
+    src: url('/fontes/softpay-texto-600-v1.woff2') format('woff2');
+    font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+    font-family: 'SoftPay Texto';
+    src: url('/fontes/softpay-texto-700-v1.woff2') format('woff2');
+    font-weight: 700 900; font-style: normal; font-display: swap;
+}
 
 /* ---------------------------------------------------------------- 1. TOKENS */
 :root {
@@ -64,12 +110,20 @@
     --sup-escura:   var(--noite);
 
     /* --- Tipografia ---
-       Archivo variable no eixo de largura (62–125): é o que permite o
-       condensado de verdade, sem simular com transform.
-       Geist no corpo: grotesk neutra, algarismos claros — o produto
-       fala de dinheiro o tempo todo. */
-    --fonte:   'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --display: 'Archivo', 'Archivo Black', var(--fonte);
+       A da Stone, reproduzida em OFL (ver o cabeçalho): display
+       ultracondensado de largura única, como a Gravity X Compressed — por
+       isso nenhuma regra usa font-stretch —, e grotesca de algarismos
+       abertos no corpo, como a Roobert. */
+    --fonte:   'SoftPay Texto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --display: 'SoftPay Display', 'Arial Narrow', var(--fonte);
+    /* A Gravity ocupa ~60% da largura da Archivo no mesmo corpo: é por isso
+       que a Stone usa o display maior (72px no desktop, 56px no celular).
+       Todo tamanho de display passa por este fator, que devolve a presença
+       dos títulos sem estourar a altura das seções. */
+    --display-k: 1.25;
+    /* No hero do desktop o título divide a linha com a tela do sistema e
+       tem coluna de sobra: ali ele volta à largura que a Archivo ocupava. */
+    --display-k-hero: 1.6;
 
     /* 7 degraus, fluidos de 360 a 1440px. Nenhum tamanho fora desta lista. */
     --t-xs:   0.75rem;                                  /* 12px  — rótulo */
@@ -148,21 +202,21 @@ h1, h2, h3, h4 { margin: 0 0 var(--sp-3); font-weight: 700; line-height: 1.15; }
 p  { margin: 0 0 var(--sp-4); }
 p:last-child { margin-bottom: 0; }
 
-/* O display é o gesto da marca: condensado, caixa alta, entrelinha < 1.
-   font-stretch usa o eixo de largura real da Archivo variable. */
+/* O display é o gesto da marca: ultracondensado, caixa alta, entrelinha < 1.
+   A largura vem do próprio desenho da SoftPay Display (uma só, como a
+   Gravity X Compressed da Stone), não de font-stretch. */
 .display {
     font-family: var(--display);
     font-weight: 800;
-    font-stretch: 68%;
     text-transform: uppercase;
     line-height: 0.88;
     letter-spacing: 0.005em;
     margin: 0;
     text-wrap: balance;
 }
-.display--hero    { font-size: var(--t-3xl); }
-.display--secao   { font-size: var(--t-2xl); }
-.display--cartao  { font-size: var(--t-xl); font-stretch: 74%; line-height: 0.95; }
+.display--hero    { font-size: calc(var(--t-3xl) * var(--display-k)); }
+.display--secao   { font-size: calc(var(--t-2xl) * var(--display-k)); }
+.display--cartao  { font-size: calc(var(--t-xl) * var(--display-k)); line-height: 0.95; }
 
 /* Mancha de leitura: 66ch. Não confundir com a largura de composição. */
 .leitura { max-width: 62ch; }
@@ -518,8 +572,8 @@ p:last-child { margin-bottom: 0; }
     border-color: rgba(255, 255, 255, 0.14);
 }
 .numero__valor {
-    font-family: var(--display); font-stretch: 74%; font-weight: 800;
-    font-size: var(--t-xl); line-height: 1; color: var(--azul);
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-xl) * var(--display-k)); line-height: 1; color: var(--azul);
 }
 .secao--escura .numero__valor { color: var(--acento); }
 .numero__rotulo { font-size: var(--t-sm); color: var(--tinta-2); line-height: 1.35; }
@@ -704,14 +758,14 @@ p:last-child { margin-bottom: 0; }
     }
 }
 .vitrine__nome {
-    font-family: var(--display); font-stretch: 62%; font-weight: 800;
-    /* 14cqw é o teto medido: é o tamanho em que o rótulo mais largo desta
-       fileira ("ACESSÓRIOS", "VARIEDADES") ainda cabe na largura do painel.
-       A Stone consegue 25cqw porque a ABCGravity dela é quase duas vezes mais
-       estreita que a Archivo no mínimo do eixo de largura (medido: 794px contra
-       400px para treze letras a 100px). Sem essa fonte, 14cqw é o limite —
-       aumentar daqui faz o nome sangrar. */
-    font-size: min(14cqw, 3rem);
+    font-family: var(--display); font-weight: 800;
+    /* A Stone usa 25cqw aqui porque a Gravity X Compressed é quase duas
+       vezes mais estreita que a Archivo que estava no lugar (794px contra
+       400px para treze letras a 100px) — com a Archivo o teto era 14cqw.
+       A SoftPay Display tem a largura da Gravity (1,004×), então o nome
+       volta ao tamanho da referência: 24cqw deixa "ACESSÓRIOS", o rótulo
+       mais largo, em ~74% do painel. */
+    font-size: min(24cqw, 4.5rem);
     line-height: 0.88; text-transform: uppercase; text-align: center;
     letter-spacing: -0.01em;
     color: var(--acento);
@@ -761,8 +815,8 @@ p:last-child { margin-bottom: 0; }
         transform: scale(0.965);
         transform-origin: center;
     }
-    .plano--destaque .plano__nome { font-size: var(--t-xl); }
-    .plano--destaque .plano__preco { font-size: clamp(2rem, 1.4rem + 1.6vw, 2.75rem); }
+    .plano--destaque .plano__nome { font-size: calc(var(--t-xl) * var(--display-k)); }
+    .plano--destaque .plano__preco { font-size: calc(clamp(2rem, 1.4rem + 1.6vw, 2.75rem) * var(--display-k)); }
     /* a etiqueta senta sobre a borda de cima, como um selo */
     .plano--destaque .plano__tag {
         position: absolute; top: 0; left: 50%;
@@ -788,12 +842,12 @@ p:last-child { margin-bottom: 0; }
     font-size: var(--t-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .plano--destaque .plano__tag { background: var(--acento); color: var(--noite); }
-.plano__nome  { font-family: var(--display); font-stretch: 74%; font-weight: 800;
-                font-size: var(--t-lg); text-transform: uppercase; line-height: 1; margin: 0; }
+.plano__nome  { font-family: var(--display); font-weight: 800;
+                font-size: calc(var(--t-lg) * var(--display-k)); text-transform: uppercase; line-height: 1; margin: 0; }
 .plano__desc  { font-size: var(--t-sm); color: var(--tinta-2); margin: 0; }
 .plano__preco { display: flex; align-items: baseline; gap: 0.25rem; flex-wrap: wrap;
-                font-family: var(--display); font-stretch: 74%; font-weight: 800;
-                font-size: var(--t-xl); line-height: 1; color: var(--azul); }
+                font-family: var(--display); font-weight: 800;
+                font-size: calc(var(--t-xl) * var(--display-k)); line-height: 1; color: var(--azul); }
 .plano--destaque .plano__preco { color: var(--acento); }
 .plano__ciclo {
     font-family: var(--fonte); font-size: var(--t-sm); font-weight: 500;
@@ -1081,8 +1135,7 @@ a.so-leitor:focus {
         min-height: 0; padding: 0.25rem 0;
         background: none; border: 0; border-radius: 0;
         font-family: var(--display);
-        font-size: clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem);
-        font-stretch: 72%;
+        font-size: calc(clamp(1.75rem, 1.2rem + 1.6vw, 2.5rem) * var(--display-k));
         font-weight: 800;
         text-transform: uppercase;
         line-height: 1.04;
@@ -1183,8 +1236,8 @@ a.so-leitor:focus {
 .pdv__rodape > span b { color: var(--tinta); font-size: var(--t-sm); }
 .pdv__total {
     margin-left: auto;
-    font-family: var(--display); font-stretch: 74%; font-weight: 800;
-    font-size: var(--t-xl); line-height: 1; color: var(--azul);
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-xl) * var(--display-k)); line-height: 1; color: var(--azul);
     font-variant-numeric: tabular-nums;
 }
 .pdv__selo {
@@ -1237,10 +1290,10 @@ a.so-leitor:focus {
     .hero__conteudo { max-width: 36rem; }
     .hero__sub { max-width: 32ch; }
     /* o display cede um degrau para caber em duas linhas ao lado da tela */
-    .hero .display--hero { font-size: clamp(2.5rem, 1.35rem + 1.95vw, 3.25rem); }
+    .hero .display--hero { font-size: calc(clamp(2.5rem, 1.35rem + 1.95vw, 3.25rem) * var(--display-k-hero)); }
 }
 @media (min-width: 90rem) {
-    .hero .display--hero { font-size: 3.75rem; }
+    .hero .display--hero { font-size: calc(3.75rem * var(--display-k-hero)); }
 }
 
 /* A cena flutua: perspectiva leve, sombra funda e um halo azul atrás, para
@@ -1489,8 +1542,8 @@ a.so-leitor:focus {
 }
 .plano-parte__texto { display: grid; gap: var(--sp-2); justify-items: start; }
 .plano-parte__nome {
-    font-family: var(--display); font-stretch: 74%; font-weight: 800;
-    font-size: var(--t-lg); text-transform: uppercase; line-height: 1; margin: 0;
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-lg) * var(--display-k)); text-transform: uppercase; line-height: 1; margin: 0;
 }
 .plano-parte__texto .apoio { max-width: 62ch; }
 .plano-parte__acao {
@@ -1622,15 +1675,15 @@ a.so-leitor:focus {
 
 @media (min-width: 72rem) and (hover: hover) and (pointer: fine) {
     /* Teto medido no painel FECHADO do acordeão, que é o estreito: 212px menos
-       o respiro deixam 196px úteis, e "VARIEDADES" ocupa 228px a 48px. A 28px
-       ela mede 133px e a mais larga da fileira ("PAPELARIA") mede 117px — todas
-       cabem. Acima disso o nome sangra para fora do painel. */
-    .vitrine__nome { font-size: 1.75rem; transition: font-size 0.55s var(--mola); }
+       o respiro deixam 196px úteis. Com a Archivo, "VARIEDADES" ocupava 228px
+       a 48px e o teto era 28px; a SoftPay Display é ~0,6× mais estreita, então
+       o mesmo rótulo cabe a 44px. Acima disso o nome sangra para fora. */
+    .vitrine__nome { font-size: 2.75rem; transition: font-size 0.55s var(--mola); }
     /* O painel aberto tem 365px úteis contra 196px: o nome dele cresce junto.
-       A 34px o rótulo mais longo desta fileira ("Celulares e acessórios") mede
-       341px — ainda dentro dos 365. */
+       "Celulares e acessórios", o mais longo, media 341px a 34px na Archivo;
+       na SoftPay Display, a 52px, fica em ~315px — dentro dos 365. */
     .vitrine__item:hover .vitrine__nome,
-    .vitrine__item:focus-visible .vitrine__nome { font-size: 2.125rem; }
+    .vitrine__item:focus-visible .vitrine__nome { font-size: 3.25rem; }
 
     .vitrine__seta { opacity: 0; transform: translateY(10px); margin-top: 0; }
     .vitrine__item:hover .vitrine__seta,
@@ -1876,8 +1929,8 @@ a.so-leitor:focus {
 @media (min-width: 48rem) { .mapa__numeros > div:last-child { grid-column: auto; } }
 .mapa__numeros b {
     display: block;
-    font-family: var(--display); font-stretch: 62%; font-weight: 800;
-    font-size: var(--t-2xl); line-height: 0.9;
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-2xl) * var(--display-k)); line-height: 0.9;
     color: var(--acento);
 }
 .mapa__numeros span {
@@ -1988,8 +2041,8 @@ a.so-leitor:focus {
 /* ------------------------------------------------------- O CONTEÚDO */
 .page-section { margin-bottom: var(--sp-7); scroll-margin-top: calc(var(--nav-h) + 1rem); }
 .page-section > h2 {
-    font-family: var(--display); font-stretch: 78%; font-weight: 800;
-    font-size: var(--t-xl); line-height: 1.05;
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-xl) * var(--display-k)); line-height: 1.05;
     margin: 0 0 var(--sp-4);
     text-transform: none;
 }
@@ -2155,8 +2208,8 @@ a.so-leitor:focus {
 .faq-layout { display: grid; gap: var(--sp-5); }
 @media (min-width: 60rem) { .faq-layout { grid-template-columns: 0.7fr 1.3fr; gap: var(--sp-6); } }
 .faq-aside h2 {
-    font-family: var(--display); font-stretch: 78%; font-weight: 800;
-    font-size: var(--t-xl); line-height: 1.05; margin: 0 0 var(--sp-3);
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-xl) * var(--display-k)); line-height: 1.05; margin: 0 0 var(--sp-3);
 }
 .faq-aside p { margin: 0; color: var(--tinta-2); font-size: var(--t-sm); line-height: 1.6; }
 .faq-list { display: grid; gap: 0; }
@@ -2203,8 +2256,8 @@ a.so-leitor:focus {
 
 .page-related { margin-top: var(--sp-7); }
 .page-related h2 {
-    font-family: var(--display); font-stretch: 78%; font-weight: 800;
-    font-size: var(--t-lg); margin: 0 0 var(--sp-4);
+    font-family: var(--display); font-weight: 800;
+    font-size: calc(var(--t-lg) * var(--display-k)); margin: 0 0 var(--sp-4);
 }
 .related-grid {
     display: grid; gap: var(--sp-3); margin: 0; padding: 0; list-style: none;
@@ -2661,7 +2714,7 @@ a.so-leitor:focus {
        que o aparelho passa a ficar PARCIALMENTE abaixo da dobra, deitado — e é
        justamente esse pedaço que faz rolar. */
     .hero__selo { margin-bottom: var(--sp-4); }
-    .hero .display--hero { font-size: clamp(2.75rem, 1.55rem + 5.3vw, 3.5rem); margin-bottom: var(--sp-4); }
+    .hero .display--hero { font-size: calc(clamp(2.75rem, 1.55rem + 5.3vw, 3.5rem) * var(--display-k)); margin-bottom: var(--sp-4); }
     .hero__sub { max-width: 32ch; margin-bottom: var(--sp-5); }
     .hero__prova { margin-top: var(--sp-5); padding-top: var(--sp-5); }
     .hero__prova-fotos img { width: 2rem; height: 2rem; }
@@ -2729,7 +2782,7 @@ a.so-leitor:focus {
         padding: var(--sp-4) var(--sp-4) var(--sp-5); gap: var(--sp-3);
         min-height: 33rem; align-content: start;
     }
-    .painel .display--cartao { font-size: 1.375rem; line-height: 1.14; }
+    .painel .display--cartao { font-size: calc(1.375rem * var(--display-k)); line-height: 1.14; }
     .painel .apoio { font-size: 0.875rem; line-height: 1.5; }
     .painel__lista { gap: 0.375rem; }
     .painel__lista li { font-size: 0.8125rem; line-height: 1.35; }
@@ -2758,7 +2811,7 @@ a.so-leitor:focus {
    texto — continua maior que o corpo, mas para de ser um bloco de 200px antes
    de qualquer conteúdo. */
 @media (max-width: 61.99rem) {
-    .display--secao { font-size: clamp(1.875rem, 1.2rem + 3vw, 2.25rem); }
+    .display--secao { font-size: calc(clamp(1.875rem, 1.2rem + 3vw, 2.25rem) * var(--display-k)); }
     .cabeca-secao { margin-bottom: var(--sp-5); }
     .cabeca-secao .grande { font-size: 1rem; line-height: 1.5; }
 }
@@ -3093,7 +3146,7 @@ a.so-leitor:focus {
         background: var(--noite);
         text-align: center;
     }
-    .mapa__numeros b { font-size: 2.375rem; }
+    .mapa__numeros b { font-size: calc(2.375rem * var(--display-k)); }
     .mapa__numeros span {
         margin-top: var(--sp-2);
         font-size: 0.75rem; line-height: 1.4;
@@ -3404,7 +3457,7 @@ a.so-leitor:focus {
         padding: 0 var(--gutter) calc(5.5rem + env(safe-area-inset-bottom));
         gap: var(--sp-4);
     }
-    #para-quem .vitrine__nome { font-size: min(15cqw, 4rem); }
+    #para-quem .vitrine__nome { font-size: min(22cqw, 5.5rem); }
     #para-quem .vitrine__rotulo .vitrine__seta {
         margin-top: 0;
         min-height: 3rem; padding-inline: 1.5rem 1.25rem;
@@ -3539,7 +3592,7 @@ a.so-leitor:focus {
        EM UMA / TELA SÓ, a letra pode crescer até a linha mais longa ("SUA
        LOJA") ocupar ~80% da largura — 76px em 390, 70px em 360. */
     .hero .display--hero {
-        font-size: min(19.5vw, 5.5rem);
+        font-size: calc(min(19.5vw, 5.5rem) * var(--display-k));
         line-height: 0.98;
         letter-spacing: -0.005em;
         margin-bottom: 1.25rem;
@@ -3722,10 +3775,10 @@ a.so-leitor:focus {
         color: var(--tinta-3);
     }
     .plano--destaque .plano__tag { color: var(--acento); }
-    .plano__nome { font-size: 1.25rem; }
+    .plano__nome { font-size: calc(1.25rem * var(--display-k)); }
     .plano:not(.plano--destaque) .plano__desc { display: none; }
     .plano--destaque .plano__desc { font-size: 0.875rem; color: rgba(255, 255, 255, 0.72); }
-    .plano__preco { font-size: 1.875rem; margin-top: var(--sp-1); }
+    .plano__preco { font-size: calc(1.875rem * var(--display-k)); margin-top: var(--sp-1); }
     .plano:not(.plano--destaque) .plano__preco { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
     .plano__ciclo { font-size: 0.75rem; }
     .plano__inclui { gap: 0.375rem; margin-block: var(--sp-1); }
@@ -3744,13 +3797,13 @@ a.so-leitor:focus {
         padding: var(--sp-4);
     }
     .plano-parte__texto { gap: var(--sp-1); }
-    .plano-parte__nome { font-size: 1.25rem; }
+    .plano-parte__nome { font-size: calc(1.25rem * var(--display-k)); }
     .plano-parte__texto .apoio { font-size: 0.8125rem; line-height: 1.45; }
     .plano-parte__acao {
         display: flex; align-items: center; justify-content: space-between;
         gap: var(--sp-3); margin-top: var(--sp-1);
     }
-    .plano-parte__acao .plano__preco { font-size: 1.625rem; }
+    .plano-parte__acao .plano__preco { font-size: calc(1.625rem * var(--display-k)); }
     .plano-parte__acao .btn {
         min-height: 2.75rem; height: 2.75rem; padding-inline: 1.25rem;
         font-size: 0.875rem; white-space: nowrap;

@@ -213,11 +213,9 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <meta name="twitter:description" content="%(description)s" />
     <meta name="twitter:image" content="%(og_img)s" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="/fontes/softpay-display-v1.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.125,400.900&family=Geist:wght@400.700&display=swap" />
     <link rel="stylesheet" href="/sistema.css" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 

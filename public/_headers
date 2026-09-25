@@ -37,6 +37,11 @@
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Fontes: a versão está no nome do arquivo (softpay-*-v1.woff2); fonte nova
+# ganha -v2, então o cache pode ser eterno.
+/fontes/*
+  Cache-Control: public, max-age=31536000, immutable
+
 # Arquivos de SEO: cache curto, mudam junto com o conteúdo
 /robots.txt
   Cache-Control: public, max-age=3600
