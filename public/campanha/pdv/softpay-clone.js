@@ -550,3 +550,38 @@
   // o balão também reage ao abrir/fechar o menu do celular e à faixa de cookies
   document.addEventListener('click', function () { setTimeout(function () { atualizaBalao(true); }, 420); });
 })();
+
+/* ---------- 5g. Todos os planos: a vitrine no pé da foto abre a janela dos 4 planos ---------- */
+(function () {
+  var dlg = document.getElementById('sp-planos');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  var menos = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var origem = null;
+  function abrir(plano, botao) {
+    origem = botao || document.activeElement;
+    if (!dlg.open) dlg.showModal();
+    requestAnimationFrame(function () { dlg.classList.add('is-aberto'); });
+    var alvo = dlg.querySelector('.sp-plano[data-plano="' + (plano || 'loja') + '"]');
+    if (alvo) {
+      alvo.focus({ preventScroll: true });
+      // no celular a janela rola por dentro: o plano tocado aparece inteiro
+      setTimeout(function () { alvo.scrollIntoView({ block: 'nearest', behavior: menos ? 'auto' : 'smooth' }); }, menos ? 0 : 120);
+    }
+  }
+  function fechar() {
+    dlg.classList.remove('is-aberto');
+    setTimeout(function () { if (dlg.open) dlg.close(); }, menos ? 0 : 260);
+  }
+  document.querySelectorAll('[aria-controls="sp-planos"]').forEach(function (b) {
+    b.addEventListener('click', function () { abrir(b.getAttribute('data-plano'), b); });
+  });
+  // clique fora da caixa (no fundo escurecido) ou no X fecha
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg || e.target.closest('[data-fecha-planos]')) fechar();
+  });
+  dlg.addEventListener('cancel', function (e) { e.preventDefault(); fechar(); }); // Esc com a mesma saída suave
+  dlg.addEventListener('close', function () {
+    dlg.classList.remove('is-aberto');
+    if (origem && origem.focus) origem.focus({ preventScroll: true });
+  });
+})();

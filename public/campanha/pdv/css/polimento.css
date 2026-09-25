@@ -194,7 +194,7 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [tabindex=
   .swiper-wrapper.is-arrastando .swiper-slide { transform: none; }
 }
 
-/* 5e. Planos: o ERP Completo lê como destaque (borda dupla azul, sombra azulada, preço na cor de ação) */
+/* 5e. Planos: o cartão em destaque (o Loja, "mais popular", desde 25/09) tem borda dupla azul, sombra azulada e preço na cor de ação */
 .plans-card-basic, .plans-card-third, .plans-card-first { transition: transform 300ms var(--sp-ease), box-shadow 300ms ease, border-color 220ms ease; }
 .plans-card-third {
   box-shadow: 0 0 0 1px #1DA1F2, 0 26px 50px -30px rgba(12, 92, 158, .32);
@@ -322,4 +322,178 @@ a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [tabindex=
 /* assinatura da VisionX: o X anda junto do texto (no celular ele ficava solto à esquerda) */
 @media screen and (max-width: 991px) {
   .footer-visionx { display: block; justify-self: center; text-align: center; }
+}
+
+/* 5g. Todos os planos (pedido do Victor, 25/09/2026): no pé da foto da lojista, a
+   vitrine dos 4 planos com o mais popular aceso e o botão que abre a janela com a
+   comparação inteira. Vidro escuro sobre o avental: o rosto dela continua livre. */
+.plans-card-first { position: relative; }
+.sp-ofertas {
+  position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 2;
+  display: grid; gap: 12px; padding: 14px 14px 14px;
+  border-radius: 22px; color: #fff;
+  background: linear-gradient(180deg, rgba(8, 26, 44, .78), rgba(6, 18, 31, .86));
+  -webkit-backdrop-filter: blur(16px) saturate(120%); backdrop-filter: blur(16px) saturate(120%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .14), 0 24px 44px -20px rgba(3, 10, 18, .7);
+}
+.sp-ofertas-topo { margin: 0 2px; font-size: .82rem; line-height: 1.2; color: rgba(255, 255, 255, .8); }
+.sp-ofertas-topo b { color: #fff; font-weight: 800; }
+.sp-ofertas-lista { list-style: none; margin: 6px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+.sp-oferta {
+  position: relative; width: 100%; min-height: 50px; padding: 9px 4px 8px; border: 0; border-radius: 14px; cursor: pointer;
+  display: grid; justify-items: center; align-content: center; gap: 2px; font: inherit; color: #fff;
+  background-color: rgba(255, 255, 255, .09); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .13);
+  transition: transform 220ms var(--sp-ease), background-color 220ms ease;
+}
+.sp-oferta span { font-size: .7rem; line-height: 1.15; color: rgba(255, 255, 255, .74); white-space: nowrap; }
+.sp-oferta b { font-size: 1rem; line-height: 1.1; font-weight: 800; letter-spacing: -.01em; white-space: nowrap; }
+.sp-oferta.is-melhor { padding-top: 15px; background-color: #1DA1F2; color: #06121F; box-shadow: 0 0 0 2px #7FC8F5, 0 10px 20px -10px rgba(3, 10, 18, .6); }
+.sp-oferta.is-melhor span { color: rgba(6, 18, 31, .8); font-weight: 700; }
+.sp-oferta em {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -64%);
+  padding: 2px 8px; border-radius: 999px; background: #fff; color: #0C5C9E;
+  font-style: normal; font-size: .56rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; white-space: nowrap;
+  box-shadow: 0 4px 10px -4px rgba(3, 10, 18, .6);
+}
+/* o botão: azul do SoftPay com uma luz que passa (fundo animado, nunca caixa por cima)
+   e a seta num círculo escuro que anda quando o ponteiro chega */
+.sp-ofertas-btn {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  width: 100%; min-height: 56px; padding: 0 8px 0 22px; border: 0; border-radius: 999px; cursor: pointer;
+  font: inherit; font-weight: 800; font-size: 1.05rem; letter-spacing: -.005em; color: #06121F;
+  background-color: #1DA1F2;
+  background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .6) 50%, rgba(255, 255, 255, 0) 60%), linear-gradient(180deg, #54BBF6, #1DA1F2);
+  background-size: 260% 100%, 100% 100%; background-position: 130% 0, 0 0; background-repeat: no-repeat;
+  box-shadow: 0 14px 26px -12px rgba(3, 10, 18, .7), inset 0 1px 0 rgba(255, 255, 255, .5);
+  transition: transform 220ms var(--sp-ease), box-shadow 220ms ease;
+}
+.sp-ofertas-seta { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: #06121F; color: #fff; font-style: normal; transition: transform 280ms var(--sp-ease); }
+@media (prefers-reduced-motion: no-preference) {
+  .sp-ofertas-btn { animation: sp-ofertas-luz 4.4s var(--sp-ease) 1.2s infinite; }
+}
+@keyframes sp-ofertas-luz { 0% { background-position: 130% 0, 0 0; } 36%, 100% { background-position: -30% 0, 0 0; } }
+@media (hover: hover) and (pointer: fine) {
+  .sp-oferta:hover { transform: translateY(-2px); background-color: rgba(255, 255, 255, .17); }
+  .sp-oferta.is-melhor:hover { background-color: #54BBF6; }
+  .sp-ofertas-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 30px -12px rgba(3, 10, 18, .8), inset 0 1px 0 rgba(255, 255, 255, .5); }
+  .sp-ofertas-btn:hover .sp-ofertas-seta { transform: translateX(4px); }
+}
+.sp-oferta:active, .sp-ofertas-btn:active { transform: scale(.98); transition-duration: 120ms; }
+.sp-oferta:focus-visible, .sp-ofertas-btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+/* o selo "Mais popular" também no cartão do plano Loja */
+.sp-popular {
+  display: inline-block; vertical-align: middle; position: relative; top: -3px; margin-left: 10px;
+  padding: 4px 10px; border-radius: 999px; background: #1DA1F2; color: #06121F;
+  font-size: .68rem; font-weight: 800; letter-spacing: .06em; line-height: 1.2; white-space: nowrap;
+}
+
+/* a janela com os 4 planos: o Loja no centro, em destaque; Nota Fiscal numa faixa à parte */
+html:has(.sp-planos[open]) { overflow: hidden; }
+.sp-planos {
+  width: min(1080px, calc(100% - 32px)); max-width: none; max-height: min(92vh, 920px);
+  margin: auto; padding: 0; border: 0; border-radius: 28px; background: transparent; color: #06121F; overflow: visible;
+}
+.sp-planos::backdrop { background: rgba(3, 10, 18, .64); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); opacity: 0; transition: opacity 260ms ease; }
+.sp-planos.is-aberto::backdrop { opacity: 1; }
+.sp-planos-caixa {
+  position: relative; max-height: inherit; overflow-y: auto; overscroll-behavior: contain;
+  padding: 30px 30px 20px; border-radius: 28px;
+  background: linear-gradient(180deg, #E8F3FB 0%, #F4F7FA 34%);
+  box-shadow: 0 40px 80px -30px rgba(3, 10, 18, .6);
+  opacity: 0; transform: translateY(18px) scale(.985);
+  transition: opacity 240ms ease, transform 380ms var(--sp-ease);
+}
+.sp-planos.is-aberto .sp-planos-caixa { opacity: 1; transform: none; }
+.sp-planos-fechar {
+  position: absolute; top: 14px; right: 14px; width: 44px; height: 44px; display: grid; place-items: center;
+  border: 0; border-radius: 50%; background: #fff; color: #06121F; cursor: pointer; box-shadow: 0 0 0 1px #DCE5EC;
+  transition: transform 200ms var(--sp-ease), background-color 200ms ease;
+}
+.sp-planos-rotulo { margin: 0 0 6px; font-size: .78rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #0C5C9E; }
+.sp-planos-titulo { margin: 0; padding-right: 48px; font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.2rem); line-height: 1.12; font-weight: 800; color: #06121F; text-wrap: balance; }
+.sp-planos-sub { margin: 6px 0 22px; font-size: 1rem; line-height: 1.45; color: #46596B; }
+.sp-planos-grade { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+.sp-plano {
+  position: relative; display: flex; flex-direction: column; gap: 5px; padding: 18px 18px 18px; border-radius: 22px;
+  background: #fff; box-shadow: 0 0 0 1px #DCE5EC, 0 16px 30px -24px rgba(6, 18, 31, .35); outline: none;
+}
+.sp-plano-tag {
+  align-self: flex-start; display: inline-flex; align-items: center; gap: 5px; margin: 0 0 4px; padding: 4px 10px; border-radius: 999px;
+  font-size: .7rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; background: #E8F3FB; color: #0C5C9E;
+}
+.sp-plano-nome { margin: 0; font-size: 1.35rem; line-height: 1.15; font-weight: 800; color: #06121F; }
+.sp-plano-desc { margin: 0; font-size: .9rem; line-height: 1.4; color: #46596B; min-height: 2.8em; }
+.sp-plano-preco { display: flex; align-items: baseline; gap: 4px; margin: 6px 0 0; color: #06121F; }
+.sp-plano-rs { font-size: 1rem; font-weight: 700; }
+.sp-plano-preco b { font-size: 2.35rem; line-height: 1; font-weight: 800; letter-spacing: -.02em; }
+.sp-plano-mes { font-size: .95rem; color: #46596B; }
+.sp-plano-usuarios { margin: 0; font-size: .85rem; font-weight: 700; color: #0C5C9E; }
+.sp-plano-itens { list-style: none; margin: 10px 0 16px; padding: 0; display: grid; gap: 6px; font-size: .9rem; line-height: 1.35; color: #0A1A28; }
+.sp-plano-itens li { display: grid; grid-template-columns: 16px minmax(0, 1fr); gap: 8px; align-items: start; }
+.sp-plano-itens svg { margin-top: 2px; color: #1DA1F2; }
+.sp-plano-cta {
+  margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 999px;
+  font-weight: 800; text-decoration: none; background: #06121F; color: #fff;
+  transition: transform 200ms var(--sp-ease), background-color 200ms ease, box-shadow 200ms ease;
+}
+.sp-plano.is-melhor {
+  background: radial-gradient(120% 80% at 50% 0%, #10355A 0%, #06121F 62%); color: #fff;
+  box-shadow: 0 0 0 2px #1DA1F2, 0 30px 60px -28px rgba(3, 10, 18, .6); transform: translateY(-6px);
+}
+.sp-plano.is-melhor .sp-plano-tag { background: #1DA1F2; color: #06121F; }
+.sp-plano.is-melhor .sp-plano-nome, .sp-plano.is-melhor .sp-plano-preco { color: #fff; }
+.sp-plano.is-melhor .sp-plano-desc, .sp-plano.is-melhor .sp-plano-mes { color: rgba(255, 255, 255, .76); }
+.sp-plano.is-melhor .sp-plano-usuarios { color: #7FC8F5; }
+.sp-plano.is-melhor .sp-plano-itens { color: rgba(255, 255, 255, .94); }
+.sp-plano.is-melhor .sp-plano-itens svg { color: #7FC8F5; }
+.sp-plano.is-melhor .sp-plano-cta { background: #1DA1F2; color: #06121F; box-shadow: 0 12px 22px -12px rgba(0, 0, 0, .6); }
+.sp-plano[data-plano="nota"] { grid-column: 1 / -1; background: #F4F7FA; }
+.sp-plano[data-plano="nota"] .sp-plano-cta { background: #fff; color: #06121F; box-shadow: inset 0 0 0 1.5px #06121F; }
+.sp-planos-pe { margin: 14px 0 0; text-align: center; font-size: .85rem; color: #46596B; }
+@media (hover: hover) and (pointer: fine) {
+  .sp-planos-fechar:hover { background: #E8F3FB; transform: rotate(90deg); }
+  .sp-plano-cta:hover { transform: translateY(-2px); background: #0C5C9E; }
+  .sp-plano.is-melhor .sp-plano-cta:hover { background: #54BBF6; }
+  .sp-plano[data-plano="nota"] .sp-plano-cta:hover { background: #06121F; color: #fff; }
+}
+.sp-plano-cta:active, .sp-planos-fechar:active { transform: scale(.97); }
+.sp-plano-cta:focus-visible, .sp-planos-fechar:focus-visible { outline: 3px solid #1DA1F2; outline-offset: 3px; }
+/* computador largo: a faixa da Nota Fiscal em uma linha */
+@media (min-width: 1024px) {
+  .sp-plano[data-plano="nota"] {
+    display: grid; grid-template-columns: minmax(0, 1.25fr) auto minmax(0, 1fr) auto; grid-template-rows: auto auto auto;
+    column-gap: 28px; row-gap: 2px; align-items: center; padding: 14px 22px;
+  }
+  .sp-plano[data-plano="nota"] .sp-plano-tag { grid-column: 1; grid-row: 1; justify-self: start; }
+  .sp-plano[data-plano="nota"] .sp-plano-nome { grid-column: 1; grid-row: 2; }
+  .sp-plano[data-plano="nota"] .sp-plano-desc { grid-column: 1; grid-row: 3; min-height: 0; }
+  .sp-plano[data-plano="nota"] .sp-plano-preco { grid-column: 2; grid-row: 1 / 3; margin: 0; }
+  .sp-plano[data-plano="nota"] .sp-plano-preco b { font-size: 2rem; }
+  .sp-plano[data-plano="nota"] .sp-plano-usuarios { grid-column: 2; grid-row: 3; }
+  .sp-plano[data-plano="nota"] .sp-plano-itens { grid-column: 3; grid-row: 1 / 4; margin: 0; gap: 4px; }
+  .sp-plano[data-plano="nota"] .sp-plano-cta { grid-column: 4; grid-row: 1 / 4; margin: 0; }
+}
+/* celular: a janela sobe de baixo; o mais popular na largura toda, os outros dois lado a lado
+   e a Nota Fiscal embaixo — nunca trilho com rolagem de lado */
+@media (max-width: 767.98px) {
+  .sp-ofertas { left: 10px; right: 10px; bottom: 10px; padding: 12px; gap: 10px; border-radius: 20px; }
+  .sp-ofertas-lista { gap: 5px; }
+  .sp-oferta { min-height: 48px; border-radius: 12px; }
+  .sp-oferta b { font-size: .92rem; }
+  .sp-ofertas-btn { min-height: 52px; font-size: 1rem; padding-left: 18px; }
+  .sp-ofertas-seta { width: 38px; height: 38px; }
+  .sp-planos { width: 100%; max-height: 94dvh; margin: auto 0 0; border-radius: 24px 24px 0 0; }
+  .sp-planos-caixa { padding: 26px 14px calc(18px + env(safe-area-inset-bottom)); border-radius: 24px 24px 0 0; transform: translateY(48px); }
+  .sp-planos-sub { margin-bottom: 20px; font-size: .95rem; }
+  .sp-planos-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .sp-plano { padding: 16px 14px; border-radius: 18px; }
+  .sp-plano.is-melhor { grid-column: 1 / -1; order: -1; transform: none; }
+  .sp-plano-nome { font-size: 1.15rem; }
+  .sp-plano-desc { min-height: 0; font-size: .86rem; }
+  .sp-plano-preco b { font-size: 2rem; }
+  .sp-plano-itens { margin: 8px 0 14px; gap: 6px; font-size: .84rem; }
+  .sp-plano-cta { min-height: 46px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sp-planos-caixa { transform: none; transition: opacity 160ms linear; }
 }
