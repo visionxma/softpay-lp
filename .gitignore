@@ -34,3 +34,10 @@ __pycache__/
 # backups de trabalho locais
 .backup-*/
 .backup-legal-20260921/
+
+# ampliação 4x do render do kit (17 MB): refeita por tools/peca-kit-balcao.py
+assets-fonte/hero/kit-balcao-chroma-x4.png
+assets-fonte/hero/fone-prata-chroma-x4.png
+
+# cache do detector da Impeccable (a config fica no git)
+.impeccable/hook.cache.json

@@ -1,12 +1,31 @@
 /* Apoio do clone (referência: página de um concorrente, feita no Framer).
    O layout é o deles, 1:1. Aqui só entra: o botão sobre fundo escuro, os estados que o JS deles fazia
    (pergunta aberta/fechada, abas, menu, cabeçalho compacto) e o que é da marca
-   SoftPay (logotipo, botão do WhatsApp, assinatura). */
+   SoftPay (logotipo, botão do WhatsApp, assinatura).
+   Rodada de acabamento (25/09/2026): movimento, hover, foco e moldura, sem mexer em
+   composição, tamanhos de letra nem altura das seções. Só transform (e as propriedades
+   translate/scale, que se somam ao transform inline do Framer) e opacity animam. */
+
+:root {
+    --sp-ease: cubic-bezier(.22, 1, .36, 1);
+    --sp-azul: #0C5C9E;
+    --sp-azul-forte: #084A81;
+    --sp-acento: #1DA1F2;
+    --sp-acento-forte: #7FC8F5;
+    --sp-tinta: #0A1A28;
+}
 
 /* ---------------------------------------------------------------- tipografia
-   Nenhuma regra de fonte aqui: o @font-face com o NOME da família deles
+   Nenhuma regra de tamanho aqui: o @font-face com o NOME da família deles
    ("Inter") aponta para a SoftPay Texto, então cada regra do CSS da referência
-   desenha a nossa letra no tamanho, peso e entrelinha dela, títulos inclusive. */
+   desenha a nossa letra no tamanho, peso e entrelinha dela, títulos inclusive.
+   Acabamento: título equilibrado, parágrafo sem palavra sozinha, número tabular. */
+/* só o estilo da quebra (text-wrap-style): o atalho text-wrap religaria a quebra
+   nos textos que o Framer deixa em uma linha (white-space: pre) */
+#main h1, #main h2, #main h3, #main h4 { text-wrap-style: balance; }
+#main p { text-wrap-style: pretty; }
+.framer-13nqdw3 p, .framer-1mlxkep p, .framer-v2e4eo p { font-variant-numeric: tabular-nums; }
+html { scroll-padding-top: 96px; }
 
 /* ------------------------------------------------------------------ logotipo
    A marca deles é um quadrado (64 x 64); a nossa é horizontal. A caixa cresce
@@ -32,15 +51,39 @@ a.sp-logo-rodape img { object-fit: contain !important; }
 .framer-1ydvphp a.framer-ucRyg p,
 .framer-1auis8u a.framer-ucRyg p { color: #06121F !important; }
 
-/* ------------------------------------------------------ perguntas frequentes */
+/* ------------------------------------------------------ perguntas frequentes
+   Abertura de verdade: a resposta vira uma grade de uma linha que vai de 0fr a 1fr
+   (o JS embrulha o texto em .sp-faq-dentro). O espaço de 16 px entre pergunta e
+   resposta passa para dentro da parte que abre, para a pergunta fechada ter a
+   mesma altura de antes. */
 .sp-faq { outline: none; }
+/* pergunta e ícone não se encostam: 16 px no computador; no celular um espaço a mais
+   quebraria perguntas em mais uma linha (a seção passaria de +4%), então o ícone
+   anda 6 px para dentro do respiro do cartão, sem mexer no layout */
 .sp-faq .framer-1gg9v95 { cursor: pointer; }
+@media (min-width: 810px) { .sp-faq .framer-1gg9v95 { gap: 16px; } }
+@media (max-width: 809.98px) { .sp-faq .framer-1r7jdbn { translate: 6px 0; } }
 .sp-faq .framer-1w06yyo { position: relative !important; bottom: auto !important; left: auto !important; right: auto !important; }
-.sp-faq:not(.sp-aberto) .framer-1w06yyo { display: none !important; }
-.sp-faq .framer-w55ox4 { transform: rotate(180deg) !important; transition: transform 0.25s ease; }
+.sp-faq:not(.sp-aberto):not(.sp-faq-pronto) .framer-1w06yyo { display: none !important; }
+.sp-faq.sp-faq-pronto .framer-1ojyre0 { gap: 0 !important; }
+.sp-faq.sp-faq-pronto .framer-1w06yyo {
+    display: grid !important;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 420ms var(--sp-ease), opacity 260ms ease;
+}
+.sp-faq.sp-faq-pronto.sp-aberto .framer-1w06yyo { grid-template-rows: 1fr; opacity: 1; transition: grid-template-rows 480ms var(--sp-ease), opacity 360ms ease 80ms; }
+.sp-faq-dentro { min-height: 0; overflow: hidden; }
+.sp-faq-dentro::before { content: ""; display: block; height: 16px; }
+.sp-faq .framer-w55ox4 { transform: rotate(180deg) !important; transition: transform 380ms var(--sp-ease); }
 .sp-faq.sp-aberto .framer-w55ox4 { transform: rotate(90deg) !important; }
 .sp-faq .framer-yuprjh { transform: rotate(-90deg) !important; }
-.sp-faq:focus-visible { outline: 2px solid #7FC8F5; outline-offset: 4px; }
+.sp-faq .framer-1r7jdbn { transition: transform 380ms var(--sp-ease); }
+.sp-faq.sp-aberto .framer-1r7jdbn { transform: rotate(180deg); }
+.sp-faq:focus-visible { outline: 2px solid #7FC8F5; outline-offset: 6px; border-radius: 4px; }
+@media (hover: hover) and (pointer: fine) {
+    .sp-faq:hover .framer-w55ox4, .sp-faq:hover .framer-yuprjh { background-color: #fff !important; }
+}
 
 /* ------------------------------------------------------- rodapé: assinatura */
 /* a linha deles tem 384px e um texto só; a nossa leva SoftPay e VisionX lado a lado */
@@ -55,52 +98,119 @@ p.sp-copy {
 p.sp-copy > * { white-space: nowrap; }
 .sp-visionx { display: inline; color: inherit !important; text-decoration: none !important; }
 .sp-visionx svg { display: inline-block; vertical-align: -2px; margin-right: 6px; }
-a.sp-ver-planos { text-decoration: underline !important; }
-.sp-visionx:hover { text-decoration: underline !important; }
+a.sp-ver-planos { text-decoration: underline !important; text-underline-offset: 3px; }
+.sp-visionx:hover { text-decoration: underline !important; text-underline-offset: 3px; }
 @media (max-width: 809.98px) { p.sp-copy { text-align: center; } p.sp-copy > * { white-space: normal; } }
+/* selos do rodapé: a estrela da referência saiu, então o rótulo fica centrado ao lado do selo */
+.framer-rqf90b, .framer-c4ky8x { display: none !important; }
+.framer-egubuz, .framer-1g5vtgf { justify-content: center !important; }
 
 /* ------------------------------------------------- WhatsApp flutuante (canto)
-   No mesmo canto onde a referência tinha o chat dela. */
+   No mesmo canto onde a referência tinha o chat dela. No celular fica apoiado na
+   borda da barra fixa de "Teste 7 dias grátis", sem encostar no botão dela. */
 .sp-whats {
     position: fixed; right: 24px; bottom: 24px; z-index: 50;
     width: 64px; height: 64px; border-radius: 50%;
     display: grid; place-items: center;
     background: #25D366; color: #fff;
     box-shadow: 0 12px 28px -10px rgba(6, 18, 31, 0.55);
-    transition: transform 0.2s ease;
+    transition: transform 240ms var(--sp-ease), opacity 200ms ease;
+    -webkit-tap-highlight-color: transparent;
 }
-.sp-whats:hover { transform: scale(1.06); }
-@media (max-width: 809.98px) { .sp-whats { right: 16px; bottom: 120px; width: 60px; height: 60px; } }
-@media (prefers-reduced-motion: reduce) { .sp-whats, .sp-faq .framer-w55ox4 { transition: none; } }
+.sp-whats::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    box-shadow: 0 18px 34px -12px rgba(6, 18, 31, 0.6);
+    opacity: 0; transition: opacity 240ms var(--sp-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+    .sp-whats:hover { transform: translateY(-3px) scale(1.04); }
+    .sp-whats:hover::before { opacity: 1; }
+}
+.sp-whats:active { transform: scale(.95); transition-duration: 120ms; }
+.sp-whats:focus-visible { outline: 3px solid #0C5C9E; outline-offset: 3px; }
+@media (max-width: 809.98px) {
+    .sp-whats { right: 16px; bottom: 131px; width: 52px; height: 52px; }
+    .sp-whats svg { width: 26px; height: 26px; }
+}
+/* sai da frente (o JS decide): parado sobre texto, link, botão ou a peça do topo, ele se recolhe */
+.sp-whats { transition: transform 240ms var(--sp-ease), opacity 220ms ease, scale 260ms var(--sp-ease), visibility 0s; }
+.sp-whats.sp-recolhido, html.sp-menu-aberto .sp-whats {
+    opacity: 0; scale: .8; visibility: hidden; pointer-events: none;
+    transition: transform 240ms var(--sp-ease), opacity 180ms ease, scale 220ms var(--sp-ease), visibility 0s 220ms;
+}
 
 /* o quadro interno do logo deles é quadrado (aspect-ratio 1): passa a encher a caixa */
 a.sp-logo > div, a.sp-logo > div > div { width: 100% !important; height: 100% !important; aspect-ratio: auto !important; }
 
-/* ------------------------------------------ cabeçalho compacto ao rolar (JS) */
-a.sp-logo { transition: height 0.25s ease, width 0.25s ease; }
-.sp-compacto a.sp-logo { height: 40px !important; width: 112px !important; }
+/* ------------------------------------------ cabeçalho compacto ao rolar (JS)
+   Antes a caixa do logo mudava de largura e altura (recalculava o layout a cada
+   quadro). Agora nada muda de tamanho: a barra inteira sobe 24 px (96 -> 72 visíveis),
+   a linha de dentro desce 12 px para ficar centrada e o logo encolhe por scale
+   (150 x 54 -> 110 x 40 desenhados, o mesmo que a caixa 112 x 40 mostrava). */
+.framer-lxjkbx-container { transition: translate 420ms var(--sp-ease); }
+.framer-lxjkbx-container.sp-compacto { translate: 0 -24px; }
+.framer-lxjkbx-container .framer-1ak8s9v { transition: translate 420ms var(--sp-ease); }
+.framer-lxjkbx-container.sp-compacto .framer-1ak8s9v { translate: 0 12px; }
+a.sp-logo img { transform-origin: left center; transition: scale 420ms var(--sp-ease); }
+.framer-lxjkbx-container.sp-compacto a.sp-logo img { scale: .737; }
+/* fundo com leve desfoque e sombra fina quando a página rola (computador e celular) */
+.framer-lxjkbx-container .framer-gxirno::after,
+.framer-7pbzve-container .framer-lr0Uq::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    box-shadow: 0 1px 0 rgba(10, 26, 40, .07), 0 12px 28px -18px rgba(10, 26, 40, .35);
+    opacity: 0; transition: opacity 320ms var(--sp-ease);
+}
+.sp-rolou .framer-gxirno::after, .sp-rolou .framer-lr0Uq::after { opacity: 1; }
+.framer-lxjkbx-container.sp-rolou .framer-gxirno,
+.framer-7pbzve-container.sp-rolou .framer-lr0Uq {
+    background-color: rgba(255, 255, 255, .9) !important;
+    -webkit-backdrop-filter: saturate(1.6) blur(14px);
+    backdrop-filter: saturate(1.6) blur(14px);
+}
+.framer-7pbzve-container.sp-rolou .framer-58da19,
+.framer-7pbzve-container.sp-rolou a.sp-logo { background-color: transparent !important; }
+html.sp-menu-aberto .framer-7pbzve-container.sp-rolou .framer-lr0Uq { background-color: #fff !important; }
+/* o cabeçalho do celular estava no z-index 1: os pontos do carrossel passavam por cima dele */
+.framer-tUreb .framer-7pbzve-container { z-index: 20 !important; }
 .sp-criar-conta { display: none; }
 .sp-compacto .sp-criar-conta {
     display: inline-flex; align-items: center; justify-content: center;
     padding: 8px 16px; border-radius: 1000px;
     background: #0C5C9E; color: #fff !important;
     font: 600 16px/19px "Inter", sans-serif; text-decoration: none; white-space: nowrap;
+    animation: sp-surge 360ms var(--sp-ease) both;
+    transition: transform 200ms var(--sp-ease);
 }
-.sp-compacto .sp-criar-conta:hover { background: #084A81; }
+@keyframes sp-surge { from { opacity: 0; scale: .92; } to { opacity: 1; scale: 1; } }
+@media (hover: hover) and (pointer: fine) {
+    .sp-compacto .sp-criar-conta:hover { background: #084A81; transform: translateY(-1px); }
+}
+.sp-compacto .sp-criar-conta:active { transform: scale(.97); }
 
-/* -------------------------- menus de Recursos, Segmentos e Saiba mais (JS) */
+/* links do menu: sublinhado que cresce da esquerda (e fica no item com o painel aberto) */
 .framer-euwz04, .framer-z4usgl, .framer-i2xvej { cursor: pointer; }
-.sp-nav-ativo p { text-decoration: underline; text-underline-offset: 3px; }
+.framer-lxjkbx-container .framer-1holv8i > div { position: relative; }
+.framer-lxjkbx-container .framer-1holv8i > div::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; border-radius: 2px;
+    background: #0C5C9E; transform: scaleX(0); transform-origin: right center;
+    transition: transform 360ms var(--sp-ease); pointer-events: none;
+}
+.framer-lxjkbx-container .framer-1holv8i > div.sp-nav-ativo::after { transform: scaleX(1); transform-origin: left center; }
+@media (hover: hover) and (pointer: fine) {
+    .framer-lxjkbx-container .framer-1holv8i > div:hover::after { transform: scaleX(1); transform-origin: left center; }
+}
 .sp-painel {
     width: 100%; max-width: 1216px; margin-top: -16px;
     border-top: 1px solid #DCE5EC; padding: 32px 0 28px;
+    animation: sp-painel 320ms var(--sp-ease) both;
 }
+@keyframes sp-painel { from { opacity: 0; translate: 0 -6px; } to { opacity: 1; translate: none; } }
 .sp-painel[hidden] { display: none; }
 .sp-painel-grade { display: flex; flex-wrap: wrap; gap: 24px 48px; }
 .sp-col { display: flex; flex-direction: column; min-width: 150px; }
 .sp-col-titulo { margin: 0 0 10px; font: 600 14px/1.5 "Inter", sans-serif; color: #0A1A28; }
-.sp-col a { font: 400 14px/1.8 "Inter", sans-serif; color: #0A1A28; text-decoration: none; }
-.sp-col a:hover { text-decoration: underline; }
+.sp-col a { font: 400 14px/1.8 "Inter", sans-serif; color: #0A1A28; text-decoration: none; text-underline-offset: 3px; }
+.sp-col a:hover { text-decoration: underline; color: #0C5C9E; }
 .sp-painel-saiba { gap: 0; }
 .sp-painel-saiba > .sp-col { padding: 0 24px; border-left: 1px solid #DCE5EC; }
 .sp-painel-saiba > .sp-col-larga { flex: 1 1 520px; padding-left: 0; border-left: 0; }
@@ -108,9 +218,9 @@ a.sp-logo { transition: height 0.25s ease, width 0.25s ease; }
 .sp-pilulas { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
 .sp-col a.sp-pilula {
     padding: 8px 16px; border-radius: 1000px; background: #0C5C9E; color: #fff;
-    font: 600 14px/1.5 "Inter", sans-serif;
+    font: 600 14px/1.5 "Inter", sans-serif; transition: transform 200ms var(--sp-ease);
 }
-.sp-col a.sp-pilula:hover { background: #084A81; text-decoration: none; }
+.sp-col a.sp-pilula:hover { background: #084A81; text-decoration: none; color: #fff; transform: translateY(-1px); }
 
 /* ------------------------------------------------ menu do celular (JS) */
 .sp-menu-cel {
@@ -118,30 +228,306 @@ a.sp-logo { transition: height 0.25s ease, width 0.25s ease; }
     display: flex; flex-direction: column;
     padding: 8px 24px 190px; overflow-y: auto; overscroll-behavior: contain;
     background: #fff;
+    animation: sp-menu 300ms var(--sp-ease) both;
 }
+@keyframes sp-menu { from { opacity: 0; translate: 0 -8px; } to { opacity: 1; translate: none; } }
 .sp-menu-cel[hidden] { display: none; }
 .sp-menu-titulo { margin: 20px 0 6px; font: 600 20px/1.5 "Inter", sans-serif; color: #0A1A28; }
-.sp-menu-cel a { padding: 6px 0; font: 400 16px/1.55 "Inter", sans-serif; color: #0A1A28; text-decoration: none; }
+.sp-menu-cel a { padding: 10px 0; font: 400 16px/1.55 "Inter", sans-serif; color: #0A1A28; text-decoration: none; }
+.sp-menu-cel a:active { color: #0C5C9E; }
 html.sp-menu-aberto, html.sp-menu-aberto body { overflow: hidden; }
 
-/* ------------------------------------------- abas do "Leve sua loja no bolso" */
+/* ------------------------------------------- abas do "Leve sua loja no bolso"
+   Título: a cor ativa é a mesma sempre; o apagado vem de opacity, então
+   a troca é suave. Descrição: entra com fade + subida curta; a posição do título é
+   animada por FLIP no JS. Barra de progresso: scaleY, não altura. Tela: as quatro
+   ficam empilhadas e trocam por opacity. */
 .sp-aba { cursor: pointer; }
 .sp-aba .framer-jdimrd { display: none; }
+/* a entrada da descrição é do JS (Web Animations): uma animação de CSS recomeçaria a cada recálculo de estilo */
 .sp-aba.sp-ativa .framer-jdimrd { display: block; }
-.sp-aba .sp-aba-col > div:first-child { --extracted-r6o4lv: rgba(10, 26, 40, 0.5) !important; }
-.sp-aba.sp-ativa .sp-aba-col > div:first-child { --extracted-r6o4lv: rgba(10, 26, 40, 0.8) !important; }
+@keyframes sp-desc { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: none; } }
+/* apagado: a referência usava 50% de tinta (3,3:1, abaixo do AA); 62% dá 4,85:1 e ainda se lê como apagado */
+.sp-aba .sp-aba-col > div:first-child { --extracted-r6o4lv: rgba(10, 26, 40, 0.8) !important; opacity: .775; transition: opacity 320ms ease; }
+.sp-aba.sp-ativa .sp-aba-col > div:first-child { opacity: 1; }
+@media (hover: hover) and (pointer: fine) { .sp-aba:not(.sp-ativa):hover .sp-aba-col > div:first-child { opacity: .9; } }
 .sp-aba-linha { position: relative; overflow: hidden; background-color: rgba(10, 26, 40, 0.1) !important; }
-.sp-aba-progresso { position: absolute; left: 0; top: 0; display: block; width: 100%; height: 0; background: #1DA1F2; }
-.sp-aba:focus-visible { outline: 2px solid #0C5C9E; outline-offset: 4px; }
-
-/* ------------------------------------------------ pontos do carrossel (JS) */
-.sp-pontos {
-    position: absolute; left: 50%; bottom: 20px; z-index: 2; transform: translateX(-50%);
-    display: flex; gap: 10px; padding: 7px 10px; border-radius: 20px;
-    background: rgba(10, 26, 40, 0.2);
+.sp-aba-progresso {
+    position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%;
+    background: #1DA1F2; transform: scaleY(0); transform-origin: top center;
 }
-.sp-ponto { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: #fff; opacity: 0.5; cursor: pointer; }
-.sp-ponto.sp-ativo { opacity: 1; }
+.sp-aba:focus-visible { outline: 2px solid #0C5C9E; outline-offset: 4px; border-radius: 6px; }
+.sp-telas { position: absolute; inset: 0; }
+.sp-telas img {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block;
+    opacity: 0; transition: opacity 420ms ease;
+}
+/* só opacity: o quadro da tela tem drop-shadow, e escala animada sob filtro deixa o print borrado */
+.sp-telas img.sp-tela-ativa { opacity: 1; }
+.sp-telas-origem { visibility: hidden; }
+/* celular: título, texto e tela trocam com fade curto */
+.framer-s6ucG .sp-troca { transition: opacity 180ms ease, translate 180ms ease; }
+/* título com a altura reservada do maior: a linha fica colada no texto de baixo */
+.framer-s6ucG .framer-5w9e5a { display: flex !important; flex-direction: column; justify-content: flex-end; }
+.framer-s6ucG .sp-troca.sp-saindo { opacity: 0; translate: 0 6px; }
+.framer-s6ucG .framer-17r60ws > div { transition: transform 300ms var(--sp-ease); cursor: pointer; }
+.framer-s6ucG .framer-17r60ws > div[aria-current="true"] { transform: scale(1.25); }
+/* as bolinhas de 8 px ganham área de toque de 44 px de altura (o recorte do Framer cortaria a área invisível) */
+.framer-s6ucG .framer-17r60ws, .framer-s6ucG .framer-17r60ws > div { overflow: visible !important; }
+.framer-s6ucG .framer-17r60ws > div::before { content: ""; position: absolute; inset: -18px -4px; }
+.framer-4ue4ve, .framer-13is5t9 { position: relative; transition: transform 200ms var(--sp-ease); }
+.framer-4ue4ve::before, .framer-13is5t9::before { content: ""; position: absolute; inset: -6px -14px; }
+.framer-4ue4ve:active { transform: translateX(-3px); }
+.framer-13is5t9:active { transform: translateX(3px); }
+
+/* ------------------------------------------------ carrossel das avaliações
+   Cartões com a mesma altura (a do mais alto, que já era a do trilho), cartão
+   inteiro dentro da tela no celular, bolinhas fora do cartão. */
+section[aria-roledescription="carousel"] ul { align-items: stretch !important; cursor: grab; }
+section[aria-roledescription="carousel"] ul.sp-arrastando { cursor: grabbing; scroll-snap-type: none !important; user-select: none; }
+section[aria-roledescription="carousel"] ul img { -webkit-user-drag: none; user-select: none; }
+section[aria-roledescription="carousel"] li > div,
+section[aria-roledescription="carousel"] li > div > .framer-0vR3O { height: 100% !important; }
+section[aria-roledescription="carousel"] li .framer-0vR3O { justify-content: space-between !important; }
+/* no celular o cartão (369 px) era mais largo que o trilho (342 px) e saía cortado:
+   agora nunca passa da largura do trilho; onde cabe, fica igual */
+section[aria-roledescription="carousel"] li { max-width: 100%; }
+section[aria-roledescription="carousel"] li > div,
+section[aria-roledescription="carousel"] li > div > .framer-0vR3O { max-width: 100% !important; }
+.framer-0vR3O::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 1;
+    box-shadow: inset 0 0 0 1.5px rgba(12, 92, 158, .35);
+    opacity: 0; transition: opacity 300ms var(--sp-ease);
+}
+.framer-0vR3O .framer-j0zl08 img { transition: transform 600ms var(--sp-ease); }
+@media (hover: hover) and (pointer: fine) {
+    .framer-0vR3O:hover::before { opacity: 1; }
+    .framer-0vR3O:hover .framer-j0zl08 img { transform: scale(1.06); }
+}
+section[aria-roledescription="carousel"] button[aria-label] {
+    transition: opacity 280ms var(--sp-ease), scale 200ms var(--sp-ease) !important;
+}
+@media (hover: hover) and (pointer: fine) {
+    section[aria-roledescription="carousel"] button[aria-label]:hover { scale: 1.08; background-color: rgba(10, 26, 40, .32) !important; }
+}
+section[aria-roledescription="carousel"] button[aria-label]:active { scale: .94; }
+/* no celular a seta ficava sobre as primeiras letras do cartão: vai 16 px para a margem */
+@media (max-width: 809.98px) {
+    .framer--carousel-controls > button:first-of-type { translate: -16px 0; }
+    .framer--carousel-controls > button:last-of-type { translate: 16px 0; }
+}
+.sp-pontos-caixa { position: relative; }
+.sp-pontos {
+    position: absolute; left: 50%; bottom: -30px; z-index: 2; transform: translateX(-50%);
+    display: flex; gap: 0;
+}
+.sp-ponto { position: relative; width: 22px; height: 22px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.sp-ponto::before {
+    content: ""; position: absolute; left: 50%; top: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px;
+    border-radius: 50%; background: #0A1A28; opacity: .22;
+    transition: opacity 260ms ease, transform 320ms var(--sp-ease);
+}
+.sp-ponto.sp-ativo::before { background: #0C5C9E; opacity: 1; transform: scale(1.3); }
+@media (hover: hover) and (pointer: fine) { .sp-ponto:not(.sp-ativo):hover::before { opacity: .45; } }
+.sp-ponto:focus-visible { outline: 2px solid #0C5C9E; outline-offset: -2px; border-radius: 50%; }
+@media (pointer: coarse) { .sp-ponto { width: 30px; height: 44px; } }
 
 /* ---------------------------------- "Exibir todos os segmentos" no celular */
 .framer-1hakzmu:not(.sp-segs-abertos) > .sp-seg-extra { display: none !important; }
+.framer-1hakzmu.sp-segs-abertos > .sp-seg-extra { animation: sp-desc 420ms var(--sp-ease) both; }
+.framer-1fg9rrb[role="button"] { transition: transform 200ms var(--sp-ease); -webkit-tap-highlight-color: transparent; }
+.framer-1fg9rrb[role="button"]:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .framer-1fg9rrb[role="button"]:hover { transform: translateY(-2px); } }
+
+/* ======================================================= acabamento geral === */
+
+/* --- revelar ao entrar na tela (o JS marca .sp-rv; só esconde com .js-ok no html) */
+html.js-ok .sp-rv { opacity: 0; translate: 0 20px; }
+html.js-ok .sp-rv.sp-in {
+    opacity: 1; translate: none;
+    transition: opacity 560ms var(--sp-ease) var(--sp-d, 0ms), translate 560ms var(--sp-ease) var(--sp-d, 0ms);
+}
+html.sp-sem-rv .sp-rv { opacity: 1 !important; translate: none !important; }
+
+/* --- assinatura de movimento: a entrada do topo (título, texto, botão e a peça do balcão) */
+@keyframes sp-sobe { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: none; } }
+@keyframes sp-peca { from { opacity: 0; translate: 0 34px; scale: .955; } to { opacity: 1; translate: none; scale: none; } }
+@keyframes sp-barra { from { translate: 0 100%; } to { translate: none; } }
+@keyframes sp-pop { from { opacity: 0; scale: .8; translate: 0 10px; } to { opacity: 1; scale: none; translate: none; } }
+html.js-ok header.framer-15w5m0 .framer-1h6sjc4 { animation: sp-sobe 680ms var(--sp-ease) 60ms both; }
+html.js-ok header.framer-15w5m0 .framer-1mye223 { animation: sp-sobe 720ms var(--sp-ease) 140ms both; }
+html.js-ok header.framer-15w5m0 .framer-8v727n { animation: sp-sobe 700ms var(--sp-ease) 230ms both; }
+html.js-ok header.framer-15w5m0 .framer-a9cdmc-container { animation: sp-sobe 680ms var(--sp-ease) 320ms both; }
+html.js-ok header.framer-15w5m0 .framer-9v8c4c { animation: sp-sobe 680ms var(--sp-ease) 400ms both; }
+html.js-ok header.framer-15w5m0 .framer-pwf6s2 { transform-origin: 50% 100%; animation: sp-peca 1050ms var(--sp-ease) 200ms both; }
+html.js-ok header.framer-15w5m0 .framer-mgxp7w > div { animation: sp-sobe 640ms var(--sp-ease) both; }
+html.js-ok header.framer-15w5m0 .framer-mgxp7w > div:nth-child(1) { animation-delay: 480ms; }
+html.js-ok header.framer-15w5m0 .framer-mgxp7w > div:nth-child(2) { animation-delay: 550ms; }
+html.js-ok header.framer-15w5m0 .framer-mgxp7w > div:nth-child(3) { animation-delay: 620ms; }
+html.js-ok header.framer-15w5m0 .framer-mgxp7w > div:nth-child(4) { animation-delay: 690ms; }
+html.js-ok .framer-1d48c9n { animation: sp-barra 620ms var(--sp-ease) 380ms both; }
+html.js-ok .sp-whats { animation: sp-pop 560ms var(--sp-ease) 1100ms backwards; }
+
+/* brilho que passa uma vez no botão principal (e de novo quando o ponteiro chega), por
+   background-position: a faixa clara ocupa 40-60% de uma imagem de 300%, então em
+   repouso (posição 0%) ela fica inteira fora do botão. Quem anima é o JS (Web Animations),
+   para o hover não reiniciar o brilho da entrada. */
+header.framer-15w5m0 a.framer-ucRyg,
+.framer-1d48c9n a.framer-ucRyg {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .34) 50%, rgba(255, 255, 255, 0) 60%), linear-gradient(#0C5C9E, #0C5C9E) !important;
+    background-size: 300% 100%, 100% 100% !important;
+    background-repeat: no-repeat !important;
+}
+
+/* --- botões: sobem 2 px e ganham sombra suave (camada com opacity), apertam no toque */
+a.framer-ucRyg { isolation: isolate; transition: transform 220ms var(--sp-ease); -webkit-tap-highlight-color: transparent; }
+a.framer-ucRyg::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1;
+    box-shadow: 0 14px 26px -14px rgba(12, 92, 158, .75);
+    opacity: 0; transition: opacity 220ms var(--sp-ease);
+}
+.framer-1ydvphp a.framer-ucRyg::before, .framer-1auis8u a.framer-ucRyg::before { box-shadow: 0 14px 30px -12px rgba(29, 161, 242, .55); }
+@media (hover: hover) and (pointer: fine) {
+    a.framer-ucRyg:hover { transform: translateY(-2px); background-image: linear-gradient(#084A81, #084A81) !important; }
+    a.framer-ucRyg:hover::before { opacity: 1; }
+    header.framer-15w5m0 a.framer-ucRyg:hover,
+    .framer-1d48c9n a.framer-ucRyg:hover {
+        background-image: linear-gradient(105deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .3) 50%, rgba(255, 255, 255, 0) 60%), linear-gradient(#084A81, #084A81) !important;
+    }
+    .framer-1ydvphp a.framer-ucRyg:hover, .framer-1auis8u a.framer-ucRyg:hover { background: #7FC8F5 !important; }
+}
+a.framer-ucRyg:active { transform: scale(.98); transition-duration: 120ms; }
+
+/* --- foco visível com anel da marca */
+#main a:focus-visible, #main button:focus-visible, #main [role="button"]:focus-visible, #main [role="tab"]:focus-visible,
+#main [tabindex="0"]:focus-visible,
+.sp-menu-cel a:focus-visible, .sp-painel a:focus-visible {
+    outline: 2px solid #0C5C9E; outline-offset: 3px; border-radius: 4px;
+}
+#main a.framer-ucRyg:focus-visible { outline-offset: 4px; border-radius: 1000px; }
+.framer-1ydvphp a:focus-visible, .framer-1auis8u a:focus-visible, .framer-1ydvphp [role="button"]:focus-visible { outline-color: #7FC8F5 !important; }
+.framer-rt7h91 a:focus-visible { outline-color: #fff !important; }
+
+/* --- lista de módulos do topo: sublinhado da referência que vira azul e cresce */
+header.framer-15w5m0 a.framer-styles-preset-1uc703z { position: relative; text-decoration-color: currentColor; }
+header.framer-15w5m0 a.framer-styles-preset-1uc703z::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 1px; height: 2px; border-radius: 2px;
+    background: #0C5C9E; transform: scaleX(0); transform-origin: right center;
+    transition: transform 380ms var(--sp-ease); pointer-events: none;
+}
+@media (hover: hover) and (pointer: fine) {
+    header.framer-15w5m0 a.framer-styles-preset-1uc703z:hover { color: #0C5C9E; text-decoration-color: transparent; }
+    header.framer-15w5m0 a.framer-styles-preset-1uc703z:hover::after { transform: scaleX(1); transform-origin: left center; }
+}
+header.framer-15w5m0 a.framer-styles-preset-1uc703z:active { color: #084A81; }
+/* "Planos a partir de R$ 65": a seta anda quando o link recebe o ponteiro */
+.framer-1su92wz .framer-1ezqcsv { transition: transform 320ms var(--sp-ease); }
+@media (hover: hover) and (pointer: fine) {
+    .framer-1su92wz:has(a:hover) .framer-1ezqcsv { transform: translateX(5px); }
+    .framer-1gepdgv a:hover { text-decoration: underline; text-underline-offset: 3px; }
+}
+
+/* --- aparelhos: o rótulo "Tablet" tinha duas quebras de linha sobrando (2 px fora do eixo) */
+.framer-pmx602 { height: auto !important; }
+.framer-pmx602 br, .framer-pmx602 > p + p { display: none; }
+.framer-h9t4v9 > a > div:first-child { transition: transform 360ms var(--sp-ease); }
+@media (hover: hover) and (pointer: fine) {
+    .framer-h9t4v9 > a:hover > div:first-child { transform: translateY(-5px) scale(1.04); }
+}
+.framer-h9t4v9 > a:active > div:first-child { transform: scale(.96); }
+
+/* --- segmentos: o ícone sobe e fica azul (o JS troca o traço fixo por currentColor) */
+.framer-f3bb2l > a > div:first-child, .framer-1hakzmu > a > div:last-child { transition: transform 360ms var(--sp-ease); }
+.framer-f3bb2l > a svg, .framer-1hakzmu > a svg { color: #0A1A28; }
+@media (hover: hover) and (pointer: fine) {
+    .framer-f3bb2l > a:hover > div:first-child { transform: translateY(-5px); }
+    .framer-f3bb2l > a:hover svg, .framer-1hakzmu > a:hover svg { color: #0C5C9E; }
+    .framer-f3bb2l > a:hover p, .framer-1hakzmu > a:hover p { color: #0C5C9E; }
+    .framer-1hakzmu > a:hover > div:last-child { transform: translateX(4px); }
+}
+.framer-f3bb2l > a:active > div:first-child { transform: scale(.94); }
+.framer-1hakzmu > a:active > div:last-child { transform: translateX(4px); }
+.framer-1hakzmu > a { -webkit-tap-highlight-color: rgba(12, 92, 158, .08); }
+
+/* --- catálogo: chaves que ligam ao entrar na tela (sobrepostas às da imagem) */
+.sp-chaves { position: absolute; inset: 0; pointer-events: none; }
+.sp-chave {
+    position: absolute; border-radius: 999px; background: #E8F3FB;
+    box-shadow: inset 0 0 0 1px #BFD9EE, 0 0 0 2.5px #fff;
+}
+.sp-chave::before {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; background: #0C5C9E;
+    opacity: 0; transition: opacity 280ms ease;
+}
+.sp-chave i {
+    position: absolute; top: 11.1%; left: 6.67%; width: 46.67%; aspect-ratio: 1; border-radius: 50%;
+    background: #fff; transition: transform 420ms var(--sp-ease);
+}
+.sp-chave i::after {
+    content: ""; position: absolute; inset: 0; border-radius: inherit; background: #C9E3F6;
+    transition: opacity 280ms ease;
+}
+.sp-chave.sp-ligada::before { opacity: 1; }
+.sp-chave.sp-ligada i { transform: translateX(85.7%); }
+.sp-chave.sp-ligada i::after { opacity: 0; }
+
+/* --- cartões e prints: sobem um pouco no hover e a imagem ganha zoom leve */
+.framer-19n5gqy, .framer-2p4pfi, .framer-yyxrjg { transition: transform 420ms var(--sp-ease); }
+@media (hover: hover) and (pointer: fine) {
+    .framer-19n5gqy:hover, .framer-2p4pfi:hover, .framer-yyxrjg:hover { transform: translateY(-6px); }
+}
+
+/* --- colagem dos relatórios: as quatro peças da imagem entram uma a uma (recorte por clip-path) */
+.sp-colagem { position: absolute; inset: 0; }
+.sp-peca-c { position: absolute; inset: 0; transition: transform 520ms var(--sp-ease); }
+.sp-peca-c img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; transition: transform 700ms var(--sp-ease); }
+.sp-colagem-origem { visibility: hidden; }
+@media (hover: hover) and (pointer: fine) {
+    .sp-peca-c:hover { transform: scale(1.018); }
+    .sp-peca-c.sp-foto:hover img { transform: scale(1.05); }
+}
+
+/* --- "Fale com a gente": ícone sobe e a seta ao lado do título anda */
+a.framer-1n9l4du > div:first-child { transition: transform 320ms var(--sp-ease); }
+.sp-seta-link { display: inline-block; margin-left: 8px; opacity: .75; transition: transform 320ms var(--sp-ease), opacity 200ms ease; }
+@media (hover: hover) and (pointer: fine) {
+    a.framer-1n9l4du:hover > div:first-child { transform: translateY(-3px); }
+    a.framer-1n9l4du:hover .sp-seta-link { transform: translateX(5px); opacity: 1; }
+}
+a.framer-1n9l4du:active .sp-seta-link { transform: translateX(5px); }
+
+/* --- ícones do rodapé: área de toque de 44 px sem mudar o desenho */
+.framer-1l9sede > a { position: relative; transition: transform 240ms var(--sp-ease); }
+.framer-1l9sede > a::before { content: ""; position: absolute; inset: -12px; }
+@media (hover: hover) and (pointer: fine) { .framer-1l9sede > a:hover { transform: translateY(-2px); } }
+.framer-pk6ga a.framer-styles-preset-1hor9ul:hover { color: #0C5C9E; }
+
+/* --- grão sutil nos fundos escuros grandes (é fundo: fica atrás do texto e das fotos) */
+.framer-1ydvphp, .framer-1auis8u, .framer-qZNgD {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.045'/%3E%3C/svg%3E");
+    background-size: 240px 240px;
+}
+
+/* --- menos movimento: nada desloca, nada em laço; fica só o fade curto */
+@media (prefers-reduced-motion: reduce) {
+    html.js-ok .sp-rv { translate: none; }
+    html.js-ok .sp-rv.sp-in { transition: opacity 240ms linear; }
+    html.js-ok header.framer-15w5m0 .framer-1h6sjc4, html.js-ok header.framer-15w5m0 .framer-1mye223,
+    html.js-ok header.framer-15w5m0 .framer-8v727n, html.js-ok header.framer-15w5m0 .framer-a9cdmc-container,
+    html.js-ok header.framer-15w5m0 .framer-9v8c4c, html.js-ok header.framer-15w5m0 .framer-pwf6s2,
+    html.js-ok header.framer-15w5m0 .framer-mgxp7w > div {
+        animation: sp-aparece 260ms linear both !important;
+    }
+    html.js-ok .sp-whats { animation: sp-aparece 260ms linear 600ms backwards; }
+    html.js-ok .framer-1d48c9n { animation: none; }
+    .framer-lxjkbx-container, .framer-lxjkbx-container .framer-1ak8s9v, a.sp-logo img { transition-duration: 0ms; }
+    .sp-painel, .sp-menu-cel, .sp-compacto .sp-criar-conta,
+    .framer-1hakzmu.sp-segs-abertos > .sp-seg-extra { animation: none; }
+    .sp-telas img { transition: opacity 200ms linear; }
+    .sp-faq.sp-faq-pronto .framer-1w06yyo, .sp-faq.sp-faq-pronto.sp-aberto .framer-1w06yyo { transition: opacity 160ms linear; }
+    .sp-faq .framer-w55ox4, .sp-faq .framer-1r7jdbn, .sp-whats, .sp-whats::before, a.framer-ucRyg,
+    .sp-chave i, .sp-peca-c, .sp-peca-c img, .framer-0vR3O .framer-j0zl08 img { transition: none; }
+    a.framer-ucRyg:hover, .sp-whats:hover, .sp-peca-c:hover, .framer-19n5gqy:hover, .framer-2p4pfi:hover,
+    .framer-yyxrjg:hover, .framer-f3bb2l > a:hover > div:first-child, .framer-h9t4v9 > a:hover > div:first-child { transform: none !important; }
+}
+@keyframes sp-aparece { from { opacity: 0; } to { opacity: 1; } }

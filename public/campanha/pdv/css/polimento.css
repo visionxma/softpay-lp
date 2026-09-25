@@ -1,0 +1,325 @@
+/* SoftPay: rodada de ACABAMENTO sobre o clone (25/09/2026).
+   Regra desta camada: nenhum tamanho de letra, grade, largura ou ordem muda.
+   Movimento só por transform/translate/scale/opacity; hover só em aparelho
+   com mouse; tudo o que some para animar só some com .js-ok no <html>
+   (sem JS, ou se ele falhar, a página continua inteira). */
+
+:root {
+  --sp-ease: cubic-bezier(.22, 1, .36, 1);      /* saída forte: entra rápido, assenta devagar */
+  --sp-ease-mov: cubic-bezier(.65, 0, .35, 1);  /* movimento na tela (cabeçalho, carrossel) */
+  --sp-anel: #0C5C9E;                            /* anel de foco sobre fundo claro */
+  --sp-anel-escuro: #7FC8F5;                     /* anel de foco sobre fundo escuro */
+  --sp-sombra-1: 0 1px 2px rgba(6, 18, 31, .06), 0 10px 24px -14px rgba(6, 18, 31, .28);
+  --sp-sombra-2: 0 2px 4px rgba(6, 18, 31, .05), 0 22px 40px -22px rgba(6, 18, 31, .34);
+  --sp-grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+::selection { background: #1DA1F2; color: #06121F; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* ---------- texto: título equilibrado, parágrafo sem viúva, número de mesma largura ---------- */
+h1, h2, h3, .plans-card-naming { text-wrap: balance; }
+p, .u-text-main, .nav-link-details { text-wrap: pretty; }
+.sp-num { display: inline-block; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.plans-card-pricing { font-variant-numeric: tabular-nums; }
+.plans-card-pricing-month { vertical-align: baseline; }
+
+/* âncora não para escondida atrás do cabeçalho fixo */
+section[id], [id="planos"] { scroll-margin-top: 7.5rem; }
+
+/* ---------- foco visível na cor da marca, em tudo o que se aciona ---------- */
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible, [tabindex="0"]:focus-visible,
+.faq-question-wrap:focus-visible, .slider-arrow-wrap:focus-visible, .w-dropdown-toggle:focus-visible, .w-nav-button:focus-visible {
+  outline: 2px solid var(--sp-anel); outline-offset: 3px;
+}
+.is-blue a:focus-visible, .is-blue [role="button"]:focus-visible, .home-bento-layout a:focus-visible { outline-color: var(--sp-anel-escuro); }
+
+/* ================= 1. CABEÇALHO ================= */
+/* Como na referência: some ao rolar para baixo e volta ao rolar para cima.
+   `translate` (e não `transform`) para compor com o transform do Webflow no atributo style. */
+.g-nav { transition: translate 340ms var(--sp-ease-mov), opacity 240ms ease; }
+.g-nav.sp-escondido { translate: 0 calc(-100% - 3.5rem); }
+.nav-layout, .nav-mobile-container {
+  transition: background-color 260ms ease, box-shadow 260ms ease, -webkit-backdrop-filter 260ms ease, backdrop-filter 260ms ease;
+}
+/* rolou: o cartão branco vira vidro com desfoque e ganha uma sombra fina */
+.g-nav.sp-rolou .nav-layout, .g-nav.sp-rolou .nav-mobile-container {
+  background-color: rgba(255, 255, 255, .9);
+  -webkit-backdrop-filter: blur(18px) saturate(1.8); backdrop-filter: blur(18px) saturate(1.8);
+  box-shadow: 0 0 0 1px rgba(6, 18, 31, .06), 0 14px 34px -18px rgba(6, 18, 31, .35);
+}
+/* itens do menu: pílula que acende no hover e fica acesa na seção visível */
+.nav-menu-link, .nav-menu-dropdown-toggle {
+  border-radius: 999px; padding-top: .5625rem; padding-bottom: .5625rem; min-height: 2.75rem;
+  transition: color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+.nav-menu-link.sp-ativo, .nav-menu-dropdown-toggle.sp-ativo {
+  color: #0C5C9E; background-color: #FFFFFF; box-shadow: 0 1px 2px rgba(6, 18, 31, .08), 0 0 0 1px rgba(12, 92, 158, .12);
+}
+.nav-mobile-link.sp-ativo { color: #0C5C9E; }
+@media (hover: hover) and (pointer: fine) {
+  .nav-menu-link:hover, .nav-menu-dropdown-toggle:hover, .nav-menu-dropdown-toggle.w--open { color: #0C5C9E; background-color: rgba(12, 92, 158, .07); }
+  .nav-dropdown-link { transition: background-color 180ms ease; }
+  .nav-dropdown-link:hover { background-color: #F4F7FA; }
+  .nav-dropdown-link .nav-dropdown-icon-square { transition: transform 220ms var(--sp-ease); }
+  .nav-dropdown-link:hover .nav-dropdown-icon-square { transform: translateX(2px); }
+}
+/* submenu: desce 6px e acende, em vez de pular pronto */
+@keyframes sp-desce { from { opacity: 0; translate: 0 -6px; } to { opacity: 1; translate: 0 0; } }
+.nav-layout .w-dropdown-list.w--open { animation: sp-desce 200ms var(--sp-ease) both; }
+.nav-mobile-burger { transition: background-color 200ms ease, color 200ms ease, transform 160ms ease-out; }
+.nav-mobile-burger:active { transform: scale(.94); }
+
+/* ================= 2. BOTÕES ================= */
+.g-btn {
+  min-height: 2.75rem; /* alvo de toque de 44px também no celular */
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 220ms ease, transform 220ms var(--sp-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .g-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 22px -12px rgba(6, 18, 31, .55); }
+  .g-btn.is-tertiary:hover { box-shadow: 0 10px 20px -14px rgba(6, 18, 31, .35); }
+  .is-blue .g-btn:hover { box-shadow: 0 14px 26px -14px rgba(0, 0, 0, .7); }
+  .g-btn.is-wpp.is-large:hover { background-color: #0B2033; border-color: #7FC8F5; }
+}
+.g-btn:active { transform: translateY(0) scale(.98); box-shadow: none; transition-duration: 110ms; }
+.g-btn.is-wpp .btn_icon { transition: transform 260ms var(--sp-ease); }
+@media (hover: hover) and (pointer: fine) {
+  .g-btn.is-wpp:hover .btn_icon { transform: rotate(-8deg) scale(1.06); }
+}
+/* Assinatura do hero: um brilho que atravessa o botão principal de tempos em tempos.
+   Feito com background-position (nada de pseudo-elemento andando por transform). */
+@media (prefers-reduced-motion: no-preference) {
+  .js-ok .section-home-hero .g-btn {
+    background-image: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, .26) 50%, transparent 62%);
+    background-size: 260% 100%; background-repeat: no-repeat; background-position: 130% 0;
+    animation: sp-sobe 620ms var(--sp-ease) 560ms both, sp-brilho 7s ease-in-out 1.9s infinite;
+  }
+}
+@keyframes sp-brilho { 0% { background-position: 130% 0; } 16%, 100% { background-position: -30% 0; } }
+
+/* ================= 3. HERO: entrada coreografada ================= */
+@keyframes sp-sobe { from { opacity: 0; translate: 0 18px; } to { opacity: 1; translate: 0 0; } }
+@keyframes sp-palavra { from { opacity: 0; translate: 0 .42em; } to { opacity: 1; translate: 0 0; } }
+@keyframes sp-peca { from { opacity: 0; translate: 0 56px; scale: .965; } to { opacity: 1; translate: 0 0; scale: 1; } }
+@keyframes sp-arco { from { opacity: .35; scale: .92; } to { opacity: 1; scale: 1; } }
+@keyframes sp-abre { from { clip-path: inset(0 100% 0 0 round 999px); } to { clip-path: inset(0 0 0 0 round 999px); } }
+@keyframes sp-aparece { from { opacity: 0; } to { opacity: 1; } }
+.sp-palavra { display: inline-block; }
+/* o título é flex na referência: partido em palavras, vira bloco para os espaços continuarem valendo */
+.home-hero-heading.sp-partido { display: block; }
+@media (prefers-reduced-motion: no-preference) {
+  .js-ok .home-hero-eyebrown { animation: sp-sobe 600ms var(--sp-ease) 40ms both; }
+  .js-ok .home-hero-eyebrown-people-pic { animation: sp-abre 900ms var(--sp-ease) 220ms both; }
+  .js-ok .home-hero-heading .sp-palavra { animation: sp-palavra 640ms var(--sp-ease) both; animation-delay: calc(110ms + var(--p, 0) * 26ms); }
+  .js-ok .home-hero-paragraph { animation: sp-sobe 640ms var(--sp-ease) 420ms both; }
+  .js-ok .home-hero-img { animation: sp-peca 1050ms var(--sp-ease) 300ms both; }
+  .js-ok .home-hero-bg { transform-origin: 50% 100%; animation: sp-arco 1300ms var(--sp-ease) 60ms both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-ok .home-hero-content, .js-ok .home-hero-img { animation: sp-aparece 240ms linear both; }
+}
+
+/* grão sutil nos fundos grandes: sob o conteúdo, nunca sobre texto nem foto */
+.home-hero-layout::after, .home-bento-layout::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: var(--sp-grao); background-size: 180px 180px;
+}
+.home-hero-layout::after { opacity: .045; mix-blend-mode: soft-light; }
+.home-bento-layout::after { opacity: .05; }
+.home-hero-content, .home-hero-img_wrap { z-index: 1; }
+
+/* ================= 4. REVELAR AO ENTRAR NA TELA ================= */
+/* O JS marca [data-revelar] e acrescenta .visto quando o bloco entra, com atraso
+   escalonado entre irmãos; depois tira as duas marcas e o elemento volta ao seu estado normal. */
+@media (prefers-reduced-motion: no-preference) {
+  .js-ok [data-revelar] { transition: opacity 560ms var(--sp-ease) var(--sp-atraso, 0ms), translate 560ms var(--sp-ease) var(--sp-atraso, 0ms); }
+  .js-ok [data-revelar]:not(.visto) { opacity: 0; translate: 0 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-ok [data-revelar] { transition: opacity 220ms linear; }
+  .js-ok [data-revelar]:not(.visto) { opacity: 0; }
+}
+@media print { .js-ok [data-revelar] { opacity: 1 !important; translate: none !important; } }
+
+/* ================= 5. CARTÕES ================= */
+/* 5a. Primeiras vantagens (lado da foto do casal) */
+.info_video-card { transition: background-color 220ms ease, border-color 220ms ease; }
+.info_video-card .check-icon_wrap { transition: background-color 220ms ease, color 220ms ease; }
+@media (hover: hover) and (pointer: fine) {
+  .info_video-card:hover .check-icon_wrap { background-color: #0C5C9E; color: #FFFFFF; }
+}
+
+/* 5b. Segmentos, na seção azul: sobe 4px, a borda acende e o ícone enche */
+.home-bento-card { transition: transform 280ms var(--sp-ease), box-shadow 280ms ease, border-color 220ms ease; }
+.home-bento-icon_wrap, .home-bento-card-icon { transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease; }
+.home-bento-card.is-picture { clip-path: inset(0 round var(--borders--border-medium)); }
+.home-bento-card-img { transition: scale 700ms var(--sp-ease); }
+/* no celular e no tablet a foto do último cartão tem altura própria: reserva o espaço dela
+   antes de carregar (sem isso a página cresce 286px durante a rolagem e a âncora erra o alvo) */
+@media screen and (max-width: 991px) { .home-bento-card-img { aspect-ratio: 780 / 724; } }
+@media (hover: hover) and (pointer: fine) {
+  .home-bento-card:hover { transform: translateY(-4px); border-color: #7FC8F5; box-shadow: 0 20px 36px -22px rgba(0, 0, 0, .75); }
+  .home-bento-card:hover .home-bento-icon_wrap { background-color: #0C5C9E; border-color: #0C5C9E; }
+  .home-bento-card:hover .home-bento-card-icon { color: #FFFFFF; }
+  .home-bento-card.is-picture:hover .home-bento-card-img { scale: 1.045; }
+}
+
+/* 5c. As 6 dores: o check fica na altura da primeira linha do título (não no meio do cartão) */
+.home-benefits-card { transition: transform 260ms var(--sp-ease), box-shadow 260ms ease, border-color 220ms ease, background-color 220ms ease; }
+.home-benefits-card .check-icon_wrap { transition: background-color 220ms ease, color 220ms ease; }
+.home-benefits-card .benefits-card-icon { transition: color 220ms ease; }
+@media screen and (min-width: 480px) {
+  .home-benefits-card { align-items: flex-start; }
+  .home-benefits-card .check-icon_wrap { margin-top: calc((var(--typography--font-large) * 1.66 - 3rem) / 2); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .home-benefits-card:hover { transform: translateY(-2px); border-color: #0C5C9E; background-color: #FFFFFF; box-shadow: var(--sp-sombra-1); }
+  .home-benefits-card:hover .check-icon_wrap { background-color: #0C5C9E; }
+  .home-benefits-card:hover .benefits-card-icon { color: #FFFFFF; }
+}
+
+/* 5d. Carrossel de recursos: foto num quadro que recorta o zoom */
+.sp-foto {
+  width: 100%; border: 1px solid var(--colors--brand-green); border-radius: var(--borders--border-medium);
+  overflow: hidden; clip-path: inset(0 round var(--borders--border-medium)); flex: 0 0 auto;
+}
+.sp-foto > .general-features_swiper-card-img { display: block; border: 0; border-radius: 0; transition: scale 700ms var(--sp-ease); }
+.general-features_swiper-swiper-slide { transition: transform 280ms var(--sp-ease), box-shadow 280ms ease, border-color 220ms ease; }
+@media (hover: hover) and (pointer: fine) {
+  .general-features_swiper-swiper-slide:hover { transform: translateY(-4px); border-color: #0C5C9E; box-shadow: var(--sp-sombra-2); }
+  .general-features_swiper-swiper-slide:hover .general-features_swiper-card-img { scale: 1.045; }
+  .swiper-wrapper.is-arrastando .swiper-slide { transform: none; }
+}
+
+/* 5e. Planos: o ERP Completo lê como destaque (borda dupla azul, sombra azulada, preço na cor de ação) */
+.plans-card-basic, .plans-card-third, .plans-card-first { transition: transform 300ms var(--sp-ease), box-shadow 300ms ease, border-color 220ms ease; }
+.plans-card-third {
+  box-shadow: 0 0 0 1px #1DA1F2, 0 26px 50px -30px rgba(12, 92, 158, .32);
+}
+.plans-card-third .plans-card-pricing { color: #0C5C9E; }
+.plans-card-first { clip-path: inset(0 round var(--borders--border-large)); }
+.plans-card-img { transition: scale 800ms var(--sp-ease); }
+@media (hover: hover) and (pointer: fine) {
+  .plans-card-basic:hover { transform: translateY(-4px); border-color: #B9CCDB; box-shadow: var(--sp-sombra-2); }
+  .plans-card-third:hover { transform: translateY(-4px); box-shadow: 0 0 0 1px #1DA1F2, 0 32px 60px -30px rgba(12, 92, 158, .34); }
+  .plans-card-first:hover .plans-card-img { scale: 1.04; }
+}
+
+/* 5f. Depoimentos: o nome do lojista encosta no pé do cartão, na mesma linha em todos */
+.g-testimonials-swiper-slide .testimonials-card-customer-content.u-margin-top { margin-top: auto; }
+.g-testimonials-swiper-slide { transition: box-shadow 260ms ease; }
+@media (hover: hover) and (pointer: fine) {
+  .g-testimonials-swiper-slide:hover { box-shadow: inset 0 0 0 1px #DCE5EC; }
+}
+
+/* ================= 6. SETAS E BOLINHAS DOS CARROSSÉIS ================= */
+.swiper-wrapper { transition: transform 520ms var(--sp-ease); }
+.slider-arrow-wrap {
+  width: 2.75rem !important; height: 2.75rem !important;
+  transition: background-color 200ms ease, opacity 220ms ease, transform 200ms var(--sp-ease), box-shadow 200ms ease;
+}
+.slider-arrow-wrap .slider-arrow-icon { transition: transform 220ms var(--sp-ease); }
+.slider-arrow-wrap.swiper-button-disabled, .slider-arrow-wrap[aria-disabled="true"] { opacity: .32; cursor: default; }
+@media (hover: hover) and (pointer: fine) {
+  .slider-arrow-wrap:not([aria-disabled="true"]):hover { background-color: #084A81; box-shadow: 0 10px 18px -10px rgba(6, 18, 31, .6); }
+  .slider-arrow-wrap.swiper-button-next:not([aria-disabled="true"]):hover .slider-arrow-icon,
+  .slider-arrow-wrap.testimonials-next:not([aria-disabled="true"]):hover .slider-arrow-icon { transform: translateX(2px); }
+  .slider-arrow-wrap.swiper-button-prev:not([aria-disabled="true"]):hover .slider-arrow-icon,
+  .slider-arrow-wrap.testimonials-prev:not([aria-disabled="true"]):hover .slider-arrow-icon { transform: translateX(-2px); }
+}
+.slider-arrow-wrap:not([aria-disabled="true"]):active { transform: scale(.94); }
+.sp-pontos { display: flex; align-items: center; gap: 0; margin: 0 .25rem; }
+.sp-ponto {
+  appearance: none; -webkit-appearance: none; border: 0; background: none; padding: 0; margin: 0;
+  width: 1.5rem; height: 2.75rem; display: flex; align-items: center; justify-content: center; cursor: pointer;
+}
+.sp-ponto::before {
+  content: ""; width: .5rem; height: .5rem; border-radius: 999px; background-color: #0C5C9E;
+  opacity: .25; transition: opacity 220ms ease, transform 260ms var(--sp-ease);
+}
+.sp-ponto[aria-current="true"]::before { opacity: 1; transform: scale(1.3); }
+@media (hover: hover) and (pointer: fine) { .sp-ponto:hover::before { opacity: .6; } .sp-ponto[aria-current="true"]:hover::before { opacity: 1; } }
+.sp-ponto:focus-visible { outline: 2px solid var(--sp-anel); outline-offset: -4px; border-radius: 999px; }
+
+/* ================= 7. PERGUNTAS FREQUENTES ================= */
+/* fechado só depois que o script do FAQ roda (sem JS as respostas ficam à vista) */
+/* abre e fecha pela GRADE (0fr → 1fr), não por height: a altura anima sem o
+   navegador recalcular o layout a cada quadro, e sem o script medir nada */
+.js-faq .faq-content { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 380ms var(--sp-ease); }
+.js-faq .faq-question-wrap[aria-expanded="true"] .faq-content { grid-template-rows: 1fr; }
+.js-faq .faq-question-wrap[aria-expanded="false"] .faq-content { transition-duration: 280ms; }
+.faq-dobra { min-height: 0; overflow: hidden; }
+.faq-question-wrap { transition: border-color 220ms ease, background-color 220ms ease, box-shadow 220ms ease; }
+.faq-question-wrap[aria-expanded="true"] { border-color: #BFD6E8; background-color: #FBFDFF; box-shadow: var(--sp-sombra-1); }
+.faq-question-wrap[aria-expanded="true"] .faq-content { cursor: auto; }
+.faq-icon-wrap { transition: background-color 220ms ease; }
+.faq-question-wrap[aria-expanded="true"] .faq-icon-wrap { background-color: #E8F3FB; }
+.faq-plus-icon { transition: transform 360ms var(--sp-ease), opacity 220ms ease; }
+.faq-question-wrap[aria-expanded="true"] .faq-plus-icon { transform: rotate(135deg); opacity: .8; }
+@media (prefers-reduced-motion: no-preference) {
+  .js-ok .faq-content > * { opacity: 0; translate: 0 -6px; transition: opacity 200ms ease, translate 360ms var(--sp-ease); }
+  .js-ok .faq-question-wrap[aria-expanded="true"] .faq-content > * { opacity: 1; translate: 0 0; transition-delay: 70ms; }
+}
+@media (hover: hover) and (pointer: fine) {
+  .faq-question-wrap:hover { border-color: #DCE5EC; }
+  .faq-question-wrap:hover .faq-plus-icon { opacity: .65; }
+  .faq-question-wrap:hover .faq-icon-wrap { background-color: #F4F7FA; }
+  .faq-question-wrap[aria-expanded="true"]:hover .faq-icon-wrap { background-color: #E8F3FB; }
+}
+
+/* ================= 8. BALÃO DO WHATSAPP ================= */
+.g-chat-btn, .g-chat-btn:hover {
+  background-color: #067A4C; color: #FFFFFF; /* verde de confirmação da paleta: lê como WhatsApp */
+}
+.g-chat-btn {
+  box-shadow: 0 12px 26px -14px rgba(6, 18, 31, .6);
+  transition: opacity 220ms ease, transform 280ms var(--sp-ease), box-shadow 220ms ease, visibility 0s linear 0s;
+}
+.g-chat-btn-icon { width: 1.9rem; height: 1.9rem; }
+.g-chat-rotulo { display: none; }
+@media (hover: hover) and (pointer: fine) {
+  .g-chat-btn:hover { transform: translateY(-2px); box-shadow: 0 18px 32px -16px rgba(6, 18, 31, .65); }
+  .g-chat-rotulo {
+    display: block; position: absolute; right: calc(100% + .625rem); top: 50%; translate: 6px -50%;
+    white-space: nowrap; padding: .5rem .875rem; border-radius: 999px; background-color: #06121F; color: #F4F7FA;
+    font-size: .875rem; font-weight: 600; line-height: 1.2; opacity: 0; pointer-events: none;
+    transition: opacity 180ms ease, translate 240ms var(--sp-ease);
+  }
+  .g-chat-btn:hover .g-chat-rotulo, .g-chat-btn:focus-visible .g-chat-rotulo { opacity: 1; translate: 0 -50%; }
+}
+.g-chat-btn:active { transform: scale(.95); transition-duration: 110ms; }
+/* escondido: some sem deixar alvo clicável nem foco */
+.js-ok .g-chat-btn.sp-oculto {
+  opacity: 0; transform: translateY(14px) scale(.9); pointer-events: none; visibility: hidden;
+  transition: opacity 180ms ease, transform 220ms ease-out, visibility 0s linear 220ms;
+}
+@media screen and (max-width: 767px) {
+  .g-chat-btn { width: 3.25rem; height: 3.25rem; right: .75rem; bottom: calc(.875rem + env(safe-area-inset-bottom, 0px)); }
+  .g-chat-btn-icon { width: 1.7rem; height: 1.7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js-ok .g-chat-btn.sp-oculto { transform: none; }
+}
+
+/* ================= 9. RODAPÉ ================= */
+.footer-page-link, .footer-bottom a { transition: color 180ms ease; }
+/* alvo de toque de 44px de altura sem mexer no espaçamento: a área clicável cresce, o texto não anda */
+.footer-page-link { padding-top: .75rem; padding-bottom: .75rem; margin-top: -.75rem; margin-bottom: -.75rem; }
+.footer-bottom a { padding-top: .875rem; padding-bottom: .875rem; margin-top: -.875rem; margin-bottom: -.875rem; }
+@media (hover: hover) and (pointer: fine) {
+  .footer-page-link:hover, .footer-bottom a:hover { color: #0C5C9E; }
+  .footer-page-link > div { transition: transform 220ms var(--sp-ease); }
+  .footer-page-link:hover > div { transform: translateX(3px); }
+}
+.footer-social-button { transition: background-color 200ms ease, transform 220ms var(--sp-ease), box-shadow 220ms ease; }
+@media (hover: hover) and (pointer: fine) {
+  .footer-social-button:hover { background-color: #0C5C9E; transform: translateY(-2px); box-shadow: 0 12px 20px -12px rgba(6, 18, 31, .55); }
+}
+.footer-social-button:active { transform: scale(.95); }
+/* assinatura da VisionX: o X anda junto do texto (no celular ele ficava solto à esquerda) */
+@media screen and (max-width: 991px) {
+  .footer-visionx { display: block; justify-self: center; text-align: center; }
+}

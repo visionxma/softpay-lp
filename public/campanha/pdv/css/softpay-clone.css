@@ -56,7 +56,6 @@
 .swiper-wrapper { transition: transform 0.3s ease; touch-action: pan-y; cursor: grab; }
 .swiper-wrapper.is-arrastando { transition: none; cursor: grabbing; }
 .swiper-wrapper img { -webkit-user-drag: none; user-select: none; }
-.faq-content { transition: height 0.4s ease; }
 .faq-plus-icon { transition: transform 0.3s ease; }
 .faq-question-wrap[aria-expanded="true"] .faq-plus-icon { transform: rotate(135deg); }
 .faq-question-wrap:focus-visible, .slider-arrow-wrap:focus-visible, .w-dropdown-toggle:focus-visible, .w-nav-button:focus-visible { outline: 2px solid #1DA1F2; outline-offset: 2px; }

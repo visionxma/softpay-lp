@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "files": [
+          "public/campanha/teste-gratis/css/fontes-softpay.css"
+        ],
+        "createdAt": "2026-09-25T15:48:22.354Z",
+        "reason": "Claude: o nome 'Inter' é só o apelido que o CSS clonado da referência chama; o @font-face aponta para os arquivos SoftPay Texto (Funnel Sans), então a letra desenhada não é a Inter"
+      }
+    ]
+  }
+}

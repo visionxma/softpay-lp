@@ -1,18 +1,336 @@
 /* Apoio do clone (SoftPay /campanha/teste-gratis/).
-   Só o que a captura estática não trazia: nada aqui muda tamanho, espaço ou grade. */
+   Só o que a captura estática não trazia e o acabamento da rodada de 25/09/2026:
+   nada aqui muda a ordem, a grade, o tamanho de letra ou a largura da referência. */
+
+:root {
+  --sp-ease: cubic-bezier(.22, 1, .36, 1);
+  --sp-anel: #0C5C9E;
+  /* grão: pontos claros esparsos de feTurbulence (camada a 6%; só o quarto mais alto do ruído
+     acende), como camada de FUNDO: fica abaixo do texto e das fotos e quase não clareia a cor média */
+  --sp-grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 0 0 .55 1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.06'/%3E%3C/svg%3E");
+}
+/* o travamento de rolagem do diálogo não faz a página pular a largura da barra */
+html { scrollbar-gutter: stable; }
 
 /* Os botões de cadastro viraram <a> (o rastreio.js só mede link com href).
    :where() tem especificidade zero: as classes utilitárias do Tailwind continuam mandando;
    isto só repõe o que o <button> tinha de fábrica (bloco em linha, texto centralizado). */
 :where(a[data-botao]) { display: inline-block; text-align: center; cursor: pointer; }
 
-/* Mesmo quadro 1200x750 da imagem do hero da referência, com a tela do SoftPay recortada por cima. */
-.sp-quadro-16x10 { aspect-ratio: 1200 / 750; object-fit: cover; object-position: 50% 0; }
-
-/* Vídeo do depoimento dentro do diálogo: o vídeo é vertical, o quadro é 16:9 como na referência. */
-.sp-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
-html.sp-travado { overflow: hidden; }
-
 /* O logotipo do SoftPay é mais largo que o deles: a altura vem da classe da
    referência (h-10 / md:h-12) e a largura acompanha a proporção, sem esticar. */
 img[alt="SoftPay"] { width: auto; }
+
+/* ---------- Tipografia: quebra equilibrada e número que não dança ---------- */
+h1, h2, h3, h4 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+.sp-cta-bloco p, .sp-pilula span { text-wrap: balance; }
+[data-contar] { font-variant-numeric: tabular-nums; }
+
+/* ---------- Contraste AA (medido compondo a transparência) ---------- */
+.sp-pilula span { color: #7FC8F5; }                 /* era #1DA1F2 sobre branco 10%: 3,56 */
+.sp-numero-destaque { color: #0C5C9E; }             /* era #1DA1F2 sobre cinza claro: 2,70 */
+.sp-alerta {                                         /* era 4,20: fundo laranja a 10% */
+  background-color: rgba(180, 83, 9, .04);
+  box-shadow: inset 0 0 0 1px rgba(180, 83, 9, .22);
+}
+#depoimentos .text-gray-500, footer .text-gray-500 { color: rgb(156 163 175); } /* era 3,42 */
+
+/* ---------- Foco visível na cor da marca (anel claro nos fundos escuros) ---------- */
+nav, header, #depoimentos, .sp-grao, .bg-gradient-to-r, .sp-dialogo, .sp-fab { --sp-anel: #7FC8F5; }
+a[href]:focus-visible, button[type]:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--sp-anel);
+  outline-offset: 3px;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-ring-offset-shadow: 0 0 #0000;
+}
+/* dentro de caixa com overflow:hidden o anel vai para dentro, senão é cortado */
+h3 > button[aria-controls]:focus-visible, button.sp-capa:focus-visible { outline-offset: -3px; }
+
+/* ---------- Transições: propriedade por propriedade, nunca "all" ---------- */
+.transition-all {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+}
+
+/* ---------- Botões: sobe 2px e ganha sombra (sombra em camada própria, anima só opacidade) ---------- */
+a[data-botao], .sp-seg, .sp-e5 > a {
+  position: relative;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+  transition-property: transform, background-color, color, border-color, opacity;
+  transition-duration: 220ms;
+  transition-timing-function: var(--sp-ease);
+}
+a[data-botao]::after, .sp-seg::after, .sp-e5 > a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  box-shadow: var(--sp-sombra, 0 14px 30px -12px rgba(6, 18, 31, .45));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms var(--sp-ease);
+}
+.bg-\[\#1DA1F2\][data-botao] { --sp-sombra: 0 18px 40px -12px rgba(29, 161, 242, .34); }
+.bg-\[\#0C5C9E\][data-botao] { --sp-sombra: 0 16px 34px -12px rgba(12, 92, 158, .34); }
+.sp-seg { --sp-sombra: 0 14px 28px -14px rgba(6, 18, 31, .28); }
+/* o ícone de entrada anda para a frente em vez de quicar sem parar */
+a[data-botao] .lucide-log-in { transition: transform 220ms var(--sp-ease); }
+
+@media (hover: hover) and (pointer: fine) {
+  a[data-botao]:hover, .sp-e5 > a:hover { transform: translateY(-2px); }
+  .sp-seg:hover { transform: translateY(-3px); background-color: #fff; border-color: rgba(12, 92, 158, .22); }
+  a[data-botao]:hover::after, .sp-seg:hover::after, .sp-e5 > a:hover::after { opacity: 1; }
+  a[data-botao]:hover .lucide-log-in { transform: translateX(3px); }
+  .sp-seg:hover .sp-seta-ic { transform: translateX(3px); }
+}
+/* no toque o hover do Tailwind (scale 1.05) grudava depois do toque */
+@media (hover: none), (pointer: coarse) {
+  a[data-botao]:hover, .sp-e5 > a:hover { transform: none; }
+  .hover\:translate-y-\[-8px\]:hover { transform: none; }
+  .space-y-4 > div[data-orientation]:hover { box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05); }
+  .sp-capa.group:hover .sp-play { transform: none; }
+}
+a[data-botao]:active, .sp-seg:active, .sp-e5 > a:active { transform: scale(.98); transition-duration: 120ms; }
+
+/* alvo de toque de 44px sem mexer no desenho */
+nav a[data-botao]::before { content: ""; position: absolute; inset: -2px 0; }
+footer ul a { display: inline-block; padding-block: 12px; margin-block: -12px; }
+footer .border-t a { padding-block: 12px; margin-block: -12px; }
+footer .flex.gap-4 > a { position: relative; }
+footer .flex.gap-4 > a::before { content: ""; position: absolute; inset: -2px; }
+
+/* segmentos: "Ver solução" com a seta que anda */
+.sp-seta { display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
+/* ícone e título no alto, "Ver solução" no pé: os quatro alinham na mesma linha mesmo com título de 2 linhas */
+.sp-seg .sp-seta { margin-top: auto; }
+.sp-seta-ic { flex-shrink: 0; transition: transform 220ms var(--sp-ease); }
+
+/* cartões de recursos: o sobe-8px da referência com curva suave */
+.hover\:translate-y-\[-8px\] { transition-timing-function: var(--sp-ease); }
+
+/* ---------- Cabeçalho: sólido no topo; ao rolar, vidro com desfoque e sombra fina ---------- */
+nav.sticky { background-color: transparent; box-shadow: none; }
+nav.sticky > * { position: relative; z-index: 1; }
+nav.sticky::before, nav.sticky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 320ms var(--sp-ease);
+}
+nav.sticky::before { background: #0B2033; }
+nav.sticky::after {
+  background: rgba(11, 32, 51, .9);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .07), 0 10px 28px -14px rgba(0, 0, 0, .55);
+  opacity: 0;
+}
+nav.sticky.sp-rolou::before { opacity: 0; }
+nav.sticky.sp-rolou::after { opacity: 1; }
+/* link do menu: acende conforme a seção visível, com o traço que cresce */
+nav a[href^="#"] { position: relative; padding-block: 12px; margin-block: -12px; transition: color 220ms var(--sp-ease); }
+nav a[href^="#"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 8px;
+  height: 2px;
+  border-radius: 2px;
+  background: #1DA1F2;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 320ms var(--sp-ease);
+}
+nav a[href^="#"][aria-current="true"] { color: #7FC8F5; }
+nav a[href^="#"][aria-current="true"]::after { transform: scaleX(1); }
+@media (hover: hover) and (pointer: fine) { nav a[href^="#"]:hover::after { transform: scaleX(1); } }
+
+/* âncora não para atrás do cabeçalho fixo (72px no celular, 80px a partir de 768px) */
+#recursos, #como-funciona, #depoimentos, #comecar { scroll-margin-top: 72px; }
+@media (min-width: 768px) { #recursos, #como-funciona, #depoimentos, #comecar { scroll-margin-top: 80px; } }
+
+/* ---------- Grão nos fundos escuros ---------- */
+.sp-grao { background-image: var(--sp-grao); background-size: 180px 180px; }
+.sp-grao.bg-gradient-to-br {
+  background-image: var(--sp-grao), linear-gradient(to bottom right, var(--tw-gradient-stops));
+  background-size: 180px 180px, 100% 100%;
+}
+
+/* ---------- Topo: print, selo e bloco de chamada ---------- */
+/* foto do balcão na proporção da imagem da referência (1024x747), com moldura: borda da referência + fio de luz + sombra funda */
+.sp-print {
+  aspect-ratio: 1024 / 747;
+  object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 28px 56px -16px rgba(0, 0, 0, .6), 0 40px 90px -30px rgba(29, 161, 242, .2);
+}
+.sp-selo { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .5), 0 20px 44px -14px rgba(0, 0, 0, .55); }
+/* até 1343px o selo passava 8px da borda da tela e era cortado (o cabeçalho corta o que sai):
+   fica 8px para fora do print, dentro da margem de 16px */
+@media (max-width: 1343px) { .sp-selo { right: -8px; } }
+@media (max-width: 639px) { .sp-selo { top: -18px; } }
+.sp-cta-bloco { box-shadow: 0 12px 32px -12px rgba(29, 161, 242, .32); }
+
+/* print financeiro: fio fino entre a borda cinza e a tela, e sombra em camadas da cor da noite */
+.sp-moldura {
+  box-shadow: 0 0 0 1px rgba(10, 26, 40, .06), 0 2px 6px rgba(6, 18, 31, .05), 0 26px 52px -18px rgba(6, 18, 31, .24), 0 50px 100px -40px rgba(6, 18, 31, .2);
+}
+.sp-moldura::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(10, 26, 40, .09);
+  pointer-events: none;
+}
+
+/* ---------- Depoimentos ---------- */
+.sp-depo { transition: transform 320ms var(--sp-ease), border-color 320ms var(--sp-ease); }
+.sp-capa { overflow: hidden; -webkit-tap-highlight-color: transparent; }
+.sp-capa img { transition: transform 700ms var(--sp-ease); }
+.sp-play {
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, .16), 0 12px 26px -8px rgba(0, 0, 0, .55);
+  transition: transform 320ms var(--sp-ease);
+}
+@media (hover: hover) and (pointer: fine) {
+  .sp-capa:hover img { transform: scale(1.045); }
+  .sp-depo:has(.sp-capa:hover) { transform: translateY(-4px); border-color: rgba(127, 200, 245, .3); }
+}
+.sp-capa:active .sp-play { transform: scale(.94); transition-duration: 120ms; }
+
+/* ---------- Perguntas frequentes ---------- */
+h3 > button[aria-controls] { border-radius: 14px; transition: background-color 220ms var(--sp-ease), color 220ms var(--sp-ease); }
+/* aberto, o botão é só o topo do cartão: o anel de foco acompanha os cantos */
+[data-state="open"] > h3 > button[aria-controls] { border-radius: 14px 14px 0 0; }
+h3 > button[aria-controls]:hover { text-decoration: none; color: #0C5C9E; }
+h3 > button[aria-controls] > svg { transition: transform 360ms var(--sp-ease); }
+.sp-pergunta { min-width: 0; padding-right: 12px; }
+.space-y-4 > div[data-state="open"][data-orientation] { border-color: rgba(12, 92, 158, .2); }
+div[role="region"][data-state="open"] { animation-duration: 380ms; animation-timing-function: var(--sp-ease); }
+div[role="region"][data-state="closed"] { animation-duration: 260ms; animation-timing-function: cubic-bezier(.3, 0, .2, 1); }
+@keyframes sp-faq-entra { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+div[role="region"][data-state="open"].sp-animando > div { animation: sp-faq-entra 380ms var(--sp-ease) 70ms both; }
+
+/* ---------- Botão flutuante: some com opacidade (nunca escala 0) ---------- */
+.sp-fab {
+  bottom: max(20px, calc(env(safe-area-inset-bottom) + 12px));
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(14px) scale(.92);
+  pointer-events: none;
+  transition: opacity 260ms var(--sp-ease), transform 260ms var(--sp-ease), visibility 0s linear 260ms;
+}
+.sp-fab.sp-fab--on {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  transition: opacity 260ms var(--sp-ease), transform 260ms var(--sp-ease), visibility 0s;
+}
+
+/* ---------- Diálogo do vídeo: <dialog> nativo, vídeo vertical num quadro vertical ---------- */
+html.sp-travado { overflow: hidden; }
+.sp-dialogo {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  padding: 0;
+  height: fit-content;
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  max-width: none;
+  width: min(400px, calc(100vw - 32px), calc((100vh - 200px) * .563));
+  width: min(400px, calc(100vw - 32px), calc((100dvh - 200px) * .563));
+  border-radius: 16px;
+  overflow: hidden;
+  color: inherit;
+  background: #0B2033;
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .7);
+}
+.sp-dialogo::backdrop { background: rgba(6, 18, 31, .84); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.sp-dialogo-topo { padding: 16px 60px 14px 18px; }
+.sp-dialogo .sp-video-caixa { aspect-ratio: 608 / 1080; background: #06121F; }
+.sp-video { display: block; width: 100%; height: 100%; object-fit: cover; background: #06121F; }
+.sp-fechar {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  color: #fff;
+  opacity: .8;
+  transition: opacity 200ms var(--sp-ease), background-color 200ms var(--sp-ease), transform 120ms var(--sp-ease);
+}
+.sp-fechar:hover { opacity: 1; background-color: rgba(255, 255, 255, .08); }
+.sp-fechar:active { transform: scale(.94); }
+@keyframes sp-aparece { from { opacity: 0; } to { opacity: 1; } }
+@keyframes sp-some { to { opacity: 0; } }
+@keyframes sp-dialogo-entra { from { opacity: 0; transform: scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes sp-dialogo-sai { to { opacity: 0; transform: scale(.97); } }
+.sp-dialogo[data-state="open"] { animation: sp-dialogo-entra 280ms var(--sp-ease) both; }
+.sp-dialogo[data-state="open"]::backdrop { animation: sp-aparece 240ms ease-out both; }
+.sp-dialogo[data-state="closed"] { animation: sp-dialogo-sai 170ms var(--sp-ease) both; }
+.sp-dialogo[data-state="closed"]::backdrop { animation: sp-some 170ms ease-out both; }
+
+/* ---------- Movimento: entrada do topo (a assinatura) e revelar ao rolar ---------- */
+@keyframes sp-sobe { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: none; } }
+@keyframes sp-surge { from { opacity: 0; transform: translateY(28px) scale(.975); } to { opacity: 1; transform: none; } }
+@keyframes sp-pop { from { opacity: 0; transform: translateY(8px) scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes sp-brilho {
+  0% { background-position: 125% 0; }
+  24%, 100% { background-position: -25% 0; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html.js-ok .sp-pilula { animation: sp-sobe 620ms var(--sp-ease) 40ms both; }
+  html.js-ok .sp-e2 { animation: sp-sobe 720ms var(--sp-ease) 110ms both; }
+  html.js-ok .sp-e3 { animation: sp-sobe 720ms var(--sp-ease) 190ms both; }
+  html.js-ok .sp-e4 > * { animation: sp-sobe 600ms var(--sp-ease) both; }
+  html.js-ok .sp-e4 > :nth-child(1) { animation-delay: 270ms; }
+  html.js-ok .sp-e4 > :nth-child(2) { animation-delay: 340ms; }
+  html.js-ok .sp-e4 > :nth-child(3) { animation-delay: 410ms; }
+  html.js-ok .sp-e4 > :nth-child(4) { animation-delay: 480ms; }
+  html.js-ok .sp-e5 { animation: sp-sobe 640ms var(--sp-ease) 520ms both; }
+  html.js-ok .sp-e6 { animation: sp-sobe 640ms var(--sp-ease) 600ms both; }
+  html.js-ok .sp-e-img { animation: sp-surge 900ms var(--sp-ease) 180ms both; }
+  /* o style="animation-delay: 2s" da referência valeria para as duas animações: o !important separa */
+  html.js-ok .sp-selo { animation: sp-pop 620ms var(--sp-ease) both, float-delayed 5s ease-in-out infinite; animation-delay: 760ms, 2s !important; }
+
+  /* brilho que passa no botão principal: fundo que desliza, nenhuma caixa se mexe */
+  .sp-brilho {
+    background-image: linear-gradient(110deg, transparent 0 44%, rgba(255, 255, 255, .5) 50%, transparent 56% 100%);
+    background-size: 250% 100%;
+    background-repeat: no-repeat;
+    background-position: 125% 0;
+    animation: sp-brilho 6s ease-in-out 1.6s infinite;
+  }
+
+  html.sp-revela [data-revelar] {
+    transition: opacity 560ms var(--sp-ease) var(--sp-atraso, 0ms), translate 560ms var(--sp-ease) var(--sp-atraso, 0ms);
+  }
+  html.sp-revela [data-revelar]:not(.sp-visto) { opacity: 0; translate: 0 20px; }
+}
+
+/* menos movimento: nada se desloca e nenhum laço infinito; fica só um esmaecer curto */
+@media (prefers-reduced-motion: reduce) {
+  html.js-ok .sp-pilula, html.js-ok .sp-e2, html.js-ok .sp-e3, html.js-ok .sp-e4 > *,
+  html.js-ok .sp-e5, html.js-ok .sp-e6, html.js-ok .sp-e-img, html.js-ok .sp-selo { animation: sp-aparece 300ms linear both; }
+  html.js-ok .sp-selo { animation-delay: 0s !important; }
+  .animate-float, .animate-float-delayed { animation: none; }
+  html.sp-revela [data-revelar] { transition: opacity 300ms linear; }
+  html.sp-revela [data-revelar]:not(.sp-visto) { opacity: 0; }
+  div[role="region"][data-state="open"].sp-animando > div { animation: sp-aparece 200ms linear both; }
+  .sp-dialogo[data-state="open"] { animation-name: sp-aparece; }
+  .sp-dialogo[data-state="closed"] { animation-name: sp-some; }
+  .sp-fab, .sp-fab.sp-fab--on { transform: none; }
+  .sp-capa img, .sp-depo, .sp-seg, a[data-botao], .sp-e5 > a { transition-property: opacity, background-color, border-color, color; }
+  nav a[href^="#"]::after { transition: none; }
+}
