@@ -1,0 +1,65 @@
+/* SoftPay — camada sobre o CSS da referência (css/base-webflow.css).
+   Só entra aqui o que a troca de conteúdo, cor e família da letra exige, e o
+   apoio ao JavaScript próprio. Nenhum tamanho de letra, espaço ou grade muda. */
+
+/* Família: nenhuma regra aqui. A família única da referência foi trocada na
+   origem (css/fontes.css + a variável --typography--font-family-primary), e
+   todos os textos, títulos inclusive, desenham com a SoftPay Texto nos pesos
+   das regras originais. */
+
+/* Logotipo do SoftPay (232x84) no lugar do deles (400x56): altura fixa e
+   largura pela proporção do nosso, para não esticar no quadro do logo deles. */
+.nav-menu-brand-logo { width: auto; height: 3.25rem; }
+.nav-mobile-brand-logo { width: auto; min-width: 0; height: 2.75rem; }
+.footer-brand-logo { width: auto; height: 3.125rem; }
+
+/* Avatares do selo do topo: mesma altura que a foto deles tinha (200px de
+   largura x 227/974). */
+.home-hero-eyebrown-people-pic { width: auto; height: 46.6px; }
+
+/* Seção azul e chamada final: o marinho deles vira o azul-noite secundário
+   do SoftPay (o desenho de fundo leva as barras do logotipo em #123048/#0C5C9E). */
+.home-bento-layout { background-color: #0B2033; }
+
+/* Mídia nossa no MESMO formato da imagem que ocupava o lugar. */
+.home-hero-img { aspect-ratio: 1432 / 1068; object-fit: contain; object-position: 50% 0; }
+.home-info_video-video_column > .info_video-lightbox-img { aspect-ratio: 1552 / 873; object-position: 50% 50%; }
+.general-benefits-card-img { aspect-ratio: 1245 / 1252; object-fit: contain; object-position: 50% 0; }
+.general-features_swiper-card-img { aspect-ratio: 793 / 1000; object-fit: cover; }
+.home-bento-card-img { object-position: 50% 30%; }
+.plans-card-img { object-position: 50% 20%; }
+
+/* Botão de ação: sobre fundo claro, azul com texto branco; sobre o fundo
+   escuro (seção azul e chamada final), acento com texto noite. */
+.g-btn { background-color: #0C5C9E; color: #FFFFFF; }
+.g-btn:hover { background-color: #084A81; }
+.g-btn.is-tertiary { color: var(--typography--text-color-dark); }
+.g-btn.is-secondary { color: var(--colors--brand-white); }
+.is-blue .g-btn:not(.is-wpp):not(.is-secondary) { background-color: #1DA1F2; color: #06121F; }
+.is-blue .g-btn:not(.is-wpp):not(.is-secondary):hover { background-color: #7FC8F5; }
+.g-chat-btn:hover { color: #06121F; }
+.slider-arrow-wrap { background-color: #0C5C9E; }
+.slider-arrow-wrap.swiper-button-disabled { cursor: default; }
+.nav-mobile-burger.w--open { color: #06121F; }
+.w-nav-link.w--current, .nav-mobile-link.w--current { color: #0C5C9E; }
+
+/* No lugar das 5 estrelas (nota que ninguém deu): segmento e estado, na mesma
+   altura da fileira de estrelas. */
+.testimonials-card-rotulo { line-height: 2rem; color: var(--colors--dark-green); }
+@media screen and (max-width: 479px) { .testimonials-card-rotulo { line-height: 1.5rem; } }
+
+/* Assinatura da VisionX, fechando o rodapé. */
+.footer-visionx { grid-column: 1 / -1; justify-self: end; display: inline-flex; align-items: center; opacity: 0.85; }
+.footer-visionx:hover { opacity: 1; }
+
+/* Apoio ao softpay-clone.js (o que o Swiper e o Webflow faziam). */
+.swiper-wrapper { transition: transform 0.3s ease; touch-action: pan-y; cursor: grab; }
+.swiper-wrapper.is-arrastando { transition: none; cursor: grabbing; }
+.swiper-wrapper img { -webkit-user-drag: none; user-select: none; }
+.faq-content { transition: height 0.4s ease; }
+.faq-plus-icon { transition: transform 0.3s ease; }
+.faq-question-wrap[aria-expanded="true"] .faq-plus-icon { transform: rotate(135deg); }
+.faq-question-wrap:focus-visible, .slider-arrow-wrap:focus-visible, .w-dropdown-toggle:focus-visible, .w-nav-button:focus-visible { outline: 2px solid #1DA1F2; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  .swiper-wrapper, .faq-content, .faq-plus-icon { transition-duration: 0.01ms; }
+}

@@ -1,0 +1,147 @@
+/* Apoio do clone (referência: página de um concorrente, feita no Framer).
+   O layout é o deles, 1:1. Aqui só entra: o botão sobre fundo escuro, os estados que o JS deles fazia
+   (pergunta aberta/fechada, abas, menu, cabeçalho compacto) e o que é da marca
+   SoftPay (logotipo, botão do WhatsApp, assinatura). */
+
+/* ---------------------------------------------------------------- tipografia
+   Nenhuma regra de fonte aqui: o @font-face com o NOME da família deles
+   ("Inter") aponta para a SoftPay Texto, então cada regra do CSS da referência
+   desenha a nossa letra no tamanho, peso e entrelinha dela, títulos inclusive. */
+
+/* ------------------------------------------------------------------ logotipo
+   A marca deles é um quadrado (64 x 64); a nossa é horizontal. A caixa cresce
+   só na largura, para o logotipo ter a mesma altura visual. */
+a.sp-logo {
+    width: 150px !important;
+    height: 64px !important;
+    aspect-ratio: auto !important;
+    background: transparent !important;
+}
+a.sp-logo img { object-position: left center !important; }
+.framer-7pbzve-container a.sp-logo { width: 132px !important; height: 48px !important; }
+a.sp-logo-rodape { width: 150px !important; aspect-ratio: auto !important; height: 54px !important; }
+a.sp-logo-rodape img { object-fit: contain !important; }
+
+/* ------------------------------------------------ botão sobre o fundo escuro
+   No escuro, a ação é o acento do SoftPay com texto noite (contraste 7,0:1). */
+.framer-1ydvphp a.framer-ucRyg,
+.framer-1auis8u a.framer-ucRyg {
+    background: #1DA1F2 !important;
+    background-color: #1DA1F2 !important;
+}
+.framer-1ydvphp a.framer-ucRyg p,
+.framer-1auis8u a.framer-ucRyg p { color: #06121F !important; }
+
+/* ------------------------------------------------------ perguntas frequentes */
+.sp-faq { outline: none; }
+.sp-faq .framer-1gg9v95 { cursor: pointer; }
+.sp-faq .framer-1w06yyo { position: relative !important; bottom: auto !important; left: auto !important; right: auto !important; }
+.sp-faq:not(.sp-aberto) .framer-1w06yyo { display: none !important; }
+.sp-faq .framer-w55ox4 { transform: rotate(180deg) !important; transition: transform 0.25s ease; }
+.sp-faq.sp-aberto .framer-w55ox4 { transform: rotate(90deg) !important; }
+.sp-faq .framer-yuprjh { transform: rotate(-90deg) !important; }
+.sp-faq:focus-visible { outline: 2px solid #7FC8F5; outline-offset: 4px; }
+
+/* ------------------------------------------------------- rodapé: assinatura */
+/* a linha deles tem 384px e um texto só; a nossa leva SoftPay e VisionX lado a lado */
+div:has(> p.sp-copy) { width: auto !important; max-width: 100%; }
+p.sp-copy {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 28px;
+}
+p.sp-copy > * { white-space: nowrap; }
+.sp-visionx { display: inline; color: inherit !important; text-decoration: none !important; }
+.sp-visionx svg { display: inline-block; vertical-align: -2px; margin-right: 6px; }
+a.sp-ver-planos { text-decoration: underline !important; }
+.sp-visionx:hover { text-decoration: underline !important; }
+@media (max-width: 809.98px) { p.sp-copy { text-align: center; } p.sp-copy > * { white-space: normal; } }
+
+/* ------------------------------------------------- WhatsApp flutuante (canto)
+   No mesmo canto onde a referência tinha o chat dela. */
+.sp-whats {
+    position: fixed; right: 24px; bottom: 24px; z-index: 50;
+    width: 64px; height: 64px; border-radius: 50%;
+    display: grid; place-items: center;
+    background: #25D366; color: #fff;
+    box-shadow: 0 12px 28px -10px rgba(6, 18, 31, 0.55);
+    transition: transform 0.2s ease;
+}
+.sp-whats:hover { transform: scale(1.06); }
+@media (max-width: 809.98px) { .sp-whats { right: 16px; bottom: 120px; width: 60px; height: 60px; } }
+@media (prefers-reduced-motion: reduce) { .sp-whats, .sp-faq .framer-w55ox4 { transition: none; } }
+
+/* o quadro interno do logo deles é quadrado (aspect-ratio 1): passa a encher a caixa */
+a.sp-logo > div, a.sp-logo > div > div { width: 100% !important; height: 100% !important; aspect-ratio: auto !important; }
+
+/* ------------------------------------------ cabeçalho compacto ao rolar (JS) */
+a.sp-logo { transition: height 0.25s ease, width 0.25s ease; }
+.sp-compacto a.sp-logo { height: 40px !important; width: 112px !important; }
+.sp-criar-conta { display: none; }
+.sp-compacto .sp-criar-conta {
+    display: inline-flex; align-items: center; justify-content: center;
+    padding: 8px 16px; border-radius: 1000px;
+    background: #0C5C9E; color: #fff !important;
+    font: 600 16px/19px "Inter", sans-serif; text-decoration: none; white-space: nowrap;
+}
+.sp-compacto .sp-criar-conta:hover { background: #084A81; }
+
+/* -------------------------- menus de Recursos, Segmentos e Saiba mais (JS) */
+.framer-euwz04, .framer-z4usgl, .framer-i2xvej { cursor: pointer; }
+.sp-nav-ativo p { text-decoration: underline; text-underline-offset: 3px; }
+.sp-painel {
+    width: 100%; max-width: 1216px; margin-top: -16px;
+    border-top: 1px solid #DCE5EC; padding: 32px 0 28px;
+}
+.sp-painel[hidden] { display: none; }
+.sp-painel-grade { display: flex; flex-wrap: wrap; gap: 24px 48px; }
+.sp-col { display: flex; flex-direction: column; min-width: 150px; }
+.sp-col-titulo { margin: 0 0 10px; font: 600 14px/1.5 "Inter", sans-serif; color: #0A1A28; }
+.sp-col a { font: 400 14px/1.8 "Inter", sans-serif; color: #0A1A28; text-decoration: none; }
+.sp-col a:hover { text-decoration: underline; }
+.sp-painel-saiba { gap: 0; }
+.sp-painel-saiba > .sp-col { padding: 0 24px; border-left: 1px solid #DCE5EC; }
+.sp-painel-saiba > .sp-col-larga { flex: 1 1 520px; padding-left: 0; border-left: 0; }
+.sp-sub { gap: 0 48px; }
+.sp-pilulas { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.sp-col a.sp-pilula {
+    padding: 8px 16px; border-radius: 1000px; background: #0C5C9E; color: #fff;
+    font: 600 14px/1.5 "Inter", sans-serif;
+}
+.sp-col a.sp-pilula:hover { background: #084A81; text-decoration: none; }
+
+/* ------------------------------------------------ menu do celular (JS) */
+.sp-menu-cel {
+    position: fixed; left: 0; right: 0; top: 72px; bottom: 0; z-index: 9;
+    display: flex; flex-direction: column;
+    padding: 8px 24px 190px; overflow-y: auto; overscroll-behavior: contain;
+    background: #fff;
+}
+.sp-menu-cel[hidden] { display: none; }
+.sp-menu-titulo { margin: 20px 0 6px; font: 600 20px/1.5 "Inter", sans-serif; color: #0A1A28; }
+.sp-menu-cel a { padding: 6px 0; font: 400 16px/1.55 "Inter", sans-serif; color: #0A1A28; text-decoration: none; }
+html.sp-menu-aberto, html.sp-menu-aberto body { overflow: hidden; }
+
+/* ------------------------------------------- abas do "Leve sua loja no bolso" */
+.sp-aba { cursor: pointer; }
+.sp-aba .framer-jdimrd { display: none; }
+.sp-aba.sp-ativa .framer-jdimrd { display: block; }
+.sp-aba .sp-aba-col > div:first-child { --extracted-r6o4lv: rgba(10, 26, 40, 0.5) !important; }
+.sp-aba.sp-ativa .sp-aba-col > div:first-child { --extracted-r6o4lv: rgba(10, 26, 40, 0.8) !important; }
+.sp-aba-linha { position: relative; overflow: hidden; background-color: rgba(10, 26, 40, 0.1) !important; }
+.sp-aba-progresso { position: absolute; left: 0; top: 0; display: block; width: 100%; height: 0; background: #1DA1F2; }
+.sp-aba:focus-visible { outline: 2px solid #0C5C9E; outline-offset: 4px; }
+
+/* ------------------------------------------------ pontos do carrossel (JS) */
+.sp-pontos {
+    position: absolute; left: 50%; bottom: 20px; z-index: 2; transform: translateX(-50%);
+    display: flex; gap: 10px; padding: 7px 10px; border-radius: 20px;
+    background: rgba(10, 26, 40, 0.2);
+}
+.sp-ponto { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: #fff; opacity: 0.5; cursor: pointer; }
+.sp-ponto.sp-ativo { opacity: 1; }
+
+/* ---------------------------------- "Exibir todos os segmentos" no celular */
+.framer-1hakzmu:not(.sp-segs-abertos) > .sp-seg-extra { display: none !important; }

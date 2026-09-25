@@ -1,0 +1,68 @@
+/* Formato da letra do SoftPay com o NOME das famílias que o CSS da referência chama.
+   Poppins (títulos) e Inter (corpo) passam a desenhar a SoftPay Texto, nos pesos da
+   regra original. A SoftPay Display, ultracondensada, não entra aqui: no tamanho dos
+   títulos da referência ela tirava três das cinco linhas do título do topo e mudava a
+   composição, e o pedido é o tamanho e a composição da referência. */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fontes/softpay-texto-400-v1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fontes/softpay-texto-500-v1.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fontes/softpay-texto-600-v1.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fontes/softpay-texto-700-v1.woff2') format('woff2');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/softpay-texto-400-v1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/softpay-texto-400-italico-v1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/softpay-texto-500-v1.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/softpay-texto-600-v1.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fontes/softpay-texto-700-v1.woff2') format('woff2');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,148 @@
+
+/* https://fluidbuilder.webflow.io/?design=108&max=90&min=20&g=--spacing--section-vpad,4,2_--spacing--section-hpad,2,1_--spacing--title-subtitle,1,0.75_--icons--icon-xlarge,6,4_--icons--icon-large,4,2_--icons--icon-medium,2,1.5_--icons--icon-small,1.5,1_--icons--icon-xsmall,1,0.5_--borders--border-xlarge,3,2_--borders--border-large,2,1.5_--borders--border-medium,1.5,1_--borders--border-small,1,0.5_--borders--border-xsmall,0.5,0.25_--borders--border-xxsmall,0.25,0.15_--typography--line-height-large,1.75,1.6_--typography--line-height-medium,1.5,1.4_--typography--line-height-small,1.25,1.2_--typography--richtext-h1,2.31,2.03,t_--typography--richtext-h2,2.01,1.81_--typography--richtext-h3,1.75,1.62_--typography--richtext-h4,1.52,1.44_--typography--richtext-h5,1.32,1.29_--typography--richtext-h6,1.15,1.15&g=:1.25,1.15:--headings--display-1,6,3.1,t_--headings--display-2,4.8,2.7_--headings--heading-1,3.84,2.34_--headings--heading-2,3.07,2.04_--headings--heading-3,2.46,1.77_--headings--heading-4,1.97,1.54_--headings--heading-5,1.57,1.34_--headings--heading-6,1.26,1.17&g=:1.25,1.2:--typography--font-xlarge,1.76,1.44_--typography--font-large,1.41,1.2_--typography--font-medium,1.125,1,t_--typography--font-small,0.9,0.83_--typography--font-xsmall,0.72,0.69&g=:1.59,1.59:--spacing--content-xxlarge,8,4,t_--spacing--content-xlarge,5.03,2.52_--spacing--content-large,3.16,1.58_--spacing--content-medium,1.99,1_--spacing--content-small,1.25,0.63_--spacing--content-xsmall,0.79,0.39_--spacing--content-xxsmall,0.5,0.25_--spacing--content-xxxsmall,0.31,0.16 */
+
+/* fallback for older browsers */
+:root {
+	--spacing--section-vpad: 4rem;
+	--spacing--section-hpad: 2rem;
+	--spacing--title-subtitle: 1rem;
+	--icons--icon-xlarge: 6rem;
+	--icons--icon-large: 4rem;
+	--icons--icon-medium: 2rem;
+	--icons--icon-small: 1.5rem;
+	--icons--icon-xsmall: 1rem;
+	--borders--border-xlarge: 3rem;
+	--borders--border-large: 2rem;
+	--borders--border-medium: 1.5rem;
+	--borders--border-small: 1rem;
+	--borders--border-xsmall: 0.5rem;
+	--borders--border-xxsmall: 0.25rem;
+	--typography--line-height-large: 1.75rem;
+	--typography--line-height-medium: 1.5rem;
+	--typography--line-height-small: 1.25rem;
+	--typography--richtext-h1: 2.31rem;
+	--typography--richtext-h2: 2.01rem;
+	--typography--richtext-h3: 1.75rem;
+	--typography--richtext-h4: 1.52rem;
+	--typography--richtext-h5: 1.32rem;
+	--typography--richtext-h6: 1.15rem;
+	--headings--display-1: 6rem;
+	--headings--display-2: 4.8rem;
+	--headings--heading-1: 3.84rem;
+	--headings--heading-2: 3.07rem;
+	--headings--heading-3: 2.46rem;
+	--headings--heading-4: 1.97rem;
+	--headings--heading-5: 1.57rem;
+	--headings--heading-6: 1.26rem;
+	--typography--font-xlarge: 1.76rem;
+	--typography--font-large: 1.41rem;
+	--typography--font-medium: 1.125rem;
+	--typography--font-small: 0.9rem;
+	--typography--font-xsmall: 0.72rem;
+	--spacing--content-xxlarge: 8rem;
+	--spacing--content-xlarge: 5.03rem;
+	--spacing--content-large: 3.16rem;
+	--spacing--content-medium: 1.99rem;
+	--spacing--content-small: 1.25rem;
+	--spacing--content-xsmall: 0.79rem;
+	--spacing--content-xxsmall: 0.5rem;
+	--spacing--content-xxxsmall: 0.31rem;
+}
+@media screen and (max-width: 767px) {
+	:root {
+		--spacing--section-vpad: 2rem;
+		--spacing--section-hpad: 1rem;
+		--spacing--title-subtitle: 0.75rem;
+		--icons--icon-xlarge: 4rem;
+		--icons--icon-large: 2rem;
+		--icons--icon-medium: 1.5rem;
+		--icons--icon-small: 1rem;
+		--icons--icon-xsmall: 0.5rem;
+		--borders--border-xlarge: 2rem;
+		--borders--border-large: 1.5rem;
+		--borders--border-medium: 1rem;
+		--borders--border-small: 0.5rem;
+		--borders--border-xsmall: 0.25rem;
+		--borders--border-xxsmall: 0.15rem;
+		--typography--line-height-large: 1.6rem;
+		--typography--line-height-medium: 1.4rem;
+		--typography--line-height-small: 1.2rem;
+		--typography--richtext-h1: 2.03rem;
+		--typography--richtext-h2: 1.81rem;
+		--typography--richtext-h3: 1.62rem;
+		--typography--richtext-h4: 1.44rem;
+		--typography--richtext-h5: 1.29rem;
+		--typography--richtext-h6: 1.15rem;
+		--headings--display-1: 3.1rem;
+		--headings--display-2: 2.7rem;
+		--headings--heading-1: 2.34rem;
+		--headings--heading-2: 2.04rem;
+		--headings--heading-3: 1.77rem;
+		--headings--heading-4: 1.54rem;
+		--headings--heading-5: 1.34rem;
+		--headings--heading-6: 1.17rem;
+		--typography--font-xlarge: 1.44rem;
+		--typography--font-large: 1.2rem;
+		--typography--font-medium: 1rem;
+		--typography--font-small: 0.83rem;
+		--typography--font-xsmall: 0.69rem;
+		--spacing--content-xxlarge: 4rem;
+		--spacing--content-xlarge: 2.52rem;
+		--spacing--content-large: 1.58rem;
+		--spacing--content-medium: 1rem;
+		--spacing--content-small: 0.63rem;
+		--spacing--content-xsmall: 0.39rem;
+		--spacing--content-xxsmall: 0.25rem;
+		--spacing--content-xxxsmall: 0.16rem;
+	}
+}
+
+/* fluid sizes */
+@supports (font-size: clamp(1rem, 0.5rem + 3vw, 3rem)) {
+:root {
+	--spacing--section-vpad: clamp(2rem, 1.546rem + 2.27vw, 3.5914rem);
+	--spacing--section-hpad: clamp(1rem, 0.772rem + 1.14vw, 1.7948rem);
+	--spacing--title-subtitle: clamp(0.75rem, 0.694rem + 0.28vw, 0.9496rem);
+	--icons--icon-xlarge: clamp(4rem, 3.546rem + 2.27vw, 5.5914rem);
+	--icons--icon-large: clamp(2rem, 1.546rem + 2.27vw, 3.5914rem);
+	--icons--icon-medium: clamp(1.5rem, 1.386rem + 0.57vw, 1.8974rem);
+	--icons--icon-small: clamp(1rem, 0.886rem + 0.57vw, 1.3974rem);
+	--icons--icon-xsmall: clamp(0.5rem, 0.386rem + 0.57vw, 0.8974rem);
+	--borders--border-xlarge: clamp(2rem, 1.772rem + 1.14vw, 2.7948rem);
+	--borders--border-large: clamp(1.5rem, 1.386rem + 0.57vw, 1.8974rem);
+	--borders--border-medium: clamp(1rem, 0.886rem + 0.57vw, 1.3974rem);
+	--borders--border-small: clamp(0.5rem, 0.386rem + 0.57vw, 0.8974rem);
+	--borders--border-xsmall: clamp(0.25rem, 0.194rem + 0.28vw, 0.4496rem);
+	--borders--border-xxsmall: clamp(0.15rem, 0.128rem + 0.11vw, 0.2302rem);
+	--typography--line-height-large: clamp(1.6em, 1.566em + 0.17vw, 1.7194em);
+	--typography--line-height-medium: clamp(1.4em, 1.378em + 0.11vw, 1.4802em);
+	--typography--line-height-small: clamp(1.2em, 1.188em + 0.06vw, 1.2392em);
+	--typography--richtext-h1: clamp(2.03rem, 1.966rem + 0.32vw, 2.2524rem);
+	--typography--richtext-h2: clamp(1.81rem, 1.764rem + 0.23vw, 1.9686rem);
+	--typography--richtext-h3: clamp(1.62rem, 1.59rem + 0.15vw, 1.723rem);
+	--typography--richtext-h4: clamp(1.44rem, 1.422rem + 0.09vw, 1.5038rem);
+	--typography--richtext-h5: clamp(1.29rem, 1.284rem + 0.03vw, 1.3146rem);
+	--typography--richtext-h6: clamp(1.15rem, 1.15rem + 0vw, 1.15rem);
+	--headings--display-1: clamp(3.1rem, 2.44rem + 3.3vw, 5.406rem);
+	--headings--display-2: clamp(2.7rem, 2.222rem + 2.39vw, 4.3698rem);
+	--headings--heading-1: clamp(2.34rem, 2rem + 1.7vw, 3.534rem);
+	--headings--heading-2: clamp(2.04rem, 1.806rem + 1.17vw, 2.8594rem);
+	--headings--heading-3: clamp(1.77rem, 1.614rem + 0.78vw, 2.3196rem);
+	--headings--heading-4: clamp(1.54rem, 1.442rem + 0.49vw, 1.8818rem);
+	--headings--heading-5: clamp(1.34rem, 1.288rem + 0.26vw, 1.5232rem);
+	--headings--heading-6: clamp(1.17rem, 1.15rem + 0.1vw, 1.242rem);
+	--typography--font-xlarge: clamp(1.44rem, 1.368rem + 0.36vw, 1.6952rem);
+	--typography--font-large: clamp(1.2rem, 1.152rem + 0.24vw, 1.3668rem);
+	--typography--font-medium: clamp(1rem, 0.972rem + 0.14vw, 1.0998rem);
+	--typography--font-small: clamp(0.83rem, 0.814rem + 0.08vw, 0.8856rem);
+	--typography--font-xsmall: clamp(0.69rem, 0.684rem + 0.03vw, 0.7146rem);
+	--spacing--content-xxlarge: clamp(4rem, 3.09rem + 4.55vw, 7.181rem);
+	--spacing--content-xlarge: clamp(2.52rem, 1.95rem + 2.85vw, 4.517rem);
+	--spacing--content-large: clamp(1.58rem, 1.22rem + 1.8vw, 2.836rem);
+	--spacing--content-medium: clamp(1rem, 0.776rem + 1.12vw, 1.7884rem);
+	--spacing--content-small: clamp(0.63rem, 0.49rem + 0.7vw, 1.124rem);
+	--spacing--content-xsmall: clamp(0.39rem, 0.3rem + 0.45vw, 0.709rem);
+	--spacing--content-xxsmall: clamp(0.25rem, 0.194rem + 0.28vw, 0.4496rem);
+	--spacing--content-xxxsmall: clamp(0.16rem, 0.126rem + 0.17vw, 0.2794rem);
+}
+}

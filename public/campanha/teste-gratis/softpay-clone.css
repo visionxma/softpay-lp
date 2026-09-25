@@ -1,0 +1,18 @@
+/* Apoio do clone (SoftPay /campanha/teste-gratis/).
+   Só o que a captura estática não trazia: nada aqui muda tamanho, espaço ou grade. */
+
+/* Os botões de cadastro viraram <a> (o rastreio.js só mede link com href).
+   :where() tem especificidade zero: as classes utilitárias do Tailwind continuam mandando;
+   isto só repõe o que o <button> tinha de fábrica (bloco em linha, texto centralizado). */
+:where(a[data-botao]) { display: inline-block; text-align: center; cursor: pointer; }
+
+/* Mesmo quadro 1200x750 da imagem do hero da referência, com a tela do SoftPay recortada por cima. */
+.sp-quadro-16x10 { aspect-ratio: 1200 / 750; object-fit: cover; object-position: 50% 0; }
+
+/* Vídeo do depoimento dentro do diálogo: o vídeo é vertical, o quadro é 16:9 como na referência. */
+.sp-video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+html.sp-travado { overflow: hidden; }
+
+/* O logotipo do SoftPay é mais largo que o deles: a altura vem da classe da
+   referência (h-10 / md:h-12) e a largura acompanha a proporção, sem esticar. */
+img[alt="SoftPay"] { width: auto; }

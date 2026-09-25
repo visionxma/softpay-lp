@@ -91,8 +91,12 @@ def main():
             falhas.append("%s: HTML desbalanceado (fecha %s / abre %s)"
                           % (f, b.erros[:3], b.pilha[:3]))
 
+        # Página de campanha clonada (noindex) pode ter um H1 por versão de
+        # layout, como a referência dela (Framer monta desktop, tablet e
+        # celular no mesmo HTML e esconde duas). Fora da busca, não pesa.
+        fora_da_busca = re.search(r'<meta name="robots" content="noindex', s)
         n_h1 = len(re.findall(r"<h1[\s>]", s))
-        if n_h1 != 1:
+        if n_h1 != 1 and not fora_da_busca:
             falhas.append("%s: %d tags H1 (esperado 1)" % (f, n_h1))
 
         for campo, padrao, acc in (

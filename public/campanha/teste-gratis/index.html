@@ -1,48 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8" />
-    <!-- Página gerada por tools/campanhas/gerar.py a partir de paginas.py.
-         Não edite aqui: a próxima geração sobrescreve. -->
+  <head>
+    <meta charset="utf-8">
+    <!-- Medição do SoftPay (a mesma da home): consentimento, GTM e Pixel. -->
     <script>window.SOFTPAY_CONSENTIMENTO=true;if(window.SOFTPAY_CONSENTIMENTO){window.dataLayer=window.dataLayer||[];
     window.gtag=function(){window.dataLayer.push(arguments)};gtag('consent','default',{ad_storage:'denied',
     ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500})}</script>
-
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-MCJHLF3Q');</script>
-    <!-- End Google Tag Manager -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Sistema de gestão com PDV e nota fiscal, direto no navegador | SoftPay</title>
-    <meta name="description" content="PDV, estoque, caixa, fiado e nota fiscal num sistema que roda no navegador. Teste o SoftPay por 7 dias grátis, sem cartão de crédito." />
-    <!-- Página de campanha: recebe tráfego pago e não disputa a busca com a
-         home e as páginas de solução, que dizem o mesmo com mais fôlego. -->
-    <meta name="robots" content="noindex, follow" />
-    <meta name="theme-color" content="#06121F" />
-    <link rel="canonical" href="https://site.softpaybr.com/campanha/teste-gratis/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="SoftPay" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content="https://site.softpaybr.com/campanha/teste-gratis/" />
-    <meta property="og:title" content="Sistema de gestão com PDV e nota fiscal, direto no navegador | SoftPay" />
-    <meta property="og:description" content="PDV, estoque, caixa, fiado e nota fiscal num sistema que roda no navegador. Teste o SoftPay por 7 dias grátis, sem cartão de crédito." />
-    <meta property="og:image" content="https://site.softpaybr.com/assets/desktop.webp" />
-    <meta property="og:image:alt" content="SoftPay aberto num monitor, com os produtos da loja e o carrinho da venda" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <link rel="preload" href="/fontes/softpay-display-v1.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" as="image" href="/assets/hero/aparelhos-2-1200.webp?v=bc9ac209bc" fetchpriority="high" />
-    <link rel="stylesheet" href="/sistema.css?v=901ea3b0fd" />
-    <link rel="stylesheet" href="/campanha/campanha.css?v=3ef81e1e1f" />
-    <link rel="icon" href="/assets/icones e favicon.svg" />
-
-    <!-- Meta Pixel Code (mesmos IDs da home) -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -56,461 +24,406 @@
     fbq('init', '1476552610693219');
     fbq('init', '26424939163836170');
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent', {
-    content_name: 'Campanha teste-gratis',
-    content_category: 'Gestão de Vendas e Estoque'
-    });
+    fbq('track', 'ViewContent', {content_name: 'Campanha teste-gratis', content_category: 'Gestão de Vendas e Estoque'});
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1476552610693219&ev=PageView&noscript=1"
-    /></noscript>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=26424939163836170&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-</head>
-
-<body class="campanha">
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCJHLF3Q"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
-
-    <nav class="nav" aria-label="Principal">
-        <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
-            <img src="/assets/logo-232.png?v=7b1ac2adcb" width="232" height="84" alt="SoftPay" />
-        </a>
-        <div class="nav__menu"><a class="nav__link" href="#recursos">Recursos</a><a class="nav__link" href="#como-funciona">Como funciona</a><a class="nav__link" href="#depoimentos">Depoimentos</a><a class="nav__link" href="#duvidas">Dúvidas</a></div>
-        <div class="nav__acoes">
-            <a class="nav__link nav__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
-            <a class="btn btn--acao" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
-            <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
-                aria-label="Abrir menu">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                    stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
-            </button>
-        </div>
-    </nav>
-
-    <div class="gaveta" id="gaveta" data-aberta="nao">
-        <a href="#recursos">Recursos</a><a href="#como-funciona">Como funciona</a><a href="#depoimentos">Depoimentos</a><a href="#duvidas">Dúvidas</a>
-        <a href="https://www.softpaybr.com/auth">Entrar</a>
-        <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
+    <link rel="preload" href="/fontes/softpay-display-v1.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/assets/icones e favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de gestão grátis por 7 dias, com nota fiscal, direto no navegador | SoftPay</title>
+    <meta name="description" content="Caixa, estoque, fiado e nota fiscal NFC-e e NF-e num sistema que roda no navegador. Teste o SoftPay 7 dias grátis, sem cartão de crédito.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#06121F">
+    <link rel="canonical" href="https://site.softpaybr.com/campanha/teste-gratis/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SoftPay">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://site.softpaybr.com/campanha/teste-gratis/">
+    <meta property="og:title" content="Sistema de gestão grátis por 7 dias, com nota fiscal, direto no navegador | SoftPay">
+    <meta property="og:description" content="Caixa, estoque, fiado e nota fiscal NFC-e e NF-e num sistema que roda no navegador. Teste o SoftPay 7 dias grátis, sem cartão de crédito.">
+    <meta property="og:image" content="https://site.softpaybr.com/assets/desktop.webp">
+    <meta property="og:image:alt" content="SoftPay aberto num monitor, com os produtos da loja e o carrinho da venda">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preload" as="image" href="/assets/sistema/pdv.webp?v=4737e8d2c1" fetchpriority="high">
+    <!-- Clone fiel da estrutura de uma LP de referência (25/09/2026): mesmas classes, grades e tamanhos;
+         texto, cor, formato da letra e mídia são do SoftPay. As famílias "Poppins" e "Inter" do CSS
+         apontam para os arquivos da SoftPay Display e da SoftPay Texto (css/fontes-softpay.css). -->
+    <link rel="stylesheet" href="css/fontes-softpay.css">
+    <link rel="stylesheet" href="css/index-cupv29li_b1572b80.css">
+    <link rel="stylesheet" href="css/inline_001.css">
+    <link rel="stylesheet" href="softpay-clone.css">
+  </head>
+  <body>
+    <div id="root">
+      <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
+        <ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol>
+      </div>
+      <section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section>
+      <div class="min-h-screen bg-gray-50 text-gray-800 antialiased">
+        <nav class="bg-[#0B2033] p-4 sticky top-0 z-50 shadow-lg">
+          <div class="max-w-7xl mx-auto flex justify-between items-center"><img src="/assets/logo-claro-232.png?v=e644d34709" alt="SoftPay" width="232" height="84" class="h-10 md:h-12"><div class="hidden md:flex items-center gap-6 text-white text-sm"><a href="#recursos" class="hover:text-[#1DA1F2] transition">Recursos</a><a href="#como-funciona" class="hover:text-[#1DA1F2] transition">Como Funciona</a><a href="#depoimentos" class="hover:text-[#1DA1F2] transition">Depoimentos</a></div><a href="https://www.softpaybr.com/auth" data-botao class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 bg-[#1DA1F2] hover:bg-white text-[#06121F] font-black py-3 px-6 rounded-full transition duration-300 text-sm shadow-[0_10px_40px_rgba(29,161,242,0.3)]">TESTAR GRÁTIS</a></div>
+        </nav>
+        <header class="bg-gradient-to-br from-[#0B2033] to-[#123048] text-white pt-12 pb-20 px-4 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#1DA1F2]/5 rounded-full blur-3xl -mr-48 -mt-24"></div>
+          <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#7FC8F5]/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+          <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+              <div class="text-center lg:text-left"><div class="inline-flex items-center gap-2 bg-white/10 text-[#1DA1F2] px-4 py-2 rounded-full text-sm font-bold mb-6 border border-[#1DA1F2]/30 backdrop-blur-sm animate-fade-in"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4"><path d="M20 6 9 17l-5-5"></path></svg><span>✅ Sistema 100% ONLINE, 7 dias GRÁTIS, sem cartão</span></div><h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight">Sistema de Gestão <span class="text-[#7FC8F5]">Grátis por 7 Dias</span> com Nota Fiscal <span class="text-[#1DA1F2]">NFC-e</span>, direto no navegador</h1><p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">Feito para <span class="font-bold text-white">comércio com estoque</span>. Mais de <span class="font-bold text-white">100 lojistas</span> já largaram a planilha e o caderninho. <span class="underline decoration-[#1DA1F2] decoration-4">Hoje acessam tudo de qualquer aparelho, e você testa 7 dias sem pagar nada</span>.</p><div class="grid md:grid-cols-2 gap-4 mb-10"><div class="flex items-center gap-3 p-4 rounded-xl border backdrop-blur-sm bg-white/5 border-white/10"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#1DA1F2]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-5 h-5 text-[#06121F]"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div><span class="font-semibold text-left">Nota fiscal NFC-e e NF-e</span></div><div class="flex items-center gap-3 p-4 rounded-xl border backdrop-blur-sm bg-white/5 border-white/10"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#1DA1F2]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-5 h-5 text-[#06121F]"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div><span class="font-semibold text-left">Acessa de qualquer lugar</span></div><div class="flex items-center gap-3 p-4 rounded-xl border backdrop-blur-sm bg-white/5 border-white/10"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#1DA1F2]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-5 h-5 text-[#06121F]"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div><span class="font-semibold text-left">Backup automático</span></div><div class="flex items-center gap-3 p-4 rounded-xl border backdrop-blur-sm bg-white/5 border-white/10"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-[#1DA1F2]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-5 h-5 text-[#06121F]"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></div><span class="font-semibold text-left">PC, celular e tablet</span></div></div><div class="flex flex-col md:flex-row gap-4 justify-center lg:justify-start items-center mb-8"><a href="https://www.softpaybr.com/auth" data-botao class="whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 group bg-[#1DA1F2] hover:bg-[#7FC8F5] text-[#06121F] font-black py-5 px-10 rounded-2xl text-lg transition-all shadow-[0_10px_40px_rgba(29,161,242,0.3)] hover:shadow-[0_10px_40px_rgba(127,200,245,0.3)] hover:scale-105 flex items-center gap-3 w-full md:w-auto justify-center h-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-6 h-6 group-hover:animate-bounce"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>TESTAR GRÁTIS AGORA</a><a href="#como-funciona" class="bg-white/10 hover:bg-white/20 text-white font-bold py-5 px-8 rounded-2xl text-lg transition-all backdrop-blur-sm border border-white/20 flex items-center gap-2 w-full md:w-auto justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-6 h-6"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>Ver como funciona</a></div><div class="flex flex-wrap gap-6 justify-center lg:justify-start items-center text-sm text-gray-400"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#1DA1F2]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span><strong class="text-white">+100</strong> lojistas</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-[#7FC8F5]"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span><strong class="text-white">R$ 0</strong> para começar</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-[#1DA1F2]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg><span>8 estados com loja</span></div></div></div>
+              <div class="relative"><div class="relative animate-float"><img src="/assets/sistema/pdv.webp?v=4737e8d2c1" alt="Tela de caixa (PDV) do SoftPay com o carrinho de uma venda" width="1200" height="750" fetchpriority="high" loading="eager" decoding="async" class="rounded-2xl shadow-2xl border-4 border-white/10 w-full sp-quadro-16x10"><div class="absolute -top-6 -right-6 bg-[#7FC8F5] p-4 rounded-2xl shadow-2xl animate-float-delayed" style="animation-delay: 2s;"><div class="text-center"><p class="font-black text-[#06121F] text-2xl">7 dias</p><p class="text-xs text-[#06121F] font-bold">grátis, sem cartão</p></div></div></div><a href="https://www.softpaybr.com/auth" data-botao class="mt-8 bg-[#1DA1F2] hover:bg-[#7FC8F5] rounded-2xl p-5 text-center shadow-lg w-full transition-all hover:scale-[1.02] cursor-pointer"><p class="text-xl md:text-2xl font-black text-[#06121F]">🎉 Abra o sistema no navegador e comece a vender hoje!</p></a></div>
+            </div>
+          </div>
+        </header>
+        <section class="py-14 px-4 bg-white border-b border-gray-100">
+          <div class="max-w-7xl mx-auto">
+            <p class="text-center text-gray-600 mb-10 font-semibold">Os números de quem já trocou o caderninho pelo SoftPay no balcão da loja</p>
+            <div class="grid lg:grid-cols-3 gap-4 md:gap-6 mb-10 items-stretch">
+              <div class="lg:col-span-2 text-center bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm flex flex-col justify-center">
+                <p class="text-6xl md:text-8xl font-black leading-none mb-3 text-[#1DA1F2]">+100</p>
+                <p class="text-base md:text-xl font-bold text-[#0A1A28]">lojistas já usam o SoftPay</p>
+              </div>
+              <div class="text-center bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm flex flex-col justify-center">
+                <p class="text-4xl md:text-5xl font-black leading-none mb-2 text-[#0C5C9E]">8 estados</p>
+                <p class="text-sm md:text-base font-bold text-[#0A1A28]">com loja vendendo pelo SoftPay</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center mb-8">
+              <a href="/segmentos/mercadinho/" class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart w-10 h-10 mx-auto text-[#0C5C9E] mb-2"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg><p class="text-sm font-bold text-[#0A1A28]">Mercadinhos</p><p class="text-xs font-semibold text-[#0C5C9E]">Ver solução</p></a>
+              <a href="/segmentos/loja-de-celulares-e-acessorios/" class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-10 h-10 mx-auto text-[#0C5C9E] mb-2"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg><p class="text-sm font-bold text-[#0A1A28]">Celulares e Acessórios</p><p class="text-xs font-semibold text-[#0C5C9E]">Ver solução</p></a>
+              <a href="/segmentos/loja-de-roupas/" class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shirt w-10 h-10 mx-auto text-[#0C5C9E] mb-2"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"></path></svg><p class="text-sm font-bold text-[#0A1A28]">Lojas de Roupas</p><p class="text-xs font-semibold text-[#0C5C9E]">Ver solução</p></a>
+              <a href="/segmentos/materiais-de-construcao/" class="text-center bg-gray-50 rounded-xl p-4 border border-gray-100"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hammer w-10 h-10 mx-auto text-[#0C5C9E] mb-2"><path d="m15 12-8.373 8.373a1 1 0 1 1-3-3L12 9"></path><path d="m18 15 4-4"></path><path d="m21.5 11.5-1.914-1.914A2 2 0 0 1 19 8.172V7l-2.26-2.26a6 6 0 0 0-4.202-1.756L9 2.96l.92.82A6.18 6.18 0 0 1 12 8.4V10l2 2h1.172a2 2 0 0 1 1.414.586L18.5 14.5"></path></svg><p class="text-sm font-bold text-[#0A1A28]">Mat. Construção</p><p class="text-xs font-semibold text-[#0C5C9E]">Ver solução</p></a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-4 h-4 text-[#1DA1F2] fill-current"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span><strong class="text-[#0A1A28]">7 dias</strong> grátis, sem cartão</span></div>
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-4 h-4 text-[#0C5C9E]"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span><strong class="text-[#0A1A28]">8 estados</strong> com loja</span></div>
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield w-4 h-4 text-[#0C5C9E]"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg><span>Backup <strong class="text-[#0A1A28]">todo dia</strong>, automático</span></div>
+            </div>
+          </div>
+        </section>
+        <section class="py-20 px-4 bg-gray-50">
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12"><span class="inline-flex items-center gap-2 bg-[#B45309]/10 text-[#B45309] font-bold text-sm px-4 py-2 rounded-full mb-4">Vende o dia todo e no fim do mês não sobra nada?</span><h2 class="text-3xl md:text-5xl font-black text-[#0A1A28] mb-4 leading-tight">Você vende o dia todo e no final do mês<br class="hidden md:block"> não sobra <span class="text-[#B45309]">NADA</span>?</h2><p class="text-lg text-gray-600">Se você se identifica com pelo menos 1 situação abaixo, o SoftPay foi feito para você:</p></div>
+            <div class="grid md:grid-cols-3 gap-6">
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"><span class="text-3xl mb-3 block">💸</span><h3 class="text-lg font-bold text-[#B45309] mb-2">Sumiço do Lucro</h3><p class="text-gray-600 text-sm leading-relaxed">O mês fecha e você não sabe para onde foi o dinheiro. Vendeu bem, mas no fim não sobrou nada no caixa. Seu trabalho indo pelo ralo!</p></div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"><span class="text-3xl mb-3 block">📦</span><h3 class="text-lg font-bold text-[#B45309] mb-2">Estoque Fantasma</h3><p class="text-gray-600 text-sm leading-relaxed">Produto que acabou sem ninguém ver ou encalhado na prateleira. Dinheiro perdido todo mês sem você perceber.</p></div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"><span class="text-3xl mb-3 block">⏰</span><h3 class="text-lg font-bold text-[#B45309] mb-2">Preso a um PC só</h3><p class="text-gray-600 text-sm leading-relaxed">Saiu da loja e ficou no escuro. Não sabe quanto vendeu, quanto entrou no caixa, nada. A gestão ficou presa num computador.</p></div>
+              <div class="md:col-span-3 bg-gradient-to-r from-[#0B2033] to-[#123048] p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 border border-[#1DA1F2]/30"><div><p class="text-white font-black text-lg">😩 Se identificou com alguma dessas situações?</p><p class="text-gray-300 text-sm mt-1">Teste o SoftPay 7 dias grátis, sem cartão, direto pelo navegador.</p></div><a href="https://www.softpaybr.com/auth" data-botao class="inline-flex items-center justify-center gap-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-[#1DA1F2] hover:bg-[#7FC8F5] text-[#06121F] font-black py-3 px-8 rounded-xl transition-all whitespace-nowrap h-auto flex-shrink-0">RESOLVER ISSO AGORA →</a></div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"><span class="text-3xl mb-3 block">🏷️</span><h3 class="text-lg font-bold text-[#B45309] mb-2">Preço Errado = Prejuízo</h3><p class="text-gray-600 text-sm leading-relaxed">Vendendo no prejuízo sem saber. O custo subiu, o preço ficou igual e a margem sumiu. Trabalhando de graça!</p></div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"><span class="text-3xl mb-3 block">😢</span><h3 class="text-lg font-bold text-[#B45309] mb-2">Caixa Nunca Fecha</h3><p class="text-gray-600 text-sm leading-relaxed">Sempre falta ou sobra dinheiro na gaveta e ninguém explica a diferença. Discussão, estresse e dinheiro sumindo.</p></div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"><span class="text-3xl mb-3 block">📄</span><h3 class="text-lg font-bold text-[#B45309] mb-2">Nota Fiscal = Pesadelo</h3><p class="text-gray-600 text-sm leading-relaxed">Programa complicado, nota que não sai e fila no balcão. Emitir nota virou a pior parte do dia!</p></div>
+            </div>
+            <div class="mt-12 text-center"><p class="text-lg text-gray-600 mb-4 font-medium">Pare de perder dinheiro. O teste é rápido e <strong>GRÁTIS</strong>.</p><a href="https://www.softpaybr.com/auth" data-botao class="inline-flex items-center justify-center gap-2 whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-[#0C5C9E] hover:bg-[#084A81] text-white font-black py-5 px-10 rounded-2xl text-lg transition-all shadow-[0_10px_40px_rgba(12,92,158,0.3)] hover:scale-105 h-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-6 h-6 mr-2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>TESTAR GRÁTIS AGORA</a></div>
+          </div>
+        </section>
+        <section id="recursos" class="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-black text-[#0A1A28] mb-4">Por que <span class="text-[#0C5C9E]">+100 lojistas</span><br class="hidden md:block"> escolheram o SoftPay?</h2>
+              <p class="text-xl text-gray-600 max-w-3xl mx-auto">Porque é fácil de usar, mostra o que acontece na loja e cabe no bolso. E roda no navegador.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+              <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_rgba(6,18,31,0.15)] border border-gray-100 hover:translate-y-[-8px] transition-transform duration-300">
+                <div class="w-16 h-16 bg-[#0C5C9E] rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-8 h-8 text-white"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Nota Fiscal NFC-e e NF-e</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">Emita NFC-e e NF-e direto do navegador, no plano Nota Fiscal ou no ERP Completo. Sem instalar programa emissor.</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">NFC-e e NF-e</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">NFS-e e MDF-e (plano Nota Fiscal)</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Pacote do contador (plano Nota Fiscal)</span></li>
+                </ul>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_rgba(6,18,31,0.15)] border border-gray-100 hover:translate-y-[-8px] transition-transform duration-300">
+                <div class="w-16 h-16 bg-[#0C5C9E] rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-8 h-8 text-white"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Venda Mais Rápido</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">Frente de caixa enxuta: você acha o produto, fecha a venda e o estoque baixa sozinho. Abre em qualquer aparelho conectado.</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Estoque baixa na hora da venda</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Fiado na conta do cliente</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Pix, dinheiro e cartão no relatório</span></li>
+                </ul>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_rgba(6,18,31,0.15)] border border-gray-100 hover:translate-y-[-8px] transition-transform duration-300">
+                <div class="w-16 h-16 bg-[#0C5C9E] rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-8 h-8 text-white"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Seus Dados Seguros na Nuvem</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">Banco de dados na nuvem com backup automático todo dia. Seu PC quebrou? Seus dados continuam lá.</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Backup automático diário</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Acesso individual por usuário</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Acesso de qualquer aparelho</span></li>
+                </ul>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_rgba(6,18,31,0.15)] border border-gray-100 hover:translate-y-[-8px] transition-transform duration-300">
+                <div class="w-16 h-16 bg-[#0C5C9E] rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package w-8 h-8 text-white"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path></svg></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Controle de Estoque</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">Cadastre produtos com tamanho e cor e acompanhe o estoque sem erro, tudo sincronizado na nuvem, do balcão ao celular.</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 text-[#1DA1F2] mt-0.5 flex-shrink-0"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span class="text-sm font-semibold text-[#0A1A28]">Estoque avançado e curva ABC <span class="text-xs bg-[#1DA1F2]/20 text-[#0A1A28] px-2 py-0.5 rounded-full font-bold ml-1">Loja</span></span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Aviso de item acabando</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Custo e margem por produto</span></li>
+                </ul>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_rgba(6,18,31,0.15)] border border-gray-100 hover:translate-y-[-8px] transition-transform duration-300">
+                <div class="w-16 h-16 bg-[#0C5C9E] rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign w-8 h-8 text-white"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 18V6"></path></svg></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Gestão Financeira Clara</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">Abertura, sangria e fechamento que compara o sistema com a gaveta. Relatórios claros em qualquer aparelho.</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 text-[#1DA1F2] mt-0.5 flex-shrink-0"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span class="text-sm font-semibold text-[#0A1A28]">Fiado que cobra por link Pix <span class="text-xs bg-[#1DA1F2]/20 text-[#0A1A28] px-2 py-0.5 rounded-full font-bold ml-1">Loja</span></span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Sangrias e suprimentos</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Relatório de faturamento</span></li>
+                </ul>
+              </div>
+              <div class="bg-white p-8 rounded-3xl shadow-[0_20px_50px_rgba(6,18,31,0.15)] border border-gray-100 hover:translate-y-[-8px] transition-transform duration-300">
+                <div class="w-16 h-16 bg-[#0C5C9E] rounded-2xl flex items-center justify-center mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones w-8 h-8 text-white"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Suporte Humanizado</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">Gente de verdade no WhatsApp, sem robô e sem fila.</p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Sem taxa de instalação</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-5 h-5 text-[#0C5C9E] mt-0.5 flex-shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span class="text-sm">Cadastro dos produtos sem custo</span></li>
+                  <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star w-5 h-5 text-[#1DA1F2] mt-0.5 flex-shrink-0"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span class="text-sm font-semibold text-[#0A1A28]">Venda por áudio no WhatsApp <span class="text-xs bg-[#1DA1F2]/20 text-[#0A1A28] px-2 py-0.5 rounded-full font-bold ml-1">Loja</span></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="como-funciona" class="py-24 px-4 bg-white">
+          <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-black text-[#0A1A28] mb-4">Veja como é <span class="text-[#0C5C9E]">RÁPIDO</span> começar</h2>
+              <p class="text-xl text-gray-600">Em 3 passos você já está vendendo, sem instalar nada</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12 mb-16">
+              <div class="text-center">
+                <div class="w-20 h-20 bg-[#0C5C9E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><span class="text-white font-black text-3xl">1</span></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Crie sua conta grátis</h3>
+                <p class="text-gray-600 leading-relaxed">Cadastre a loja com seu e-mail. Não precisa cartão de crédito, não precisa instalar nada.</p>
+              </div>
+              <div class="text-center">
+                <div class="w-20 h-20 bg-[#0C5C9E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><span class="text-white font-black text-3xl">2</span></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Abra no navegador</h3>
+                <p class="text-gray-600 leading-relaxed">Funciona em Chrome, Edge, Safari e Firefox. PC, notebook, tablet ou celular, você escolhe.</p>
+              </div>
+              <div class="text-center">
+                <div class="w-20 h-20 bg-[#0C5C9E] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_10px_40px_rgba(12,92,158,0.3)]"><span class="text-white font-black text-3xl">3</span></div>
+                <h3 class="text-2xl font-bold text-[#0A1A28] mb-4">Comece a Vender</h3>
+                <p class="text-gray-600 leading-relaxed">Cadastre seus produtos, abra o caixa e faça a primeira venda de qualquer aparelho conectado.</p>
+              </div>
+            </div>
+            <div class="max-w-5xl mx-auto">
+              <h3 class="text-2xl font-bold text-[#0A1A28] mb-6 text-center">Veja o SoftPay por dentro</h3>
+              <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-100 relative group"><img src="/assets/sistema/financeiro.webp?v=416597ead0" alt="Relatório financeiro do SoftPay com vendas, faturamento, lucro e formas de pagamento" width="1400" height="845" loading="lazy" decoding="async" class="w-full h-full object-cover object-top"></div>
+            </div>
+          </div>
+        </section>
+        <section id="depoimentos" class="px-4 bg-[#06121F] py-16">
+          <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+              <div class="flex justify-center gap-1 mb-4"><span class="text-3xl text-[#7FC8F5]">★</span><span class="text-3xl text-[#7FC8F5]">★</span><span class="text-3xl text-[#7FC8F5]">★</span><span class="text-3xl text-[#7FC8F5]">★</span><span class="text-3xl text-[#7FC8F5]">★</span></div>
+              <div class="text-4xl text-[#7FC8F5] mb-4">⭐</div>
+              <h2 class="text-3xl md:text-5xl font-black text-white tracking-tight">+100 LOJISTAS JÁ CONFIAM</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <div class="bg-[#0B2033] rounded-2xl overflow-hidden border border-white/10"><button type="button" class="block relative aspect-[4/3] bg-gray-800 group cursor-pointer w-full" data-video="/assets/depoimentos/gabriel-landim.mp4" data-capa="/assets/depoimentos/gabriel-landim.webp?v=664aca8fde" data-nome="Gabriel Landim" data-local="FortCel, celulares e acessórios (MA)" data-frase="&quot;Antes eu só sabia quanto tinha vendido no fim do mês. Agora vejo no dia.&quot;" aria-label="Assistir ao depoimento de Gabriel Landim"><img src="/assets/depoimentos/gabriel-landim.webp?v=664aca8fde" alt="Gabriel Landim, dono da FortCel" class="absolute inset-0 w-full h-full object-cover" loading="eager" width="608" height="1080" style="object-position: 50% 35%"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div><div class="absolute inset-0 flex items-center justify-center z-20"><div class="w-16 h-16 bg-[#1DA1F2] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-7 h-7 text-[#06121F] fill-[#06121F] ml-1"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div></div></button><div class="p-5"><p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-4">"Antes eu só sabia quanto tinha vendido no fim do mês. Agora vejo no dia."</p><div><p class="text-[#1DA1F2] font-semibold">Gabriel Landim</p><p class="text-gray-500 text-sm">FortCel, celulares e acessórios (MA)</p></div></div></div>
+              <div class="bg-[#0B2033] rounded-2xl overflow-hidden border border-white/10"><button type="button" class="block relative aspect-[4/3] bg-gray-800 group cursor-pointer w-full" data-video="/assets/depoimentos/neto-rn-grifes.mp4" data-capa="/assets/depoimentos/neto-rn-grifes.webp?v=20ba32f54c" data-nome="Neto" data-local="RN Grifes, loja de roupas (MA)" data-frase="&quot;O fiado saiu do caderno. Hoje o cliente recebe o link e paga por Pix.&quot;" aria-label="Assistir ao depoimento de Neto"><img src="/assets/depoimentos/neto-rn-grifes.webp?v=20ba32f54c" alt="Neto, da RN Grifes" class="absolute inset-0 w-full h-full object-cover" loading="eager" width="608" height="1080" style="object-position: 50% 35%"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div><div class="absolute inset-0 flex items-center justify-center z-20"><div class="w-16 h-16 bg-[#1DA1F2] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-7 h-7 text-[#06121F] fill-[#06121F] ml-1"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg></div></div></button><div class="p-5"><p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-4">"O fiado saiu do caderno. Hoje o cliente recebe o link e paga por Pix."</p><div><p class="text-[#1DA1F2] font-semibold">Neto</p><p class="text-gray-500 text-sm">RN Grifes, loja de roupas (MA)</p></div></div></div>
+              <div class="bg-[#0B2033] rounded-2xl overflow-hidden border border-white/10"><div class="block relative aspect-[4/3] bg-gray-800 w-full"><img src="images/naldo-bebidas-fachada.webp" alt="Fachada da Naldo Bebidas, distribuidora cliente do SoftPay" class="absolute inset-0 w-full h-full object-cover" loading="eager" style="object-position: 56% 50%"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div></div><div class="p-5"><p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-4">Distribuidora de bebidas no Maranhão e cliente do SoftPay.</p><div><p class="text-[#1DA1F2] font-semibold">Naldo Bebidas</p><p class="text-gray-500 text-sm">Distribuidora de bebidas (MA)</p></div></div></div>
+              <div class="bg-[#0B2033] rounded-2xl overflow-hidden border border-white/10"><div class="block relative aspect-[4/3] bg-gray-800 w-full"><img src="/assets/lojistas/800/fundo-brasil.webp?v=8e45c44889" alt="Rua de comércio (foto ilustrativa)" class="absolute inset-0 w-full h-full object-cover" loading="eager" style="object-position: 88% 50%"><div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div></div><div class="p-5"><p class="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-4">Lojistas no Maranhão, Piauí, Pará, Pernambuco, Mato Grosso, São Paulo, Rio de Janeiro e Paraná.</p><div><p class="text-[#1DA1F2] font-semibold">+100 lojistas</p><p class="text-gray-500 text-sm">em 8 estados</p></div></div></div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+              <div class="text-center">
+                <p class="text-4xl md:text-5xl font-black text-white">+100</p>
+                <p class="text-gray-400 text-sm">Lojistas</p>
+              </div>
+              <div class="text-center">
+                <p class="text-4xl md:text-5xl font-black text-[#7FC8F5] flex items-center gap-2">8</p>
+                <p class="text-gray-400 text-sm">Estados</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
+          <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12"><span class="inline-flex items-center gap-2 bg-[#0C5C9E]/10 text-[#0A1A28] font-bold text-sm px-4 py-2 rounded-full mb-4">🌐 100% NA NUVEM</span><h2 class="text-3xl md:text-4xl font-black text-[#0A1A28] mb-4">Por que migrar para o sistema WEB?</h2><p class="text-lg text-gray-600">Sua gestão sai do computador da loja e vai com você aonde você estiver.</p></div>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
+                <div class="w-12 h-12 bg-[#0C5C9E]/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-6 h-6 text-[#0A1A28]"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#0A1A28] mb-2">Acesse de qualquer lugar</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">Tá na loja, em casa ou na rua? O SoftPay vai junto. Basta abrir o navegador.</p>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
+                <div class="w-12 h-12 bg-[#0C5C9E]/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-smartphone w-6 h-6 text-[#0A1A28]"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg></div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#0A1A28] mb-2">PC, celular e tablet</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">Chrome, Edge, Safari ou Firefox. Qualquer aparelho com internet, sem instalar nada.</p>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
+                <div class="w-12 h-12 bg-[#0C5C9E]/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-6 h-6 text-[#0A1A28]"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg></div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#0A1A28] mb-2">Backup automático na nuvem</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">HD queimou? PC roubado? Seus dados estão na nuvem, com backup todo dia. Você abre em outro aparelho e continua.</p>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
+                <div class="w-12 h-12 bg-[#0C5C9E]/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw w-6 h-6 text-[#0A1A28]"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></svg></div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#0A1A28] mb-2">Do balcão ao escritório</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">Lance a venda no balcão e confira o caixa em casa. Os mesmos dados, sincronizados na hora. Precisa de mais gente usando? O plano Loja tem até 3 usuários.</p>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
+                <div class="w-12 h-12 bg-[#0C5C9E]/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor w-6 h-6 text-[#0A1A28]"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg></div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#0A1A28] mb-2">Sem instalação, sem técnico</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">Nada de chamar técnico nem pagar instalação. Criou a conta? Já está usando.</p>
+                </div>
+              </div>
+              <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex gap-4">
+                <div class="w-12 h-12 bg-[#0C5C9E]/10 rounded-xl flex items-center justify-center flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up w-6 h-6 text-[#0A1A28]"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div>
+                <div>
+                  <h3 class="text-lg font-bold text-[#0A1A28] mb-2">Atualizações automáticas</h3>
+                  <p class="text-gray-600 text-sm leading-relaxed">Novidade saiu? Você já tem. Sem baixar, sem instalar, sem dor de cabeça.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="comecar" class="px-4 bg-gradient-to-b from-white to-gray-50 py-[60px]">
+          <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-8"><span class="inline-flex items-center gap-2 bg-[#1DA1F2]/10 text-[#0A1A28] font-bold text-sm px-4 py-2 rounded-full mb-4"><span>🎁</span> 7 DIAS GRÁTIS, SEM CARTÃO</span><h2 class="text-3xl md:text-4xl font-black text-[#0A1A28] mb-3">Comece seu teste grátis agora</h2><p class="text-gray-600 text-base max-w-md mx-auto">Crie sua conta, entre no sistema pelo navegador e comece a vender hoje mesmo, sem instalar nada.</p></div>
+            <div class="bg-white border-2 border-[#0C5C9E]/20 rounded-3xl p-8 md:p-10 text-center shadow-[0_20px_60px_rgba(6,18,31,0.12)]"><a href="https://www.softpaybr.com/auth" data-botao class="whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 w-full bg-[#0C5C9E] hover:bg-[#084A81] text-white font-black py-6 px-10 rounded-2xl text-lg md:text-xl h-auto shadow-[0_10px_40px_rgba(12,92,158,0.3)] hover:scale-[1.02] transition-all flex items-center justify-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-6 h-6"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>TESTAR O SISTEMA AGORA</a><p class="text-xs text-gray-500 mt-4">Você vai para a tela de cadastro do SoftPay.</p><div class="flex flex-wrap justify-center gap-6 mt-6 text-sm text-gray-500"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#0C5C9E]"><path d="M20 6 9 17l-5-5"></path></svg><span>Acesso imediato</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#0C5C9E]"><path d="M20 6 9 17l-5-5"></path></svg><span>Sem cartão de crédito</span></div><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check w-4 h-4 text-[#0C5C9E]"><path d="M20 6 9 17l-5-5"></path></svg><span>Suporte humano no WhatsApp</span></div></div></div>
+          </div>
+        </section>
+        <section class="py-24 px-4 bg-gradient-to-b from-white to-gray-50">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+              <h2 class="text-4xl md:text-5xl font-black text-[#0A1A28] mb-4">Perguntas <span class="text-[#0C5C9E]">Frequentes</span></h2>
+              <p class="text-xl text-gray-600">Tire suas dúvidas</p>
+            </div>
+            <div class="space-y-4" data-orientation="vertical">
+              <div data-state="open" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="open" class="flex"><button type="button" aria-controls="radix-:r4:" aria-expanded="true" data-state="open" data-orientation="vertical" id="radix-:r3:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ O teste é GRÁTIS mesmo? Tem pegadinha?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="open" id="radix-:r4:" role="region" aria-labelledby="radix-:r3:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width); transition-duration: 0s; animation-name: none; --radix-collapsible-content-height: 93.25px; --radix-collapsible-content-width: 892px;">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>São 7 dias grátis, sem pegadinha e sem cartão de crédito. Depois do teste, se quiser continuar, você escolhe um plano: Nota Fiscal R$ 65, Comércio R$ 69, Loja R$ 89 ou ERP Completo R$ 109 por mês. Não existe plano grátis para sempre.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:r6:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r5:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Preciso instalar alguma coisa?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:r6:" hidden="" role="region" aria-labelledby="radix-:r5:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Não. O SoftPay roda direto no navegador (Chrome, Edge, Safari ou Firefox). Você cria a conta, entra e já está usando. Não tem aplicativo para baixar.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:r8:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r7:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Funciona no celular e no tablet?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:r8:" hidden="" role="region" aria-labelledby="radix-:r7:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Funciona. O sistema abre no computador, no notebook, no tablet e no celular. Você confere caixa, vendas e estoque de onde estiver.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:ra:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:r9:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ O SoftPay emite nota fiscal?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:ra:" hidden="" role="region" aria-labelledby="radix-:r9:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Emite. O plano Nota Fiscal (R$ 65) faz NFC-e, NF-e, NFS-e e MDF-e, recebe as notas dos fornecedores e monta o pacote do contador. O ERP Completo (R$ 109) junta a gestão da loja com a emissão de NFC-e e NF-e.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:rc:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:rb:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Meus dados ficam seguros na nuvem?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:rc:" hidden="" role="region" aria-labelledby="radix-:rb:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Ficam. Tudo fica num banco de dados na nuvem, com backup automático todo dia e acesso individual para cada usuário. Se o computador quebrar ou for roubado, você abre em outro aparelho e segue.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:re:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:rd:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Posso acessar do balcão e do escritório?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:re:" hidden="" role="region" aria-labelledby="radix-:rd:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Pode. Você abre o sistema no computador da loja, no notebook em casa ou no celular na rua, sempre com os mesmos dados. Precisa de mais gente usando? O Comércio tem 1 usuário, o Loja até 3 e o ERP Completo até 10.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:rg:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:rf:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ E se a internet cair?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:rg:" hidden="" role="region" aria-labelledby="radix-:rf:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>O SoftPay precisa de internet para funcionar. É a troca por poder acessar de qualquer aparelho. Vale ter uma conexão estável e, se der, o 4G do celular como reserva.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:ri:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:rh:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Substitui a maquininha de cartão?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:ri:" hidden="" role="region" aria-labelledby="radix-:rh:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Não. O SoftPay não processa cartão: ele trabalha junto com a sua maquininha. Você registra a forma de pagamento na venda e o relatório mostra quanto entrou em Pix, dinheiro e cartão.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:rk:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:rj:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Tem algum custo escondido depois?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:rk:" hidden="" role="region" aria-labelledby="radix-:rj:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Nenhum. Não tem taxa de instalação nem cobrança para passar seus produtos para o sistema. Depois do teste, você paga só o plano que escolher, a partir de R$ 65 por mês.</p>
+                  </div>
+                </div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-2 border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-[0_20px_50px_rgba(6,18,31,0.15)] transition bg-gray-50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex"><button type="button" aria-controls="radix-:rm:" aria-expanded="false" data-state="closed" data-orientation="vertical" id="radix-:rl:" class="flex flex-1 items-center justify-between hover:underline [&amp;[data-state=open]&gt;svg]:rotate-180 px-6 py-6 text-left font-bold text-[#0A1A28] hover:bg-gray-100 transition [&amp;[data-state=open]]:bg-gray-100" data-radix-collection-item="">❓ Posso cancelar quando quiser?<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 shrink-0 transition-transform duration-200"><path d="m6 9 6 6 6-6"></path></svg></button></h3>
+                <div data-state="closed" id="radix-:rm:" hidden="" role="region" aria-labelledby="radix-:rl:" data-orientation="vertical" class="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down" style="--radix-accordion-content-height: var(--radix-collapsible-content-height); --radix-accordion-content-width: var(--radix-collapsible-content-width);">
+                  <div class="pt-0 px-6 pb-6 text-gray-600 leading-relaxed bg-white border-t border-gray-100">
+                    <p>Pode, sem burocracia. Não tem fidelidade nem multa: você cancela quando quiser.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-16 text-center bg-[#0C5C9E]/10 border-2 border-[#0C5C9E]/30 p-8 rounded-3xl"><h3 class="text-2xl font-black text-[#0A1A28] mb-4">Ainda tem dúvidas?</h3><p class="text-gray-600 mb-6">Nossa equipe responde no WhatsApp, sem robô e sem fila.</p><a href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-botao class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-[#0C5C9E] hover:bg-[#084A81] text-white hover:text-white font-bold py-4 px-8 rounded-xl transition h-auto">Falar com a equipe</a></div>
+          </div>
+        </section>
+        <section class="py-24 px-4 bg-gradient-to-br from-[#0B2033] to-[#123048] text-white">
+          <div class="max-w-4xl mx-auto text-center"><h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight">Pronto para <span class="text-[#1DA1F2]">vender com o SoftPay</span>?</h2><p class="text-xl text-gray-300 mb-10 leading-relaxed">Mais de <strong class="text-white">100 lojistas</strong> em 8 estados já controlam estoque, caixa e fiado num sistema online que você testa 7 dias sem pagar nada. <strong class="text-[#1DA1F2]">É sua vez!</strong></p><a href="https://www.softpaybr.com/auth" data-botao class="justify-center whitespace-nowrap ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 inline-flex items-center gap-3 bg-[#1DA1F2] hover:bg-[#7FC8F5] text-[#06121F] font-black py-6 px-12 rounded-2xl text-xl transition-all shadow-[0_10px_40px_rgba(29,161,242,0.3)] hover:scale-105 group h-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-7 h-7 group-hover:animate-bounce"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg>TESTAR GRÁTIS AGORA</a><p class="text-sm text-gray-400 mt-6">7 Dias Grátis • Sem Cartão • Sem Instalar</p></div>
+        </section>
+        <footer class="bg-[#0B2033] py-16 px-4 text-white border-t border-white/10">
+          <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+              <div class="md:col-span-2">
+                <div class="mb-6"><img src="/assets/logo-claro-232.png?v=e644d34709" alt="SoftPay" width="232" height="84" class="h-10"></div>
+                <p class="text-gray-400 leading-relaxed mb-6">Caixa, estoque, fiado e nota fiscal do seu comércio, na nuvem.</p>
+                <div class="flex gap-4"><a href="https://wa.me/5586998193851" target="_blank" rel="noopener" aria-label="WhatsApp do SoftPay: (86) 99819-3851" class="w-10 h-10 bg-white/10 hover:bg-[#1DA1F2] rounded-lg flex items-center justify-center transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-5 h-5"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg></a><a href="mailto:suporte@softpaybr.com" aria-label="E-mail do SoftPay: suporte@softpaybr.com" class="w-10 h-10 bg-white/10 hover:bg-[#1DA1F2] rounded-lg flex items-center justify-center transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-5 h-5"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg></a><a href="/" aria-label="Site do SoftPay" class="w-10 h-10 bg-white/10 hover:bg-[#1DA1F2] rounded-lg flex items-center justify-center transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></a></div>
+              </div>
+              <div>
+                <h4 class="font-black mb-6 text-[#1DA1F2] text-lg">Links</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li><a href="/#planos" class="hover:text-white transition">Planos e preços</a></li>
+                  <li><a href="/perguntas/" class="hover:text-white transition">Perguntas frequentes</a></li>
+                  <li><a href="/sobre/" class="hover:text-white transition">Sobre o SoftPay</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-black mb-6 text-[#1DA1F2] text-lg">Contato</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                  <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-4 h-4 text-[#1DA1F2]"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><a href="mailto:suporte@softpaybr.com" class="hover:text-white transition">suporte@softpaybr.com</a></li>
+                  <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone w-4 h-4 text-[#1DA1F2]"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="https://wa.me/5586998193851" target="_blank" rel="noopener" class="hover:text-white transition">(86) 99819-3851</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-500">
+              <p>© <span data-ano>2026</span> SoftPay. Todos os direitos reservados.</p>
+              <p class="mt-2"><a href="/termos.html" class="underline hover:text-white transition">Termos de Uso</a> · <a href="/privacidade.html" class="underline hover:text-white transition">Política de Privacidade</a></p>
+              <p class="mt-2"><a href="https://visionxma.com/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 hover:text-white transition"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" aria-hidden="true" class="w-3 h-3"><path d="M3 2h5.2l4 6.1L16.4 2H21l-6.4 9.4L21.4 22h-5.2l-4.3-6.6L7.3 22H2.7l6.7-10L3 2z" fill="currentColor"></path></svg><span>© <span data-ano>2026</span> VisionX · Todos os direitos reservados. · CNPJ 61.427.918/0001-06</span></a></p>
+            </div>
+          </div>
+        </footer>
+        <div data-flutuante class="fixed bottom-5 left-5 z-50 transition-transform duration-300 scale-0"><a href="https://www.softpaybr.com/auth" aria-label="Testar grátis" data-botao class="justify-center whitespace-nowrap text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 flex items-center gap-3 bg-[#1DA1F2] hover:bg-[#7FC8F5] text-[#06121F] font-black py-4 px-6 rounded-full shadow-2xl transition-all hover:scale-105 h-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-in w-5 h-5"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" x2="3" y1="12" y2="12"></line></svg><span class="hidden md:inline">Testar Grátis</span></a></div>
+      </div>
     </div>
-
-    <main id="conteudo">
-        <section class="lp-hero" id="topo">
-            <img class="lp-hero__foto" src="/assets/lojistas/mercadinho.webp?v=027c8e4a3b" width="1600" height="667" alt="" decoding="async" />
-            <div class="lp-hero__veu" aria-hidden="true"></div>
-            <div class="shell lp-hero__grade">
-                <div class="lp-hero__texto">
-                    <p class="lp-selo"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Sistema 100% online, sem instalar nada</span></p>
-                    <h1 class="display lp-hero__titulo"><span class="linha acento-titulo">Sistema de gestão</span><span class="linha">com PDV e nota fiscal,</span><span class="linha">direto no navegador</span></h1>
-                    <p class="lp-hero__sub">Feito para o comércio que vende produto com estoque. <b>Mais de 100 lojistas</b> já trocaram o caderno e a planilha pelo SoftPay. Você testa <b>7 dias sem pagar nada</b> e sem cadastrar cartão.</p>
-                    <ul class="lp-chips"><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg><span>Nota fiscal NFC-e e NF-e</span></li><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span>Acesse de qualquer lugar</span></li><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.4 4.3 4.3 0 0 0 7 18z"/></svg><span>Backup automático</span></li><li><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="13" height="10" rx="1.5"/><path d="M7 18h5"/><rect x="17" y="8" width="4.5" height="10" rx="1"/></svg><span>PC, celular e tablet</span></li></ul>
-                    <div class="cluster cluster--cta">
-                        <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
-                        <a class="btn btn--fantasma-claro btn--grande" href="#como-funciona">Como funciona</a>
-                    </div>
-                    <ul class="lp-prova"><li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg><span><b>+100</b> lojistas</span></li><li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>8</b> estados</span></li><li><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2 1.8.8-.3 1.6c-3.8.4-8.1-3.9-7.7-7.7l1.6-.3.8 1.8z"/></svg><span><b>Suporte</b> humano no WhatsApp</span></li></ul>
-                </div>
-                <figure class="lp-hero__peca">
-                    <img class="lp-hero__aparelhos" src="/assets/hero/aparelhos-2-1200.webp?v=bc9ac209bc" width="1200" height="900"
-                        fetchpriority="high" decoding="async" alt="O SoftPay aberto num monitor e num celular: o PDV com o carrinho fechando em R$ 414,60" />
-                    <div class="cupom cupom--hero" data-cupom>
-                        <div class="cupom__papel">
-                            <p class="cupom__cabeca"><b>SOFTPAY</b><span>Venda 0142 no caixa 1</span></p>
-                            <ul class="cupom__linhas"><li class="cupom__linha"><span>2x Refrigerante</span><i aria-hidden="true"></i><b>R$ 19,80</b></li><li class="cupom__linha"><span>1x Arroz 5kg</span><i aria-hidden="true"></i><b>R$ 27,90</b></li><li class="cupom__linha"><span>Pago no Pix</span><i aria-hidden="true"></i><b>ok</b></li><li class="cupom__linha"><span>Estoque baixado</span><i aria-hidden="true"></i><b>ok</b></li></ul>
-                            <p class="cupom__total"><span>Total</span><b>R$ 47,70</b></p>
-                            
-                            <span class="cupom__barras" aria-hidden="true"></span>
-                        </div>
-                    </div>
-                </figure>
-            </div>
-        </section>
-
-        <section class="secao secao--alt lp-numeros" aria-labelledby="numeros-titulo">
-            <div class="shell">
-                <h2 class="lp-lead" id="numeros-titulo">O que já dá para contar de quem usa o SoftPay no balcão</h2>
-                <ul class="lp-nums"><li class="lp-num revelar lp-num--grande">
-                        <b class="lp-num__valor" data-conta="100" data-prefixo="+" data-sufixo="">+100</b>
-                        <span>lojistas usando o SoftPay todo dia</span></li><li class="lp-num revelar">
-                        <b class="lp-num__valor" data-conta="8" data-prefixo="" data-sufixo="">8</b>
-                        <span>estados com loja usando</span></li><li class="lp-num revelar">
-                        <b class="lp-num__valor">7 dias</b>
-                        <span>de teste com o sistema aberto</span></li><li class="lp-num revelar">
-                        <b class="lp-num__valor">R$ 0</b>
-                        <span>para começar: sem taxa de instalação</span></li></ul>
-                <ul class="lp-segs" aria-label="Segmentos que usam o SoftPay"><li class="revelar"><a class="lp-seg" href="/segmentos/mercadinho/">
-                            <img src="/assets/lojistas/800/mercadinho.webp?v=2af769af2f" width="400" height="167" loading="lazy" decoding="async" alt="" />
-                            <span>Mercadinho</span></a></li><li class="revelar"><a class="lp-seg" href="/segmentos/loja-de-roupas/">
-                            <img src="/assets/lojistas/800/loja-de-roupas.webp?v=cf7fc4e4b3" width="400" height="167" loading="lazy" decoding="async" alt="" />
-                            <span>Loja de roupas</span></a></li><li class="revelar"><a class="lp-seg" href="/segmentos/farmacia/">
-                            <img src="/assets/lojistas/800/farmacia.webp?v=f26ae54c3e" width="400" height="167" loading="lazy" decoding="async" alt="" />
-                            <span>Farmácia</span></a></li><li class="revelar"><a class="lp-seg" href="/segmentos/distribuidora/">
-                            <img src="/assets/lojistas/800/distribuidora.webp?v=7054470ba5" width="400" height="167" loading="lazy" decoding="async" alt="" />
-                            <span>Distribuidora</span></a></li><li class="revelar"><a class="lp-seg" href="/segmentos/papelaria/">
-                            <img src="/assets/lojistas/800/papelaria.webp?v=23bd207910" width="400" height="167" loading="lazy" decoding="async" alt="" />
-                            <span>Papelaria</span></a></li><li class="revelar"><a class="lp-seg" href="/segmentos/loja-de-variedades/">
-                            <img src="/assets/lojistas/800/loja-de-variedades.webp?v=f5bd96dcf2" width="400" height="167" loading="lazy" decoding="async" alt="" />
-                            <span>Variedades</span></a></li></ul>
-            </div>
-        </section>
-
-        <section class="secao lp-dores" id="dores">
-            <div class="shell">
-                <div class="cabeca-secao cabeca-secao--centro">
-                    <p class="lp-pilula lp-pilula--alerta">Vende o dia todo e no fim do mês não sobra nada?</p>
-                    <h2 class="display display--secao"><span class="linha">Você vende o dia todo e</span><span class="linha acento-titulo">o dinheiro some no fim do mês?</span></h2>
-                    <p class="grande leitura">Se pelo menos uma destas situações acontece na sua loja, o SoftPay foi feito para você.</p>
-                </div>
-                <ul class="lp-dores__grade"><li class="lp-dor revelar">
-                        <span class="lp-dor__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7l6 6 4-4 8 8"/><path d="M21 12v5h-5"/></svg></span>
-                        <h3>O lucro some</h3>
-                        <p>O mês fecha, a conta não bate e ninguém sabe para onde foi o dinheiro. Vendeu muito e não sobrou.</p></li><li class="lp-dor revelar">
-                        <span class="lp-dor__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 20V10a7 7 0 0 1 14 0v10l-2.5-2-2.3 2-2.2-2-2.2 2-2.3-2z"/><path d="M9.5 10.5h.01M14.5 10.5h.01"/></svg></span>
-                        <h3>Estoque fantasma</h3>
-                        <p>O sistema diz que tem, a prateleira diz que não. Falta o que vende e sobra o que encalha.</p></li><li class="lp-dor revelar">
-                        <span class="lp-dor__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
-                        <h3>Preso a um computador</h3>
-                        <p>Saiu da loja e ficou no escuro: quanto vendeu, quanto entrou no caixa, quem pagou.</p></li><li class="lp-dor revelar">
-                        <span class="lp-dor__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
-                        <h3>Preço desatualizado</h3>
-                        <p>O custo subiu, o preço ficou para trás e a margem foi embora sem ninguém ver.</p></li><li class="lp-dor revelar">
-                        <span class="lp-dor__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M7 15h3"/></svg></span>
-                        <h3>Caixa que nunca fecha</h3>
-                        <p>Sobra ou falta no fim do dia, e a conferência vira discussão no balcão.</p></li><li class="lp-dor revelar">
-                        <span class="lp-dor__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 3v18M12 8h4M12 12h4"/></svg></span>
-                        <h3>Fiado no caderno</h3>
-                        <p>Quem deve, quanto e desde quando? O caderno anota, mas não cobra ninguém.</p></li></ul>
-                <div class="lp-meio revelar">
-                    <div>
-                        <h3>Se identificou com alguma dessas situações?</h3>
-                        <p>Os 7 dias são grátis e sem cartão. Você cria a conta e começa a vender pelo navegador ainda hoje.</p>
-                    </div>
-                    <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Resolver isso agora</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao secao--alt lp-porque" id="recursos">
-            <div class="shell">
-                <div class="cabeca-secao cabeca-secao--centro">
-                    <h2 class="display display--secao"><span class="linha">Por que +100 lojistas</span><span class="linha acento-titulo">escolheram o SoftPay</span></h2>
-                    <p class="grande leitura">Porque é rápido no balcão, mostra o que está acontecendo na loja e roda no navegador.</p>
-                </div>
-                <ol class="lp-recs"><li class="lp-rec">
-                        <span class="lp-rec__ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></span>
-                        <h3 class="display display--cartao">Nota fiscal sem depender do escritório</h3>
-                        <p>NFC-e e NF-e saem da própria venda, com cadastro fiscal e pacote do contador incluídos.</p>
-                        <ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>NFC-e, NF-e, NFS-e e MDF-e</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Notas recebidas: ver e manifestar</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Pacote do contador incluído</span></li></ul>
-                        <p class="lp-rec__plano">Planos ERP Completo e Nota Fiscal</p></li><li class="lp-rec">
-                        <span class="lp-rec__ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5v14M7 5v14M10 5v14M13 5v14M17 5v14M20 5v14"/></svg></span>
-                        <h3 class="display display--cartao">Venda rápida no PDV</h3>
-                        <p>Leitor de código de barras, busca por nome, desconto e finalização numa tela só.</p>
-                        <ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Dinheiro, Pix, cartão, fiado e misto</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Cada venda baixa o estoque na hora</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>No computador do balcão e no celular</span></li></ul>
-                        </li><li class="lp-rec">
-                        <span class="lp-rec__ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-                        <h3 class="display display--cartao">Dados seguros na nuvem</h3>
-                        <p>Se o computador quebrar, você abre em outro aparelho e está tudo lá.</p>
-                        <ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Cópia de segurança todo dia</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Acesso individual por usuário</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Nada preso ao computador da loja</span></li></ul>
-                        </li><li class="lp-rec">
-                        <span class="lp-rec__ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span>
-                        <h3 class="display display--cartao">Estoque que bate com a prateleira</h3>
-                        <p>Entrada, saída, custo e preço por produto, com variação de tamanho e cor.</p>
-                        <ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Aviso de item acabando</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Custo e margem por produto</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Curva ABC: o que gira e o que empata</span></li></ul>
-                        <p class="lp-rec__plano">Curva ABC no plano Loja</p></li><li class="lp-rec">
-                        <span class="lp-rec__ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l4 4-4 4-4-4z"/><path d="M12 13l4 4-4 4-4-4z"/><path d="M3 12l4-4 4 4-4 4zM13 12l4-4 4 4-4 4z"/></svg></span>
-                        <h3 class="display display--cartao">Fiado que cobra sozinho</h3>
-                        <p>Cada cliente com a conta dele. O link de pagamento Pix vai pelo WhatsApp e a conta baixa quando o dinheiro cai.</p>
-                        <ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Quem deve, quanto e há quantos dias</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Cobrança por link Pix</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Baixa automática do pagamento</span></li></ul>
-                        <p class="lp-rec__plano">A partir do plano Loja</p></li><li class="lp-rec">
-                        <span class="lp-rec__ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg></span>
-                        <h3 class="display display--cartao">Suporte de gente</h3>
-                        <p>Você manda mensagem no WhatsApp e fala com uma pessoa da equipe, sem robô e sem fila.</p>
-                        <ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Ajuda para configurar</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Atendimento para todo o Brasil</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Atualização para todos ao mesmo tempo</span></li></ul>
-                        </li></ol>
-                <div class="lp-recs-lista"><details class="lp-recl" name="recursos" open>
-                        <summary><span class="lp-rec__ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/><path d="M10 13h6M10 17h6"/></svg></span><b>Nota fiscal sem depender do escritório</b><svg class="lp-recl__mais" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
-                        <div><p>NFC-e e NF-e saem da própria venda, com cadastro fiscal e pacote do contador incluídos.</p><ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>NFC-e, NF-e, NFS-e e MDF-e</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Notas recebidas: ver e manifestar</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Pacote do contador incluído</span></li></ul><p class="lp-rec__plano">Planos ERP Completo e Nota Fiscal</p></div>
-                    </details><details class="lp-recl" name="recursos">
-                        <summary><span class="lp-rec__ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 5v14M7 5v14M10 5v14M13 5v14M17 5v14M20 5v14"/></svg></span><b>Venda rápida no PDV</b><svg class="lp-recl__mais" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
-                        <div><p>Leitor de código de barras, busca por nome, desconto e finalização numa tela só.</p><ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Dinheiro, Pix, cartão, fiado e misto</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Cada venda baixa o estoque na hora</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>No computador do balcão e no celular</span></li></ul></div>
-                    </details><details class="lp-recl" name="recursos">
-                        <summary><span class="lp-rec__ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><b>Dados seguros na nuvem</b><svg class="lp-recl__mais" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
-                        <div><p>Se o computador quebrar, você abre em outro aparelho e está tudo lá.</p><ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Cópia de segurança todo dia</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Acesso individual por usuário</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Nada preso ao computador da loja</span></li></ul></div>
-                    </details><details class="lp-recl" name="recursos">
-                        <summary><span class="lp-rec__ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8l9-5 9 5-9 5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg></span><b>Estoque que bate com a prateleira</b><svg class="lp-recl__mais" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
-                        <div><p>Entrada, saída, custo e preço por produto, com variação de tamanho e cor.</p><ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Aviso de item acabando</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Custo e margem por produto</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Curva ABC: o que gira e o que empata</span></li></ul><p class="lp-rec__plano">Curva ABC no plano Loja</p></div>
-                    </details><details class="lp-recl" name="recursos">
-                        <summary><span class="lp-rec__ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3l4 4-4 4-4-4z"/><path d="M12 13l4 4-4 4-4-4z"/><path d="M3 12l4-4 4 4-4 4zM13 12l4-4 4 4-4 4z"/></svg></span><b>Fiado que cobra sozinho</b><svg class="lp-recl__mais" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
-                        <div><p>Cada cliente com a conta dele. O link de pagamento Pix vai pelo WhatsApp e a conta baixa quando o dinheiro cai.</p><ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Quem deve, quanto e há quantos dias</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Cobrança por link Pix</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Baixa automática do pagamento</span></li></ul><p class="lp-rec__plano">A partir do plano Loja</p></div>
-                    </details><details class="lp-recl" name="recursos">
-                        <summary><span class="lp-rec__ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/></svg></span><b>Suporte de gente</b><svg class="lp-recl__mais" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
-                        <div><p>Você manda mensagem no WhatsApp e fala com uma pessoa da equipe, sem robô e sem fila.</p><ul><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Ajuda para configurar</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Atendimento para todo o Brasil</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Atualização para todos ao mesmo tempo</span></li></ul></div>
-                    </details></div>
-            </div>
-        </section>
-
-        <section class="secao lp-passos" id="como-funciona">
-            <div class="shell">
-                <div class="cabeca-secao cabeca-secao--centro">
-                    <h2 class="display display--secao"><span class="linha">Veja como é rápido</span><span class="linha acento-titulo">começar</span></h2>
-                    <p class="grande leitura">Em três passos você já está vendendo, sem instalar nada.</p>
-                </div>
-                <ol class="lp-passos__linha"><li class="lp-passo revelar">
-                        <span class="lp-passo__n" aria-hidden="true">1</span>
-                        <h3>Crie sua conta</h3>
-                        <p>Nome, e-mail e senha. Não pede cartão de crédito e não tem nada para instalar.</p></li><li class="lp-passo revelar">
-                        <span class="lp-passo__n" aria-hidden="true">2</span>
-                        <h3>Abra no navegador</h3>
-                        <p>No computador do balcão, no celular ou no tablet. Chrome, Edge, Safari ou Firefox.</p></li><li class="lp-passo revelar">
-                        <span class="lp-passo__n" aria-hidden="true">3</span>
-                        <h3>Cadastre e venda</h3>
-                        <p>Cadastre os produtos, abra o caixa e faça a primeira venda. Se travar, o suporte ajuda pelo WhatsApp.</p></li></ol>
-                <div class="lp-tour revelar" data-tour>
-                    <p class="lp-tour__titulo">O sistema por dentro</p>
-                    <div class="lp-tour__abas" role="tablist" aria-label="Telas do sistema"><button class="lp-tour__aba" type="button" role="tab" aria-selected="true" aria-controls="tour-0" id="tour-aba-0">PDV</button><button class="lp-tour__aba" type="button" role="tab" aria-selected="false" aria-controls="tour-1" id="tour-aba-1">Estoque</button><button class="lp-tour__aba" type="button" role="tab" aria-selected="false" aria-controls="tour-2" id="tour-aba-2">Finanças</button><button class="lp-tour__aba" type="button" role="tab" aria-selected="false" aria-controls="tour-3" id="tour-aba-3">Notas</button></div>
-                    <div class="lp-tour__janela">
-                        <span class="lp-tour__barra" aria-hidden="true"><i></i><i></i><i></i><em>softpaybr.com</em></span>
-                        <div class="lp-tour__telas"><img class="lp-tour__tela" id="tour-0" role="tabpanel" aria-labelledby="tour-aba-0" src="/assets/sistema/pdv.webp?v=4737e8d2c1"
-                            width="1400" height="845" loading="lazy" decoding="async" alt="O PDV do SoftPay com o carrinho de uma venda fechando em R$ 414,60" /><img class="lp-tour__tela" id="tour-1" role="tabpanel" aria-labelledby="tour-aba-1" src="/assets/sistema/estoque.webp?v=96843ec6cc"
-                            width="1400" height="845" loading="lazy" decoding="async" alt="O controle de estoque do SoftPay com a lista de produtos, saldo e preço" data-oculta /><img class="lp-tour__tela" id="tour-2" role="tabpanel" aria-labelledby="tour-aba-2" src="/assets/sistema/financeiro.webp?v=416597ead0"
-                            width="1400" height="845" loading="lazy" decoding="async" alt="O painel financeiro do SoftPay com vendas, faturamento e formas de pagamento" data-oculta /><img class="lp-tour__tela" id="tour-3" role="tabpanel" aria-labelledby="tour-aba-3" src="/assets/sistema/fiscal.webp?v=e3237b3c30"
-                            width="1400" height="845" loading="lazy" decoding="async" alt="A tela de notas fiscais do SoftPay" data-oculta /></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao secao--escura lp-depos" id="depoimentos">
-            <div class="shell">
-                <div class="cabeca-secao cabeca-secao--centro">
-                    <h2 class="display display--secao"><span class="linha">Quem já largou</span><span class="linha acento-titulo">o caderno</span></h2>
-                    <p class="grande leitura">Lojistas do Maranhão que usam o SoftPay no balcão, todo dia, contando o que mudou.</p>
-                </div>
-                <div class="lp-depos__grade">
-                    <figure class="lp-depo revelar">
-                        <div class="lp-depo__video">
-                            <video src="/assets/depoimentos/gabriel-landim.mp4" poster="/assets/depoimentos/gabriel-landim.webp?v=664aca8fde" preload="none" playsinline controls
-                                aria-label="Depoimento em vídeo de Gabriel Landim"></video>
-                        </div>
-                        <blockquote>“Antes eu só sabia quanto tinha vendido no fim do mês. Agora vejo no dia.”</blockquote>
-                        <figcaption><b>Gabriel Landim</b><span>Celulares e acessórios</span></figcaption>
-                    </figure><figure class="lp-depo revelar">
-                        <div class="lp-depo__video">
-                            <video src="/assets/depoimentos/neto-rn-grifes.mp4" poster="/assets/depoimentos/neto-rn-grifes.webp?v=20ba32f54c" preload="none" playsinline controls
-                                aria-label="Depoimento em vídeo de Neto"></video>
-                        </div>
-                        <blockquote>“O fiado saiu do caderno. Hoje o cliente recebe o link e paga por Pix.”</blockquote>
-                        <figcaption><b>Neto</b><span>RN Grifes, loja de roupas</span></figcaption>
-                    </figure>
-                    <ul class="lp-depos__nums revelar"><li><b data-conta="100" data-prefixo="+">+100</b><span>lojistas usando</span></li><li><b data-conta="8" data-prefixo="">8</b><span>estados com loja</span></li><li class="lp-depos__ufs"><span>Onde já tem loja usando</span><ul><li>Maranhão</li><li>Piauí</li><li>Pará</li><li>Pernambuco</li><li>Mato Grosso</li><li>São Paulo</li><li>Rio de Janeiro</li><li>Paraná</li></ul></li></ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao lp-nuvem" id="nuvem">
-            <div class="shell">
-                <div class="cabeca-secao cabeca-secao--centro">
-                    <p class="lp-pilula"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.4 4.3 4.3 0 0 0 7 18z"/></svg><span>Sistema na nuvem</span></p>
-                    <h2 class="display display--secao"><span class="linha">Por que trocar por um</span><span class="linha acento-titulo">sistema na nuvem?</span></h2>
-                    <p class="grande leitura">A gestão da loja sai do computador do balcão e vai com você para onde você for.</p>
-                </div>
-                <ul class="lp-nuvem__grade"><li class="lp-nuvem__item revelar">
-                        <span class="lp-nuvem__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
-                        <div><h3>Acesse de qualquer lugar</h3><p>Na loja, em casa ou na rua: basta abrir o navegador e entrar com o seu e-mail.</p></div></li><li class="lp-nuvem__item revelar">
-                        <span class="lp-nuvem__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="13" height="10" rx="1.5"/><path d="M7 18h5"/><rect x="17" y="8" width="4.5" height="10" rx="1"/></svg></span>
-                        <div><h3>Computador, celular e tablet</h3><p>Chrome, Edge, Safari ou Firefox. Qualquer aparelho com internet serve, sem instalar nada.</p></div></li><li class="lp-nuvem__item revelar">
-                        <span class="lp-nuvem__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 18h10a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.1 9.4 4.3 4.3 0 0 0 7 18z"/></svg></span>
-                        <div><h3>Cópia de segurança sozinha</h3><p>O computador quebrou ou sumiu? Você abre em outro aparelho e está tudo lá, com backup de todo dia.</p></div></li><li class="lp-nuvem__item revelar">
-                        <span class="lp-nuvem__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></svg></span>
-                        <div><h3>Do balcão ao escritório</h3><p>Lance a venda no balcão e confira o caixa em casa. Os mesmos números, na mesma hora.</p></div></li><li class="lp-nuvem__item revelar">
-                        <span class="lp-nuvem__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.5 6.5a4 4 0 0 0 5 5L13 18l-3 3-3-3 3-3 6.5-6.5a4 4 0 0 0-2-2z"/></svg></span>
-                        <div><h3>Sem instalação e sem técnico</h3><p>Criou a conta, já está usando. Não precisa de visita técnica nem de servidor na loja.</p></div></li><li class="lp-nuvem__item revelar">
-                        <span class="lp-nuvem__ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 15c-1 1.5-1 4-1 4s2.5 0 4-1"/><path d="M9 15l-3-3c1.5-4.5 5-8 11-9 0 6-4.5 9.5-9 11z"/><circle cx="15" cy="9" r="1.5"/></svg></span>
-                        <div><h3>Atualização que chega sozinha</h3><p>Recurso novo chega para todo mundo ao mesmo tempo, sem baixar e sem reinstalar.</p></div></li></ul>
-            </div>
-        </section>
-
-        <section class="secao secao--alt lp-comece" id="comecar">
-            <div class="shell lp-comece__grade">
-                <div class="lp-comece__texto">
-                    <h2 class="display display--secao"><span class="linha">Comece agora,</span><span class="linha acento-titulo">sem cartão</span></h2>
-                    <p class="grande">Crie a conta, entre no sistema pelo navegador e faça a primeira venda hoje mesmo. Se não servir para a sua loja, é só não continuar.</p>
-                    <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Criar conta grátis</a>
-                    <p class="apoio lp-comece__nota">Você vai para a tela de cadastro do SoftPay.</p>
-                    <ul class="lp-checks"><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Acesso imediato</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Sem cartão de crédito</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Ajuda no WhatsApp</span></li></ul>
-                </div>
-                <div class="cupom cupom--conta" data-cupom>
-                        <div class="cupom__papel">
-                            <p class="cupom__cabeca"><b>SOFTPAY</b><span>Conta para começar hoje</span></p>
-                            <ul class="cupom__linhas"><li class="cupom__linha"><span>Sistema aberto por 7 dias</span><i aria-hidden="true"></i><b>R$ 0,00</b></li><li class="cupom__linha"><span>Instalação</span><i aria-hidden="true"></i><b>R$ 0,00</b></li><li class="cupom__linha"><span>Passar seus produtos</span><i aria-hidden="true"></i><b>R$ 0,00</b></li><li class="cupom__linha"><span>Cartão de crédito</span><i aria-hidden="true"></i><b>não pede</b></li><li class="cupom__linha"><span>Fidelidade</span><i aria-hidden="true"></i><b>nenhuma</b></li></ul>
-                            <p class="cupom__total"><span>Total hoje</span><b>R$ 0,00</b></p>
-                            <p class="cupom__rodape">Obrigado pela preferência. Volte sempre.</p>
-                            <span class="cupom__barras" aria-hidden="true"></span>
-                        </div>
-                    </div>
-            </div>
-        </section>
-
-        <section class="secao lp-faq" id="duvidas">
-            <div class="shell">
-                <div class="cabeca-secao cabeca-secao--centro">
-                    <h2 class="display display--secao"><span class="linha">Perguntas</span><span class="linha acento-titulo">frequentes</span></h2>
-                </div>
-                <div class="faq"><details class="faq__item" name="faq">
-                        <summary>O teste é grátis mesmo?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Sim. São 7 dias com acesso aos recursos do plano, sem pagar nada. Depois você escolhe um plano a partir de R$ 65 por mês, ou simplesmente não continua.</p></div>
-                    </details><details class="faq__item" name="faq">
-                        <summary>Precisa de cartão de crédito para testar?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Não. O cadastro do teste de 7 dias não pede cartão de crédito.</p></div>
-                    </details><details class="faq__item" name="faq">
-                        <summary>Preciso instalar alguma coisa?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Não. O SoftPay funciona pelo navegador, no computador do balcão e no celular. Não precisa instalar programa nem manter servidor na loja.</p></div>
-                    </details><details class="faq__item" name="faq">
-                        <summary>Funciona no celular e no tablet?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Sim. Ele roda no navegador do celular e do tablet, sem baixar aplicativo, com os recursos do dia a dia da loja.</p></div>
-                    </details><details class="faq__item" name="faq">
-                        <summary>O SoftPay emite nota fiscal?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Sim, nos planos ERP Completo (R$ 109 por mês) e Nota Fiscal (R$ 65 por mês): NFC-e, NF-e, NFS-e e MDF-e, com o pacote do contador incluído.</p></div>
-                    </details><details class="faq__item" name="faq" data-faq-sexta>
-                        <summary>Quanto custa depois do teste?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>São quatro planos mensais: Nota Fiscal por R$ 65, Comércio por R$ 69, Loja por R$ 89 e ERP Completo por R$ 109. <a href="/#planos">Veja o que cada um tem</a>.</p></div>
-                    </details><details class="faq__item faq__extra" name="faq" hidden>
-                        <summary>Meus dados ficam seguros?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Os dados ficam num banco de dados na nuvem, com backup automático e acesso individual por usuário. Nenhum sistema promete segurança absoluta, mas os seus dados não dependem do computador da loja.</p></div>
-                    </details><details class="faq__item faq__extra" name="faq" hidden>
-                        <summary>Funciona em Mac e Linux?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Sim. O que ele pede é um navegador atualizado: Chrome, Edge, Safari ou Firefox, em qualquer sistema.</p></div>
-                    </details><details class="faq__item faq__extra" name="faq" hidden>
-                        <summary>Tem taxa de instalação ou fidelidade?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Não. Sem taxa de instalação, sem cobrança para passar os seus produtos para o sistema e sem fidelidade. Você pode cancelar quando quiser.</p></div>
-                    </details><details class="faq__item faq__extra" name="faq" hidden>
-                        <summary>O SoftPay substitui a maquininha?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Não. Ele registra a venda e o recebimento, mas não processa cartão: trabalha junto com a maquininha que você já tem.</p></div>
-                    </details><details class="faq__item faq__extra" name="faq" hidden>
-                        <summary>Quem me ajuda a configurar?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Uma pessoa da equipe, pelo WhatsApp. Sem robô, sem número de protocolo e sem fila.</p></div>
-                    </details></div>
-                <div class="faq__mais-perguntas">
-                    <button class="btn btn--linha" type="button" data-ver-mais=".faq__extra" aria-expanded="false">
-                        <span data-ver-mais-rotulo>Ver mais perguntas</span> <span data-ver-mais-conta></span>
-                    </button>
-                </div>
-                <div class="lp-duvida revelar">
-                    <div>
-                        <h3>Ainda tem dúvida?</h3>
-                        <p>Fale com uma pessoa da equipe pelo WhatsApp. Ela responde e ajuda a configurar.</p>
-                    </div>
-                    <a class="btn btn--linha btn--grande" href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support"><svg class="btn__icone" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2 1.8.8-.3 1.6c-3.8.4-8.1-3.9-7.7-7.7l1.6-.3.8 1.8z"/></svg>Chamar no WhatsApp</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao secao--escura cta-final lp-final">
-            <div class="shell cabeca-secao--centro">
-                <h2 class="display display--secao"><span class="linha">Pronto para organizar</span><span class="linha acento-titulo">a sua loja?</span></h2>
-                <p class="grande leitura leitura--centro">Mais de 100 lojistas já controlam estoque, caixa e fiado num sistema que roda no navegador. A sua vez começa com 7 dias grátis.</p>
-                <div class="cluster cluster--cta lp-final__acoes">
-                    <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
-                    <a class="btn btn--fantasma-claro btn--grande btn--whats" href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support"><svg class="btn__icone" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.5l1.2-1.2 1.8.8-.3 1.6c-3.8.4-8.1-3.9-7.7-7.7l1.6-.3.8 1.8z"/></svg>WhatsApp</a>
-                </div>
-                <ul class="lp-final__selos"><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>7 dias grátis</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Sem cartão</span></li><li><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"/></svg><span>Sem instalar</span></li></ul>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="rodape">
-        <div class="shell">
-            <div class="rodape__grade">
-                <div class="rodape__marca">
-                    <img src="/assets/logo-claro-232.png?v=e644d34709" width="232" height="84" loading="lazy"
-                         style="height: 2rem; width: auto; margin-bottom: var(--sp-3)" alt="SoftPay" />
-                    <p class="apoio" style="color: rgba(255,255,255,0.72); max-width: 32ch">
-                        Sistema de gestão em nuvem para comércio: PDV, estoque, caixa, fiado,
-                        nota fiscal e loja online.
-                    </p>
-                </div>
-
-                <div>
-                    <h3>Soluções</h3>
-                    <ul>
-                        <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
-                        <li><a href="/solucoes/sistema-de-estoque/">Estoque</a></li>
-                        <li><a href="/solucoes/controle-de-fiado/">Fiado</a></li>
-                        <li><a href="/solucoes/loja-online/">Loja online</a></li>
-                        <li><a href="/solucoes/nfe/">NF-e</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Para quem</h3>
-                    <ul>
-                        <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
-                        <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
-                        <li><a href="/segmentos/farmacia/">Farmácia</a></li>
-                        <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
-                        <li><a href="/segmentos/papelaria/">Papelaria</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>Aprender</h3>
-                    <ul>
-                        <li><a href="/guias/como-sair-do-caderno/">Sair do caderno</a></li>
-                        <li><a href="/guias/como-controlar-estoque/">Controlar estoque</a></li>
-                        <li><a href="/guias/como-calcular-margem-de-lucro/">Calcular margem</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/perguntas/">Perguntas</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3>SoftPay</h3>
-                    <ul>
-                        <li><a href="/sobre/">Sobre</a></li>
-                        <li><a href="/contato/">Contato</a></li>
-                        <li><a href="/termos.html">Termos</a></li>
-                        <li><a href="/privacidade.html">Privacidade</a></li>
-                        <li><a href="#cookies" data-cookies>Cookies</a></li>
-                        <li><a href="/reembolso.html">Reembolso</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="rodape__base">
-                <!-- Padrão das LPs da VisionX (referência viva: o rodapé do FroX):
-                     o copyright do produto numa linha só, os contatos como ícones
-                     e a assinatura oficial da VisionX — ícone X + © + CNPJ. -->
-                <p class="rodape__produto">&copy; <span data-ano>2026</span> SoftPay. Todos os direitos reservados.</p>
-
-                <div class="rodape__social">
-                    <a href="https://wa.me/5586998193851" target="_blank" rel="noopener" aria-label="WhatsApp do SoftPay: (86) 99819-3851"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#fff" d="M16.001 6.5c-5.24 0-9.5 4.26-9.5 9.5 0 1.67.44 3.3 1.28 4.74L6.5 25.5l4.9-1.26a9.46 9.46 0 0 0 4.6 1.18c5.24 0 9.5-4.26 9.5-9.5s-4.26-9.42-9.5-9.42zm0 17.3c-1.5 0-2.97-.4-4.25-1.17l-.31-.18-2.91.75.78-2.83-.2-.3a7.63 7.63 0 0 1-1.170-4.07c0-4.23 3.44-7.67 7.67-7.67s7.67 3.44 7.67 7.67-3.45 7.8-7.28 7.8zm4.26-5.74c-.23-.12-1.38-.68-1.6-.76-.21-.08-.37-.12-.52.12-.15.23-.6.76-.73.91-.13.15-.27.17-.5.06-.23-.12-.98-.36-1.87-1.15-.69-.62-1.16-1.39-1.3-1.620-.13-.23-.01-.36.1-.48.11-.11.23-.27.35-.4.12-.14.15-.24.23-.39.08-.15.04-.29-.02-.4-.06-.12-.52-1.26-.72-1.72-.19-.45-.38-.39-.52-.4-.13 0-.29-.01-.45-.01s-.4.06-.62.29c-.21.23-.82.81-.82 1.98s.84 2.29.96 2.45c.12.15 1.66 2.54 4.04 3.56.56.24 1 .39 1.34.5.56.18 1.08.15 1.48.09.45-.07 1.38-.56 1.58-1.11.2-.54.2-1 .14-1.1-.06-.1-.21-.16-.44-.28z"/></svg></a>
-                    <a href="mailto:suporte@softpaybr.com" aria-label="E-mail do SoftPay: suporte@softpaybr.com"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="16" fill="#1DA1F2"/><path fill="#fff" d="M9 11h14a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 23 21H9a1.5 1.5 0 0 1-1.5-1.5v-7A1.5 1.5 0 0 1 9 11zm.6 1.8 6.4 4.3 6.4-4.3H9.6zm13.1 6.4v-4.7l-6.3 4.2a.8.8 0 0 1-.8 0l-6.3-4.2v4.7h13.4z"/></svg></a>
-                </div>
-
-                <a class="rodape__visionx" href="https://visionxma.com/" target="_blank" rel="noopener">
-                    <svg class="rodape__x" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                        <path d="M3 2h5.2l4 6.1L16.4 2H21l-6.4 9.4L21.4 22h-5.2l-4.3-6.6L7.3 22H2.7l6.7-10L3 2z" fill="currentColor"/>
-                    </svg>
-                    <span>&copy; <span data-ano>2026</span> VisionX &middot; Todos os direitos reservados.
-                        <i>&middot;</i> CNPJ 61.427.918/0001-06</span>
-                </a>
-            </div>
-        </div>
-    </footer>
-
-    <div class="cta-fixa" data-visivel="nao">
-        <a class="btn btn--acao" href="https://www.softpaybr.com/auth" data-track="complete-registration">Testar grátis</a>
-        <a class="btn btn--linha" href="https://wa.me/5586998193851" target="_blank" rel="noopener" data-track="whatsapp-support">WhatsApp</a>
-    </div>
-
-    <script src="/efeitos.js?v=1b28950e4e" defer></script>
-    <script src="/campanha/campanha.js?v=4cf4d21732" defer></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MCJHLF3Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script src="/rastreio.js?v=3455011df1" defer></script>
     <script src="/consentimento.js?v=d100303ce4" defer></script>
-</body>
-
+    <script src="softpay-clone.js" defer></script>
+  </body>
 </html>
