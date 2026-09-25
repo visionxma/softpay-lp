@@ -2659,14 +2659,17 @@ a.so-leitor:focus {
    deixando as fileiras em degrau. Com subgrid, o título de cada coluna e cada
    uma das cinco linhas de link dividem a MESMA fileira nas quatro colunas —
    é o que faz o rodapé ser lido numa varredura só. */
+/* Seis fileiras de link desde 21/09/2026, quando "Reembolso" entrou na coluna
+   SoftPay: com o subgrid ainda em cinco, o sexto link caía na mesma fileira
+   de "Cookies" e os dois se sobrepunham ("Boekiebolso", medido em 390px). */
 @media (min-width: 23.5rem) and (max-width: 47.99rem) {
-    .rodape__grade { grid-template-rows: auto repeat(6, auto); }
+    .rodape__grade { grid-template-rows: auto repeat(7, auto); }
     .rodape__marca { grid-row: 1; }
     .rodape__grade > div:not(.rodape__marca) {
-        display: grid; grid-row: 2 / span 6; grid-template-rows: subgrid;
+        display: grid; grid-row: 2 / span 7; grid-template-rows: subgrid;
     }
     .rodape__grade > div:not(.rodape__marca) > ul {
-        display: grid; grid-row: 2 / span 5; grid-template-rows: subgrid;
+        display: grid; grid-row: 2 / span 6; grid-template-rows: subgrid;
     }
 }
 /* Até 375px a coluna cairia para 66px: "SOLUÇÕES" sozinho mede 80px e invadia

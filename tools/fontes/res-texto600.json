@@ -1,0 +1,418 @@
+[
+ {
+  "nome": "FunnelSans[wght]",
+  "eixos": {
+   "wght": 625
+  },
+  "iou": 0.8616,
+  "xh_ratio": 1.029,
+  "larg_por_cap": 1.037,
+  "cap_upm_ratio": 0.964,
+  "larg_mesmo_tam": 1.0
+ },
+ {
+  "nome": "DMSans[opsz,wght]",
+  "eixos": {
+   "wght": 675,
+   "opsz": 16
+  },
+  "iou": 0.8582,
+  "xh_ratio": 0.996,
+  "larg_por_cap": 1.076,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.076
+ },
+ {
+  "nome": "BeVietnamPro-SemiBold",
+  "eixos": {},
+  "iou": 0.8579,
+  "xh_ratio": 0.995,
+  "larg_por_cap": 1.047,
+  "cap_upm_ratio": 1.057,
+  "larg_mesmo_tam": 1.106
+ },
+ {
+  "nome": "InstrumentSans[wdth,wght]",
+  "eixos": {
+   "wght": 600,
+   "wdth": 100
+  },
+  "iou": 0.8535,
+  "xh_ratio": 0.984,
+  "larg_por_cap": 1.002,
+  "cap_upm_ratio": 1.029,
+  "larg_mesmo_tam": 1.031
+ },
+ {
+  "nome": "HostGrotesk[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.8534,
+  "xh_ratio": 0.984,
+  "larg_por_cap": 1.03,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.03
+ },
+ {
+  "nome": "AlbertSans[wght]",
+  "eixos": {
+   "wght": 675
+  },
+  "iou": 0.8493,
+  "xh_ratio": 0.992,
+  "larg_por_cap": 1.032,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.032
+ },
+ {
+  "nome": "Figtree[wght]",
+  "eixos": {
+   "wght": 650
+  },
+  "iou": 0.8447,
+  "xh_ratio": 0.991,
+  "larg_por_cap": 1.002,
+  "cap_upm_ratio": 1.001,
+  "larg_mesmo_tam": 1.003
+ },
+ {
+  "nome": "PublicSans[wght]",
+  "eixos": {
+   "wght": 675
+  },
+  "iou": 0.8437,
+  "xh_ratio": 0.993,
+  "larg_por_cap": 1.016,
+  "cap_upm_ratio": 1.033,
+  "larg_mesmo_tam": 1.05
+ },
+ {
+  "nome": "RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght]",
+  "eixos": {
+   "wght": 625,
+   "wdth": 110,
+   "opsz": 16
+  },
+  "iou": 0.8433,
+  "xh_ratio": 0.999,
+  "larg_por_cap": 1.035,
+  "cap_upm_ratio": 1.017,
+  "larg_mesmo_tam": 1.053
+ },
+ {
+  "nome": "WixMadeforText[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.8417,
+  "xh_ratio": 0.979,
+  "larg_por_cap": 1.032,
+  "cap_upm_ratio": 1.021,
+  "larg_mesmo_tam": 1.054
+ },
+ {
+  "nome": "MonaSans[wdth,wght]",
+  "eixos": {
+   "wght": 625,
+   "wdth": 100
+  },
+  "iou": 0.8346,
+  "xh_ratio": 1.015,
+  "larg_por_cap": 1.02,
+  "cap_upm_ratio": 1.041,
+  "larg_mesmo_tam": 1.062
+ },
+ {
+  "nome": "Manrope[wght]",
+  "eixos": {
+   "wght": 750
+  },
+  "iou": 0.8333,
+  "xh_ratio": 1.042,
+  "larg_por_cap": 1.044,
+  "cap_upm_ratio": 1.029,
+  "larg_mesmo_tam": 1.074
+ },
+ {
+  "nome": "Onest[wght]",
+  "eixos": {
+   "wght": 650
+  },
+  "iou": 0.8295,
+  "xh_ratio": 1.034,
+  "larg_por_cap": 1.043,
+  "cap_upm_ratio": 1.011,
+  "larg_mesmo_tam": 1.055
+ },
+ {
+  "nome": "HubotSans[wdth,wght]",
+  "eixos": {
+   "wght": 600,
+   "wdth": 95
+  },
+  "iou": 0.8288,
+  "xh_ratio": 1.015,
+  "larg_por_cap": 0.962,
+  "cap_upm_ratio": 1.041,
+  "larg_mesmo_tam": 1.002
+ },
+ {
+  "nome": "RedHatText[wght]",
+  "eixos": {
+   "wght": 600
+  },
+  "iou": 0.8265,
+  "xh_ratio": 1.002,
+  "larg_por_cap": 1.035,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.035
+ },
+ {
+  "nome": "Geist[wght]",
+  "eixos": {
+   "wght": 600
+  },
+  "iou": 0.8233,
+  "xh_ratio": 1.045,
+  "larg_por_cap": 1.057,
+  "cap_upm_ratio": 1.014,
+  "larg_mesmo_tam": 1.072
+ },
+ {
+  "nome": "GeneralSans-Variable",
+  "eixos": {
+   "wght": 575
+  },
+  "iou": 0.8222,
+  "xh_ratio": 1.031,
+  "larg_por_cap": 1.013,
+  "cap_upm_ratio": 1.026,
+  "larg_mesmo_tam": 1.039
+ },
+ {
+  "nome": "RethinkSans[wght]",
+  "eixos": {
+   "wght": 725
+  },
+  "iou": 0.8207,
+  "xh_ratio": 0.984,
+  "larg_por_cap": 0.985,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 0.985
+ },
+ {
+  "nome": "HankenGrotesk[wght]",
+  "eixos": {
+   "wght": 725
+  },
+  "iou": 0.82,
+  "xh_ratio": 0.982,
+  "larg_por_cap": 1.01,
+  "cap_upm_ratio": 0.996,
+  "larg_mesmo_tam": 1.006
+ },
+ {
+  "nome": "Satoshi-Variable",
+  "eixos": {
+   "wght": 725
+  },
+  "iou": 0.8198,
+  "xh_ratio": 0.939,
+  "larg_por_cap": 0.99,
+  "cap_upm_ratio": 1.046,
+  "larg_mesmo_tam": 1.035
+ },
+ {
+  "nome": "Geologica[CRSV,SHRP,slnt,wght]",
+  "eixos": {
+   "wght": 500
+  },
+  "iou": 0.8191,
+  "xh_ratio": 0.992,
+  "larg_por_cap": 1.068,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.068
+ },
+ {
+  "nome": "GolosText[wght]",
+  "eixos": {
+   "wght": 550
+  },
+  "iou": 0.8189,
+  "xh_ratio": 1.052,
+  "larg_por_cap": 1.07,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.07
+ },
+ {
+  "nome": "Karla[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.8073,
+  "xh_ratio": 1.042,
+  "larg_por_cap": 1.137,
+  "cap_upm_ratio": 0.927,
+  "larg_mesmo_tam": 1.054
+ },
+ {
+  "nome": "SchibstedGrotesk[wght]",
+  "eixos": {
+   "wght": 625
+  },
+  "iou": 0.8035,
+  "xh_ratio": 1.041,
+  "larg_por_cap": 1.058,
+  "cap_upm_ratio": 1.004,
+  "larg_mesmo_tam": 1.062
+ },
+ {
+  "nome": "Urbanist[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.8029,
+  "xh_ratio": 0.994,
+  "larg_por_cap": 1.004,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.004
+ },
+ {
+  "nome": "RedHatDisplay[wght]",
+  "eixos": {
+   "wght": 750
+  },
+  "iou": 0.7935,
+  "xh_ratio": 1.026,
+  "larg_por_cap": 1.022,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.022
+ },
+ {
+  "nome": "Epilogue[wght]",
+  "eixos": {
+   "wght": 625
+  },
+  "iou": 0.7931,
+  "xh_ratio": 0.999,
+  "larg_por_cap": 1.069,
+  "cap_upm_ratio": 1.054,
+  "larg_mesmo_tam": 1.127
+ },
+ {
+  "nome": "Archivo[wdth,wght]",
+  "eixos": {
+   "wght": 625,
+   "wdth": 95
+  },
+  "iou": 0.7916,
+  "xh_ratio": 1.065,
+  "larg_por_cap": 0.999,
+  "cap_upm_ratio": 0.98,
+  "larg_mesmo_tam": 0.979
+ },
+ {
+  "nome": "Outfit[wght]",
+  "eixos": {
+   "wght": 575
+  },
+  "iou": 0.789,
+  "xh_ratio": 0.954,
+  "larg_por_cap": 0.978,
+  "cap_upm_ratio": 1.003,
+  "larg_mesmo_tam": 0.98
+ },
+ {
+  "nome": "EncodeSans[wdth,wght]",
+  "eixos": {
+   "wght": 625,
+   "wdth": 105
+  },
+  "iou": 0.7846,
+  "xh_ratio": 1.025,
+  "larg_por_cap": 0.993,
+  "cap_upm_ratio": 1.059,
+  "larg_mesmo_tam": 1.051
+ },
+ {
+  "nome": "Switzer-Variable",
+  "eixos": {
+   "wght": 575
+  },
+  "iou": 0.7782,
+  "xh_ratio": 1.093,
+  "larg_por_cap": 1.038,
+  "cap_upm_ratio": 0.971,
+  "larg_mesmo_tam": 1.008
+ },
+ {
+  "nome": "WorkSans[wght]",
+  "eixos": {
+   "wght": 575
+  },
+  "iou": 0.7717,
+  "xh_ratio": 1.052,
+  "larg_por_cap": 1.167,
+  "cap_upm_ratio": 0.943,
+  "larg_mesmo_tam": 1.101
+ },
+ {
+  "nome": "Sora[wght]",
+  "eixos": {
+   "wght": 600
+  },
+  "iou": 0.7641,
+  "xh_ratio": 1.033,
+  "larg_por_cap": 1.076,
+  "cap_upm_ratio": 1.043,
+  "larg_mesmo_tam": 1.122
+ },
+ {
+  "nome": "PathwayExtreme[opsz,wdth,wght]",
+  "eixos": {
+   "wght": 650,
+   "wdth": 90,
+   "opsz": 16
+  },
+  "iou": 0.7303,
+  "xh_ratio": 1.071,
+  "larg_por_cap": 1.077,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.077
+ },
+ {
+  "nome": "Parkinsans[wght]",
+  "eixos": {
+   "wght": 625
+  },
+  "iou": 0.7247,
+  "xh_ratio": 1.103,
+  "larg_por_cap": 1.136,
+  "cap_upm_ratio": 0.999,
+  "larg_mesmo_tam": 1.134
+ },
+ {
+  "nome": "Afacad[wght]",
+  "eixos": {
+   "wght": 675
+  },
+  "iou": 0.6929,
+  "xh_ratio": 0.925,
+  "larg_por_cap": 0.965,
+  "cap_upm_ratio": 0.894,
+  "larg_mesmo_tam": 0.863
+ },
+ {
+  "nome": "Anybody[wdth,wght]",
+  "eixos": {
+   "wght": 575,
+   "wdth": 95
+  },
+  "iou": 0.6578,
+  "xh_ratio": 1.22,
+  "larg_por_cap": 1.106,
+  "cap_upm_ratio": 0.966,
+  "larg_mesmo_tam": 1.068
+ }
+]

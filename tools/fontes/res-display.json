@@ -1,0 +1,591 @@
+[
+ {
+  "nome": "RobotoFlex[GRAD,XOPQ,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght]",
+  "eixos": {
+   "wght": 650,
+   "wdth": 28,
+   "opsz": 144
+  },
+  "iou": 0.8746,
+  "xh_ratio": 0.814,
+  "larg_por_cap": 1.033,
+  "cap_upm_ratio": 1.017,
+  "larg_mesmo_tam": 1.051
+ },
+ {
+  "nome": "Anybody[wdth,wght]",
+  "eixos": {
+   "wght": 650,
+   "wdth": 53
+  },
+  "iou": 0.8735,
+  "xh_ratio": 1.152,
+  "larg_por_cap": 0.983,
+  "cap_upm_ratio": 0.964,
+  "larg_mesmo_tam": 0.948
+ },
+ {
+  "nome": "Saira[wdth,wght]",
+  "eixos": {
+   "wght": 800,
+   "wdth": 50
+  },
+  "iou": 0.8095,
+  "xh_ratio": 0.961,
+  "larg_por_cap": 1.081,
+  "cap_upm_ratio": 0.983,
+  "larg_mesmo_tam": 1.062
+ },
+ {
+  "nome": "Antonio[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.7842,
+  "xh_ratio": 1.105,
+  "larg_por_cap": 1.216,
+  "cap_upm_ratio": 1.227,
+  "larg_mesmo_tam": 1.492
+ },
+ {
+  "nome": "Anton-Regular",
+  "eixos": {},
+  "iou": 0.7503,
+  "xh_ratio": 1.105,
+  "larg_por_cap": 1.272,
+  "cap_upm_ratio": 1.229,
+  "larg_mesmo_tam": 1.563
+ },
+ {
+  "nome": "BigShoulders[opsz,wght]",
+  "eixos": {
+   "wght": 600,
+   "opsz": 144
+  },
+  "iou": 0.7089,
+  "xh_ratio": 0.973,
+  "larg_por_cap": 1.214,
+  "cap_upm_ratio": 1.144,
+  "larg_mesmo_tam": 1.389
+ },
+ {
+  "nome": "Oswald[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.6535,
+  "xh_ratio": 0.925,
+  "larg_por_cap": 1.535,
+  "cap_upm_ratio": 1.157,
+  "larg_mesmo_tam": 1.776
+ },
+ {
+  "nome": "PathwayExtreme[opsz,wdth,wght]",
+  "eixos": {
+   "wght": 550,
+   "wdth": 75,
+   "opsz": 144
+  },
+  "iou": 0.6506,
+  "xh_ratio": 1.0,
+  "larg_por_cap": 1.238,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.238
+ },
+ {
+  "nome": "MonaSans[wdth,wght]",
+  "eixos": {
+   "wght": 650,
+   "wdth": 75
+  },
+  "iou": 0.6383,
+  "xh_ratio": 0.946,
+  "larg_por_cap": 1.367,
+  "cap_upm_ratio": 1.041,
+  "larg_mesmo_tam": 1.423
+ },
+ {
+  "nome": "LeagueGothic[wdth]",
+  "eixos": {
+   "wdth": 80
+  },
+  "iou": 0.6341,
+  "xh_ratio": 0.965,
+  "larg_por_cap": 0.816,
+  "cap_upm_ratio": 1.05,
+  "larg_mesmo_tam": 0.857
+ },
+ {
+  "nome": "SmoochSans[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.6276,
+  "xh_ratio": 0.983,
+  "larg_por_cap": 1.43,
+  "cap_upm_ratio": 0.886,
+  "larg_mesmo_tam": 1.267
+ },
+ {
+  "nome": "HubotSans[wdth,wght]",
+  "eixos": {
+   "wght": 700,
+   "wdth": 75
+  },
+  "iou": 0.6178,
+  "xh_ratio": 0.955,
+  "larg_por_cap": 1.435,
+  "cap_upm_ratio": 1.041,
+  "larg_mesmo_tam": 1.495
+ },
+ {
+  "nome": "SofiaSansExtraCondensed[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.6146,
+  "xh_ratio": 0.978,
+  "larg_por_cap": 1.434,
+  "cap_upm_ratio": 0.936,
+  "larg_mesmo_tam": 1.342
+ },
+ {
+  "nome": "BarlowCondensed-ExtraBold",
+  "eixos": {},
+  "iou": 0.6049,
+  "xh_ratio": 0.957,
+  "larg_por_cap": 1.549,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.549
+ },
+ {
+  "nome": "InstrumentSans[wdth,wght]",
+  "eixos": {
+   "wght": 700,
+   "wdth": 75
+  },
+  "iou": 0.6025,
+  "xh_ratio": 0.918,
+  "larg_por_cap": 1.503,
+  "cap_upm_ratio": 1.029,
+  "larg_mesmo_tam": 1.546
+ },
+ {
+  "nome": "BarlowCondensed-Black",
+  "eixos": {},
+  "iou": 0.5952,
+  "xh_ratio": 0.963,
+  "larg_por_cap": 1.575,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.575
+ },
+ {
+  "nome": "Archivo[wdth,wght]",
+  "eixos": {
+   "wght": 900,
+   "wdth": 62
+  },
+  "iou": 0.5773,
+  "xh_ratio": 0.995,
+  "larg_por_cap": 1.62,
+  "cap_upm_ratio": 0.983,
+  "larg_mesmo_tam": 1.592
+ },
+ {
+  "nome": "SofiaSansCondensed[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.4856,
+  "xh_ratio": 0.978,
+  "larg_por_cap": 1.692,
+  "cap_upm_ratio": 0.936,
+  "larg_mesmo_tam": 1.583
+ },
+ {
+  "nome": "BarlowCondensed-Regular",
+  "eixos": {},
+  "iou": 0.47,
+  "xh_ratio": 0.937,
+  "larg_por_cap": 1.439,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 1.439
+ },
+ {
+  "nome": "EncodeSans[wdth,wght]",
+  "eixos": {
+   "wght": 800,
+   "wdth": 75
+  },
+  "iou": 0.4347,
+  "xh_ratio": 0.96,
+  "larg_por_cap": 1.84,
+  "cap_upm_ratio": 1.059,
+  "larg_mesmo_tam": 1.948
+ },
+ {
+  "nome": "Epilogue[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.4112,
+  "xh_ratio": 0.933,
+  "larg_por_cap": 2.107,
+  "cap_upm_ratio": 1.054,
+  "larg_mesmo_tam": 2.222
+ },
+ {
+  "nome": "Afacad[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.4104,
+  "xh_ratio": 0.864,
+  "larg_por_cap": 2.022,
+  "cap_upm_ratio": 0.894,
+  "larg_mesmo_tam": 1.808
+ },
+ {
+  "nome": "Urbanist[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.4065,
+  "xh_ratio": 0.926,
+  "larg_por_cap": 2.16,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.16
+ },
+ {
+  "nome": "Outfit[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3806,
+  "xh_ratio": 0.896,
+  "larg_por_cap": 2.191,
+  "cap_upm_ratio": 1.017,
+  "larg_mesmo_tam": 2.228
+ },
+ {
+  "nome": "Geologica[CRSV,SHRP,slnt,wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3784,
+  "xh_ratio": 0.963,
+  "larg_por_cap": 2.283,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.283
+ },
+ {
+  "nome": "GolosText[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3759,
+  "xh_ratio": 0.981,
+  "larg_por_cap": 2.283,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.283
+ },
+ {
+  "nome": "Figtree[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3752,
+  "xh_ratio": 0.925,
+  "larg_por_cap": 2.183,
+  "cap_upm_ratio": 1.001,
+  "larg_mesmo_tam": 2.186
+ },
+ {
+  "nome": "Parkinsans[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3727,
+  "xh_ratio": 1.032,
+  "larg_por_cap": 2.186,
+  "cap_upm_ratio": 1.007,
+  "larg_mesmo_tam": 2.201
+ },
+ {
+  "nome": "PublicSans[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3726,
+  "xh_ratio": 0.927,
+  "larg_por_cap": 2.24,
+  "cap_upm_ratio": 1.033,
+  "larg_mesmo_tam": 2.314
+ },
+ {
+  "nome": "FunnelSans[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3724,
+  "xh_ratio": 0.96,
+  "larg_por_cap": 2.184,
+  "cap_upm_ratio": 0.964,
+  "larg_mesmo_tam": 2.106
+ },
+ {
+  "nome": "RethinkSans[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3713,
+  "xh_ratio": 0.919,
+  "larg_por_cap": 2.065,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.065
+ },
+ {
+  "nome": "HankenGrotesk[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3695,
+  "xh_ratio": 0.917,
+  "larg_por_cap": 2.106,
+  "cap_upm_ratio": 0.996,
+  "larg_mesmo_tam": 2.097
+ },
+ {
+  "nome": "Switzer-Variable",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3663,
+  "xh_ratio": 1.035,
+  "larg_por_cap": 2.213,
+  "cap_upm_ratio": 0.971,
+  "larg_mesmo_tam": 2.15
+ },
+ {
+  "nome": "GeneralSans-Variable",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.3636,
+  "xh_ratio": 0.971,
+  "larg_por_cap": 2.213,
+  "cap_upm_ratio": 1.026,
+  "larg_mesmo_tam": 2.27
+ },
+ {
+  "nome": "Karla[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.362,
+  "xh_ratio": 0.957,
+  "larg_por_cap": 2.285,
+  "cap_upm_ratio": 0.96,
+  "larg_mesmo_tam": 2.194
+ },
+ {
+  "nome": "BeVietnamPro-Black",
+  "eixos": {},
+  "iou": 0.3616,
+  "xh_ratio": 0.928,
+  "larg_por_cap": 2.241,
+  "cap_upm_ratio": 1.057,
+  "larg_mesmo_tam": 2.369
+ },
+ {
+  "nome": "DMSans[opsz,wght]",
+  "eixos": {
+   "wght": 1000,
+   "opsz": 144
+  },
+  "iou": 0.3614,
+  "xh_ratio": 0.919,
+  "larg_por_cap": 2.109,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.109
+ },
+ {
+  "nome": "AlbertSans[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3556,
+  "xh_ratio": 0.926,
+  "larg_por_cap": 2.249,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.249
+ },
+ {
+  "nome": "Manrope[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3555,
+  "xh_ratio": 0.972,
+  "larg_por_cap": 2.11,
+  "cap_upm_ratio": 1.029,
+  "larg_mesmo_tam": 2.171
+ },
+ {
+  "nome": "Satoshi-Variable",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3537,
+  "xh_ratio": 0.876,
+  "larg_por_cap": 2.128,
+  "cap_upm_ratio": 1.057,
+  "larg_mesmo_tam": 2.249
+ },
+ {
+  "nome": "Onest[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3527,
+  "xh_ratio": 0.965,
+  "larg_por_cap": 2.249,
+  "cap_upm_ratio": 1.011,
+  "larg_mesmo_tam": 2.275
+ },
+ {
+  "nome": "WorkSans[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3521,
+  "xh_ratio": 0.982,
+  "larg_por_cap": 2.358,
+  "cap_upm_ratio": 0.943,
+  "larg_mesmo_tam": 2.223
+ },
+ {
+  "nome": "BeVietnamPro-ExtraBold",
+  "eixos": {},
+  "iou": 0.3518,
+  "xh_ratio": 0.928,
+  "larg_por_cap": 2.219,
+  "cap_upm_ratio": 1.057,
+  "larg_mesmo_tam": 2.346
+ },
+ {
+  "nome": "WixMadeforText-ExtraBold",
+  "eixos": {},
+  "iou": 0.3498,
+  "xh_ratio": 0.925,
+  "larg_por_cap": 2.231,
+  "cap_upm_ratio": 1.021,
+  "larg_mesmo_tam": 2.278
+ },
+ {
+  "nome": "WixMadeforText[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3491,
+  "xh_ratio": 0.925,
+  "larg_por_cap": 2.231,
+  "cap_upm_ratio": 1.021,
+  "larg_mesmo_tam": 2.278
+ },
+ {
+  "nome": "Geist[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3458,
+  "xh_ratio": 0.986,
+  "larg_por_cap": 2.276,
+  "cap_upm_ratio": 1.014,
+  "larg_mesmo_tam": 2.308
+ },
+ {
+  "nome": "CabinetGrotesk-Variable",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3413,
+  "xh_ratio": 0.956,
+  "larg_por_cap": 2.219,
+  "cap_upm_ratio": 0.957,
+  "larg_mesmo_tam": 2.124
+ },
+ {
+  "nome": "SchibstedGrotesk[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3304,
+  "xh_ratio": 0.972,
+  "larg_por_cap": 2.29,
+  "cap_upm_ratio": 1.004,
+  "larg_mesmo_tam": 2.3
+ },
+ {
+  "nome": "Sora[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3296,
+  "xh_ratio": 0.98,
+  "larg_por_cap": 2.252,
+  "cap_upm_ratio": 1.043,
+  "larg_mesmo_tam": 2.348
+ },
+ {
+  "nome": "HostGrotesk[wght]",
+  "eixos": {
+   "wght": 800
+  },
+  "iou": 0.3272,
+  "xh_ratio": 0.919,
+  "larg_por_cap": 2.133,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.133
+ },
+ {
+  "nome": "RedHatText[wght]",
+  "eixos": {
+   "wght": 700
+  },
+  "iou": 0.3232,
+  "xh_ratio": 0.956,
+  "larg_por_cap": 2.302,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.302
+ },
+ {
+  "nome": "RedHatDisplay[wght]",
+  "eixos": {
+   "wght": 900
+  },
+  "iou": 0.3124,
+  "xh_ratio": 0.98,
+  "larg_por_cap": 2.269,
+  "cap_upm_ratio": 1.0,
+  "larg_mesmo_tam": 2.269
+ },
+ {
+  "nome": "BeVietnamPro-Regular",
+  "eixos": {},
+  "iou": 0.2782,
+  "xh_ratio": 0.928,
+  "larg_por_cap": 2.13,
+  "cap_upm_ratio": 1.057,
+  "larg_mesmo_tam": 2.252
+ },
+ {
+  "nome": "WixMadeforText-Regular",
+  "eixos": {},
+  "iou": 0.2263,
+  "xh_ratio": 0.892,
+  "larg_por_cap": 2.177,
+  "cap_upm_ratio": 1.021,
+  "larg_mesmo_tam": 2.223
+ }
+]
