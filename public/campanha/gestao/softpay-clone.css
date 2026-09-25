@@ -420,6 +420,12 @@ header.framer-15w5m0 a.framer-styles-preset-1uc703z::after {
     header.framer-15w5m0 a.framer-styles-preset-1uc703z:hover::after { transform: scaleX(1); transform-origin: left center; }
 }
 header.framer-15w5m0 a.framer-styles-preset-1uc703z:active { color: #084A81; }
+/* toque: os 12 links da lista de módulos têm 23px de altura; no celular o padding vertical
+   (em elemento em linha não mexe no desenho nem no espaçamento) leva o alvo a 44px */
+@media (pointer: coarse), (max-width: 809.98px) {
+    header.framer-15w5m0 a.framer-styles-preset-1uc703z { padding-block: 10.5px; }
+    header.framer-15w5m0 a.framer-styles-preset-1uc703z::after { bottom: 11.5px; }
+}
 /* "Planos a partir de R$ 65": a seta anda quando o link recebe o ponteiro */
 .framer-1su92wz .framer-1ezqcsv { transition: transform 320ms var(--sp-ease); }
 @media (hover: hover) and (pointer: fine) {
