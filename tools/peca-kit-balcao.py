@@ -138,10 +138,13 @@ def fonte(peso, tam):
 def tela_pdv():
     cap = Image.open(CAP / 'pdv-1440-dpr2.png').convert('RGB')       # 2880x1704, densidade 2
     d = ImageDraw.Draw(cap)
-    # fileira de produtos pela metade no pé da grade (medido: cartões da 3ª fileira
-    # terminam em y=714 CSS; a parcial vai de 733 a 760; a grade vai de x=240 a 1019,5)
-    d.rectangle((240 * 2, int(714.5 * 2), int(1019.5 * 2) - 1, 760 * 2 - 1), fill=(246, 248, 249))
-    # selo de latência laranja entre o nº do caixa e o "Operador" (x 514,5-596, y 72-97,5)
+    # captura de 25/09 (tools/app/capturar-caixa.mjs --sem-resumo --ocultar=...): só os 12
+    # produtos da loja de demonstração, em 3 fileiras que terminam em y=724,5 CSS; abaixo
+    # sobra o título "Serviços 1" (747-760), cujo serviço de teste da equipe saiu da grade.
+    # Pinta esse título com o fundo da grade (x 240-1019,5).
+    d.rectangle((240 * 2, 735 * 2, int(1019.5 * 2) - 1, 770 * 2 - 1), fill=(246, 248, 249))
+    # selo de latência entre o nº do caixa e o "Operador" (x 514,5-596, y 72-97,5): a
+    # captura já o esconde; a pintura fica de garantia
     d.rectangle((514 * 2, 71 * 2, 597 * 2, 99 * 2), fill=(254, 255, 255))
     return cap.crop((0, 6 * 2, cap.width, int(805.5 * 2)))              # 2880x1599 = 1,8011
 
@@ -165,7 +168,7 @@ def tela_maquininha(w, h):
 
 
 def tela_celular():
-    car = Image.open(CAP / 'carrinho-390-dpr3.png').convert('RGB')     # 780x1688
+    car = Image.open(CAP / 'carrinho-390-dpr3.png').convert('RGB')     # 1170x2532 (25/09, com acentos)
     return car
 
 
@@ -190,8 +193,8 @@ def cupom_impresso(base):
     for xx in range(m, w - m, int(w * .025)):
         d.line([(xx, y), (xx + int(w * .012), y)], fill=cinza, width=max(2, h // 160))
     f = fonte(400, int(h * .055))
-    for nome, valor in [('Camiseta Basica', '49,90'), ('Batom Matte', '24,90'),
-                        ('Perfume Floral', '139,90'), ('Tenis Casual', '199,90')]:
+    for nome, valor in [('Camiseta Básica', '49,90'), ('Batom Matte', '24,90'),
+                        ('Perfume Floral', '139,90'), ('Tênis Casual', '199,90')]:
         y += int(h * .075)
         d.text((m, y), nome, font=f, fill=tinta, anchor='lm')
         d.text((w - m, y), valor, font=f, fill=tinta, anchor='rm')
