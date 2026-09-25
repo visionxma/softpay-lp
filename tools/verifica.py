@@ -110,8 +110,10 @@ def main():
                 v = " ".join(re.sub(r"<[^>]+>", " ", m.group(1)).split())
                 acc.setdefault(v, []).append(f)
 
-        # o 404 é noindex: canonical e Open Graph não se aplicam a ele
-        if f != "404.html":
+        # o 404 e as páginas internas (noindex, nofollow: a de medição) não
+        # são buscadas nem compartilhadas: canonical e Open Graph não se aplicam
+        interna = re.search(r'<meta name="robots" content="noindex, nofollow', s)
+        if f != "404.html" and not interna:
             if 'rel="canonical"' not in s:
                 falhas.append("%s: sem canonical" % f)
             if 'property="og:title"' not in s:
