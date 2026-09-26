@@ -4341,3 +4341,36 @@ html:has(.previa[open]) { overflow: hidden; }
     .previa-flutua, .previa-flutua.is-abaixo { transform: none; transition: opacity 0.12s linear; }
     .previa-flutua .previa__icone { animation: none; }
 }
+
+/* ==========================================================================
+   O ENCONTRO DA VITRINE COM O "A LOJA NA SUA MÃO" (26/09/2026)
+   O Victor apontou: "o encontro dessas duas seções não está legal". Eram duas
+   fotografias em sangria coladas: o pé dos seis painéis (pernas, cortadas numa
+   linha reta) batia direto no alto da foto do celular, que é a parte mais clara
+   dela (véu de só 34% no topo). Três saídas pesadas: (a) dissolver as duas no
+   azul-noite, (b) virar a foto do celular um cartão com margem, (c) uma faixa
+   nova entre as duas. Ficou a (a): mantém as duas peças como são e faz a
+   passagem pelo azul-noite, como o hero faz com a seção de baixo; a (b) quebrava
+   a sangria que dá fôlego à página e a (c) acrescentava conteúdo.
+   ========================================================================== */
+/* o pé da vitrine afunda no azul-noite só na fileira única de 6 (≥72rem): no
+   tablet a vitrine tem 2 fileiras e o véu apagava o "Ver o sistema" da de baixo;
+   no celular cada painel já termina no azul */
+@media (min-width: 72rem) {
+    #para-quem .vitrine { position: relative; }
+    #para-quem .vitrine::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+        height: clamp(6rem, 12vw, 9rem); pointer-events: none;
+        background: linear-gradient(180deg, rgba(6, 18, 31, 0) 0%, rgba(6, 18, 31, 0.7) 55%, var(--noite) 100%);
+    }
+}
+/* e a foto do celular nasce dele: o alto dela começa no mesmo azul e abre devagar */
+#para-quem + .momento::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; z-index: -1;
+    height: 48%; pointer-events: none;
+    background: linear-gradient(180deg, var(--noite) 0%, rgba(6, 18, 31, 0.78) 30%, rgba(6, 18, 31, 0.3) 70%, rgba(6, 18, 31, 0) 100%);
+}
+/* e o pé dela também termina inteiro no azul, para o mapa começar sem linha */
+#para-quem + .momento::after {
+    background: linear-gradient(0deg, var(--noite) 0%, rgba(6, 18, 31, 0.9) 14%, rgba(6, 18, 31, 0.5) 55%, rgba(6, 18, 31, 0.34) 100%);
+}
