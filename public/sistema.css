@@ -4374,3 +4374,13 @@ html:has(.previa[open]) { overflow: hidden; }
 #para-quem + .momento::after {
     background: linear-gradient(0deg, var(--noite) 0%, rgba(6, 18, 31, 0.9) 14%, rgba(6, 18, 31, 0.5) 55%, rgba(6, 18, 31, 0.34) 100%);
 }
+
+/* ---------------------------------------------- CTA FINAL: a frase maior (26/09/2026)
+   Pedido do Victor: aumentar só "Comece hoje. Sem cartão." Sai do tamanho de título
+   de seção (80px a 1440) para o degrau do hero (130px a 1440, 68px a 390); cada
+   frase continua numa linha. */
+.cta-final .display--secao {
+    font-size: calc(var(--t-3xl) * var(--display-k));
+    line-height: 0.86;
+    margin-bottom: var(--sp-5);
+}
