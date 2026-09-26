@@ -214,3 +214,57 @@
         ultimoToque = agora;
     }, { passive: false });
 })();
+
+/* --- Prévia dos recursos (26/09/2026): cada pílula da esteira abre a janela com o que
+       o recurso faz; as setas passam para o vizinho; Esc, X e clique fora fecham e o
+       foco volta para a pílula. --- */
+(function () {
+    var dlg = document.getElementById('previa-recurso');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    var itens = Array.prototype.slice.call(dlg.querySelectorAll('.previa__item'));
+    var conta = dlg.querySelector('.previa__conta');
+    var calmo = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var atual = 0, origem = null;
+
+    function mostra(i) {
+        atual = (i + itens.length) % itens.length;
+        itens.forEach(function (el, k) { el.hidden = k !== atual; });
+        var item = itens[atual];
+        dlg.setAttribute('aria-labelledby', item.getAttribute('aria-labelledby'));
+        if (conta) conta.textContent = (atual + 1) + ' de ' + itens.length;
+        dlg.querySelector('.previa__caixa').scrollTop = 0;
+    }
+    function abre(slug, botao) {
+        var i = itens.findIndex(function (el) { return el.getAttribute('data-recurso') === slug; });
+        if (i < 0) return;
+        origem = botao;
+        mostra(i);
+        if (!dlg.open) dlg.showModal();
+        requestAnimationFrame(function () { dlg.classList.add('is-aberta'); });
+        var fechar = dlg.querySelector('[data-fecha-previa]');
+        if (fechar) fechar.focus({ preventScroll: true });
+    }
+    function fecha() {
+        dlg.classList.remove('is-aberta');
+        setTimeout(function () { if (dlg.open) dlg.close(); }, calmo ? 0 : 220);
+    }
+    document.addEventListener('click', function (e) {
+        var p = e.target.closest && e.target.closest('button.pilula[data-recurso]');
+        if (!p) return;
+        abre(p.getAttribute('data-recurso'), p.hasAttribute('data-eco') ? null : p);
+    });
+    dlg.addEventListener('click', function (e) {
+        if (e.target === dlg || e.target.closest('[data-fecha-previa]')) { fecha(); return; }
+        var passo = e.target.closest('[data-passo]');
+        if (passo) mostra(atual + Number(passo.getAttribute('data-passo')));
+    });
+    dlg.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight') mostra(atual + 1);
+        if (e.key === 'ArrowLeft') mostra(atual - 1);
+    });
+    dlg.addEventListener('cancel', function (e) { e.preventDefault(); fecha(); });
+    dlg.addEventListener('close', function () {
+        dlg.classList.remove('is-aberta');
+        if (origem && origem.focus) origem.focus({ preventScroll: true });
+    });
+})();
