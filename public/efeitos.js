@@ -248,11 +248,76 @@
         dlg.classList.remove('is-aberta');
         setTimeout(function () { if (dlg.open) dlg.close(); }, calmo ? 0 : 220);
     }
+    // com mouse, a prévia abre ao passar por cima (cartão flutuante, abaixo); o clique
+    // só abre a janela no toque
+    var comMouse = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)');
     document.addEventListener('click', function (e) {
         var p = e.target.closest && e.target.closest('button.pilula[data-recurso]');
-        if (!p) return;
+        if (!p || (comMouse && comMouse.matches)) return;
         abre(p.getAttribute('data-recurso'), p.hasAttribute('data-eco') ? null : p);
     });
+
+    /* cartão ao passar o mouse (26/09/2026: "só passar o mouse e abrir", sem clique nem X) */
+    var card = document.getElementById('previa-flutua');
+    if (card) {
+        var corpo = card.querySelector('.previa-flutua__corpo');
+        var tAbre = 0, tFecha = 0, dono = null;
+        function posiciona(p) {
+            var r = p.getBoundingClientRect(), cw = card.offsetWidth, ch = card.offsetHeight;
+            var topoLivre = 76, margem = 16, folga = 12;
+            var cima = r.top - ch - folga >= topoLivre;
+            var baixo = r.bottom + folga + ch <= innerHeight - margem;
+            var emCima = cima || !baixo && (r.top - topoLivre > innerHeight - r.bottom);
+            var x = Math.min(Math.max(r.left + r.width / 2 - cw / 2, margem), innerWidth - cw - margem);
+            var y = emCima ? r.top - ch - folga : r.bottom + folga;
+            y = Math.min(Math.max(y, 8), innerHeight - ch - 8);
+            card.style.transform = '';
+            card.style.left = Math.round(x) + 'px';
+            card.style.top = Math.round(y) + 'px';
+            card.style.setProperty('--bico-x', Math.round(Math.min(Math.max(r.left + r.width / 2 - x, 24), cw - 24)) + 'px');
+            card.classList.toggle('is-abaixo', !emCima);
+        }
+        function mostraCard(p) {
+            clearTimeout(tFecha);
+            if (dono === p && card.classList.contains('is-visivel')) return;
+            var item = itens.find(function (el) { return el.getAttribute('data-recurso') === p.getAttribute('data-recurso'); });
+            if (!item) return;
+            var copia = item.cloneNode(true);
+            copia.hidden = false; copia.removeAttribute('aria-labelledby');
+            copia.querySelectorAll('[id]').forEach(function (el) { el.removeAttribute('id'); });
+            corpo.innerHTML = ''; corpo.appendChild(copia);
+            dono = p;
+            card.hidden = false;
+            posiciona(p);
+            requestAnimationFrame(function () { card.classList.add('is-visivel'); });
+        }
+        function escondeCard() {
+            card.classList.remove('is-visivel');
+            dono = null;
+            setTimeout(function () { if (!card.classList.contains('is-visivel')) card.hidden = true; }, 200);
+        }
+        function agendaFecha() { clearTimeout(tAbre); clearTimeout(tFecha); tFecha = setTimeout(escondeCard, 160); }
+        document.addEventListener('mouseover', function (e) {
+            if (!comMouse || !comMouse.matches) return;
+            var p = e.target.closest && e.target.closest('button.pilula[data-recurso]');
+            if (p) { clearTimeout(tFecha); clearTimeout(tAbre); tAbre = setTimeout(function () { mostraCard(p); }, dono ? 0 : 90); return; }
+            if (card.contains(e.target)) { clearTimeout(tFecha); return; }
+            if (dono) agendaFecha();
+        });
+        document.addEventListener('mouseout', function (e) {
+            if (!dono && !tAbre) return;
+            var para = e.relatedTarget;
+            if (!para || (!card.contains(para) && !(para.closest && para.closest('button.pilula[data-recurso]')))) agendaFecha();
+        });
+        // teclado: a pílula com foco mostra o cartão; Esc esconde
+        document.addEventListener('focusin', function (e) {
+            var p = e.target.closest && e.target.closest('button.pilula[data-recurso]');
+            if (p && comMouse && comMouse.matches) mostraCard(p);
+            else if (dono && !card.contains(e.target)) agendaFecha();
+        });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && dono) escondeCard(); });
+        window.addEventListener('scroll', function () { if (dono) escondeCard(); }, { passive: true });
+    }
     dlg.addEventListener('click', function (e) {
         if (e.target === dlg || e.target.closest('[data-fecha-previa]')) { fecha(); return; }
         var passo = e.target.closest('[data-passo]');

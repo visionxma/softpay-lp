@@ -53,7 +53,7 @@
     <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster-retrato.webp?v=c7bf39940f" fetchpriority="high" media="(max-width: 47.99rem)" />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster.webp?v=69532422d0" fetchpriority="high" media="(min-width: 48rem)" />
-    <link rel="stylesheet" href="sistema.css?v=93c72aa860" />
+    <link rel="stylesheet" href="sistema.css?v=7f614b0b2d" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- Meta Pixel Code -->
@@ -248,6 +248,11 @@
         <!-- PRÉVIA DOS RECURSOS (26/09/2026, pedido do Victor): cada pílula da esteira abre
              esta janela com o que o recurso faz. O texto é o das páginas de solução; as
              setas passam para o recurso ao lado. -->
+        <!-- no computador (mouse) a prévia é um cartão que aparece ao passar o mouse na
+             pílula e some ao tirar; sem clique e sem X (pedido do Victor, 26/09). O
+             conteúdo é copiado do item da janela abaixo, que segue para o toque. -->
+        <div class="previa-flutua" id="previa-flutua" hidden><span class="previa-flutua__bico" aria-hidden="true"></span><div class="previa-flutua__corpo"></div></div>
+
         <dialog class="previa" id="previa-recurso" aria-labelledby="previa-pdv-frente-de-caixa">
             <div class="previa__caixa">
                 <button type="button" class="previa__fechar" data-fecha-previa aria-label="Fechar a prévia"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
@@ -1268,7 +1273,7 @@
         <a class="btn btn--linha" href="#planos">Planos</a>
     </div>
 
-    <script src="efeitos.js?v=aa0e99d92d" defer></script>
+    <script src="efeitos.js?v=abccf17da1" defer></script>
     <script src="cena.js?v=ddc62e4d13" defer></script>
     <script src="/rastreio.js?v=3455011df1" defer></script>
     <script src="/consentimento.js?v=252ae1e831" defer></script>
