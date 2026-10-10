@@ -73,6 +73,8 @@ está em **[`docs/DEPLOY.md`](docs/DEPLOY.md)**.
 
 ```bash
 # 1. editou conteúdo em tools/c_*.py ou o template?
+#    o build gera as páginas E a camada de busca (JSON-LD, robots.txt, sitemap,
+#    llms.txt, llms-full.txt, bloco "veja também") e termina rodando o conferidor
 python3 tools/build.py
 
 # 2. editou style.css ou script.js?
@@ -80,6 +82,8 @@ python3 tools/versionar-assets.py
 
 # 3. sempre, antes de commitar
 python3 tools/verifica.py
+python3 tools/confere-busca.py      # sai 1 se título > 60, descrição fora de 120–160,
+                                    # JSON-LD inválido, FAQ marcada sem estar visível...
 python3 tools/mapa_interlinks.py
 
 # 4. publique
@@ -108,6 +112,24 @@ A estratégia, a auditoria e o histórico estão em [`docs/seo/`](docs/seo/):
 - [`CHANGELOG-SEO.md`](docs/seo/CHANGELOG-SEO.md) — o que mudou e por quê
 
 O deploy está documentado em [`docs/DEPLOY.md`](docs/DEPLOY.md).
+
+### Camada de busca (fonte única)
+
+Nada de busca se escreve à mão em HTML. Cada peça tem uma fonte:
+
+| O quê | Fonte |
+|---|---|
+| Organization, WebSite, SoftwareApplication, datas | `tools/schema_fonte.py` |
+| JSON-LD das internas | `tools/template.py` (lê `schema_fonte.py`) |
+| JSON-LD e verificação do Bing da home | `tools/busca_home.py` (bloco entre `busca:inicio` e `busca:fim`) |
+| `robots.txt` | `tools/robots.py` |
+| `llms-full.txt` e as listas do `llms.txt` | `tools/llms_full.py` |
+| "Veja também" (links das páginas indexadas para as demais) | `tools/interlinks.py` (lista `INDEXADAS`) |
+| Conferência | `tools/confere-busca.py` |
+
+Quando o Search Console confirmar mais páginas indexadas, acrescente-as em
+`INDEXADAS` (em `tools/interlinks.py`) e rode o build. Mudou o preço de um
+plano na home? Mude também `PLANOS` em `tools/schema_fonte.py`.
 
 Ao editar o conteúdo, mantenha o FAQ visível **em sincronia com o `FAQPage`**
 do JSON-LD no `<head>`: toda pergunta do schema precisa existir na página.

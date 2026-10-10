@@ -24,7 +24,7 @@ VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
 
 # links externos ao HTML que não são páginas
 NAO_PAGINA = ("/assets/", "/fontes/", "/style.css", "/sistema.css", "/efeitos.js",
-              "/cena.js", "/script.js", "/robots.txt",
+              "/cena.js", "/script.js", "/robots.txt", "/llms.txt", "/llms-full.txt",
               "/sitemap.xml", "/_headers", "/_redirects")
 
 

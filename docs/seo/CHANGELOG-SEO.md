@@ -1,5 +1,29 @@
 # Changelog SEO — SoftPay
 
+## 2026-10-10 — Camada de busca: dados estruturados, rastreadores, llms-full e ligação interna
+
+Ponto de partida (medido no ar em 10/10/2026): home com 0 blocos JSON-LD, `/llms-full.txt`
+em 404, sem a verificação do Bing, 10 títulos acima de 60 caracteres, 8 descrições fora de
+120–160, 76 páginas no sitemap e só 15 indexadas.
+
+- **JSON-LD de fonte única** (`tools/schema_fonte.py`): Organization com `@id` estável e
+  `sameAs` real, WebSite, SoftwareApplication (Offer só do plano cujo preço a página exibe),
+  FAQPage só com pergunta visível, BreadcrumbList, Article/HowTo com datas reais. A home, que é
+  escrita à mão, recebe o bloco por `tools/busca_home.py`.
+- **Datas reais**: `datePublished`/`dateModified` saíram do histórico do git (antes todas as
+  páginas diziam 2026-09-04, dia anterior ao primeiro commit); o `lastmod` do sitemap deixou de
+  ser uma data única. Removido o `totalTime: PT30M` inventado do HowTo.
+- **`robots.txt`** gerado com os 31 rastreadores do protocolo (busca e IA); a regra de
+  Disallow se repete em cada grupo.
+- **`llms-full.txt`** (texto integral das 76 páginas) e as listas do `llms.txt` geradas do sitemap.
+- **Bing**: `msvalidate.01` na home e em todas as páginas geradas.
+- **Títulos e descrições** fora da faixa corrigidos na fonte; as três páginas legais tinham
+  duas tags `description` (a segunda contradizia a primeira).
+- **Ligação interna**: bloco "Veja também" nas 10 páginas já indexadas, com links por assunto
+  (TF-IDF) para as páginas que ainda não estão no índice, até cada uma ter 3 links de página
+  indexada dentro do conteúdo.
+- **Conferidor** `tools/confere-busca.py`, chamado no fim do `build.py`.
+
 ## 2026-09-07 — Rodada 4: expansão das landing pages de segmento
 
 De 7 para **12 páginas de segmento**, com o padrão de 6 a 8 blocos aplicado às
