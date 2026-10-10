@@ -1,87 +1,392 @@
 # robots.txt — SoftPay (site.softpaybr.com)
-# IMPORTANTE: este arquivo só tem efeito quando servido na RAIZ do domínio
-# (https://site.softpaybr.com/robots.txt). Se a landing continuar publicada
-# em /lp/, ele precisa ser copiado para a raiz no deploy.
+# GERADO por tools/robots.py — não editar à mão.
+# Libera buscadores e assistentes de IA de propósito: as pessoas também
+# perguntam "qual sistema de PDV para mercadinho?" no ChatGPT, no Perplexity e
+# no Gemini. O resumo para eles está em /llms.txt (e o texto inteiro em
+# /llms-full.txt). Só a área logada do aplicativo fica fechada.
 
 User-agent: *
 Allow: /
-
-# Áreas privadas / de aplicação — fora do índice
-Disallow: /auth
-Disallow: /dashboard
-Disallow: /app
+Disallow: /api/
 Disallow: /admin
-
-# CSS e JS devem permanecer rastreáveis (renderização da página)
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
 Allow: /*.css$
 Allow: /*.js$
 
-# Buscadores tradicionais — sem atraso de rastreamento
 User-agent: Googlebot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Googlebot-Image
 Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Assistentes de IA: hoje as pessoas também perguntam "qual sistema de PDV
-# para mercadinho?" no ChatGPT/Perplexity/Gemini. Liberado de propósito —
-# aparecer nas respostas geradas é descoberta tão real quanto a SERP.
-# O resumo que esses assistentes devem ler está em /llms.txt.
-User-agent: GPTBot
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Applebot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: GPTBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Claude-User
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: CCBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Amazonbot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: Bytespider
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: meta-externalagent
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: FacebookBot
 Allow: /
-
-User-agent: Twitterbot
-Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: LinkedInBot
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Twitterbot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 User-agent: WhatsApp
 Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: YouBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Diffbot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: ImagesiftBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: PetalBot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
+
+User-agent: Timpibot
+Allow: /
+Disallow: /api/
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /login
+Disallow: /conta
+Disallow: /auth
+Disallow: /app
+Allow: /*.css$
+Allow: /*.js$
 
 Sitemap: https://site.softpaybr.com/sitemap.xml

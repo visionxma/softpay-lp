@@ -52,44 +52,108 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 - A **emissão de NF-e e NFC-e** está disponível nos planos Nota Fiscal e ERP
   Completo, com cadastro fiscal e pacote do contador incluídos.
 
-## Para quem é
+## Páginas principais
 
-Páginas com o detalhamento por tipo de negócio:
+- [Sistema de gestão para pequenos negócios](https://site.softpaybr.com/sistema-de-gestao-para-pequenos-negocios/)
+- [Sobre o SoftPay](https://site.softpaybr.com/sobre/)
+- [Fale com a gente](https://site.softpaybr.com/contato/)
 
-- [Mercadinho](https://site.softpaybr.com/segmentos/mercadinho/)
-- [Loja de roupas](https://site.softpaybr.com/segmentos/loja-de-roupas/)
-- [Farmácia](https://site.softpaybr.com/segmentos/farmacia/)
-- [Distribuidora](https://site.softpaybr.com/segmentos/distribuidora/)
-- [Loja de variedades](https://site.softpaybr.com/segmentos/loja-de-variedades/)
-- [Papelaria](https://site.softpaybr.com/segmentos/papelaria/)
-- [Loja de celulares e acessórios](https://site.softpaybr.com/segmentos/loja-de-celulares-e-acessorios/)
-- [Loja de autopeças](https://site.softpaybr.com/segmentos/loja-de-autopecas/)
-- [Materiais de construção](https://site.softpaybr.com/segmentos/materiais-de-construcao/)
-- [Loja de joias](https://site.softpaybr.com/segmentos/loja-de-joias/)
-- [Empresas com filiais](https://site.softpaybr.com/segmentos/empresas-com-filiais/)
-- [Pequeno comércio](https://site.softpaybr.com/segmentos/pequeno-comercio/)
+## Páginas principais
 
-## Soluções
+- [Sistema de gestão para pequenos negócios](https://site.softpaybr.com/sistema-de-gestao-para-pequenos-negocios/)
+- [Sobre o SoftPay](https://site.softpaybr.com/sobre/)
+- [Fale com a gente](https://site.softpaybr.com/contato/)
 
-- [Sistema PDV](https://site.softpaybr.com/solucoes/sistema-pdv/)
-- [Sistema de estoque](https://site.softpaybr.com/solucoes/sistema-de-estoque/)
-- [Sistema financeiro](https://site.softpaybr.com/solucoes/sistema-financeiro/)
+## Para quem é (por tipo de negócio)
+
+- [Feito para o seu tipo de negócio](https://site.softpaybr.com/segmentos/)
+- [Sistema para mercadinho](https://site.softpaybr.com/segmentos/mercadinho/)
+- [Sistema para loja de roupas](https://site.softpaybr.com/segmentos/loja-de-roupas/)
+- [Sistema para loja de variedades](https://site.softpaybr.com/segmentos/loja-de-variedades/)
+- [Sistema para papelaria](https://site.softpaybr.com/segmentos/papelaria/)
+- [Sistema para farmácia](https://site.softpaybr.com/segmentos/farmacia/)
+- [Sistema para distribuidora](https://site.softpaybr.com/segmentos/distribuidora/)
+- [Sistema para loja de celulares e acessórios](https://site.softpaybr.com/segmentos/loja-de-celulares-e-acessorios/)
+- [Sistema para loja de autopeças](https://site.softpaybr.com/segmentos/loja-de-autopecas/)
+- [Sistema para loja de material de construção](https://site.softpaybr.com/segmentos/materiais-de-construcao/)
+- [Sistema para pequeno comércio e MEI](https://site.softpaybr.com/segmentos/pequeno-comercio/)
+- [Sistema para loja de joias](https://site.softpaybr.com/segmentos/loja-de-joias/)
+- [Sistema para empresa com filiais](https://site.softpaybr.com/segmentos/empresas-com-filiais/)
+- [Sistema para pet shop](https://site.softpaybr.com/segmentos/pet-shop/)
+- [Sistema para loja de calçados](https://site.softpaybr.com/segmentos/loja-de-calcados/)
+- [Sistema para loja de cosméticos e perfumaria](https://site.softpaybr.com/segmentos/cosmeticos-e-perfumaria/)
+- [Sistema para loja de bebidas](https://site.softpaybr.com/segmentos/loja-de-bebidas/)
+
+## Soluções (por recurso)
+
+- [O que o SoftPay resolve](https://site.softpaybr.com/solucoes/)
+- [Sistema de controle de estoque](https://site.softpaybr.com/solucoes/sistema-de-estoque/)
+- [Sistema PDV (frente de caixa)](https://site.softpaybr.com/solucoes/sistema-pdv/)
 - [Controle de fiado](https://site.softpaybr.com/solucoes/controle-de-fiado/)
-- [Controle de clientes](https://site.softpaybr.com/solucoes/controle-de-clientes/)
-- [Loja online](https://site.softpaybr.com/solucoes/loja-online/)
-- [Bot de WhatsApp](https://site.softpaybr.com/solucoes/bot-whatsapp/)
-- [Múltiplas lojas](https://site.softpaybr.com/solucoes/multiplas-lojas/)
-- [NF-e](https://site.softpaybr.com/solucoes/nfe/) · [NFC-e](https://site.softpaybr.com/solucoes/nfce/)
+- [Controle financeiro da loja](https://site.softpaybr.com/solucoes/sistema-financeiro/)
+- [Emissão de NF-e](https://site.softpaybr.com/solucoes/nfe/)
+- [Emissão de NFC-e](https://site.softpaybr.com/solucoes/nfce/)
+- [Loja online com Pix](https://site.softpaybr.com/solucoes/loja-online/)
+- [Controle de clientes (CRM)](https://site.softpaybr.com/solucoes/controle-de-clientes/)
+- [Registre a venda pelo WhatsApp](https://site.softpaybr.com/solucoes/bot-whatsapp/)
+- [Múltiplas lojas e filiais](https://site.softpaybr.com/solucoes/multiplas-lojas/)
 
 ## Guias (conteúdo de apoio, sem exigir o produto)
 
-- [Como sair do caderno](https://site.softpaybr.com/guias/como-sair-do-caderno/)
-- [Como controlar o caixa da loja](https://site.softpaybr.com/guias/como-controlar-caixa-da-loja/)
-- [Como controlar estoque](https://site.softpaybr.com/guias/como-controlar-estoque/)
-- [Como controlar fiado](https://site.softpaybr.com/guias/como-controlar-fiado/)
-- [Como calcular margem de lucro](https://site.softpaybr.com/guias/como-calcular-margem-de-lucro/)
-- [Como calcular o lucro da loja](https://site.softpaybr.com/guias/como-calcular-lucro-da-loja/)
+- [Guias para organizar sua loja](https://site.softpaybr.com/guias/)
+- [Como controlar o estoque de uma loja](https://site.softpaybr.com/guias/como-controlar-estoque/)
+- [Como controlar o caixa de uma loja](https://site.softpaybr.com/guias/como-controlar-caixa-da-loja/)
+- [Como controlar vendas fiadas](https://site.softpaybr.com/guias/como-controlar-fiado/)
+- [Como calcular o lucro de uma loja](https://site.softpaybr.com/guias/como-calcular-lucro-da-loja/)
+- [Como calcular a margem de lucro](https://site.softpaybr.com/guias/como-calcular-margem-de-lucro/)
 - [Como organizar uma loja](https://site.softpaybr.com/guias/como-organizar-uma-loja/)
+- [Como sair do caderno](https://site.softpaybr.com/guias/como-sair-do-caderno/)
+- [Vale a pena ter um sistema de gestão na loja?](https://site.softpaybr.com/guias/vale-a-pena-ter-sistema-de-gestao/)
+- [Quanto custa um sistema de gestão para comércio](https://site.softpaybr.com/guias/quanto-custa-um-sistema-de-gestao/)
+- [Como escolher um sistema de gestão](https://site.softpaybr.com/guias/como-escolher-sistema-de-gestao/)
+- [Reforma tributária no comércio: o que muda e quando](https://site.softpaybr.com/guias/reforma-tributaria-comercio/)
+- [Reforma tributária e o MEI](https://site.softpaybr.com/guias/reforma-tributaria-mei/)
+- [Meu sistema precisa mudar por causa da reforma tributária?](https://site.softpaybr.com/guias/meu-sistema-precisa-mudar-reforma-tributaria/)
+- [Checklist da reforma tributária até janeiro de 2027](https://site.softpaybr.com/guias/checklist-reforma-tributaria-2027/)
+- [NF-e e NFC-e: qual a diferença](https://site.softpaybr.com/guias/nfe-nfce-o-que-e/)
+
+## Comparativos
+
+- [Comparativos](https://site.softpaybr.com/comparativos/)
+- [SoftPay ou Nex: qual escolher](https://site.softpaybr.com/comparativos/softpay-ou-nex/)
+- [SoftPay ou Kyte: qual escolher](https://site.softpaybr.com/comparativos/softpay-ou-kyte/)
+- [Alternativa ao Bling para loja física](https://site.softpaybr.com/comparativos/alternativa-ao-bling/)
+
+## Perguntas de quem está avaliando
+
+- [Perguntas de quem está avaliando](https://site.softpaybr.com/perguntas/)
+- [Quanto custa um sistema para loja?](https://site.softpaybr.com/perguntas/quanto-custa-um-sistema-para-loja/)
+- [Loja pequena precisa de sistema?](https://site.softpaybr.com/perguntas/loja-pequena-precisa-de-sistema/)
+- [Caderno ou sistema?](https://site.softpaybr.com/perguntas/caderno-ou-sistema/)
+- [Excel ou sistema de gestão?](https://site.softpaybr.com/perguntas/excel-ou-sistema-de-gestao/)
+- [Qual sistema usar em um mercadinho?](https://site.softpaybr.com/perguntas/qual-sistema-para-mercadinho/)
+- [Sistema de gestão é seguro?](https://site.softpaybr.com/perguntas/sistema-de-gestao-e-seguro/)
+- [Posso usar o SoftPay no celular?](https://site.softpaybr.com/perguntas/posso-usar-o-softpay-no-celular/)
+- [Posso migrar de outro sistema?](https://site.softpaybr.com/perguntas/posso-migrar-de-outro-sistema/)
+- [É difícil aprender a usar?](https://site.softpaybr.com/perguntas/e-dificil-aprender/)
+- [Preciso instalar alguma coisa?](https://site.softpaybr.com/perguntas/preciso-instalar/)
+- [O suporte é humano?](https://site.softpaybr.com/perguntas/tem-suporte-humano/)
+- [Funciona em todo o Brasil?](https://site.softpaybr.com/perguntas/funciona-no-brasil-inteiro/)
+- [Posso usar em vários dispositivos?](https://site.softpaybr.com/perguntas/posso-usar-em-varios-dispositivos/)
+
+## Blog do lojista
+
+- [Blog do lojista](https://site.softpaybr.com/blog/)
+- [Como precificar um produto na loja](https://site.softpaybr.com/blog/como-precificar-produto/)
+- [Perda de estoque por validade](https://site.softpaybr.com/blog/perda-de-estoque-validade/)
+- [Produtos parados no estoque](https://site.softpaybr.com/blog/produtos-parados-no-estoque/)
+- [Troca e devolução na loja](https://site.softpaybr.com/blog/troca-e-devolucao-na-loja/)
+- [Como organizar a vitrine de uma loja pequena](https://site.softpaybr.com/blog/como-organizar-vitrine-de-loja/)
+- [Fluxo de caixa para loja pequena](https://site.softpaybr.com/blog/fluxo-de-caixa-loja-pequena/)
+
+## Texto completo do site
+
+- [llms-full.txt](https://site.softpaybr.com/llms-full.txt): o conteúdo integral das páginas acima, em texto puro.
 
 ## Contato
 
