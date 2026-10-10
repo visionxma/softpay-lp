@@ -86,6 +86,9 @@ python3 tools/confere-busca.py      # sai 1 se título > 60, descrição fora de
                                     # JSON-LD inválido, FAQ marcada sem estar visível...
 python3 tools/mapa_interlinks.py
 
+# 4. depois de a publicação estar no ar: avisa Bing, Yandex e os demais do IndexNow
+python3 tools/indexnow.py
+
 # 4. publique
 git add -A && git commit -m "..." && git push
 ```
