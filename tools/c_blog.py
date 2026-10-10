@@ -21,7 +21,7 @@ PAGINAS = [
 dict(
   artigo=True,
   slug="blog/como-precificar-produto",
-  title="Como Precificar um Produto na Loja: Markup e Margem | SoftPay",
+  title="Como Precificar um Produto: Markup e Margem | SoftPay",
   description="A diferença entre markup e margem, a fórmula de cada um e o erro que faz o lojista achar que ganha 40% quando ganha 28%. Com exemplo numérico.",
   h1="Como precificar um produto na loja",
   intro="O erro mais comum na precificação não é errar a conta: é confundir markup com margem. São coisas diferentes, e quem troca uma pela outra acha que ganha 40% quando ganha 28%. Esta página mostra a diferença com número.",
@@ -107,7 +107,7 @@ dict(
 dict(
   artigo=True,
   slug="blog/perda-de-estoque-validade",
-  title="Perda de Estoque por Validade: Como Evitar o Prejuízo | SoftPay",
+  title="Perda de Estoque por Validade: Como Evitar | SoftPay",
   description="Produto que vence é prejuízo dobrado: você pagou por ele e ainda descarta. Veja o método PVPS, o cálculo do que a perda custa e como reduzir sem sistema caro.",
   h1="Perda de estoque por validade",
   intro="Produto vencido é prejuízo dobrado: você pagou pela mercadoria e ainda tem o trabalho de descartar. Numa loja pequena, com estoque enxuto, cada item perdido pesa mais — e quase sempre a perda tem a mesma causa, que dá para corrigir sem gastar nada.",
@@ -178,7 +178,7 @@ dict(
 dict(
   artigo=True,
   slug="blog/produtos-parados-no-estoque",
-  title="Produtos Parados no Estoque: Como Achar e o Que Fazer | SoftPay",
+  title="Produtos Parados no Estoque: Como Resolver | SoftPay",
   description="Como identificar o produto que não gira, calcular quanto dinheiro está preso nele e decidir entre remarcar, combinar ou aceitar a perda. Com curva ABC.",
   h1="Produtos parados no estoque",
   intro="Produto parado não é neutro: é dinheiro que você já pagou, ocupando espaço, sem virar venda. E ele é difícil de ver justamente porque não acontece nada — ninguém repara no que não se move.",

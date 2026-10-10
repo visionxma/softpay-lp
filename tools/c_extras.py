@@ -189,7 +189,7 @@ dict(
 dict(
   slug="contato",
   title="Contato | SoftPay",
-  description="Fale com o SoftPay: WhatsApp (86) 9 9819-3851, e-mail suporte@softpaybr.com. Atendimento humano em todo o Brasil.",
+  description="Fale com o SoftPay: WhatsApp (86) 9 9819-3851 ou e-mail suporte@softpaybr.com. O atendimento é feito por pessoas da equipe, em todo o Brasil.",
   h1="Fale com a gente",
   intro="Atendimento humano, pelo WhatsApp, para dúvidas antes de contratar e para o dia a dia de quem já usa.",
   breadcrumbs=[("Contato", None)],

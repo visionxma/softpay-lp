@@ -500,7 +500,7 @@ dict(
 dict(
   slug="perguntas/funciona-no-brasil-inteiro",
   title="O SoftPay Funciona em Todo o Brasil? | SoftPay",
-  description="O SoftPay atende lojas em todo o Brasil: sistema na nuvem acessado pela internet e suporte nacional pelo WhatsApp.",
+  description="O SoftPay atende lojas em todo o Brasil: é um sistema na nuvem, acessado pela internet, com suporte nacional pelo WhatsApp. Teste grátis por 7 dias.",
   h1="Funciona em todo o Brasil?",
   intro="Sim. Por ser um sistema na nuvem, o SoftPay não depende de representante local nem de instalação presencial.",
   breadcrumbs=_c("Funciona no Brasil inteiro"),

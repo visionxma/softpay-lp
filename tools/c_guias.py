@@ -618,7 +618,7 @@ dict(
 dict(
   artigo=True,
   slug="guias/quanto-custa-um-sistema-de-gestao",
-  title="Quanto Custa um Sistema de Gestão para Comércio em 2026 | SoftPay",
+  title="Quanto Custa um Sistema de Gestão em 2026 | SoftPay",
   description="Faixa real de preço de sistema de gestão para pequeno comércio no Brasil, o que costuma vir escondido na conta e como comparar planos sem se enganar.",
   h1="Quanto custa um sistema de gestão para comércio",
   intro="A faixa de mercado para pequeno comércio no Brasil, em 2026, vai de cerca de R$ 39 a R$ 199 por mês. Mas o preço da tabela é só parte da conta — e esta página mostra as partes que costumam aparecer depois da contratação.",
@@ -805,8 +805,8 @@ dict(
 dict(
   artigo=True,
   slug="guias/reforma-tributaria-comercio",
-  title="Reforma Tributária no Comércio: O Que Muda e Quando | SoftPay",
-  description="O que a reforma tributária muda para o pequeno comércio, com as datas oficiais: 3 de agosto de 2026 para o regime regular e 1º de janeiro de 2027 para o Simples Nacional e o MEI.",
+  title="Reforma Tributária no Comércio: O Que Muda | SoftPay",
+  description="O que a reforma tributária muda para o pequeno comércio, com as datas oficiais: 3 de agosto de 2026 (regime regular) e 1º de janeiro de 2027 (Simples e MEI).",
   h1="Reforma tributária no comércio: o que muda e quando",
   intro="Duas datas resolvem a maior parte da dúvida. Se a sua empresa é do regime regular, a obrigação já começou em 3 de agosto de 2026. Se é do Simples Nacional ou MEI, ela começa em 1º de janeiro de 2027. Esta página explica o que muda na prática para quem tem loja, sem termo de contador.",
   breadcrumbs=_c("Reforma tributária no comércio"),
@@ -885,7 +885,7 @@ dict(
 dict(
   artigo=True,
   slug="guias/reforma-tributaria-mei",
-  title="Reforma Tributária e o MEI: Nota Fiscal Obrigatória em 2027 | SoftPay",
+  title="Reforma Tributária e o MEI: Nota Fiscal em 2027 | SoftPay",
   description="A partir de 1º de janeiro de 2027 o MEI passa a emitir nota fiscal em qualquer venda, inclusive para pessoa física. Veja o que muda e como se preparar.",
   h1="Reforma tributária e o MEI",
   intro="A mudança mais concreta para o MEI tem data: 1º de janeiro de 2027. A partir dali, a emissão de nota fiscal passa a ser obrigatória em qualquer venda — inclusive para pessoa física. Para quem hoje quase não emite nota, isso muda a rotina do balcão, não só a papelada.",
@@ -949,7 +949,7 @@ dict(
 dict(
   artigo=True,
   slug="guias/meu-sistema-precisa-mudar-reforma-tributaria",
-  title="Meu Sistema Precisa Mudar por Causa da Reforma Tributária? | SoftPay",
+  title="Seu Sistema Está Pronto para a Reforma Tributária? | SoftPay",
   description="Como saber se o seu sistema de gestão está pronto para a reforma tributária, as perguntas exatas a fazer ao fornecedor e o que fazer se a resposta for vaga.",
   h1="Meu sistema precisa mudar por causa da reforma tributária?",
   intro="Resposta curta: não necessariamente. O que precisa mudar é a nota fiscal, não o computador nem o sistema — desde que o seu sistema seja atualizado a tempo. Esta página traz as perguntas exatas para descobrir se ele será.",
@@ -1027,7 +1027,7 @@ dict(
     ('Emita nota antes de ser obrigado', 'Algumas por dia, para a rotina entrar antes do prazo.', 'passo-5-emita-nota-antes-de-ser-obrigado'),
     ('Revise em dezembro, sem migrar em dezembro', 'Dezembro é para conferir, não para começar.', 'passo-6-revise-em-dezembro-sem-migrar-em-dezembro'),
   ],
-  title="Checklist da Reforma Tributária até Janeiro de 2027 | SoftPay",
+  title="Checklist da Reforma Tributária no Comércio | SoftPay",
   description="Checklist prático para o pequeno comércio se preparar para a reforma tributária até 1º de janeiro de 2027, em seis passos e com as datas oficiais.",
   h1="Checklist da reforma tributária até janeiro de 2027",
   intro="Seis passos, em ordem, para chegar em 1º de janeiro de 2027 sem susto. Nenhum deles depende de você entender a reforma inteira — dependem de saber a sua data e organizar o que já é seu.",
@@ -1099,7 +1099,7 @@ dict(
 dict(
   artigo=True,
   slug="guias/nfe-nfce-o-que-e",
-  title="NF-e e NFC-e: Qual a Diferença e Quando Usar Cada Uma | SoftPay",
+  title="NF-e e NFC-e: Qual a Diferença e Quando Usar | SoftPay",
   description="A diferença entre NF-e e NFC-e em linguagem simples: qual usar na venda para consumidor, qual usar para empresa e o que muda com a reforma tributária.",
   h1="NF-e e NFC-e: qual a diferença",
   intro="A diferença é o cliente. NFC-e é a nota da venda no balcão, para o consumidor final. NF-e é a nota da venda para outra empresa, ou de operações que exigem documento completo. Esta página explica quando usar cada uma, sem termo de contador.",
