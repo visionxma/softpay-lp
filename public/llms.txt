@@ -58,12 +58,6 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 - [Sobre o SoftPay](https://site.softpaybr.com/sobre/)
 - [Fale com a gente](https://site.softpaybr.com/contato/)
 
-## Páginas principais
-
-- [Sistema de gestão para pequenos negócios](https://site.softpaybr.com/sistema-de-gestao-para-pequenos-negocios/)
-- [Sobre o SoftPay](https://site.softpaybr.com/sobre/)
-- [Fale com a gente](https://site.softpaybr.com/contato/)
-
 ## Para quem é (por tipo de negócio)
 
 - [Feito para o seu tipo de negócio](https://site.softpaybr.com/segmentos/)

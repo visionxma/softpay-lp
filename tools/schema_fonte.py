@@ -173,6 +173,24 @@ def datas_de(pg):
     return reg["publicado"], reg["modificado"]
 
 
+MANUAIS = {"_home": "index.html", "_termos": "termos.html",
+           "_privacidade": "privacidade.html", "_reembolso": "reembolso.html"}
+
+
+def datas_de_arquivo(chave):
+    """Mesmo critério para as páginas escritas à mão: o hash é o do <main>."""
+    d = _carregar()
+    doc = io.open(os.path.join(RAIZ, "public", MANUAIS[chave]), encoding="utf-8").read()
+    m = re.search(r"<main.*?</main>", doc, re.S)
+    h = hashlib.sha1((m.group(0) if m else doc).encode("utf-8")).hexdigest()[:12]
+    reg = d[chave]
+    if "hash" not in reg:
+        reg["hash"] = h
+    elif reg["hash"] != h:
+        reg["hash"], reg["modificado"] = h, date.today().isoformat()
+    return reg["publicado"], reg["modificado"]
+
+
 def gravar_datas():
     if _datas is not None:
         io.open(ARQ_DATAS, "w", encoding="utf-8").write(

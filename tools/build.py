@@ -185,6 +185,8 @@ def main():
         os.makedirs(os.path.dirname(destino), exist_ok=True)
         io.open(destino, "w", encoding="utf-8").write(html)
         escritas.append("/%s/" % pg["slug"])
+    for chave in schema_fonte.MANUAIS:
+        schema_fonte.datas_de_arquivo(chave)
     schema_fonte.gravar_datas()
     print("Páginas geradas: %d" % len(escritas))
     for u in escritas:

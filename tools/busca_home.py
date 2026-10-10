@@ -15,7 +15,7 @@ que só aparece em tela larga, ficam de fora).
 
 Rode:  python3 tools/busca_home.py    (o build.py também chama)
 """
-import html as _h, io, json, os, re, subprocess, sys
+import html as _h, io, json, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import schema_fonte as S
 
@@ -44,20 +44,11 @@ def perguntas_visiveis(doc):
     return out
 
 
-def _data_do_arquivo():
-    try:
-        r = subprocess.run(["git", "log", "-1", "--format=%ad", "--date=short", "--",
-                            "public/index.html"], cwd=RAIZ, capture_output=True, text=True)
-        return r.stdout.strip() or None
-    except OSError:
-        return None
-
-
 def bloco(doc):
     miolo = re.search(r"<main.*?</main>", doc, re.S)
     visivel = miolo.group(0) if miolo else doc
     faq = perguntas_visiveis(doc)
-    mod = _data_do_arquivo()
+    _, mod = S.datas_de_arquivo("_home")
     pagina = {
         "@type": "WebPage", "@id": S.BASE + "/#webpage", "url": S.BASE + "/",
         "name": _limpo(re.search(r"<title>(.*?)</title>", doc, re.S).group(1)),

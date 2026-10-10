@@ -14,23 +14,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras
 import c_blog, c_comparativos
 
-import subprocess
 import schema_fonte
 
 BASE = "https://site.softpaybr.com"
 
 
 def lastmod(rota):
-    """Data real da última mudança: a do conteúdo (datas-paginas) ou, para as
-    páginas escritas à mão (home e legais), a do último commit do arquivo."""
-    slug = rota.strip("/")
-    reg = schema_fonte._carregar().get(slug)
-    if reg:
-        return reg["modificado"]
-    arq = "public/index.html" if rota == "/" else "public/%s.html" % slug
-    r = subprocess.run(["git", "log", "-1", "--format=%ad", "--date=short", "--", arq],
-                       capture_output=True, text=True)
-    return r.stdout.strip() or "2026-09-08"
+    """Data real da última mudança de CONTEÚDO (tools/datas-paginas.json)."""
+    slug = "_home" if rota == "/" else rota.strip("/")
+    if rota in ("/termos", "/privacidade", "/reembolso"):
+        slug = "_" + slug
+    return schema_fonte._carregar()[slug]["modificado"]
 
 
 def esc(t):

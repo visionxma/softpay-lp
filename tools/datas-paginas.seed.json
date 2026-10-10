@@ -290,5 +290,21 @@
  "solucoes/sistema-pdv": {
   "publicado": "2026-09-06",
   "modificado": "2026-09-17"
+ },
+ "_home": {
+  "publicado": "2026-09-04",
+  "modificado": "2026-09-26"
+ },
+ "_termos": {
+  "publicado": "2026-09-04",
+  "modificado": "2026-09-26"
+ },
+ "_privacidade": {
+  "publicado": "2026-09-04",
+  "modificado": "2026-09-26"
+ },
+ "_reembolso": {
+  "publicado": "2026-09-04",
+  "modificado": "2026-09-26"
  }
 }

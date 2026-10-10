@@ -165,12 +165,13 @@ def _h1(doc):
 
 def atualizar_llms_txt():
     """Refaz as listas de páginas do llms.txt a partir do sitemap. O resumo, os
-    planos e o "o que não é" (acima de "## Para quem é") continuam escritos à mão."""
+    planos e o "o que não é" (acima da primeira lista) continuam escritos à mão."""
     arq = os.path.join(PUBLIC, "llms.txt")
     atual = io.open(arq, encoding="utf-8").read()
-    corte = atual.index("## Para quem é") if "## Para quem é" in atual else None
-    if corte is None:
+    marcas = [atual.index(m) for m in ("## Páginas principais", "## Para quem é") if m in atual]
+    if not marcas:
         raise SystemExit("llms.txt sem a marca '## Para quem é': nada foi alterado")
+    corte = min(marcas)
     contato = atual[atual.index("## Contato"):] if "## Contato" in atual else ""
     rotas = rotas_do_sitemap()
     out = []
