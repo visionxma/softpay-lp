@@ -20,6 +20,7 @@ import math, re, unicodedata
 from collections import Counter
 
 MINIMO = 3
+MULTIPLO = 6
 
 # Páginas que o Google já indexou (Search Console, 09/10/2026).
 INDEXADAS = [
@@ -94,4 +95,16 @@ def planejar(paginas, ja_recebem):
         if all(v == 0 for v in restante.values()) or teto > 60:
             break
         teto += 1
-    return {o: [t for _, t in sorted(v, reverse=True)] for o, v in plano.items()}, teto
+    # O bloco "Veja também" é grade de 3 colunas no computador e de 2 no celular: cada lista fecha em múltiplo de 6
+    # para não sobrar linha órfã em nenhuma largura. O que falta se completa com as páginas mais próximas do assunto
+    # da origem (elas passam do MINIMO, o que só ajuda).
+    final = {}
+    for o, v in plano.items():
+        lista = [t for _, t in sorted(v, reverse=True)]
+        resto = len(lista) % MULTIPLO
+        if lista and resto:
+            extras = sorted(((_cos(vet[t], vet[o]), t) for t in alvos
+                             if t not in lista and o not in ja_recebem.get(t, ())), reverse=True)
+            lista += [t for _, t in extras[:MULTIPLO - resto]]
+        final[o] = lista
+    return final, teto

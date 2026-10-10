@@ -17,8 +17,8 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
   essencial.
 - **Loja — R$89/mês.** Tudo do Comércio, mais fiado com cobrança por link Pix,
   loja online e estoque avançado.
-- **ERP Completo — R$109/mês.** Tudo da Loja, mais emissão de NFC-e e NF-e e
-  equipe ampliada.
+- **ERP Completo — R$109/mês.** Tudo da Loja, mais emissão de NFC-e e NF-e (recurso
+  em ativação) e equipe ampliada.
 
 ## O que o SoftPay faz
 
@@ -30,7 +30,7 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 - Venda no atacado e no varejo
 - Loja online e catálogo online, com Pix (a partir do plano Loja)
 - Cupons e programa de fidelidade
-- Emissão de NF-e e NFC-e (plano ERP Completo)
+- Emissão de NF-e e NFC-e (plano ERP Completo; recurso em ativação)
 - Multiusuário, com acesso para a equipe
 - Controle de filiais
 - Painel e relatórios
@@ -49,8 +49,9 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
   de comanda de mesa, ficha de delivery ou agendamento de horário usa outro
   tipo de produto.
 - **Não cobra taxa de implantação e não exige contrato de fidelidade.**
-- A **emissão de NF-e e NFC-e** está disponível nos planos Nota Fiscal e ERP
-  Completo, com cadastro fiscal e pacote do contador incluídos.
+- A **emissão de NF-e e NFC-e** está nos planos Nota Fiscal e ERP Completo e
+  consta como recurso em ativação: confirme com o suporte antes de contratar
+  por causa dela.
 
 ## Páginas principais
 
