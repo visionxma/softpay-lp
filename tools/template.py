@@ -7,7 +7,9 @@ e rodapé. Assim nenhuma página é "find and replace" de outra, mas todas
 seguem o mesmo padrão de SEO e de layout.
 """
 
-BASE = "https://site.softpaybr.com"
+import schema_fonte
+from schema_fonte import BASE, ID_ORG, ID_SITE, ID_APP, BING_VERIFICACAO
+
 APP = "https://www.softpaybr.com/auth"
 WPP = ("https://wa.me/5586998193851?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida"
        "%20sobre%20o%20SoftPay.")
@@ -27,7 +29,7 @@ def _json(obj, indent=2):
 def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None,
            artigo=False, passos=None,
            related=None, breadcrumbs=None, cta_title=None, cta_text=None,
-           updated="2026-09-04"):
+           mais=None, publicado=None, updated=None):
     """slug: caminho sem barras nas pontas, ex 'segmentos/mercadinho'."""
     url = "%s/%s/" % (BASE, slug)
     crumbs = breadcrumbs or []
@@ -36,16 +38,20 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     og_img = BASE + figura[0] if figura else BASE + "/assets/sistema/pdv.webp"
     og_alt = figura[1] if figura else "Painel do SoftPay aberto em um computador"
 
-    # ---------- dados estruturados ----------
-    graph = [{
+    # ---------- dados estruturados (fonte única: schema_fonte.py) ----------
+    publicado = publicado or "2026-09-06"
+    updated = updated or publicado
+    visivel = " ".join([h1, intro, "\n".join(blocks), str(faq or "")])
+    graph = schema_fonte.nos_do_site(visivel) + [{
         "@type": "WebPage",
         "@id": url + "#webpage",
         "url": url,
         "name": title,
         "description": description,
         "inLanguage": "pt-BR",
-        "isPartOf": {"@id": BASE + "/#website"},
-        "about": {"@id": BASE + "/#softpay"},
+        "isPartOf": {"@id": ID_SITE},
+        "about": {"@id": ID_APP},
+        "datePublished": publicado,
         "dateModified": updated,
         "primaryImageOfPage": og_img,
     }]
@@ -72,10 +78,10 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
             "description": description,
             "image": og_img,
             "inLanguage": "pt-BR",
-            "datePublished": "2026-09-04",
+            "datePublished": publicado,
             "dateModified": updated,
-            "author": {"@id": BASE + "/#organizacao"},
-            "publisher": {"@id": BASE + "/#organizacao"},
+            "author": {"@id": ID_ORG},
+            "publisher": {"@id": ID_ORG},
             "isPartOf": {"@id": url + "#webpage"},
             "mainEntityOfPage": {"@id": url + "#webpage"},
         })
@@ -90,7 +96,6 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
             "description": description,
             "image": og_img,
             "inLanguage": "pt-BR",
-            "totalTime": "PT30M",
             "step": [{
                 "@type": "HowToStep",
                 "position": i + 1,
@@ -162,6 +167,21 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
       </section>
 ''' % li
 
+    # ---------- "veja também": links contextuais para páginas ainda fora do índice
+    # (plano calculado por tools/interlinks.py; só as páginas já indexadas o recebem)
+    mais_html = ""
+    if mais:
+        li = "\n".join('          <li><a href="%s">%s</a></li>' % (href, esc(nome))
+                       for nome, href in mais)
+        mais_html = '''
+      <section class="page-mais" aria-labelledby="veja-tambem">
+        <h2 id="veja-tambem">Veja também</h2>
+        <ul class="mais-lista">
+%s
+        </ul>
+      </section>
+''' % li
+
     # imagem de abertura, logo abaixo do cabeçalho da página
     fig_html = ""
     if figura:
@@ -199,6 +219,8 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta name="theme-color" content="#1DA1F2" />
     <link rel="canonical" href="%(url)s" />
+    <meta name="msvalidate.01" content="%(bing)s" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="SoftPay para assistentes de IA" />
 
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="SoftPay" />
@@ -308,7 +330,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
           </div>
           <p class="page-cta-note">7 dias grátis · sem cartão · sem fidelidade</p>
         </aside>
-%(rel)s
+%(rel)s%(mais)s
       </div>
     </main>
 
@@ -411,7 +433,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 ''' % dict(title=esc(title), description=esc(description), url=url, base=BASE,
            ld=ld, bc=bc_html, h1=h1, intro=intro, corpo=corpo, faq=faq_html, fig=fig_html,
            og_img=og_img, og_alt=esc(og_alt),
-           rel=rel_html, app=APP, wpp=WPP,
+           rel=rel_html, mais=mais_html, bing=BING_VERIFICACAO, app=APP, wpp=WPP,
            cta_title=esc(cta_title or "Experimente o SoftPay por 7 dias"),
            cta_text=esc(cta_text or ("Teste todos os recursos do plano sem cartão de crédito. "
                                      "Se não fizer sentido para a sua loja, é só não continuar.")))

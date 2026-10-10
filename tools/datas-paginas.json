@@ -1,0 +1,366 @@
+{
+ "blog": {
+  "hash": "5b10faf23b14",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "blog/como-organizar-vitrine-de-loja": {
+  "hash": "7e28f73e2910",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "blog/como-precificar-produto": {
+  "hash": "6a80d8473ae4",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-08"
+ },
+ "blog/fluxo-de-caixa-loja-pequena": {
+  "hash": "ad51984fbdb9",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "blog/perda-de-estoque-validade": {
+  "hash": "76ec12ab7834",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "blog/produtos-parados-no-estoque": {
+  "hash": "3a93c627f266",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "blog/troca-e-devolucao-na-loja": {
+  "hash": "4efa6fb6ac10",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "comparativos": {
+  "hash": "e0984ba04950",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "comparativos/alternativa-ao-bling": {
+  "hash": "965f2adf8af8",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "comparativos/softpay-ou-kyte": {
+  "hash": "52e3e32d98db",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "comparativos/softpay-ou-nex": {
+  "hash": "e85a51637dec",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "contato": {
+  "hash": "703951164c6b",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "guias": {
+  "hash": "a5fc7517d0c9",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "guias/checklist-reforma-tributaria-2027": {
+  "hash": "0f99a90e236e",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-08"
+ },
+ "guias/como-calcular-lucro-da-loja": {
+  "hash": "f3b9914d1b4c",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/como-calcular-margem-de-lucro": {
+  "hash": "155cc0887751",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/como-controlar-caixa-da-loja": {
+  "hash": "ba3459621306",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/como-controlar-estoque": {
+  "hash": "1dbfec69468e",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/como-controlar-fiado": {
+  "hash": "f29d79d3e206",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/como-escolher-sistema-de-gestao": {
+  "hash": "1c837405c140",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-08"
+ },
+ "guias/como-organizar-uma-loja": {
+  "hash": "cf1fac62ec7c",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/como-sair-do-caderno": {
+  "hash": "2b2b08ac9ba1",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "guias/meu-sistema-precisa-mudar-reforma-tributaria": {
+  "hash": "ea53d0eebfb0",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "guias/nfe-nfce-o-que-e": {
+  "hash": "1696e432358c",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "guias/quanto-custa-um-sistema-de-gestao": {
+  "hash": "83f3c12308d1",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-08"
+ },
+ "guias/reforma-tributaria-comercio": {
+  "hash": "8c227f266d1d",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-08"
+ },
+ "guias/reforma-tributaria-mei": {
+  "hash": "37c415d3d855",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "guias/vale-a-pena-ter-sistema-de-gestao": {
+  "hash": "7a52aee5fc5c",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-08"
+ },
+ "medicao": {
+  "modificado": "2026-09-21",
+  "publicado": "2026-09-21"
+ },
+ "perguntas": {
+  "hash": "a35d1f1bc09c",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/caderno-ou-sistema": {
+  "hash": "e42833ad5e84",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/e-dificil-aprender": {
+  "hash": "51a17e81fca3",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/excel-ou-sistema-de-gestao": {
+  "hash": "30388f4dc005",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/funciona-no-brasil-inteiro": {
+  "hash": "28ac837b9402",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/loja-pequena-precisa-de-sistema": {
+  "hash": "94f77512a675",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/posso-migrar-de-outro-sistema": {
+  "hash": "cd5e4c42b5f6",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/posso-usar-em-varios-dispositivos": {
+  "hash": "903fdb17305c",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/posso-usar-o-softpay-no-celular": {
+  "hash": "d6a414feb4b2",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/preciso-instalar": {
+  "hash": "84ea77c4007e",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/qual-sistema-para-mercadinho": {
+  "hash": "15e2ec42d047",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/quanto-custa-um-sistema-para-loja": {
+  "hash": "4a31a4c2b0ec",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/sistema-de-gestao-e-seguro": {
+  "hash": "fa22c78fa2f8",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "perguntas/tem-suporte-humano": {
+  "hash": "c2f34915881d",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "segmentos": {
+  "hash": "fc9a8743e0ef",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/cosmeticos-e-perfumaria": {
+  "hash": "36c127f4d78e",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/distribuidora": {
+  "hash": "fbe60424a1f1",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/empresas-com-filiais": {
+  "hash": "ad31a050a760",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-07"
+ },
+ "segmentos/farmacia": {
+  "hash": "cd7970fdad44",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/loja-de-autopecas": {
+  "hash": "4770413c7335",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/loja-de-bebidas": {
+  "hash": "d7ecd4adcdf1",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/loja-de-calcados": {
+  "hash": "add019cf17d1",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/loja-de-celulares-e-acessorios": {
+  "hash": "6463e62354fb",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/loja-de-joias": {
+  "hash": "c886738078eb",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-07"
+ },
+ "segmentos/loja-de-roupas": {
+  "hash": "ce12771413af",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/loja-de-variedades": {
+  "hash": "e60502900422",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/materiais-de-construcao": {
+  "hash": "6abf64e00034",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/mercadinho": {
+  "hash": "48e7f32c325b",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/papelaria": {
+  "hash": "3324e206b034",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/pequeno-comercio": {
+  "hash": "7c54b8b4c8a5",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "segmentos/pet-shop": {
+  "hash": "16cf6194a07b",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "sistema-de-gestao-para-pequenos-negocios": {
+  "hash": "847af51769a8",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "sobre": {
+  "hash": "152c80012076",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "solucoes": {
+  "hash": "df8230dde6b5",
+  "modificado": "2026-09-08",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/bot-whatsapp": {
+  "hash": "baa046096e04",
+  "modificado": "2026-09-06",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/controle-de-clientes": {
+  "hash": "42dbb202dba9",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/controle-de-fiado": {
+  "hash": "c619c7076c39",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/loja-online": {
+  "hash": "4faa68932e47",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/multiplas-lojas": {
+  "hash": "333496a26d04",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/nfce": {
+  "hash": "229f5da613e7",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/nfe": {
+  "hash": "0e0957e66541",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/sistema-de-estoque": {
+  "hash": "25fe88d8229b",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/sistema-financeiro": {
+  "hash": "22a280777ba5",
+  "modificado": "2026-09-07",
+  "publicado": "2026-09-06"
+ },
+ "solucoes/sistema-pdv": {
+  "hash": "3be230e86398",
+  "modificado": "2026-09-17",
+  "publicado": "2026-09-06"
+ }
+}

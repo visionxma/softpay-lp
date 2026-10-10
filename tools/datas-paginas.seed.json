@@ -1,0 +1,294 @@
+{
+ "blog/como-organizar-vitrine-de-loja": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "blog/como-precificar-produto": {
+  "publicado": "2026-09-08",
+  "modificado": "2026-09-08"
+ },
+ "blog/fluxo-de-caixa-loja-pequena": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "blog": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "blog/perda-de-estoque-validade": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "blog/produtos-parados-no-estoque": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "blog/troca-e-devolucao-na-loja": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "comparativos/alternativa-ao-bling": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "comparativos": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "comparativos/softpay-ou-kyte": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "comparativos/softpay-ou-nex": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "contato": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "guias/checklist-reforma-tributaria-2027": {
+  "publicado": "2026-09-08",
+  "modificado": "2026-09-08"
+ },
+ "guias/como-calcular-lucro-da-loja": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias/como-calcular-margem-de-lucro": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias/como-controlar-caixa-da-loja": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias/como-controlar-estoque": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias/como-controlar-fiado": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias/como-escolher-sistema-de-gestao": {
+  "publicado": "2026-09-08",
+  "modificado": "2026-09-08"
+ },
+ "guias/como-organizar-uma-loja": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias/como-sair-do-caderno": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "guias": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "guias/meu-sistema-precisa-mudar-reforma-tributaria": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "guias/nfe-nfce-o-que-e": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "guias/quanto-custa-um-sistema-de-gestao": {
+  "publicado": "2026-09-08",
+  "modificado": "2026-09-08"
+ },
+ "guias/reforma-tributaria-comercio": {
+  "publicado": "2026-09-08",
+  "modificado": "2026-09-17"
+ },
+ "guias/reforma-tributaria-mei": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "guias/vale-a-pena-ter-sistema-de-gestao": {
+  "publicado": "2026-09-08",
+  "modificado": "2026-09-08"
+ },
+ "medicao": {
+  "publicado": "2026-09-21",
+  "modificado": "2026-09-21"
+ },
+ "perguntas/caderno-ou-sistema": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/e-dificil-aprender": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/excel-ou-sistema-de-gestao": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/funciona-no-brasil-inteiro": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/loja-pequena-precisa-de-sistema": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/posso-migrar-de-outro-sistema": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/posso-usar-em-varios-dispositivos": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/posso-usar-o-softpay-no-celular": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/preciso-instalar": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/qual-sistema-para-mercadinho": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/quanto-custa-um-sistema-para-loja": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/sistema-de-gestao-e-seguro": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "perguntas/tem-suporte-humano": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "segmentos/cosmeticos-e-perfumaria": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/distribuidora": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/empresas-com-filiais": {
+  "publicado": "2026-09-07",
+  "modificado": "2026-09-08"
+ },
+ "segmentos/farmacia": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "segmentos/loja-de-autopecas": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/loja-de-bebidas": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/loja-de-calcados": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "segmentos/loja-de-celulares-e-acessorios": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/loja-de-joias": {
+  "publicado": "2026-09-07",
+  "modificado": "2026-09-08"
+ },
+ "segmentos/loja-de-roupas": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "segmentos/loja-de-variedades": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "segmentos/materiais-de-construcao": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/mercadinho": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/papelaria": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/pequeno-comercio": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "segmentos/pet-shop": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "sistema-de-gestao-para-pequenos-negocios": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "sobre": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "solucoes/bot-whatsapp": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-06"
+ },
+ "solucoes/controle-de-clientes": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "solucoes/controle-de-fiado": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "solucoes": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-08"
+ },
+ "solucoes/loja-online": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "solucoes/multiplas-lojas": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "solucoes/nfce": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "solucoes/nfe": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ },
+ "solucoes/sistema-de-estoque": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "solucoes/sistema-financeiro": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-07"
+ },
+ "solucoes/sistema-pdv": {
+  "publicado": "2026-09-06",
+  "modificado": "2026-09-17"
+ }
+}

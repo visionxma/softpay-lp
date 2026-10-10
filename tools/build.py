@@ -9,6 +9,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from template import render, BASE
 from blocks import sec, p, ul, nota, tabela, cards
 import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras, c_blog, c_comparativos
+import schema_fonte, interlinks, busca_home, robots, llms_full
 
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
 
@@ -34,7 +35,7 @@ INDICES = [
   dict(
     slug="segmentos",
     title="Sistema de Gestão por Segmento de Loja | SoftPay",
-    description="Veja como o SoftPay atende cada tipo de comércio: mercadinho, roupas, variedades, papelaria, farmácia, distribuidora, celulares, autopeças, construção, joias, filiais e MEI.",
+    description="Veja como o SoftPay atende cada comércio: mercadinho, roupas, variedades, papelaria, farmácia, distribuidora, celulares, autopeças, joias, filiais e MEI.",
     h1="Feito para o seu tipo de negócio",
     intro="Cada comércio tem uma rotina diferente, e um sistema que serve para todo mundo costuma não servir direito para ninguém. Estas páginas mostram o que muda no SoftPay quando a loja é a sua.",
     breadcrumbs=[("Segmentos", None)],
@@ -153,20 +154,62 @@ INDICES = [
 ]
 
 
+def _links_contextuais(pg):
+    """Slugs para os quais a página já aponta dentro do conteúdo (sem menu/rodapé)."""
+    texto = pg["intro"] + "".join(pg["blocks"]) + " ".join(h for _, h, _ in (pg.get("related") or []))
+    return {h.strip("/") for h in re.findall(r'href="(/[^"#?]*)"', texto)}
+
+
+def _plano_de_links(todas):
+    """Quem recebe link de página indexada: ver tools/interlinks.py."""
+    paginas = {pg["slug"]: pg for pg in todas}
+    ja = {}
+    for origem in interlinks.INDEXADAS:
+        if origem in paginas:
+            for destino in _links_contextuais(paginas[origem]):
+                ja.setdefault(destino, set()).add(origem)
+    plano, teto = interlinks.planejar(paginas, ja)
+    return paginas, plano, teto
+
+
 def main():
     todas = PAGINAS + INDICES
+    paginas, plano, teto = _plano_de_links(todas)
     escritas = []
     for pg in todas:
-        html = render(**pg)
+        mais = [(re.sub(r"<[^>]+>", " ", paginas[d]["h1"]).replace("  ", " ").strip(), "/%s/" % d)
+                for d in plano.get(pg["slug"], [])]
+        publicado, modificado = schema_fonte.datas_de(pg)
+        html = render(mais=mais or None, publicado=publicado, updated=modificado, **pg)
         destino = os.path.join(RAIZ, pg["slug"], "index.html")
         os.makedirs(os.path.dirname(destino), exist_ok=True)
         io.open(destino, "w", encoding="utf-8").write(html)
         escritas.append("/%s/" % pg["slug"])
+    schema_fonte.gravar_datas()
     print("Páginas geradas: %d" % len(escritas))
     for u in escritas:
         print("  " + u)
+    print("Links 'veja também' das indexadas: %d (teto por página: %d)"
+          % (sum(len(v) for v in plano.values()), teto))
+    # camada de busca: home, rastreadores, mapa do site, texto integral
+    busca_home.aplicar()
+    robots.gerar()
+    import sitemap
+    sitemap.main()
+    n, tam = llms_full.gerar()
+    llms_full.atualizar_llms_txt()
+    print("llms-full.txt: %d páginas, %d bytes" % (n, tam))
     return escritas
+
+
+def conferir():
+    """Liga o conferidor da camada de busca ao gerador: sai 1 se algo falhar."""
+    import subprocess
+    r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                                     "confere-busca.py")])
+    return r.returncode
 
 
 if __name__ == "__main__":
     main()
+    sys.exit(conferir())
