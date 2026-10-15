@@ -20,7 +20,7 @@
     'use strict';
     window.__spAcabamento = true;
     var AUTH = 'https://www.softpaybr.com/auth';
-    var WA = 'https://wa.me/5586998193851?text=' + encodeURIComponent('Olá! Vim pela página do SoftPay e quero saber mais.');
+    var WA = 'https://wa.me/5599984304630?text=' + encodeURIComponent('Olá! Vim pela página do SoftPay e quero saber mais.');
     var mm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
     var menosMovimento = !!(mm && mm.matches);
     function $$(sel, raiz) { return Array.prototype.slice.call((raiz || document).querySelectorAll(sel)); }

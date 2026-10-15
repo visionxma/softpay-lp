@@ -523,7 +523,7 @@
                 form_com_duvida: duvida.value.trim() ? 'sim' : 'nao'
             });
 
-            window.open('https://wa.me/5586998193851?text=' + encodeURIComponent(linhas.join('\n')),
+            window.open('https://wa.me/5599984304630?text=' + encodeURIComponent(linhas.join('\n')),
                         '_blank', 'noopener');
             if (nota) nota.textContent = 'Pronto — a conversa abriu numa aba nova.';
         });

@@ -60,7 +60,7 @@ def organizacao():
             "@type": "ContactPoint",
             "contactType": "customer support",
             "email": "suporte@softpaybr.com",
-            "telephone": "+55-86-99819-3851",
+            "telephone": "+55-99-98430-4630",
             "availableLanguage": "pt-BR",
         }],
         "sameAs": [APP_SITE + "/"],
