@@ -13,6 +13,41 @@
 /v2/*              /                                   301
 
 
+# --- Links de rastreio do Instagram (17/10/2026) ---
+# O link que vai na bio ou no post leva o rastro da origem; o GA4 e o GTM leem
+# utm_* da própria URL. utm_campaign fica AQUI na LP e não viaja para o
+# aplicativo (rastreio.js o retira de propósito: no app ele vira affiliate_ref).
+# Um perfil por campanha. utm_content leva perfil + posição do clique
+# (softpaybr-bio, api-story...) porque é o que chega ao aplicativo: lá o
+# utm_campaign não viaja, e sem o perfil no content não se separa os dois.
+# Perfil @softpaybr (bio, story, reels, post, mensagem direta, anúncio)
+/ig                     /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-bio  302
+/ig/                    /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-bio  302
+/ig/story               /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-story  302
+/ig/story/              /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-story  302
+/ig/reels               /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-reels  302
+/ig/reels/              /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-reels  302
+/ig/post                /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-post  302
+/ig/post/               /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-post  302
+/ig/dm                  /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-dm  302
+/ig/dm/                 /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-dm  302
+/ig/anuncio             /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-anuncio  302
+/ig/anuncio/            /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-softpaybr&utm_content=softpaybr-anuncio  302
+
+# Perfil @api.softpay
+/ig-api                 /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-bio  302
+/ig-api/                /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-bio  302
+/ig-api/story           /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-story  302
+/ig-api/story/          /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-story  302
+/ig-api/reels           /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-reels  302
+/ig-api/reels/          /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-reels  302
+/ig-api/post            /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-post  302
+/ig-api/post/           /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-post  302
+/ig-api/dm              /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-dm  302
+/ig-api/dm/             /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-dm  302
+/ig-api/anuncio         /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-anuncio  302
+/ig-api/anuncio/        /?utm_source=instagram&utm_medium=social&utm_campaign=perfil-api-softpay&utm_content=api-anuncio  302
+
 # Áreas de aplicação não existem neste site — vão para o app
 /auth              https://www.softpaybr.com/auth      302
 /login             https://www.softpaybr.com/auth      302

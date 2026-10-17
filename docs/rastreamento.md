@@ -184,6 +184,33 @@ identificadores da Meta criados na LP, e a atribuição entre LP e cadastro não
 depende do repasse na URL. O repasse continua valendo para GA4, Google Ads e
 para qualquer relatório que leia `utm_*`.
 
+## Links de rastreio do Instagram (17/10/2026)
+
+Um endereço curto por perfil, para a bio, o story, o reels, o post, a mensagem
+direta e o anúncio. Cada um abre a home já marcado; o GA4 e o GTM leem `utm_*`
+da própria URL, sem configurar nada no painel.
+
+| Perfil | Endereço | `utm_campaign` | `utm_content` |
+|---|---|---|---|
+| @softpaybr | `site.softpaybr.com/ig` (+ `/story`, `/reels`, `/post`, `/dm`, `/anuncio`) | `perfil-softpaybr` | `softpaybr-bio`, `softpaybr-story`… |
+| @api.softpay | `site.softpaybr.com/ig-api` (mesmas posições) | `perfil-api-softpay` | `api-bio`, `api-story`… |
+
+Sempre `utm_source=instagram` e `utm_medium=social`. As regras ficam em
+`public/_redirects`.
+
+**Por que o perfil também está no `utm_content`:** `utm_campaign` não viaja da
+LP ao aplicativo (ver acima: lá ele vira `affiliate_ref`). Só `utm_source`,
+`utm_medium` e `utm_content` chegam em `www.softpaybr.com/auth`, então o perfil
+precisa estar no `content` para o app separar os dois. Medido em 17/10/2026
+(runtime local da Cloudflare + navegador): `/ig` leva o botão de cadastro a
+`/auth?sp_lp=1&utm_source=instagram&utm_medium=social&utm_content=softpaybr-bio`,
+sem `utm_campaign`.
+
+**Não está feito:** o aplicativo não grava a origem na conta criada (só o
+`affiliate_ref`). Saber quantos cadastros e assinaturas vieram de cada perfil
+pede um campo de origem no cadastro do aplicativo, como o FroX já tem. É mudança
+no sistema e no banco: fica como sugestão até o Victor autorizar.
+
 ## O que falta, e de quem depende
 
 1. **Merge do PR no aplicativo** (`visionxma/softpay`, branch
