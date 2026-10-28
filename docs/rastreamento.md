@@ -162,6 +162,8 @@ sai sem a marca — é cliente voltando para a conta, não é aquisição.
 
 ### `ref` e `utm_campaign` NÃO viajam daqui. Nunca.
 
+> **Exceção fixa (28/10/2026, pedido do dono):** todo botão de cadastro da LP já nasce com `?ref=alexandrehen_cf9e` escrito no HTML (código de afiliado do Alexandre; `CADASTRO` em `tools/template.py`). "Entrar" continua em `/auth` puro. Isso não é repasse: o `rastreio.js` continua sem copiar `ref` da URL do visitante.
+
 No aplicativo, `?ref=` é o código da Plataforma de Parceiros: vira
 `accounts.affiliate_ref` no cadastro e **paga comissão em dinheiro**. E
 `utm_campaign` é o substituto documentado dele (`src/lib/partnerTracking.ts`,

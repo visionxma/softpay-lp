@@ -20,6 +20,7 @@
     'use strict';
     window.__spAcabamento = true;
     var AUTH = 'https://www.softpaybr.com/auth';
+    var CADASTRO = AUTH + '?ref=alexandrehen_cf9e';
     var WA = 'https://wa.me/5599984304630?text=' + encodeURIComponent('Olá! Vim pela página do SoftPay e quero saber mais.');
     var mm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
     var menosMovimento = !!(mm && mm.matches);
@@ -80,7 +81,7 @@
         var barra = topo.querySelector('.framer-gxirno');
         var itens = topo.querySelector('.framer-1holv8i');
         var criar = el('a', 'sp-criar-conta', 'Criar conta');
-        criar.href = AUTH; criar.setAttribute('data-track', 'complete-registration');
+        criar.href = CADASTRO; criar.setAttribute('data-track', 'complete-registration');
         if (itens) itens.appendChild(criar);
         var compacto = false, rolou = false;
         var aoRolar = function () {
@@ -107,7 +108,7 @@
             ['.framer-i2xvej', function () {
                 return '<div class="sp-painel-grade sp-painel-saiba"><div class="sp-col sp-col-larga"><p class="sp-col-titulo">Já sou cliente</p>' +
                     '<div class="sp-pilulas"><a class="sp-pilula" href="' + AUTH + '">Entrar no sistema</a>' +
-                    '<a class="sp-pilula" href="' + AUTH + '" data-track="complete-registration">Teste 7 dias grátis</a>' +
+                    '<a class="sp-pilula" href="' + CADASTRO + '" data-track="complete-registration">Teste 7 dias grátis</a>' +
                     '<a class="sp-pilula" href="' + WA + '" target="_blank" rel="noopener" data-track="whatsapp-support">Falar no WhatsApp</a></div>' +
                     '<p class="sp-col-titulo">Segmentos</p><div class="sp-painel-grade sp-sub">' + colunasSegmentos(3) + '</div></div>' +
                     colunas(SAIBA) + '</div>';

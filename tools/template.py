@@ -11,6 +11,7 @@ import schema_fonte
 from schema_fonte import BASE, ID_ORG, ID_SITE, ID_APP, BING_VERIFICACAO
 
 APP = "https://www.softpaybr.com/auth"
+CADASTRO = "https://www.softpaybr.com/auth?ref=alexandrehen_cf9e"  # link de afiliado: vale em todo botão de cadastro; "Entrar" fica em APP
 WPP = ("https://wa.me/5599984304630?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida"
        "%20sobre%20o%20SoftPay.")
 
@@ -287,7 +288,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
         <div class="nav__acoes">
             <a class="nav__link nav__entrar" href="%(app)s">Entrar</a>
-            <a class="btn btn--acao" href="%(app)s" data-track="complete-registration">Testar grátis</a>
+            <a class="btn btn--acao" href="%(cadastro)s" data-track="complete-registration">Testar grátis</a>
             <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
                 aria-label="Abrir menu">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
@@ -306,7 +307,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
         <a href="/perguntas/">Perguntas</a>
         <a href="/#planos">Planos</a>
         <a href="%(app)s">Entrar</a>
-        <a class="btn btn--acao btn--grande" href="%(app)s">Começar grátis</a>
+        <a class="btn btn--acao btn--grande" href="%(cadastro)s">Começar grátis</a>
     </div>
 
     <main id="conteudo" class="page">
@@ -325,7 +326,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
           <h2 class="display display--cartao">%(cta_title)s</h2>
           <p>%(cta_text)s</p>
           <div class="page-cta-actions">
-            <a href="%(app)s" class="btn btn--acao btn--grande" data-track="complete-registration">Começar grátis</a>
+            <a href="%(cadastro)s" class="btn btn--acao btn--grande" data-track="complete-registration">Começar grátis</a>
             <a href="%(wpp)s" target="_blank" rel="noopener" class="btn btn--linha btn--grande" data-track="whatsapp-support">Falar com o suporte</a>
           </div>
           <p class="page-cta-note">7 dias grátis · sem cartão · sem fidelidade</p>
@@ -421,7 +422,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
         </span>
     </a>
 
-    <a href="%(app)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
+    <a href="%(cadastro)s" class="float-cta" data-track="complete-registration">Começar grátis</a>
 
     <script src="/efeitos.js" defer></script>
     <script src="/rastreio.js" defer></script>
@@ -432,7 +433,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 ''' % dict(title=esc(title), description=esc(description), url=url, base=BASE,
            ld=ld, bc=bc_html, h1=h1, intro=intro, corpo=corpo, faq=faq_html, fig=fig_html,
            og_img=og_img, og_alt=esc(og_alt),
-           rel=rel_html, mais=mais_html, bing=BING_VERIFICACAO, app=APP, wpp=WPP,
+           rel=rel_html, mais=mais_html, bing=BING_VERIFICACAO, app=APP, cadastro=CADASTRO, wpp=WPP,
            cta_title=esc(cta_title or "Experimente o SoftPay por 7 dias"),
            cta_text=esc(cta_text or ("Teste todos os recursos do plano sem cartão de crédito. "
                                      "Se não fizer sentido para a sua loja, é só não continuar.")))
