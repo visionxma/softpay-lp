@@ -39,6 +39,15 @@ def organizacao():
         "@type": "Organization",
         "@id": ID_ORG,
         "name": "SoftPay",
+        # Desambiguação (02/11/2026): existe a Softpay ApS, da Dinamarca
+        # (softpay.io), que faz maquininha no celular (SoftPOS). Os dois nomes
+        # alternativos e a frase abaixo dizem aos buscadores e às IAs que este
+        # SoftPay é outro. O mesmo fato está visível em /sobre/ e nos llms.
+        "alternateName": ["SoftPay PDV", "SoftPay Brasil"],
+        "disambiguatingDescription": (
+            "Sistema de PDV e gestão para lojas brasileiras, que roda no "
+            "navegador. Não tem relação com a Softpay ApS, da Dinamarca "
+            "(softpay.io), que faz maquininha no celular (SoftPOS)."),
         "url": BASE + "/",
         "logo": {"@type": "ImageObject", "url": BASE + "/assets/logo.png"},
         "description": ("Sistema de gestão em nuvem para comércio: PDV, estoque, "

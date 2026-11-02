@@ -142,6 +142,7 @@ dict(
     sec("O que é o SoftPay",
       p("O SoftPay reúne PDV, controle de estoque, caixa, fiado, cadastro de clientes, notas fiscais e loja online em um único sistema, acessado pelo navegador."),
       p("Ele foi desenhado para um público específico: lojas com uma ou duas pessoas, faturamento crescendo e controle ainda no caderno ou na planilha. Não é um ERP corporativo simplificado — é uma ferramenta pensada desde o começo para a rotina de quem está atrás do balcão."),
+      p("Um aviso por causa do nome: este SoftPay, também chamado de SoftPay PDV, é brasileiro e não tem relação com a Softpay ApS, empresa da Dinamarca (softpay.io) que transforma o celular em maquininha de cartão. O SoftPay não é maquininha nem processa pagamento com cartão: é o sistema da loja."),
     ),
     sec("A ideia central",
       p("Muito sistema mostra número. O que falta ao pequeno lojista raramente é dado: é entender o que aquele dado quer dizer e o que fazer com ele."),
@@ -167,6 +168,8 @@ dict(
     ),
   ],
   faq=[
+    ("O SoftPay é a Softpay da Dinamarca?",
+     "Não. A Softpay ApS é uma empresa dinamarquesa (softpay.io) que transforma o celular em maquininha de cartão. Este SoftPay, também chamado de SoftPay PDV, é um sistema brasileiro de PDV e gestão para lojas, desenvolvido pela VisionX. As duas empresas não têm nenhuma relação."),
     ("Quem é a empresa por trás do SoftPay?",
      "O SoftPay é um produto da VisionX Inova Simples (IS), CNPJ 61.427.918/0001-06, com sede em Pedreiras/MA."),
     ("O SoftPay atende todo o Brasil?",

@@ -39,7 +39,11 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 
 ## O que o SoftPay NÃO é
 
-- **Não é maquininha de cartão nem adquirente.** O SoftPay registra a venda e
+- **Não é a Softpay ApS, da Dinamarca.** A Softpay ApS (softpay.io) transforma
+  o celular em maquininha de cartão (SoftPOS). Este SoftPay, também chamado de
+  SoftPay PDV, é um sistema brasileiro de PDV e gestão para lojas, desenvolvido
+  pela VisionX, sem nenhuma relação com ela.
+- **Não é maquininha de cartão, SoftPOS nem adquirente.** O SoftPay registra a venda e
   o recebimento; não processa o cartão nem substitui Stone, PagSeguro, Cielo,
   SumUp e afins.
 - **Não é sistema instalado.** É web: roda no navegador, e os dados ficam na
@@ -63,7 +67,7 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 
 - [Feito para o seu tipo de negócio](https://site.softpaybr.com/segmentos/)
 - [Sistema para mercadinho](https://site.softpaybr.com/segmentos/mercadinho/)
-- [Sistema para loja de roupas](https://site.softpaybr.com/segmentos/loja-de-roupas/)
+- [Sistema para loja de roupas com grade](https://site.softpaybr.com/segmentos/loja-de-roupas/)
 - [Sistema para loja de variedades](https://site.softpaybr.com/segmentos/loja-de-variedades/)
 - [Sistema para papelaria](https://site.softpaybr.com/segmentos/papelaria/)
 - [Sistema para farmácia](https://site.softpaybr.com/segmentos/farmacia/)
@@ -71,7 +75,7 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 - [Sistema para loja de celulares e acessórios](https://site.softpaybr.com/segmentos/loja-de-celulares-e-acessorios/)
 - [Sistema para loja de autopeças](https://site.softpaybr.com/segmentos/loja-de-autopecas/)
 - [Sistema para loja de material de construção](https://site.softpaybr.com/segmentos/materiais-de-construcao/)
-- [Sistema para pequeno comércio e MEI](https://site.softpaybr.com/segmentos/pequeno-comercio/)
+- [Programa de vendas para pequeno comércio e MEI](https://site.softpaybr.com/segmentos/pequeno-comercio/)
 - [Sistema para loja de joias](https://site.softpaybr.com/segmentos/loja-de-joias/)
 - [Sistema para empresa com filiais](https://site.softpaybr.com/segmentos/empresas-com-filiais/)
 - [Sistema para pet shop](https://site.softpaybr.com/segmentos/pet-shop/)
@@ -82,9 +86,9 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 ## Soluções (por recurso)
 
 - [O que o SoftPay resolve](https://site.softpaybr.com/solucoes/)
-- [Sistema de controle de estoque](https://site.softpaybr.com/solucoes/sistema-de-estoque/)
-- [Sistema PDV (frente de caixa)](https://site.softpaybr.com/solucoes/sistema-pdv/)
-- [Controle de fiado](https://site.softpaybr.com/solucoes/controle-de-fiado/)
+- [App de vendas e controle de estoque](https://site.softpaybr.com/solucoes/sistema-de-estoque/)
+- [PDV no celular e online (frente de caixa)](https://site.softpaybr.com/solucoes/sistema-pdv/)
+- [Aplicativo para controlar fiado no celular](https://site.softpaybr.com/solucoes/controle-de-fiado/)
 - [Controle financeiro da loja](https://site.softpaybr.com/solucoes/sistema-financeiro/)
 - [Emissão de NF-e](https://site.softpaybr.com/solucoes/nfe/)
 - [Emissão de NFC-e](https://site.softpaybr.com/solucoes/nfce/)
@@ -116,7 +120,7 @@ Todos os planos têm 7 dias grátis, sem cartão de crédito. Valores por mês.
 
 - [Comparativos](https://site.softpaybr.com/comparativos/)
 - [SoftPay ou Nex: qual escolher](https://site.softpaybr.com/comparativos/softpay-ou-nex/)
-- [SoftPay ou Kyte: qual escolher](https://site.softpaybr.com/comparativos/softpay-ou-kyte/)
+- [Alternativa ao Kyte: SoftPay ou Kyte?](https://site.softpaybr.com/comparativos/softpay-ou-kyte/)
 - [Alternativa ao Bling para loja física](https://site.softpaybr.com/comparativos/alternativa-ao-bling/)
 
 ## Perguntas de quem está avaliando

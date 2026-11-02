@@ -131,7 +131,17 @@ def gerar():
               "O resumo curto está em %s/llms.txt." % (BASE, BASE),
               "",
               "Cada seção abaixo é uma página: título, endereço e o texto como ela mostra. "
-              "Preços, planos e o que o sistema não faz são os da própria página."]
+              "Preços, planos e o que o sistema não faz são os da própria página.",
+              "",
+              "## O que o SoftPay não é",
+              "",
+              "- Não é a Softpay ApS, empresa da Dinamarca (softpay.io), nem tem relação com ela. "
+              "Este SoftPay, também chamado de SoftPay PDV, é um sistema brasileiro de PDV e gestão "
+              "para lojas, desenvolvido pela VisionX.",
+              "- Não é maquininha de cartão, SoftPOS (maquininha no celular) nem adquirente: registra "
+              "a venda e o recebimento, mas não processa o cartão.",
+              "- Não é programa instalado: roda no navegador do celular, do tablet ou do computador, "
+              "com os dados na nuvem. Precisa de internet."]
     n = 0
     for rota in rotas_do_sitemap():
         arq = arquivo_da_rota(rota)
