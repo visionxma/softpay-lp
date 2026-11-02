@@ -67,6 +67,11 @@
           "@type": "Organization",
           "@id": "https://site.softpaybr.com/#organizacao",
           "name": "SoftPay",
+          "alternateName": [
+            "SoftPay PDV",
+            "SoftPay Brasil"
+          ],
+          "disambiguatingDescription": "Sistema de PDV e gestão para lojas brasileiras, que roda no navegador. Não tem relação com a Softpay ApS, da Dinamarca (softpay.io), que faz maquininha no celular (SoftPOS).",
           "url": "https://site.softpaybr.com/",
           "logo": {
             "@type": "ImageObject",
@@ -181,7 +186,7 @@
             "@id": "https://site.softpaybr.com/#softpay"
           },
           "primaryImageOfPage": "https://site.softpaybr.com/assets/desktop.webp",
-          "dateModified": "2026-09-26"
+          "dateModified": "2026-11-02"
         },
         {
           "@type": "FAQPage",
@@ -662,7 +667,7 @@
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Dinheiro, Pix, cartão, fiado e misto</li>
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Funciona no computador do balcão e no celular</li>
                             </ul>
-                            <a class="link-seta" href="/solucoes/sistema-pdv/">Ver o PDV por inteiro
+                            <a class="link-seta" href="/solucoes/sistema-pdv/">Ver o PDV no celular
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura painel__figura--tela">
@@ -691,7 +696,7 @@
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Custo e margem por produto</li>
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Curva ABC: o que gira e o que empata dinheiro</li>
                             </ul>
-                            <a class="link-seta" href="/solucoes/sistema-de-estoque/">Ver o controle de estoque
+                            <a class="link-seta" href="/solucoes/sistema-de-estoque/">Ver o app de vendas e estoque
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
@@ -714,7 +719,7 @@
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cobrança por link Pix no WhatsApp</li>
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Baixa automática quando o Pix cai</li>
                             </ul>
-                            <a class="link-seta" href="/solucoes/controle-de-fiado/">Ver o controle de fiado
+                            <a class="link-seta" href="/solucoes/controle-de-fiado/">Ver o app para controlar fiado
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
@@ -1321,7 +1326,7 @@
                     </details>
                     <details class="faq__item faq__extra" name="faq" hidden>
                         <summary>O SoftPay emite NF-e e NFC-e?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
-                        <div><p>Sim, nos planos Nota Fiscal e ERP Completo, que incluem cadastro fiscal e pacote do contador. A emissão cobre NFC-e, NF-e, NFS-e e MDF-e.</p></div>
+                        <div><p>A emissão de NF-e e NFC-e está nos planos Nota Fiscal e ERP Completo e consta como recurso em ativação. Se a nota é decisiva para você, confirme com o suporte antes de contratar.</p></div>
                     </details>
                     <details class="faq__item faq__extra" name="faq" hidden>
                         <summary>Posso migrar de outro sistema ou de uma planilha?<span class="faq__mais"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span></summary>
@@ -1427,6 +1432,7 @@
                         <li><a href="/segmentos/farmacia/">Farmácia</a></li>
                         <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
                         <li><a href="/segmentos/papelaria/">Papelaria</a></li>
+                        <li><a href="/segmentos/pequeno-comercio/">Pequeno comércio</a></li>
                     </ul>
                 </div>
 
@@ -1436,6 +1442,7 @@
                         <li><a href="/guias/como-sair-do-caderno/">Sair do caderno</a></li>
                         <li><a href="/guias/como-controlar-estoque/">Controlar estoque</a></li>
                         <li><a href="/guias/como-calcular-margem-de-lucro/">Calcular margem</a></li>
+                        <li><a href="/comparativos/softpay-ou-kyte/">Alternativa ao Kyte</a></li>
                         <li><a href="/blog/">Blog</a></li>
                         <li><a href="/perguntas/">Perguntas</a></li>
                     </ul>
