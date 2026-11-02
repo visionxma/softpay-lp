@@ -7,7 +7,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://site.softpaybr.com/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -19,13 +19,13 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/comparativos/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -65,7 +65,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-roupas/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -145,7 +145,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/pequeno-comercio/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -215,7 +215,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-de-estoque/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -225,7 +225,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/sistema-pdv/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -235,7 +235,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/controle-de-fiado/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -321,7 +321,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/comparativos/softpay-ou-kyte/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -333,7 +333,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-estoque/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -343,7 +343,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-caixa-da-loja/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -353,7 +353,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-fiado/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -547,7 +547,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/tem-suporte-humano/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -565,31 +565,31 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/sobre/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/contato/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/termos</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/privacidade</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/reembolso</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

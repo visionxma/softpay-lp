@@ -1,22 +1,22 @@
 {
  "_home": {
-  "hash": "144ff47bf0bf",
-  "modificado": "2026-09-26",
+  "hash": "6895a365a1d7",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-04"
  },
  "_privacidade": {
-  "hash": "e5a915ea33e6",
-  "modificado": "2026-09-26",
+  "hash": "2c33160c0203",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-04"
  },
  "_reembolso": {
-  "hash": "be6f1b19ab26",
-  "modificado": "2026-09-26",
+  "hash": "d07107cad41b",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-04"
  },
  "_termos": {
-  "hash": "5924c13c60e0",
-  "modificado": "2026-09-26",
+  "hash": "7243110a31f5",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-04"
  },
  "blog": {
@@ -55,8 +55,8 @@
   "publicado": "2026-09-06"
  },
  "comparativos": {
-  "hash": "e0984ba04950",
-  "modificado": "2026-09-08",
+  "hash": "41be277c95eb",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "comparativos/alternativa-ao-bling": {
@@ -65,8 +65,8 @@
   "publicado": "2026-09-06"
  },
  "comparativos/softpay-ou-kyte": {
-  "hash": "52e3e32d98db",
-  "modificado": "2026-09-17",
+  "hash": "4664845da7fe",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "comparativos/softpay-ou-nex": {
@@ -75,8 +75,8 @@
   "publicado": "2026-09-06"
  },
  "contato": {
-  "hash": "703951164c6b",
-  "modificado": "2026-09-08",
+  "hash": "699da5b6e11c",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "guias": {
@@ -100,18 +100,18 @@
   "publicado": "2026-09-06"
  },
  "guias/como-controlar-caixa-da-loja": {
-  "hash": "ba3459621306",
-  "modificado": "2026-09-06",
+  "hash": "b492237cdf10",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "guias/como-controlar-estoque": {
-  "hash": "1dbfec69468e",
-  "modificado": "2026-09-06",
+  "hash": "c9798e8cc56d",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "guias/como-controlar-fiado": {
-  "hash": "f29d79d3e206",
-  "modificado": "2026-09-06",
+  "hash": "42db0ff02ddc",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "guias/como-escolher-sistema-de-gestao": {
@@ -229,13 +229,13 @@
   "publicado": "2026-09-06"
  },
  "perguntas/tem-suporte-humano": {
-  "hash": "c2f34915881d",
-  "modificado": "2026-09-08",
+  "hash": "742c6b4cf093",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "segmentos": {
-  "hash": "fc9a8743e0ef",
-  "modificado": "2026-09-08",
+  "hash": "12d8e58570d3",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "segmentos/cosmeticos-e-perfumaria": {
@@ -284,8 +284,8 @@
   "publicado": "2026-09-07"
  },
  "segmentos/loja-de-roupas": {
-  "hash": "ce12771413af",
-  "modificado": "2026-09-06",
+  "hash": "f551fede6821",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "segmentos/loja-de-variedades": {
@@ -309,8 +309,8 @@
   "publicado": "2026-09-06"
  },
  "segmentos/pequeno-comercio": {
-  "hash": "7c54b8b4c8a5",
-  "modificado": "2026-09-17",
+  "hash": "0b10e3f4d296",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "segmentos/pet-shop": {
@@ -324,13 +324,13 @@
   "publicado": "2026-09-06"
  },
  "sobre": {
-  "hash": "152c80012076",
-  "modificado": "2026-09-08",
+  "hash": "8cac4c71ccea",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "solucoes": {
-  "hash": "df8230dde6b5",
-  "modificado": "2026-09-08",
+  "hash": "8dc77141a34c",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "solucoes/bot-whatsapp": {
@@ -344,8 +344,8 @@
   "publicado": "2026-09-06"
  },
  "solucoes/controle-de-fiado": {
-  "hash": "c619c7076c39",
-  "modificado": "2026-09-07",
+  "hash": "f58f01c80905",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "solucoes/loja-online": {
@@ -369,8 +369,8 @@
   "publicado": "2026-09-06"
  },
  "solucoes/sistema-de-estoque": {
-  "hash": "25fe88d8229b",
-  "modificado": "2026-09-07",
+  "hash": "83cca0fe42c9",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  },
  "solucoes/sistema-financeiro": {
@@ -379,8 +379,8 @@
   "publicado": "2026-09-06"
  },
  "solucoes/sistema-pdv": {
-  "hash": "3be230e86398",
-  "modificado": "2026-09-17",
+  "hash": "207e98ad7940",
+  "modificado": "2026-11-02",
   "publicado": "2026-09-06"
  }
 }
