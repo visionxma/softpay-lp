@@ -32,9 +32,10 @@ PLANOS = [("Nota Fiscal", 65), ("Comércio", 69), ("Loja", 89), ("ERP Completo",
 
 
 def organizacao():
-    # sameAs: só perfis que existem. Hoje o único endereço próprio do SoftPay
-    # fora deste site é o aplicativo. Perfil de rede social entra aqui quando
-    # for criado (nenhum foi encontrado em 10/10/2026).
+    # sameAs: só perfis que existem e respondem 200. O aplicativo e a página do
+    # SoftPay no LinkedIn (criada em 02/11/2026, nome "SoftPay PDV", com a
+    # desambiguação da Softpay ApS na visão geral). Diretório entra aqui só
+    # depois que a ficha pública estiver no ar (G2 e B2B Stack em análise).
     return {
         "@type": "Organization",
         "@id": ID_ORG,
@@ -72,7 +73,7 @@ def organizacao():
             "telephone": "+55-99-98430-4630",
             "availableLanguage": "pt-BR",
         }],
-        "sameAs": [APP_SITE + "/"],
+        "sameAs": [APP_SITE + "/", "https://www.linkedin.com/company/softpaybr/"],
     }
 
 
