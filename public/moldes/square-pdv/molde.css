@@ -421,8 +421,19 @@
   .page-molde.mx-square-pdv .mxq-faq__item summary:hover .mxq-faq__q { color: var(--q-acao); }
 }
 
-/* hero: trilha + título + intro + botões, e o cartão do palco preenche o resto da tela (menu fixo de 84 px) */
-.page-molde.mx-square-pdv .mxq-topo { padding-top: calc(84px + clamp(28px, 18px + 2.6vw, 64px)); }
+/* hero: trilha + título + intro + botões. Cobre a tela inteira (regra da casa, vence a referência, onde o cartão do
+   palco espiava por baixo): 100svh, fundo de ponta a ponta correndo por trás do menu estendido, e a sobra de altura
+   dividida IGUAL entre os vãos (space-evenly), nunca toda acima e abaixo do bloco (doutrina: teto de vão 120/72 px).
+   O palco entra logo depois da primeira tela. */
+.page-molde.mx-square-pdv .mxq-topo {
+  min-height: 100svh; display: flex; flex-direction: column;
+  padding-top: calc(84px + clamp(8px, 2px + 1.6vw, 24px)); padding-bottom: clamp(20px, 12px + 2vw, 40px);
+  background-color: #fff;
+  background-image: linear-gradient(180deg, #E8F3FB 0%, #F4F9FD 55%, #fff 100%);
+}
+.page-molde.mx-square-pdv .mxq-topo__texto {
+  flex: 1 0 auto; display: flex; flex-direction: column; justify-content: space-evenly;
+}
 .page-molde.mx-square-pdv .mxq-trilha {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 8px;
   font: 500 14px/20px var(--q-sans); letter-spacing: 0; text-transform: none; color: var(--q-cinza);
@@ -431,12 +442,22 @@
 .page-molde.mx-square-pdv .mxq-trilha a:hover { color: var(--q-acao); text-decoration: underline; }
 .page-molde.mx-square-pdv .mxq-trilha [aria-current] { color: var(--q-tinta); font-weight: 600; }
 .page-molde.mx-square-pdv .mxq-olho { margin-bottom: 16px; }
+/* tamanho do título = o da referência (56 → 90 px): com a hero em 100svh, o título menor deixava a primeira tela rala */
 .page-molde.mx-square-pdv .mxq-h1 {
-  font-size: clamp(38px, 26.6px + 2.92vw, 80px); line-height: 1.04; letter-spacing: -0.025em; max-width: 18ch;
+  font-size: clamp(56px, 43.37px + 3.238vw, 90px); line-height: 1.02; letter-spacing: -0.025em; max-width: 18ch;
 }
 .page-molde.mx-square-pdv .mxq-intro { font-size: clamp(16px, 15.3px + .19vw, 18px); line-height: 1.55; margin-top: 18px; }
 .page-molde.mx-square-pdv .mxq-topo .mxq-botoes { margin-top: 28px; }
 .page-molde.mx-square-pdv .mxq-topo .mxq-botoes > * { flex: 1 1 9rem; max-width: 13rem; }
+/* com a hero em 100svh quem separa os blocos é o space-evenly; margem própria somava ao vão e passava do teto de
+   72 px no celular (79, 81 e 90 px medidos em 390). Zerada aqui, depois das regras acima, que têm o mesmo peso. */
+.page-molde.mx-square-pdv .mxq-topo .mxq-topo__texto > * { margin-top: 0; margin-bottom: 0; }
+@media (max-width: 47.99rem) {
+  /* celular alto: a sobra passava do teto de 72 (104, 75, 75, 75 e 95 px em 390×844, medição de 03/11, 16:07). O
+     respiro de cima vira a altura do menu e o título cresce com a altura da tela, ocupando a sobra */
+  .page-molde.mx-square-pdv .mxq-topo { padding-top: var(--nav-h, 4.5rem); padding-bottom: 8px; }
+  .page-molde.mx-square-pdv .mxq-h1 { font-size: clamp(56px, 8.2svh, 76px); }
+}
 
 /* palco: o cartão fica preso na tela, cresce até as bordas, a foto escurece e a manchete acende palavra por palavra */
 .page-molde.mx-square-pdv .mxq-palco {

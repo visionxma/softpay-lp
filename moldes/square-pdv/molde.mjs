@@ -275,7 +275,9 @@ function precos(D, C) {
   const plano = (p, i) => `<article class="mxq-plano${p.destaque ? ' mxq-plano--destaque' : ''}"${D.origem ? '' : ` data-plano="${i}"`}>`
     + `<div class="mxq-plano__cab"><h3 class="mxq-plano__nome">${sr(r[0])}${e(p.nome)}</h3>${p.selo ? `<span class="mxq-plano__selo">${e(p.selo)}</span>` : ''}</div>`
     + `<div class="mxq-plano__desc">${r[2] ? `<p class="mxq-plano__rotulo">${e(r[2])}</p>` : ''}<p>${p.desc}</p></div>`
-    + `<hr class="mxq-plano__linha"><p class="mxq-plano__preco">${sr(r[1])}${e(p.preco)}</p><p class="mxq-plano__unidade">${e(p.unidade)}</p>`
+    // o rótulo do leitor de tela leva o nome do plano: "Preço do plano Loja: R$ 89/mês" (cada preço preso ao seu
+    // plano para quem ouve a página e para a conferência de busca, que exige plano e preço juntos)
+    + `<hr class="mxq-plano__linha"><p class="mxq-plano__preco">${r[1] ? `<span class="mxq-sr">${e(r[1])}${D.origem ? '' : ` do plano ${e(p.nome)}`}: </span>` : ''}${e(p.preco)}</p><p class="mxq-plano__unidade">${e(p.unidade)}</p>`
     + botao(p.botao, 'mxq-plano__botao') + `</article>`;
   const L = P.largo;
   // celular (página vestida): os 3 cartões ficam lado a lado e o que o plano tocado inclui abre numa faixa da largura
