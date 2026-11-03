@@ -1,0 +1,36 @@
+/* origem.css — só na prova: troca as variáveis do molde pelas do Nex, medidas na captura de 03/11/2026 (Inter,
+   espaçamento de letra do Framer −0,03em no h1/h2, −0,04em no título grande, na frase e nos números, −0,02em no h3;
+   azul do botão rgb(0,115,230), lilás, creme, painel verde, cartão #191919, azuis do cartão partido).
+   A página vestida não carrega este arquivo. */
+
+.mx-nextar-bebidas {
+  --n-titulo: "Inter", "Inter Placeholder", system-ui, sans-serif;
+  --n-sans: "Inter", "Inter Placeholder", system-ui, sans-serif;
+  --n-ls-h1: -0.03em;
+  --n-ls-h2: -0.03em;
+  --n-ls-h3: -0.02em;
+  --n-ls-grande: -0.04em;
+  --n-tinta: rgb(0, 0, 0);
+  --n-texto: rgb(51, 51, 51);
+  --n-cinza: rgb(113, 113, 113);
+  --n-lista: rgba(0, 0, 0, .5);
+  --n-acao: rgb(0, 115, 230);
+  --n-acao-forte: rgb(9, 103, 218);
+  --n-sobre-acao: #ffffff;
+  --n-olho: rgb(0, 152, 249);
+  --n-olho-verde: rgb(116, 176, 83);
+  --n-olho-laranja: rgb(185, 47, 4);
+  --n-fundo: #ffffff;
+  --n-lilas: rgb(250, 241, 255);
+  --n-creme: rgb(255, 244, 201);
+  --n-painel-verde: rgb(236, 247, 230);
+  --n-linha: rgb(215, 215, 215);
+  --n-noite: rgb(0, 0, 0);
+  --n-cartao: rgb(25, 25, 25);
+  --n-fio-escuro: rgba(255, 255, 255, .15);
+  --n-sobre-escuro: #ffffff;
+  --n-resposta: rgb(230, 230, 230);
+  --n-num-claro: rgb(229, 244, 255);
+  --n-num-azul: rgb(9, 103, 218);
+  --n-num-tinta: rgba(0, 0, 0, .9);
+}

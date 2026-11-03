@@ -1,0 +1,337 @@
+{
+  "referencia": "https://www.nextar.com.br/segmento/loja-de-bebidas",
+  "molde": "nextar-bebidas",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/nextar-bebidas",
+  "quando": "2026-11-03T17:44:09.559Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 8677,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero: texto | aparelhos + recursos em 2 colunas",
+          "ref": {
+            "y": 0,
+            "altura": 1024
+          },
+          "molde": {
+            "y": 0,
+            "altura": 952
+          },
+          "total": 0.0559,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 952
+        },
+        {
+          "secao": 1,
+          "tipo": "faixa lilás centrada + print grande",
+          "ref": {
+            "y": 1024,
+            "altura": 724
+          },
+          "molde": {
+            "y": 952,
+            "altura": 724
+          },
+          "total": 0.0215,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 724
+        },
+        {
+          "secao": 2,
+          "tipo": "faixa centrada + print grande, fio embaixo",
+          "ref": {
+            "y": 1749,
+            "altura": 757
+          },
+          "molde": {
+            "y": 1676,
+            "altura": 731
+          },
+          "total": 0.0583,
+          "altura_dif": 0.0343,
+          "passou": true,
+          "motivos": [],
+          "altura": 757
+        },
+        {
+          "secao": 3,
+          "tipo": "linha: texto com botão | imagem",
+          "ref": {
+            "y": 2506,
+            "altura": 800
+          },
+          "molde": {
+            "y": 2408,
+            "altura": 799
+          },
+          "total": 0.0361,
+          "altura_dif": 0.0013,
+          "passou": true,
+          "motivos": [],
+          "altura": 800
+        },
+        {
+          "secao": 4,
+          "tipo": "linha invertida: painel | texto",
+          "ref": {
+            "y": 3306,
+            "altura": 750
+          },
+          "molde": {
+            "y": 3207,
+            "altura": 737
+          },
+          "total": 0.0743,
+          "altura_dif": 0.0173,
+          "passou": true,
+          "motivos": [],
+          "altura": 750
+        },
+        {
+          "secao": 5,
+          "tipo": "faixa creme: título | 3 recursos com ícone",
+          "ref": {
+            "y": 4056,
+            "altura": 1223
+          },
+          "molde": {
+            "y": 3944,
+            "altura": 1217
+          },
+          "total": 0.0799,
+          "altura_dif": 0.0049,
+          "passou": true,
+          "motivos": [],
+          "altura": 1223
+        },
+        {
+          "secao": 6,
+          "tipo": "FAQ em cartão escuro",
+          "ref": {
+            "y": 5351,
+            "altura": 1290
+          },
+          "molde": {
+            "y": 5233,
+            "altura": 1297
+          },
+          "total": 0.0488,
+          "altura_dif": 0.0054,
+          "passou": true,
+          "motivos": [],
+          "altura": 1290
+        },
+        {
+          "secao": 7,
+          "tipo": "depoimento: foto redonda | frase",
+          "ref": {
+            "y": 6745,
+            "altura": 547
+          },
+          "molde": {
+            "y": 6634,
+            "altura": 547
+          },
+          "total": 0.0187,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 547
+        },
+        {
+          "secao": 8,
+          "tipo": "cartão partido: números | fale com a gente",
+          "ref": {
+            "y": 7364,
+            "altura": 1296
+          },
+          "molde": {
+            "y": 7253,
+            "altura": 1296
+          },
+          "total": 0.0839,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1296
+        }
+      ],
+      "total": 0.0572,
+      "pior": 0.0839,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 8046,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero: texto | aparelhos + recursos em 2 colunas",
+          "ref": {
+            "y": 0,
+            "altura": 869
+          },
+          "molde": {
+            "y": 0,
+            "altura": 773
+          },
+          "total": 0.0393,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 773
+        },
+        {
+          "secao": 1,
+          "tipo": "faixa lilás centrada + print grande",
+          "ref": {
+            "y": 869,
+            "altura": 1235
+          },
+          "molde": {
+            "y": 773,
+            "altura": 1235
+          },
+          "total": 0.0161,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1235
+        },
+        {
+          "secao": 2,
+          "tipo": "faixa centrada + print grande, fio embaixo",
+          "ref": {
+            "y": 2104,
+            "altura": 1161
+          },
+          "molde": {
+            "y": 2008,
+            "altura": 1162
+          },
+          "total": 0.0083,
+          "altura_dif": 0.0009,
+          "passou": true,
+          "motivos": [],
+          "altura": 1161
+        },
+        {
+          "secao": 3,
+          "tipo": "linha: texto com botão | imagem",
+          "ref": {
+            "y": 3265,
+            "altura": 667
+          },
+          "molde": {
+            "y": 3169,
+            "altura": 668
+          },
+          "total": 0.011,
+          "altura_dif": 0.0015,
+          "passou": true,
+          "motivos": [],
+          "altura": 667
+        },
+        {
+          "secao": 4,
+          "tipo": "linha invertida: painel | texto",
+          "ref": {
+            "y": 3931,
+            "altura": 738
+          },
+          "molde": {
+            "y": 3837,
+            "altura": 738
+          },
+          "total": 0.0371,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 738
+        },
+        {
+          "secao": 5,
+          "tipo": "faixa creme: título | 3 recursos com ícone",
+          "ref": {
+            "y": 4669,
+            "altura": 866
+          },
+          "molde": {
+            "y": 4575,
+            "altura": 866
+          },
+          "total": 0.0279,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 866
+        },
+        {
+          "secao": 6,
+          "tipo": "FAQ em cartão escuro",
+          "ref": {
+            "y": 5607,
+            "altura": 982
+          },
+          "molde": {
+            "y": 5513,
+            "altura": 986
+          },
+          "total": 0.0262,
+          "altura_dif": 0.0041,
+          "passou": true,
+          "motivos": [],
+          "altura": 982
+        },
+        {
+          "secao": 7,
+          "tipo": "depoimento: foto redonda | frase",
+          "ref": {
+            "y": 6693,
+            "altura": 592
+          },
+          "molde": {
+            "y": 6603,
+            "altura": 592
+          },
+          "total": 0.0119,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 592
+        },
+        {
+          "secao": 8,
+          "tipo": "cartão partido: números | fale com a gente",
+          "ref": {
+            "y": 7357,
+            "altura": 651
+          },
+          "molde": {
+            "y": 7267,
+            "altura": 651
+          },
+          "total": 0.0481,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 651
+        }
+      ],
+      "total": 0.0239,
+      "pior": 0.0481,
+      "passou": true
+    }
+  },
+  "omitidas": [],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}

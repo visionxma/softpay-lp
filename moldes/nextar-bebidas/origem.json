@@ -1,0 +1,153 @@
+{
+  "_fonte": "https://www.nextar.com.br/segmento/loja-de-bebidas, textos da versão de computador, lidos do HTML servido em 03/11/2026",
+  "topo": {
+    "h1": "Um sistema completo para loja de bebidas",
+    "intro": "Com o Nex, você tem acesso ao controle de pedidos, de vendas, de estoque e de caixa. Acompanhe as entregas  e registre os fornecedores com facilidade.",
+    "botao": "Teste 14 dias grátis",
+    "planos": "Planos a partir de R$39",
+    "planosNota": "Sem cobrança automática e sem fidelidade.",
+    "notaCelular": "Teste sem cartão de crédito e cancele quando quiser"
+  },
+  "chips": {
+    "titulo": "Recursos principais para este segmento:",
+    "itens": [
+      "Controle de vendas",
+      "Cadastro de caixa",
+      "Controle de validade",
+      "Controle de estoque",
+      "Vendas no cartão via TEF",
+      "Emissão via comprovantes"
+    ]
+  },
+  "linhas": [
+    {
+      "olho": "Venda online sem complicação",
+      "titulo": "Catálogo de bebidas",
+      "texto": "Organize seus produtos por categoria e venda bebidas online pelo catálogo do Nex. É mais alcance para seu comércio e maior autonomia para os clientes.",
+      "botao": "",
+      "ref": "linha-1"
+    },
+    {
+      "olho": "Prático, automático e organizado",
+      "titulo": "Controle de estoque",
+      "texto": "Mantenha seu estoque de bebidas sob controle. Acompanhe o histórico de movimentações, a quantidade disponível e a validade dos produtos de forma organizada.",
+      "botao": "",
+      "ref": "linha-2"
+    },
+    {
+      "olho": "Mais organização nas compras",
+      "titulo": "Gestão de fornecedores",
+      "texto": "Organize sua lista de fornecedores em um só lugar, registre os produtos fornecidos por cada contato, acompanhe o histórico de compras e consulte as entregas.",
+      "botao": "Teste 14 dias grátis",
+      "ref": "linha-3"
+    },
+    {
+      "olho": "Mais valor em cada venda",
+      "titulo": "Crie combos e kits promocionais",
+      "texto": "Monte combos e kits de produtos com preços promocionais para incentivar a compra de itens complementares, mas com controle separado dos estoques.",
+      "botao": "Teste 14 dias grátis",
+      "ref": "linha-4"
+    }
+  ],
+  "outros": {
+    "olho": "Mais recursos para o dia a dia",
+    "titulo": "Outros recursos para seu depósito de bebidas",
+    "botao": "Teste 14 dias grátis",
+    "itens": [
+      {
+        "titulo": "PDV",
+        "texto": "Agilize suas vendas com um PDV completo e personalizável na sua loja. Integre o sistema com equipamentos, controle meios de pagamento e mais.",
+        "ref": "outro-1"
+      },
+      {
+        "titulo": "Vendas no cartão via TEF",
+        "texto": "Realize vendas no cartão de forma integrada ao PDV, com mais agilidade e segurança no pagamento. Evite erros manuais e tenha as transações registradas diretamente no sistema Nex.",
+        "ref": "outro-2"
+      },
+      {
+        "titulo": "Emissão de comprovantes",
+        "texto": "Emita comprovantes com praticidade ao finalizar cada venda, garantindo mais clareza para o cliente e mais controle para sua loja.",
+        "ref": "outro-3"
+      }
+    ]
+  },
+  "faq": {
+    "titulo": "Perguntas frequentes",
+    "itens": [
+      [
+        "O Nex é grátis mesmo?",
+        [
+          "Sim! O Nex oferece um plano gratuito com recursos básicos de gestão, como cadastro de produtos e uso do PDV.",
+          "Já se a sua loja precisa de ferramentas mais completas como controle de estoque, relatórios e mais, você pode optar por um de nossos planos pagos, a partir de R$39,00. <a href=\"#\">Confira todos os recursos e planos disponíveis</a>.",
+          "Ah, e vale lembrar: não há nenhum custo de instalação em nenhuma das versões do Nex, gratuita ou paga."
+        ]
+      ],
+      [
+        "Como funciona o teste de 14 dias?",
+        "Ao criar sua conta no Nex, você já começa com 14 dias gratuitos do nosso plano Pro, sem precisar cadastrar seu cartão."
+      ],
+      [
+        "O Nex funciona sem internet?",
+        "Sim, com o Nex você consegue vender mesmo sem internet."
+      ],
+      [
+        "Consigo migrar meus dados de outro sistema para o Nex?",
+        "Sim. O suporte especializado do Nex transforma os dados do seu sistema atual para o formato compatível com o Nex gratuitamente."
+      ],
+      [
+        "Meus dados estão seguros no Nex?",
+        "Sim! Seus dados ficam salvos automaticamente na nuvem, com total segurança."
+      ],
+      [
+        "O Nex tem limite de usuários?",
+        "Não! No Nex você pode cadastrar quantos usuários quiser, sem restrições."
+      ],
+      [
+        "Preciso de um computador potente para usar o Nex?",
+        "Não! O Nex é um sistema leve e compatível com a maioria dos computadores usados no comércio."
+      ],
+      [
+        "Quais recursos estão disponíveis no Plano Grátis do Nex?",
+        "O Plano Grátis do Nex não tem custo nem prazo para acabar."
+      ]
+    ]
+  },
+  "depoimento": {
+    "frase": "\"O Nex simplifica a minha operação. Não troco por nada.\"",
+    "nome": "Camila Yamada",
+    "onde": "Lojas Yavi, SP",
+    "botao": "Veja o vídeo do depoimento",
+    "ref": "depoimento"
+  },
+  "numeros": [
+    [
+      "50 mil",
+      "lojas usando todo dia em suas operações"
+    ],
+    [
+      "113",
+      "países no mundo com usuários do Nex"
+    ],
+    [
+      "23",
+      "anos simplificando o comércio"
+    ]
+  ],
+  "contato": {
+    "titulo": "Fale com a gente",
+    "itens": [
+      [
+        "Chat e WhatsApp",
+        "Te respondemos em até 5 minutos"
+      ],
+      [
+        "E-mail",
+        "Nosso e-mail é o suporte@nextar.com.br"
+      ],
+      [
+        "Central de ajuda",
+        "Tutoriais em formato de vídeo e texto"
+      ]
+    ]
+  }
+}
