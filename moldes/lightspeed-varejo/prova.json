@@ -1,0 +1,445 @@
+{
+  "referencia": "https://www.lightspeedhq.com/pos/retail/",
+  "molde": "lightspeed-varejo",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/lightspeed-varejo",
+  "quando": "2026-11-03T15:05:49.415Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 11350,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero dividido: texto + foto em caixa arredondada",
+          "ref": {
+            "y": 115,
+            "altura": 774
+          },
+          "molde": {
+            "y": 0,
+            "altura": 774
+          },
+          "total": 0.004,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 774
+        },
+        {
+          "secao": 1,
+          "tipo": "três cartões de número",
+          "ref": {
+            "y": 889,
+            "altura": 692
+          },
+          "molde": {
+            "y": 774,
+            "altura": 692
+          },
+          "total": 0.0111,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 692
+        },
+        {
+          "secao": 2,
+          "tipo": "faixa escura com botão e imagem larga",
+          "ref": {
+            "y": 1581,
+            "altura": 616
+          },
+          "molde": {
+            "y": 1466,
+            "altura": 616
+          },
+          "total": 0.0185,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 616
+        },
+        {
+          "secao": 3,
+          "tipo": "meia largura com pílula (imagem à esquerda)",
+          "ref": {
+            "y": 2198,
+            "altura": 806
+          },
+          "molde": {
+            "y": 2082,
+            "altura": 806
+          },
+          "total": 0.0529,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 806
+        },
+        {
+          "secao": 4,
+          "tipo": "cartões com ícone e lista",
+          "ref": {
+            "y": 3004,
+            "altura": 1798
+          },
+          "molde": {
+            "y": 2888,
+            "altura": 1798
+          },
+          "total": 0.0215,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1798
+        },
+        {
+          "secao": 6,
+          "tipo": "seis cartões com ilustração",
+          "ref": {
+            "y": 5114,
+            "altura": 3124
+          },
+          "molde": {
+            "y": 4686,
+            "altura": 3124
+          },
+          "total": 0.0247,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 3124
+        },
+        {
+          "secao": 7,
+          "tipo": "meia largura (imagem à direita)",
+          "ref": {
+            "y": 8237,
+            "altura": 613
+          },
+          "molde": {
+            "y": 7810,
+            "altura": 613
+          },
+          "total": 0.0122,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 613
+        },
+        {
+          "secao": 8,
+          "tipo": "meia largura com grade de integrações",
+          "ref": {
+            "y": 8850,
+            "altura": 634
+          },
+          "molde": {
+            "y": 8423,
+            "altura": 634
+          },
+          "total": 0.0216,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 634
+        },
+        {
+          "secao": 9,
+          "tipo": "meia largura com lista de checagem",
+          "ref": {
+            "y": 9484,
+            "altura": 736
+          },
+          "molde": {
+            "y": 9057,
+            "altura": 736
+          },
+          "total": 0.0386,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 736
+        },
+        {
+          "secao": 10,
+          "tipo": "faixa de chamada",
+          "ref": {
+            "y": 10220,
+            "altura": 395
+          },
+          "molde": {
+            "y": 9792,
+            "altura": 395
+          },
+          "total": 0.0286,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 395
+        },
+        {
+          "secao": 11,
+          "tipo": "perguntas frequentes",
+          "ref": {
+            "y": 10615,
+            "altura": 826
+          },
+          "molde": {
+            "y": 10187,
+            "altura": 826
+          },
+          "total": 0.0206,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 826
+        },
+        {
+          "secao": 12,
+          "tipo": "notas de rodapé",
+          "ref": {
+            "y": 11441,
+            "altura": 336
+          },
+          "molde": {
+            "y": 11014,
+            "altura": 336
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 336
+        }
+      ],
+      "total": 0.0228,
+      "pior": 0.0529,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 7499,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero dividido: texto + foto em caixa arredondada",
+          "ref": {
+            "y": 120,
+            "altura": 601
+          },
+          "molde": {
+            "y": 0,
+            "altura": 601
+          },
+          "total": 0.0087,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 601
+        },
+        {
+          "secao": 1,
+          "tipo": "três cartões de número",
+          "ref": {
+            "y": 721,
+            "altura": 445
+          },
+          "molde": {
+            "y": 601,
+            "altura": 445
+          },
+          "total": 0.011,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 445
+        },
+        {
+          "secao": 2,
+          "tipo": "faixa escura com botão e imagem larga",
+          "ref": {
+            "y": 1167,
+            "altura": 866
+          },
+          "molde": {
+            "y": 1046,
+            "altura": 866
+          },
+          "total": 0.0074,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 866
+        },
+        {
+          "secao": 3,
+          "tipo": "meia largura com pílula (imagem à esquerda)",
+          "ref": {
+            "y": 2033,
+            "altura": 745
+          },
+          "molde": {
+            "y": 1913,
+            "altura": 745
+          },
+          "total": 0.0156,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 745
+        },
+        {
+          "secao": 4,
+          "tipo": "cartões com ícone e lista",
+          "ref": {
+            "y": 2778,
+            "altura": 830
+          },
+          "molde": {
+            "y": 2657,
+            "altura": 830
+          },
+          "total": 0.0207,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 830
+        },
+        {
+          "secao": 6,
+          "tipo": "seis cartões com ilustração",
+          "ref": {
+            "y": 3895,
+            "altura": 1320
+          },
+          "molde": {
+            "y": 3487,
+            "altura": 1320
+          },
+          "total": 0.0264,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1320
+        },
+        {
+          "secao": 7,
+          "tipo": "meia largura (imagem à direita)",
+          "ref": {
+            "y": 5215,
+            "altura": 519
+          },
+          "molde": {
+            "y": 4808,
+            "altura": 519
+          },
+          "total": 0.0035,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 519
+        },
+        {
+          "secao": 8,
+          "tipo": "meia largura com grade de integrações",
+          "ref": {
+            "y": 5734,
+            "altura": 518
+          },
+          "molde": {
+            "y": 5327,
+            "altura": 518
+          },
+          "total": 0.0056,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 518
+        },
+        {
+          "secao": 9,
+          "tipo": "meia largura com lista de checagem",
+          "ref": {
+            "y": 6252,
+            "altura": 538
+          },
+          "molde": {
+            "y": 5845,
+            "altura": 538
+          },
+          "total": 0.0085,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 538
+        },
+        {
+          "secao": 10,
+          "tipo": "faixa de chamada",
+          "ref": {
+            "y": 6790,
+            "altura": 324
+          },
+          "molde": {
+            "y": 6383,
+            "altura": 324
+          },
+          "total": 0.0115,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 324
+        },
+        {
+          "secao": 11,
+          "tipo": "perguntas frequentes",
+          "ref": {
+            "y": 7114,
+            "altura": 664
+          },
+          "molde": {
+            "y": 6707,
+            "altura": 664
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 664
+        },
+        {
+          "secao": 12,
+          "tipo": "notas de rodapé",
+          "ref": {
+            "y": 7778,
+            "altura": 128
+          },
+          "molde": {
+            "y": 7371,
+            "altura": 128
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 128
+        }
+      ],
+      "total": 0.0124,
+      "pior": 0.0264,
+      "passou": true
+    }
+  },
+  "omitidas": [
+    {
+      "secao": 5,
+      "tipo": "logos de clientes",
+      "motivo": "logos de empresas reais clientes da referência; nada de cliente inventado"
+    }
+  ],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}
