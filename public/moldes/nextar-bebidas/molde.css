@@ -327,6 +327,14 @@
   .page-molde.mx-nextar-bebidas .mxn-hero__rotulo { order: 6; margin-top: 20px; }
   .page-molde.mx-nextar-bebidas .mxn-hero__nota { order: 5; }
   .page-molde.mx-nextar-bebidas .mxn-hero__botoes { order: 4; }
+  /* a hero inteira na primeira tela do celular (945 px numa tela de 844, medição de 03/11, 16:46): o respiro de cima
+     é a altura do menu (não os 84 px do cabeçalho antigo), os 6 recursos ficam em 3 colunas de 2 linhas (88 px em vez
+     de 132) e a arte encolhe pela altura da tela, como manda a doutrina para tela baixa */
+  .page-molde.mx-nextar-bebidas .mxn-hero { padding-block: calc(var(--nav-h, 4.5rem) + 4px) 16px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 8px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols ul { display: contents; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols li { font-size: 14px; line-height: 19px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__arte img { width: auto; max-width: 100%; max-height: 26svh; margin-inline: auto; }
 }
 @media (min-width: 48rem) {
   .page-molde.mx-nextar-bebidas .mxn-trilha { justify-content: flex-start; }
@@ -338,6 +346,29 @@
   .page-molde.mx-nextar-bebidas .mxn-hero__cols ul:last-child { border-right: 0; }
   .page-molde.mx-nextar-bebidas .mxn-hero__cols li { font-size: 16px; line-height: 24px; }
   .page-molde.mx-nextar-bebidas .mxn-hero__cols a { justify-content: flex-start; }
+  /* a sobra dos 100svh se divide IGUAL entre os vãos (doutrina: stretch no herói + space-evenly na grade; teto 120):
+     centrado, ela ia toda para cima e para baixo (151 e 139 px em 1440, medição de 03/11). Padding mínimo e
+     row-gap seguram um respiro quando não sobra nada (tablet baixo). */
+  .page-molde.mx-nextar-bebidas .mxn-hero { align-content: stretch; padding-block: calc(84px + 16px) 16px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__grade { align-content: space-evenly; row-gap: 24px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__rec { margin-top: 0; }
+}
+@media (min-width: 48rem) and (min-height: 820px) {
+  /* tela alta: os recursos voltam às 2 colunas de 3 linhas da origem e o título cresce com a altura; em fileira única
+     sobravam 129 px acima do texto em 1440×900 (medição de 03/11, 16:07; teto 120) */
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols ul { flex-direction: column; flex-wrap: nowrap; }
+  .page-molde.mx-nextar-bebidas .mxn-h1 { font-size: clamp(34px, max(18px + 2.4vw, 6.6svh), 64px); }
+}
+@media (min-width: 48rem) and (max-width: 79.99rem) and (max-aspect-ratio: 6/5) {
+  /* tela em pé (doutrina: proporção abaixo de 6/5 usa a composição do tablet, print na largura toda, nunca duas
+     colunas). Lado a lado a arte ficava com 280 px e sobravam vãos de 102/89/81 em 768×1024 e de 245 em 1024×1366
+     (medição de 03/11, 17:20); só crescer o título não bastava em 820×1180 (126). Empilhada: 41/29/28/20 em 768 */
+  .page-molde.mx-nextar-bebidas .mxn-hero__grade { grid-template-columns: minmax(0, 1fr); }
+  .page-molde.mx-nextar-bebidas .mxn-hero__arte { grid-column: 1; grid-row: 2; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__rec { grid-row: 3; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__arte img { width: auto; max-width: 100%; max-height: 30svh; margin-inline: auto; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__intro { max-width: 40rem; }
+  .page-molde.mx-nextar-bebidas .mxn-h1 { font-size: clamp(34px, 6.6svh, 80px); }
 }
 
 /* vãos da casa: até 72 px no celular, até 120 no computador (a referência usa 128) */
