@@ -99,6 +99,17 @@ breadcrumbs, figura…) + `origem` (true na prova contra a referência, false na
      caixa (o `de audit` dá ALTA). Use uma camada por cima com `backdrop-filter: blur()` ou filtro SVG
      `feGaussianBlur edgeMode="duplicate"`.
    - **`de qa` 7/7 é condição de pronto**, não meta.
+   - **Botão cheio pintado com `currentcolor` ganha cor DECLARADA** (clover-varejo, 03/11/2026): a
+     origem pinta o fundo com a cor do texto do pai. Na tela dá o mesmo azul, mas o portão de contraste
+     apaga as letras para ler o fundo e apagava o botão junto (texto branco "sobre" faixa clara, 1,08:1).
+     Fundo com `var(--m-primaria)`; `:active` e hover trocam as duas cores.
+   - **Utilitário da origem com `!important` vence o acabamento** (lightspeed-varejo, 03/11/2026):
+     `tw:lap-s:min-h-[462px]` prendia a coluna da hero em 462 px. A regra do acabamento que precisa
+     mudar a mesma propriedade também leva `!important`; confira no `getComputedStyle`, não no CSS.
+   - **Vão da hero se mede com `tools/moldes/vaos-hero.mjs <url> <seletor> [prefixo] [1440x900,390x844]`**
+     (abre `display: contents`, junta colunas lado a lado numa fileira, sai 1 acima de 120/72 px ou com a
+     hero maior que a tela). A sobra que não cabe nos vãos vai para o TÍTULO crescer com a altura
+     (`clamp(<origem>, <N>svh, <teto>)`), nunca para padding.
 6. Imagens (o pedido central do Victor: realistas e que captam):
    - foto/arte que a referência usa → refeita com os MESMOS objetos e enquadramento, em cena brasileira
      do segmento da rota (comércio de verdade, luz natural, sem cara de banco de imagem), pelo MCP
