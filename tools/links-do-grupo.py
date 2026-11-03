@@ -79,6 +79,7 @@ ADMIN_ANOTACAO = " (painel admin, mesmo login do aplicativo)"
 PERFIS = {
     "https://www.linkedin.com/company/softpaybr": {"titulo_tem": "softpay"},
     "https://www.findsaas.com.br/saas/softpay": {"sitemap": "https://www.findsaas.com.br/sitemap-saas.xml"},
+    "https://portalsoftware.com.br/software/softpay": {"titulo_tem": "softpay"},
 }
 B2B_CANDIDATO = "https://www.b2bstack.com.br/product/softpay"
 
