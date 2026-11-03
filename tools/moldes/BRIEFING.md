@@ -84,6 +84,21 @@ breadcrumbs, figura…) + `origem` (true na prova contra a referência, false na
    chassi), vão máximo de 120 px no computador e 72 px no celular, celular copia a composição do
    computador (lado a lado em 360 px, sem rolagem lateral, nem dentro de componente), FAQ em
    `<details name>` com tudo visível no HTML, alvo de toque ≥ 44 px.
+   Achados da onda 1 (03/11/2026), que valem para todo molde:
+   - **Espaçamento entre letras NÃO vem da referência** quando a letra vira `SoftPay Display`: ela é
+     condensada, e o `letter-spacing` negativo de uma sans larga (−0,02 a −0,04em, −1px) cola as letras e
+     some com o espaço entre palavras (medido no square-pdv: "frentedecaixa"). Na camada vestida, todo
+     título em `SoftPay Display` usa o da casa: `0.005em` (hero: `-0.0036em`). Confira ampliando a foto.
+   - **Nada de borda grossa colorida de um lado só** (`border-left: 3px+` em nota/aviso/citação): o
+     gancho acusa como marca de interface feita por IA. Nota vira borda fina de 1 px em volta + fundo.
+   - **Carrossel do computador é trilho que rola, não seção cortada:** `overflow-x: auto` +
+     `scroll-snap-type: x mandatory` + `scrollbar-width: none` NO PRÓPRIO trilho, setas rolando o trilho;
+     nunca `overflow: hidden` na seção para esconder o item seguinte (o `de qa` reprova os portões 3 e 4).
+     No celular continua grade, sem rolagem lateral.
+   - **Desfoque de foto sem ampliar a foto:** `scale(1.04)` para esconder a borda do `blur` estoura a
+     caixa (o `de audit` dá ALTA). Use uma camada por cima com `backdrop-filter: blur()` ou filtro SVG
+     `feGaussianBlur edgeMode="duplicate"`.
+   - **`de qa` 7/7 é condição de pronto**, não meta.
 6. Imagens (o pedido central do Victor: realistas e que captam):
    - foto/arte que a referência usa → refeita com os MESMOS objetos e enquadramento, em cena brasileira
      do segmento da rota (comércio de verdade, luz natural, sem cara de banco de imagem), pelo MCP
@@ -106,6 +121,12 @@ breadcrumbs, figura…) + `origem` (true na prova contra a referência, false na
      Se a nossa parece mais pobre em qualquer seção, não está pronto.
    - `PORTA_CDP=9444 de qa http://127.0.0.1:<porta>/<slug>/ --vp 360,390,768,1024,1440` e
      `de audit ... --vp 360,390,768`: zero rolagem lateral, zero "itens empilhados que cabem".
+   - Portão das correções do Victor: `node ~/.jarvis/design-engine/ferramentas/portao-lp-victor.mjs
+     <url> --heroi '<seletor da hero do molde>' --saida <arq>.json`. O `--heroi` é obrigatório: sem ele o
+     portão pega a 1ª `section` do miolo (no square-pdv, um bloco de 2.653 px sem o h1) e reprova a hero
+     à toa. Se a REFERÊNCIA mostra aparelho além de celular (monitor, maquininha, hardware), acrescente
+     `--aparelhos-permitidos celular,notebook` e diga isso no relatório. O topo estendido (barra de
+     ponta a ponta no alto, cápsula ao rolar) é do chassi desde 03/11/2026: não mexa nele no molde.
    - Antes de fechar, mate o servidor que você subiu e confira que não deixou navegador vivo
      (`pgrep -fl chrome-headless-shell`; mate só o que VOCÊ abriu, nunca 9333/9444/Chrome for Testing).
 8. Se a referência não se deixar capturar (bloqueio, página vazia, 403), use a reserva indicada no seu
