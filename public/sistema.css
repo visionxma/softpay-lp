@@ -3754,15 +3754,16 @@ a.so-leitor:focus {
     }
     .cta-final .btn--whats {
         gap: 0.5rem;
-        background: #25D366; border-color: #25D366;
-        color: var(--noite);
+        /* cor viva leva texto BRANCO: o verde escurece até o branco passar de 4,5:1 (#15803D = 5,02:1) */
+        background: #15803D; border-color: #15803D;
+        color: var(--branco);
         box-shadow: 0 12px 26px -12px rgba(3, 10, 18, 0.6);   /* sombra escura: brilho verde era tell (anti-slop) */
     }
     .cta-final .btn--whats .btn__icone { display: block; flex: none; }
     .cta-final .btn--whats:active { transform: scale(0.97); }
 }
 @media (max-width: 47.99rem) and (hover: hover) and (pointer: fine) {
-    .cta-final .btn--whats:hover { background: #2EE072; border-color: #2EE072; }
+    .cta-final .btn--whats:hover { background: #126B33; border-color: #126B33; }
 }
 
 
@@ -4413,4 +4414,43 @@ html:has(.previa[open]) { overflow: hidden; }
 }
 @media (prefers-reduced-motion: reduce) {
     .mais-lista a { transition: none; }
+}
+
+/* ------------------------------------- PAINÉIS: trecho real da tela (03/11/2026)
+   A foto mostra a loja; o recorte por cima mostra o que o SoftPay faz por ela
+   (alerta de estoque, total do fiado, QR da loja, ativar a nota). Recorte de print
+   REAL de public/assets/sistema, nunca tela desenhada. A foto fica como estava. */
+.painel__figura:has(.painel__chip) { position: relative; }
+.painel__figura img.painel__chip {
+    --chip-pct: 56%; --chip-max: 18rem;
+    position: absolute; right: 4%; bottom: 5%;
+    width: min(var(--chip-pct), var(--chip-max)); height: auto;
+    aspect-ratio: auto; object-fit: contain;
+    background: var(--branco);
+    border-radius: 0.75rem;
+    box-shadow: 0 1.25rem 2.5rem -0.75rem rgba(6, 18, 31, 0.45), 0 0 0 1px rgba(6, 18, 31, 0.06);
+}
+.painel__figura img.painel__chip--esq { right: auto; left: 4%; }
+.painel__figura img.painel__chip--estreito { --chip-pct: 30%; --chip-max: 10rem; }
+.painel__figura img.painel__chip--largo { --chip-pct: 64%; --chip-max: 22rem; }
+/* No computador a figura tem ~383px: o recorte cresce para o texto da tela real ser lido. */
+@media (min-width: 60rem) {
+    .painel__figura img.painel__chip { --chip-pct: 68%; }
+    .painel__figura img.painel__chip--estreito { --chip-pct: 36%; }
+    .painel__figura img.painel__chip--largo { --chip-pct: 78%; }
+}
+/* O painel é pilha sticky: a linha do tempo view() congela quando ele gruda. A animação
+   termina na ENTRADA (antes de grudar), senão o recorte fica parado meio transparente. */
+@media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+        .painel__figura img.painel__chip {
+            animation: chip-sobe linear both;
+            animation-timeline: view();
+            animation-range: entry 0% entry 100%;
+        }
+    }
+}
+@keyframes chip-sobe {
+    from { opacity: 0; transform: translateY(1rem) scale(0.96); }
+    to { opacity: 1; transform: none; }
 }
