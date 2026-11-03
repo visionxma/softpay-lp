@@ -796,7 +796,10 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
     font-size: min(24cqw, 4.5rem);
     line-height: 0.88; text-transform: uppercase; text-align: center;
     letter-spacing: -0.01em;
-    color: var(--acento);
+    /* branco, não o acento: sobre fotografia clara o azul só passava 4,5:1 com
+       a foto quase toda apagada (medido 1,05:1 na Farmácia); o branco passa com
+       véu de 0,5 e a cena continua à vista. O azul fica no ponto do selo. */
+    color: var(--branco);
 }
 @media (hover: hover) and (pointer: fine) {
     .vitrine__item:hover img { transform: scale(1.06); }
@@ -879,7 +882,8 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
 .plano--destaque .plano__preco { color: var(--acento); }
 .plano__ciclo {
     font-family: var(--fonte); font-size: var(--t-sm); font-weight: 500;
-    color: var(--tinta-3); white-space: nowrap;
+    /* tinta-2: a tinta-3 dava 4,49:1 sobre a névoa da faixa "Só a nota" */
+    color: var(--tinta-2); white-space: nowrap;
 }
 .plano__inclui { display: grid; gap: var(--sp-2); margin: 0; padding: 0; list-style: none; }
 .plano__inclui li {
@@ -1121,6 +1125,56 @@ a.so-leitor:focus {
     background: rgba(255, 255, 255, 0.14); color: var(--branco);
 }
 .nav { transition: background-color 0.3s linear, border-color 0.3s linear, box-shadow 0.3s linear; }
+/* No TOPO da página a barra é estendida de ponta a ponta, sem fundo próprio
+   (só um degradê reto que segura o texto sobre o vídeo); ao rolar ela volta a
+   ser a cápsula de cima, que entra com um assentamento curto. Quem marca o
+   estado é o script inline logo abaixo da <nav> (data-topo="sim|nao"), que
+   nasce "sim" no HTML. Página sem o atributo continua com a cápsula de sempre.
+   (Correção do Victor: topo estendido, cápsula só depois de rolar.) */
+.nav[data-topo="sim"] {
+    inset: 0 0 auto; max-width: none; margin-inline: 0;
+    min-height: 4.5rem;
+    padding: 0.75rem clamp(1rem, 0.4rem + 1.6vw, 2.5rem);
+    background-color: transparent;
+    background-image: linear-gradient(180deg, rgba(6, 18, 31, 0.5) 0%, rgba(6, 18, 31, 0) 100%);
+    /* A borda de 1px (transparente) fica fora da padding-box: sem isto o degradê
+       se repete por baixo dela e a faixa de baixo pega o começo dele (alfa .5),
+       desenhando um fio escuro de ponta a ponta sob a barra. */
+    background-origin: border-box;
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+    border-color: transparent; border-radius: 0; box-shadow: none;
+}
+@media (max-width: 61.99rem) {
+    .nav[data-topo="sim"] {
+        min-height: 0;
+        padding: calc(0.5rem + env(safe-area-inset-top)) var(--gutter) 0.5rem;
+    }
+}
+/* Páginas do chassi (rotas de SEO, guias, blog): a hero de baixo é clara ou
+   varia de molde para molde. No topo a barra continua SEM fundo próprio (a
+   hero corre por trás dela até a borda de cima); só um véu branco em degradê
+   reto, de ponta a ponta, segura a leitura do logotipo e dos links escuros.
+   Ao rolar vira a cápsula branca de sempre. O degradê escuro é só da home,
+   que tem vídeo atrás. */
+.nav[data-topo="sim"][data-topo-tom="claro"] {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.72) 55%, rgba(255, 255, 255, 0) 100%);
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+    border-color: transparent;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .nav[data-topo="nao"] { animation: nav-capsula 0.42s cubic-bezier(0.22, 1, 0.36, 1) both; }
+}
+@keyframes nav-capsula { from { opacity: 0.4; transform: translateY(-10px) scale(0.98); } }
+/* com a gaveta do celular aberta (fundo branco) a barra vira a versão clara,
+   senão o logotipo e o botão brancos somem sobre ela */
+body:has(.gaveta[data-aberta="sim"]) .nav {
+    background-color: var(--branco); background-image: none;
+}
+body:has(.gaveta[data-aberta="sim"]) .nav .nav__logo img { content: url('/assets/logo-232.png?v=7b1ac2adcb'); }
+body:has(.gaveta[data-aberta="sim"]) .nav .nav__hamburguer { color: var(--tinta); }
+/* fio de leitura da home: só existe no celular (ver "fio-de-leitura" adiante) */
+.fio-leitura { display: none; }
 
 /* ------------------------------------------------ MOMENTO: foto em tela cheia
    A faixa que corta a página: fotografia grande, headline por cima, sem
@@ -1143,9 +1197,19 @@ a.so-leitor:focus {
     position: absolute; inset: 0; z-index: -2;
     width: 100%; height: 100%; object-fit: cover;
 }
+/* Véu reto que segura a headline (o "acento" azul pede fundo ≤ 50 de luz):
+   no celular o texto ocupa a largura toda, então o véu sobe de baixo; a partir
+   do tablet o texto fica à esquerda e ganha uma rampa lateral, deixando a foto
+   aberta do lado direito. Medido no pixel: 5,2 a 5,9:1 no acento. */
 .momento::after {
     content: ""; position: absolute; inset: 0; z-index: -1;
-    background: linear-gradient(0deg, rgba(6,18,31,0.92) 0%, rgba(6,18,31,0.5) 52%, rgba(6,18,31,0.34) 100%);
+    background: linear-gradient(0deg, rgba(6,18,31,0.94) 0%, rgba(6,18,31,0.88) 55%, rgba(6,18,31,0.62) 80%, rgba(6,18,31,0.42) 100%);
+}
+@media (min-width: 48rem) {
+    .momento::after {
+        background: linear-gradient(90deg, rgba(6,18,31,0.78) 0%, rgba(6,18,31,0.6) 40%, rgba(6,18,31,0) 72%),
+                    linear-gradient(0deg, rgba(6,18,31,0.92) 0%, rgba(6,18,31,0.5) 52%, rgba(6,18,31,0.34) 100%);
+    }
 }
 .momento__texto { max-width: 36ch; }
 .momento .grande, .momento .apoio { color: rgba(255, 255, 255, 0.86); }
@@ -1167,9 +1231,11 @@ a.so-leitor:focus {
         font-weight: 800;
         text-transform: uppercase;
         line-height: 1.04;
-        color: #9CADBC;          /* 2,30:1 — lido como apoio, 3,0:1 contra o ativo */
+        /* 5,5:1 no branco (era #9CADBC a 85%, 2,3:1): legível como leitura; o
+           ativo continua distinto pelo azul, pela marca à esquerda e pelo recuo */
+        color: #5A6B7A;
         transition: color 0.26s linear, transform 0.26s var(--mola), opacity 0.26s linear;
-        opacity: 0.85;
+        opacity: 1;
     }
     .aba[aria-current="true"] {
         background: none; color: var(--azul);
@@ -1192,7 +1258,7 @@ a.so-leitor:focus {
     .aba:focus-visible { outline-offset: 6px; }
 }
 @media (min-width: 64rem) and (hover: hover) and (pointer: fine) {
-    .aba:hover { color: var(--linha-forte); }
+    .aba:hover { color: var(--tinta); }
     .aba[aria-current="true"]:hover { color: var(--azul); }
 }
 
@@ -1636,19 +1702,23 @@ a.so-leitor:focus {
     /* Na referência a fotografia é clara e o assentamento quase não aparece: o
        rótulo se sustenta pela cor dele, não por escurecer a cena. Aqui sobrou
        só o necessário — um respiro no alto para o selo e outro no pé. */
+    /* Medido no pixel (03/11/2026): o selo no alto pedia 0,5 de véu até 9% e o
+       nome, no terço de baixo, 0,5 a partir de 58%; o meio fica aberto. */
     background: linear-gradient(180deg,
-        rgba(6,18,31,0.58) 0%,
+        rgba(6,18,31,0.74) 0%,
+        rgba(6,18,31,0.5) 9%,
         rgba(6,18,31,0.06) 22%,
-        rgba(6,18,31,0.16) 52%,
-        rgba(6,18,31,0.62) 100%);
+        rgba(6,18,31,0.2) 44%,
+        rgba(6,18,31,0.52) 58%,
+        rgba(6,18,31,0.6) 100%);
     transition: opacity 0.4s var(--mola);
 }
 /* Os painéis se encostam (gap 0, como na referência). Um fio de um pixel
    impede que duas fotografias de brilho parecido virem uma mancha só. */
 .vitrine__item + .vitrine__item { box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.1); }
 @media (hover: hover) and (pointer: fine) {
+    /* no hover só o tingimento recua; o véu fica, que é ele que segura o nome */
     .vitrine__item:hover::before { opacity: 0.08; }
-    .vitrine__item:hover::after  { opacity: 0.75; }
 }
 
 /* O nome sobre a fotografia, com sombra própria para não depender do véu. */
@@ -2680,7 +2750,9 @@ a.so-leitor:focus {
     }
     /* o e-mail não tem onde quebrar e é mais largo que a coluna em 320px */
     .rodape__produto { overflow-wrap: anywhere; }
-    .rodape__visionx { min-height: 0; padding-block: 0.375rem; }
+    /* alvo de toque continua com os 44px da regra de cima (o min-height: 0 que
+       estava aqui deixava 17,6px de caixa) */
+    .rodape__visionx { padding-block: 0; }
 }
 /* As quatro colunas do celular só se alinham de verdade com subgrid: sem ele,
    "PARA QUEM" quebra em duas linhas e empurra a coluna inteira para baixo,
@@ -2890,8 +2962,13 @@ a.so-leitor:focus {
 @media (max-width: 61.99rem) {
     @supports (animation-timeline: scroll()) {
         @media (prefers-reduced-motion: no-preference) {
-            body::before {
-                content: "";
+            /* Na home o fio é um elemento de verdade (<div class="fio-leitura">):
+               como pseudo do body ele não se separa da página, e a leitura de
+               contraste no pixel lia o degradê dele por baixo do texto que
+               cruzava o topo da tela. As outras páginas seguem com o pseudo. */
+            .fio-leitura,
+            body:not(:has(> .fio-leitura))::before {
+                content: ""; display: block; pointer-events: none;
                 position: fixed; inset: 0 0 auto 0; z-index: 200;
                 height: 2px;
                 background: linear-gradient(90deg, var(--acento) 0%, var(--azul) 100%);
@@ -2912,13 +2989,6 @@ a.so-leitor:focus {
     .depo:active { transform: scale(0.985); }
     .painel, .cartao, .plano, .depo { transition: transform 0.16s var(--mola); }
 
-    .vitrine__item::after {
-        background: linear-gradient(180deg,
-            rgba(6,18,31,0.58) 0%,
-            rgba(6,18,31,0.10) 20%,
-            rgba(6,18,31,0.38) 48%,
-            rgba(6,18,31,0.82) 100%);
-    }
     .vitrine__item::before { opacity: 0.26; }
 }
 @media (max-width: 61.99rem) and (prefers-reduced-motion: reduce) {
@@ -3327,7 +3397,7 @@ a.so-leitor:focus {
     .rodape__marca img { height: 1.5rem !important; }
     .rodape__marca p { font-size: 0.75rem; color: rgba(255, 255, 255, 0.56) !important; }
     .rodape h3 {
-        font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.1em;
+        font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
         color: rgba(255, 255, 255, 0.46);
         margin-bottom: 0.25rem;
     }
@@ -3357,8 +3427,8 @@ a.so-leitor:focus {
        separador "·" vira a quebra). */
     .rodape__visionx {
         display: block; text-align: center;
-        font-size: 0.6875rem; line-height: 1.6;
-        min-height: 0; padding-block: 0.25rem;
+        font-size: 0.75rem; line-height: 1.6;
+        min-height: 0;
     }
     .rodape__visionx .rodape__x {
         display: inline-block; vertical-align: -0.1em;
@@ -3394,10 +3464,13 @@ a.so-leitor:focus {
     .rodape__visionx { order: 3; }
     .rodape__produto,
     .rodape__visionx {
-        font-size: 0.6875rem; line-height: 1.6;
+        font-size: 0.75rem; line-height: 1.6;
         color: rgba(255, 255, 255, 0.62);
         padding-block: 0;
     }
+    /* o link da assinatura é alvo de toque: 44px de altura com o texto no
+       meio (uma linha de 19,2px + 12,4px em cima e embaixo) */
+    .rodape__visionx { padding-block: calc((2.75rem - 1.6em) / 2); }
     .rodape__visionx .rodape__x { color: var(--branco); opacity: 0.85; }
 }
 
@@ -3467,12 +3540,14 @@ a.so-leitor:focus {
         object-fit: cover; object-position: 50% 36%;
     }
     #para-quem .vitrine__item::after {
+        /* o alto segura o selo (0,7 até 13%), o pé vira chão para o nome */
         background: linear-gradient(180deg,
-            rgba(6, 18, 31, 0.62) 0%,
-            rgba(6, 18, 31, 0) 20%,
-            rgba(6, 18, 31, 0) 48%,
-            rgba(6, 18, 31, 0.78) 68%,
-            var(--noite) 78%,
+            rgba(6, 18, 31, 0.82) 0%,
+            rgba(6, 18, 31, 0.7) 13%,
+            rgba(6, 18, 31, 0) 26%,
+            rgba(6, 18, 31, 0) 46%,
+            rgba(6, 18, 31, 0.8) 64%,
+            var(--noite) 76%,
             var(--noite) 100%);
     }
     #para-quem .vitrine__item::before { content: none; }
@@ -3804,8 +3879,8 @@ a.so-leitor:focus {
     .plano__tag,
     .plano--destaque .plano__tag {
         padding: 0; background: none; border-radius: 0;
-        font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.12em;
-        color: var(--tinta-3);
+        font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+        color: var(--tinta-2);
     }
     .plano--destaque .plano__tag { color: var(--acento); }
     .plano__nome { font-size: calc(1.25rem * var(--display-k)); }
@@ -4111,9 +4186,11 @@ a.so-leitor:focus {
    ========================================================================== */
 .hero.hero--video {
     display: flex; flex-direction: column; align-items: center; justify-content: center;
-    min-height: 87svh;
-    /* o bloco fica um pouco acima do meio, como lá (centro a 379px numa hero de 783px) */
-    padding: calc(var(--nav-h) + 0.5rem) var(--gutter) 6.5rem;
+    /* a hero cobre a tela inteira (regra do Victor, 08/10/2026; era 87svh) e o
+       bloco fica no CENTRO dela: o respiro é o mesmo em cima e embaixo, porque
+       a barra é fixa e não ocupa lugar no fluxo */
+    min-height: 100svh;
+    padding: calc(var(--nav-h) + 1rem) var(--gutter);
     text-align: center;
     background: var(--noite);
 }
@@ -4122,6 +4199,12 @@ a.so-leitor:focus {
     position: absolute; inset: 0; z-index: -1;
     width: 100%; height: 100%;
     filter: brightness(0.3);
+}
+/* véu reto de ponta a ponta sobre o vídeo, mais denso na faixa do título: é
+   o que leva "Sua loja inteira" (acento) de 3,8:1 a 5,6:1 no pixel */
+.hero--video::after {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: linear-gradient(180deg, rgba(6, 18, 31, 0.2) 0%, rgba(6, 18, 31, 0.42) 28%, rgba(6, 18, 31, 0.42) 72%, rgba(6, 18, 31, 0.2) 100%);
 }
 .hero--video .hero__poster img { width: 100%; height: 100%; object-fit: cover; }
 .hero--video .hero__video { object-fit: cover; }
@@ -4149,9 +4232,11 @@ a.so-leitor:focus {
     min-height: 56px; padding: 0 24px; border-radius: 20px;
     font-size: 0.875rem; font-weight: 600; line-height: 1.3; color: var(--branco);
     text-decoration: none; text-shadow: 0 1px 0 rgba(3, 10, 18, 0.25);
-    background-color: #1570C3;
-    background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 60%),
-                      linear-gradient(180deg, #1A7FD2 0%, #1570C3 50%, #0D63B0 100%);
+    /* azul da identidade escurecido até o branco dar 4,5:1 MESMO sob a luz
+       que passa (doutrina: #1A7FD2 → #0D63B0); a luz caiu de 0,3 para 0,12 */
+    background-color: #0C5C9E;
+    background-image: linear-gradient(110deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 60%),
+                      linear-gradient(180deg, #0D63B0 0%, #0C5C9E 50%, #084A81 100%);
     background-size: 260% 100%, 100% 100%; background-position: 130% 0, 0 0; background-repeat: no-repeat;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 14px 28px -14px rgba(3, 10, 18, 0.8);
     transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.2s ease;
@@ -4171,7 +4256,7 @@ a.so-leitor:focus {
 /* celular: como lá, a hero é a tela inteira, o bloco centrado abaixo do menu e o
    botão ocupa a linha */
 @media (max-width: 47.99rem) {
-    .hero.hero--video { min-height: 100svh; padding: calc(var(--nav-h) + 0.75rem) var(--gutter) 4.5rem; }
+    .hero.hero--video { padding: calc(var(--nav-h) + 0.75rem) var(--gutter); }
     .hero--video .hero__cta { width: 100%; }
 }
 
@@ -4373,7 +4458,13 @@ html:has(.previa[open]) { overflow: hidden; }
 }
 /* e o pé dela também termina inteiro no azul, para o mapa começar sem linha */
 #para-quem + .momento::after {
-    background: linear-gradient(0deg, var(--noite) 0%, rgba(6, 18, 31, 0.9) 14%, rgba(6, 18, 31, 0.5) 55%, rgba(6, 18, 31, 0.34) 100%);
+    background: linear-gradient(0deg, var(--noite) 0%, rgba(6, 18, 31, 0.9) 55%, rgba(6, 18, 31, 0.62) 80%, rgba(6, 18, 31, 0.42) 100%);
+}
+@media (min-width: 48rem) {
+    #para-quem + .momento::after {
+        background: linear-gradient(90deg, rgba(6, 18, 31, 0.78) 0%, rgba(6, 18, 31, 0.6) 40%, rgba(6, 18, 31, 0) 72%),
+                    linear-gradient(0deg, var(--noite) 0%, rgba(6, 18, 31, 0.9) 14%, rgba(6, 18, 31, 0.5) 55%, rgba(6, 18, 31, 0.34) 100%);
+    }
 }
 
 /* ---------------------------------------------- CTA FINAL: a frase maior (26/09/2026)
@@ -4454,3 +4545,15 @@ html:has(.previa[open]) { overflow: hidden; }
     from { opacity: 0; transform: translateY(1rem) scale(0.96); }
     to { opacity: 1; transform: none; }
 }
+
+/* ------------------------------------- TÍTULO DE DUAS LINHAS ABRAÇA O TEXTO
+   Os títulos de seção e de painel quebram com <br> de propósito ("O estoque
+   bate / com a prateleira"). Em bloco, a caixa ocupava a coluna toda (721px em
+   768) e a segunda linha media 17–27% dela: o de audit lia como palavra órfã.
+   inline-block encolhe a caixa até a linha mais longa e continua obedecendo ao
+   text-align do pai (centro onde a cabeça é centrada, esquerda no resto);
+   vertical-align: top não deixa a sobra da linha embaixo. Medido em 360, 390,
+   768 e 1440: posição do texto, altura e vão até o parágrafo iguais aos de antes. */
+.cabeca-secao > .display--secao,
+.mapa__texto > .display--secao,
+.painel .display--cartao { display: inline-block; vertical-align: top; max-inline-size: 100%; }

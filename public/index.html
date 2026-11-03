@@ -53,7 +53,7 @@
     <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster-retrato.webp?v=c7bf39940f" fetchpriority="high" media="(max-width: 47.99rem)" />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster.webp?v=69532422d0" fetchpriority="high" media="(min-width: 48rem)" />
-    <link rel="stylesheet" href="sistema.css?v=1821509078" />
+    <link rel="stylesheet" href="sistema.css?v=84d4ff7ce9" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- busca:inicio (gerado por tools/busca_home.py; não editar à mão) -->
@@ -275,9 +275,12 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
+    <div class="fio-leitura" aria-hidden="true"></div>
 
     <!-- ======================================================= NAVEGAÇÃO -->
-    <nav class="nav" aria-label="Principal">
+    <!-- data-topo: "sim" no alto da página (barra estendida de ponta a ponta),
+         "nao" depois de rolar (cápsula). Quem troca é o script logo abaixo. -->
+    <nav class="nav" aria-label="Principal" data-topo="sim">
         <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
             <img src="/assets/logo-232.png?v=7b1ac2adcb" width="232" height="84" alt="SoftPay" />
         </a>
@@ -301,6 +304,19 @@
             </button>
         </div>
     </nav>
+    <script>
+        /* topo estendido × cápsula: uma escrita por quadro, só quando o estado muda */
+        (function () {
+            var nav = document.querySelector('.nav'), pedido = 0, atual = '';
+            function marcar() {
+                pedido = 0;
+                var v = window.scrollY < 8 ? 'sim' : 'nao';
+                if (v !== atual) { atual = v; nav.setAttribute('data-topo', v); }
+            }
+            window.addEventListener('scroll', function () { if (!pedido) pedido = requestAnimationFrame(marcar); }, { passive: true });
+            marcar();
+        })();
+    </script>
 
     <div class="gaveta" id="gaveta" data-aberta="nao">
         <a href="#sistema">O sistema</a>
@@ -759,7 +775,7 @@
                     <!-- LOJA ONLINE -->
                     <section class="painel" id="painel-loja" aria-labelledby="painel-loja-titulo">
                         <div>
-                            <h3 class="display display--cartao" id="painel-loja-titulo">Sua vitrine na internet,<br />com o estoque que já existe</h3>
+                            <h3 class="display display--cartao" id="painel-loja-titulo">Sua vitrine na internet,<br />com o estoque que&nbsp;já&nbsp;existe</h3>
                             <p class="apoio">
                                 A loja online usa o catálogo que você já cadastrou: o mesmo produto, o
                                 mesmo preço, o mesmo saldo. O cliente paga por Pix e a confirmação
