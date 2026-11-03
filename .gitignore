@@ -41,3 +41,7 @@ assets-fonte/hero/fone-prata-chroma-x4.png
 
 # cache do detector da Impeccable (a config fica no git)
 .impeccable/hook.cache.json
+
+# Moldes: fotos da prova seção a seção e rascunhos (regeneráveis pelo provar-molde; o ref/clone de página inteira fica no git)
+moldes/*/prova/
+moldes/*/trabalho/
