@@ -21,6 +21,8 @@ const pausa = (ms) => new Promise((r) => setTimeout(r, ms));
 try {
   await new Promise((r) => { ws.onopen = r; });
   await cdp('Page.enable'); await cdp('Runtime.enable');
+  // cache desligado: a aba da 9444 compartilha cache e reaproveitava o HTML antigo da página vestida (03/11/2026)
+  await cdp('Network.enable'); await cdp('Network.setCacheDisabled', { cacheDisabled: true });
   await cdp('Emulation.setDeviceMetricsOverride', { width: Number(largura), height: altura, deviceScaleFactor: 1, mobile: Number(largura) < 800 });
   eventos.length = 0;
   await cdp('Page.navigate', { url });
@@ -33,7 +35,9 @@ try {
   if (foto) {
     // a tela NÃO cresce até a altura da página: com ela crescida, a hero de 100svh viraria a página inteira.
     // Rola até o fim (carrega o preguiçoso e dispara o revelar), volta ao topo e fotografa por recorte.
-    await cdp('Runtime.evaluate', { expression: `(async()=>{for(let y=0;y<document.documentElement.scrollHeight;y+=innerHeight*0.6){scrollTo(0,y);await new Promise(r=>setTimeout(r,120))}scrollTo(0,0);await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r;setTimeout(r,4000)})))})()`, awaitPromise: true });
+    // Rolagem suave desligada antes: com o scroll-behavior: smooth do sistema.css cada scrollTo era cortado
+    // pelo seguinte e a metade de baixo nunca revelava (fotos com seções vazias, 03/11/2026).
+    await cdp('Runtime.evaluate', { expression: `(async()=>{document.documentElement.style.scrollBehavior='auto';for(let y=0;y<document.documentElement.scrollHeight;y+=innerHeight*0.6){scrollTo(0,y);await new Promise(r=>setTimeout(r,120))}scrollTo(0,0);await Promise.all([...document.images].map(i=>i.complete?0:new Promise(r=>{i.onload=i.onerror=r;setTimeout(r,4000)})))})()`, awaitPromise: true });
     await pausa(900);
     const { cssContentSize } = await cdp('Page.getLayoutMetrics');
     const h = Math.min(Math.ceil(cssContentSize.height), 16000);
