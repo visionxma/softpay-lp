@@ -5,7 +5,7 @@
 # comparativo → página "versus"; pergunta → resposta curta com chamada. Fonte que não se deixar capturar
 # troca por uma das reservas do fim do arquivo (nunca por uma já usada) e o contrato se regera.
 segmentos/empresas-com-filiais	lightspeed-varejo	https://www.lightspeedhq.com/pos/retail/
-segmentos/mercadinho	clover-varejo	https://www.clover.com/pos-systems/retail
+segmentos/mercadinho	clover-varejo	https://www.clover.com/pos-systems
 solucoes/sistema-pdv	square-pdv	https://squareup.com/us/en/point-of-sale
 sistema-de-gestao-para-pequenos-negocios	herosistemas-home	https://herosistemas.com.br/
 solucoes/sistema-de-estoque	lightspeed-estoque	https://www.lightspeedhq.com/pos/retail/inventory-management/
@@ -94,7 +94,6 @@ perguntas	sumup-maquininhas	https://www.sumup.com/pt-br/maquininhas/
 # reserva	stoqui-kyte	https://www.stoqui.com.br/blog/kyte-vs-stoqui
 # reserva	apurea-bling	https://apurea.com.br/alternativas/bling
 # reserva	gestaoclick-roupas	https://gestaoclick.com.br/sistema-para-loja-de-roupas/
-# reserva	clover-varejo-geral	https://www.clover.com/pos-systems
 # reserva	shopify-pos	https://www.shopify.com/pos
 # reserva	nextar-mercado	https://www.nextar.com.br/segmento/mercado
 # reserva	clover-lanchonete	https://www.clover.com/pos-systems/quick-service-restaurant

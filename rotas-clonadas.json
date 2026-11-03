@@ -83,7 +83,7 @@
     },
     "/segmentos/mercadinho/": {
       "molde": "clover-varejo",
-      "referencia": "https://www.clover.com/pos-systems/retail",
+      "referencia": "https://www.clover.com/pos-systems",
       "pasta": "moldes/clover-varejo"
     },
     "/solucoes/sistema-pdv/": {

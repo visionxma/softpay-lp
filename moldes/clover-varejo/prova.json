@@ -1,0 +1,405 @@
+{
+  "referencia": "https://www.clover.com/pos-systems",
+  "molde": "clover-varejo",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/clover-varejo-geral",
+  "quando": "2026-11-03T07:08:26.587Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 14435,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero: texto à esquerda e aparelhos à direita",
+          "ref": {
+            "y": 137,
+            "altura": 976
+          },
+          "molde": {
+            "y": 0,
+            "altura": 976
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 976
+        },
+        {
+          "secao": 1,
+          "tipo": "grade de vantagens com ícone (recebe os problemas de sempre)",
+          "ref": {
+            "y": 1161,
+            "altura": 1068
+          },
+          "molde": {
+            "y": 1024,
+            "altura": 1068
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1068
+        },
+        {
+          "secao": 2,
+          "tipo": "rolagem controlada: imagem ao lado de cada tópico (recebe o que muda com o SoftPay)",
+          "ref": {
+            "y": 2229,
+            "altura": 5308
+          },
+          "molde": {
+            "y": 2092,
+            "altura": 5356
+          },
+          "total": 0.0156,
+          "altura_dif": 0.009,
+          "passou": true,
+          "motivos": [],
+          "altura": 5308
+        },
+        {
+          "secao": 3,
+          "tipo": "texto e foto em faixa tingida (recebe a rotina do mercadinho)",
+          "ref": {
+            "y": 7537,
+            "altura": 1064
+          },
+          "molde": {
+            "y": 7448,
+            "altura": 1064
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1064
+        },
+        {
+          "secao": 4,
+          "tipo": "grade de recursos com título (recebe as perguntas que passam a ter resposta)",
+          "ref": {
+            "y": 8649,
+            "altura": 866
+          },
+          "molde": {
+            "y": 8560,
+            "altura": 866
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 866
+        },
+        {
+          "secao": 5,
+          "tipo": "cartão flutuante sobre imagem (recebe a conta do mês)",
+          "ref": {
+            "y": 9515,
+            "altura": 866
+          },
+          "molde": {
+            "y": 9426,
+            "altura": 866
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 866
+        },
+        {
+          "secao": 6,
+          "tipo": "foto à esquerda e texto à direita (recebe qual plano faz sentido)",
+          "ref": {
+            "y": 10380,
+            "altura": 879
+          },
+          "molde": {
+            "y": 10291,
+            "altura": 879
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 879
+        },
+        {
+          "secao": 7,
+          "tipo": "cartão flutuante sobre imagem (recebe Continue por aqui; os logos de terceiros da Clover saem)",
+          "ref": {
+            "y": 11307,
+            "altura": 866
+          },
+          "molde": {
+            "y": 11218,
+            "altura": 866
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 866
+        },
+        {
+          "secao": 8,
+          "tipo": "grade em faixa cinza (recebe o que o SoftPay não faz)",
+          "ref": {
+            "y": 12173,
+            "altura": 1128
+          },
+          "molde": {
+            "y": 12084,
+            "altura": 1128
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1128
+        },
+        {
+          "secao": 9,
+          "tipo": "perguntas frequentes em sanfona com ver mais (recebe a FAQ e o Veja também)",
+          "ref": {
+            "y": 13301,
+            "altura": 513
+          },
+          "molde": {
+            "y": 13212,
+            "altura": 513
+          },
+          "total": 0.002,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 513
+        },
+        {
+          "secao": 10,
+          "tipo": "chamada final centralizada com a fileira de aparelhos",
+          "ref": {
+            "y": 13813,
+            "altura": 710
+          },
+          "molde": {
+            "y": 13724,
+            "altura": 711
+          },
+          "total": 0.002,
+          "altura_dif": 0.0014,
+          "passou": true,
+          "motivos": [],
+          "altura": 710
+        }
+      ],
+      "total": 0.006,
+      "pior": 0.0156,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 10878,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero: texto à esquerda e aparelhos à direita",
+          "ref": {
+            "y": 113,
+            "altura": 736
+          },
+          "molde": {
+            "y": 0,
+            "altura": 736
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 736
+        },
+        {
+          "secao": 1,
+          "tipo": "grade de vantagens com ícone (recebe os problemas de sempre)",
+          "ref": {
+            "y": 897,
+            "altura": 394
+          },
+          "molde": {
+            "y": 784,
+            "altura": 394
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 394
+        },
+        {
+          "secao": 2,
+          "tipo": "rolagem controlada: imagem ao lado de cada tópico (recebe o que muda com o SoftPay)",
+          "ref": {
+            "y": 1290,
+            "altura": 4328
+          },
+          "molde": {
+            "y": 1177,
+            "altura": 4328
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 4328
+        },
+        {
+          "secao": 3,
+          "tipo": "texto e foto em faixa tingida (recebe a rotina do mercadinho)",
+          "ref": {
+            "y": 5618,
+            "altura": 896
+          },
+          "molde": {
+            "y": 5505,
+            "altura": 896
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 896
+        },
+        {
+          "secao": 4,
+          "tipo": "grade de recursos com título (recebe as perguntas que passam a ter resposta)",
+          "ref": {
+            "y": 6562,
+            "altura": 394
+          },
+          "molde": {
+            "y": 6449,
+            "altura": 394
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 394
+        },
+        {
+          "secao": 5,
+          "tipo": "cartão flutuante sobre imagem (recebe a conta do mês)",
+          "ref": {
+            "y": 6956,
+            "altura": 775
+          },
+          "molde": {
+            "y": 6843,
+            "altura": 775
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 775
+        },
+        {
+          "secao": 6,
+          "tipo": "foto à esquerda e texto à direita (recebe qual plano faz sentido)",
+          "ref": {
+            "y": 7731,
+            "altura": 576
+          },
+          "molde": {
+            "y": 7618,
+            "altura": 576
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 576
+        },
+        {
+          "secao": 7,
+          "tipo": "cartão flutuante sobre imagem (recebe Continue por aqui; os logos de terceiros da Clover saem)",
+          "ref": {
+            "y": 8355,
+            "altura": 749
+          },
+          "molde": {
+            "y": 8242,
+            "altura": 749
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 749
+        },
+        {
+          "secao": 8,
+          "tipo": "grade em faixa cinza (recebe o que o SoftPay não faz)",
+          "ref": {
+            "y": 9104,
+            "altura": 494
+          },
+          "molde": {
+            "y": 8991,
+            "altura": 494
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 494
+        },
+        {
+          "secao": 9,
+          "tipo": "perguntas frequentes em sanfona com ver mais (recebe a FAQ e o Veja também)",
+          "ref": {
+            "y": 9598,
+            "altura": 577
+          },
+          "molde": {
+            "y": 9485,
+            "altura": 577
+          },
+          "total": 0.0007,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 577
+        },
+        {
+          "secao": 10,
+          "tipo": "chamada final centralizada com a fileira de aparelhos",
+          "ref": {
+            "y": 10175,
+            "altura": 816
+          },
+          "molde": {
+            "y": 10062,
+            "altura": 816
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 816
+        }
+      ],
+      "total": 0,
+      "pior": 0.0007,
+      "passou": true
+    }
+  },
+  "omitidas": [],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}

@@ -1,0 +1,375 @@
+/* ==========================================================================
+   Acabamento do molde clover-varejo (escrito à mão; o CSS da Clover acima é gerado).
+   1. o que vale nos DOIS modos: a rolagem controlada no celular (a Clover troca o componente abaixo
+      de 1200 px por uma pilha imagem → texto; aqui a mesma marcação faz isso com display: contents + order)
+   2. as peças que a rota do SoftPay traz e a Clover não tem (trilha, nota, conta do mês, tabela, FAQ em
+      <details>, relacionados, "Veja também")
+   3. a roupa do SoftPay, só em .mx-vestido (a prova roda sem ela, com a paleta da Clover)
+   ========================================================================== */
+
+/* ---------- 0. [hidden] volta a esconder ----------
+   O isolamento da casca (`:where(.mx-clover-varejo *) { all: revert }`) desfaz a dica de apresentação do
+   atributo hidden no Chrome; sem isto as respostas fechadas da FAQ da Clover (<div hidden>) apareciam todas. */
+.mx-clover-varejo [hidden] { display: none; }
+
+/* ---------- 1. rolagem controlada: imagem e texto intercalados abaixo de 1200 px ---------- */
+@media (max-width: 1199.98px) {
+  .mx-clover-varejo .mAZF70It--Desktop_desktop__jqKWU { flex-direction: column; }
+  .mx-clover-varejo .mAZF70It--Desktop_desktop__jqKWU > .mAZF70It--Desktop_col__aV7-a { display: contents; }
+  .mx-clover-varejo .mAZF70It--Desktop_item-wrapper__Uat4g.mAZF70It--MediaWrapper_media-mask-wrapper__AmhS9 {
+    order: calc(var(--i) * 2);
+    position: relative;
+    width: 100%;
+    max-width: none;
+    height: 310px;
+    padding: 0 25px;
+  }
+  .mx-clover-varejo .mAZF70It--MediaWrapper_media-mask-wrapper__AmhS9 .mAZF70It--MediaWrapper_media-wrapper__alF3q {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+  }
+  .mx-clover-varejo .mAZF70It--Desktop_item-wrapper__Uat4g.mAZF70It--TextWrapper_text-wrapper__8VI-1 {
+    order: calc(var(--i) * 2 + 1);
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 32px 0 48px;
+    padding: 0 25px;
+  }
+}
+/* chamada final (seção 10) no celular: a Clover mostra a fileira de aparelhos ~1,95× maior, encostada à direita
+   (medido na captura de 390: terminal 17–238 px e celular 249–354 px, imagem com 194 px de altura = 50vw);
+   assim os dois aparelhos da ponta ficam legíveis em vez de uma faixa de 100 px com tudo miúdo */
+@media (max-width: 699.98px) {
+  .mx-clover-varejo .mAZF70It--TextMediaModule_container--center--background-img__My449 .mAZF70It--TextMediaModule_image-wrapper--center__o2b6y {
+    justify-content: flex-end; max-height: none;
+  }
+  .mx-clover-varejo .mAZF70It--TextMediaModule_container--center--background-img__My449 .mAZF70It--TextMediaModule_image-wrapper--center__o2b6y > img {
+    width: auto; max-width: none; height: 50vw; max-height: none; flex-shrink: 0;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199.98px) {
+  .mx-clover-varejo .mAZF70It--Desktop_item-wrapper__Uat4g.mAZF70It--MediaWrapper_media-mask-wrapper__AmhS9 { height: 620px; padding: 0 40px; }
+  .mx-clover-varejo .mAZF70It--Desktop_item-wrapper__Uat4g.mAZF70It--TextWrapper_text-wrapper__8VI-1 { padding: 0 40px; }
+}
+
+/* ---------- 2. peças da rota ---------- */
+
+/* listas da rota que entram nas grades da Clover: a grade é a <ul>, a célula é o <li> */
+.mx-clover-varejo ul.mAZF70It--GridModule_grid__pqXuP { list-style: none; padding: 0; }
+.mx-clover-varejo li.mAZF70It--GridModule_cell__e0j1h { list-style: none; }
+.mx-clover-varejo li.mAZF70It--GridModule_cell__e0j1h::marker { content: ''; }
+
+/* trilha (Início / Segmentos / Mercadinho) em cima do título da hero */
+.mx-clover-varejo .mx-trilha ol {
+  display: flex; flex-wrap: wrap; align-items: center;
+  margin: -10px 0 6px; padding: 0; list-style: none;
+  font-size: 0.875rem; line-height: 1.4; color: var(--m-texto-suave);
+}
+.mx-clover-varejo .mx-trilha li { display: inline-flex; align-items: center; }
+.mx-clover-varejo .mx-trilha li + li::before { content: '/'; margin: 0 0.5rem; color: var(--m-texto-fraco); }
+.mx-clover-varejo .mx-trilha a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  color: var(--m-primaria); text-decoration: none;
+}
+.mx-clover-varejo .mx-trilha a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.mx-clover-varejo .mx-trilha [aria-current] { color: var(--m-texto); }
+
+/* nota (fecha o último tópico da rolagem): caixa tingida com fio de 1px em toda a volta, como a moldura das
+   perguntas da Clover; sem traço lateral colorido, que a referência não usa */
+.mx-clover-varejo .mx-nota {
+  margin-top: 24px; padding: 18px 20px;
+  border: 1px solid var(--m-borda); border-radius: 8px;
+  background: var(--m-tingido, #e8f3fb);
+  font-size: 0.9375rem; line-height: 1.55; color: var(--m-texto);
+}
+.mx-clover-varejo .mx-nota p { max-width: none; margin: 0; }
+.mx-clover-varejo .mx-nota .mx-nota-titulo { margin-bottom: 6px; font-weight: 600; color: var(--m-alta); }
+
+/* a conta do mês, dentro do cartão flutuante */
+.mx-clover-varejo .mx-conta { margin-top: 20px; font-size: 0.9375rem; line-height: 1.45; }
+.mx-clover-varejo .mx-conta-titulo { margin: 0 0 10px; font-weight: 600; color: var(--m-alta); }
+.mx-clover-varejo .mx-conta dl { margin: 0; }
+.mx-clover-varejo .mx-conta-linha {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px;
+  padding: 9px 0; border-bottom: 1px solid var(--m-borda);
+}
+.mx-clover-varejo .mx-conta-linha dt { flex: 1 1 10rem; min-width: 0; margin: 0; }
+.mx-clover-varejo .mx-conta-linha dd { margin: 0; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.mx-clover-varejo .mx-conta-linha.mx-minus { color: var(--m-texto-suave); }
+.mx-clover-varejo .mx-conta-linha.mx-result { font-weight: 600; }
+.mx-clover-varejo .mx-conta-linha.mx-final { font-weight: 700; color: var(--m-primaria); border-bottom: 0; border-top: 2px solid var(--m-primaria); }
+.mx-clover-varejo .mx-conta-rodape { margin: 12px 0 0; font-size: 0.875rem; color: var(--m-texto-suave); }
+
+/* tabela de planos: tabela no computador, cartão por linha no celular */
+.mx-clover-varejo .mx-tabela { width: 100%; margin: 4px 0 24px; }
+.mx-clover-varejo .mx-tabela table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; line-height: 1.45; }
+.mx-clover-varejo .mx-tabela th,
+.mx-clover-varejo .mx-tabela td { padding: 12px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--m-borda); }
+.mx-clover-varejo .mx-tabela th { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--m-texto-suave); border-bottom-width: 2px; }
+.mx-clover-varejo .mx-tabela td:first-child { font-weight: 600; color: var(--m-alta); white-space: nowrap; }
+.mx-clover-varejo .mx-tabela td:nth-child(2) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 47.99rem) {
+  .mx-clover-varejo .mx-tabela table,
+  .mx-clover-varejo .mx-tabela tbody { display: block; }
+  .mx-clover-varejo .mx-tabela thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .mx-clover-varejo .mx-tabela tr {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 12px;
+    margin-bottom: 10px; padding: 12px 14px;
+    border: 1px solid var(--m-borda); border-radius: 10px; background: var(--m-fundo);
+  }
+  .mx-clover-varejo .mx-tabela td { display: block; padding: 0; border: 0; white-space: normal; }
+  .mx-clover-varejo .mx-tabela td:nth-child(3) { grid-column: 1 / -1; margin-top: 4px; }
+  .mx-clover-varejo .mx-tabela td::before {
+    content: attr(data-rotulo); display: block;
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--m-texto-suave);
+  }
+}
+
+/* "Continue por aqui": a lista de relacionados no cartão flutuante */
+.mx-clover-varejo .mx-relacionados { margin: 4px 0 0; padding: 0; list-style: none; }
+.mx-clover-varejo .mx-relacionados li { margin: 0; padding: 0; max-width: none; border-bottom: 1px solid var(--m-borda); }
+.mx-clover-varejo .mx-relacionados li::before { content: none; }
+.mx-clover-varejo .mx-relacionados a {
+  display: flex; flex-direction: column; gap: 2px; min-height: 44px; padding: 10px 0;
+  color: var(--m-texto); text-decoration: none;
+}
+.mx-clover-varejo .mx-relacionados strong { font-weight: 600; color: var(--m-primaria); }
+.mx-clover-varejo .mx-relacionados span { font-size: 0.875rem; line-height: 1.4; color: var(--m-texto-suave); }
+@media (hover: hover) and (pointer: fine) {
+  .mx-clover-varejo .mx-relacionados a:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+}
+
+/* FAQ em <details name>: o cabeçalho da Clover vira o <summary> */
+.mx-clover-varejo details.mAZF70It--FaqButtonAccordion_faq-module-item__LB569 > summary { list-style: none; }
+.mx-clover-varejo details.mAZF70It--FaqButtonAccordion_faq-module-item__LB569 > summary::-webkit-details-marker { display: none; }
+.mx-clover-varejo details.mAZF70It--FaqButtonAccordion_faq-module-item__LB569 > summary::marker { content: ''; }
+.mx-clover-varejo details.mAZF70It--FaqButtonAccordion_faq-module-item__LB569 > summary { min-height: 56px; }
+.mx-clover-varejo details[open] .mAZF70It--FaqButtonAccordionIcon_arrow-icon__dN\+go { transform: rotate(225deg) translate(-3px, -3px); }
+.mx-clover-varejo details .mAZF70It--FaqButtonAccordion_body__cMM0V { margin-top: 4px; }
+.mx-clover-varejo.mx-js:not(.mx-faq-tudo) .mx-faq-extra { display: none; }
+.mx-clover-varejo [data-mx-ver-mais] { border: 0; background: none; font: inherit; font-size: 18px; min-height: 48px; }
+.mx-clover-varejo [data-mx-ver-mais][hidden],
+.mx-clover-varejo:not(.mx-js) [data-mx-ver-mais] { display: none; }
+.mx-clover-varejo [data-mx-conta]:empty { display: none; }
+
+/* "Veja também": os links da rota, depois da FAQ */
+.mx-clover-varejo .mx-mais { margin: 48px 16px 0; }
+.mx-clover-varejo .mx-mais-titulo { margin: 0 0 16px; font: var(--font-modern-h4, 400 1.5rem/1.3 sans-serif); color: var(--m-alta); }
+.mx-clover-varejo .mx-mais ul {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 20px;
+  margin: 0; padding: 0; list-style: none;
+}
+.mx-clover-varejo .mx-mais li { margin: 0; border-bottom: 1px solid var(--m-borda); }
+.mx-clover-varejo .mx-mais a {
+  display: flex; align-items: center; min-height: 48px; padding: 6px 0;
+  color: var(--m-primaria); text-decoration: none; font-size: 0.9375rem; line-height: 1.35;
+}
+@media (hover: hover) and (pointer: fine) { .mx-clover-varejo .mx-mais a:hover { text-decoration: underline; text-underline-offset: 3px; } }
+@media (min-width: 1200px) { .mx-clover-varejo .mx-mais ul { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; } }
+
+/* ---------- 3. a roupa do SoftPay ---------- */
+.mx-clover-varejo.mx-vestido {
+  --m-fundo: #ffffff;
+  --m-superficie: #ffffff;
+  --m-borda: #dce5ec;
+  --m-texto: #0a1a28;
+  --m-texto-suave: #46596b;
+  --m-texto-fraco: #687a8b;
+  --m-primaria: #0c5c9e;
+  --m-primaria-2: #084a81;
+  --m-sobre-primaria: #ffffff;
+  --m-destaque: #0c5c9e;
+  --m-sobre-destaque: #ffffff;
+  --m-alta: #06121f;
+  --m-tingido: #e8f3fb;
+  --m-nevoa: #f4f7fa;
+  --m-f-titulo: 'SoftPay Display', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --m-f-corpo: 'SoftPay Texto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-stack: var(--m-f-corpo);
+  width: 100%;
+  min-height: 0;
+  overflow-wrap: anywhere;
+}
+.mx-clover-varejo.mx-vestido strong,
+.mx-clover-varejo.mx-vestido b { font-weight: 600; }
+
+/* espaçamento entre letras da casa em todo título SoftPay Display (BRIEFING, achados da onda 1): o -1px e o
+   -0,025em da Clover são de uma sans larga; na Display, que é condensada, colam as letras e somem com o
+   espaço entre palavras. Os !important vencem os da própria Clover (.t-heading-1 e afins, já !important). */
+.mx-clover-varejo.mx-vestido :is(h1, h2, h3, h4, .t-heading-1, .t-subheading-1, .t-subheading-2,
+  .mAZF70It--TextMediaModule_title__lEdqc, .mAZF70It--ControlledScrollModule_controlled-scroll__K6XH8,
+  .mAZF70It--GridModule_title__3qNUh, .mAZF70It--FaqModule_faq-module__title__YNTns,
+  .mAZF70It--FaqModule_faq-module__title__YNTns p) { letter-spacing: 0.005em !important; }
+.mx-clover-varejo.mx-vestido .mAZF70It--featureHero_hero__owzEe :is(h1, .mAZF70It--TextMediaModule_title__lEdqc) { letter-spacing: -0.0036em !important; }
+/* título de cada tópico da rolagem controlada: na referência é <h2> (38 px em 1440); na rota vestida virou
+   <h3> pela hierarquia (o h2 é o da seção) e herdava o h3 da Clover, 24 px: ficava 40% menor que a
+   referência (foto lado a lado, 03/11). Tamanho e peso voltam aos do h2 da origem, nas três faixas. */
+.mx-clover-varejo.mx-vestido h3.mAZF70It--TextBlock_title__UL91W { font-size: calc(1.625 * var(--mx-rem)); line-height: calc(2.375 * var(--mx-rem)); font-weight: 300; }
+@media screen and (min-width: 700px) {
+  .mx-clover-varejo.mx-vestido h3.mAZF70It--TextBlock_title__UL91W { font-size: calc(1.875 * var(--mx-rem)); line-height: calc(2.5 * var(--mx-rem)); }
+}
+@media screen and (min-width: 1200px) {
+  .mx-clover-varejo.mx-vestido h3.mAZF70It--TextBlock_title__UL91W { font-size: calc(2.375 * var(--mx-rem)); line-height: calc(3 * var(--mx-rem)); }
+}
+
+/* título sem palavra órfã na última linha (de audit, 360–768): as linhas se equilibram */
+.mx-clover-varejo.mx-vestido :is(h1, h2, h3, h4) { text-wrap: balance; }
+
+/* pergunta da FAQ: o <summary> vinha em content-box, 100% + padding de 16 (celular) ou 24 px (computador)
+   de cada lado, e passava 32–48 px da caixa da lista, que tem overflow:hidden para o abrir e fechar (de qa,
+   portão 3). Em border-box ela cabe na lista e a seta volta para dentro. */
+.mx-clover-varejo.mx-vestido details.mAZF70It--FaqButtonAccordion_faq-module-item__LB569 > summary { box-sizing: border-box; }
+
+/* foco de teclado visível (de audit: trilha e botões da Clover vinham com outline:none sem alternativa) */
+.mx-clover-varejo.mx-vestido :is(a, button, summary):focus-visible { outline: 2px solid var(--m-primaria) !important; outline-offset: 3px; }
+
+/* hero cobre a tela inteira, abaixo do cabeçalho fixo do chassi */
+.mx-clover-varejo.mx-vestido .mAZF70It--featureHero_hero__owzEe {
+  min-height: 100svh;
+  padding-top: var(--nav-h, 4.5rem);
+  justify-content: center;
+  margin-bottom: 0;
+  /* fundo de ponta a ponta (doutrina: a hero nunca se herda branca e chapada, nem em clone): azul-vapor no alto que
+     se apaga em branco antes da faixa seguinte (branca), degradê reto, sem forma sobre a cena; os aparelhos têm
+     canal alfa e assentam direto nele */
+  background-image: linear-gradient(180deg, var(--m-tingido) 0%, #fff 92%);
+}
+.mx-clover-varejo.mx-vestido .mAZF70It--featureHero_media__QIJur img { width: 100%; height: auto; object-fit: contain; }
+.mx-clover-varejo.mx-vestido .mAZF70It--featureHero_blurb__3Jfqa { max-width: 34rem; }
+
+/* botões: azul com texto branco; contornado em azul; toque responde */
+.mx-clover-varejo.mx-vestido .mAZF70It--Button_with-button-theme__65PpL { display: inline-flex; text-decoration: none; transition: transform .16s cubic-bezier(.22,1,.36,1); }
+.mx-clover-varejo.mx-vestido .mAZF70It--Button_with-button-theme__65PpL:active { transform: scale(.98); }
+.mx-clover-varejo.mx-vestido .mAZF70It--TextWithArrow_root__azywr { min-height: 48px; color: var(--m-primaria); }
+/* botão cheio: a Clover pinta o fundo com currentcolor (a cor do texto do pai). Na tela dá o mesmo azul, mas o fundo
+   fica preso à cor da letra: quem apaga as letras para ler o fundo (portão de contraste) apagava o botão junto, e o
+   texto branco saía "sobre" a faixa clara, 1,08:1. Fundo com a cor declarada; toque e passar do mouse trocam as duas. */
+.mx-clover-varejo.mx-vestido .mAZF70It--TextWithArrow_cta__oC8O\+:not(.mAZF70It--TextWithArrow_outline__9-iUz) { background-color: var(--m-primaria); }
+.mx-clover-varejo.mx-vestido .mAZF70It--TextWithArrow_cta__oC8O\+:not(.mAZF70It--TextWithArrow_outline__9-iUz):active { background-color: var(--m-alta); }
+@media (hover: hover) and (pointer: fine) {
+  .mx-clover-varejo.mx-vestido .mAZF70It--TextWithArrow_cta__oC8O\+:not(.mAZF70It--TextWithArrow_outline__9-iUz):hover:not(:active) { color: var(--m-primaria-2); background-color: var(--m-primaria-2); }
+  .mx-clover-varejo.mx-vestido .mAZF70It--TextWithArrow_cta__oC8O\+.mAZF70It--TextWithArrow_outline__9-iUz:hover { background-color: var(--m-tingido); }
+}
+
+/* faixas que a rota pinta: azul-vapor no lugar do verde-claro da Clover, névoa no lugar do cinza */
+.mx-clover-varejo.mx-vestido .mx-tingida { background-color: var(--m-tingido); }
+.mx-clover-varejo.mx-vestido .mx-g-nao-faz,
+.mx-clover-varejo.mx-vestido .mx-fim { background-color: var(--m-nevoa) !important; }
+
+/* grades: a composição da Clover (ícone em cima, texto centrado) com a quantidade de itens da rota */
+.mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--GridModule_grid__pqXuP,
+.mx-clover-varejo.mx-vestido .mx-g-perguntas .mAZF70It--GridModule_grid__pqXuP,
+.mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--GridModule_grid__pqXuP {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px;
+  width: 100%; max-width: 1200px; margin: 0 auto;
+}
+.mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--GridModule_cell__e0j1h,
+.mx-clover-varejo.mx-vestido .mx-g-perguntas .mAZF70It--GridModule_cell__e0j1h,
+.mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--GridModule_cell__e0j1h {
+  flex-basis: auto; max-width: none; margin: 0; padding: 0;
+}
+.mx-clover-varejo.mx-vestido .mAZF70It--GridCell_image-wrapper__PrTD\+ { width: 56px; height: 56px; }
+.mx-clover-varejo.mx-vestido .mAZF70It--GridCell_image__Iard7 { width: 100%; height: 100%; object-fit: contain; }
+.mx-clover-varejo.mx-vestido .mx-grade-intro { max-width: 40rem; margin: 0 auto; font-size: 1.125rem; line-height: 1.5; color: var(--m-texto-suave); }
+.mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--MarkdownWrapper_wrapper__g8p\+g p,
+.mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--RichBlurb_paragraph__lM8rJ { margin: 0; font-size: 1rem; line-height: 1.5; color: var(--m-texto-suave); }
+.mx-clover-varejo.mx-vestido .mx-g-problemas strong,
+.mx-clover-varejo.mx-vestido .mx-g-nao-faz strong { display: block; margin-bottom: 4px; color: var(--m-alta); }
+/* as perguntas são frase inteira: lidas em caixa normal, não no rótulo miúdo em maiúsculas da Clover */
+.mx-clover-varejo.mx-vestido .mx-g-perguntas .mAZF70It--GridCell_title__J0Tk2 {
+  margin: 0; font-size: 1rem; line-height: 1.45; letter-spacing: 0; text-transform: none; font-weight: 500; color: var(--m-alta);
+}
+
+/* celular: parágrafo com ícone ao lado (texto longo), perguntas curtas em 2 colunas */
+@media (max-width: 699.98px) {
+  .mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--GridModule_cell__e0j1h,
+  .mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--GridModule_cell__e0j1h {
+    display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 14px; align-items: start; text-align: left;
+  }
+  .mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--GridCell_image-wrapper__PrTD\+,
+  .mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--GridCell_image-wrapper__PrTD\+ { width: 48px; height: 48px; margin: 0; }
+  .mx-clover-varejo.mx-vestido .mx-g-perguntas .mAZF70It--GridModule_grid__pqXuP { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+  .mx-clover-varejo.mx-vestido .mx-g-perguntas .mAZF70It--GridCell_title__J0Tk2 { font-size: 0.9375rem; }
+}
+@media (min-width: 700px) {
+  .mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--GridModule_grid__pqXuP,
+  .mx-clover-varejo.mx-vestido .mx-g-perguntas .mAZF70It--GridModule_grid__pqXuP { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; }
+  .mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--GridModule_grid__pqXuP { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 32px; }
+}
+@media (min-width: 1200px) {
+  .mx-clover-varejo.mx-vestido .mx-g-problemas .mAZF70It--GridModule_grid__pqXuP { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .mx-clover-varejo.mx-vestido .mx-g-nao-faz .mAZF70It--GridModule_grid__pqXuP { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* rolagem controlada: a imagem gruda abaixo do cabeçalho fixo */
+@media (min-width: 1200px) {
+  .mx-clover-varejo.mx-vestido .mAZF70It--MediaWrapper_media-mask-wrapper__AmhS9 { top: var(--nav-h, 4.5rem); }
+  .mx-clover-varejo.mx-vestido .mAZF70It--Desktop_item-wrapper__Uat4g { height: min(800px, calc(100svh - var(--nav-h, 4.5rem))); }
+  .mx-clover-varejo.mx-vestido .mAZF70It--MediaWrapper_media-mask-wrapper__AmhS9 .mAZF70It--MediaWrapper_media-wrapper__alF3q { height: 100%; }
+}
+.mx-clover-varejo.mx-vestido .mAZF70It--TextBlock_blurb__GLBNB p { max-width: 46ch; }
+
+/* cartões flutuantes: a conta sobre os aparelhos em azul-vapor, os relacionados sobre a foto do mercadinho */
+.mx-clover-varejo.mx-vestido .mAZF70It--TextBox_text-box__zqpB6 { box-shadow: 0 18px 48px -24px rgba(6, 18, 31, .28); border-radius: 4px; }
+.mx-clover-varejo.mx-vestido .mx-flutua-conta .mAZF70It--FloatingTextModule_media-wrapper__EzQDk { background-color: var(--m-tingido); }
+.mx-clover-varejo.mx-vestido .mx-flutua-conta .mAZF70It--Background_background__BrHcT { background-size: auto 88%; background-position: right 6% center; }
+.mx-clover-varejo.mx-vestido .mx-flutua-mais .mAZF70It--Background_background__BrHcT { background-size: cover; }
+.mx-clover-varejo.mx-vestido .mAZF70It--TextBox_blurb__BZzSQ { flex-grow: 0; padding-bottom: 32px; }
+.mx-clover-varejo.mx-vestido .mAZF70It--TextBox_blurb__BZzSQ p { margin: 0 0 12px; }
+
+/* FAQ: o "ver mais" é um controle só, centrado */
+.mx-clover-varejo.mx-vestido .mAZF70It--FaqModule_view-more-link__YPC7i { margin-inline: auto; justify-content: center; }
+.mx-clover-varejo.mx-vestido .mAZF70It--FaqModule_entry-limit-container__m8Itb { max-height: none; }
+
+/* chamada final */
+.mx-clover-varejo.mx-vestido .mx-fim .mAZF70It--TextMediaModule_image-wrapper__HRi1D img { width: 100%; height: auto; }
+
+/* vãos: teto da doutrina, 120 px no computador e 72 no celular entre um conteúdo e o próximo, também dentro e
+   depois dele ("nunca deixe espaçamento exagerado mesmo que venha das referências", 31/10/2026). A Clover soma
+   48 + 48 de respiro e mais 48 de margem embaixo do texto-com-imagem (até 227 px medidos aqui). Só na página
+   vestida: a prova contra a captura segue com os números da Clover. */
+.mx-clover-varejo.mx-vestido .mAZF70It--TextMediaModule_module-wrapper__Avf0a { margin-bottom: 0; }
+.mx-clover-varejo.mx-vestido :is(.mAZF70It--TextMediaModule_module-wrapper__Avf0a:not(.mAZF70It--featureHero_hero__owzEe), .mAZF70It--GridModule_module-wrapper__l89hU, .mAZF70It--FloatingTextModule_module-wrapper__874Sm, .mAZF70It--ControlledScrollModule_controlled-scroll-wrapper__en59K, .mAZF70It--FaqModule_faq-module__4co\+c) {
+  padding-block: 28px;
+}
+@media (min-width: 768px) {
+  .mx-clover-varejo.mx-vestido :is(.mAZF70It--TextMediaModule_module-wrapper__Avf0a:not(.mAZF70It--featureHero_hero__owzEe), .mAZF70It--GridModule_module-wrapper__l89hU, .mAZF70It--FloatingTextModule_module-wrapper__874Sm, .mAZF70It--ControlledScrollModule_controlled-scroll-wrapper__en59K, .mAZF70It--FaqModule_faq-module__4co\+c) {
+    padding-block: 32px;
+  }
+}
+/* o cartão flutuante já desce além da imagem e tem respiro próprio: embaixo dele não soma mais nada */
+.mx-clover-varejo.mx-vestido .mAZF70It--FloatingTextModule_module-wrapper__874Sm { padding-bottom: 0; }
+.mx-clover-varejo.mx-vestido .mAZF70It--TextBox_text-box__zqpB6 { padding-bottom: 24px; }
+/* o botão que fecha o bloco de texto não carrega 32 + 32 de margem para baixo */
+.mx-clover-varejo.mx-vestido .mAZF70It--TextMediaModule_cta-button__GN\+AP:last-child,
+.mx-clover-varejo.mx-vestido .mAZF70It--TextMediaModule_text-wrapper__kAKfv > .mAZF70It--TextStack_cta-container__xpS3k:last-child { margin-bottom: 0; }
+/* texto da hero: as linhas da grade não se esticam para preencher a altura (era o vão entre o parágrafo e o botão) */
+.mx-clover-varejo.mx-vestido .mAZF70It--featureHero_text__RmsX8 { align-content: center; }
+@media (max-width: 47.99rem) {
+  /* no celular o texto vem logo depois do respiro da seção, sem mais 32 em cima */
+  .mx-clover-varejo.mx-vestido .mAZF70It--TextMediaModule_text-wrapper__kAKfv { padding-top: 0; }
+  .mx-clover-varejo.mx-vestido .mx-mais { margin-top: 32px; }
+  .mx-clover-varejo.mx-vestido :is(.mAZF70It--TextMediaModule_module-wrapper__Avf0a:not(.mAZF70It--featureHero_hero__owzEe), .mAZF70It--GridModule_module-wrapper__l89hU, .mAZF70It--FloatingTextModule_module-wrapper__874Sm, .mAZF70It--ControlledScrollModule_controlled-scroll-wrapper__en59K, .mAZF70It--FaqModule_faq-module__4co\+c) {
+    padding-top: 24px;
+  }
+  .mx-clover-varejo.mx-vestido .mAZF70It--TextBox_text-box__zqpB6 { padding-bottom: 16px; }
+  /* hero: os aparelhos já trazem a sombra embaixo; 12 px bastam até a seção seguinte */
+  .mx-clover-varejo.mx-vestido .mAZF70It--featureHero_container__BHKWc { padding-bottom: 12px; }
+}
+@media (max-width: 1199.98px) {
+  /* rolagem controlada intercalada: o último texto não leva os 48 px de margem para a seção seguinte */
+  .mx-clover-varejo.mx-vestido .mAZF70It--Desktop_item-wrapper__Uat4g.mAZF70It--TextWrapper_text-wrapper__8VI-1:last-child { margin-bottom: 0; }
+}
+/* lista de relacionados dentro do cartão: a última linha fecha no fio, sem margem até o botão */
+.mx-clover-varejo.mx-vestido ul.mx-relacionados > li:last-child { margin-bottom: 0 !important; }
+/* último texto da rolagem controlada: encosta no fim da coluna, senão sobra meia tela vazia antes da seção seguinte */
+@media (min-width: 1200px) {
+  .mx-clover-varejo.mx-vestido .mAZF70It--Desktop_item-wrapper__Uat4g:last-child { align-items: flex-end; }
+}
+
+/* revelar ao entrar (o molde.js tira o "--active" de quem está abaixo da dobra e devolve ao entrar) */
+@media (prefers-reduced-motion: reduce) {
+  .mx-clover-varejo .mAZF70It--FadeToastUp_fade-toast-up__jmg7z { transform: none !important; transition: opacity .2s linear !important; }
+}
