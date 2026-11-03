@@ -1,0 +1,397 @@
+{
+  "referencia": "https://www.vhsys.com.br/segmentos/sistema-erp-para-distribuidora-de-bebidas/",
+  "molde": "vhsys-distribuidora-bebidas",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/vhsys-distribuidora-bebidas",
+  "quando": "2026-11-03T20:28:53.176Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 9593,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero azul-noite: texto | foto com cartões + pílulas",
+          "ref": {
+            "y": 125,
+            "altura": 752
+          },
+          "molde": {
+            "y": 0,
+            "altura": 748
+          },
+          "total": 0.0282,
+          "altura_dif": 0.0053,
+          "passou": true,
+          "motivos": [],
+          "altura": 752
+        },
+        {
+          "secao": 1,
+          "tipo": "cabeçalho centrado + 2 cartões em linha (lista | foto)",
+          "ref": {
+            "y": 877,
+            "altura": 1777
+          },
+          "molde": {
+            "y": 748,
+            "altura": 1771
+          },
+          "total": 0.1196,
+          "altura_dif": 0.0034,
+          "passou": true,
+          "motivos": [],
+          "altura": 1777
+        },
+        {
+          "secao": 2,
+          "tipo": "cartão: título, abas e ladrilhos com ícone",
+          "ref": {
+            "y": 2654,
+            "altura": 1003
+          },
+          "molde": {
+            "y": 2519,
+            "altura": 988
+          },
+          "total": 0.084,
+          "altura_dif": 0.015,
+          "passou": true,
+          "motivos": [],
+          "altura": 1003
+        },
+        {
+          "secao": 3,
+          "tipo": "painel azul-noite com 6 cartões brancos",
+          "ref": {
+            "y": 3657,
+            "altura": 1721
+          },
+          "molde": {
+            "y": 3507,
+            "altura": 1698
+          },
+          "total": 0.0981,
+          "altura_dif": 0.0134,
+          "passou": true,
+          "motivos": [],
+          "altura": 1721
+        },
+        {
+          "secao": 4,
+          "tipo": "cartão: selo, título e 3 cartões com ícone redondo",
+          "ref": {
+            "y": 5378,
+            "altura": 660
+          },
+          "molde": {
+            "y": 5205,
+            "altura": 673
+          },
+          "total": 0.1106,
+          "altura_dif": 0.0197,
+          "passou": true,
+          "motivos": [],
+          "altura": 660
+        },
+        {
+          "secao": 5,
+          "tipo": "planos e preços",
+          "ref": {
+            "y": 6038,
+            "altura": 248
+          },
+          "molde": {
+            "y": 5878,
+            "altura": 248
+          },
+          "total": 0.002,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 248
+        },
+        {
+          "secao": 6,
+          "tipo": "cartão azul-noite: título e botão | mídia",
+          "ref": {
+            "y": 6286,
+            "altura": 617
+          },
+          "molde": {
+            "y": 6126,
+            "altura": 619
+          },
+          "total": 0.0602,
+          "altura_dif": 0.0032,
+          "passou": true,
+          "motivos": [],
+          "altura": 617
+        },
+        {
+          "secao": 7,
+          "tipo": "cartão azul-noite: lista e botão | aparelhos",
+          "ref": {
+            "y": 6903,
+            "altura": 754
+          },
+          "molde": {
+            "y": 6745,
+            "altura": 791
+          },
+          "total": 0.095,
+          "altura_dif": 0.0491,
+          "passou": true,
+          "motivos": [],
+          "altura": 754
+        },
+        {
+          "secao": 10,
+          "tipo": "cartão: texto | grade de ladrilhos",
+          "ref": {
+            "y": 9720,
+            "altura": 1045
+          },
+          "molde": {
+            "y": 7536,
+            "altura": 1007
+          },
+          "total": 0.063,
+          "altura_dif": 0.0364,
+          "passou": true,
+          "motivos": [],
+          "altura": 1045
+        },
+        {
+          "secao": 14,
+          "tipo": "FAQ: título e apoio | sanfona",
+          "ref": {
+            "y": 13858,
+            "altura": 1040
+          },
+          "molde": {
+            "y": 8543,
+            "altura": 1050
+          },
+          "total": 0.045,
+          "altura_dif": 0.0096,
+          "passou": true,
+          "motivos": [],
+          "altura": 1040
+        }
+      ],
+      "total": 0.0813,
+      "pior": 0.1196,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 6606,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero azul-noite: texto | foto com cartões + pílulas",
+          "ref": {
+            "y": 134,
+            "altura": 616
+          },
+          "molde": {
+            "y": 0,
+            "altura": 616
+          },
+          "total": 0.0238,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 616
+        },
+        {
+          "secao": 1,
+          "tipo": "cabeçalho centrado + 2 cartões em linha (lista | foto)",
+          "ref": {
+            "y": 750,
+            "altura": 1378
+          },
+          "molde": {
+            "y": 616,
+            "altura": 1370
+          },
+          "total": 0.064,
+          "altura_dif": 0.0058,
+          "passou": true,
+          "motivos": [],
+          "altura": 1378
+        },
+        {
+          "secao": 2,
+          "tipo": "cartão: título, abas e ladrilhos com ícone",
+          "ref": {
+            "y": 2128,
+            "altura": 648
+          },
+          "molde": {
+            "y": 1986,
+            "altura": 669
+          },
+          "total": 0.053,
+          "altura_dif": 0.0324,
+          "passou": true,
+          "motivos": [],
+          "altura": 648
+        },
+        {
+          "secao": 3,
+          "tipo": "painel azul-noite com 6 cartões brancos",
+          "ref": {
+            "y": 2776,
+            "altura": 784
+          },
+          "molde": {
+            "y": 2655,
+            "altura": 744
+          },
+          "total": 0.064,
+          "altura_dif": 0.051,
+          "passou": true,
+          "motivos": [],
+          "altura": 784
+        },
+        {
+          "secao": 4,
+          "tipo": "cartão: selo, título e 3 cartões com ícone redondo",
+          "ref": {
+            "y": 3560,
+            "altura": 664
+          },
+          "molde": {
+            "y": 3399,
+            "altura": 678
+          },
+          "total": 0.0457,
+          "altura_dif": 0.0211,
+          "passou": true,
+          "motivos": [],
+          "altura": 664
+        },
+        {
+          "secao": 5,
+          "tipo": "planos e preços",
+          "ref": {
+            "y": 4224,
+            "altura": 262
+          },
+          "molde": {
+            "y": 4077,
+            "altura": 262
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 262
+        },
+        {
+          "secao": 6,
+          "tipo": "cartão azul-noite: título e botão | mídia",
+          "ref": {
+            "y": 4486,
+            "altura": 477
+          },
+          "molde": {
+            "y": 4339,
+            "altura": 477
+          },
+          "total": 0.0268,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 477
+        },
+        {
+          "secao": 7,
+          "tipo": "cartão azul-noite: lista e botão | aparelhos",
+          "ref": {
+            "y": 4963,
+            "altura": 558
+          },
+          "molde": {
+            "y": 4816,
+            "altura": 543
+          },
+          "total": 0.1165,
+          "altura_dif": 0.0269,
+          "passou": true,
+          "motivos": [],
+          "altura": 558
+        },
+        {
+          "secao": 10,
+          "tipo": "cartão: texto | grade de ladrilhos",
+          "ref": {
+            "y": 6637,
+            "altura": 600
+          },
+          "molde": {
+            "y": 5359,
+            "altura": 582
+          },
+          "total": 0.0518,
+          "altura_dif": 0.03,
+          "passou": true,
+          "motivos": [],
+          "altura": 600
+        },
+        {
+          "secao": 14,
+          "tipo": "FAQ: título e apoio | sanfona",
+          "ref": {
+            "y": 8770,
+            "altura": 665
+          },
+          "molde": {
+            "y": 5941,
+            "altura": 665
+          },
+          "total": 0.0181,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 665
+        }
+      ],
+      "total": 0.0509,
+      "pior": 0.1165,
+      "passou": true
+    }
+  },
+  "omitidas": [
+    {
+      "secao": 8,
+      "tipo": "vhsys Hub (loja virtual)",
+      "motivo": "produto do vhsys (loja virtual e e-commerce) sem equivalente confirmado no conteúdo da rota"
+    },
+    {
+      "secao": 9,
+      "tipo": "suporte com fotos e notas",
+      "motivo": "fotos de atendentes do vhsys, \"Equipe premiada\" e notas Google/Reclame Aqui/Capterra são do vhsys; o contato verdadeiro do SoftPay foi para o apoio do FAQ"
+    },
+    {
+      "secao": 11,
+      "tipo": "números do vhsys",
+      "motivo": "números do vhsys (notas emitidas, bilhões movimentados, integrações); o SoftPay não publica número equivalente"
+    },
+    {
+      "secao": 12,
+      "tipo": "depoimentos",
+      "motivo": "depoimentos de clientes reais do vhsys; o SoftPay não tem depoimento de distribuidora"
+    },
+    {
+      "secao": 13,
+      "tipo": "blog",
+      "motivo": "artigos do blog do vhsys; os relacionados do SoftPay estão na grade da seção 10"
+    }
+  ],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}

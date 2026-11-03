@@ -1,0 +1,587 @@
+/* Molde vhsys-distribuidora-bebidas: a página "sistema ERP para distribuidora de bebidas" do vhsys (Elementor),
+   medida na captura renderizada de 03/11/2026 em 1440 e 390 (ferramentas/medidas.mjs e leitura de pixel das fotos).
+   ARQUIVO GERADO: a fonte é ferramentas/molde.fonte.css; `python3 ferramentas/fluido.py ferramentas/molde.fonte.css
+   > molde.css` troca F(a,b) por clamp() com o valor de 390 px em a e o de 1440 px em b (nas duas larguras da
+   captura dá o número exato). Duas camadas:
+   1. `.mx-vhsys-distribuidora-bebidas` — a COMPOSIÇÃO da referência: casca de 1140 px, cartões brancos de raio 30
+      sobre o fundo azul-gelo, hero e painel azul-noite, ordem, grades, tamanhos de letra e vãos medidos. É o que a
+      prova (provar-molde.mjs) compara com a captura.
+   2. `.page-molde.mx-vhsys-distribuidora-bebidas` — a página vestida: letra e cores do SoftPay e as regras da casa
+      que vencem a referência (hero cobre a tela, vãos ≤ 120/72 px, abas que quebram em vez de trilho lateral,
+      celular lado a lado, planos 3 lado a lado com a faixa do plano tocado, FAQ com 5 à vista, alvo ≥ 44 px,
+      revelar ao entrar). Nada daqui entra na prova.
+   Cores e letras moram em variáveis --v-*: o padrão (SoftPay) fica em :where() com peso zero e o origem.css da
+   prova troca pelos valores do vhsys sem disputar ordem. Base = celular (a captura de 390); a partir de 48rem, a
+   composição do computador. */
+
+:where($R) {
+  --v-titulo: "SoftPay Display", system-ui, sans-serif;
+  --v-sans: "SoftPay Texto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --v-peso-titulo: 700;
+  --v-ls: 0.005em;
+  --v-ls-h1: -0.0036em;
+  --v-noite: #06121f;
+  --v-noite-2: #0f2133;
+  --v-tinta: #0a1a28;
+  --v-texto: #2b3b4a;
+  --v-cinza: #4d6072;
+  --v-pagina: #f2f6fa;
+  --v-ladrilho: #eef4f9;
+  --v-ladrilho-texto: #0a1a28;
+  --v-azulado: #e8f3fb;
+  --v-linha: #dce5ec;
+  --v-acao: #0c5c9e;
+  --v-acao-forte: #084a81;
+  --v-sobre-acao: #ffffff;
+  --v-destaque: #0c5c9e;
+  --v-destaque-escuro: #7cc0f2;
+  --v-check: #0c5c9e;
+  --v-check-escuro: #7cc0f2;
+  --v-ico-fundo: linear-gradient(160deg, #1a7fd2 0%, #0c5c9e 100%);
+  --v-ico-tinta: #ffffff;
+  --v-ico-escuro: #7cc0f2;
+  --v-ico-claro: #0c5c9e;
+  --v-selo-fundo: #e8f3fb;
+  --v-selo-borda: #cfe3f3;
+  --v-selo-ico: #0c5c9e;
+  --v-pilula-fundo: rgba(255, 255, 255, .1);
+  --v-pilula-borda: rgba(255, 255, 255, .26);
+}
+
+/* ============================================================== 1. composição da referência ============ */
+$R .mxv {
+  font-family: var(--v-sans);
+  color: var(--v-texto);
+  background: var(--v-pagina);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: anywhere;
+}
+$R .mxv, $R .mxv *, $R .mxv *::before, $R .mxv *::after { box-sizing: border-box; }
+$R .mxv :where(h1, h2, h3, h4, p, ul, ol, li, figure) { margin: 0; padding: 0; }
+$R .mxv :where(ul, ol) { list-style: none; }
+$R .mxv img { display: block; max-width: 100%; height: auto; }
+$R .mxv svg { display: block; flex: none; }
+/* :where() deixa o link com peso de classe só: senão (0,2,1) vence .mxv-botao--cheio e o botão herda a cor da seção */
+$R .mxv :where(a) { color: inherit; }
+$R .mxv-casca { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+$R .mxv-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+$R .mxv-quadro { display: block; }
+$R .mxv-quadro img { width: 100%; }
+$R .mxv-verde { color: var(--v-destaque); }
+$R .mxv-cartao { background: #ffffff; border-radius: 30px; }
+
+/* títulos: 26/30 no celular, 34/40 no computador (36/42 no painel, no "palma", no "conecte" e no FAQ) */
+$R .mxv-titulo {
+  font: 500 F(26, 34)/F(30, 40) var(--v-titulo); letter-spacing: var(--v-ls); color: var(--v-tinta);
+}
+$R .mxv-titulo strong { font-weight: 700; }
+$R .mxv-titulo--centro { text-align: left; }
+$R .mxv-cab__corpo { margin-top: 12px; font-size: F(14, 16); line-height: 20px; color: var(--v-texto); }
+$R .mxv-cab__corpo p + p { margin-top: 10px; }
+
+/* selo: pílula clara com o ícone verde (no cartão escuro, pílula escura) */
+$R .mxv-selo {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 37px; padding: 6px 14px 6px 8px; border-radius: 999px;
+  background: var(--v-selo-fundo); border: 1px solid var(--v-selo-borda);
+  font: 600 14px/20px var(--v-sans); color: var(--v-tinta);
+}
+$R .mxv-selo__ico { width: 22px; height: 22px; border-radius: 6px; background: var(--v-selo-ico); position: relative; flex: none; }
+$R .mxv-selo__ico::after { content: ""; position: absolute; inset: 5px 8px; border-radius: 2px; background: rgba(255, 255, 255, .85); }
+
+/* botões do vhsys: pílula de 50 px, 13 30 de recheio, letra 17–18/600 */
+$R .mxv-botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: F(50, 50); padding: 13px 30px; border-radius: 50px; border: 2px solid transparent;
+  font: 600 F(17, 18)/24px var(--v-sans); text-decoration: none; white-space: nowrap; cursor: pointer; background: transparent; color: inherit;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .15s ease;
+}
+$R .mxv-botao svg { width: 20px; height: 20px; }
+$R .mxv-botao--cheio { background: var(--v-acao); color: var(--v-sobre-acao); }
+$R .mxv-botao--contorno { border-color: var(--v-tinta); color: var(--v-tinta); }
+$R :is(.mxv-hero, .mxv-escuro) .mxv-botao--contorno { border-color: #ffffff; color: #ffffff; }
+
+/* lista de checagem (bolinha cheia com o visto) */
+$R .mxv-checks { display: grid; gap: 12px; }
+$R .mxv-checks li { display: grid; grid-template-columns: 20px minmax(0, 1fr); column-gap: 10px; align-items: start; font-size: F(14, 15); line-height: 20px; }
+$R .mxv-checks svg { width: 20px; height: 20px; color: var(--v-check); }
+$R .mxv-checks--nao svg { color: var(--v-cinza); }
+$R .mxv-checks strong { font-weight: 700; color: var(--v-tinta); }
+
+/* ---------------------------------------------------------------- 0 hero azul-noite */
+$R .mxv-hero { background: var(--v-noite); color: #ffffff; padding-block: F(40, 80) F(26, 30); }
+$R .mxv-hero__grade { display: grid; grid-template-columns: minmax(0, 1fr); }
+$R .mxv-h1 { font: 600 F(26, 42)/F(32, 46) var(--v-titulo); letter-spacing: var(--v-ls-h1); color: #ffffff; max-width: 532px; }
+$R .mxv-hero .mxv-verde { color: var(--v-destaque-escuro); }
+$R .mxv-hero__intro { margin-top: 20px; font-size: 16px; line-height: F(22, 24); color: #ffffff; }
+$R .mxv-hero__intro strong { font-weight: 700; }
+$R .mxv-hero__botoes { margin-top: F(20, 42); display: flex; flex-wrap: wrap; gap: 10px; }
+/* 11+24+11+2+2 = 50 px, a altura medida do botão da referência em 390 (13 de recheio dava 54) */
+$R .mxv-hero__botoes .mxv-botao { width: 100%; padding-block: 11px; }
+/* nota da referência em 390: 24 px abaixo do botão e linhas a cada 16 px (medido no pixel da prova 4) */
+$R .mxv-hero__nota { margin-top: F(20, 36); font-size: 12px; line-height: F(16, 18); color: rgba(255, 255, 255, .86); }
+$R .mxv-hero__nota strong { font-weight: 700; color: #ffffff; }
+$R .mxv-hero__arte { position: relative; margin-top: 20px; }
+$R .mxv-hero__img img { border-radius: 16px; }
+$R .mxv-pilulas { margin-top: F(26, 70); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px F(8, 20); }
+$R .mxv-pilula {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: F(6, 4) 8px; border-radius: 50px;
+  background: var(--v-pilula-fundo); border: 1px solid var(--v-pilula-borda);
+  font: 500 13px/20px var(--v-sans); color: #ffffff; text-decoration: none;
+}
+$R .mxv-pilula svg { width: F(14, 16); height: F(14, 16); color: var(--v-check-escuro); }
+$R .mxv-chamada { display: none; }
+
+/* ---------------------------------------------------------------- 1 cabeçalho + 2 cartões em linha */
+$R .mxv-tudo { padding-block: F(50, 71) F(50, 58); }
+$R .mxv-tudo .mxv-titulo { margin-top: F(11, 12); }
+$R .mxv-tudo .mxv-checks { gap: F(6, 12); }
+$R .mxv-tudo__cartoes { margin-top: F(30, 41); display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
+$R .mxv-linha { padding: 40px 20px; display: grid; grid-template-columns: minmax(0, 1fr); }
+$R .mxv-linha__titulo { font: 500 F(26, 28)/F(30, 34) var(--v-titulo); letter-spacing: var(--v-ls); color: var(--v-tinta); }
+$R .mxv-linha__corpo { margin-top: 16px; }
+$R .mxv-linha__corpo > p { font-size: 15px; line-height: 20px; margin-bottom: 12px; }
+$R .mxv-linha__arte { position: relative; margin-top: 40px; }
+$R .mxv-linha__img img { border-radius: 20px; }
+$R .mxv-etiqueta { display: none; }
+
+/* ---------------------------------------------------------------- 2 cartão: título, abas, ladrilhos */
+$R .mxv-recursos { padding-bottom: F(50, 60); }
+$R .mxv-recursos__cartao { padding: F(40, 51) F(20, 50) F(46, 72); }
+$R .mxv-abas { margin-top: F(27, 30); display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+$R .mxv-abas li { flex: none; }
+$R .mxv-aba {
+  display: inline-flex; align-items: center; gap: 8px; min-height: F(47, 44); padding: F(10, 9) F(14, 12); border-radius: 999px;
+  border: 2px solid var(--v-linha); background: #ffffff; color: var(--v-tinta);
+  font: 700 F(14.5, 14)/20px var(--v-sans); white-space: nowrap; cursor: pointer;
+}
+$R .mxv-aba svg { width: 18px; height: 18px; color: var(--v-check); }
+$R .mxv-aba.is-ativa { background: var(--v-noite); border-color: var(--v-noite); color: #ffffff; }
+$R .mxv-aba.is-ativa svg { color: var(--v-check-escuro); }
+$R .mxv-ladrilhos { margin-top: 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+$R .mxv-ladrilho {
+  display: flex; align-items: center; gap: 14px; padding: F(16, 22) F(14, 18) F(18, 24); border-radius: 22px;
+  background: var(--v-ladrilho); color: var(--v-ladrilho-texto); font-size: F(14, 15); line-height: F(19.88, 21.3);
+}
+$R .mxv-ladrilho__ico { width: 48px; height: 48px; border-radius: 12px; background: var(--v-ico-fundo); color: var(--v-ico-tinta); display: grid; place-items: center; flex: none; }
+$R .mxv-ladrilho__ico svg { width: 25px; height: 25px; }
+$R .mxv-ladrilho__texto { min-width: 0; }
+$R .mxv-ladrilho strong, $R .mxv-ladrilho__titulo { font-weight: 700; color: var(--v-tinta); }
+
+/* ---------------------------------------------------------------- 3 painel azul-noite com 6 cartões brancos */
+$R .mxv-gestao { padding-bottom: F(50, 60); }
+$R .mxv-painel { background: var(--v-noite); border-radius: 30px; padding: F(40, 50) F(20, 50) F(40, 50); }
+$R .mxv-painel .mxv-titulo { color: #ffffff; font-size: F(26, 36); line-height: F(30, 42); }
+$R .mxv-painel__corpo { margin-top: 14px; font-size: F(14, 16); line-height: F(20, 22); color: rgba(255, 255, 255, .9); }
+$R .mxv-painel__corpo strong { color: #ffffff; }
+$R .mxv-beneficios { margin-top: F(30, 26); display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+$R .mxv-beneficio { background: #ffffff; border-radius: 22px; padding: F(20, 15) F(20, 30) 20px; color: var(--v-tinta); }
+$R .mxv-beneficio__ico { width: F(65, 55); height: F(65, 55); border-radius: 10px; background: var(--v-noite); color: var(--v-ico-escuro); display: grid; place-items: center; }
+$R .mxv-beneficio__ico svg { width: F(40, 34); height: F(40, 34); }
+$R .mxv-beneficio__titulo { margin-top: F(14, 0); font: 700 F(16, 17)/F(19, 20) var(--v-sans); color: var(--v-tinta); }
+$R .mxv-beneficio p:not(.mxv-beneficio__titulo) { margin-top: 8px; font: 500 F(14, 15)/F(18, 20) var(--v-sans); color: var(--v-tinta); }
+
+/* ---------------------------------------------------------------- 4 cartão: selo, título, 3 cartões com ícone redondo */
+$R .mxv-pdv { padding-bottom: F(44, 60); background: #ffffff; }
+$R .mxv-pdv__cartao { background: transparent; padding: F(50, 60) F(0, 50) F(0, 45); }
+$R .mxv-pdv .mxv-titulo { margin-top: 8px; }
+$R .mxv-modulos { margin-top: F(30, 16); display: grid; grid-auto-flow: column; grid-auto-columns: min(311px, 89%); gap: 20px; overflow: hidden; }
+$R .mxv-modulo { background: var(--v-azulado); border-radius: 24px; padding: 22px 28px 29px; min-height: 250px; }
+$R .mxv-modulo__ico {
+  width: 76px; height: 76px; border-radius: 50%; border: 9px solid #ffffff; background: var(--v-ico-fundo); color: var(--v-ico-tinta);
+  display: grid; place-items: center;
+}
+$R .mxv-modulo__ico svg { width: 24px; height: 24px; }
+$R .mxv-modulo__titulo { margin-top: 20px; font: 700 20px/25px var(--v-titulo); letter-spacing: var(--v-ls); color: var(--v-tinta); }
+$R .mxv-modulo p { margin-top: 8px; font-size: 15.5px; line-height: 23.25px; color: var(--v-cinza); }
+$R .mxv-setas { margin-top: F(32, 20); display: flex; justify-content: center; gap: 12px; }
+$R .mxv-seta { width: F(50, 40); height: F(50, 40); border-radius: 50%; display: grid; place-items: center; background: #ffffff; border: 2px solid var(--v-tinta); color: var(--v-tinta); }
+$R .mxv-seta--ativa { background: var(--v-noite); border-color: var(--v-noite); color: #ffffff; }
+$R .mxv-seta svg { width: 18px; height: 18px; }
+
+/* ---------------------------------------------------------------- 5 planos (na captura só o título carregou) */
+$R .mxv-planos { background: #ffffff; padding-top: F(50, 80); min-height: F(248, 262); }
+$R .mxv-planos__ponto { display: block; width: 10px; height: 10px; margin: 30px auto 0; border-radius: 50%; background: var(--v-linha); }
+
+/* ---------------------------------------------------------------- 6 e 7 cartões azul-noite: texto | mídia */
+$R .mxv-escuro-sec--pratica { padding-block: F(50, 60) F(50, 0); }
+$R .mxv-escuro-sec--palma { padding-block: F(0, 60) F(50, 60); }
+$R .mxv-escuro { background: var(--v-noite); border-radius: 30px; color: #ffffff; display: grid; grid-template-columns: minmax(0, 1fr); padding: 40px 20px; }
+$R .mxv-escuro--palma { padding-bottom: 0; }
+$R .mxv-escuro .mxv-titulo { color: #ffffff; }
+$R .mxv-escuro .mxv-verde, $R .mxv-escuro .mxv-titulo strong { color: var(--v-destaque-escuro); }
+$R .mxv-escuro .mxv-selo { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .22); color: #ffffff; }
+$R .mxv-escuro--palma .mxv-titulo { margin-top: 12px; font-size: F(26, 36); line-height: F(30, 42); }
+$R .mxv-escuro__corpo { margin-top: 12px; font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, .9); }
+$R .mxv-escuro__corpo > p + p { margin-top: 10px; }
+$R .mxv-escuro__corpo strong { color: #ffffff; }
+$R .mxv-escuro .mxv-checks { margin-top: 14px; gap: 6px; }
+$R .mxv-escuro .mxv-checks li { font-size: 16px; line-height: 24px; color: #ffffff; }
+$R .mxv-escuro .mxv-checks svg { margin-top: 2px; color: var(--v-check-escuro); }
+$R .mxv-escuro__botoes { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; }
+$R .mxv-escuro__botoes .mxv-botao { width: 100%; min-height: 46px; padding: 10px 30px; font-size: 16px; }
+$R .mxv-escuro--palma .mxv-escuro__botoes { margin-top: 26px; }
+$R .mxv-escuro--palma .mxv-escuro__botoes .mxv-botao { min-height: 44px; padding: 10px 20px; font-size: 18px; }
+$R .mxv-escuro__arte { margin-top: 30px; }
+$R .mxv-escuro__img img { border-radius: 20px; }
+$R .mxv-escuro--palma .mxv-escuro__arte { margin-top: 40px; justify-self: center; width: min(100%, 279px); }
+$R .mxv-escuro--palma .mxv-escuro__img img { border-radius: 0; }
+
+/* ---------------------------------------------------------------- 10 cartão: texto | grade de ladrilhos */
+$R .mxv-conecte { padding-block: F(50, 60) F(50, 0); }
+$R .mxv-conecte__cartao { padding: 40px 20px; display: grid; grid-template-columns: minmax(0, 1fr); }
+$R .mxv-conecte .mxv-titulo { margin-top: 12px; font-size: F(26, 36); line-height: F(30, 42); }
+$R .mxv-integras { margin-top: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+$R .mxv-integra > :is(a, div) {
+  display: grid; align-content: start; gap: 10px; height: 100%; min-height: F(114, 124); padding: F(16, 20) F(14, 18) F(18, 22);
+  border-radius: F(18, 22); background: var(--v-ladrilho); text-decoration: none; color: var(--v-tinta);
+}
+$R .mxv-integra__ico { width: 36px; height: 36px; border-radius: 10px; background: #ffffff; color: var(--v-ico-claro); display: grid; place-items: center; }
+$R .mxv-integra__ico svg { width: 26px; height: 26px; }
+$R .mxv-integra__titulo { font: 700 F(14.5, 16)/20px var(--v-sans); color: var(--v-tinta); }
+$R .mxv-integra__texto { font-size: 14px; line-height: 19px; color: var(--v-cinza); }
+
+/* ---------------------------------------------------------------- 14 FAQ: título e apoio | sanfona */
+$R .mxv-faq-sec { padding-bottom: F(50, 60); }
+$R .mxv-faq__cartao { padding: F(40, 60) F(20, 40); display: grid; grid-template-columns: minmax(0, 1fr); gap: 55px 20px; }
+$R .mxv-faq__cab .mxv-titulo { font-size: F(26, 36); line-height: F(30, 40); }
+$R .mxv-faq__apoio { margin-top: 12px; font-size: F(14, 16); line-height: 22px; }
+$R .mxv-faq__apoio a { font-weight: 700; color: var(--v-tinta); }
+$R .mxv-faq { display: grid; gap: 10px; }
+$R .mxv-faq__item { border-radius: 12px; background: transparent; }
+$R .mxv-faq__item summary {
+  list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px; cursor: pointer; border-radius: 12px; background: var(--v-pagina);
+}
+$R .mxv-faq__item summary::-webkit-details-marker { display: none; }
+$R .mxv-faq__q { font: 600 F(15, 16)/18px var(--v-sans); color: var(--v-tinta); }
+$R .mxv-faq__ico { width: 18px; height: 18px; color: var(--v-tinta); }
+$R .mxv-faq__item[open] .mxv-faq__v { opacity: 0; }
+$R .mxv-faq__a { padding: 10px 15px 19px; font-size: 14px; line-height: 20px; }
+$R .mxv-faq__mais { margin-top: 16px; display: flex; justify-content: center; }
+
+/* ---------------------------------------------------------------- computador: a composição lado a lado */
+@media (min-width: 48rem) {
+  $R .mxv-titulo--centro, $R .mxv-tudo .mxv-cab, $R .mxv-pdv .mxv-cab, $R .mxv-painel__cab { text-align: center; }
+  $R :is(.mxv-tudo, .mxv-pdv) .mxv-cab .mxv-titulo, $R .mxv-titulo--centro { max-width: 832px; margin-inline: auto; }
+  $R .mxv-cab__corpo, $R .mxv-painel__corpo { max-width: 832px; margin-inline: auto; }
+  $R .mxv-tudo .mxv-cab__corpo { margin-top: 15px; }
+
+  $R .mxv-hero__grade { grid-template-columns: minmax(0, 1fr) minmax(0, 570px); column-gap: 38px; align-items: start; }
+  $R .mxv-hero__botoes .mxv-botao { width: auto; }
+  $R .mxv-hero__intro { margin-top: 28px; }
+  $R .mxv-hero__nota { max-width: 372px; }
+  $R .mxv-hero__arte { margin-top: 11px; }
+
+  $R .mxv-linha { grid-template-columns: minmax(0, 1fr) minmax(0, 480px); column-gap: 40px; align-items: center; padding: 48px 50px; }
+  $R .mxv-linha__arte { margin-top: 0; }
+  $R .mxv-linha--inversa { grid-template-columns: minmax(0, 480px) minmax(0, 1fr); }
+  $R .mxv-linha--inversa .mxv-linha__arte { order: -1; }
+
+  $R .mxv-abas { flex-wrap: wrap; justify-content: center; overflow: visible; }
+  $R .mxv-ladrilhos { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 25px; }
+  $R .mxv-ladrilho { width: 248px; }
+
+  $R .mxv-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  $R .mxv-pdv { background: transparent; }
+  $R .mxv-pdv__cartao { background: #ffffff; border-radius: 30px; }
+  $R .mxv-modulos { margin-top: 26px; grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+
+  $R .mxv-planos__titulo { max-width: none; }
+
+  $R .mxv-escuro { grid-template-columns: minmax(0, 426px) minmax(0, 551px); justify-content: space-between; align-items: center; padding: 50px; }
+  $R .mxv-escuro__botoes .mxv-botao { width: auto; }
+  $R .mxv-escuro__arte { margin-top: 0; }
+  $R .mxv-escuro--palma { grid-template-columns: minmax(0, 1fr) minmax(0, 499px); column-gap: 20px; padding: 50px; }
+  $R .mxv-escuro--palma .mxv-escuro__arte { margin-top: 0; width: 100%; }
+
+  $R .mxv-conecte__cartao { grid-template-columns: minmax(0, 520px) minmax(0, 478px); justify-content: space-between; align-items: center; padding: 55px 50px; }
+  $R .mxv-integras { margin-top: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+
+  $R .mxv-faq__cartao { grid-template-columns: minmax(0, 354px) minmax(0, 1fr); align-items: start; }
+}
+@media (min-width: 75rem) {
+  /* na referência a foto passa 20 px da casca: coluna de texto de 532 px (a largura do h1), vão de 58.
+     A grade É a casca (margin-inline: auto): margem negativa a empurrava 150 px para a direita e dava 20 px
+     de rolagem lateral; tirar o respiro da direita dá a mesma caixa, 150 → 1310, sem sair da tela. */
+  $R .mxv-hero__grade { padding-right: 0; column-gap: 58px; }
+}
+@media (min-width: 64rem) {
+  $R .mxv-beneficios { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* na captura tudo já está à vista; a revelação só existe na página vestida, depois que o molde.js roda */
+
+/* ================================================================== 2. página vestida (SoftPay) ===== */
+$P .mxv { color: var(--v-texto); }
+$P .mxv :is(h1, h2, h3) { text-wrap: balance; }
+$P .mxv p { text-wrap: pretty; }
+$P :is(.mxv-titulo, .mxv-linha__titulo, .mxv-modulo__titulo) { font-weight: var(--v-peso-titulo); }
+$P .mxv-cab__corpo { line-height: 1.5; }
+$P .mxv-botao:active, $P .mxv-aba:active, $P .mxv-pilula:active, $P .mxv-integra > a:active { transform: scale(.98); }
+@media (hover: hover) and (pointer: fine) {
+  $P .mxv-botao--cheio:hover { background: var(--v-acao-forte); }
+  $P .mxv-botao--contorno:hover { background: var(--v-tinta); color: #ffffff; }
+  $P :is(.mxv-hero, .mxv-escuro) .mxv-botao--contorno:hover { background: #ffffff; color: var(--v-noite); }
+  $P .mxv-pilula:hover { background: rgba(255, 255, 255, .18); }
+  $P .mxv-aba:not(.is-ativa):hover { border-color: var(--v-acao); }
+  $P .mxv-integra > a:hover { transform: translateY(-3px); box-shadow: 0 14px 28px -18px rgba(6, 18, 31, .45); }
+  $P .mxv-faq__item summary:hover .mxv-faq__q { color: var(--v-acao); }
+  $P .mxv-plano:hover { border-color: var(--v-acao); }
+}
+$P .mxv-integra > a { transition: transform .2s cubic-bezier(.22, 1, .36, 1), box-shadow .2s ease; }
+
+/* hero: cobre a tela inteira abaixo do cabeçalho fixo do chassi (84 px); a sobra se divide entre os vãos */
+$P .mxv-hero {
+  min-height: 100svh; display: grid; align-content: space-evenly; row-gap: 24px;
+  padding-block: calc(84px + clamp(16px, 4px + 2.5vw, 48px)) clamp(28px, 16px + 3vw, 64px);
+  background: radial-gradient(120% 80% at 85% 10%, #10304d 0%, var(--v-noite) 60%) var(--v-noite);
+}
+$P .mxv-pilulas { margin-top: 0; }
+$P .mxv-trilha {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; margin-bottom: 8px;
+  font: 500 14px/1.4 var(--v-sans); color: rgba(255, 255, 255, .72);
+}
+$P .mxv-trilha a { color: rgba(255, 255, 255, .78); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+$P .mxv-trilha [aria-current] { color: #ffffff; font-weight: 600; }
+$P .mxv-h1 { font-size: F(32, 52); line-height: 1.1; max-width: 15ch; }
+$P .mxv-hero__intro { line-height: 1.5; max-width: 52ch; }
+$P .mxv-hero__botoes { flex-wrap: wrap; gap: 8px; }
+$P .mxv-hero__botoes .mxv-botao { width: auto; flex: 1 1 auto; padding-inline: F(12, 30); font-size: F(15, 18); }
+$P .mxv-hero__img img { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); }
+$P .mxv-pilula { min-height: 44px; padding: 6px 14px 6px 10px; }
+/* as duas chamadas da rota sobre a foto (frases da rota, sem número inventado) */
+$P .mxv-chamada {
+  position: absolute; display: grid; grid-template-columns: 34px auto; column-gap: 10px; align-items: center;
+  padding: 10px 14px 10px 10px; border-radius: 14px; background: #ffffff; color: var(--v-tinta);
+  box-shadow: 0 18px 36px -18px rgba(0, 0, 0, .55); max-width: calc(100% - 24px);
+}
+$P .mxv-chamada--1 { top: 12px; left: 12px; }
+$P .mxv-chamada--2 { right: 12px; bottom: 12px; }
+$P .mxv-chamada__ico { grid-row: 1 / span 2; width: 34px; height: 34px; border-radius: 10px; background: var(--v-ico-fundo); color: #ffffff; display: grid; place-items: center; }
+$P .mxv-chamada__ico svg { width: 18px; height: 18px; }
+$P .mxv-chamada__titulo { font: 700 13px/1.25 var(--v-sans); }
+$P .mxv-chamada__texto { font: 500 13px/1.3 var(--v-sans); color: var(--v-cinza); }
+@media (prefers-reduced-motion: no-preference) {
+  $P .mxv.js-ok .mxv-chamada { animation: mxv-flutua 6s ease-in-out infinite; }
+  $P .mxv.js-ok .mxv-chamada--2 { animation-delay: -3s; }
+  @keyframes mxv-flutua { 50% { transform: translateY(-6px); } }
+}
+@media (max-width: 47.99rem) {
+  $P .mxv-hero__nota { font-size: 14px; line-height: 1.4; }
+  $P .mxv-pilulas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  $P .mxv-pilula { width: 100%; justify-content: flex-start; font-size: 14px; line-height: 18px; }
+}
+@media (min-width: 48rem) {
+  $P .mxv-hero__grade { align-items: center; }
+  $P .mxv-hero__arte { margin-top: 0; }
+  $P .mxv-chamada--1 { left: -18px; top: 28px; }
+  $P .mxv-chamada--2 { right: -14px; bottom: 28px; }
+}
+/* hero cabe na tela (doutrina: sobra dividida IGUAL entre os vãos, teto 120 no computador e 72 no celular).
+   Medição de 03/11, 17:40, antes: 121/95/130 em 1440×900; 989 px de hero em 390×844; e na tela em pé a coluna de
+   texto ficava com 120 px (768) e 172 px (820) porque a foto de 570 px levava a grade inteira. */
+@media (max-width: 47.99rem) {
+  /* celular: a foto é a mesma, inteira, encolhida pela altura; o respiro de cima é só o do cabeçalho (63 px) */
+  $P .mxv-hero { padding-block: calc(63px + 12px) 14px; row-gap: 8px; }
+  $P .mxv-hero__intro { line-height: 1.4; }
+  $P .mxv-hero__botoes { margin-top: 14px; }
+  $P .mxv-hero__arte { width: fit-content; margin-inline: auto; margin-top: 10px; }
+  $P .mxv-hero__img img { width: auto; max-width: 100%; max-height: 21svh; }
+  $P .mxv-pilulas { gap: 6px; }
+  /* foto menor: as chamadas viram etiquetas de uma linha nos cantos (com o texto de apoio cobriam a foto inteira) */
+  $P .mxv-chamada { grid-template-columns: 24px auto; column-gap: 6px; padding: 5px 9px 5px 5px; border-radius: 10px; max-width: 72%; }
+  $P .mxv-chamada__ico { grid-row: auto; width: 24px; height: 24px; border-radius: 7px; }
+  $P .mxv-chamada__ico svg { width: 14px; height: 14px; }
+  $P .mxv-chamada__texto { display: none; }
+  $P .mxv-chamada__titulo { font-size: 12px; white-space: nowrap; }
+  $P .mxv-chamada--1 { top: -8px; left: -10px; }
+  $P .mxv-chamada--2 { right: -10px; bottom: 8px; }
+}
+@media (min-width: 48rem) and (min-aspect-ratio: 6/5) {
+  /* deitada: sem padding de sobra, o space-evenly divide o resto; o título cresce com a altura e come a sobra */
+  $P .mxv-hero { padding-block: 84px 0; row-gap: 0; }
+  $P .mxv-h1 { font-size: clamp(32px, max(F(32, 52), 7svh), 64px); }
+}
+@media (min-width: 48rem) and (max-aspect-ratio: 6/5) {
+  /* em pé (768×1024, 820×1180, 1024×1366): composição do tablet, texto e foto em sequência, nunca duas colunas */
+  $P .mxv-hero { padding-block: 84px 0; row-gap: 0; }
+  $P .mxv-hero__grade { grid-template-columns: minmax(0, 1fr); row-gap: 24px; column-gap: 0; padding-right: 0; }
+  $P .mxv-hero__texto { max-width: 40rem; }
+  $P .mxv-hero__arte { width: fit-content; margin-inline: auto; margin-top: 0; }
+  /* altura pela tela (não teto): com max-height a foto parava no tamanho intrínseco (545×387) e sobravam
+     131/121/121 em 1024×1366 e 73 em 820×1180; o sizes do molde pede o arquivo de 940 em tela em pé */
+  $P .mxv-hero__img img { width: auto; max-width: 100%; height: 34svh; object-fit: contain; }
+  $P .mxv-h1 { font-size: clamp(34px, 5.6svh, 72px); }
+}
+@media (min-width: 48rem) and (max-aspect-ratio: 6/5) and (min-height: 1250px) {
+  $P .mxv-hero__img img { height: 38svh; }
+}
+
+/* cartões em linha: a etiqueta do print real do Estoque senta sobre a foto */
+$P .mxv-linha__img img { box-shadow: 0 24px 50px -30px rgba(6, 18, 31, .45); }
+$P .mxv-etiqueta {
+  display: block; position: absolute; left: 12px; bottom: -14px; width: min(56%, 230px); border-radius: 12px;
+  box-shadow: 0 20px 40px -18px rgba(6, 18, 31, .5);
+}
+$P .mxv-linha__corpo > p { font-size: 16px; line-height: 1.5; }
+$P .mxv-checks li { font-size: 16px; line-height: 1.45; }
+@media (min-width: 48rem) { $P .mxv-etiqueta { left: -24px; bottom: -20px; } }
+
+/* abas: quebram em linhas (nada de trilho lateral) e acendem os ladrilhos do assunto */
+$P .mxv-abas { flex-wrap: wrap; overflow: visible; gap: 8px; }
+$P .mxv-aba { min-height: 44px; transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .15s ease; }
+$P .mxv-ladrilho { transition: opacity .25s ease, transform .25s cubic-bezier(.22, 1, .36, 1); }
+$P .mxv-ladrilhos.is-filtrado .mxv-ladrilho:not(.is-aceso) { opacity: .45; }
+$P .mxv-ladrilhos.is-filtrado .mxv-ladrilho.is-aceso { box-shadow: inset 0 0 0 2px var(--v-acao); }
+$P .mxv-ladrilho { align-items: flex-start; font-size: 15px; line-height: 1.5; }
+$P .mxv-ladrilho__titulo { font: 700 16px/1.3 var(--v-sans); margin-bottom: 4px; }
+@media (max-width: 47.99rem) {
+  $P .mxv-abas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  $P .mxv-aba { width: 100%; justify-content: center; padding-inline: 8px; font-size: 14px; }
+  $P .mxv-aba svg { display: none; }
+}
+@media (min-width: 48rem) { $P .mxv-ladrilhos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } $P .mxv-ladrilho { width: auto; } }
+@media (min-width: 64rem) { $P .mxv-ladrilhos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* painel: as 6 perguntas curtas em 2 colunas no celular */
+$P .mxv-beneficio { height: 100%; }
+$P .mxv-beneficio p.mxv-beneficio__titulo { margin-top: 14px; font-size: F(15, 17); line-height: 1.35; }
+@media (max-width: 47.99rem) {
+  $P .mxv-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  $P .mxv-beneficio { padding: 14px; border-radius: 16px; }
+  $P .mxv-beneficio__ico { width: 44px; height: 44px; }
+  $P .mxv-beneficio__ico svg { width: 22px; height: 22px; }
+}
+
+/* tipos de distribuidora: sem carrossel; no celular, um embaixo do outro com o ícone ao lado (parágrafo longo) */
+$P .mxv-modulos { overflow: visible; }
+$P .mxv-modulo { min-height: 0; height: 100%; }
+$P .mxv-modulo p { font-size: 16px; line-height: 1.5; }
+$P .mxv-cab__corpo { max-width: 66ch; }
+@media (max-width: 47.99rem) {
+  $P .mxv-pdv__cartao { background: #ffffff; border-radius: 24px; padding: 32px 16px; }
+  $P .mxv-modulos { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  $P .mxv-modulo { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 14px; padding: 18px 16px; border-radius: 18px; }
+  $P .mxv-modulo__ico { grid-row: 1 / span 2; width: 56px; height: 56px; border-width: 5px; }
+  $P .mxv-modulo__titulo { margin-top: 2px; font-size: 18px; line-height: 1.3; }
+}
+$P .mxv-nota { margin-top: 20px; padding: 16px 20px; border-radius: 16px; background: var(--v-azulado); color: var(--v-tinta); font-size: 15px; line-height: 1.5; }
+$P .mxv-nota__titulo { font-weight: 700; margin-bottom: 4px; }
+$P .mxv-escuro .mxv-nota { background: rgba(255, 255, 255, .08); color: #ffffff; }
+
+/* planos: os 3 cartões lado a lado em toda largura, o recomendado no meio e maior, a faixa do plano tocado */
+$P .mxv-planos { min-height: 0; padding-block: F(48, 96); }
+$P .mxv-planos__grade {
+  margin-top: F(28, 48); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr);
+  gap: F(6, 20); align-items: center; max-width: 960px; margin-inline: auto;
+}
+$P .mxv-plano {
+  position: relative; display: grid; justify-items: center; align-content: start; gap: F(4, 8); min-width: 0;
+  padding: F(16, 28) F(4, 24) F(12, 24); border-radius: F(14, 22); border: 1px solid var(--v-linha); background: var(--v-pagina);
+  text-align: center; cursor: pointer; color: var(--v-tinta);
+  transition: transform .25s cubic-bezier(.22, 1, .36, 1), border-color .2s ease, box-shadow .2s ease;
+}
+$P .mxv-plano:not(.is-destaque) { transform: scale(.965); }
+$P .mxv-plano.is-destaque {
+  background: var(--v-noite); border-color: var(--v-noite); color: #ffffff; padding-block: F(26, 44) F(16, 32); border-radius: F(18, 28);
+  box-shadow: 0 30px 60px -28px rgba(6, 18, 31, .6);
+}
+$P .mxv-plano.is-escolhido { box-shadow: 0 0 0 2px var(--v-acao); }
+$P .mxv-plano.is-destaque.is-escolhido { box-shadow: 0 0 0 2px var(--v-destaque-escuro), 0 30px 60px -28px rgba(6, 18, 31, .6); }
+$P .mxv-plano__selo {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;
+  padding: 4px F(8, 14); border-radius: 999px; background: var(--v-acao); color: #ffffff; font: 700 F(12, 13)/1.4 var(--v-sans);
+}
+$P .mxv-plano__nome { font: 700 F(13, 18)/1.25 var(--v-sans); }
+$P .mxv-plano__preco { font: 700 F(17, 34)/1.1 var(--v-titulo); white-space: nowrap; letter-spacing: var(--v-ls); }
+$P .mxv-plano__desc { font-size: 15px; line-height: 1.45; text-align: left; }
+/* em 360 a coluna de 1/3 tem 85 px por dentro: o botão perde recheio lateral e, se ainda faltar, quebra a linha em vez de vazar (de qa, 03/11 22:07: botão de 90 px em coluna de 85) */
+$P .mxv-plano__botao { margin-top: F(6, 12); min-height: 44px; padding: 8px F(3, 22); font-size: F(13, 16); line-height: 1.15; white-space: normal; text-wrap: balance; width: 100%; }
+$P .mxv-plano.is-destaque .mxv-plano__botao { background: var(--v-acao); color: #ffffff; }
+$P .mxv-plano.is-destaque .mxv-botao--contorno { border-color: #ffffff; color: #ffffff; }
+$P .mxv-planos__aberto { display: none; }
+$P .mxv-planos.is-pronto .mxv-plano__desc { display: none; }
+$P .mxv-planos.is-pronto .mxv-planos__aberto {
+  display: block; max-width: 960px; margin: 14px auto 0; padding: 16px 20px; border-radius: 16px; background: var(--v-azulado);
+  font-size: 16px; line-height: 1.5; color: var(--v-tinta);
+}
+$P .mxv-planos__qual { font-weight: 700; }
+$P .mxv-plano-faixa {
+  max-width: 960px; margin: 12px auto 0; display: grid; gap: 4px 20px; padding: 16px 20px; border-radius: 16px;
+  border: 1px solid var(--v-linha); background: #ffffff; color: var(--v-tinta);
+}
+$P .mxv-plano-faixa__nome { font-weight: 700; font-size: 16px; }
+$P .mxv-plano-faixa__preco { margin-left: 6px; color: var(--v-acao); white-space: nowrap; }
+$P .mxv-plano-faixa__desc { font-size: 15px; line-height: 1.45; }
+/* link dentro do texto do ladrilho: 44 px de alvo de toque sem mexer na linha (o recheio sai pela margem negativa) */
+$P .mxv-ladrilho__texto a { display: inline-block; padding-block: 13px; margin-block: -13px; }
+$P .mxv-planos__sub { max-width: 960px; margin: 16px auto 0; font-size: 15px; line-height: 1.5; color: var(--v-cinza); }
+@media (min-width: 48rem) {
+  $P .mxv-plano-faixa { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) { $P .mxv-plano:not(.is-destaque) { transform: none; } }
+
+/* cartões escuros: na rota, o passo a passo do pedido ganha espaço (texto mais largo, mídia que acompanha) */
+$P .mxv-escuro__corpo { line-height: 1.55; }
+$P .mxv-passos { margin-block: 14px; display: grid; gap: 10px; counter-reset: passo; }
+$P .mxv-passos li {
+  counter-increment: passo; display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 12px; align-items: start;
+  color: #ffffff; font-size: 16px; line-height: 1.5;
+}
+$P .mxv-passos li::before {
+  content: counter(passo); width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .24); color: var(--v-destaque-escuro); font: 700 14px/1 var(--v-sans);
+}
+$P .mxv-escuro__botoes .mxv-botao { flex: 1 1 auto; width: auto; }
+$P .mxv-escuro__img img { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); }
+$P .mxv-escuro--palma .mxv-escuro__img img { box-shadow: none; }
+@media (max-width: 47.99rem) {
+  $P .mxv-escuro--palma { padding-bottom: 24px; }
+  $P .mxv-escuro__botoes .mxv-botao { padding-inline: 14px; font-size: 15px; }
+}
+@media (min-width: 48rem) {
+  $P .mxv-escuro--pratica { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); column-gap: 48px; align-items: start; }
+  $P .mxv-escuro--pratica .mxv-escuro__arte { position: sticky; top: 110px; }
+  $P .mxv-escuro--palma { padding-bottom: 50px; }
+}
+
+/* continue por aqui: os 6 relacionados em 2 colunas no celular, 3 no computador */
+$P .mxv-integra__texto { font-size: 14px; line-height: 1.4; }
+$P .mxv-mais { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+$P .mxv-mais a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--v-linha); text-decoration: none; }
+
+/* FAQ: 5 à vista + "Ver mais perguntas (+N)"; alvo de toque ≥ 44 px */
+$P .mxv-faq__item summary { min-height: 48px; }
+$P .mxv-faq__q { font-size: 16px; line-height: 1.4; font-weight: 600; }
+$P .mxv-faq__a { font-size: 16px; line-height: 1.55; }
+$P .mxv-faq__a p + p { margin-top: 10px; }
+$P .mxv-faq__ico { transition: transform .25s cubic-bezier(.22, 1, .36, 1); }
+$P .mxv-faq__item[open] .mxv-faq__ico { transform: rotate(180deg); }
+$P .mxv-faq__v { transition: opacity .2s ease; }
+$P .mxv-faq.is-recolhido .mxv-faq__extra { display: none; }
+$P .mxv-faq__mais[hidden] { display: none; }
+$P .mxv-faq__mais .mxv-botao { min-height: 48px; font-size: 16px; padding: 10px 24px; }
+$P .mxv-faq__apoio a { text-underline-offset: 3px; }
+
+/* vãos da casa: até 72 px no celular, até 120 no computador (a referência fica abaixo disso) */
+$P .mxv-faq-sec { padding-bottom: F(48, 96); }
+
+/* revelar ao entrar na tela: só depois que o molde.js roda (sem JS, tudo à vista) */
+@media (prefers-reduced-motion: no-preference) {
+  $P .mxv.js-ok .mxv-rv {
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .4s cubic-bezier(.22, 1, .36, 1), transform .4s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: calc(var(--rv-i, 0) * 60ms);
+  }
+  $P .mxv.js-ok .mxv-rv.is-visto { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  $P .mxv.js-ok .mxv-rv { opacity: 0; transition: opacity .2s linear; }
+  $P .mxv.js-ok .mxv-rv.is-visto { opacity: 1; }
+}
+
+/* letra do SoftPay Display: espaçamento da casa */
+$P :is(.mxv-titulo, .mxv-linha__titulo, .mxv-modulo__titulo, .mxv-plano__preco) { letter-spacing: 0.005em; }
+$P .mxv-h1 { letter-spacing: -0.0036em; }
