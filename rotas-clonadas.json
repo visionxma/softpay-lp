@@ -92,9 +92,9 @@
       "pasta": "moldes/square-pdv"
     },
     "/sistema-de-gestao-para-pequenos-negocios/": {
-      "molde": "shopify-pos",
-      "referencia": "https://www.shopify.com/pos",
-      "pasta": "moldes/shopify-pos"
+      "molde": "herosistemas-home",
+      "referencia": "https://herosistemas.com.br/",
+      "pasta": "moldes/herosistemas-home"
     },
     "/solucoes/sistema-de-estoque/": {
       "molde": "lightspeed-estoque",
@@ -122,9 +122,9 @@
       "pasta": "moldes/digifarma"
     },
     "/segmentos/distribuidora/": {
-      "molde": "nextar-mercado",
-      "referencia": "https://www.nextar.com.br/segmento/mercado",
-      "pasta": "moldes/nextar-mercado"
+      "molde": "vhsys-distribuidora-bebidas",
+      "referencia": "https://www.vhsys.com.br/segmentos/sistema-erp-para-distribuidora-de-bebidas/",
+      "pasta": "moldes/vhsys-distribuidora-bebidas"
     },
     "/segmentos/loja-de-celulares-e-acessorios/": {
       "molde": "zettle-leitor",
@@ -167,9 +167,9 @@
       "pasta": "moldes/clover-salao"
     },
     "/segmentos/loja-de-bebidas/": {
-      "molde": "clover-lanchonete",
-      "referencia": "https://www.clover.com/pos-systems/quick-service-restaurant",
-      "pasta": "moldes/clover-lanchonete"
+      "molde": "nextar-bebidas",
+      "referencia": "https://www.nextar.com.br/segmento/loja-de-bebidas",
+      "pasta": "moldes/nextar-bebidas"
     },
     "/solucoes/controle-de-fiado/": {
       "molde": "stripe-cobranca",

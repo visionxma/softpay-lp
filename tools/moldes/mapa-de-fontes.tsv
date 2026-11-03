@@ -7,13 +7,13 @@
 segmentos/empresas-com-filiais	lightspeed-varejo	https://www.lightspeedhq.com/pos/retail/
 segmentos/mercadinho	clover-varejo	https://www.clover.com/pos-systems/retail
 solucoes/sistema-pdv	square-pdv	https://squareup.com/us/en/point-of-sale
-sistema-de-gestao-para-pequenos-negocios	shopify-pos	https://www.shopify.com/pos
+sistema-de-gestao-para-pequenos-negocios	herosistemas-home	https://herosistemas.com.br/
 solucoes/sistema-de-estoque	lightspeed-estoque	https://www.lightspeedhq.com/pos/retail/inventory-management/
 segmentos/loja-de-roupas	shopify-pos-varejo	https://www.shopify.com/pos/retail
 segmentos/loja-de-variedades	marketup	https://marketup.com/
 segmentos/papelaria	lojaintegrada-indica	https://criar.lojaintegrada.com.br/indicaae
 segmentos/farmacia	digifarma	https://conteudo.digifarma.com.br/lp-adquira
-segmentos/distribuidora	nextar-mercado	https://www.nextar.com.br/segmento/mercado
+segmentos/distribuidora	vhsys-distribuidora-bebidas	https://www.vhsys.com.br/segmentos/sistema-erp-para-distribuidora-de-bebidas/
 segmentos/loja-de-celulares-e-acessorios	zettle-leitor	https://www.zettle.com/gb/card-reader
 segmentos/loja-de-autopecas	lightspeed-golfe	https://www.lightspeedhq.com/pos/golf/
 segmentos/materiais-de-construcao	hiper-mercadinhos	https://hiper.com.br/solucoes-para-voce/minimercados-e-mercadinhos/
@@ -22,7 +22,7 @@ segmentos/loja-de-joias	square-beleza	https://squareup.com/us/en/beauty
 segmentos/pet-shop	fourpet-teste	https://www.fourpet.com.br/teste-gratis/
 segmentos/loja-de-calcados	protrole-roupas	https://lp.protrole.com.br/sistema-para-loja-de-roupas/
 segmentos/cosmeticos-e-perfumaria	clover-salao	https://www.clover.com/pos-systems/salon
-segmentos/loja-de-bebidas	clover-lanchonete	https://www.clover.com/pos-systems/quick-service-restaurant
+segmentos/loja-de-bebidas	nextar-bebidas	https://www.nextar.com.br/segmento/loja-de-bebidas
 solucoes/controle-de-fiado	stripe-cobranca	https://stripe.com/invoicing
 solucoes/sistema-financeiro	ramp-contabil	https://ramp.com/accounting
 solucoes/nfe	bling-nfe	https://www.bling.com.br/funcionalidades/nota-fiscal-eletronica
@@ -95,3 +95,6 @@ perguntas	sumup-maquininhas	https://www.sumup.com/pt-br/maquininhas/
 # reserva	apurea-bling	https://apurea.com.br/alternativas/bling
 # reserva	gestaoclick-roupas	https://gestaoclick.com.br/sistema-para-loja-de-roupas/
 # reserva	clover-varejo-geral	https://www.clover.com/pos-systems
+# reserva	shopify-pos	https://www.shopify.com/pos
+# reserva	nextar-mercado	https://www.nextar.com.br/segmento/mercado
+# reserva	clover-lanchonete	https://www.clover.com/pos-systems/quick-service-restaurant
