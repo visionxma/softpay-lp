@@ -1,0 +1,159 @@
+{
+ "slug": "sobre",
+ "title": "Sobre o SoftPay | Quem Está por Trás do Sistema",
+ "description": "Conheça o SoftPay: sistema de gestão para pequenos negócios brasileiros, desenvolvido pela VisionX Inova Simples (IS), com atendimento nacional.",
+ "h1": "Sobre o SoftPay",
+ "intro": "O SoftPay é um sistema de gestão feito para o pequeno comércio brasileiro — aquele que vende no balcão, controla estoque e ainda anota fiado.",
+ "breadcrumbs": [
+  [
+   "Sobre",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay é a Softpay da Dinamarca?",
+   "Não. A Softpay ApS é uma empresa dinamarquesa (softpay.io) que transforma o celular em maquininha de cartão. Este SoftPay, também chamado de SoftPay PDV, é um sistema brasileiro de PDV e gestão para lojas, desenvolvido pela VisionX. As duas empresas não têm nenhuma relação."
+  ],
+  [
+   "Quem é a empresa por trás do SoftPay?",
+   "O SoftPay é um produto da VisionX Inova Simples (IS), CNPJ 61.427.918/0001-06, com sede em Pedreiras/MA."
+  ],
+  [
+   "O SoftPay atende todo o Brasil?",
+   "Sim. O sistema é usado pela internet e o atendimento é nacional, pelo WhatsApp."
+  ],
+  [
+   "Para que tipo de negócio o SoftPay foi feito?",
+   "Para pequenos comércios com estoque: mercadinhos, lojas de roupas, lojas de variedades, papelarias, farmácias, distribuidoras e lojas em geral."
+  ],
+  [
+   "Como falo com a equipe?",
+   "Pelo WhatsApp (99) 9 8430-4630 ou pelo e-mail suporte@softpaybr.com."
+  ],
+  [
+   "Tem teste grátis?",
+   "Sim, 7 dias com acesso aos recursos do plano e sem cartão de crédito."
+  ]
+ ],
+ "cta_title": "Conheça o SoftPay na prática",
+ "cta_text": "Sete dias de teste com acesso aos recursos do plano, sem cartão de crédito.",
+ "related": [
+  [
+   "Contato",
+   "/contato/",
+   "Todos os canais"
+  ],
+  [
+   "É seguro?",
+   "/perguntas/sistema-de-gestao-e-seguro/",
+   "Como cuidamos dos dados"
+  ],
+  [
+   "Suporte humano",
+   "/perguntas/tem-suporte-humano/",
+   "Como atendemos"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-que-e-o-softpay",
+   "titulo": "O que é o SoftPay",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O SoftPay reúne PDV, controle de estoque, caixa, fiado, cadastro de clientes, notas fiscais e loja online em um único sistema, acessado pelo navegador."
+    },
+    {
+     "tipo": "p",
+     "texto": "Ele foi desenhado para um público específico: lojas com uma ou duas pessoas, faturamento crescendo e controle ainda no caderno ou na planilha. Não é um ERP corporativo simplificado — é uma ferramenta pensada desde o começo para a rotina de quem está atrás do balcão."
+    },
+    {
+     "tipo": "p",
+     "texto": "Um aviso por causa do nome: este SoftPay, também chamado de SoftPay PDV, é brasileiro e não tem relação com a Softpay ApS, empresa da Dinamarca (softpay.io) que transforma o celular em maquininha de cartão. O SoftPay não é maquininha nem processa pagamento com cartão: é o sistema da loja."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-ideia-central",
+   "titulo": "A ideia central",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Muito sistema mostra número. O que falta ao pequeno lojista raramente é dado: é entender o que aquele dado quer dizer e o que fazer com ele."
+    },
+    {
+     "tipo": "p",
+     "texto": "Por isso o SoftPay insiste em coisas como registrar o custo junto do preço, mostrar o total do fiado em aberto e separar faturamento de lucro. São informações que mudam decisão, não apenas relatórios que enchem a tela."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quem-desenvolve",
+   "titulo": "Quem desenvolve",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O SoftPay é um produto da <strong>VisionX Inova Simples (IS)</strong>, CNPJ <strong>61.427.918/0001-06</strong>, com sede em Pedreiras, no Maranhão."
+    },
+    {
+     "tipo": "p",
+     "texto": "O atendimento é nacional: como o sistema é usado pela internet, não há necessidade de representante local ou visita técnica."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-trabalhamos-o-suporte",
+   "titulo": "Como trabalhamos o suporte",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O atendimento é feito por pessoas da equipe, pelo WhatsApp, e cobre desde a configuração inicial até as dúvidas do dia a dia. Para quem está saindo do caderno, essa costuma ser a diferença entre implantar o sistema e desistir na primeira dificuldade."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "transparencia-sobre-o-produto",
+   "titulo": "Transparência sobre o produto",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Ao longo deste site você vai encontrar observações do tipo “confirme com o suporte antes de contratar”. Isso é proposital: preferimos que você pergunte antes a descobrir depois que um recurso específico não atende ao seu caso."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Nosso pedido",
+     "texto": "Se algum recurso é decisivo para a sua operação — controle de validade, permissões por perfil, situação da emissão fiscal, estrutura de filiais —, pergunte antes de assinar. O suporte responde pelo WhatsApp."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "contato",
+   "titulo": "Contato",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "WhatsApp: <a href=\"https://wa.me/5599984304630\" target=\"_blank\" rel=\"noopener\">(99) 9 8430-4630</a>",
+      "E-mail: <a href=\"mailto:suporte@softpaybr.com\">suporte@softpaybr.com</a>",
+      "Empresa: VisionX Inova Simples (IS) — CNPJ 61.427.918/0001-06",
+      "Endereço: Pedreiras/MA, Brasil"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Veja também a página de <a href=\"/contato/\">contato</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

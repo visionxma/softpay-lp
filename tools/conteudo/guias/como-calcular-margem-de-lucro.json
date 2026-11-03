@@ -1,0 +1,202 @@
+{
+ "artigo": true,
+ "slug": "guias/como-calcular-margem-de-lucro",
+ "figura": [
+  "/assets/lojistas/loja-de-roupas.webp",
+  "Lojista avaliando preço e margem das peças da loja"
+ ],
+ "title": "Como Calcular a Margem de Lucro e o Preço de Venda | SoftPay",
+ "description": "Como calcular margem de lucro e formar preço de venda: markup, margem sobre venda, o erro de somar a porcentagem no custo e exemplos práticos.",
+ "h1": "Como calcular a margem de lucro",
+ "intro": "Resposta curta: margem é o lucro dividido pelo preço de venda, não pelo custo. Confundir os dois é o erro de precificação mais caro do varejo pequeno.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como calcular margem",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual a diferença entre margem e markup?",
+   "Margem divide o lucro pelo preço de venda; markup divide o lucro pelo custo. O mesmo produto tem margem menor que markup, e confundir os dois leva a preço abaixo do necessário."
+  ],
+  [
+   "Como formar o preço para ter a margem que eu quero?",
+   "Use preço = custo ÷ (1 − margem desejada). Somar a porcentagem sobre o custo produz uma margem menor que a pretendida."
+  ],
+  [
+   "Qual margem é a ideal para minha loja?",
+   "Não existe número universal: depende do segmento, do giro e da sua estrutura de custos. A margem precisa cobrir impostos, taxas, perdas e as despesas fixas, além do custo da mercadoria."
+  ],
+  [
+   "Devo usar a mesma margem para todos os produtos?",
+   "Não. Margem média esconde produtos que dão prejuízo. O ideal é acompanhar por produto, ou pelo menos por categoria."
+  ],
+  [
+   "Onde entram as taxas de cartão?",
+   "Elas reduzem o que efetivamente entra na sua conta, então precisam ser consideradas na formação do preço junto com impostos e perdas."
+  ]
+ ],
+ "cta_title": "Confira a margem dos seus produtos",
+ "cta_text": "Cadastre custo e preço de venda e veja a margem real de cada item, em vez de trabalhar com média.",
+ "related": [
+  [
+   "Como calcular lucro",
+   "/guias/como-calcular-lucro-da-loja/",
+   "A conta completa"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Custo por produto"
+  ],
+  [
+   "Sistema financeiro",
+   "/solucoes/sistema-financeiro/",
+   "Resultado do período"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "margem-e-markup-nao-sao-a-mesma-coisa",
+   "titulo": "Margem e markup não são a mesma coisa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Essa distinção parece detalhe e destrói a rentabilidade de muita loja. As duas contas partem do mesmo lucro, mas dividem por bases diferentes:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Margem</strong> = lucro ÷ <strong>preço de venda</strong>",
+      "<strong>Markup</strong> = lucro ÷ <strong>custo</strong>"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Um produto que custa R$ 60 e é vendido por R$ 100 tem R$ 40 de lucro bruto. O markup é 66,7% (40 ÷ 60). A margem é 40% (40 ÷ 100). Se você achou que estava ganhando 66,7% sobre a venda, seu preço está errado."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-erro-de-somar-a-porcentagem-no-custo",
+   "titulo": "O erro de somar a porcentagem no custo",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A prática mais comum — e mais perigosa — é pegar o custo e somar a porcentagem desejada. Quem quer 30% de margem e faz “custo × 1,30” não chega a 30% de margem:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Custo R$ 60, querendo 30% de margem",
+     "rodape": "Quase 8 reais de diferença por produto. Multiplicado pelo volume de um mês, é a diferença entre lucro e prejuízo.",
+     "linhas": [
+      {
+       "rotulo": "Cálculo errado: 60 × 1,30",
+       "valor": "R$ 78,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Margem real desse preço: 18 ÷ 78",
+       "valor": "23,1%",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Cálculo certo: 60 ÷ (1 − 0,30)",
+       "valor": "R$ 85,71",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Margem real desse preço: 25,71 ÷ 85,71",
+       "valor": "30,0%",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-formula-certa-para-formar-preco",
+   "titulo": "A fórmula certa para formar preço",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Para chegar a uma margem desejada, divida o custo pelo complemento da margem:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Preço de venda = Custo ÷ (1 − margem desejada)</strong>"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Com custo de R$ 60 e margem alvo de 40%: 60 ÷ (1 − 0,40) = 60 ÷ 0,60 = <strong>R$ 100,00</strong>."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que a margem precisa cobrir",
+     "texto": "A margem precisa cobrir mais que o custo da mercadoria: impostos, taxa de cartão, perdas e a sua parcela das despesas fixas saem dela. Uma margem que só cobre o custo não é lucro, é empate."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "margem-por-produto-nao-margem-media",
+   "titulo": "Margem por produto, não margem média",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Trabalhar com uma margem única para a loja inteira esconde os produtos que dão prejuízo. Em geral, os itens de maior giro puxam a margem para baixo e são compensados por outros — mas você só descobre isso olhando produto a produto."
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Produto",
+      "Custo",
+      "Venda",
+      "Margem"
+     ],
+     "linhas": [
+      [
+       "Item de alto giro",
+       "R$ 8,00",
+       "R$ 10,00",
+       "20,0%"
+      ],
+      [
+       "Item intermediário",
+       "R$ 22,00",
+       "R$ 35,00",
+       "37,1%"
+      ],
+      [
+       "Item de baixo giro",
+       "R$ 45,00",
+       "R$ 89,00",
+       "49,4%"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Números fictícios. O ponto é o padrão: dá para vender muito do produto de 20% e ainda assim fechar o mês bem — desde que você saiba que ele é de 20%."
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

@@ -1,0 +1,257 @@
+{
+ "slug": "solucoes/bot-whatsapp",
+ "figura": [
+  "/assets/lojistas/celular-balcao.webp",
+  "Comerciante registrando uma venda pelo celular no balcão"
+ ],
+ "title": "Registre a Venda pelo WhatsApp | Bot do SoftPay",
+ "description": "Registre venda, despesa, estoque e fiado mandando uma mensagem ou um áudio no WhatsApp. O SoftPay responde em segundos, sem você abrir o sistema.",
+ "h1": "Registre a venda pelo WhatsApp",
+ "intro": "O lojista não deixa de registrar porque o sistema é ruim. Deixa porque registrar exige parar. Com o bot do SoftPay, a venda entra no sistema enquanto o cliente ainda está na sua frente.",
+ "breadcrumbs": [
+  [
+   "Soluções",
+   "/solucoes/"
+  ],
+  [
+   "Bot do WhatsApp",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Como registro uma venda pelo WhatsApp?",
+   "Mandando uma mensagem ou um áudio, como falaria com um funcionário — por exemplo, “vendi duas cocas no pix”. O SoftPay entende, registra e responde confirmando em cerca de dois segundos."
+  ],
+  [
+   "Preciso falar de um jeito específico?",
+   "Não. Você fala do seu jeito. Quando a frase fica ambígua — produto parecido, forma de pagamento não dita — ele pergunta em vez de adivinhar."
+  ],
+  [
+   "E se eu registrar errado?",
+   "Responda DESFAZER em até 15 minutos e o último registro é cancelado, seja venda, despesa, entrada de estoque ou baixa de fiado."
+  ],
+  [
+   "Ele vende mesmo sem eu ter estoque?",
+   "Não. Estoque insuficiente barra a venda e ele avisa quanto há disponível. O bot recusa em vez de deixar o sistema mentir."
+  ],
+  [
+   "Em qual plano o bot está disponível?",
+   "A partir do plano Loja, de R$ 89/mês. Confirme com o suporte a situação da sua conta antes de contratar contando com ele."
+  ],
+  [
+   "O bot atende meus clientes?",
+   "Não. Ele fala com você, o dono da loja. Não é um chatbot de atendimento ao consumidor."
+  ],
+  [
+   "Funciona por áudio?",
+   "Sim. Um áudio típico de lojista tem de 7 a 8 segundos de fala e vira registro em cerca de dois segundos e meio."
+  ],
+  [
+   "Ele substitui o painel do SoftPay?",
+   "Não. É a porta de entrada rápida para registrar no momento em que a coisa acontece. Correções, configuração e análise mais funda continuam no painel."
+  ]
+ ],
+ "cta_title": "Teste registrando pelo WhatsApp",
+ "cta_text": "Sete dias grátis, sem cartão. Fale uma venda e veja ela aparecer no sistema.",
+ "related": [
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "A venda no balcão"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "O que o registro alimenta"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "Fiado também pelo WhatsApp"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-problema-nao-e-o-sistema-e-o-momento",
+   "titulo": "O problema não é o sistema. É o momento.",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Atrás do balcão, com o cliente na frente e a mão no troco, abrir o aplicativo é um movimento que não acontece. Falar, sim. Então a venda acontece e o registro não — e a partir daí a loja inteira desanda:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "O <strong>estoque mente</strong>, e você compra o que já tem ou não repõe o que acabou.",
+      "O <strong>caixa não fecha</strong>, e você passa a desconfiar do próprio sistema.",
+      "O <strong>relatório não decide nada</strong>, porque descreve metade da loja.",
+      "E o fiado volta para o caderno de papel."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Esse buraco entre o que aconteceu na loja e o que o sistema sabe é o problema de verdade. Não falta recurso no painel: falta o momento de abrir o painel."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-funciona",
+   "titulo": "Como funciona",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Você manda uma mensagem ou um áudio no WhatsApp, como falaria com um funcionário. O SoftPay entende, registra e responde confirmando — em cerca de dois segundos."
+    },
+    {
+     "tipo": "h3",
+     "texto": "O que dá para fazer falando"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "Registrar venda, com forma de pagamento",
+      "Lançar despesa",
+      "Dar entrada de estoque",
+      "Registrar venda fiada no nome do cliente",
+      "Dar baixa em dívida de fiado",
+      "Lançar suprimento e sangria de caixa",
+      "Consultar saldo, estoque e o que foi vendido"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "São 17 operações no total. Um áudio típico de lojista tem <strong>7 a 8 segundos</strong> de fala."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Em qual plano",
+     "texto": "O bot está disponível <strong>a partir do plano Loja</strong>. Ele não substitui o painel: correções, configuração e análise mais funda continuam lá."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "uma-conversa-real-cronometrada",
+   "titulo": "Uma conversa real, cronometrada",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Esta sequência aconteceu de verdade, em 46 segundos, sem o painel ser aberto uma única vez:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Do problema descoberto à venda registrada",
+     "rodape": "Repare no mais importante: o bot <strong>recusou</strong> a primeira venda porque o estoque estava zerado. Ele não deixa o sistema mentir para agradar.",
+     "linhas": [
+      {
+       "rotulo": "16:08:12 — “Vendi duas cocas no pix”",
+       "valor": "recusado: estoque 0",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "16:08:27 — “Registre no estoque 10 coca”",
+       "valor": "entrada registrada",
+       "classe": ""
+      },
+      {
+       "rotulo": "16:08:38 — “Vende duas cocas no Pix”",
+       "valor": "venda de R$ 10,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "por-que-da-para-confiar-dinheiro-a-ele",
+   "titulo": "Por que dá para confiar dinheiro a ele",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Um bot que registra venda mexe no caixa da sua loja. O que sustenta isso:"
+    },
+    {
+     "tipo": "h3",
+     "texto": "Ele prefere perguntar a adivinhar"
+    },
+    {
+     "tipo": "p",
+     "texto": "Produto ambíguo, forma de pagamento ausente, cliente homônimo, valor muito alto — em todos, ele pergunta. Chutar “dinheiro” numa venda bagunçaria o seu fechamento em silêncio, e silêncio é o pior defeito num sistema que mexe com dinheiro."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Ele recusa em vez de mentir"
+    },
+    {
+     "tipo": "p",
+     "texto": "Estoque insuficiente barra a venda. Baixa maior que a dívida é recusada, com o saldo certo na resposta. Fiado sem cliente identificado não entra."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Nada acontece duas vezes"
+    },
+    {
+     "tipo": "p",
+     "texto": "Se o WhatsApp reentregar a mesma mensagem, ela não é registrada de novo."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Dá para desfazer"
+    },
+    {
+     "tipo": "p",
+     "texto": "Por 15 minutos, “DESFAZER” cancela o último registro — venda, despesa, cadastro, entrada de estoque, suprimento ou baixa de fiado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "A mesma frase dá sempre o mesmo resultado"
+    },
+    {
+     "tipo": "p",
+     "texto": "A maior parte das frases é resolvida por regra fixa, não por adivinhação: o mesmo áudio registra sempre a mesma venda."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "onde-ele-ajuda-pouco",
+   "titulo": "Onde ele ajuda pouco",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vale ser honesto sobre o tamanho da coisa:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Loja com fila constante e movimento alto.</strong> Quem passa centenas de itens por dia precisa de PDV, não de conversa. O bot é para o comércio onde a venda é esparsa o bastante para caber numa frase.",
+      "<strong>Quem já registra tudo pelo painel</strong> ganha pouco. O ganho é proporcional ao buraco que existia.",
+      "<strong>Configuração continua no painel</strong>, de propósito: é decisão rara e de consequência larga, onde a tela dá um contexto que uma mensagem não dá."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-ele-nao-e",
+   "titulo": "O que ele não é",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não é um chatbot de atendimento.</strong> Ele fala com você, o dono — não com o seu cliente.",
+      "<strong>Não é um assistente que conversa.</strong> Fora dos comandos, ele diz o que sabe fazer. Não improvisa.",
+      "<strong>Não substitui o painel.</strong> É a porta de entrada rápida; o painel continua sendo onde se corrige, configura e analisa."
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

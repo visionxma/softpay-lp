@@ -1,0 +1,112 @@
+{
+ "slug": "perguntas",
+ "title": "Perguntas Frequentes sobre Sistema de Gestão | SoftPay",
+ "description": "Respostas diretas: quanto custa, se loja pequena precisa, caderno ou sistema, Excel ou sistema, segurança, celular, migração e suporte.",
+ "h1": "Perguntas de quem está avaliando",
+ "intro": "Respostas diretas às dúvidas que aparecem antes de contratar um sistema de gestão.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   null
+  ]
+ ],
+ "related": [
+  [
+   "Guias",
+   "/guias/",
+   "Método passo a passo"
+  ],
+  [
+   "Preços",
+   "/#pricing",
+   "Planos e valores"
+  ],
+  [
+   "Contato",
+   "/contato/",
+   "Fale com o suporte"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-que-voce-quer-saber",
+   "titulo": "O que você quer saber",
+   "partes": [
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "Quanto custa um sistema para loja?",
+       "texto": "Preço de sistema de gestão para loja pequena costuma ficar na faixa de dezenas de reais por mês",
+       "href": "/perguntas/quanto-custa-um-sistema-para-loja/"
+      },
+      {
+       "titulo": "Loja pequena precisa de sistema?",
+       "texto": "Não é o tamanho da loja que responde essa pergunta",
+       "href": "/perguntas/loja-pequena-precisa-de-sistema/"
+      },
+      {
+       "titulo": "Caderno ou sistema?",
+       "texto": "O caderno tem vantagens reais e é honesto reconhecê-las",
+       "href": "/perguntas/caderno-ou-sistema/"
+      },
+      {
+       "titulo": "Excel ou sistema de gestão?",
+       "texto": "Planilha é uma ferramenta excelente — para análise",
+       "href": "/perguntas/excel-ou-sistema-de-gestao/"
+      },
+      {
+       "titulo": "Qual sistema usar em um mercadinho?",
+       "texto": "Mercadinho tem exigências próprias: muitos itens, margem apertada, venda rápida e fiado",
+       "href": "/perguntas/qual-sistema-para-mercadinho/"
+      },
+      {
+       "titulo": "Sistema de gestão é seguro?",
+       "texto": "A pergunta certa não é se a nuvem é segura em absoluto, e sim como ela se compara ao que você faz hoje: um…",
+       "href": "/perguntas/sistema-de-gestao-e-seguro/"
+      },
+      {
+       "titulo": "Posso usar o SoftPay no celular?",
+       "texto": "Sim — e sem instalar nada",
+       "href": "/perguntas/posso-usar-o-softpay-no-celular/"
+      },
+      {
+       "titulo": "Posso migrar de outro sistema?",
+       "texto": "Sim",
+       "href": "/perguntas/posso-migrar-de-outro-sistema/"
+      },
+      {
+       "titulo": "É difícil aprender a usar?",
+       "texto": "A dificuldade real quase nunca está no sistema",
+       "href": "/perguntas/e-dificil-aprender/"
+      },
+      {
+       "titulo": "Preciso instalar alguma coisa?",
+       "texto": "Não",
+       "href": "/perguntas/preciso-instalar/"
+      },
+      {
+       "titulo": "O suporte é humano?",
+       "texto": "Sim",
+       "href": "/perguntas/tem-suporte-humano/"
+      },
+      {
+       "titulo": "Funciona em todo o Brasil?",
+       "texto": "Sim",
+       "href": "/perguntas/funciona-no-brasil-inteiro/"
+      },
+      {
+       "titulo": "Posso usar em vários dispositivos?",
+       "texto": "Sim",
+       "href": "/perguntas/posso-usar-em-varios-dispositivos/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

@@ -1,0 +1,77 @@
+{
+ "slug": "blog",
+ "title": "Blog do Lojista: Rotina, Preço, Estoque e Vitrine | SoftPay",
+ "description": "Conteúdo prático sobre a rotina de quem tem loja: como precificar, evitar perda de estoque, lidar com trocas, montar vitrine e organizar o fluxo de caixa.",
+ "h1": "Blog do lojista",
+ "intro": "Sobre a rotina de quem tem loja — preço, estoque, vitrine, caixa e troca. Serve mesmo que você não use o SoftPay.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   null
+  ]
+ ],
+ "related": [
+  [
+   "Guias",
+   "/guias/",
+   "Método passo a passo"
+  ],
+  [
+   "Perguntas",
+   "/perguntas/",
+   "Dúvidas antes de contratar"
+  ],
+  [
+   "Segmentos",
+   "/segmentos/",
+   "Pelo seu tipo de loja"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "escolha-o-assunto",
+   "titulo": "Escolha o assunto",
+   "partes": [
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "Como precificar um produto na loja",
+       "texto": "O erro mais comum na precificação não é errar a conta: é confundir markup com margem",
+       "href": "/blog/como-precificar-produto/"
+      },
+      {
+       "titulo": "Perda de estoque por validade",
+       "texto": "Produto vencido é prejuízo dobrado: você pagou pela mercadoria e ainda tem o trabalho de descartar",
+       "href": "/blog/perda-de-estoque-validade/"
+      },
+      {
+       "titulo": "Produtos parados no estoque",
+       "texto": "Produto parado não é neutro: é dinheiro que você já pagou, ocupando espaço, sem virar venda",
+       "href": "/blog/produtos-parados-no-estoque/"
+      },
+      {
+       "titulo": "Troca e devolução na loja",
+       "texto": "Boa parte dos conflitos de troca vem de uma confusão simples: lojista e cliente acham que a lei diz coisas…",
+       "href": "/blog/troca-e-devolucao-na-loja/"
+      },
+      {
+       "titulo": "Como organizar a vitrine de uma loja pequena",
+       "texto": "A vitrine é o único vendedor que trabalha 24 horas por dia, inclusive quando a loja está fechada",
+       "href": "/blog/como-organizar-vitrine-de-loja/"
+      },
+      {
+       "titulo": "Fluxo de caixa para loja pequena",
+       "texto": "Dá para vender bem e não ter dinheiro no caixa",
+       "href": "/blog/fluxo-de-caixa-loja-pequena/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

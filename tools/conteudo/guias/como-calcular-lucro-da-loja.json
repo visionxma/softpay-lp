@@ -1,0 +1,215 @@
+{
+ "artigo": true,
+ "slug": "guias/como-calcular-lucro-da-loja",
+ "figura": [
+  "/assets/lojistas/casal-comerciantes.webp",
+  "Casal de comerciantes analisando os números da loja"
+ ],
+ "title": "Como Calcular o Lucro de uma Loja (com Exemplo) | SoftPay",
+ "description": "Aprenda a calcular o lucro da sua loja: faturamento, CMV, lucro bruto, despesas e resultado. Com fórmula, exemplo prático e os erros mais comuns.",
+ "h1": "Como calcular o lucro de uma loja",
+ "intro": "Resposta curta: lucro bruto é o faturamento menos o custo da mercadoria vendida. O resultado é o lucro bruto menos as despesas. Faturamento sozinho não diz nada sobre o seu ganho.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como calcular o lucro",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual a diferença entre faturamento e lucro?",
+   "Faturamento é tudo que entrou com as vendas. Lucro é o que sobra depois de descontar o custo da mercadoria vendida e as despesas do período."
+  ],
+  [
+   "O que é CMV?",
+   "Custo da Mercadoria Vendida: o custo daquilo que efetivamente saiu da prateleira no período. A fórmula clássica é estoque inicial mais compras menos estoque final."
+  ],
+  [
+   "Por que vendo muito e não tenho dinheiro?",
+   "Quase sempre porque a margem está sendo consumida pelo custo da mercadoria e pelas despesas sem acompanhamento, ou porque parte da venda foi fiada e ainda não virou dinheiro."
+  ],
+  [
+   "A retirada do dono entra na conta?",
+   "Sim. Se você retira dinheiro da loja para despesas pessoais, isso precisa aparecer, senão o resultado fica superestimado."
+  ],
+  [
+   "O SoftPay calcula isso para mim?",
+   "Ele reúne os dados que formam a conta: vendas registradas no PDV e custo dos produtos cadastrado. A precisão depende de esses dados estarem completos. Ele não substitui a contabilidade."
+  ]
+ ],
+ "cta_title": "Tenha os números para fazer essa conta",
+ "cta_text": "Cadastre o custo dos produtos, registre as vendas por um mês e a conta deixa de ser estimativa.",
+ "related": [
+  [
+   "Como calcular margem",
+   "/guias/como-calcular-margem-de-lucro/",
+   "Formação de preço"
+  ],
+  [
+   "Sistema financeiro",
+   "/solucoes/sistema-financeiro/",
+   "Caixa e resultado"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "De onde vem o custo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "faturamento-nao-e-lucro",
+   "titulo": "Faturamento não é lucro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Faturamento é o total que passou pelo caixa. Dentro dele está o dinheiro que pertence ao fornecedor da mercadoria, ao aluguel, à energia e ao funcionário. O que sobra depois de tudo isso é o seu."
+    },
+    {
+     "tipo": "p",
+     "texto": "É por isso que existe a frase mais repetida do varejo pequeno: “vendo muito e não tenho dinheiro”. Quase sempre não é problema de venda — é a margem sendo consumida sem acompanhamento."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "as-duas-formulas-que-voce-precisa",
+   "titulo": "As duas fórmulas que você precisa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A primeira separa o custo da mercadoria:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Lucro bruto = Faturamento − CMV</strong> (custo da mercadoria vendida)"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "A segunda desconta o custo de manter a loja aberta:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Resultado = Lucro bruto − Despesas do período</strong>"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-e-cmv-e-como-calcular",
+   "titulo": "O que é CMV e como calcular",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "CMV é o custo daquilo que efetivamente saiu da prateleira no período — não o quanto você comprou. A fórmula clássica é:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>CMV = Estoque inicial + Compras − Estoque final</strong>"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você tinha R$ 10.000 em estoque, comprou R$ 5.000 no mês e terminou com R$ 8.000, o CMV foi R$ 7.000. Esse é o custo do que você vendeu."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Por que o sistema muda isso",
+     "texto": "Com o custo de cada produto cadastrado em sistema e a baixa acontecendo na venda, o CMV deixa de depender de inventário manual no fim do mês."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "exemplo-completo-do-faturamento-ao-bolso",
+   "titulo": "Exemplo completo, do faturamento ao bolso",
+   "partes": [
+    {
+     "tipo": "exemplo",
+     "titulo": "Fechamento de um mês",
+     "rodape": "Números fictícios, para explicar o método. Faturar R$ 25 mil e ganhar R$ 5,5 mil é uma realidade comum — e só fica visível quando o custo é acompanhado.",
+     "linhas": [
+      {
+       "rotulo": "Vendas do mês (faturamento)",
+       "valor": "R$ 25.480,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Custo da mercadoria vendida (CMV)",
+       "valor": "− R$ 16.560,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Lucro bruto",
+       "valor": "R$ 8.920,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Aluguel",
+       "valor": "− R$ 1.200,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Energia, água e internet",
+       "valor": "− R$ 600,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Funcionário e encargos",
+       "valor": "− R$ 1.600,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Resultado estimado",
+       "valor": "R$ 5.520,00",
+       "classe": "result final"
+      }
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Repare que a margem bruta desse exemplo é de 35% (8.920 ÷ 25.480). É com ela que a loja paga todas as despesas. Se as despesas crescem e a margem não, o resultado desaparece mesmo com a venda estável."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-erros-que-mais-distorcem-a-conta",
+   "titulo": "Os erros que mais distorcem a conta",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Contar a venda fiada como dinheiro recebido.</strong> A mercadoria saiu, mas o dinheiro não entrou.",
+      "<strong>Esquecer a retirada do dono.</strong> Se você tira dinheiro da loja para despesa pessoal, isso precisa aparecer.",
+      "<strong>Usar o preço de compra do mês em vez do custo do que foi vendido.</strong> Comprar não é vender.",
+      "<strong>Ignorar perdas, quebras e furtos.</strong> Eles saíram do estoque sem gerar receita.",
+      "<strong>Confundir dinheiro em caixa com lucro.</strong> Parte do caixa é o custo da próxima reposição."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sobre o alcance deste guia",
+     "texto": "Este guia trata de gestão, não de contabilidade ou tributos. Para apuração fiscal e escolha de regime tributário, consulte o seu contador."
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

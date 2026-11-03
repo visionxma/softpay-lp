@@ -1,0 +1,62 @@
+{
+ "slug": "comparativos",
+ "title": "Comparativos: SoftPay e Outros Sistemas de Gestão | SoftPay",
+ "description": "Comparações honestas entre o SoftPay e outros sistemas de gestão para pequeno comércio, incluindo quando o concorrente é a melhor escolha.",
+ "h1": "Comparativos",
+ "intro": "Comparações entre o SoftPay e outros sistemas, com preços lidos na fonte e dizendo também quando o concorrente atende melhor.",
+ "breadcrumbs": [
+  [
+   "Comparativos",
+   null
+  ]
+ ],
+ "related": [
+  [
+   "Como escolher um sistema",
+   "/guias/como-escolher-sistema-de-gestao/",
+   "Os 7 critérios"
+  ],
+  [
+   "Quanto custa um sistema",
+   "/guias/quanto-custa-um-sistema-de-gestao/",
+   "Preço real"
+  ],
+  [
+   "Preços",
+   "/#pricing",
+   "Os planos do SoftPay"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "escolha-a-comparacao",
+   "titulo": "Escolha a comparação",
+   "partes": [
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "SoftPay ou Nex: qual escolher",
+       "texto": "Os dois atendem pequeno comércio e cobram na mesma faixa",
+       "href": "/comparativos/softpay-ou-nex/"
+      },
+      {
+       "titulo": "Alternativa ao Kyte: SoftPay ou Kyte?",
+       "texto": "Para quem tem loja com balcão, o SoftPay é uma alternativa ao Kyte: PDV, estoque, caixa e fiado no…",
+       "href": "/comparativos/softpay-ou-kyte/"
+      },
+      {
+       "titulo": "Alternativa ao Bling para loja física",
+       "texto": "O Bling é forte no que foi feito para fazer: integrar marketplaces e e-commerce",
+       "href": "/comparativos/alternativa-ao-bling/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

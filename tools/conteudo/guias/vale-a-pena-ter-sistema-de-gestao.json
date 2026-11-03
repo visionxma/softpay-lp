@@ -1,0 +1,281 @@
+{
+ "artigo": true,
+ "slug": "guias/vale-a-pena-ter-sistema-de-gestao",
+ "title": "Vale a Pena Ter um Sistema de Gestão na Loja? | SoftPay",
+ "description": "A resposta honesta: depende do tamanho da sua loja e de quantas vendas você faz por dia. Veja quando compensa, quando não compensa e como fazer a conta.",
+ "h1": "Vale a pena ter um sistema de gestão na loja?",
+ "intro": "Resposta curta e honesta: depende de quantas vendas você faz por dia e de quanto dinheiro está parado em estoque. Abaixo de um certo movimento, caderno resolve. Acima dele, o caderno começa a custar mais caro que o sistema — e esta página mostra como descobrir de que lado você está.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Vale a pena ter sistema de gestão",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Vale a pena para uma loja muito pequena, de uma pessoa só?",
+   "Depende do movimento, não do tamanho. Se você faz menos de 5 a 10 vendas por dia e tem poucos produtos, o caderno ainda resolve. Se já perdeu venda por não saber o estoque ou tem fiado com mais de dez pessoas, passa a valer."
+  ],
+  [
+   "Quanto custa um sistema de gestão para comércio pequeno?",
+   "A faixa de mercado no Brasil em 2026 vai de cerca de R$ 39 a R$ 199 por mês. O SoftPay vai de R$ 65 a R$ 109, dependendo do plano, com 7 dias grátis e sem cartão."
+  ],
+  [
+   "Dá para usar planilha em vez de sistema?",
+   "Dá, e por um tempo funciona. A planilha quebra quando mais de uma pessoa precisa usar ao mesmo tempo, quando a venda e a baixa de estoque viram duas etapas separadas e quando não há trava contra o dado errado. Veja a comparação em Excel ou sistema de gestão."
+  ],
+  [
+   "Preciso ter internet o tempo todo?",
+   "Sim. O SoftPay roda no navegador e depende de conexão. Se a internet do seu ponto é instável, leve isso em conta antes de contratar."
+  ],
+  [
+   "Quanto tempo até o sistema começar a ajudar?",
+   "Do primeiro dia, se você cadastrar os produtos de maior giro e passar as vendas por ele. O que leva semanas é ter a base completa — e não é necessário esperar isso para começar a se beneficiar."
+  ],
+  [
+   "E se eu contratar e não usar?",
+   "É o risco real, e o mais comum. Um sistema pela metade é pior que um caderno inteiro. Por isso o teste de 7 dias existe: se você não conseguiu passar as vendas de dois dias por ele durante o teste, provavelmente não vai passar depois."
+  ],
+  [
+   "Sistema de gestão aumenta as vendas?",
+   "Não diretamente. Ele evita perdas — venda perdida por falta de produto, fiado não cobrado, compra errada. Quem aumenta venda é preço, atendimento, ponto e divulgação."
+  ]
+ ],
+ "cta_title": "Faça a conta antes de decidir",
+ "cta_text": "Se o descontrole custa mais que R$ 69 por mês na sua loja, o teste de 7 dias responde o resto. Sem cartão de crédito.",
+ "related": [
+  [
+   "Quanto custa um sistema",
+   "/guias/quanto-custa-um-sistema-de-gestao/",
+   "Faixa de mercado e comparação"
+  ],
+  [
+   "Como escolher um sistema",
+   "/guias/como-escolher-sistema-de-gestao/",
+   "Os 7 critérios que importam"
+  ],
+  [
+   "Caderno ou sistema?",
+   "/perguntas/caderno-ou-sistema/",
+   "A comparação direta"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "O roteiro da migração"
+  ],
+  [
+   "Excel ou sistema?",
+   "/perguntas/excel-ou-sistema-de-gestao/",
+   "Quando a planilha quebra"
+  ],
+  [
+   "Loja pequena precisa?",
+   "/perguntas/loja-pequena-precisa-de-sistema/",
+   "A pergunta por tamanho"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "quando-nao-vale-a-pena",
+   "titulo": "Quando NÃO vale a pena",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Começando pelo lado que quase nenhum site de sistema escreve, porque não é do interesse de quem vende:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Você faz menos de 5 a 10 vendas por dia.</strong> Nesse volume, um caderno bem feito dá conta. O sistema vai custar tempo de cadastro sem devolver informação que você já não saiba de cabeça.",
+      "<strong>Você tem menos de 30 ou 40 produtos.</strong> Dá para saber o estoque olhando a prateleira. O ganho de um sistema aparece quando a memória não alcança mais.",
+      "<strong>Você não vende fiado e recebe tudo à vista.</strong> Some o maior motivo isolado para sair do papel.",
+      "<strong>Você está começando agora e ainda testa o que vender.</strong> Primeiro descubra se o negócio se sustenta; a organização vem depois.",
+      "<strong>Você não tem internet estável no ponto.</strong> O SoftPay é web e depende de conexão. Sem internet confiável, a experiência vai ser ruim — e é melhor saber antes."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sendo direto",
+     "texto": "Se três ou mais dos itens acima descrevem a sua loja, <strong>não contrate sistema nenhum agora</strong> — nem o SoftPay. Volte quando o movimento crescer. Vender para quem ainda não precisa gera cancelamento em dois meses, e isso não interessa a ninguém."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quando-passa-a-valer",
+   "titulo": "Quando passa a valer",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O ponto de virada quase nunca é o faturamento. São estes cinco sinais:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Você já perdeu venda por não saber se tinha o produto.</strong> O cliente perguntou, alguém foi olhar, não achou. Isso é dinheiro que saiu pela porta.",
+      "<strong>Mais de uma pessoa mexe no caixa ou no estoque.</strong> No momento em que o controle deixa de estar na cabeça de uma pessoa só, ele precisa estar escrito em algum lugar que todos leiam.",
+      "<strong>Você não sabe quanto sobrou no fim do mês.</strong> Sabe quanto entrou — todo mundo sabe. Quanto sobrou depois do custo da mercadoria é outra pergunta, e é a que decide o negócio.",
+      "<strong>O fiado passou de umas poucas pessoas.</strong> Quando o caderno de fiado tem mais de dez nomes ativos, alguém vai ser esquecido.",
+      "<strong>Você repõe mercadoria por intuição.</strong> Compra o que acha que vende, e descobre no inventário que comprou errado."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Dois desses sinais já justificam testar. Três ou mais e o caderno provavelmente já está custando mais caro que qualquer mensalidade."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-conta-que-ninguem-faz",
+   "titulo": "A conta que ninguém faz",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A pergunta “vale a pena?” costuma ser feita comparando a mensalidade com zero. Mas o caderno também tem custo — ele só não vem com boleto."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "O que o descontrole custa por mês numa loja média",
+     "rodape": "Números ilustrativos, para mostrar o raciocínio — não são promessa de resultado. Faça a sua própria conta com os seus números: o valor exato importa menos que perceber que <strong>a coluna existe</strong>. Se der R$ 200, um sistema de R$ 69 ainda não se paga. Se der R$ 800, a conta já virou.",
+     "linhas": [
+      {
+       "rotulo": "Venda perdida por falta do produto (2 por semana, ticket R$ 60)",
+       "valor": "R$ 480,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Fiado esquecido ou não cobrado",
+       "valor": "R$ 250,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Compra errada: mercadoria que encalha",
+       "valor": "R$ 300,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Diferença de caixa sem explicação",
+       "valor": "R$ 120,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Custo mensal de não ter controle",
+       "valor": "R$ 1.150,00",
+       "classe": "result final"
+      }
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O critério prático: <strong>se o descontrole custa mais do que a mensalidade, vale. Se custa menos, não vale ainda.</strong> É simples assim, e a única pessoa que pode fazer essa conta é você."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-um-sistema-resolve-de-verdade-e-o-que-nao-resolve",
+   "titulo": "O que um sistema resolve de verdade — e o que não resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Resolve"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "Saber o que tem em estoque sem ir olhar",
+      "Saber quem deve fiado, quanto e desde quando",
+      "Fechar o caixa no mesmo dia, com a diferença ainda explicável",
+      "Saber a margem real depois do custo da mercadoria",
+      "Permitir que outra pessoa opere a loja sem depender da sua memória"
+     ]
+    },
+    {
+     "tipo": "h3",
+     "texto": "Não resolve"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não traz cliente.</strong> Sistema organiza o que já acontece; quem traz cliente é preço, ponto, atendimento e divulgação.",
+      "<strong>Não aumenta a margem sozinho.</strong> Ele mostra a margem. Melhorá-la continua sendo decisão sua de compra e de preço.",
+      "<strong>Não funciona se ninguém alimentar.</strong> Venda que não passa pelo sistema é venda que não existe para ele — e um sistema pela metade é pior que um caderno inteiro.",
+      "<strong>Não substitui contador.</strong> Obrigação fiscal continua sendo assunto do seu contador."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quanto-custa-na-pratica",
+   "titulo": "Quanto custa, na prática",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Para um pequeno comércio no Brasil, a faixa de mercado em 2026 vai de cerca de R$ 39 a R$ 199 por mês, dependendo do que está incluso e de quantos usuários. Os preços do SoftPay:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para quem"
+     ],
+     "linhas": [
+      [
+       "Nota Fiscal",
+       "R$ 65/mês",
+       "Só emissão de notas, sem PDV nem estoque"
+      ],
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial — 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Variações, curva ABC, cobrança por Pix e loja online — até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Emissão de NF-e e NFC-e, equipe maior — até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos com 7 dias grátis, sem cartão de crédito. A comparação com outros sistemas está no guia <a href=\"/guias/quanto-custa-um-sistema-de-gestao/\">quanto custa um sistema de gestão</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-decidir-sem-arriscar-dinheiro",
+   "titulo": "Como decidir sem arriscar dinheiro",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Faça a conta do descontrole</strong> com os seus números, usando o exemplo acima. Cinco minutos.",
+      "<strong>Se a conta justificar, teste antes de pagar.</strong> Procure sistema com teste grátis sem cartão — se pedem cartão para testar, você já começou a pagar.",
+      "<strong>No teste, cadastre só os 20 produtos que mais vendem.</strong> Não tente cadastrar tudo; você vai desistir no meio.",
+      "<strong>Passe as vendas de dois dias inteiros pelo sistema.</strong> É o único jeito de saber se ele é rápido o bastante para o seu balcão.",
+      "<strong>No fim, faça uma pergunta:</strong> “o que eu passei a saber que não sabia antes?”. Se a resposta for nada, não contrate."
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-08",
+ "updated": "2026-09-08"
+}

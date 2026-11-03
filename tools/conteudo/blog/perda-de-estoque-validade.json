@@ -1,0 +1,206 @@
+{
+ "artigo": true,
+ "slug": "blog/perda-de-estoque-validade",
+ "title": "Perda de Estoque por Validade: Como Evitar | SoftPay",
+ "description": "Produto que vence é prejuízo dobrado: você pagou por ele e ainda descarta. Veja o método PVPS, o cálculo do que a perda custa e como reduzir sem sistema caro.",
+ "h1": "Perda de estoque por validade",
+ "intro": "Produto vencido é prejuízo dobrado: você pagou pela mercadoria e ainda tem o trabalho de descartar. Numa loja pequena, com estoque enxuto, cada item perdido pesa mais — e quase sempre a perda tem a mesma causa, que dá para corrigir sem gastar nada.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   "/blog/"
+  ],
+  [
+   "Perda de estoque por validade",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O que é o método PVPS?",
+   "Primeiro a Vencer, Primeiro a Sair: a mercadoria nova vai para trás da que já está na prateleira, e a mais antiga fica na frente. É a regra que resolve a maior parte das perdas por validade em loja pequena, e não custa nada."
+  ],
+  [
+   "Qual a diferença entre ruptura e quebra de estoque?",
+   "Ruptura é quando o cliente quer comprar e o produto não está lá — venda perdida. Quebra é a perda física: produto vencido, danificado ou extraviado. As duas custam dinheiro, mas por caminhos diferentes."
+  ],
+  [
+   "Quanto de perda de estoque é aceitável?",
+   "Depende muito do ramo — produto perecível perde mais que produto durável. O número que importa é o seu, acompanhado ao longo dos meses: o que preocupa é a perda que cresce, não a que existe."
+  ],
+  [
+   "Vale a pena dar desconto em produto perto do vencimento?",
+   "Quase sempre sim, e quanto antes melhor. Desconto pequeno com 60 dias de prazo costuma resolver melhor que desconto grande na última semana."
+  ],
+  [
+   "O SoftPay controla validade de produto?",
+   "Esse é um ponto a confirmar com o suporte antes de contratar. O que o sistema faz é mostrar o giro — quais produtos saem devagar —, o que ajuda a agir antes de o prazo apertar."
+  ],
+  [
+   "Como sei quanto estou perdendo por mês?",
+   "Anote o que descartou e o custo de cada item, por três meses. Sem esse registro, a perda é sentida mas nunca medida — e o que não se mede não se corrige."
+  ]
+ ],
+ "cta_title": "Saiba o que gira devagar antes de vencer",
+ "cta_text": "Com custo e giro por produto, o item parado aparece antes de virar perda. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Produtos parados no estoque",
+   "/blog/produtos-parados-no-estoque/",
+   "Dinheiro preso na prateleira"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "O passo a passo"
+  ],
+  [
+   "Como precificar",
+   "/blog/como-precificar-produto/",
+   "A perda entra no custo"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "O recurso no SoftPay"
+  ],
+  [
+   "Mercadinho",
+   "/segmentos/mercadinho/",
+   "Onde a validade mais pesa"
+  ],
+  [
+   "Farmácia",
+   "/segmentos/farmacia/",
+   "Outro caso de validade curta"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-causa-e-quase-sempre-a-mesma",
+   "titulo": "A causa é quase sempre a mesma",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A mercadoria nova chega e é colocada onde tem espaço — normalmente na frente, porque é mais fácil. A antiga vai para o fundo. O cliente pega a da frente. A do fundo vence."
+    },
+    {
+     "tipo": "p",
+     "texto": "Não é descuido: é o caminho natural de quem está com pressa recebendo mercadoria. Corrigir isso não custa dinheiro, custa <strong>uma regra combinada com quem repõe</strong>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-regra-que-resolve-a-maior-parte-pvps",
+   "titulo": "A regra que resolve a maior parte: PVPS",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "<strong>Primeiro a Vencer, Primeiro a Sair.</strong> Quando chega mercadoria nova, ela vai para <em>trás</em> da que já estava lá, e a mais antiga fica na frente."
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Ao repor a prateleira, puxe o que já está lá para a frente.",
+      "Coloque a mercadoria nova atrás.",
+      "Confira a validade do que ficou na frente — se estiver perto, é hora de decidir o que fazer com ele.",
+      "Combine essa regra com <strong>todo mundo</strong> que repõe, não só com você."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que mais rende, e é de graça",
+     "texto": "Essa única mudança resolve boa parte das perdas por validade em loja pequena. Não depende de sistema, não depende de investimento — depende de a regra ser combinada e repetida até virar hábito."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quanto-a-perda-realmente-custa",
+   "titulo": "Quanto a perda realmente custa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O prejuízo não é o preço de venda do que venceu: é o <strong>custo</strong> do que venceu, mais o que aquele espaço deixou de gerar."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Uma loja que perde 2% do estoque por mês",
+     "rodape": "Números ilustrativos. Faça com os seus: se o resultado do ano paga um ano inteiro de sistema de gestão com sobra, a conta se resolve sozinha.",
+     "linhas": [
+      {
+       "rotulo": "Valor do estoque a custo",
+       "valor": "R$ 30.000,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Perda mensal (2%)",
+       "valor": "R$ 600,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Perda em 12 meses",
+       "valor": "R$ 7.200,00",
+       "classe": "result final"
+      }
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O segundo custo é invisível: o dinheiro parado naquele item não estava comprando o produto que vende."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-fazer-com-o-que-esta-perto-de-vencer",
+   "titulo": "O que fazer com o que está perto de vencer",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Decidir cedo vale mais que decidir bem. Um produto a 60 dias do vencimento tem muitas saídas; a 5 dias, quase nenhuma:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Remarcação progressiva.</strong> Desconto pequeno cedo costuma resolver melhor que desconto grande em cima da hora.",
+      "<strong>Combo.</strong> Junte com um produto de giro alto.",
+      "<strong>Ponta de gôndola ou frente de balcão.</strong> Mudar o lugar do produto às vezes basta.",
+      "<strong>Devolução ao fornecedor.</strong> Alguns aceitam troca de mercadoria perto do vencimento — vale perguntar antes de assumir que não.",
+      "<strong>Aceitar a perda cedo.</strong> Vender com prejuízo pequeno é melhor que descartar com prejuízo inteiro."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-saber-o-que-esta-perto-de-vencer-sem-conferir-tudo",
+   "titulo": "Como saber o que está perto de vencer sem conferir tudo",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Conferir a validade de tudo, toda semana, não é realista em loja pequena. O que funciona é concentrar o esforço:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Liste os produtos de validade curta</strong> — normalmente uma minoria: laticínios, pães, alguns cosméticos, medicamentos.",
+      "<strong>Confira só esses, com frequência fixa.</strong> Uma vez por semana, no mesmo dia.",
+      "<strong>O resto entra na conferência mensal</strong>, junto com a contagem de estoque.",
+      "<strong>Anote o que perdeu e por quê.</strong> Três meses de anotação mostram o padrão — e o padrão é o que dá para corrigir."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que o SoftPay faz, e o que não faz",
+     "texto": "Sendo transparente: <strong>o controle de validade não é um recurso confirmado do SoftPay</strong>. Se ele é decisivo para o seu negócio, confirme com o suporte antes de contratar. O que o sistema resolve aqui é o lado do giro — saber o que sai devagar antes de o prazo apertar."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

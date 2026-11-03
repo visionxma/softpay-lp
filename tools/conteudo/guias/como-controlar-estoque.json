@@ -1,0 +1,260 @@
+{
+ "artigo": true,
+ "slug": "guias/como-controlar-estoque",
+ "passos": [
+  [
+   "Faça o inventário inicial",
+   "Liste os produtos de maior giro, conte a quantidade real e registre quantidade, preço de venda e custo de compra de cada um.",
+   "passo-1-faca-o-inventario-inicial-sem-tentar-fazer-tudo"
+  ],
+  [
+   "Faça toda venda passar pelo mesmo lugar",
+   "Inclua a venda fiada, a venda para conhecido e a que o funcionário fez. Toda saída de mercadoria precisa gerar registro.",
+   "passo-2-faca-toda-venda-passar-pelo-mesmo-lugar"
+  ],
+  [
+   "Registre também o que entra",
+   "Compra de fornecedor, devolução de cliente e perda por quebra ou validade vencida.",
+   "passo-3-registre-tambem-o-que-entra"
+  ],
+  [
+   "Descubra quanto dinheiro está parado",
+   "Com quantidade e custo cadastrados, o total investido em mercadoria deixa de ser chute.",
+   "passo-4-descubra-quanto-dinheiro-esta-parado"
+  ],
+  [
+   "Use a curva ABC para decidir a compra",
+   "Classifique os produtos por participação no resultado e concentre a decisão nos que movem o faturamento.",
+   "passo-5-use-a-curva-abc-para-decidir-a-compra"
+  ]
+ ],
+ "figura": [
+  "/assets/lojistas/loja-de-variedades.webp",
+  "Lojista organizando o estoque na prateleira"
+ ],
+ "title": "Como Controlar o Estoque de uma Loja: Guia Prático | SoftPay",
+ "description": "Passo a passo para controlar o estoque da sua loja: inventário inicial, custo por produto, baixa automática e curva ABC. Guia completo e prático.",
+ "h1": "Como controlar o estoque de uma loja",
+ "intro": "Resposta curta: registre o que entra, registre o que sai e cadastre o custo de cada item. Todo o resto do controle de estoque é consequência desses três hábitos.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como controlar estoque",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Preciso parar a loja para fazer inventário?",
+   "Não. O caminho prático é começar pelos itens de maior giro e completar o restante conforme você repõe a mercadoria."
+  ],
+  [
+   "Com que frequência devo conferir o estoque?",
+   "Uma conferência periódica dos itens de maior giro costuma bastar para pegar desvios cedo. O inventário completo pode ser feito por partes ao longo do tempo."
+  ],
+  [
+   "Planilha resolve?",
+   "Resolve enquanto o volume é pequeno e uma pessoa só mexe nela. O problema não é a planilha em si: é que a baixa depende de alguém lembrar de fazer depois da venda."
+  ],
+  [
+   "O que é curva ABC?",
+   "É a classificação dos produtos por participação no resultado. Serve para concentrar a atenção nos poucos itens que realmente movem o faturamento."
+  ],
+  [
+   "Como o SoftPay ajuda nisso?",
+   "A venda registrada no PDV dá baixa automática no estoque, e o cadastro guarda custo e quantidade. A curva ABC está disponível a partir do plano Loja."
+  ]
+ ],
+ "cta_title": "Comece pelo estoque que mais te incomoda",
+ "cta_text": "Cadastre os produtos de maior giro com custo e quantidade e veja o estoque acompanhar as vendas sozinho.",
+ "related": [
+  [
+   "App de vendas e estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Como funciona no SoftPay"
+  ],
+  [
+   "Como calcular lucro",
+   "/guias/como-calcular-lucro-da-loja/",
+   "O custo entra aqui"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "A migração completa"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "por-que-o-controle-sempre-desanda",
+   "titulo": "Por que o controle sempre desanda",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O motivo mais comum não é preguiça: é que venda e estoque viram dois controles separados. A venda acontece no balcão e a baixa do estoque fica para depois. Como o “depois” depende de alguém lembrar, o desencontro começa em dias."
+    },
+    {
+     "tipo": "p",
+     "texto": "A correção estrutural é fazer a baixa acontecer no mesmo ato da venda. É isso que um PDV resolve — não por ser sofisticado, mas por eliminar a segunda etapa."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-1-faca-o-inventario-inicial-sem-tentar-fazer-tudo",
+   "titulo": "Passo 1 — Faça o inventário inicial (sem tentar fazer tudo)",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O erro clássico é parar a loja para contar todos os produtos e desistir no meio. Comece diferente:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Liste os produtos que você vende com mais frequência — normalmente uma minoria responde pela maior parte das vendas.",
+      "Conte a quantidade real desses itens na prateleira e no depósito.",
+      "Registre quantidade, preço de venda e <strong>custo de compra</strong> de cada um.",
+      "Vá completando o restante conforme repõe: quando chegar mercadoria nova, cadastre antes de colocar na prateleira."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O passo que quase todo mundo pula",
+     "texto": "Cadastrar só o preço de venda responde quanto entrou. É o custo que permite responder quanto sobrou. Sem ele, você tem controle de quantidade, não controle de estoque."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-2-faca-toda-venda-passar-pelo-mesmo-lugar",
+   "titulo": "Passo 2 — Faça toda venda passar pelo mesmo lugar",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Não adianta o cadastro estar perfeito se metade das vendas sai sem registro. Isso inclui a venda fiada, a venda para conhecido e a que o funcionário fez enquanto você não estava. Toda saída de mercadoria precisa gerar um registro."
+    },
+    {
+     "tipo": "p",
+     "texto": "No SoftPay, o <a href=\"/solucoes/sistema-de-estoque/\">app de vendas e estoque</a> faz isso sozinho: a venda passada no PDV já baixa o estoque, no celular ou no computador. Em loja de moda, a baixa é por tamanho e cor, como no <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas com grade</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-3-registre-tambem-o-que-entra",
+   "titulo": "Passo 3 — Registre também o que entra",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Compra de fornecedor, devolução de cliente, perda por quebra ou validade vencida. Estoque que só registra saída fica errado tão rápido quanto o que não registra nada."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-4-descubra-quanto-dinheiro-esta-parado",
+   "titulo": "Passo 4 — Descubra quanto dinheiro está parado",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Com quantidade e custo cadastrados, esse número deixa de ser chute:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Dinheiro investido em mercadoria",
+     "rodape": "Números fictícios. Para muita loja pequena, esse total é maior que o saldo em conta — e é a explicação de vender bem e não ter dinheiro.",
+     "linhas": [
+      {
+       "rotulo": "Categoria A — 120 itens",
+       "valor": "R$ 8.400,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Categoria B — 340 itens",
+       "valor": "R$ 5.100,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Categoria C — 890 itens",
+       "valor": "R$ 3.200,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "= Total parado na prateleira",
+       "valor": "R$ 16.700,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-5-use-a-curva-abc-para-decidir-a-compra",
+   "titulo": "Passo 5 — Use a curva ABC para decidir a compra",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Com centenas de itens, analisar tudo é impossível. A curva ABC classifica os produtos por participação no resultado:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Classe",
+      "O que costuma ser",
+      "O que fazer"
+     ],
+     "linhas": [
+      [
+       "A",
+       "Poucos itens, maior parte do faturamento",
+       "Nunca deixar faltar"
+      ],
+      [
+       "B",
+       "Giro intermediário",
+       "Repor com regularidade"
+      ],
+      [
+       "C",
+       "Muitos itens, pouca participação",
+       "Comprar menos, avaliar remarcação"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "A conversa útil está na classe C: é onde costuma estar o dinheiro parado que você nem sabia que tinha."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "erros-comuns",
+   "titulo": "Erros comuns",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Contar estoque uma vez por ano e achar que o número vale o ano inteiro.",
+      "Cadastrar preço de venda e esquecer o custo.",
+      "Deixar a venda fiada fora do registro.",
+      "Repor por memória em vez de olhar o que saiu.",
+      "Tratar perda e quebra como se não existissem."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

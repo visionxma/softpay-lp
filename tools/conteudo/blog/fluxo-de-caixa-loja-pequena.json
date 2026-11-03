@@ -1,0 +1,203 @@
+{
+ "artigo": true,
+ "slug": "blog/fluxo-de-caixa-loja-pequena",
+ "title": "Fluxo de Caixa para Loja Pequena: Como Fazer | SoftPay",
+ "description": "Por que uma loja pode vender bem e não ter dinheiro em caixa, a diferença entre lucro e caixa, e como montar um fluxo simples que cabe na rotina.",
+ "h1": "Fluxo de caixa para loja pequena",
+ "intro": "Dá para vender bem e não ter dinheiro no caixa. Não é contradição nem má gestão necessariamente: é a diferença entre lucro e caixa, e entender isso resolve o susto mensal de boa parte dos lojistas.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   "/blog/"
+  ],
+  [
+   "Fluxo de caixa",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual a diferença entre lucro e caixa?",
+   "O lucro é venda menos custo. O caixa é o dinheiro que entrou e saiu, nas datas reais. Uma venda parcelada dá lucro no mês da venda, mas só entra no caixa ao longo dos meses seguintes — por isso uma loja pode ser lucrativa e ficar sem dinheiro."
+  ],
+  [
+   "Por que minha loja vende bem e não sobra dinheiro?",
+   "As causas mais comuns são venda parcelada com compra à vista, fiado sem controle e estoque comprado além da conta. As três transformam venda em algo que ainda não é dinheiro."
+  ],
+  [
+   "Como faço um fluxo de caixa simples?",
+   "Anote o que entra e o que sai nas datas reais, incluindo as parcelas futuras do cartão já com a taxa descontada, e olhe 30 dias à frente. Atualize toda semana, no mesmo dia."
+  ],
+  [
+   "Devo lançar a venda no cartão no dia da venda?",
+   "No fluxo de caixa, não: lance na data do repasse, com a taxa já descontada. Lançar no dia da venda é o erro que mais estraga a previsão do mês."
+  ],
+  [
+   "O que faço quando o caixa aperta?",
+   "Comece pelo fiado a receber, que é dinheiro seu ainda não cobrado. Depois negocie prazo com fornecedor antes de atrasar, e transforme estoque parado em dinheiro. Crédito é a última opção."
+  ],
+  [
+   "Com que frequência devo fechar o caixa?",
+   "Todo dia. Fechamento diário faz a diferença aparecer no dia em que aconteceu, quando ainda é possível explicar de onde veio."
+  ]
+ ],
+ "cta_title": "Registre a venda com data e forma de pagamento",
+ "cta_text": "É o que permite saber o que entra amanhã, e não só o que entrou hoje. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Como controlar caixa da loja",
+   "/guias/como-controlar-caixa-da-loja/",
+   "O fechamento diário"
+  ],
+  [
+   "Como calcular o lucro",
+   "/guias/como-calcular-lucro-da-loja/",
+   "Do faturamento ao que sobra"
+  ],
+  [
+   "Como controlar fiado",
+   "/guias/como-controlar-fiado/",
+   "O dinheiro que já é seu"
+  ],
+  [
+   "Sistema financeiro",
+   "/solucoes/sistema-financeiro/",
+   "O recurso no SoftPay"
+  ],
+  [
+   "Como precificar",
+   "/blog/como-precificar-produto/",
+   "A taxa do cartão no preço"
+  ],
+  [
+   "Produtos parados",
+   "/blog/produtos-parados-no-estoque/",
+   "Estoque que virou caixa preso"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "lucro-e-caixa-nao-sao-a-mesma-coisa",
+   "titulo": "Lucro e caixa não são a mesma coisa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O lucro é o resultado das vendas menos os custos. O caixa é o dinheiro que efetivamente entrou e saiu, <strong>na data em que entrou e saiu</strong>."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "A venda que dá lucro e não dá caixa",
+     "rodape": "A venda deu lucro e mesmo assim tirou dinheiro do caixa neste mês. Multiplique por um mês inteiro de vendas parceladas e você tem o motivo de tantas lojas lucrativas ficarem sem dinheiro.",
+     "linhas": [
+      {
+       "rotulo": "Venda no cartão em 3x",
+       "valor": "R$ 900,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Custo da mercadoria, pago à vista ao fornecedor",
+       "valor": "− R$ 600,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Lucro da operação",
+       "valor": "R$ 300,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Entrou no caixa neste mês (1ª parcela, menos taxa)",
+       "valor": "R$ 291,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Saiu do caixa neste mês",
+       "valor": "− R$ 600,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Efeito no caixa do mês",
+       "valor": "− R$ 309,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-tres-buracos-mais-comuns",
+   "titulo": "Os três buracos mais comuns",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Venda parcelada com compra à vista.</strong> Você paga o fornecedor hoje e recebe do cliente em três meses. Quanto mais cresce a venda, maior o buraco.",
+      "<strong>Fiado sem controle.</strong> A venda aconteceu, a mercadoria saiu, o dinheiro não entrou. E sem registro, não entra nunca.",
+      "<strong>Estoque comprado além da conta.</strong> Comprar em quantidade parece economia, mas é caixa convertido em prateleira."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-fluxo-de-caixa-mais-simples-que-funciona",
+   "titulo": "O fluxo de caixa mais simples que funciona",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Não precisa de planilha complexa. Precisa de duas colunas e da <strong>data certa</strong>:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Anote o que vai ENTRAR, na data em que entra.</strong> Venda à vista entra hoje; venda no cartão em 3x entra em três datas diferentes, já com a taxa descontada.",
+      "<strong>Anote o que vai SAIR, na data em que sai.</strong> Fornecedor, aluguel, energia, salário, imposto.",
+      "<strong>Olhe 30 dias à frente.</strong> O que interessa não é o saldo de hoje: é saber em que dia dos próximos trinta o saldo fica negativo.",
+      "<strong>Atualize toda semana</strong>, no mesmo dia. Fluxo de caixa que não é atualizado vira ficção em duas semanas."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O detalhe que faz a previsão errar",
+     "texto": "O erro mais comum é lançar a venda no cartão como se o dinheiro entrasse no dia da venda. Ele entra na data do repasse, menos a taxa. Essa única correção já muda a previsão do mês."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-fazer-quando-o-caixa-aperta",
+   "titulo": "O que fazer quando o caixa aperta",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Olhe o fiado primeiro.</strong> É dinheiro que já é seu e só não foi cobrado. Costuma ser a fonte mais rápida.",
+      "<strong>Negocie prazo com o fornecedor antes de atrasar.</strong> Pedir 30 dias antes do vencimento é negociação; depois é inadimplência.",
+      "<strong>Transforme estoque parado em dinheiro.</strong> Remarcação de encalhe vira caixa em dias.",
+      "<strong>Reveja o parcelamento que você oferece.</strong> Se você paga à vista e vende em 6x, o buraco é estrutural.",
+      "<strong>Crédito é a última opção</strong>, e só com a conta feita — juro sobre problema de caixa que se repete não resolve, adia."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-registro-diario-sustenta-tudo-isso",
+   "titulo": "Como o registro diário sustenta tudo isso",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Nenhum fluxo de caixa funciona sem uma coisa: <strong>toda venda registrada, com forma de pagamento e data</strong>. É isso que permite saber o que entra amanhã, e não só o que entrou hoje."
+    },
+    {
+     "tipo": "p",
+     "texto": "É também por isso que o fechamento de caixa diário importa: a diferença aparece no dia em que aconteceu, quando ainda dá para explicar. Veja o guia <a href=\"/guias/como-controlar-caixa-da-loja/\">como controlar o caixa da loja</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

@@ -1,0 +1,247 @@
+{
+ "slug": "segmentos/loja-de-calcados",
+ "figura": [
+  "/assets/lojistas/loja-de-calcados.webp",
+  "Vendedor de loja de calçados conferindo a numeração de um par na caixa"
+ ],
+ "title": "Sistema para Loja de Calçados com Numeração | SoftPay",
+ "description": "Sistema para loja de calçados com estoque por numeração e cor, PDV, curva ABC para achar o par encalhado e cadastro de clientes. Teste grátis por 7 dias.",
+ "h1": "Sistema para loja de calçados",
+ "intro": "Na loja de calçados o mesmo modelo existe em oito ou dez numerações. Um par sozinho no 34 não é estoque — é dinheiro parado. O SoftPay controla cada numeração separadamente e mostra onde o capital está preso.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Loja de calçados",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay controla numeração de calçado?",
+   "Sim. O controle de variações — tamanho e cor — está a partir do plano Loja, de R$ 89/mês. Cada numeração tem a própria quantidade, e a baixa acontece na variação vendida."
+  ],
+  [
+   "Qual plano preciso para controlar a grade?",
+   "O plano Loja, de R$ 89/mês. No plano Comércio o estoque é essencial, sem variações."
+  ],
+  [
+   "Consigo ver quais modelos estão encalhados?",
+   "Sim, pela curva ABC, a partir do plano Loja. Ela separa os modelos que sustentam o faturamento daqueles que só ocupam espaço."
+  ],
+  [
+   "Dá para vender pelo WhatsApp com catálogo?",
+   "Sim. A loja online com Pix está a partir do plano Loja e funciona como catálogo para enviar ao cliente."
+  ],
+  [
+   "O sistema integra com Shopee ou Mercado Livre?",
+   "Não. O SoftPay não sincroniza estoque com marketplace. Se a maior parte da sua venda é por lá, leve isso em conta na decisão."
+  ],
+  [
+   "Como funciona a troca de numeração?",
+   "Troca é comum em calçado e o registro no sistema é um ponto a confirmar com o suporte antes de contratar."
+  ],
+  [
+   "Preciso cadastrar toda a grade antes de começar?",
+   "Não. O caminho prático é cadastrar primeiro os modelos de maior giro e completar conforme repõe."
+  ],
+  [
+   "Funciona no celular durante o atendimento?",
+   "Sim. Como roda no navegador, você consulta a grade pelo celular enquanto atende o cliente na loja."
+  ]
+ ],
+ "cta_title": "Veja sua grade organizada em uma tarde",
+ "cta_text": "Cadastre os modelos de maior giro com numeração e cor, passe as primeiras vendas e veja o estoque acompanhar. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "O mesmo problema de grade"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Variações, custo e curva ABC"
+  ],
+  [
+   "Loja online",
+   "/solucoes/loja-online/",
+   "Catálogo com Pix"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Histórico e numeração"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Venda rápida no balcão"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "O método, passo a passo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-grade-e-o-problema-inteiro",
+   "titulo": "A grade é o problema inteiro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quem vende calçado não vende um produto: vende uma <strong>grade</strong>. O mesmo tênis existe do 34 ao 43, às vezes em três cores. São dezenas de saldos por modelo, e a pergunta do cliente é sempre sobre uma combinação específica: “tem esse no 38?”."
+    },
+    {
+     "tipo": "p",
+     "texto": "Responder errado custa a venda na hora. Dizer que tem, ir ao estoque e não achar é a forma mais rápida de perder um cliente que já estava decidido."
+    },
+    {
+     "tipo": "p",
+     "texto": "E existe o problema do fim da grade: quando sobram só os extremos — 34 e 43 —, o modelo está morto para a maioria dos clientes, mas continua ocupando espaço e capital. Sem controle por numeração, isso só aparece no inventário."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>“Tem no 38?” sem resposta confiável.</strong> A vendedora chuta, vai olhar e volta sem o par. A venda morre no meio.",
+      "<strong>Você repõe o modelo inteiro por causa de duas numerações.</strong> E o estoque das outras cresce sem necessidade.",
+      "<strong>Grade quebrada vira encalhe.</strong> Sobram os extremos, o modelo para de vender e o dinheiro fica preso.",
+      "<strong>A margem por modelo é um chute.</strong> Sem custo por par, o modelo que dá 30% e o que dá 60% viram uma média.",
+      "<strong>O cliente que volta é tratado como novo.</strong> Ninguém lembra a numeração dele nem o que levou da última vez."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Estoque por numeração e cor"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cada combinação de modelo, numeração e cor tem a própria quantidade. A baixa acontece na variação exata que saiu — a resposta para “tem no 38?” deixa de depender de alguém ir conferir."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC: a grade quebrada aparece"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, a curva ABC mostra quais modelos sustentam o faturamento e quais estão parados. É o que transforma a remarcação numa decisão com número em vez de palpite."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Custo por par e margem real"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com o custo cadastrado, você vê a margem por modelo, e não uma média da loja inteira. Decidir qual grade repor deixa de ser intuição."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cliente com histórico e numeração"
+    },
+    {
+     "tipo": "p",
+     "texto": "O cadastro guarda o que a pessoa levou. Numa loja de calçados isso vale muito: saber a numeração de um cliente que volta transforma o atendimento."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Catálogo online com Pix"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, você publica um catálogo e recebe por Pix — útil para vender pelo WhatsApp o par que o cliente viu na vitrine."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-numa-loja-de-calcados",
+   "titulo": "O que o SoftPay não faz numa loja de calçados",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não faz gestão de coleção nem de estação.</strong> O sistema controla estoque, custo e giro; o calendário da moda continua sendo seu.",
+      "<strong>Não integra com marketplace.</strong> Vender em Shopee, Mercado Livre ou Amazon não sincroniza estoque com o SoftPay.",
+      "<strong>Não faz etiqueta com código de barras próprio.</strong> Confirme com o suporte o que é possível no seu caso antes de contratar.",
+      "<strong>Não faz troca com controle de crédito do cliente.</strong> Troca é comum em calçado; confirme como registrar antes de contar com isso."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Tenho esse modelo no 38, na cor preta?",
+      "Quais numerações desse modelo já acabaram?",
+      "Que modelos estão parados há mais tempo?",
+      "Quanto de dinheiro está preso em grade quebrada?",
+      "Qual a minha margem real por modelo?",
+      "O que esse cliente levou da última vez, e em que numeração?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a loja de calçados"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial, com 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O mais indicado:</strong> variações de numeração e cor, curva ABC e catálogo online. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Quando é preciso emitir NF-e e NFC-e e a equipe é maior. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

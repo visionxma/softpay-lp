@@ -1,0 +1,330 @@
+{
+ "slug": "segmentos/loja-de-variedades",
+ "figura": [
+  "/assets/lojistas/loja-de-variedades.webp",
+  "Dona de loja de variedades organizando produtos de utilidade doméstica na prateleira"
+ ],
+ "title": "Sistema para Loja de Variedades e Bazar | SoftPay",
+ "description": "Sistema para loja de variedades: centenas de produtos organizados por categoria, PDV rápido, controle de custo e curva ABC. Teste grátis por 7 dias.",
+ "h1": "Sistema para loja de variedades",
+ "intro": "Loja de variedades vive de muitos produtos baratos e muito diferentes entre si. O desafio não é vender: é saber o que dá resultado no meio de centenas de itens.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Loja de variedades",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Tem limite de produtos cadastrados?",
+   "O cadastro de produtos atende a operação de uma loja de variedades. Se você trabalha com um catálogo muito grande, confirme com o suporte antes de contratar."
+  ],
+  [
+   "Como organizo centenas de itens diferentes?",
+   "Por categoria. O agrupamento é o que torna o cadastro navegável na hora da venda e o que permite analisar o resultado por grupo de produto."
+  ],
+  [
+   "Consigo vender no atacado e no varejo?",
+   "Sim. O mesmo produto aceita preço de atacado e de varejo, útil para quem atende revendedor e consumidor final no mesmo balcão."
+  ],
+  [
+   "O sistema mostra quais produtos não giram?",
+   "A curva ABC, disponível a partir do plano Loja, separa os itens por participação no resultado — é o que revela a cauda de produtos parados."
+  ],
+  [
+   "Preciso de nota fiscal?",
+   "Depende do seu regime e do seu perfil de venda. Se precisar emitir, os planos Nota Fiscal e ERP Completo incluem a emissão. Consulte seu contador."
+  ],
+  [
+   "Dá para dar entrada de mercadoria pelo WhatsApp?",
+   "Sim, a partir do plano Loja. Você manda uma mensagem ou um áudio e o SoftPay registra a entrada, respondendo em cerca de dois segundos — útil quando chega caixa de fornecedor e ninguém tem tempo de sentar no computador."
+  ]
+ ],
+ "cta_title": "Descubra o que realmente vende na sua loja",
+ "cta_text": "Cadastre suas categorias, registre as vendas por uma semana e veja quais produtos sustentam o faturamento.",
+ "related": [
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Categoria, custo e curva ABC"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Venda rápida no balcão"
+  ],
+  [
+   "Bot do WhatsApp",
+   "/solucoes/bot-whatsapp/",
+   "Dar entrada na mercadoria falando"
+  ],
+  [
+   "Mercadinho",
+   "/segmentos/mercadinho/",
+   "Outro segmento de muitos itens"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "Método passo a passo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "muito-item-pouco-valor-unitario-decisao-dificil",
+   "titulo": "Muito item, pouco valor unitário, decisão difícil",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Uma loja de variedades pode ter mais itens no cadastro do que um supermercado pequeno — utilidade doméstica, papelaria, brinquedo, cosmético, presente. Cada um com fornecedor, custo e giro diferentes."
+    },
+    {
+     "tipo": "p",
+     "texto": "Como o valor unitário é baixo, o erro individual parece pequeno e passa despercebido. Somado ao longo de centenas de produtos, é exatamente aí que o lucro desaparece."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Organização por categoria"
+    },
+    {
+     "tipo": "p",
+     "texto": "Produtos agrupados por categoria tornam o cadastro navegável. Sem isso, encontrar um item entre centenas no meio de uma venda vira o gargalo do balcão."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Custo registrado item a item"
+    },
+    {
+     "tipo": "p",
+     "texto": "Em variedades, a margem muda muito de um produto para outro. O que parece bom porque vende muito às vezes é justamente o de menor margem. Só dá para saber com o custo cadastrado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC: o filtro que essa loja mais precisa"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com centenas de itens, olhar tudo é impossível. A curva ABC reduz a decisão a um punhado de produtos que realmente movem o resultado — e mostra a cauda de itens que só ocupa prateleira e dinheiro."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Atacado e varejo no mesmo produto"
+    },
+    {
+     "tipo": "p",
+     "texto": "Muita loja de variedades vende no volume para revendedor e na unidade para o consumidor. Os dois preços convivem no mesmo cadastro."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Dar entrada na mercadoria falando"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, entrada de estoque, despesa e fiado entram por mensagem ou áudio no WhatsApp. Numa loja que recebe caixa de fornecedor toda semana e tem centenas de itens para lançar, é onde o registro costuma parar de acontecer. Veja o <a href=\"/solucoes/bot-whatsapp/\">bot do WhatsApp</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-numa-loja-de-variedades",
+   "titulo": "O que o SoftPay não faz numa loja de variedades",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Os limites, antes de você contratar contando com eles:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não monta kit nem cesta.</strong> Combinar produtos num item só, com baixa dos componentes, não faz parte do sistema — e em variedades isso pesa em datas comemorativas.",
+      "<strong>Não integra com balança.</strong> Item vendido por peso entra como produto comum, com o valor digitado.",
+      "<strong>Não imprime etiqueta de preço nem de gôndola.</strong>",
+      "<strong>Não faz pedido de compra automático.</strong> O sistema mostra o que está acabando; a compra continua sendo sua.",
+      "<strong>Validade e lote não estão confirmados.</strong> Se você trabalha com cosmético ou alimento, verifique com o suporte.",
+      "<strong>Não há limite de produtos divulgado.</strong> Se o seu catálogo passa de alguns milhares de itens, confirme antes de contratar."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quais categorias sustentam o meu faturamento?",
+      "Quanto tenho de dinheiro parado em mercadoria?",
+      "Que itens não vendem há mais de 90 dias?",
+      "Qual a margem real deste produto, depois do custo?",
+      "Quanto vendi no atacado e quanto no varejo?",
+      "O que preciso repor antes de acabar?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a loja de variedades"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "Loja de uma pessoa saindo do caderno: PDV, caixa, fiado e estoque essencial"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O plano desta loja:</strong> custo por item, curva ABC — o filtro que um catálogo de centenas de produtos mais precisa —, loja online e registro pelo WhatsApp. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais NF-e e NFC-e, para quem precisa emitir nota. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quanto-dinheiro-esta-parado-nas-suas-prateleiras",
+   "titulo": "Quanto dinheiro está parado nas suas prateleiras",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Em variedades, o estoque costuma ser o maior ativo da loja e o mais invisível. Cada item na prateleira é dinheiro que já saiu do caixa e ainda não voltou."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Estoque parado em três categorias",
+     "rodape": "Números fictícios. Com custo e quantidade cadastrados, esse total deixa de ser chute e vira um número que você consulta.",
+     "linhas": [
+      {
+       "rotulo": "Utilidade doméstica — 420 itens",
+       "valor": "R$ 6.300,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Presentes e decoração — 180 itens",
+       "valor": "R$ 4.950,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Papelaria — 610 itens",
+       "valor": "R$ 2.840,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "= Total investido em mercadoria",
+       "valor": "R$ 14.090,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [
+  [
+   "App de vendas e controle de estoque",
+   "/solucoes/sistema-de-estoque/"
+  ],
+  [
+   "Sistema para distribuidora",
+   "/segmentos/distribuidora/"
+  ],
+  [
+   "Como controlar o estoque de uma loja",
+   "/guias/como-controlar-estoque/"
+  ],
+  [
+   "Sistema de gestão para pequenos negócios",
+   "/sistema-de-gestao-para-pequenos-negocios/"
+  ],
+  [
+   "Produtos parados no estoque",
+   "/blog/produtos-parados-no-estoque/"
+  ],
+  [
+   "NF-e e NFC-e: qual a diferença",
+   "/guias/nfe-nfce-o-que-e/"
+  ],
+  [
+   "Reforma tributária e o MEI",
+   "/guias/reforma-tributaria-mei/"
+  ],
+  [
+   "Como calcular o lucro de uma loja",
+   "/guias/como-calcular-lucro-da-loja/"
+  ],
+  [
+   "Checklist da reforma tributária até janeiro de 2027",
+   "/guias/checklist-reforma-tributaria-2027/"
+  ],
+  [
+   "Quanto custa um sistema de gestão para comércio",
+   "/guias/quanto-custa-um-sistema-de-gestao/"
+  ],
+  [
+   "Como precificar um produto na loja",
+   "/blog/como-precificar-produto/"
+  ],
+  [
+   "Como calcular a margem de lucro",
+   "/guias/como-calcular-margem-de-lucro/"
+  ],
+  [
+   "Fluxo de caixa para loja pequena",
+   "/blog/fluxo-de-caixa-loja-pequena/"
+  ],
+  [
+   "Caderno ou sistema?",
+   "/perguntas/caderno-ou-sistema/"
+  ],
+  [
+   "Excel ou sistema de gestão?",
+   "/perguntas/excel-ou-sistema-de-gestao/"
+  ],
+  [
+   "É difícil aprender a usar?",
+   "/perguntas/e-dificil-aprender/"
+  ],
+  [
+   "Funciona em todo o Brasil?",
+   "/perguntas/funciona-no-brasil-inteiro/"
+  ],
+  [
+   "Sistema para loja de bebidas",
+   "/segmentos/loja-de-bebidas/"
+  ]
+ ],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-07"
+}

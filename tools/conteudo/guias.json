@@ -1,0 +1,122 @@
+{
+ "slug": "guias",
+ "title": "Guias de Gestão para Lojistas | SoftPay",
+ "description": "Guias práticos para organizar sua loja: controle de estoque, caixa, fiado, cálculo de lucro e margem, e como sair do caderno.",
+ "h1": "Guias para organizar sua loja",
+ "intro": "Conteúdo prático, com método e exemplos. Serve mesmo que você não use o SoftPay.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   null
+  ]
+ ],
+ "related": [
+  [
+   "Perguntas",
+   "/perguntas/",
+   "Dúvidas antes de contratar"
+  ],
+  [
+   "Soluções",
+   "/solucoes/",
+   "Como o SoftPay ajuda"
+  ],
+  [
+   "O que é sistema de gestão",
+   "/sistema-de-gestao-para-pequenos-negocios/",
+   "Guia completo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "escolha-o-que-voce-quer-resolver",
+   "titulo": "Escolha o que você quer resolver",
+   "partes": [
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "Como controlar o estoque de uma loja",
+       "texto": "Resposta curta: registre o que entra, registre o que sai e cadastre o custo de cada item",
+       "href": "/guias/como-controlar-estoque/"
+      },
+      {
+       "titulo": "Como controlar o caixa de uma loja",
+       "texto": "Resposta curta: registre toda entrada e toda saída no momento em que acontecem e confira o caixa no fim de…",
+       "href": "/guias/como-controlar-caixa-da-loja/"
+      },
+      {
+       "titulo": "Como controlar vendas fiadas",
+       "texto": "Resposta curta: registre cada venda fiada no nome do cliente, com data e valor, e combine prazo antes de…",
+       "href": "/guias/como-controlar-fiado/"
+      },
+      {
+       "titulo": "Como calcular o lucro de uma loja",
+       "texto": "Resposta curta: lucro bruto é o faturamento menos o custo da mercadoria vendida",
+       "href": "/guias/como-calcular-lucro-da-loja/"
+      },
+      {
+       "titulo": "Como calcular a margem de lucro",
+       "texto": "Resposta curta: margem é o lucro dividido pelo preço de venda, não pelo custo",
+       "href": "/guias/como-calcular-margem-de-lucro/"
+      },
+      {
+       "titulo": "Como organizar uma loja",
+       "texto": "Resposta curta: organize uma coisa de cada vez, na ordem em que cada uma sustenta a próxima",
+       "href": "/guias/como-organizar-uma-loja/"
+      },
+      {
+       "titulo": "Como sair do caderno",
+       "texto": "Resposta curta: não transcreva o caderno inteiro",
+       "href": "/guias/como-sair-do-caderno/"
+      },
+      {
+       "titulo": "Vale a pena ter um sistema de gestão na loja?",
+       "texto": "Resposta curta e honesta: depende de quantas vendas você faz por dia e de quanto dinheiro está parado em…",
+       "href": "/guias/vale-a-pena-ter-sistema-de-gestao/"
+      },
+      {
+       "titulo": "Quanto custa um sistema de gestão para comércio",
+       "texto": "A faixa de mercado para pequeno comércio no Brasil, em 2026, vai de cerca de R$ 39 a R$ 199 por mês",
+       "href": "/guias/quanto-custa-um-sistema-de-gestao/"
+      },
+      {
+       "titulo": "Como escolher um sistema de gestão",
+       "texto": "A maioria das escolhas ruins tem a mesma origem: comparar listas de recursos em vez de partir dos…",
+       "href": "/guias/como-escolher-sistema-de-gestao/"
+      },
+      {
+       "titulo": "Reforma tributária no comércio: o que muda e quando",
+       "texto": "Duas datas resolvem a maior parte da dúvida",
+       "href": "/guias/reforma-tributaria-comercio/"
+      },
+      {
+       "titulo": "Reforma tributária e o MEI",
+       "texto": "A mudança mais concreta para o MEI tem data: 1º de janeiro de 2027",
+       "href": "/guias/reforma-tributaria-mei/"
+      },
+      {
+       "titulo": "Meu sistema precisa mudar por causa da reforma tributária?",
+       "texto": "Resposta curta: não necessariamente",
+       "href": "/guias/meu-sistema-precisa-mudar-reforma-tributaria/"
+      },
+      {
+       "titulo": "Checklist da reforma tributária até janeiro de 2027",
+       "texto": "Seis passos, em ordem, para chegar em 1º de janeiro de 2027 sem susto",
+       "href": "/guias/checklist-reforma-tributaria-2027/"
+      },
+      {
+       "titulo": "NF-e e NFC-e: qual a diferença",
+       "texto": "A diferença é o cliente",
+       "href": "/guias/nfe-nfce-o-que-e/"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

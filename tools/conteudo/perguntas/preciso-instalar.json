@@ -1,0 +1,101 @@
+{
+ "slug": "perguntas/preciso-instalar",
+ "title": "Preciso Instalar o Sistema no Computador? | SoftPay",
+ "description": "O SoftPay não precisa de instalação: roda no navegador, sem servidor na loja e sem exigir computador novo. Veja o que é necessário.",
+ "h1": "Preciso instalar alguma coisa?",
+ "intro": "Não. E isso muda mais do que parece: sem instalação, não há servidor na loja, não há atualização manual e não há dado preso num computador só.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Preciso instalar",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Funciona em computador antigo?",
+   "Desde que tenha um navegador atualizado e conexão, sim. Não é necessário comprar equipamento novo para começar."
+  ],
+  [
+   "Preciso de servidor na loja?",
+   "Não. Os dados ficam na nuvem e o sistema é acessado pelo navegador."
+  ],
+  [
+   "Como são feitas as atualizações?",
+   "Automaticamente. Você acessa sempre a versão atual, sem instalar nada."
+  ],
+  [
+   "Funciona no Mac e no Windows?",
+   "Sim, porque depende apenas do navegador, não do sistema operacional."
+  ],
+  [
+   "E se eu ficar sem internet?",
+   "O sistema depende de conexão para funcionar. Avalie a estabilidade do sinal na sua região antes de contratar."
+  ]
+ ],
+ "related": [
+  [
+   "Posso usar no celular?",
+   "/perguntas/posso-usar-o-softpay-no-celular/",
+   "Acesso pelo telefone"
+  ],
+  [
+   "É seguro?",
+   "/perguntas/sistema-de-gestao-e-seguro/",
+   "Dados na nuvem"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "PDV no navegador"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Não. O SoftPay roda no <strong>navegador</strong>. Não é preciso instalar programa, manter servidor na loja nem comprar computador novo.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "por-que-isso-importa",
+   "titulo": "Por que isso importa",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Sem servidor na loja.</strong> Nada para configurar, manter ou consertar.",
+      "<strong>Sem atualização manual.</strong> Você usa sempre a versão atual.",
+      "<strong>Dado não preso a uma máquina.</strong> Se o computador queimar, sua informação continua na nuvem.",
+      "<strong>Vários dispositivos.</strong> Computador, notebook e celular acessam a mesma conta."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-voce-precisa-ter",
+   "titulo": "O que você precisa ter",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "Um computador ou celular com navegador atualizado.",
+      "Conexão com a internet.",
+      "Nada além disso."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O requisito real",
+     "texto": "Como o acesso é pela internet, a conexão é requisito. Se a sua região tem instabilidade frequente de sinal, converse com o suporte antes de contratar."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

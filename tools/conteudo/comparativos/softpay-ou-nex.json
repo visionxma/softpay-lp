@@ -1,0 +1,214 @@
+{
+ "artigo": true,
+ "slug": "comparativos/softpay-ou-nex",
+ "title": "SoftPay ou Nex: Qual Escolher para a Sua Loja | SoftPay",
+ "description": "Comparação honesta entre SoftPay e Nex para pequeno comércio: preços, o que cada um cobre e em que situação o Nex é a melhor escolha.",
+ "h1": "SoftPay ou Nex: qual escolher",
+ "intro": "Os dois atendem pequeno comércio e cobram na mesma faixa. A diferença está em três pontos: o preço de entrada, o que vem incluso e o tipo de negócio que cada um cobre melhor. Esta página diz também quando o Nex é a escolha certa.",
+ "breadcrumbs": [
+  [
+   "Comparativos",
+   "/comparativos/"
+  ],
+  [
+   "SoftPay ou Nex",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "SoftPay ou Nex: qual é mais barato?",
+   "O plano de entrada do Nex é mais barato (R$ 39 contra R$ 65 do SoftPay, valores de tabela em setembro de 2026). Mas o menor plano do SoftPay com PDV custa R$ 69 e inclui fiado e estoque. O custo real depende do que você precisa e de quantos usuários, então compare 12 meses e não a mensalidade."
+  ],
+  [
+   "Qual dos dois serve para restaurante?",
+   "O Nex atende segmentos de alimentação como restaurante, lanchonete e cafeteria. O SoftPay é sistema de loja e não tem comanda de mesa — para consumo no local, ele não é o sistema indicado."
+  ],
+  [
+   "Os dois emitem nota fiscal?",
+   "No SoftPay, a emissão de NF-e e NFC-e está nos planos Nota Fiscal e ERP Completo e consta como recurso em ativação — confirme com o suporte antes de contratar. Para o Nex, confirme as condições na página oficial dele."
+  ],
+  [
+   "Dá para testar os dois antes de decidir?",
+   "Sim, e é o que recomendamos. O SoftPay tem 7 dias grátis sem cartão. Teste os dois na mesma semana, com os mesmos produtos, para a comparação ser justa."
+  ],
+  [
+   "Qual tem mais recursos?",
+   "Depende do que você chama de recurso. A pergunta útil não é quem tem mais, e sim qual resolve os seus três problemas com menos volta — sistema com funções que você nunca vai abrir custa mais e demora mais para aprender."
+  ],
+  [
+   "Vale a pena trocar do Nex para o SoftPay?",
+   "Se você está satisfeito, não. Trocar custa tempo de cadastro e adaptação da equipe. Faz sentido quando há um problema concreto: falta de controle de fiado, necessidade de variações por tamanho e cor, ou cobrança por usuário pesando na conta."
+  ]
+ ],
+ "cta_title": "Teste os dois na mesma semana",
+ "cta_text": "7 dias grátis, sem cartão de crédito. Cadastre 20 produtos e passe as vendas de dois dias — é assim que a comparação fica honesta.",
+ "related": [
+  [
+   "Como escolher um sistema",
+   "/guias/como-escolher-sistema-de-gestao/",
+   "Os 7 critérios"
+  ],
+  [
+   "Quanto custa um sistema",
+   "/guias/quanto-custa-um-sistema-de-gestao/",
+   "Preço real de 12 meses"
+  ],
+  [
+   "SoftPay ou Kyte",
+   "/comparativos/softpay-ou-kyte/",
+   "Outra comparação"
+  ],
+  [
+   "Alternativa ao Bling",
+   "/comparativos/alternativa-ao-bling/",
+   "Para quem vende online"
+  ],
+  [
+   "Vale a pena ter sistema?",
+   "/guias/vale-a-pena-ter-sistema-de-gestao/",
+   "Antes de escolher"
+  ],
+  [
+   "Segmentos",
+   "/segmentos/",
+   "O SoftPay no seu tipo de loja"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-comparacao-em-uma-tabela",
+   "titulo": "A comparação em uma tabela",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "",
+      "SoftPay",
+      "Nex"
+     ],
+     "linhas": [
+      [
+       "Faixa de preço",
+       "R$ 65 a R$ 109/mês",
+       "R$ 39 a R$ 169/mês"
+      ],
+      [
+       "Teste grátis",
+       "7 dias, sem cartão",
+       "sim — confira as condições na fonte"
+      ],
+      [
+       "PDV e estoque",
+       "sim",
+       "sim"
+      ],
+      [
+       "Controle de fiado",
+       "sim, desde o plano Comércio",
+       "confira na fonte"
+      ],
+      [
+       "Segmentos com página própria",
+       "16",
+       "18"
+      ],
+      [
+       "Emissão fiscal",
+       "<strong>em ativação</strong> — confirme com o suporte",
+       "confira na fonte"
+      ]
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Preços e planos lidos nas páginas públicas dos fabricantes em <strong>8 de setembro de 2026</strong>: <a href=\"https://www.nextar.com.br/precos\" target=\"_blank\" rel=\"noopener nofollow\">Nex</a>, <a href=\"https://www.kyte.com.br/planos\" target=\"_blank\" rel=\"noopener nofollow\">Kyte</a> e <a href=\"https://www.bling.com.br/planos\" target=\"_blank\" rel=\"noopener nofollow\">Bling</a>. Preço e recurso mudam sem aviso — <strong>confirme na fonte antes de decidir</strong>. Esta comparação é feita pela VisionX, que desenvolve o SoftPay; por isso ela diz também quando o concorrente é a melhor escolha.</p>"
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quando-o-nex-e-a-melhor-escolha",
+   "titulo": "Quando o Nex é a melhor escolha",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Começando por aqui, porque é o que torna o resto desta página confiável:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Se o seu orçamento é o fator decisivo.</strong> O plano de entrada do Nex é R$ 39, abaixo do menor plano do SoftPay com PDV (R$ 69). Para quem está começando e o custo mensal pesa, essa diferença é real.",
+      "<strong>Se você é restaurante, lanchonete, cafeteria ou confeitaria.</strong> O Nex tem páginas e atendimento para esses segmentos; o SoftPay é sistema de loja e <strong>não tem comanda de mesa</strong>.",
+      "<strong>Se a emissão fiscal é o motivo da contratação.</strong> No SoftPay ela consta como recurso em ativação — se você precisa emitir nota hoje, confirme com o nosso suporte antes de decidir e considere alternativas.",
+      "<strong>Se você já usa o Nex e está satisfeito.</strong> Trocar de sistema custa tempo de cadastro e adaptação da equipe. Sem um problema concreto, não compensa."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quando-o-softpay-tende-a-servir-melhor",
+   "titulo": "Quando o SoftPay tende a servir melhor",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Se o fiado é parte importante do seu negócio.</strong> O caderninho de fiado está desde o plano Comércio, e a partir do plano Loja o sistema envia cobrança por link de Pix no WhatsApp — que é a parte desconfortável de vender fiado.",
+      "<strong>Se você trabalha com variações</strong> (tamanho, cor, numeração, tom). O controle por variação está a partir do plano Loja, com curva ABC para achar a grade quebrada.",
+      "<strong>Se você quer registrar venda e estoque pelo WhatsApp.</strong> O bot está a partir do plano Loja.",
+      "<strong>Se você tem equipe.</strong> O plano Loja inclui até 3 usuários e o ERP Completo até 10, sem cobrança por usuário adicional dentro do limite."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-os-dois-tem-em-comum",
+   "titulo": "O que os dois têm em comum",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vale dizer, porque a escolha não é entre bom e ruim:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "Os dois rodam para pequeno comércio brasileiro e mostram preço público, sem “fale com vendas”.",
+      "Os dois têm teste grátis — o que significa que você não precisa decidir por esta página. Pode testar os dois.",
+      "Os dois cobrem o essencial: PDV, estoque, caixa e relatórios."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-decidir-de-verdade",
+   "titulo": "Como decidir de verdade",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Uma página de comparação escrita por um dos lados nunca é o critério final. Faça isto:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Escreva os três problemas</strong> que você quer resolver na sua loja.",
+      "<strong>Teste os dois na mesma semana</strong>, com os mesmos 20 produtos de maior giro.",
+      "<strong>Passe vendas de dois dias reais</strong> em cada um, incluindo o horário de pico.",
+      "<strong>Ligue para o suporte dos dois</strong> durante o teste. A velocidade da resposta hoje é a melhor que você terá depois de assinar.",
+      "<strong>Some o custo de 12 meses</strong>, não a mensalidade, incluindo o número de usuários que você precisa."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O roteiro completo está em <a href=\"/guias/como-escolher-sistema-de-gestao/\">como escolher um sistema de gestão</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

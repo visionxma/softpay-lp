@@ -1,0 +1,198 @@
+{
+ "artigo": true,
+ "slug": "blog/como-organizar-vitrine-de-loja",
+ "title": "Como Organizar a Vitrine de uma Loja Pequena | SoftPay",
+ "description": "Como montar vitrine que traz cliente para dentro: o que colocar, a que altura, com que frequência trocar e o erro de expor tudo ao mesmo tempo.",
+ "h1": "Como organizar a vitrine de uma loja pequena",
+ "intro": "A vitrine é o único vendedor que trabalha 24 horas por dia, inclusive quando a loja está fechada. E o erro mais comum é tratá-la como depósito com visibilidade — colocando tudo, na esperança de que algo chame atenção.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   "/blog/"
+  ],
+  [
+   "Como organizar a vitrine",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Quantos produtos colocar na vitrine?",
+   "Poucos e relacionados entre si. Quem passa na calçada dá dois segundos de atenção, e nesse tempo só uma mensagem passa. Vitrine com trinta produtos diferentes não comunica nada."
+  ],
+  [
+   "Devo colocar preço na vitrine?",
+   "Se o preço é um argumento a seu favor, sim — preço escondido faz parte das pessoas não entrarem. Se o seu diferencial não é preço, o espaço rende mais mostrando o produto."
+  ],
+  [
+   "Com que frequência trocar a vitrine?",
+   "A vitrine principal, a cada 15 a 30 dias. Ajustes pequenos, semanalmente. Vitrine parada por dois meses vira parede para quem passa todo dia."
+  ],
+  [
+   "Posso usar a vitrine para vender o que está encalhado?",
+   "Não é o melhor uso. A vitrine serve para trazer gente para dentro; o encalhe se resolve com posição dentro da loja, combo e remarcação."
+  ],
+  [
+   "Qual a melhor altura para expor?",
+   "Entre 1,20 m e 1,70 m — a altura dos olhos. Abaixo de 60 cm quase ninguém olha."
+  ],
+  [
+   "Como sei se a vitrine deu resultado?",
+   "Conte quantas pessoas entram numa semana antes e numa semana depois da troca, e acompanhe a venda do produto exposto. Comparar as duas semanas exige apenas que as vendas estejam registradas com data."
+  ]
+ ],
+ "cta_title": "Meça o resultado da sua vitrine",
+ "cta_text": "Com as vendas registradas por data, dá para comparar a semana da vitrine nova com a anterior. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Como organizar uma loja",
+   "/guias/como-organizar-uma-loja/",
+   "O roteiro completo"
+  ],
+  [
+   "Produtos parados",
+   "/blog/produtos-parados-no-estoque/",
+   "O que não vai na vitrine"
+  ],
+  [
+   "Como precificar",
+   "/blog/como-precificar-produto/",
+   "O preço que aparece"
+  ],
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "Vitrine é decisiva"
+  ],
+  [
+   "Loja de calçados",
+   "/segmentos/loja-de-calcados/",
+   "Exposição por modelo"
+  ],
+  [
+   "Loja de joias",
+   "/segmentos/loja-de-joias/",
+   "Vitrine como argumento"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "uma-vitrine-uma-mensagem",
+   "titulo": "Uma vitrine, uma mensagem",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quem passa na calçada te dá dois segundos. Nesses dois segundos dá para transmitir <strong>uma</strong> ideia — não sete."
+    },
+    {
+     "tipo": "p",
+     "texto": "Vitrine com trinta produtos diferentes não comunica nada: o olho não sabe onde parar e segue andando. Vitrine com três peças da mesma linha comunica “é isso que essa loja tem de novo”."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O teste dos dois segundos",
+     "texto": "O teste é simples: pare na calçada, olhe a sua vitrine por dois segundos e desvie o olhar. O que ficou na memória? Se a resposta for “um monte de coisa”, ela ainda não está pronta."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-colocar",
+   "titulo": "O que colocar",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O produto que representa a loja.</strong> Não o mais caro nem o encalhado: aquele que, se a pessoa entrar por ele, resume o que você vende.",
+      "<strong>Novidade.</strong> É o que faz quem já conhece a loja olhar de novo.",
+      "<strong>Sazonal, na hora certa.</strong> Volta às aulas, dia das mães, festa junina — e retirado assim que a data passa.",
+      "<strong>Produto com preço visível</strong>, se o preço for um argumento. Preço escondido faz parte das pessoas não entrarem."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O que <strong>não</strong> colocar: o encalhe. Vitrine não é lugar de resolver estoque parado — para isso, veja <a href=\"/blog/produtos-parados-no-estoque/\">produtos parados no estoque</a>. Vitrine é para trazer gente para dentro."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "altura-luz-e-espaco",
+   "titulo": "Altura, luz e espaço",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>A altura dos olhos é a área nobre.</strong> Entre 1,20 m e 1,70 m está o que realmente é visto. Abaixo de 60 cm quase ninguém olha.",
+      "<strong>Luz aponta para o produto, não para a rua.</strong> Luminária mal direcionada ofusca quem passa e apaga o que você quer mostrar.",
+      "<strong>Espaço vazio faz parte.</strong> É o vazio ao redor que faz o olho perceber o produto. Vitrine cheia até a borda não tem onde o olhar descansar.",
+      "<strong>Limpeza é metade do trabalho.</strong> Vidro sujo e produto empoeirado anulam qualquer montagem."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "com-que-frequencia-trocar",
+   "titulo": "Com que frequência trocar",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Uma vitrine parada por dois meses vira parede: quem passa todo dia deixa de enxergá-la. Uma referência realista para loja pequena:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Situação",
+      "Frequência"
+     ],
+     "linhas": [
+      [
+       "Vitrine principal",
+       "a cada 15 a 30 dias"
+      ],
+      [
+       "Data comercial",
+       "montar 2 a 3 semanas antes, tirar no dia seguinte ao fim"
+      ],
+      [
+       "Ajuste pequeno (trocar uma peça, mudar posição)",
+       "toda semana"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Trocar não exige montagem nova do zero. Mudar a peça central e a posição de duas outras já renova o conjunto."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-saber-se-a-vitrine-esta-funcionando",
+   "titulo": "Como saber se a vitrine está funcionando",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vitrine é uma das poucas ações de loja que dá para medir sem ferramenta nenhuma:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Conte quantas pessoas entram</strong> em um dia típico, antes e depois de trocar. Uma semana de cada lado já mostra tendência.",
+      "<strong>Acompanhe a venda do produto exposto.</strong> Se ele está na vitrine e não vende, o problema é o produto, o preço ou a vitrine — e vale testar um de cada vez.",
+      "<strong>Pergunte a quem entra</strong> o que viu na vitrine. A resposta costuma ser reveladora."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você registra as vendas com data, dá para comparar a semana da vitrine nova com a anterior sem depender de memória — é o mesmo dado que serve para tudo mais na loja."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

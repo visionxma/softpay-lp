@@ -1,0 +1,356 @@
+{
+ "slug": "segmentos/distribuidora",
+ "figura": [
+  "/assets/lojistas/distribuidora.webp",
+  "Funcionário de distribuidora de bebidas conferindo estoque pelo celular entre engradados"
+ ],
+ "title": "Sistema para Distribuidora: Estoque, Atacado, NF-e | SoftPay",
+ "description": "Sistema para distribuidora de bebidas, alimentos e outros produtos: estoque em volume, preço de atacado e varejo, NF-e e revendedores. Teste grátis 7 dias.",
+ "h1": "Sistema para distribuidora",
+ "intro": "Distribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação. O SoftPay junta estoque, atacado, varejo e emissão fiscal no mesmo lugar — seja a sua distribuidora de bebidas, de alimentos ou de produtos em geral.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Distribuidora",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay serve para distribuidora de bebidas e de alimentos?",
+   "Serve para as duas, e também para distribuidoras de produtos em geral. A operação é a mesma: estoque em volume, preço de atacado e varejo, nota fiscal e clientes revendedores. O que muda de um caso para outro é onde o erro dói — a página explica cada um."
+  ],
+  [
+   "O SoftPay emite NF-e para distribuidora?",
+   "Sim, nos planos Nota Fiscal e ERP Completo, com cadastro fiscal e pacote do contador. A emissão consta como em ativação — confirme a situação com o suporte antes de contratar."
+  ],
+  [
+   "Consigo trabalhar preço de atacado e varejo?",
+   "Sim. O mesmo produto aceita os dois preços, sem cadastro duplicado, e o preço não depende de quem está atendendo lembrar a tabela."
+  ],
+  [
+   "E o MDF-e para transporte?",
+   "O MDF-e aparece nos planos como recurso em ativação. Confirme com o suporte e com seu contador antes de contar com ele na sua operação."
+  ],
+  [
+   "O sistema controla validade e lote?",
+   "Não está confirmado. Se a sua distribuidora trabalha com alimentos e depende de controle de validade ou de lote, verifique com o suporte antes de contratar."
+  ],
+  [
+   "Tem roteirização de entrega ou aplicativo para o vendedor na rua?",
+   "Não. O SoftPay não faz rota de entrega nem tem força de vendas em campo com uso offline. O acesso é pelo navegador e depende de internet."
+  ],
+  [
+   "Dá para controlar depósito e loja separadamente?",
+   "O SoftPay permite controlar filiais dentro da mesma conta. Vale detalhar sua estrutura com o suporte para confirmar que atende ao seu caso."
+  ],
+  [
+   "Dá para registrar a chegada da carga pelo WhatsApp?",
+   "Sim, a partir do plano Loja. Entrada de estoque, despesa e consulta de saldo funcionam por mensagem ou áudio, sem voltar ao escritório."
+  ],
+  [
+   "Quantos usuários o plano de distribuidora comporta?",
+   "O ERP Completo, de R$ 109/mês, permite até 10 usuários — normalmente o plano adequado para distribuidora, por incluir também a emissão fiscal."
+  ]
+ ],
+ "cta_title": "Teste com o seu volume real",
+ "cta_text": "Cadastre os produtos de maior saída, registre entradas e vendas por alguns dias e confira o saldo contra o depósito. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "NF-e",
+   "/solucoes/nfe/",
+   "Emissão para operação de atacado"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Entradas, saídas e custo"
+  ],
+  [
+   "Múltiplas lojas",
+   "/solucoes/multiplas-lojas/",
+   "Depósito e filiais na mesma conta"
+  ],
+  [
+   "Bot do WhatsApp",
+   "/solucoes/bot-whatsapp/",
+   "Registrar a carga sem voltar ao escritório"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Histórico do revendedor"
+  ],
+  [
+   "Empresas com filiais",
+   "/segmentos/empresas-com-filiais/",
+   "Quando há mais de um ponto"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "volume-alto-deixa-pouco-espaco-para-erro",
+   "titulo": "Volume alto deixa pouco espaço para erro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quando a operação é de centenas ou milhares de unidades, um erro de contagem não é um item a menos: é uma carga inteira de diferença entre o que o sistema diz e o que existe no depósito."
+    },
+    {
+     "tipo": "p",
+     "texto": "Some a isso a convivência de dois preços — atacado para o revendedor, varejo para o consumidor — e a exigência de nota fiscal na maior parte das saídas, e fica claro por que planilha não sustenta esse tipo de negócio por muito tempo."
+    },
+    {
+     "tipo": "p",
+     "texto": "E há uma diferença de fundo em relação ao varejo comum: o seu cliente não é uma pessoa que aparece uma vez. É um comerciante que compra toda semana, negocia preço e vai embora se você errar o pedido dele duas vezes seguidas."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O saldo do depósito é reconstruído de memória.</strong> Ninguém sabe o número exato antes do inventário, e o inventário é sempre depois do problema.",
+      "<strong>A tabela de preço mora na cabeça de quem vende.</strong> Cada vendedor cobra o atacado de um jeito, e a margem varia sem ninguém decidir isso.",
+      "<strong>O que já foi vendido continua sendo oferecido.</strong> A carga sai, o registro não acompanha e o pedido seguinte promete o que não existe.",
+      "<strong>A nota fiscal é um segundo trabalho.</strong> O que foi vendido tem de ser digitado de novo em outro lugar para virar documento.",
+      "<strong>Ninguém sabe quem parou de comprar.</strong> O revendedor some por dois meses e a queda só aparece no faturamento do trimestre."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Entradas e saídas registradas"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cada compra de fornecedor e cada venda alimentam o mesmo estoque. O saldo deixa de ser reconstruído de memória no fim do mês."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Atacado e varejo no mesmo produto"
+    },
+    {
+     "tipo": "p",
+     "texto": "Os dois preços convivem no cadastro, sem duplicar item e sem depender de quem está atendendo lembrar a tabela certa."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Emissão de nota fiscal"
+    },
+    {
+     "tipo": "p",
+     "texto": "O plano ERP Completo inclui emissão de NF-e e NFC-e, com cadastro fiscal e pacote do contador. O plano Nota Fiscal atende quem só precisa da parte fiscal. A emissão consta como recurso em ativação — confirme a situação com o suporte antes de contratar contando com ela."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Notas de fornecedor"
+    },
+    {
+     "tipo": "p",
+     "texto": "As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal — parte da rotina de quem compra em volume."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Clientes recorrentes"
+    },
+    {
+     "tipo": "p",
+     "texto": "Revendedor compra sempre. O cadastro com histórico mostra frequência e volume, base para negociar preço e perceber quem parou de comprar antes de o trimestre fechar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC do depósito"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, a curva ABC mostra quais produtos sustentam o faturamento e quais ocupam palete sem girar. Num depósito, item parado é capital imobilizado em metro quadrado alugado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Equipe e mais de um ponto"
+    },
+    {
+     "tipo": "p",
+     "texto": "O ERP Completo permite até 10 usuários, e o sistema controla filiais dentro da mesma conta — útil para quem tem depósito e loja separados. Veja <a href=\"/solucoes/multiplas-lojas/\">múltiplas lojas e filiais</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Registrar a carga que chegou sem voltar ao escritório"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, entrada de estoque, despesa e consulta de saldo acontecem por mensagem ou áudio no WhatsApp. No depósito, onde ninguém está sentado na frente de um computador, isso muda quando o registro acontece. Veja o <a href=\"/solucoes/bot-whatsapp/\">bot do WhatsApp</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "bebidas-alimentos-ou-produtos-em-geral",
+   "titulo": "Bebidas, alimentos ou produtos em geral",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A operação é a mesma; o que muda é onde o erro dói. Vale saber qual é o seu ponto sensível antes de contratar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Distribuidora de bebidas"
+    },
+    {
+     "tipo": "p",
+     "texto": "Giro rápido, sazonalidade forte e venda por engradado e por unidade no mesmo dia. O preço de atacado e varejo no mesmo cadastro é o recurso que mais rende aqui — e a curva ABC mostra qual marca realmente sustenta o mês, em vez da que ocupa mais espaço."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Distribuidora de alimentos"
+    },
+    {
+     "tipo": "p",
+     "texto": "Aqui o custo por caixa e a margem por item decidem o resultado, porque o volume é grande e a margem é fina. O cadastro com custo é o que transforma faturamento em lucro conhecido. Um alerta honesto: controle de validade e de lote não está confirmado no sistema — se a sua operação depende disso, confirme com o suporte antes de contratar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Produtos de limpeza, descartáveis e embalagem"
+    },
+    {
+     "tipo": "p",
+     "texto": "Catálogo grande, muita variação de tamanho e fornecedor, giro desigual. A organização por categoria e a curva ABC fazem mais diferença que qualquer outro recurso, porque o problema não é vender: é saber o que vale repor."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Por que não há uma página por tipo",
+     "texto": "Estas são seções da mesma página de propósito. A rotina de uma distribuidora é a mesma nos três casos, e criar uma página separada por tipo de produto daria três textos quase idênticos competindo entre si na busca."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-numa-distribuidora",
+   "titulo": "O que o SoftPay não faz numa distribuidora",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Dizer o limite antes da venda evita frustração depois:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não faz roteirização nem controle de entrega.</strong> Não há rota de caminhão, canhoto de entrega nem acompanhamento de motorista.",
+      "<strong>Não tem força de vendas em campo.</strong> Não existe aplicativo de pedido para o vendedor externo trabalhar offline na rua; o sistema é acessado pelo navegador e depende de internet.",
+      "<strong>Não controla vasilhame retornável.</strong> Casco e comodato de engradado ficam fora do sistema.",
+      "<strong>MDF-e consta como recurso em ativação.</strong> Se a sua operação exige documento de transporte, confirme a situação com o suporte e com o seu contador antes de contratar.",
+      "<strong>Conversão automática de unidade não está confirmada.</strong> Se você precisa que o sistema converta fardo em unidade sozinho, verifique com o suporte."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "um-pedido-de-revendedor-do-comeco-ao-fim",
+   "titulo": "Um pedido de revendedor, do começo ao fim",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O fluxo típico de quem atende comerciante:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "O revendedor pede pelo WhatsApp. Você confere o saldo do produto no sistema, pelo celular mesmo.",
+      "Registra a venda com o <strong>preço de atacado</strong>, que já está no cadastro do produto — não depende de ninguém lembrar a tabela.",
+      "O estoque baixa na hora, e a carga deixa de ser oferecida a outro cliente.",
+      "A nota é emitida no mesmo sistema, sem redigitar o pedido em outro lugar.",
+      "A compra entra no histórico daquele revendedor, com volume e data.",
+      "No fim do mês, o histórico mostra quem aumentou, quem manteve e quem sumiu."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "A última linha é a que sustenta a negociação da próxima tabela de preço."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sobre este exemplo",
+     "texto": "Exemplo ilustrativo do fluxo. Os números e a rotina da sua distribuidora dependem da sua própria operação."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto tenho deste produto no depósito, agora?",
+      "Qual a minha margem real por caixa, depois do custo?",
+      "Quais revendedores compraram menos neste mês do que no anterior?",
+      "Que produtos ocupam palete e não giram?",
+      "Quanto de capital está parado em mercadoria?",
+      "Quanto vendi no atacado e quanto no varejo?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a distribuidora"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "Depósito pequeno, sem exigência de nota: PDV, caixa e estoque essencial, 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Estoque avançado, curva ABC, importação e registro pelo WhatsApp. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "<strong>O plano da distribuidora:</strong> tudo da Loja mais NF-e e NFC-e, cadastro fiscal e pacote do contador. Até 10 usuários"
+      ],
+      [
+       "Nota Fiscal",
+       "R$ 65/mês",
+       "Para quem já tem outro sistema e só precisa da parte fiscal. Até 2 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

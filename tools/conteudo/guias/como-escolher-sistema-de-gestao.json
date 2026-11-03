@@ -1,0 +1,311 @@
+{
+ "artigo": true,
+ "slug": "guias/como-escolher-sistema-de-gestao",
+ "passos": [
+  [
+   "Escreva os três problemas que você quer resolver",
+   "Antes de olhar qualquer sistema, defina o que precisa mudar na sua loja. Sem isso você compra por lista de recursos.",
+   "passo-1-escreva-os-tres-problemas-que-voce-quer-resolver"
+  ],
+  [
+   "Descarte o que não atende o seu tipo de negócio",
+   "Comércio com estoque, serviço com agenda e restaurante com comanda são três produtos diferentes.",
+   "passo-2-descarte-o-que-nao-atende-o-seu-tipo-de-negocio"
+  ],
+  [
+   "Verifique o preço real, não o anunciado",
+   "Implantação, cobrança por usuário, fidelidade e valor do segundo ano.",
+   "passo-3-verifique-o-preco-real-nao-o-anunciado"
+  ],
+  [
+   "Teste com dados de verdade",
+   "Cadastre os 20 produtos de maior giro e passe as vendas de dois dias inteiros.",
+   "passo-4-teste-com-dados-de-verdade"
+  ],
+  [
+   "Ligue para o suporte durante o teste",
+   "É quando você descobre como será atendido depois de assinar.",
+   "passo-5-ligue-para-o-suporte-durante-o-teste"
+  ],
+  [
+   "Confirme como você sai",
+   "Exportação dos dados e cancelamento. Perguntar antes evita ficar preso depois.",
+   "passo-6-confirme-como-voce-sai"
+  ]
+ ],
+ "title": "Como Escolher um Sistema de Gestão: 7 Critérios | SoftPay",
+ "description": "Guia para escolher sistema de gestão sem se arrepender: os 7 critérios que importam, as perguntas a fazer antes de assinar e os sinais de alerta.",
+ "h1": "Como escolher um sistema de gestão",
+ "intro": "A maioria das escolhas ruins tem a mesma origem: comparar listas de recursos em vez de partir dos problemas da própria loja. Este guia inverte a ordem — primeiro o que você precisa resolver, depois qual sistema resolve.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como escolher um sistema de gestão",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual o melhor sistema de gestão para pequeno comércio?",
+   "Não existe um melhor para todos. Existe o que resolve os seus três problemas específicos, do tipo certo para o seu negócio, com preço real de 12 meses que cabe e suporte que responde. Este guia é o roteiro para chegar a essa resposta."
+  ],
+  [
+   "Quantos sistemas devo testar antes de decidir?",
+   "Dois ou três, na mesma semana, com os mesmos produtos e as mesmas vendas. Testar em semanas diferentes atrapalha a comparação, porque o movimento da loja muda."
+  ],
+  [
+   "Sistema mais caro é melhor?",
+   "Não necessariamente. Preço maior costuma significar mais recursos, e recurso que você não usa é custo sem retorno. O que importa é a cobertura dos seus três problemas."
+  ],
+  [
+   "Como sei se minha equipe vai conseguir usar?",
+   "Peça para outra pessoa da loja registrar uma venda durante o teste, sem você ensinar. Se ela não conseguir sozinha, o sistema é complicado demais para o seu time."
+  ],
+  [
+   "Devo escolher pelo que já usei antes?",
+   "Familiaridade ajuda, mas não é critério. Um sistema que você conhece e não resolve seus problemas continua não resolvendo."
+  ],
+  [
+   "E se eu escolher errado?",
+   "Por isso os passos 3 e 6 existem: sem fidelidade e com exportação de dados, trocar custa tempo, não dinheiro. Com fidelidade de 12 meses, o erro fica caro."
+  ],
+  [
+   "Preciso de um sistema com emissão fiscal?",
+   "Depende do seu regime — confirme com o seu contador. Muitos pequenos comércios não emitem nota em toda venda, e nesse caso pagar por emissão fiscal é custo sem uso."
+  ]
+ ],
+ "cta_title": "Teste o SoftPay com esse roteiro",
+ "cta_text": "Cadastre 20 produtos, passe dois dias de vendas e ligue para o suporte. 7 dias grátis, sem cartão de crédito.",
+ "related": [
+  [
+   "Vale a pena ter sistema?",
+   "/guias/vale-a-pena-ter-sistema-de-gestao/",
+   "A decisão antes da escolha"
+  ],
+  [
+   "Quanto custa um sistema",
+   "/guias/quanto-custa-um-sistema-de-gestao/",
+   "Preço real e comparação"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "Depois de escolher"
+  ],
+  [
+   "É difícil aprender?",
+   "/perguntas/e-dificil-aprender/",
+   "A dúvida da equipe"
+  ],
+  [
+   "Posso migrar de outro sistema?",
+   "/perguntas/posso-migrar-de-outro-sistema/",
+   "Trocar de sistema"
+  ],
+  [
+   "Segmentos",
+   "/segmentos/",
+   "O SoftPay no seu tipo de loja"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "passo-1-escreva-os-tres-problemas-que-voce-quer-resolver",
+   "titulo": "Passo 1 — Escreva os três problemas que você quer resolver",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Antes de abrir o site de qualquer sistema, escreva num papel os três problemas concretos da sua loja. Não “melhorar a gestão” — algo específico:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "“Não sei quanto tenho de cada produto.”",
+      "“O fiado está num caderno que só eu leio.”",
+      "“Não sei quanto sobrou no fim do mês.”"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Esses três viram o seu critério de decisão. Recurso que não atende nenhum deles é irrelevante para você, por mais impressionante que pareça na página de vendas."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O erro mais comum",
+     "texto": "Comprar por lista de recursos é o erro mais caro. Sistema com 200 funcionalidades das quais você usa 4 custa mais, demora mais para aprender e tem mais lugares para errar. O melhor sistema é o que resolve os seus três problemas com o mínimo de estrada."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-2-descarte-o-que-nao-atende-o-seu-tipo-de-negocio",
+   "titulo": "Passo 2 — Descarte o que não atende o seu tipo de negócio",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Antes de comparar preço, elimine os que não foram feitos para o seu caso. São três famílias diferentes de produto, e misturá-las é fonte de frustração:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Seu negócio",
+      "O que você precisa",
+      "Cuidado"
+     ],
+     "linhas": [
+      [
+       "Comércio com estoque",
+       "PDV, estoque, custo, fiado",
+       "É o caso do SoftPay"
+      ],
+      [
+       "Serviço com hora marcada",
+       "Agenda, ficha do cliente, comanda",
+       "Sistema de loja não tem agenda"
+      ],
+      [
+       "Restaurante, bar, delivery",
+       "Comanda de mesa, ficha de pedido, integração de delivery",
+       "Sistema de loja não tem comanda"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você faz as duas coisas — vende produto <em>e</em> presta serviço com hora marcada —, decida qual das duas move mais dinheiro e escolha por ela."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-3-verifique-o-preco-real-nao-o-anunciado",
+   "titulo": "Passo 3 — Verifique o preço real, não o anunciado",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quatro perguntas mudam a conta mais que a diferença de mensalidade:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Tem taxa de implantação?",
+      "Cobra por usuário que acessa?",
+      "Tem fidelidade? Qual a multa por sair antes?",
+      "O preço do segundo ano é o mesmo?"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Detalhe: some o custo de <strong>12 meses</strong>, não da mensalidade. O detalhamento está em <a href=\"/guias/quanto-custa-um-sistema-de-gestao/\">quanto custa um sistema de gestão</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-4-teste-com-dados-de-verdade",
+   "titulo": "Passo 4 — Teste com dados de verdade",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Teste grátis só serve se for usado a sério. O roteiro que funciona:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Cadastre os <strong>20 produtos que mais vendem</strong> — não tente cadastrar tudo, você desiste no meio.",
+      "Passe as vendas de <strong>dois dias inteiros</strong> pelo sistema, incluindo as fiadas e as do horário de pico.",
+      "Faça o <strong>fechamento de caixa</strong> nos dois dias e veja se bate.",
+      "Peça para <strong>outra pessoa da loja</strong> registrar uma venda sem você ensinar. Se ela não conseguir, o sistema é complicado demais para o seu time.",
+      "No fim, responda: <strong>“o que eu passei a saber que não sabia antes?”</strong>"
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Teste com cartão não é teste",
+     "texto": "Se o sistema exige cartão de crédito para começar o teste, você não está testando — está assinando com prazo para desistir. Não é a mesma coisa, e a diferença aparece na hora de cancelar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-5-ligue-para-o-suporte-durante-o-teste",
+   "titulo": "Passo 5 — Ligue para o suporte durante o teste",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Este é o critério mais subestimado e o que mais dói depois. Durante o teste, mande uma dúvida real pelo canal de atendimento e observe três coisas: <strong>quanto tempo demora</strong>, <strong>se responde uma pessoa ou um robô</strong> e <strong>se a resposta resolve ou empurra para uma central de ajuda</strong>."
+    },
+    {
+     "tipo": "p",
+     "texto": "O suporte que você recebe como cliente em teste é o melhor que ele será. Depois de assinar, não melhora."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-6-confirme-como-voce-sai",
+   "titulo": "Passo 6 — Confirme como você sai",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Pergunte antes de entrar: <strong>como cancelo e como levo meus dados embora?</strong> Um sistema que dificulta a saída está apostando na dificuldade, não na qualidade."
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "O cancelamento é feito por onde? Tem multa?",
+      "Consigo exportar produtos, clientes e vendas?",
+      "Em que formato saem os dados?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-7-criterios-em-uma-lista",
+   "titulo": "Os 7 critérios, em uma lista",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Resumo para levar na comparação:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>1. Resolve os seus três problemas?</strong> Não os 200 recursos dele.",
+      "<strong>2. É do tipo certo?</strong> Loja, serviço e restaurante são produtos diferentes.",
+      "<strong>3. O preço real de 12 meses cabe?</strong> Com implantação, usuários e segundo ano.",
+      "<strong>4. Sua equipe consegue usar?</strong> Teste com outra pessoa, não só com você.",
+      "<strong>5. É rápido no horário de pico?</strong> Teste no movimento, não no domingo à noite.",
+      "<strong>6. O suporte responde?</strong> Ligue durante o teste.",
+      "<strong>7. Dá para sair?</strong> Cancelamento e exportação de dados."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "sinais-de-alerta",
+   "titulo": "Sinais de alerta",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não mostra preço no site.</strong> “Fale com um consultor” costuma significar que o preço varia conforme o que acharem que você pode pagar.",
+      "<strong>Exige cartão para testar.</strong> Ver acima.",
+      "<strong>Contrato de fidelidade longo logo na entrada.</strong> Quem confia no produto não precisa prender o cliente.",
+      "<strong>Promete aumento de faturamento.</strong> Sistema evita perda; quem aumenta venda é preço, ponto e atendimento. Promessa de lucro é sinal de vendedor, não de produto.",
+      "<strong>Não diz o que não faz.</strong> Todo sistema tem limite. Quem não conta o dele antes, conta depois da assinatura."
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-08",
+ "updated": "2026-09-08"
+}

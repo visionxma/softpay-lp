@@ -1,0 +1,232 @@
+{
+ "artigo": true,
+ "slug": "blog/produtos-parados-no-estoque",
+ "title": "Produtos Parados no Estoque: Como Resolver | SoftPay",
+ "description": "Como identificar o produto que não gira, calcular quanto dinheiro está preso nele e decidir entre remarcar, combinar ou aceitar a perda. Com curva ABC.",
+ "h1": "Produtos parados no estoque",
+ "intro": "Produto parado não é neutro: é dinheiro que você já pagou, ocupando espaço, sem virar venda. E ele é difícil de ver justamente porque não acontece nada — ninguém repara no que não se move.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   "/blog/"
+  ],
+  [
+   "Produtos parados no estoque",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O que é curva ABC de produtos?",
+   "É a classificação dos produtos por participação no resultado: a classe A são poucos itens que respondem pela maior parte do faturamento, e a classe C são muitos itens de pouca participação — onde costuma estar o dinheiro parado."
+  ],
+  [
+   "Como sei quais produtos estão parados?",
+   "Sem sistema, marque a data de entrada na etiqueta e observe o que não se move em três meses. Com sistema, a curva ABC mostra direto — no SoftPay ela está a partir do plano Loja."
+  ],
+  [
+   "Vale a pena vender com prejuízo para liberar espaço?",
+   "Depende de há quanto tempo o item está parado. Produto encalhado há dois anos raramente vende sem desconto grande, e o espaço que ele ocupa costuma valer mais do que ele. Produto parado há três meses ainda tem saídas melhores."
+  ],
+  [
+   "Quanto do meu estoque pode estar parado?",
+   "Não há número universal. O que importa é acompanhar: se a fatia de itens sem venda cresce a cada trimestre, a compra está desalinhada da venda."
+  ],
+  [
+   "Devo eliminar todos os produtos de classe C?",
+   "Não. Alguns itens de baixo giro existem por conveniência do cliente e ajudam a segurar a compra na sua loja. O alvo é o item que não gira e ninguém procura."
+  ],
+  [
+   "Como evito comprar errado de novo?",
+   "Compre com base no histórico de venda, teste produto novo em quantidade pequena e não repita a compra do que não girou só porque veio com desconto por volume."
+  ]
+ ],
+ "cta_title": "Veja o que está parado na sua loja",
+ "cta_text": "Com custo e giro por produto, o encalhe aparece antes de virar prejuízo. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Perda de estoque",
+   "/blog/perda-de-estoque-validade/",
+   "Quando o parado vence"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "O método completo"
+  ],
+  [
+   "Como precificar",
+   "/blog/como-precificar-produto/",
+   "Remarcar sem perder margem"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Curva ABC no SoftPay"
+  ],
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "Onde a coleção encalha"
+  ],
+  [
+   "Loja de variedades",
+   "/segmentos/loja-de-variedades/",
+   "Muitos itens, muito encalhe"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "por-que-o-produto-parado-e-invisivel",
+   "titulo": "Por que o produto parado é invisível",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A falta de um produto é escandalosa: o cliente pergunta, ninguém acha, a venda se perde na sua frente. Já o produto que não vende não faz barulho nenhum. Ele está lá, arrumadinho, há oito meses."
+    },
+    {
+     "tipo": "p",
+     "texto": "É por isso que quase toda loja descobre o encalhe no inventário, quando já passou tempo demais para resolver com desconto pequeno."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-achar-sem-sistema",
+   "titulo": "Como achar sem sistema",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Marque a data de entrada.</strong> Uma etiqueta discreta com o mês de chegada já resolve. Em três meses você começa a enxergar o que não se move.",
+      "<strong>Olhe a poeira.</strong> Parece grosseiro, mas funciona: o item que ninguém pega há meses se anuncia sozinho.",
+      "<strong>Pergunte à sua equipe</strong> quais produtos ninguém pede. Quem está no balcão sabe antes de qualquer relatório."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Isso resolve o diagnóstico grosseiro. O que não resolve é a pergunta seguinte: <em>quanto</em> dinheiro está preso ali."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-achar-com-sistema-a-curva-abc",
+   "titulo": "Como achar com sistema: a curva ABC",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A curva ABC separa os produtos por participação no resultado:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Classe",
+      "O que costuma ser",
+      "Decisão"
+     ],
+     "linhas": [
+      [
+       "A",
+       "poucos itens, maior parte do faturamento",
+       "nunca deixar faltar"
+      ],
+      [
+       "B",
+       "itens intermediários",
+       "acompanhar"
+      ],
+      [
+       "C",
+       "muitos itens, pouca participação",
+       "aqui mora o encalhe"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "A classe C não é toda descartável — tem item de baixo giro que existe por conveniência do cliente. Mas é ali que está o dinheiro parado, e é ali que a análise compensa."
+    },
+    {
+     "tipo": "p",
+     "texto": "No SoftPay, a curva ABC está a partir do plano Loja. O método, independente de sistema, está no guia <a href=\"/guias/como-controlar-estoque/\">como controlar estoque</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quanto-dinheiro-esta-preso",
+   "titulo": "Quanto dinheiro está preso",
+   "partes": [
+    {
+     "tipo": "exemplo",
+     "titulo": "Uma loja com R$ 30.000 em estoque",
+     "rodape": "Números ilustrativos. Esse valor é dinheiro que já saiu do caixa e não voltou — e que poderia estar comprando o produto que vende toda semana.",
+     "linhas": [
+      {
+       "rotulo": "Estoque total a custo",
+       "valor": "R$ 30.000,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Itens sem venda há mais de 6 meses (18%)",
+       "valor": "R$ 5.400,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Capital parado",
+       "valor": "R$ 5.400,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-fazer-com-o-encalhe",
+   "titulo": "O que fazer com o encalhe",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Em ordem, do que costuma render mais para o que rende menos:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Mude o lugar antes de mudar o preço.</strong> Produto no fundo da loja às vezes só precisa aparecer.",
+      "<strong>Combine com um produto que gira.</strong> Leve dois, pague um e meio, ou combo com o item de classe A.",
+      "<strong>Remarque com desconto real.</strong> Desconto de 5% não move item parado há um ano.",
+      "<strong>Devolva ao fornecedor</strong>, se houver acordo — vale perguntar.",
+      "<strong>Aceite a perda e libere o espaço.</strong> Item parado há dois anos não vai vender; o que ele ocupa vale mais que ele."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Decidir tarde custa mais que decidir errado",
+     "texto": "A decisão mais cara é a que não se toma. Produto parado há seis meses ainda tem saída com desconto moderado; parado há dois anos, quase sempre só sai com prejuízo. O custo de adiar é maior que o desconto que você não quis dar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-nao-voltar-a-acumular",
+   "titulo": "Como não voltar a acumular",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Compre pelo que vendeu, não pelo que acha.</strong> Histórico de venda é o melhor previsor de compra.",
+      "<strong>Teste em quantidade pequena.</strong> Produto novo entra em quantidade que você aceita perder.",
+      "<strong>Revise a classe C a cada trimestre</strong>, não a cada inventário anual.",
+      "<strong>Não repita a compra do que não girou</strong> só porque o fornecedor ofereceu desconto por volume."
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

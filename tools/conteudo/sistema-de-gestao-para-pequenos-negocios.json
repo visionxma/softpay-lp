@@ -1,0 +1,405 @@
+{
+ "slug": "sistema-de-gestao-para-pequenos-negocios",
+ "title": "O que é um Sistema de Gestão? Guia do Lojista | SoftPay",
+ "description": "O que é um sistema de gestão, para quem serve, quanto custa e o que ele resolve numa loja pequena: estoque, PDV, caixa, fiado, notas fiscais e lucro.",
+ "h1": "Sistema de gestão para pequenos negócios",
+ "intro": "Um guia completo para quem está avaliando se vale a pena, o que um sistema de gestão realmente faz e como escolher sem pagar por aquilo que a sua loja não usa.",
+ "breadcrumbs": [
+  [
+   "Sistema de gestão para pequenos negócios",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O que é um sistema de gestão?",
+   "É o sistema que reúne as informações da loja em uma base só: vendas, estoque, caixa, fiado, clientes e notas fiscais, em vez de cada coisa em um lugar."
+  ],
+  [
+   "Qual a diferença entre ERP e PDV?",
+   "PDV é a frente de caixa, onde a venda é registrada. ERP é o sistema que integra as áreas do negócio. Para uma loja pequena, o que importa é se cobre a sua operação."
+  ],
+  [
+   "Minha loja é pequena demais para isso?",
+   "Não existe faturamento mínimo. O que indica a necessidade é a perda de controle sobre estoque, fiado e resultado."
+  ],
+  [
+   "Quanto custa um sistema de gestão?",
+   "No SoftPay, de R$ 65 a R$ 109 por mês conforme o plano, com 7 dias de teste grátis sem cartão de crédito."
+  ],
+  [
+   "Preciso instalar alguma coisa?",
+   "Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja."
+  ],
+  [
+   "O sistema calcula meu lucro?",
+   "Ele reúne os dados que formam a conta — vendas registradas e custo cadastrado. A precisão depende de esses dados estarem completos, e ele não substitui a contabilidade."
+  ],
+  [
+   "Meus dados ficam seguros?",
+   "Ficam em banco de dados na nuvem com infraestrutura Supabase, backup automático e acesso individual por usuário. Nenhum sistema garante segurança absoluta."
+  ],
+  [
+   "Consigo migrar da minha planilha?",
+   "Sim. A importação de dados está disponível a partir do plano Loja; confirme o formato com o suporte."
+  ],
+  [
+   "Tem teste grátis?",
+   "Sim, 7 dias com acesso aos recursos do plano e sem cartão de crédito."
+  ],
+  [
+   "Serve para qualquer tipo de loja?",
+   "O SoftPay atende pequenos comércios com estoque. Segmentos regulados, como farmácia, têm obrigações específicas que ele não substitui."
+  ]
+ ],
+ "cta_title": "Descubra na prática, com a sua loja",
+ "cta_text": "Sete dias com acesso aos recursos do plano, sem cartão de crédito. Cadastre seus produtos e veja se faz diferença.",
+ "related": [
+  [
+   "Segmentos",
+   "/segmentos/",
+   "Seu tipo de loja"
+  ],
+  [
+   "Soluções",
+   "/solucoes/",
+   "Por recurso"
+  ],
+  [
+   "Guias",
+   "/guias/",
+   "Aprenda o método"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-que-e-um-sistema-de-gestao",
+   "titulo": "O que é um sistema de gestão",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Sistema de gestão é o lugar onde as informações da sua loja param de viver em pedaços. Em vez de vendas no caderno, estoque na memória, fiado em outra folha e o lucro numa estimativa de fim de mês, tudo passa a alimentar a mesma base."
+    },
+    {
+     "tipo": "p",
+     "texto": "Na prática, ele junta quatro coisas que hoje você já faz separado: registrar a venda, controlar o que tem em estoque, conferir o caixa e acompanhar quem deve. A diferença é que, ligadas entre si, essas informações começam a responder perguntas que antes eram impossíveis."
+    },
+    {
+     "tipo": "h3",
+     "texto": "ERP, PDV, sistema de gestão: qual a diferença?"
+    },
+    {
+     "tipo": "p",
+     "texto": "<strong>PDV</strong> é a frente de caixa: onde a venda é registrada. <strong>ERP</strong> é o sistema que integra as áreas do negócio. <strong>Sistema de gestão</strong> é o termo mais amplo. Para uma loja pequena, a distinção importa pouco — o que importa é se cobre a sua operação."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "para-quem-serve",
+   "titulo": "Para quem serve",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O perfil típico é o pequeno comércio com estoque: mercadinho, loja de roupas, loja de variedades, papelaria, farmácia, distribuidora. Geralmente com uma ou duas pessoas, faturamento crescendo e controle ainda no caderno ou na planilha."
+    },
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "Mercadinho",
+       "texto": "Muitos itens, giro rápido, fiado de bairro",
+       "href": "/segmentos/mercadinho/"
+      },
+      {
+       "titulo": "Loja de roupas",
+       "texto": "Grade de tamanho e cor, recompra",
+       "href": "/segmentos/loja-de-roupas/"
+      },
+      {
+       "titulo": "Loja de variedades",
+       "texto": "Centenas de itens de baixo valor",
+       "href": "/segmentos/loja-de-variedades/"
+      },
+      {
+       "titulo": "Papelaria",
+       "texto": "Varejo, atacado e pico da volta às aulas",
+       "href": "/segmentos/papelaria/"
+      },
+      {
+       "titulo": "Farmácia",
+       "texto": "Gestão comercial do balcão",
+       "href": "/segmentos/farmacia/"
+      },
+      {
+       "titulo": "Distribuidora",
+       "texto": "Volume, atacado e nota fiscal",
+       "href": "/segmentos/distribuidora/"
+      },
+      {
+       "titulo": "Pequeno comércio",
+       "texto": "Loja de uma ou duas pessoas",
+       "href": "/segmentos/pequeno-comercio/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "minha-loja-pequena-precisa-de-um",
+   "titulo": "Minha loja pequena precisa de um?",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Não existe faturamento mínimo. O indicador é a perda de controle: você não sabe de cabeça o estoque de um produto que vende todo dia, o fiado passou do ponto de lembrar, o caixa não bate, ou você vendeu bem e não sobrou dinheiro."
+    },
+    {
+     "tipo": "p",
+     "texto": "Se nada disso acontece — poucos produtos, sem fiado, sem funcionário — o caderno provavelmente ainda dá conta. Aprofunde em <a href=\"/perguntas/loja-pequena-precisa-de-sistema/\">loja pequena precisa de sistema?</a>"
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quanto-custa",
+   "titulo": "Quanto custa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Sistemas para pequeno varejo no Brasil são vendidos por assinatura mensal. No SoftPay os planos vão de R$ 65 a R$ 109 por mês, com 7 dias de teste grátis sem cartão."
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para quem"
+     ],
+     "linhas": [
+      [
+       "Nota Fiscal",
+       "R$ 65/mês",
+       "Só emissão de notas, sem PDV nem estoque"
+      ],
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial. 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Fiado que cobra sozinho, loja online, estoque avançado. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja + NFC-e e NF-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Mais detalhes em <a href=\"/perguntas/quanto-custa-um-sistema-para-loja/\">quanto custa um sistema para loja</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-um-sistema-de-gestao-resolve",
+   "titulo": "O que um sistema de gestão resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Estoque"
+    },
+    {
+     "tipo": "p",
+     "texto": "A venda dá baixa sozinha, o custo fica registrado junto do preço e a curva ABC mostra o que gira e o que está parado. É o que responde “quanto dinheiro eu tenho na prateleira”. Veja o <a href=\"/guias/como-controlar-estoque/\">guia de estoque</a> e a <a href=\"/solucoes/sistema-de-estoque/\">solução</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Vendas e PDV"
+    },
+    {
+     "tipo": "p",
+     "texto": "O PDV registra produto, preço, forma de pagamento e cliente no ato da venda. É de onde vem todo dado confiável do resto do sistema. Veja <a href=\"/solucoes/sistema-pdv/\">sistema PDV</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Caixa"
+    },
+    {
+     "tipo": "p",
+     "texto": "Fundo de troco, formas de pagamento separadas, saídas registradas e fechamento diário. Veja o <a href=\"/guias/como-controlar-caixa-da-loja/\">guia de caixa</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Fiado"
+    },
+    {
+     "tipo": "p",
+     "texto": "Saldo por cliente com histórico, e cobrança por link de Pix pelo WhatsApp a partir do plano Loja. Veja o <a href=\"/guias/como-controlar-fiado/\">guia de fiado</a> e a <a href=\"/solucoes/controle-de-fiado/\">solução</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Clientes e CRM"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cadastro ligado às vendas, base para fiado, cupom e fidelidade. Veja <a href=\"/solucoes/controle-de-clientes/\">controle de clientes</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "NF-e e NFC-e"
+    },
+    {
+     "tipo": "p",
+     "texto": "Emissão nos planos Nota Fiscal e ERP Completo, com cadastro fiscal e pacote do contador. Veja <a href=\"/solucoes/nfe/\">NF-e</a> e <a href=\"/solucoes/nfce/\">NFC-e</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Loja online"
+    },
+    {
+     "tipo": "p",
+     "texto": "Catálogo alimentado pelo mesmo estoque, com Pix que confirma o pedido sozinho. Veja <a href=\"/solucoes/loja-online/\">loja online</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Funcionários e filiais"
+    },
+    {
+     "tipo": "p",
+     "texto": "Multi-login com acesso individual e controle de filiais na mesma conta. Veja <a href=\"/solucoes/multiplas-lojas/\">múltiplas lojas</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Celular"
+    },
+    {
+     "tipo": "p",
+     "texto": "Acesso pelo navegador, sem instalar aplicativo. Veja <a href=\"/perguntas/posso-usar-o-softpay-no-celular/\">uso no celular</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Segurança e backup"
+    },
+    {
+     "tipo": "p",
+     "texto": "Banco de dados na nuvem com infraestrutura Supabase, backup automático e recuperação de conta. Veja <a href=\"/perguntas/sistema-de-gestao-e-seguro/\">é seguro?</a>"
+    },
+    {
+     "tipo": "h3",
+     "texto": "Suporte"
+    },
+    {
+     "tipo": "p",
+     "texto": "Atendimento humano pelo WhatsApp, inclusive na configuração inicial. Veja <a href=\"/perguntas/tem-suporte-humano/\">suporte humano</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "lucro-e-margem-a-parte-que-decide-o-negocio",
+   "titulo": "Lucro e margem: a parte que decide o negócio",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "É aqui que um sistema deixa de ser um registro e vira uma ferramenta de decisão. Faturamento é o que entrou; lucro é o que sobrou depois do custo da mercadoria e das despesas."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Do faturamento ao resultado",
+     "rodape": "Números fictícios. Método completo em <a href=\"/guias/como-calcular-lucro-da-loja/\">como calcular o lucro da loja</a> e <a href=\"/guias/como-calcular-margem-de-lucro/\">como calcular a margem</a>.",
+     "linhas": [
+      {
+       "rotulo": "Vendas do mês",
+       "valor": "R$ 25.480,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Custo dos produtos vendidos (CMV)",
+       "valor": "− R$ 16.560,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Lucro bruto",
+       "valor": "R$ 8.920,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Despesas do período",
+       "valor": "− R$ 3.400,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Resultado estimado",
+       "valor": "R$ 5.520,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "caderno-excel-ou-sistema",
+   "titulo": "Caderno, Excel ou sistema",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Caderno funciona enquanto uma pessoa só opera e o volume cabe na memória; ele quebra quando você precisa de totais. Planilha é ótima para análise, mas na loja a baixa de estoque depende de alguém lembrar de digitar depois da venda."
+    },
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "Caderno ou sistema?",
+       "texto": "O que o caderno faz bem e onde falha",
+       "href": "/perguntas/caderno-ou-sistema/"
+      },
+      {
+       "titulo": "Excel ou sistema?",
+       "texto": "Por que a planilha desatualiza",
+       "href": "/perguntas/excel-ou-sistema-de-gestao/"
+      },
+      {
+       "titulo": "Como sair do caderno",
+       "texto": "Migração em 7 dias",
+       "href": "/guias/como-sair-do-caderno/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-escolher-sem-errar",
+   "titulo": "Como escolher sem errar",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "Liste as três dores que mais te incomodam hoje. Ignore o resto.",
+      "Confira se o sistema cobre essas três — e em qual plano.",
+      "Verifique quantos usuários estão inclusos no preço anunciado.",
+      "Teste com os seus produtos reais, não com dados de exemplo.",
+      "Confirme se o suporte é humano e em qual canal.",
+      "Pergunte se você consegue exportar seus dados caso queira sair."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O erro mais caro na escolha",
+     "texto": "Recurso que você não vai usar não é vantagem: é complexidade a mais para aprender. Uma loja de bairro raramente precisa de gestão de produção ou integração com marketplace no primeiro ano."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

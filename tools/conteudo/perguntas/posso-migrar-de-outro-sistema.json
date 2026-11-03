@@ -1,0 +1,124 @@
+{
+ "slug": "perguntas/posso-migrar-de-outro-sistema",
+ "title": "Posso Migrar de Outro Sistema para o SoftPay? | SoftPay",
+ "description": "Como migrar de outro sistema ou de uma planilha para o SoftPay: o que levar, importação de dados, ordem recomendada e apoio do suporte.",
+ "h1": "Posso migrar de outro sistema?",
+ "intro": "Sim. E a migração dá muito menos trabalho quando você leva só o que ainda está em uso, em vez de tentar transportar todo o histórico.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Posso migrar de outro sistema",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "A importação está em qual plano?",
+   "A partir do plano Loja, de R$ 89/mês. Fale com o suporte para conferir o formato do arquivo."
+  ],
+  [
+   "Consigo importar de uma planilha do Excel?",
+   "Sim, esse é o caminho mais comum. Confirme com o suporte a estrutura de colunas esperada antes de importar."
+  ],
+  [
+   "Preciso levar o histórico de vendas?",
+   "Normalmente não compensa. O histórico antigo não muda decisões futuras e é o que mais complica a migração."
+  ],
+  [
+   "O suporte ajuda na migração?",
+   "Sim. O atendimento é humano, pelo WhatsApp, e cobre a configuração inicial."
+  ],
+  [
+   "Quanto tempo leva?",
+   "Com os dados exportados em mãos, a base costuma ficar pronta em poucos dias. O período de teste de 7 dias dá para avaliar."
+  ]
+ ],
+ "related": [
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "Se você vem do papel"
+  ],
+  [
+   "Excel ou sistema?",
+   "/perguntas/excel-ou-sistema-de-gestao/",
+   "Se você vem da planilha"
+  ],
+  [
+   "Contato",
+   "/contato/",
+   "Fale com o suporte"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Sim. A <strong>importação de dados</strong> está disponível a partir do plano Loja, e o suporte orienta o formato do arquivo. Antes de migrar, fale com o suporte para conferir o que o seu sistema atual consegue exportar.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-vale-a-pena-levar",
+   "titulo": "O que vale a pena levar",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Levar",
+      "Por quê"
+     ],
+     "linhas": [
+      [
+       "Cadastro de produtos com custo",
+       "Base de estoque e margem"
+      ],
+      [
+       "Quantidades atuais em estoque",
+       "Decide reposição"
+      ],
+      [
+       "Clientes com quem você tem relação",
+       "Fiado e recompra"
+      ],
+      [
+       "Saldos de fiado em aberto",
+       "É dinheiro a receber"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Histórico de vendas antigas raramente compensa o esforço da migração: ele não muda a decisão de amanhã e costuma ser o que mais complica a importação."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "ordem-recomendada",
+   "titulo": "Ordem recomendada",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "Exporte do sistema atual o que der — produtos e clientes normalmente saem em planilha.",
+      "Fale com o suporte do SoftPay sobre o formato antes de importar.",
+      "Importe produtos e clientes.",
+      "Confira as quantidades de estoque dos itens de maior giro.",
+      "Lance os saldos de fiado em aberto.",
+      "Rode os dois sistemas em paralelo por alguns dias, até confiar nos números."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Não cancele antes de exportar",
+     "texto": "Antes de cancelar o sistema antigo, garanta que você conseguiu exportar tudo que precisa. Depois do cancelamento, o acesso aos dados pode acabar."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

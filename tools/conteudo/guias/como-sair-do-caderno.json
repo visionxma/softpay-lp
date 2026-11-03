@@ -1,0 +1,223 @@
+{
+ "artigo": true,
+ "slug": "guias/como-sair-do-caderno",
+ "passos": [
+  [
+   "Cadastre os produtos de giro",
+   "Comece pelos itens que você vende toda semana, com preço, custo e categoria.",
+   "o-passo-a-passo-em-uma-semana"
+  ],
+  [
+   "Registre as quantidades",
+   "Conte esses itens e registre a quantidade real em estoque.",
+   "o-passo-a-passo-em-uma-semana"
+  ],
+  [
+   "Comece a vender pelo sistema",
+   "A partir daqui toda venda passa pelo PDV — é a virada de chave.",
+   "o-passo-a-passo-em-uma-semana"
+  ],
+  [
+   "Traga clientes e fiado",
+   "Cadastre quem tem saldo em aberto e lance o valor como venda fiada.",
+   "o-passo-a-passo-em-uma-semana"
+  ],
+  [
+   "Estabeleça a rotina de caixa",
+   "Fundo de troco, formas de pagamento e fechamento no fim do dia.",
+   "o-passo-a-passo-em-uma-semana"
+  ],
+  [
+   "Confira",
+   "O estoque bate? O caixa fecha? Ajuste o que estiver fora antes de seguir.",
+   "o-passo-a-passo-em-uma-semana"
+  ]
+ ],
+ "figura": [
+  "/assets/lojistas/papelaria.webp",
+  "Atendente registrando a venda no sistema, no lugar do caderno"
+ ],
+ "title": "Como Sair do Caderno e Controlar a Loja em Sistema | SoftPay",
+ "description": "Passo a passo para migrar do caderno ou da planilha para um sistema de gestão sem parar a loja: o que levar, em que ordem e o que fazer com o caderno antigo.",
+ "h1": "Como sair do caderno",
+ "intro": "Resposta curta: não transcreva o caderno inteiro. Leve o que ainda está vivo — estoque atual, fiado em aberto e clientes — e comece a registrar as vendas novas no sistema desde o primeiro dia.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como sair do caderno",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Preciso transcrever todo o caderno?",
+   "Não. Leve apenas o que está em aberto: estoque atual dos itens de giro, fiado a receber e clientes. Vendas passadas não mudam decisões futuras."
+  ],
+  [
+   "Vou precisar parar a loja?",
+   "Não. A migração acontece durante o funcionamento normal, começando pelos produtos de maior giro."
+  ],
+  [
+   "Quanto tempo leva?",
+   "Uma semana costuma bastar para ter a base funcionando, com as vendas já passando pelo sistema a partir do terceiro dia."
+  ],
+  [
+   "Posso importar de uma planilha?",
+   "A importação de dados está disponível a partir do plano Loja. Fale com o suporte antes para conferir o formato do arquivo."
+  ],
+  [
+   "E se eu não conseguir sozinho?",
+   "O suporte do SoftPay é humano e atende pelo WhatsApp, inclusive na configuração inicial."
+  ]
+ ],
+ "cta_title": "Faça a virada nesta semana",
+ "cta_text": "Sete dias de teste é exatamente o tempo do roteiro acima. Sem cartão de crédito.",
+ "related": [
+  [
+   "Como organizar uma loja",
+   "/guias/como-organizar-uma-loja/",
+   "O roteiro completo"
+  ],
+  [
+   "Caderno ou sistema?",
+   "/perguntas/caderno-ou-sistema/",
+   "A comparação"
+  ],
+  [
+   "Como controlar fiado",
+   "/guias/como-controlar-fiado/",
+   "Levar o fiado junto"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "por-que-a-migracao-costuma-travar",
+   "titulo": "Por que a migração costuma travar",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quase todo mundo tenta começar transcrevendo tudo: meses de vendas passadas, todos os produtos, o caderno inteiro. É um trabalho enorme, sem retorno imediato, feito nas horas vagas — e por isso é abandonado no meio."
+    },
+    {
+     "tipo": "p",
+     "texto": "Venda passada não muda nada na sua decisão de amanhã. O que importa migrar é o que ainda está em aberto."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-levar-e-o-que-deixar-para-tras",
+   "titulo": "O que levar (e o que deixar para trás)",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Levar",
+      "Por quê"
+     ],
+     "linhas": [
+      [
+       "Estoque atual dos itens de giro",
+       "É o que decide reposição"
+      ],
+      [
+       "Fiado em aberto",
+       "É dinheiro a receber"
+      ],
+      [
+       "Clientes com quem você tem relação",
+       "Base de recompra e fiado"
+      ],
+      [
+       "Custo dos produtos",
+       "Sem ele não há margem"
+      ]
+     ]
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Deixar no caderno",
+      "Por quê"
+     ],
+     "linhas": [
+      [
+       "Vendas de meses anteriores",
+       "Não muda decisão futura"
+      ],
+      [
+       "Fiado já quitado",
+       "Encerrado"
+      ],
+      [
+       "Produtos que você não vende mais",
+       "Só polui o cadastro"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-passo-a-passo-em-uma-semana",
+   "titulo": "O passo a passo, em uma semana",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Dia 1 — Produtos de giro.</strong> Cadastre os itens que você vende toda semana, com preço, custo e categoria.",
+      "<strong>Dia 2 — Quantidades.</strong> Conte esses itens e registre a quantidade real.",
+      "<strong>Dia 3 — Comece a vender pelo sistema.</strong> A partir daqui, toda venda passa pelo PDV. É a virada de chave.",
+      "<strong>Dia 4 — Clientes e fiado.</strong> Cadastre quem tem saldo em aberto e lance o valor como venda fiada.",
+      "<strong>Dia 5 — Rotina de caixa.</strong> Fundo de troco, formas de pagamento e fechamento no fim do dia.",
+      "<strong>Dias 6 e 7 — Conferência.</strong> O estoque bate? O caixa fecha? Ajuste o que estiver fora antes de seguir."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "A ordem não é acidental",
+     "texto": "Repare que a venda pelo sistema começa no dia 3, não no fim. Registrar as vendas novas é o que dá retorno imediato e mantém a motivação — o cadastro do restante vai acontecendo em paralelo."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "nao-jogue-o-caderno-fora",
+   "titulo": "Não jogue o caderno fora",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Mantenha o caderno por algumas semanas, em paralelo, até ter confiança de que o sistema está com tudo. Ele é a sua rede de segurança durante a transição — e a referência para conferir qualquer divergência de fiado."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-depois",
+   "titulo": "O que muda depois",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Você passa a saber o total do fiado em aberto, não só quem deve.",
+      "O estoque acompanha a venda sem alguém lembrar de dar baixa.",
+      "O caixa fecha no mesmo dia, com a diferença ainda explicável.",
+      "A margem por produto deixa de ser média e vira número.",
+      "Mais de uma pessoa consegue operar a loja sem depender da sua memória."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

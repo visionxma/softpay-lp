@@ -1,0 +1,304 @@
+{
+ "slug": "segmentos/materiais-de-construcao",
+ "figura": [
+  "/assets/lojistas/materiais-de-construcao.webp",
+  "Dono de depósito de materiais de construção conferindo o estoque com prancheta"
+ ],
+ "title": "Sistema para Loja de Material de Construção | SoftPay",
+ "description": "Sistema para material de construção com atacado e varejo, controle de estoque, fiado de obra, venda de valor alto e nota fiscal. Teste grátis por 7 dias.",
+ "h1": "Sistema para loja de material de construção",
+ "intro": "Material de construção mistura a venda de um saco de cimento com o orçamento de uma obra inteira. São dois ritmos, dois preços e dois tipos de cliente — no mesmo balcão.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Materiais de construção",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Dá para trabalhar preço de atacado e de varejo?",
+   "Sim. O mesmo produto aceita os dois preços, sem cadastro duplicado — é o que evita erro de quem está no balcão."
+  ],
+  [
+   "Como controlo o fiado de uma obra?",
+   "Cada retirada é registrada no nome do cliente, com data e valor, formando o saldo. A partir do plano Loja, a cobrança sai por link de Pix pelo WhatsApp."
+  ],
+  [
+   "O SoftPay faz orçamento de obra?",
+   "Não. Ele cobre a gestão comercial: produto, estoque, venda, caixa, fiado e nota fiscal. Orçamento de obra e composição de custo de serviço não fazem parte do sistema."
+  ],
+  [
+   "Controla entrega e frete?",
+   "Não. Se a sua operação depende de roteirização ou controle de entrega, confirme com o suporte antes de contratar."
+  ],
+  [
+   "Emite nota fiscal para construtora?",
+   "Sim, nos planos Nota Fiscal e ERP Completo, com cadastro fiscal e pacote do contador. A emissão consta como em ativação — confirme com o suporte."
+  ],
+  [
+   "Quantas pessoas podem usar ao mesmo tempo?",
+   "Até 3 no plano Loja e até 10 no ERP Completo, cada uma com o próprio acesso."
+  ],
+  [
+   "Consigo saber a margem antes de dar desconto?",
+   "Sim, desde que o custo esteja cadastrado no produto. É o que permite negociar volume sem apagar a margem."
+  ]
+ ],
+ "cta_title": "Teste com a sua tabela de atacado",
+ "cta_text": "Cadastre alguns produtos com preço de atacado e varejo e registre uma retirada de obra. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "O saldo de cada obra"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Custo e curva ABC"
+  ],
+  [
+   "NF-e",
+   "/solucoes/nfe/",
+   "Nota para construtora"
+  ],
+  [
+   "Distribuidora",
+   "/segmentos/distribuidora/",
+   "Outro segmento de volume"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-rotina-de-quem-vende-material",
+   "titulo": "A rotina de quem vende material",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "De um lado, o consumidor final que vem buscar meia dúzia de itens para um reparo. Do outro, o pedreiro ou a construtora que leva volume, negocia preço e paga depois. O ticket varia de dez reais a alguns milhares."
+    },
+    {
+     "tipo": "p",
+     "texto": "O estoque é fisicamente pesado e ocupa espaço: areia, cimento, tijolo, tubo, tinta. Muito capital imobilizado, com itens que têm quebra, validade de argamassa e sazonalidade de obra."
+    },
+    {
+     "tipo": "p",
+     "texto": "E há o crédito. Fiado de obra não é fiado de padaria: são valores altos, prazos longos e um cliente que só volta quando a obra anda."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Dois preços, uma confusão.</strong> Quem está no balcão erra o preço de atacado ou dá desconto que não existia.",
+      "<strong>O fiado de obra sai de controle.</strong> Valores altos, várias retiradas, e no fim ninguém sabe o saldo exato.",
+      "<strong>Falta o que mais sai.</strong> Cimento e areia acabam justamente no dia de maior movimento.",
+      "<strong>Capital parado em item de giro lento.</strong> Louça, metal e acabamento ficam meses na prateleira.",
+      "<strong>A margem some no desconto.</strong> Sem custo cadastrado, a negociação vira intuição."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Atacado e varejo no mesmo produto"
+    },
+    {
+     "tipo": "p",
+     "texto": "Os dois preços convivem no mesmo cadastro. Quem atende não precisa lembrar da tabela — e não erra na hora de fechar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Custo cadastrado para negociar com segurança"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com o custo do produto no sistema, você sabe até onde pode ir no desconto sem apagar a margem. Numa venda de volume, alguns pontos percentuais são muito dinheiro."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Fiado de obra com histórico"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cada retirada fica registrada no nome do cliente, com data e valor. O saldo deixa de depender de anotação, e a cobrança sai por link de Pix no WhatsApp a partir do plano Loja."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Estoque do que não pode faltar"
+    },
+    {
+     "tipo": "p",
+     "texto": "A baixa automática pelo PDV mantém o saldo dos itens de alto giro acompanhando a realidade. A curva ABC separa o que sustenta o faturamento do que está parado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Nota fiscal"
+    },
+    {
+     "tipo": "p",
+     "texto": "Venda para construtora e para pessoa jurídica normalmente exige nota. Os planos Nota Fiscal e ERP Completo cobrem NF-e e NFC-e, com cadastro fiscal e pacote do contador."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Mais de uma pessoa no balcão"
+    },
+    {
+     "tipo": "p",
+     "texto": "Loja de material costuma ter atendente, caixa e alguém no depósito. Cada um entra com o próprio acesso: até 3 usuários no plano Loja e até 10 no ERP Completo."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que ele não faz",
+     "texto": "O SoftPay <strong>não</strong> faz orçamento de obra, composição de custo de serviço nem controle de entrega e frete. Ele cobre a gestão comercial: produto, estoque, venda, caixa, fiado e nota."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "um-dia-comum-do-jeito-que-acontece",
+   "titulo": "Um dia comum, do jeito que acontece",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Pedreiro chega para retirar material de uma obra em andamento:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Você registra a saída no preço de atacado, na conta do cliente.",
+      "O estoque de cimento e areia baixa na hora, sem conferência manual.",
+      "O saldo da obra fica visível no cadastro, somando as retiradas do mês.",
+      "Emite a nota, se o seu plano incluir emissão.",
+      "Quando a obra fecha, você envia o link de Pix com o total — sem precisar puxar o assunto pessoalmente."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sobre este exemplo",
+     "texto": "Exemplo ilustrativo do fluxo. Os valores da sua loja dependem dos seus próprios dados."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto esta obra já retirou e qual o saldo?",
+      "Até onde posso dar desconto sem perder margem?",
+      "Quanto tenho investido em acabamento parado?",
+      "Quais itens não podem faltar, pelo histórico?",
+      "Qual a diferença de margem entre atacado e varejo?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para material de construção"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial. Loja pequena, sem nota"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Custo, curva ABC, cobrança do fiado por Pix e registro pelo WhatsApp. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "<strong>O plano de quem vende para construtora:</strong> tudo da Loja mais NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos com 7 dias de teste, sem cartão. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [
+  [
+   "Sistema para distribuidora",
+   "/segmentos/distribuidora/"
+  ],
+  [
+   "Sistema para loja de bebidas",
+   "/segmentos/loja-de-bebidas/"
+  ],
+  [
+   "Aplicativo para controlar fiado no celular",
+   "/solucoes/controle-de-fiado/"
+  ],
+  [
+   "Emissão de NFC-e",
+   "/solucoes/nfce/"
+  ],
+  [
+   "Emissão de NF-e",
+   "/solucoes/nfe/"
+  ],
+  [
+   "Quanto custa um sistema para loja?",
+   "/perguntas/quanto-custa-um-sistema-para-loja/"
+  ],
+  [
+   "Perda de estoque por validade",
+   "/blog/perda-de-estoque-validade/"
+  ],
+  [
+   "Como controlar o caixa de uma loja",
+   "/guias/como-controlar-caixa-da-loja/"
+  ],
+  [
+   "Troca e devolução na loja",
+   "/blog/troca-e-devolucao-na-loja/"
+  ],
+  [
+   "É difícil aprender a usar?",
+   "/perguntas/e-dificil-aprender/"
+  ],
+  [
+   "Posso usar o SoftPay no celular?",
+   "/perguntas/posso-usar-o-softpay-no-celular/"
+  ],
+  [
+   "Comparativos",
+   "/comparativos/"
+  ]
+ ],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

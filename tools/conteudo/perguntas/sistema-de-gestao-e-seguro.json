@@ -1,0 +1,133 @@
+{
+ "slug": "perguntas/sistema-de-gestao-e-seguro",
+ "title": "Sistema de Gestão na Nuvem é Seguro? | SoftPay",
+ "description": "Como funciona a segurança de um sistema de gestão na nuvem: onde ficam os dados, backup automático, acesso por usuário e o que depende de você.",
+ "h1": "Sistema de gestão é seguro?",
+ "intro": "A pergunta certa não é se a nuvem é segura em absoluto, e sim como ela se compara ao que você faz hoje: um caderno na gaveta ou uma planilha no computador da loja.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Sistema de gestão é seguro",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Onde ficam os meus dados?",
+   "Em banco de dados na nuvem, sobre infraestrutura Supabase, e não no computador da sua loja."
+  ],
+  [
+   "Existe backup automático?",
+   "Sim. O backup é feito automaticamente, sem depender de ação manual sua."
+  ],
+  [
+   "Se eu perder o acesso, consigo recuperar?",
+   "Sim, o SoftPay tem recuperação de conta. Se não conseguir concluir sozinho, o suporte ajuda pelo WhatsApp."
+  ],
+  [
+   "Meus funcionários veem tudo?",
+   "Cada pessoa entra com o próprio acesso. Sobre perfis com permissões diferentes, confirme com o suporte antes de contratar."
+  ],
+  [
+   "É mais seguro que a minha planilha?",
+   "Na prática, o principal ganho é o dado não depender de um único computador físico e ter backup automático. Nenhum sistema, porém, garante segurança absoluta."
+  ]
+ ],
+ "related": [
+  [
+   "Sobre o SoftPay",
+   "/sobre/",
+   "Quem está por trás"
+  ],
+  [
+   "Política de Privacidade",
+   "/privacidade",
+   "Como tratamos dados"
+  ],
+  [
+   "Múltiplas lojas",
+   "/solucoes/multiplas-lojas/",
+   "Acesso da equipe"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>No SoftPay, os dados ficam em <strong>banco de dados na nuvem sobre infraestrutura Supabase</strong>, com <strong>backup automático</strong> e <strong>acesso individual por usuário</strong>. Nenhum sistema pode prometer segurança absoluta — mas seus dados deixam de depender do computador da loja.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "o-risco-que-ja-existe-hoje",
+   "titulo": "O risco que já existe hoje",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Caderno molha, rasga e some. Computador da loja queima, é roubado ou dá pau no disco. Planilha em pen drive se perde. Esses não são cenários hipotéticos: são a causa mais comum de perda de dados no comércio pequeno."
+    },
+    {
+     "tipo": "p",
+     "texto": "Comparado a isso, um banco de dados na nuvem com backup automático é uma melhora concreta — não porque a nuvem seja infalível, mas porque o dado deixa de estar num único lugar físico."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-oferece",
+   "titulo": "O que o SoftPay oferece",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Banco de dados na nuvem</strong> com infraestrutura Supabase.",
+      "<strong>Backup automático</strong>, sem depender de você lembrar de salvar.",
+      "<strong>Acesso individual</strong>: cada pessoa da equipe entra com o próprio login.",
+      "<strong>Recuperação de conta</strong> caso você perca o acesso."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que não prometemos",
+     "texto": "Você não vai ler aqui que o SoftPay é “100% seguro” ou que é “impossível perder dados”. Nenhum sistema pode afirmar isso com honestidade."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-parte-que-depende-de-voce",
+   "titulo": "A parte que depende de você",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "Use uma senha que você não use em outros lugares.",
+      "Dê acesso individual a cada pessoa, em vez de compartilhar um login.",
+      "Ao desligar um funcionário, remova o acesso dele.",
+      "Mantenha um contato de recuperação atualizado.",
+      "Cuidado com o computador do balcão deixado aberto e sem supervisão."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Boa parte dos incidentes em loja pequena não vem de invasão técnica: vem de senha compartilhada e de acesso que não foi removido."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "e-os-dados-dos-seus-clientes",
+   "titulo": "E os dados dos seus clientes",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Se você cadastra clientes, você é responsável por esses dados perante a LGPD. Colete o necessário, informe a finalidade e consulte a <a href=\"/privacidade\">Política de Privacidade</a> do SoftPay."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

@@ -1,0 +1,244 @@
+{
+ "artigo": true,
+ "slug": "guias/reforma-tributaria-comercio",
+ "title": "Reforma Tributária no Comércio: O Que Muda | SoftPay",
+ "description": "O que a reforma tributária muda para o pequeno comércio, com as datas oficiais: 3 de agosto de 2026 (regime regular) e 1º de janeiro de 2027 (Simples e MEI).",
+ "h1": "Reforma tributária no comércio: o que muda e quando",
+ "intro": "Duas datas resolvem a maior parte da dúvida. Se a sua empresa é do regime regular, a obrigação já começou em 3 de agosto de 2026. Se é do Simples Nacional ou MEI, ela começa em 1º de janeiro de 2027. Esta página explica o que muda na prática para quem tem loja, sem termo de contador.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Reforma tributária no comércio",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Quando a reforma tributária começa a valer para o meu comércio?",
+   "Depende do regime. Para empresas do regime regular (Lucro Real e Lucro Presumido), o destaque de IBS e CBS no documento fiscal é obrigatório desde 3 de agosto de 2026. Para o Simples Nacional e o MEI, a obrigação começa em 1º de janeiro de 2027."
+  ],
+  [
+   "O que acontece se a nota fiscal não tiver os campos de IBS e CBS?",
+   "Ela é rejeitada automaticamente pelo sistema. Não é uma multa que chega depois: é a nota que não é emitida na hora da venda."
+  ],
+  [
+   "Preciso trocar meu sistema de gestão por causa da reforma?",
+   "Não necessariamente — precisa de um sistema que emita o documento fiscal no formato novo. Se o seu atual será atualizado a tempo, ele serve. A pergunta a fazer ao fornecedor é direta: o sistema já emite nota com IBS e CBS destacados?"
+  ],
+  [
+   "Sou MEI. O que muda para mim?",
+   "A partir de 1º de janeiro de 2027, a emissão de nota fiscal passa a ser obrigatória em qualquer venda, inclusive para pessoa física. Para quem hoje quase não emite nota, é a mudança mais concreta da reforma."
+  ],
+  [
+   "O Simples Nacional vai acabar?",
+   "Não. O Simples continua existindo. A partir de 2027 passa a haver a opção de recolher IBS e CBS por fora do DAS, quando isso for mais vantajoso — é uma escolha, não uma obrigação."
+  ],
+  [
+   "A minha carga de imposto vai aumentar em 2026?",
+   "2026 é ano de transição, com alíquotas de teste. As mudanças de fato na conta do imposto vêm de forma escalonada nos anos seguintes. Confirme o efeito no seu caso com o seu contador."
+  ],
+  [
+   "Preciso de contador para lidar com isso?",
+   "Sim. Esta página explica o que muda na rotina da loja, mas o enquadramento do seu negócio e o cálculo do imposto são trabalho do contador."
+  ]
+ ],
+ "cta_title": "Organize a loja antes da virada",
+ "cta_text": "Registrar toda venda, controlar o estoque com custo e guardar as notas de entrada é o que a reforma vai exigir de qualquer jeito. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Reforma tributária e o MEI",
+   "/guias/reforma-tributaria-mei/",
+   "A obrigação de 2027"
+  ],
+  [
+   "Meu sistema precisa mudar?",
+   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/",
+   "A pergunta prática"
+  ],
+  [
+   "Checklist até janeiro",
+   "/guias/checklist-reforma-tributaria-2027/",
+   "O que fazer, em ordem"
+  ],
+  [
+   "O que é NF-e e NFC-e",
+   "/guias/nfe-nfce-o-que-e/",
+   "A diferença entre as duas"
+  ],
+  [
+   "Emissão de NF-e",
+   "/solucoes/nfe/",
+   "O recurso no SoftPay"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "O primeiro passo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "as-duas-datas-que-importam-para-voce",
+   "titulo": "As duas datas que importam para você",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Quem",
+      "Desde quando",
+      "O que passa a ser obrigatório"
+     ],
+     "linhas": [
+      [
+       "Regime regular (Lucro Real e Presumido)",
+       "<strong>3 de agosto de 2026</strong>",
+       "Destacar IBS e CBS no documento fiscal. Nota incompleta é rejeitada automaticamente"
+      ],
+      [
+       "Simples Nacional e MEI",
+       "<strong>1º de janeiro de 2027</strong>",
+       "Emitir documento fiscal com as informações de IBS e CBS"
+      ]
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Onde a maioria dos pequenos comércios está",
+     "texto": "Se você é do Simples Nacional ou MEI, <strong>nada mudou ainda</strong> — e é exatamente por isso que este é o momento de se preparar. Quem deixa para dezembro descobre o problema no dia em que a nota é recusada."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-e-ibs-e-cbs-sem-termo-tecnico",
+   "titulo": "O que é IBS e CBS, sem termo técnico",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A reforma substitui cinco tributos — PIS, Cofins, IPI, ICMS e ISS — por dois:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>CBS</strong> (Contribuição sobre Bens e Serviços), federal.",
+      "<strong>IBS</strong> (Imposto sobre Bens e Serviços), estadual e municipal."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Para quem tem loja, a mudança visível não é a conta de imposto: é <strong>a nota fiscal</strong>. Ela passa a ter campos novos, que precisam vir preenchidos. Documento fiscal sem esses campos é rejeitado pelo sistema — não é multa depois, é a venda que não fecha na hora."
+    },
+    {
+     "tipo": "p",
+     "texto": "2026 é ano de transição, com alíquotas de teste baixas. O peso real do novo modelo vem depois, de forma escalonada até 2033."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-para-quem-tem-loja-pequena",
+   "titulo": "O que muda para quem tem loja pequena",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "1. A nota fiscal ganha campos novos"
+    },
+    {
+     "tipo": "p",
+     "texto": "É a mudança que atinge todo mundo. O sistema que emite a sua nota precisa estar atualizado para preencher IBS e CBS. Sistema desatualizado deixa de emitir."
+    },
+    {
+     "tipo": "h3",
+     "texto": "2. Em 2027, o MEI passa a emitir nota em qualquer venda"
+    },
+    {
+     "tipo": "p",
+     "texto": "Inclusive para pessoa física. Para muitos MEI que hoje quase não emitem nota, essa é a mudança mais concreta da reforma — e a que mais exige preparação, porque muda a rotina do balcão, não só a papelada."
+    },
+    {
+     "tipo": "h3",
+     "texto": "3. O registro do que você vende deixa de ser opcional"
+    },
+    {
+     "tipo": "p",
+     "texto": "Quando toda venda gera documento fiscal, vender sem registrar deixa de ser possível. Quem já passa tudo por um sistema não sente diferença; quem anota no caderno vai sentir."
+    },
+    {
+     "tipo": "h3",
+     "texto": "4. O crédito de imposto muda a conta da compra"
+    },
+    {
+     "tipo": "p",
+     "texto": "O novo modelo permite abater o imposto pago na compra de mercadoria. Na prática, isso torna mais importante ter <strong>nota de entrada registrada</strong> — a compra sem nota passa a custar mais caro do que parece."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-nao-muda",
+   "titulo": "O que NÃO muda",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vale dizer também o que ficou igual, porque circula muita informação errada:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Você não precisa trocar de computador.</strong> A exigência é sobre o documento fiscal, não sobre o equipamento da loja.",
+      "<strong>O Simples Nacional não acabou.</strong> Ele continua existindo; em 2027 passa a existir a opção de recolher IBS e CBS por fora, se for vantajoso.",
+      "<strong>Não há mudança de alíquota para o pequeno em 2026.</strong> Este ano é de teste.",
+      "<strong>Você não precisa entender a reforma inteira.</strong> Precisa saber a sua data e ter um sistema que emita a nota no formato novo."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-se-preparar-na-pratica",
+   "titulo": "Como se preparar, na prática",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Confirme o seu regime com o contador.</strong> Regime regular, Simples ou MEI — é isso que define a sua data.",
+      "<strong>Pergunte ao seu sistema atual se ele já está adequado.</strong> Se a resposta demorar ou for vaga, é sinal de alerta.",
+      "<strong>Comece a registrar as notas de entrada</strong> das compras de mercadoria, se ainda não faz.",
+      "<strong>Se você é MEI e quase não emite nota, comece a emitir agora.</strong> Aprender a rotina com calma é melhor que aprender em janeiro, com a obrigação valendo.",
+      "<strong>Não deixe para dezembro.</strong> Migrar sistema no mês da virada é a pior hora possível."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Fontes oficiais: <a href=\"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/reforma-tributaria-do-consumo/orientacoes-2026\" target=\"_blank\" rel=\"noopener nofollow\">Receita Federal — Orientações 2026</a> e <a href=\"https://www.cgibs.gov.br/novo-marco-da-reforma-tributaria-inicia-em-03-de-agosto-com-preenchimento-obrigatorio-dos-campos-relativos-ao-ibs-e-a-cbs\" target=\"_blank\" rel=\"noopener nofollow\">Comitê Gestor do IBS</a> (Ato Conjunto RFB/CGIBS nº 4, de 30 de julho de 2026). Datas conferidas em 8 de setembro de 2026. <strong>Esta página não é orientação contábil:</strong> o enquadramento do seu negócio deve ser confirmado com o seu contador.</p>"
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "onde-o-softpay-entra",
+   "titulo": "Onde o SoftPay entra",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Sendo transparente sobre o que o sistema faz hoje: o SoftPay emite NF-e e NFC-e nos planos Nota Fiscal e ERP Completo, e <strong>a emissão fiscal consta como recurso em ativação</strong> — confirme a situação para o seu caso com o suporte antes de contratar contando com ela."
+    },
+    {
+     "tipo": "p",
+     "texto": "O que já está pronto e vale independentemente da reforma: registrar toda venda, controlar o estoque com custo e ter as notas de entrada organizadas. Esses três hábitos são o que a reforma vai exigir de qualquer forma, e são úteis mesmo que a sua data ainda esteja longe."
+    },
+    {
+     "tipo": "p",
+     "texto": "Veja também <a href=\"/guias/reforma-tributaria-mei/\">o que muda para o MEI</a> e <a href=\"/guias/meu-sistema-precisa-mudar-reforma-tributaria/\">se o seu sistema precisa mudar</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-08",
+ "updated": "2026-09-17"
+}

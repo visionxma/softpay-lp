@@ -1,0 +1,239 @@
+{
+ "slug": "segmentos",
+ "title": "Sistema de Gestão por Segmento de Loja | SoftPay",
+ "description": "Veja como o SoftPay atende cada comércio: mercadinho, roupas, variedades, papelaria, farmácia, distribuidora, celulares, autopeças, joias, filiais e MEI.",
+ "h1": "Feito para o seu tipo de negócio",
+ "intro": "Cada comércio tem uma rotina diferente, e um sistema que serve para todo mundo costuma não servir direito para ninguém. Estas páginas mostram o que muda no SoftPay quando a loja é a sua.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   null
+  ]
+ ],
+ "cta_title": "Teste no seu próprio balcão",
+ "cta_text": "Sete dias grátis, sem cartão de crédito. Cadastre os produtos de maior giro, passe algumas vendas e veja se a rotina melhora.",
+ "related": [
+  [
+   "Soluções",
+   "/solucoes/",
+   "Por recurso do sistema"
+  ],
+  [
+   "Guias",
+   "/guias/",
+   "Como organizar a loja"
+  ],
+  [
+   "Preços",
+   "/#pricing",
+   "O que tem em cada plano"
+  ],
+  [
+   "O que é sistema de gestão",
+   "/sistema-de-gestao-para-pequenos-negocios/",
+   "Guia completo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "para-que-tipo-de-negocio-o-softpay-foi-feito",
+   "titulo": "Para que tipo de negócio o SoftPay foi feito",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O SoftPay é um sistema de gestão comercial para <strong>comércio que vende produto e controla estoque</strong>. Ele se encaixa bem quando a loja tem estas características:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Vende produto físico</strong>, com entrada de mercadoria e baixa a cada venda.",
+      "<strong>Tem de 1 a 10 pessoas com acesso ao sistema</strong> — o teto do plano ERP Completo.",
+      "<strong>Já sente a perda de controle:</strong> estoque incerto, fiado no caderno, caixa que não fecha.",
+      "<strong>Não quer implantação nem servidor na loja.</strong> Roda no navegador, no computador ou no celular."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se a sua loja tem esse formato, é bem provável que um dos segmentos abaixo descreva a sua rotina — e, se nenhum descrever exatamente, a base é a mesma."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "escolha-o-seu-segmento",
+   "titulo": "Escolha o seu segmento",
+   "partes": [
+    {
+     "tipo": "cards",
+     "itens": [
+      {
+       "titulo": "Sistema para mercadinho",
+       "texto": "Mercadinho é volume: muitos itens baratos, giro rápido e margem apertada",
+       "href": "/segmentos/mercadinho/"
+      },
+      {
+       "titulo": "Sistema para loja de roupas com grade",
+       "texto": "O SoftPay é um sistema para loja de roupas com estoque por grade: cada tamanho e cor tem a própria…",
+       "href": "/segmentos/loja-de-roupas/"
+      },
+      {
+       "titulo": "Sistema para loja de variedades",
+       "texto": "Loja de variedades vive de muitos produtos baratos e muito diferentes entre si",
+       "href": "/segmentos/loja-de-variedades/"
+      },
+      {
+       "titulo": "Sistema para papelaria",
+       "texto": "Papelaria vive dois negócios ao mesmo tempo: a venda unitária do dia a dia e o pico da volta às aulas",
+       "href": "/segmentos/papelaria/"
+      },
+      {
+       "titulo": "Sistema para farmácia",
+       "texto": "O SoftPay cuida da gestão comercial da farmácia: PDV, estoque, caixa, clientes e notas fiscais",
+       "href": "/segmentos/farmacia/"
+      },
+      {
+       "titulo": "Sistema para distribuidora",
+       "texto": "Distribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação",
+       "href": "/segmentos/distribuidora/"
+      },
+      {
+       "titulo": "Sistema para loja de celulares e acessórios",
+       "texto": "Na mesma loja convivem dois negócios: o aparelho, que é caro e sai pouco, e o acessório, que é barato e…",
+       "href": "/segmentos/loja-de-celulares-e-acessorios/"
+      },
+      {
+       "titulo": "Sistema para loja de autopeças",
+       "texto": "Autopeças é o comércio do catálogo gigante: milhares de códigos, muitos que saem uma vez por ano e alguns…",
+       "href": "/segmentos/loja-de-autopecas/"
+      },
+      {
+       "titulo": "Sistema para loja de material de construção",
+       "texto": "Material de construção mistura a venda de um saco de cimento com o orçamento de uma obra inteira",
+       "href": "/segmentos/materiais-de-construcao/"
+      },
+      {
+       "titulo": "Programa de vendas para pequeno comércio e MEI",
+       "texto": "O SoftPay é um programa de vendas para pequeno comércio e MEI que junta PDV, estoque, caixa e fiado num…",
+       "href": "/segmentos/pequeno-comercio/"
+      },
+      {
+       "titulo": "Sistema para loja de joias",
+       "texto": "Numa joalheria, uma peça pode valer o que um mercadinho vende num dia",
+       "href": "/segmentos/loja-de-joias/"
+      },
+      {
+       "titulo": "Sistema para empresa com filiais",
+       "texto": "Abrir o segundo ponto muda o negócio inteiro: você deixa de ser quem faz e passa a ser quem acompanha",
+       "href": "/segmentos/empresas-com-filiais/"
+      },
+      {
+       "titulo": "Sistema para pet shop",
+       "texto": "Pet shop mistura dois negócios: a loja, que vende ração e acessório com estoque, e o serviço de banho e…",
+       "href": "/segmentos/pet-shop/"
+      },
+      {
+       "titulo": "Sistema para loja de calçados",
+       "texto": "Na loja de calçados o mesmo modelo existe em oito ou dez numerações",
+       "href": "/segmentos/loja-de-calcados/"
+      },
+      {
+       "titulo": "Sistema para loja de cosméticos e perfumaria",
+       "texto": "Cosmético tem muita variação — tom, tamanho, linha — e muita venda por indicação",
+       "href": "/segmentos/cosmeticos-e-perfumaria/"
+      },
+      {
+       "titulo": "Sistema para loja de bebidas",
+       "texto": "Loja de bebida é giro alto, margem apertada e pico de movimento concentrado no fim de semana",
+       "href": "/segmentos/loja-de-bebidas/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "do-seu-segmento-para-o-recurso-que-resolve",
+   "titulo": "Do seu segmento para o recurso que resolve",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "As páginas de segmento contam a rotina do seu negócio. As de <a href=\"/solucoes/\">soluções</a> explicam cada recurso por dentro. Este é o caminho de uma para a outra:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Se o seu problema é…",
+      "O recurso",
+      "Onde ele aparece"
+     ],
+     "linhas": [
+      [
+       "Não sei o que tenho em estoque",
+       "<a href=\"/solucoes/sistema-de-estoque/\">Controle de estoque</a>",
+       "Todos os segmentos. Essencial em mercadinho, variedades e distribuidora"
+      ],
+      [
+       "A fila trava no caixa",
+       "<a href=\"/solucoes/sistema-pdv/\">Sistema PDV</a>",
+       "Mercadinho, papelaria, farmácia"
+      ],
+      [
+       "O mesmo item existe em tamanhos e cores",
+       "Variações, no <a href=\"/solucoes/sistema-de-estoque/\">estoque</a>",
+       "Loja de roupas e loja de joias. A partir do plano Loja"
+      ],
+      [
+       "Não sei quem me deve",
+       "<a href=\"/solucoes/controle-de-fiado/\">Controle de fiado</a>",
+       "Mercadinho, farmácia, joias, pequeno comércio"
+      ],
+      [
+       "Registrar exige parar o atendimento",
+       "<a href=\"/solucoes/bot-whatsapp/\">Bot do WhatsApp</a>",
+       "Todos. A partir do plano Loja"
+      ],
+      [
+       "Preciso emitir nota fiscal",
+       "<a href=\"/solucoes/nfe/\">NF-e e NFC-e</a>",
+       "Distribuidora, autopeças, materiais de construção"
+      ],
+      [
+       "Tenho mais de um ponto de venda",
+       "<a href=\"/solucoes/multiplas-lojas/\">Múltiplas lojas</a>",
+       "Empresas com filiais e distribuidora"
+      ],
+      [
+       "Quero vender além da loja física",
+       "<a href=\"/solucoes/loja-online/\">Loja online</a>",
+       "Roupas, variedades, joias. A partir do plano Loja"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "nao-achou-o-seu-segmento",
+   "titulo": "Não achou o seu segmento?",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A base é a mesma para qualquer comércio com estoque: PDV, caixa, estoque, fiado, clientes e relatórios. Se a sua loja não tem página própria, comece pela de <a href=\"/segmentos/pequeno-comercio/\">pequeno comércio e MEI</a> — ela descreve o que vale para todos."
+    },
+    {
+     "tipo": "p",
+     "texto": "Também vale ser direto sobre onde o SoftPay <strong>não</strong> é a escolha certa hoje: pizzaria e delivery, prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Como ler estas páginas",
+     "texto": "Cada página de segmento traz um bloco com o que o sistema <strong>não</strong> faz naquele ramo. Vale ler esse bloco antes do resto — ele responde mais rápido se o SoftPay serve para você."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

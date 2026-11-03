@@ -1,0 +1,141 @@
+{
+ "slug": "perguntas/quanto-custa-um-sistema-para-loja",
+ "title": "Quanto Custa um Sistema para Loja? Preços 2026 | SoftPay",
+ "description": "Quanto custa um sistema de gestão para loja no Brasil, o que faz o preço variar e o que checar antes de contratar. Planos SoftPay de R$ 65 a R$ 109/mês.",
+ "h1": "Quanto custa um sistema para loja?",
+ "intro": "Preço de sistema de gestão para loja pequena costuma ficar na faixa de dezenas de reais por mês. O que mais varia não é o valor: é o que está incluído.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Quanto custa um sistema",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Quanto custa o SoftPay?",
+   "De R$ 65 a R$ 109 por mês, conforme o plano: Nota Fiscal R$ 65, Comércio R$ 69, Loja R$ 89 e ERP Completo R$ 109."
+  ],
+  [
+   "Tem taxa de instalação ou fidelidade?",
+   "Os planos são mensais e o teste de 7 dias não pede cartão de crédito. Confirme com o suporte qualquer condição específica antes de contratar."
+  ],
+  [
+   "Qual plano é o mais indicado para começar?",
+   "Para uma loja pequena que quer sair do caderno, o Comércio (R$ 69/mês) cobre PDV, caixa, fiado e estoque essencial."
+  ],
+  [
+   "Preciso pagar por usuário adicional?",
+   "O número de usuários está incluído no plano: 1 no Comércio, até 3 no Loja e até 10 no ERP Completo."
+  ],
+  [
+   "Existe sistema de graça?",
+   "Existem opções gratuitas no mercado, geralmente com limites de recursos ou de volume. Vale comparar o que cada uma cobre antes de decidir pelo preço."
+  ]
+ ],
+ "related": [
+  [
+   "Loja pequena precisa de sistema?",
+   "/perguntas/loja-pequena-precisa-de-sistema/",
+   "Quando vale a pena"
+  ],
+  [
+   "Caderno ou sistema?",
+   "/perguntas/caderno-ou-sistema/",
+   "A comparação"
+  ],
+  [
+   "Preços",
+   "/#pricing",
+   "Ver os planos"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Sistemas de gestão para pequeno varejo no Brasil geralmente são vendidos por assinatura mensal. No SoftPay, os planos vão de <strong>R$ 65 a R$ 109 por mês</strong>, com 7 dias de teste grátis sem cartão de crédito.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "os-planos-do-softpay",
+   "titulo": "Os planos do SoftPay",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "O que inclui"
+     ],
+     "linhas": [
+      [
+       "Nota Fiscal",
+       "R$ 65/mês",
+       "Só emissão de notas, por formulário. Sem PDV, estoque ou relatórios. Até 2 usuários"
+      ],
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV/caixa, caderninho de fiado, estoque essencial. 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Tudo do Comércio + fiado com cobrança por Pix, loja online, estoque avançado. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja + emissão de NFC-e e NF-e. Até 10 usuários"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-faz-o-preco-variar-entre-sistemas",
+   "titulo": "O que faz o preço variar entre sistemas",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Número de usuários.</strong> Muitos sistemas cobram por acesso adicional.",
+      "<strong>Emissão fiscal.</strong> NF-e e NFC-e costumam estar em planos superiores.",
+      "<strong>Loja online.</strong> Pode ser módulo à parte com cobrança separada.",
+      "<strong>Filiais.</strong> Mais de um ponto de venda geralmente muda o plano.",
+      "<strong>Suporte.</strong> Alguns cobram atendimento à parte ou só oferecem base de ajuda."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-checar-antes-de-assinar-qualquer-sistema",
+   "titulo": "O que checar antes de assinar qualquer sistema",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "Existe teste grátis <strong>sem cartão</strong>? Se pedem cartão, você depende de lembrar de cancelar.",
+      "Há taxa de implantação ou de migração além da mensalidade?",
+      "Quantos usuários estão inclusos no preço anunciado?",
+      "O suporte é humano e em qual canal?",
+      "Se você sair, consegue exportar os seus dados?"
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Como avaliar se compensa",
+     "texto": "Compare o custo com o que ele evita. Uma diferença de estoque ou um fiado esquecido por mês costuma valer mais que a mensalidade — mas isso só é verdade se você realmente usar o sistema."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

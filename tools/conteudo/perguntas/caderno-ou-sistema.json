@@ -1,0 +1,152 @@
+{
+ "slug": "perguntas/caderno-ou-sistema",
+ "title": "Caderno ou Sistema para Controlar a Loja? | SoftPay",
+ "description": "Comparação honesta entre controlar a loja no caderno e usar um sistema de gestão: o que o caderno resolve bem, onde ele falha e quando trocar.",
+ "h1": "Caderno ou sistema?",
+ "intro": "O caderno tem vantagens reais e é honesto reconhecê-las. O problema aparece num ponto específico da operação — e é aí que a troca se justifica.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Caderno ou sistema",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Caderno é errado?",
+   "Não. Ele funciona bem enquanto uma pessoa só opera a loja e o volume cabe na memória. O limite aparece quando você precisa de totais e não só de anotações."
+  ],
+  [
+   "Qual a maior diferença prática?",
+   "O total. O caderno registra cada venda fiada, mas não diz quanto a loja tem a receber no conjunto — e é esse número que muda decisões."
+  ],
+  [
+   "Posso usar os dois ao mesmo tempo?",
+   "Sim, e é recomendável durante a transição. Mantenha o caderno em paralelo por algumas semanas até confiar no sistema."
+  ],
+  [
+   "E se a internet cair?",
+   "O SoftPay é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade frequente, converse com o suporte antes de contratar."
+  ],
+  [
+   "Como levo o que está no caderno?",
+   "Leve só o que está em aberto: estoque atual dos itens de giro, fiado a receber e clientes. Vendas passadas não precisam ser transcritas."
+  ]
+ ],
+ "related": [
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "Passo a passo em 7 dias"
+  ],
+  [
+   "Excel ou sistema?",
+   "/perguntas/excel-ou-sistema-de-gestao/",
+   "A outra comparação"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "O total do fiado"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>O caderno funciona enquanto <strong>uma pessoa só</strong> opera a loja e o volume cabe na memória. Ele quebra quando você precisa de um <strong>total</strong> — total de estoque, total de fiado, total de margem — porque caderno registra eventos, não saldos.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-caderno-faz-bem",
+   "titulo": "O que o caderno faz bem",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Não depende de energia, internet nem de aprender nada.",
+      "É instantâneo: anotar leva menos tempo que qualquer sistema.",
+      "Custa quase nada.",
+      "Nunca fica fora do ar."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Essas vantagens são verdadeiras, e é por isso que tanta loja resiste à troca. Quem diz que caderno é só atraso não entende a rotina de balcão."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "onde-o-caderno-falha",
+   "titulo": "Onde o caderno falha",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Situação",
+      "Caderno",
+      "Sistema"
+     ],
+     "linhas": [
+      [
+       "Quanto tenho deste produto?",
+       "Contar na prateleira",
+       "Consulta na tela"
+      ],
+      [
+       "Quanto a loja tem a receber?",
+       "Somar página por página",
+       "Um número"
+      ],
+      [
+       "Qual a margem deste item?",
+       "Não dá",
+       "Calculada do custo"
+      ],
+      [
+       "Outra pessoa consegue operar?",
+       "Só quem escreveu entende",
+       "Qualquer um com acesso"
+      ],
+      [
+       "E se molhar ou sumir?",
+       "Perdeu",
+       "Backup automático na nuvem"
+      ],
+      [
+       "O que está encalhado?",
+       "Percepção",
+       "Curva ABC"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "A linha decisiva é a segunda. Caderno registra cada venda fiada, mas não te dá o total — e sem o total você não sabe o tamanho do dinheiro que está na rua."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-ponto-de-virada",
+   "titulo": "O ponto de virada",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Na prática, a troca se justifica quando aparece o primeiro destes três: mais de uma pessoa no balcão, fiado que não cabe mais na memória, ou a pergunta “vendi bem, cadê o dinheiro?”."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Na hora de trocar",
+     "texto": "Não jogue o caderno fora ao migrar. Mantenha por algumas semanas em paralelo, como rede de segurança e referência para conferir divergências de fiado."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

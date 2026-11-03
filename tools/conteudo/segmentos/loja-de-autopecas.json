@@ -1,0 +1,328 @@
+{
+ "slug": "segmentos/loja-de-autopecas",
+ "figura": [
+  "/assets/lojistas/loja-de-autopecas.webp",
+  "Balconista de loja de autopeças conferindo uma peça atrás do balcão"
+ ],
+ "title": "Sistema para Loja de Autopeças | SoftPay",
+ "description": "Sistema para autopeças com catálogo amplo, busca rápida de peça, controle de estoque, curva ABC para itens parados, fiado e nota fiscal. Teste grátis 7 dias.",
+ "h1": "Sistema para loja de autopeças",
+ "intro": "Autopeças é o comércio do catálogo gigante: milhares de códigos, muitos que saem uma vez por ano e alguns que não podem faltar nunca. O problema não é vender — é achar, e saber o que vale a pena manter.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Autopeças",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay tem catálogo de peças por veículo?",
+   "Não. Ele não traz catálogo automotivo, aplicação por montadora nem tabela de equivalência — o cadastro dos produtos é feito por você. Se a sua operação depende disso, confirme com o suporte antes de contratar."
+  ],
+  [
+   "Como encontro uma peça rapidamente no balcão?",
+   "Pela busca do PDV, usando código, descrição ou categoria. A rapidez depende de quão bem o produto foi cadastrado."
+  ],
+  [
+   "Consigo saber quanto tenho parado em peça de baixo giro?",
+   "Sim, com custo e quantidade cadastrados. A curva ABC, disponível a partir do plano Loja, separa os itens por participação no resultado."
+  ],
+  [
+   "Dá para trabalhar preço de oficina e de consumidor?",
+   "Sim. O mesmo produto aceita preço de atacado e de varejo, sem cadastro duplicado."
+  ],
+  [
+   "Como controlo a conta mensal das oficinas?",
+   "Pelo controle de fiado, que mantém o saldo e o histórico por cliente. A partir do plano Loja, a cobrança sai por link de Pix no WhatsApp."
+  ],
+  [
+   "Emite nota fiscal para venda a oficina?",
+   "Sim, nos planos Nota Fiscal e ERP Completo. A emissão consta como em ativação — confirme com o suporte e com seu contador."
+  ],
+  [
+   "Quantos produtos consigo cadastrar?",
+   "O cadastro atende a operação de uma autopeças. Se o seu catálogo for muito grande, confirme com o suporte antes de contratar."
+  ]
+ ],
+ "cta_title": "Descubra quanto está parado na sua prateleira",
+ "cta_text": "Cadastre os itens de maior saída com custo e quantidade e veja a curva ABC do seu catálogo. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Curva ABC e custo por item"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "A conta das oficinas"
+  ],
+  [
+   "NF-e",
+   "/solucoes/nfe/",
+   "Nota na venda para oficina"
+  ],
+  [
+   "Distribuidora",
+   "/segmentos/distribuidora/",
+   "Outro segmento de atacado"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-rotina-de-quem-vende-peca",
+   "titulo": "A rotina de quem vende peça",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O cliente chega com o carro, o ano e uma dúvida. Alguém precisa descobrir se a peça existe, onde ela está e quanto custa — enquanto o cliente espera no balcão e, muitas vezes, com o carro parado na oficina."
+    },
+    {
+     "tipo": "p",
+     "texto": "O catálogo de uma autopeças pequena já passa de mil itens. Boa parte é de <strong>baixo giro</strong>: peça que sai uma ou duas vezes por ano, mas que precisa estar lá quando alguém pedir. Esse é o dilema do segmento — cada item parado é dinheiro investido, e tirar do estoque significa perder a venda."
+    },
+    {
+     "tipo": "p",
+     "texto": "Ainda há a rotina do crédito: oficina que compra durante o mês e acerta depois. Não é fiado de bairro; são valores que se acumulam."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Ninguém acha a peça.</strong> Ela existe no estoque, mas quem está no balcão não localiza e a venda vai embora.",
+      "<strong>O catálogo cresce sem critério.</strong> Item entra e nunca mais sai, e o capital vai ficando preso na prateleira.",
+      "<strong>Você não sabe quanto tem parado.</strong> Sem custo e quantidade cadastrados, o valor investido é um chute.",
+      "<strong>A conta da oficina descontrola.</strong> Compras ao longo do mês, sem um saldo confiável no fechamento.",
+      "<strong>Falta o que não podia faltar.</strong> A peça de giro alto acaba e ninguém percebeu a tempo."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Cadastro que permite encontrar"
+    },
+    {
+     "tipo": "p",
+     "texto": "Produtos com código, descrição e categoria. A busca do PDV localiza pelo que você cadastrou — quanto melhor o cadastro, mais rápido o atendimento no balcão."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC: o filtro que este segmento mais precisa"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com mil itens, olhar tudo é impossível. A curva ABC separa os poucos que sustentam o faturamento da longa cauda de baixo giro. É a informação que decide o que repor sempre e o que não comprar mais."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Quanto dinheiro está parado"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com custo e quantidade cadastrados, o valor investido em peças deixa de ser estimativa. Em autopeças esse número costuma ser o maior ativo da loja — e o mais invisível."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Conta da oficina"
+    },
+    {
+     "tipo": "p",
+     "texto": "O caderninho de fiado registra o saldo por cliente, com o histórico das compras que o formam. A partir do plano Loja, a cobrança sai por link de Pix no WhatsApp."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Atacado e varejo"
+    },
+    {
+     "tipo": "p",
+     "texto": "Oficina compra num preço, consumidor final em outro. Os dois convivem no mesmo cadastro, sem produto duplicado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Nota fiscal"
+    },
+    {
+     "tipo": "p",
+     "texto": "Venda para oficina normalmente exige nota. Os planos Nota Fiscal e ERP Completo cobrem NF-e e NFC-e, com cadastro fiscal e pacote do contador."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que ele não faz",
+     "texto": "O SoftPay <strong>não</strong> traz catálogo de peças por montadora, aplicação por veículo nem tabela de equivalência. O cadastro dos produtos é seu. Se a sua operação depende de catálogo automotivo pronto, confirme com o suporte antes de contratar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "um-dia-comum-do-jeito-que-acontece",
+   "titulo": "Um dia comum, do jeito que acontece",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Segunda de manhã, oficina liga pedindo três itens:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Você busca cada peça pelo código no PDV e confere o saldo na hora.",
+      "Registra a venda no preço de atacado, na conta da oficina.",
+      "O saldo do mês da oficina fica visível no cadastro dela.",
+      "Emite a nota da operação, se o seu plano incluir emissão.",
+      "No fim do mês, a curva ABC mostra 40 itens sem saída há mais de um ano — capital que dá para liberar."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sobre este exemplo",
+     "texto": "Exemplo ilustrativo do fluxo. Os números da sua loja dependem dos seus próprios dados."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Tenho essa peça e quanto custa?",
+      "Quanto dinheiro está parado em itens que não giram?",
+      "Quais peças nunca saíram desde que entraram?",
+      "Quanto cada oficina me deve neste mês?",
+      "Quais peças não podem faltar, pelo histórico de saída?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a autopeças"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial. Catálogo pequeno, sem nota"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Custo, curva ABC, cobrança do fiado por Pix e registro pelo WhatsApp. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "<strong>O plano de quem vende para oficina:</strong> tudo da Loja mais NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos com 7 dias de teste, sem cartão. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [
+  [
+   "Produtos parados no estoque",
+   "/blog/produtos-parados-no-estoque/"
+  ],
+  [
+   "Qual sistema usar em um mercadinho?",
+   "/perguntas/qual-sistema-para-mercadinho/"
+  ],
+  [
+   "Emissão de NF-e",
+   "/solucoes/nfe/"
+  ],
+  [
+   "SoftPay ou Nex: qual escolher",
+   "/comparativos/softpay-ou-nex/"
+  ],
+  [
+   "Alternativa ao Kyte: SoftPay ou Kyte?",
+   "/comparativos/softpay-ou-kyte/"
+  ],
+  [
+   "Quanto custa um sistema de gestão para comércio",
+   "/guias/quanto-custa-um-sistema-de-gestao/"
+  ],
+  [
+   "Meu sistema precisa mudar por causa da reforma tributária?",
+   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/"
+  ],
+  [
+   "Reforma tributária e o MEI",
+   "/guias/reforma-tributaria-mei/"
+  ],
+  [
+   "Checklist da reforma tributária até janeiro de 2027",
+   "/guias/checklist-reforma-tributaria-2027/"
+  ],
+  [
+   "Troca e devolução na loja",
+   "/blog/troca-e-devolucao-na-loja/"
+  ],
+  [
+   "Loja pequena precisa de sistema?",
+   "/perguntas/loja-pequena-precisa-de-sistema/"
+  ],
+  [
+   "Alternativa ao Bling para loja física",
+   "/comparativos/alternativa-ao-bling/"
+  ],
+  [
+   "O suporte é humano?",
+   "/perguntas/tem-suporte-humano/"
+  ],
+  [
+   "Excel ou sistema de gestão?",
+   "/perguntas/excel-ou-sistema-de-gestao/"
+  ],
+  [
+   "Posso migrar de outro sistema?",
+   "/perguntas/posso-migrar-de-outro-sistema/"
+  ],
+  [
+   "Preciso instalar alguma coisa?",
+   "/perguntas/preciso-instalar/"
+  ],
+  [
+   "Comparativos",
+   "/comparativos/"
+  ],
+  [
+   "App de vendas e controle de estoque",
+   "/solucoes/sistema-de-estoque/"
+  ]
+ ],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}
