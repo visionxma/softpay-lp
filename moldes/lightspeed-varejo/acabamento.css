@@ -85,6 +85,42 @@
 .mx-vestido .lv-trilha-sep { color: var(--m-texto-fraco); }
 @media (max-width: 536px) { .mx-vestido .lv-trilha { justify-content: center; } }
 
+/* hero, acerto do portão (03/11/2026). (1) Fundo de ponta a ponta: degradê reto do azul-claro ao branco, de borda a
+   borda, correndo por trás do menu estendido (a cor chapada não contava como fundo). (2) A sobra de altura dos 100svh
+   ia toda para cima e para baixo do bloco centrado (158 e 193 px em 1440; teto da doutrina: 120 no computador, 72 no
+   celular): agora ela se divide IGUAL entre os vãos por space-evenly. O <header> some da caixa (display: contents)
+   para trilha, título, texto e botões serem os itens espaçados, e margem e padding dos utilitários da origem saem
+   (somavam ao vão). Computador (≥960, duas colunas): a coluna de texto estica na altura útil da hero e a arte fica
+   centrada ao lado. Celular e tablet em pé (uma coluna): a coluna também some da caixa e a arte entra na conta. */
+.mx-vestido .lv-hero {
+  background-color: var(--m-fundo-2);
+  background-image: linear-gradient(180deg, var(--m-superficie) 0%, var(--m-fundo-2) 45%, var(--m-fundo) 100%);
+}
+.mx-vestido .lv-hero .hero-united__text-content__header { display: contents; }
+.mx-vestido .lv-hero .hero-united__text-content__header > *,
+.mx-vestido .lv-hero .hero-united__cta-buttons { margin-top: 0 !important; margin-bottom: 0 !important; padding-top: 0 !important; }
+.mx-vestido .lv-hero .hero-united__media { margin-top: 0 !important; margin-bottom: 0 !important; }
+@media (min-width: 960px) {
+  .mx-vestido .lv-hero .tw\:tab\:flex > [data-lv-anima]:first-child {
+    display: flex !important; flex-direction: column; justify-content: space-evenly !important;
+    /* !important: o utilitário da origem (tw:lap-s:min-h-[462px]) também é !important, e sem ele a coluna ficava em
+       462 px, centrada, com 181 e 193 px de vão (medição de 03/11, 15:24) */
+    min-height: calc(100svh - var(--nav-h, 4.5rem)) !important; padding-top: 0 !important; padding-bottom: 0 !important;
+  }
+  /* o título cresce com a ALTURA da tela: o da origem (46 px, uma linha na nossa letra condensada) deixava 112 a 130 px
+     entre os blocos da coluna em 1440×900 (medição de 03/11, 16:07), acima do teto de 120 */
+  .mx-vestido .lv-hero :is(h1, .gb-h1) { font-size: clamp(2.875rem, 8.2svh, 4.75rem); line-height: 1.04; }
+}
+@media (max-width: 959.98px) {
+  .mx-vestido .lv-hero .tw\:tab\:flex {
+    display: flex; flex-direction: column; justify-content: space-evenly;
+    min-height: calc(100svh - var(--nav-h, 4.5rem));
+  }
+  .mx-vestido .lv-hero .tw\:tab\:flex > [data-lv-anima]:first-child { display: contents; }
+  /* trilha numa linha só no celular: "SEGMENTOS / EMPRESAS COM FILIAIS" quebrava em duas com .12em de espaço */
+  .mx-vestido .lv-trilha { font-size: 13px; letter-spacing: .06em; }
+}
+
 /* par de botões lado a lado também no celular (rótulos curtos) */
 @media (max-width: 479px) {
   .mx-vestido .lv-par { flex-wrap: nowrap; gap: 10px; }
