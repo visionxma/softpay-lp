@@ -36,7 +36,8 @@ def organizacao():
     # SoftPay no LinkedIn (criada em 02/11/2026, nome "SoftPay PDV", com a
     # desambiguação da Softpay ApS na visão geral). Diretório entra aqui só
     # depois que a ficha pública estiver no ar: FindSaaS (02/11/2026) e Portal
-    # Software (03/11/2026, selo Verificado) já estão; B2B Stack em análise.
+    # Software (03/11/2026, selo Verificado) já estão; B2B Stack publicada em
+    # 04/11/2026 (200; endereço inexistente lá dá 302, então o 200 prova a ficha).
     return {
         "@type": "Organization",
         "@id": ID_ORG,
@@ -76,7 +77,8 @@ def organizacao():
         }],
         "sameAs": [APP_SITE + "/", "https://www.linkedin.com/company/softpaybr/",
                    "https://www.findsaas.com.br/saas/softpay",
-                   "https://portalsoftware.com.br/software/softpay"],
+                   "https://portalsoftware.com.br/software/softpay",
+                   "https://www.b2bstack.com.br/product/softpay"],
     }
 
 
