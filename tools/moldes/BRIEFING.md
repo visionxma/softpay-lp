@@ -8,6 +8,19 @@ realistas, melhores, mais intuitivas. Para captar mesmo."
 Regra da casa: `jarvis manual rota-de-seo-e-clone-de-lp-diferente` e
 `jarvis manual referencia-nomeada-se-clona-pela-captura` (leia os dois).
 
+## Teto: 45 minutos do início ao relatório
+
+Cobrança do Victor (04/11/2026): "toda vez que vejo um agente demorando mais de uma hora acho estranho,
+desnecessário". O clone da Lightspeed (estoque) ficou 1h46 rodando portão atrás de portão. Por isso:
+
+- Registre com `fundo registrar molde-<id> "<o que faz>"` e bata ponto a cada etapa com o MINUTO em que está.
+- Aos 35 minutos, pare de polir: tire as fotos `clone-1440.png`/`clone-390.png`, rode `de qa` UMA vez e
+  escreva o relatório com o que ficou abaixo da referência. O agente principal integra, publica a prévia e
+  decide se vale outra rodada curta.
+- **Não rode `portao-lp-victor.mjs` nem `varrer-aparelhos.mjs`**: são 15–20 min cada no Mac de 8 GB. Quem
+  roda é o principal, uma vez, em segundo plano, contra a prévia no ar.
+- Um conserto que pede mais de 10 min vira item do relatório, não mais uma volta.
+
 ## Onde
 
 - Projeto: `/Users/victorgabryellferreiraqueiroz/BACKUP_VICTOR/Projetos/VISIONX/SOFTPAY LP`
@@ -135,7 +148,8 @@ breadcrumbs, figura…) + `origem` (true na prova contra a referência, false na
      Se a nossa parece mais pobre em qualquer seção, não está pronto.
    - `PORTA_CDP=9444 de qa http://127.0.0.1:<porta>/<slug>/ --vp 360,390,768,1024,1440` e
      `de audit ... --vp 360,390,768`: zero rolagem lateral, zero "itens empilhados que cabem".
-   - Portão das correções do Victor: `node ~/.jarvis/design-engine/ferramentas/portao-lp-victor.mjs
+   - Portão das correções do Victor (roda o PRINCIPAL, em segundo plano, contra a prévia; o agente só
+     informa no relatório o seletor da hero): `node ~/.jarvis/design-engine/ferramentas/portao-lp-victor.mjs
      <url> --heroi '<seletor da hero do molde>' --saida <arq>.json`. O `--heroi` é obrigatório: sem ele o
      portão pega a 1ª `section` do miolo (no square-pdv, um bloco de 2.653 px sem o h1) e reprova a hero
      à toa. Se a REFERÊNCIA mostra aparelho além de celular (monitor, maquininha, hardware), acrescente
