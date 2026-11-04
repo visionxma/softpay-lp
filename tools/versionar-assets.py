@@ -78,10 +78,18 @@ if __name__ == '__main__':
     # HTML só pega o hash novo do .css se ele já estiver no estado final.
     alvos = sys.argv[1:] or (sorted(str(f) for f in pathlib.Path('public').rglob('*.css'))
                              + sorted(str(f) for f in pathlib.Path('public').rglob('*.html')))
-    total = 0
-    for a in alvos:
-        p = pathlib.Path(a)
-        n = carimbar(p)
-        total += n
-        print(f'{a}: {n} referência(s) atualizada(s)')
+    # Repete até parar de mudar: um .css que cita outro .css (o @import das
+    # campanhas) só pega o hash final na rodada seguinte. Medido em 03/11/2026:
+    # a 1ª rodada mexeu em 86 arquivos, a 2ª em 6 e a 3ª em nenhum.
+    for rodada in range(1, 6):
+        total = 0
+        for a in alvos:
+            p = pathlib.Path(a)
+            n = carimbar(p)
+            total += n
+            if n:
+                print(f'{a}: {n} referência(s) atualizada(s)')
+        print(f'rodada {rodada}: {total} referência(s)')
+        if not total:
+            break
     sys.exit(0)
