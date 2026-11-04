@@ -64,6 +64,15 @@ def carimbar(html_path):
     html = re.sub(r'(?<=[="\s(\'])(/[\w./+-]+\.' + EXT + r')(?=[\s"\',)])', primeira_vez, html)
     # endereço absoluto do próprio site (og:image, twitter:image, JSON-LD)
     html = re.sub(r'(https://site\.softpaybr\.com/[\w./+-]+\.' + EXT + r')(?=[\s"\',)<])', primeira_vez, html)
+    # caminho RELATIVO à pasta da página: as campanhas citam "softpay-clone.css",
+    # "css/index-….css" e "images/….webp" sem barra e ficavam sem versão, com
+    # 4 h de cache — o HTML novo chegava com o CSS velho (04/11/2026). O
+    # novo_hash procura primeiro ao lado do arquivo, então o relativo resolve
+    # na pasta certa; o que não existe em disco fica como está.
+    rel = r'([A-Za-z0-9_][\w./+-]*\.' + EXT + r')'
+    html = re.sub(r'(?:(?<=src=")|(?<=href=")|(?<=poster="))' + rel + r'(?=")', primeira_vez, html)
+    html = re.sub(r'srcset="([^"]+)"', lambda m: 'srcset="' + re.sub(
+        r'(?:^|(?<=,\s)|(?<=,))' + rel + r'(?=\s|$)', primeira_vez, m.group(1)) + '"', html)
     if trocas:
         html_path.write_text(html)
     return trocas
