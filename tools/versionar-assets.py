@@ -11,6 +11,9 @@ Uso:  python3 tools/versionar-assets.py            # todas as páginas
 """
 import hashlib, pathlib, re, sys
 
+EXT = r'(?:css|js|webp|avif|png|jpe?g|gif|svg|woff2?|ttf|otf|mp4|webm)'
+DOMINIO = re.compile(r'^(?:https?:)?//site\.softpaybr\.com')
+
 def carimbar(html_path):
     base = html_path.parent
     html = html_path.read_text()
@@ -25,7 +28,9 @@ def carimbar(html_path):
         # pathlib trata como absoluto do disco, não acha o arquivo e devolve
         # None — e o ?v= antigo fica para trás, que é justamente o bug que
         # este script existe para evitar.
-        arquivo = arquivo.lstrip('/')
+        # Endereço absoluto do próprio site (og:image, JSON-LD) aponta para o
+        # mesmo arquivo de public/: tira o domínio e segue igual.
+        arquivo = DOMINIO.sub('', arquivo).lstrip('/')
         for alvo in (base / arquivo, raiz / arquivo):
             if alvo.exists() and alvo.is_file():
                 return hashlib.sha256(alvo.read_bytes()).hexdigest()[:10]
@@ -40,21 +45,25 @@ def carimbar(html_path):
         trocas += 1
         return f'{arquivo}?v={h}'
 
-    EXT = r'(?:css|js|webp|png|jpe?g|svg)'
     # com versão já presente
     html = re.sub(r'([\w./+-]+\.' + EXT + r')\?v=([\w]+)', sub, html)
-    # e sem versão nenhuma, dentro de src/srcset/href
+    # e sem versão nenhuma: src/srcset/href e também url('...') de CSS (a
+    # fonte do @font-face e o logo trocado por `content:` ficavam de fora e o
+    # `conferir-cache.mjs` acusou em 03/11/2026). O preload do HTML e o
+    # @font-face do CSS saem com o MESMO ?v=, porque o hash é do arquivo.
     def primeira_vez(m):
         nonlocal trocas
         arquivo = m.group(1)
-        if '?' in arquivo or arquivo.startswith('http'):
+        if '?' in arquivo:
             return m.group(0)
-        h = novo_hash(arquivo.lstrip('/'))
+        h = novo_hash(arquivo)
         if h is None:
             return m.group(0)
         trocas += 1
         return f'{arquivo}?v={h}'
-    html = re.sub(r'(?<=[="\s])(/[\w./+-]+\.' + EXT + r')(?=[\s"\',)])', primeira_vez, html)
+    html = re.sub(r'(?<=[="\s(\'])(/[\w./+-]+\.' + EXT + r')(?=[\s"\',)])', primeira_vez, html)
+    # endereço absoluto do próprio site (og:image, twitter:image, JSON-LD)
+    html = re.sub(r'(https://site\.softpaybr\.com/[\w./+-]+\.' + EXT + r')(?=[\s"\',)<])', primeira_vez, html)
     if trocas:
         html_path.write_text(html)
     return trocas
@@ -65,11 +74,22 @@ if __name__ == '__main__':
     # outras 72 páginas ficaram apontando para o hash velho — com `max-age` de
     # um ano no `_headers`, quem já tinha visitado ficaria com o arquivo antigo
     # para sempre. Carimbar a mais não custa nada; carimbar a menos é invisível.
-    alvos = sys.argv[1:] or sorted(str(f) for f in pathlib.Path('public').rglob('*.html'))
-    total = 0
-    for a in alvos:
-        p = pathlib.Path(a)
-        n = carimbar(p)
-        total += n
-        print(f'{a}: {n} referência(s) atualizada(s)')
+    # O CSS vem ANTES do HTML: carimbar o url() muda o conteúdo do .css, e o
+    # HTML só pega o hash novo do .css se ele já estiver no estado final.
+    alvos = sys.argv[1:] or (sorted(str(f) for f in pathlib.Path('public').rglob('*.css'))
+                             + sorted(str(f) for f in pathlib.Path('public').rglob('*.html')))
+    # Repete até parar de mudar: um .css que cita outro .css (o @import das
+    # campanhas) só pega o hash final na rodada seguinte. Medido em 03/11/2026:
+    # a 1ª rodada mexeu em 86 arquivos, a 2ª em 6 e a 3ª em nenhum.
+    for rodada in range(1, 6):
+        total = 0
+        for a in alvos:
+            p = pathlib.Path(a)
+            n = carimbar(p)
+            total += n
+            if n:
+                print(f'{a}: {n} referência(s) atualizada(s)')
+        print(f'rodada {rodada}: {total} referência(s)')
+        if not total:
+            break
     sys.exit(0)

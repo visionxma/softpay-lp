@@ -76,8 +76,11 @@ breadcrumbs, figura…) + `origem` (true na prova contra a referência, false na
 5. Molde: composição, ordem, tamanhos de letra, espaçamentos, componentes e animação 1:1 com a
    referência. Trocam: marca, copy (o conteúdo da rota), cores papel por papel e a FAMÍLIA da fonte
    (o tamanho fica). Identidade do SoftPay (de `public/sistema.css`):
-   fontes `SoftPay Display` (`/fontes/softpay-display-v1.woff2`, peso 100–900) para títulos e
-   `SoftPay Texto` (`/fontes/softpay-texto-{400,500,600}-v1.woff2`) para texto;
+   fontes `SoftPay Display` para títulos e `SoftPay Texto` para texto — as duas são a Montserrat
+   variável (`/fontes/softpay-montserrat-v1.woff2`, peso 100–900, itálico em
+   `softpay-montserrat-italico-v1.woff2`), a letra do logo, escolhida pelo Victor em 03/11/2026.
+   Título em caixa normal (nunca `uppercase` por herança da referência), 700–800, espaço -0,02em;
+   texto corrido em 500;
    `--noite #06121F`, `--azul #0C5C9E` (ação, branco por cima 6,91:1), `--azul-forte #084A81`,
    `--azul-vapor #E8F3FB`, `--tinta #0A1A28`, fundo branco. Botão em cor viva leva texto BRANCO.
    Regras que vencem a referência: hero cobre a tela inteira (`min-height: 100svh` menos o cabeçalho do
