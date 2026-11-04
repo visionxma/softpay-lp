@@ -161,7 +161,10 @@
   display: flex;
   flex-direction: column;
   padding-top: calc(var(--nav-h, 4.5rem) + clamp(1.25rem, .8rem + 2vw, 3rem));
-  background: var(--sh-fundo);
+  /* fundo de ponta a ponta (regra da casa, 08/10/2026; mesmo padrão do lightspeed-estoque): o branco do cabeçalho
+     desce até o vapor azul do SoftPay atrás dos botões e assenta no fundo da página onde a foto começa */
+  background-color: var(--sh-fundo);
+  background-image: linear-gradient(180deg, var(--sh-branco) 0%, var(--sh-vapor) 48%, var(--sh-fundo) 100%);
 }
 .mx-shopify-pos-varejo .sh-hero-texto {
   width: min(100% - 2 * var(--sh-pad-x), 58rem);
