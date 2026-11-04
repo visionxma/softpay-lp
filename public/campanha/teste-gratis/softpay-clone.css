@@ -45,7 +45,7 @@ a[href]:focus-visible, button[type]:focus-visible, [tabindex]:focus-visible {
   --tw-ring-offset-shadow: 0 0 #0000;
 }
 /* dentro de caixa com overflow:hidden o anel vai para dentro, senão é cortado */
-h3 > button[aria-controls]:focus-visible, button.sp-capa:focus-visible { outline-offset: -3px; }
+button.sp-capa:focus-visible { outline-offset: -3px; }
 
 /* ---------- Transições: propriedade por propriedade, nunca "all" ---------- */
 .transition-all {
@@ -96,7 +96,6 @@ a[data-botao] .lucide-log-in { transition: transform 220ms var(--sp-ease); }
 @media (hover: none), (pointer: coarse) {
   a[data-botao]:hover, .sp-e5 > a:hover { transform: none; }
   .hover\:translate-y-\[-8px\]:hover { transform: none; }
-  .space-y-4 > div[data-orientation]:hover { box-shadow: 0 1px 2px 0 rgb(0 0 0 / .05); }
   .sp-capa.group:hover .sp-play { transform: none; }
 }
 a[data-botao]:active, .sp-seg:active, .sp-e5 > a:active { transform: scale(.98); transition-duration: 120ms; }
@@ -212,14 +211,145 @@ nav a[href^="#"][aria-current="true"]::after { transform: scaleX(1); }
 }
 .sp-capa:active .sp-play { transform: scale(.94); transition-duration: 120ms; }
 
-/* ---------- Perguntas frequentes ---------- */
-h3 > button[aria-controls] { border-radius: 14px; transition: background-color 220ms var(--sp-ease), color 220ms var(--sp-ease); }
-/* aberto, o botão é só o topo do cartão: o anel de foco acompanha os cantos */
-[data-state="open"] > h3 > button[aria-controls] { border-radius: 14px 14px 0 0; }
-h3 > button[aria-controls]:hover { text-decoration: none; color: #0C5C9E; }
-h3 > button[aria-controls] > svg { transition: transform 360ms var(--sp-ease); }
-.sp-pergunta { min-width: 0; padding-right: 12px; }
-.space-y-4 > div[data-state="open"][data-orientation] { border-color: rgba(12, 92, 158, .2); }
+/* ---------- Perguntas frequentes ----------
+   Elevado em 04/11/2026 (pedido do Victor: "mais elegante"). Eram dez cartões cinza com borda
+   dupla, sombra pesada no hover, um ❓ vermelho em cada um, faixa cinza no aberto e resposta em
+   14px. Agora é a lista de linhas finas do FAQ do site principal (sistema.css): número discreto,
+   pergunta em 17–19px, resposta em 16px na largura de leitura e um "+" num círculo que gira 45°
+   e vira "×" ao abrir. Duas colunas a partir do tablet; seis à vista (cinco numa coluna só) e o
+   resto atrás de UM "Ver mais perguntas (+N)", com o N contado pelo softpay-clone.js. */
+.sp-faq {
+  --faq-linha: rgba(10, 26, 40, .1);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  border-top: 1px solid var(--faq-linha);
+}
+@media (min-width: 48rem) {
+  .sp-faq { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(2rem, 4.5vw, 4.5rem); }
+}
+.sp-faq__item { border-bottom: 1px solid var(--faq-linha); }
+.sp-faq__h { margin: 0; }
+/* número e texto na mesma linha de base (pergunta de duas linhas: o número fica na primeira);
+   o círculo centra na primeira linha com margens negativas iguais, sem mudar a altura da linha */
+.sp-faq__q {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.25rem 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font: inherit;
+  font-size: clamp(1.0625rem, 1rem + .2vw, 1.1875rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -.01em;
+  color: #0A1A28;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 220ms var(--sp-ease);
+}
+.sp-faq__n {
+  flex: none;
+  align-self: baseline;
+  min-width: 1.75rem;
+  font-size: .875rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  font-variant-numeric: tabular-nums;
+  color: #557390;                                  /* 4,7:1 no branco */
+  transition: color 220ms var(--sp-ease);
+}
+.sp-pergunta { flex: 1; min-width: 0; align-self: baseline; }
+.sp-faq__mais {
+  flex: none;
+  position: relative;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-block: calc((1.4em - 2.25rem) / 2);
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(12, 92, 158, .3);
+  color: #0C5C9E;
+  transition: transform 420ms var(--sp-ease), background-color 260ms var(--sp-ease), box-shadow 260ms var(--sp-ease), color 260ms var(--sp-ease);
+}
+.sp-faq__mais::before, .sp-faq__mais::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: .875rem;
+  height: 2px;
+  margin: -1px 0 0 -.4375rem;
+  border-radius: 2px;
+  background: currentColor;
+}
+.sp-faq__mais::after { transform: rotate(90deg); }
+.sp-faq__q[aria-expanded="true"] .sp-faq__mais { transform: rotate(45deg); background-color: #0C5C9E; box-shadow: inset 0 0 0 1px #0C5C9E; color: #fff; }
+.sp-faq__q[aria-expanded="true"] .sp-faq__n { color: #0C5C9E; }
+/* button.… porque a regra global button[type]:focus-visible (0,2,1) vencia e o recuo ficava 3px */
+button.sp-faq__q:focus-visible { outline-offset: 4px; border-radius: 8px; }
+.sp-faq__q[aria-expanded="false"]:active .sp-faq__mais { transform: scale(.9); transition-duration: 120ms; }
+@media (hover: hover) and (pointer: fine) {
+  .sp-faq__q:hover { color: #0C5C9E; }
+  .sp-faq__q:hover .sp-faq__n { color: #0C5C9E; }
+  .sp-faq__q[aria-expanded="false"]:hover .sp-faq__mais { background-color: rgba(12, 92, 158, .07); box-shadow: inset 0 0 0 1px rgba(12, 92, 158, .6); }
+}
+/* a resposta começa na mesma linha do texto da pergunta (número + vão) e para antes do círculo */
+.sp-faq__r {
+  max-width: 40rem;
+  padding: 0 3.25rem 1.5rem 2.75rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3F4D5C;                                  /* 8,6:1 no branco */
+}
+@media (min-width: 48rem) { .sp-faq__r { padding-right: 1.5rem; } }
+@media (max-width: 47.99rem) {
+  .sp-faq-secao { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+  .sp-faq-topo { margin-bottom: 2.25rem; }
+  .sp-faq__q { gap: .75rem; padding: 1.125rem 0; }
+  .sp-faq__n { min-width: 1.5rem; }
+  .sp-faq__r { padding: 0 .25rem 1.25rem 2.25rem; }
+}
+/* "Ver mais perguntas (+N)": um controle só, centralizado sob as duas colunas */
+.sp-faq-mais { display: flex; justify-content: center; margin-top: 2.5rem; }
+.sp-faq-mais[hidden] { display: none; }
+.sp-faq-mais__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .375rem;
+  min-height: 3rem;
+  min-width: 16rem;
+  padding: 0 1.75rem;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(12, 92, 158, .35), 0 1px 2px rgba(10, 26, 40, .06);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0C5C9E;
+  cursor: pointer;
+  transition: background-color 220ms var(--sp-ease), color 220ms var(--sp-ease), box-shadow 220ms var(--sp-ease), transform 160ms var(--sp-ease);
+}
+.sp-faq-mais__conta { font-variant-numeric: tabular-nums; }
+.sp-faq-mais__btn:active { transform: scale(.98); transition-duration: 120ms; }
+@media (hover: hover) and (pointer: fine) {
+  .sp-faq-mais__btn:hover { background-color: #0C5C9E; color: #fff; box-shadow: inset 0 0 0 1px #0C5C9E, 0 10px 24px -12px rgba(12, 92, 158, .55); }
+}
+/* as perguntas que o "ver mais" mostra entram em cascata (só transform e opacidade) */
+@keyframes sp-faq-surge { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.sp-faq__item.sp-faq--surge { animation: sp-faq-surge 460ms var(--sp-ease) var(--sp-atraso, 0ms) both; }
+/* "Ainda tem dúvidas?": a mesma caixa, mais calma, na largura de leitura e não da lista */
+.sp-faq-ajuda {
+  max-width: 56rem;
+  margin-inline: auto;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, rgba(12, 92, 158, .07), rgba(12, 92, 158, .03));
+  box-shadow: inset 0 0 0 1px rgba(12, 92, 158, .16);
+}
+@media (max-width: 47.99rem) { .sp-faq-ajuda { margin-top: 2.5rem; padding: 1.75rem 1.25rem; } }
 div[role="region"][data-state="open"] { animation-duration: 380ms; animation-timing-function: var(--sp-ease); }
 div[role="region"][data-state="closed"] { animation-duration: 260ms; animation-timing-function: cubic-bezier(.3, 0, .2, 1); }
 @keyframes sp-faq-entra { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
@@ -338,6 +468,10 @@ html.sp-travado { overflow: hidden; }
   html.sp-revela [data-revelar] { transition: opacity 300ms linear; }
   html.sp-revela [data-revelar]:not(.sp-visto) { opacity: 0; }
   div[role="region"][data-state="open"].sp-animando > div { animation: sp-aparece 200ms linear both; }
+  .sp-faq__item.sp-faq--surge { animation: sp-aparece 300ms linear both; }
+  .sp-faq__mais { transition-property: background-color, box-shadow, color; }
+  .sp-faq__q[aria-expanded="false"]:active .sp-faq__mais, .sp-faq-mais__btn:active { transform: none; }
+  .sp-faq-mais__btn { transition-property: background-color, color, box-shadow; }
   .sp-dialogo[data-state="open"] { animation-name: sp-aparece; }
   .sp-dialogo[data-state="closed"] { animation-name: sp-some; }
   .sp-fab, .sp-fab.sp-fab--on { transform: none; }

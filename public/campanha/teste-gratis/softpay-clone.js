@@ -53,6 +53,85 @@
     });
   });
 
+  /* 1b. "Ver mais perguntas (+N)" (04/11/2026) ------------------------------
+     Seis à vista em duas colunas, cinco numa só, para nenhuma fileira ficar capenga: a sexta
+     entra ou sai do grupo escondido conforme a largura. O N é a contagem do que está escondido,
+     nunca texto à mão. Depois de abrir, o botão vira "Ver menos perguntas" e recolhe de volta,
+     rolando até ele, para a pessoa não ficar olhando a seção de baixo sem saber onde foram. */
+  var listaFaq = document.getElementById('sp-faq-lista');
+  var verMais = document.querySelector('[data-faq-ver-mais]');
+  if (listaFaq && verMais) {
+    var caixaMais = verMais.parentElement;
+    var contaMais = verMais.querySelector('[data-faq-conta]');
+    var rotuloMais = verMais.querySelector('[data-faq-rotulo]');
+    var sexta = listaFaq.querySelector('[data-faq-sexta]');
+    var extras = listaFaq.querySelectorAll('[data-faq-extra]');
+    var todas = false;
+    // Fecha sem passar por estado(): a animação de recolher tocaria com a página já pintada
+    // (recarga com a rolagem restaurada mostrava a resposta encolhendo) e, no item que está
+    // sumindo junto, ninguém a veria. Aqui é só trocar o estado e esconder o painel.
+    var fecharJa = function (b) {
+      var painel = document.getElementById(b.getAttribute('aria-controls'));
+      [b.parentElement.parentElement, b.parentElement, b, painel].forEach(function (el) {
+        if (el) el.setAttribute('data-state', 'closed');
+      });
+      b.setAttribute('aria-expanded', 'false');
+      if (painel) { painel.classList.remove('sp-animando'); painel.hidden = true; }
+    };
+    var fecharItem = function (item) {
+      var b = item.querySelector('h3 > button[aria-controls]');
+      if (b && b.getAttribute('aria-expanded') === 'true') fecharJa(b);
+    };
+    // As perguntas 7 a 10 chegam VISÍVEIS no HTML: sem script a pessoa lê as dez. Quem esconde
+    // é este arquivo, como promete o cabeçalho; a seção fica abaixo da dobra, então trocar aqui
+    // não desloca nada que esteja na tela. O botão também nasce escondido e só aparece com a conta.
+    cada(extras, function (el) { el.hidden = true; });
+    var ajustarFaq = function () {
+      if (todas) return;
+      var colunas = getComputedStyle(listaFaq).gridTemplateColumns.split(' ').length;
+      if (sexta) {
+        if (colunas < 2 && !sexta.hidden) fecharItem(sexta);
+        sexta.hidden = colunas < 2;
+      }
+      var escondidas = listaFaq.querySelectorAll(':scope > [hidden]').length;
+      if (contaMais) contaMais.textContent = '(+' + escondidas + ')';
+      caixaMais.hidden = escondidas === 0;
+    };
+    ajustarFaq();
+    // Em duas colunas a primeira resposta aberta deixava a vizinha com um vão do tamanho dela:
+    // lá a lista nasce fechada. Numa coluna só, a primeira continua aberta, como na referência.
+    if (getComputedStyle(listaFaq).gridTemplateColumns.split(' ').length > 1) {
+      cada(listaFaq.querySelectorAll('h3 > button[aria-expanded="true"]'), fecharJa);
+    }
+    var duasColunas = window.matchMedia('(min-width: 48rem)');
+    if (duasColunas.addEventListener) duasColunas.addEventListener('change', ajustarFaq);
+    else if (duasColunas.addListener) duasColunas.addListener(ajustarFaq);
+
+    verMais.addEventListener('click', function () {
+      todas = !todas;
+      verMais.setAttribute('aria-expanded', todas ? 'true' : 'false');
+      if (todas) {
+        var surgem = listaFaq.querySelectorAll(':scope > [hidden]');
+        cada(surgem, function (el, i) {
+          el.hidden = false;
+          el.style.setProperty('--sp-atraso', Math.min(i, 6) * 60 + 'ms');
+          el.classList.add('sp-faq--surge');
+          el.addEventListener('animationend', function () {
+            el.classList.remove('sp-faq--surge');
+            el.style.removeProperty('--sp-atraso');
+          }, { once: true });
+        });
+        if (rotuloMais) rotuloMais.textContent = 'Ver menos perguntas';
+        if (contaMais) contaMais.textContent = '';
+      } else {
+        cada(extras, function (el) { fecharItem(el); el.hidden = true; });
+        if (rotuloMais) rotuloMais.textContent = 'Ver mais perguntas';
+        ajustarFaq();
+        verMais.scrollIntoView({ block: 'center', behavior: menosMovimento.matches ? 'auto' : 'smooth' });
+      }
+    });
+  }
+
   /* 2. Botão flutuante ----------------------------------------------------- */
   var flutuante = document.querySelector('[data-flutuante]');
   var rodape = document.querySelector('footer');
