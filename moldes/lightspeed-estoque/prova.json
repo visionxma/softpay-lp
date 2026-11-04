@@ -1,0 +1,562 @@
+{
+  "referencia": "https://www.lightspeedhq.com/pos/retail/inventory-management/",
+  "molde": "lightspeed-estoque",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/lightspeed-estoque",
+  "quando": "2026-11-04T03:52:31.153Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 18193,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero dividido: texto + foto em caixa arredondada",
+          "ref": {
+            "y": 115,
+            "altura": 814
+          },
+          "molde": {
+            "y": 0,
+            "altura": 814
+          },
+          "total": 0.0036,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 814
+        },
+        {
+          "secao": 1,
+          "tipo": "três cartões de número",
+          "ref": {
+            "y": 929,
+            "altura": 567
+          },
+          "molde": {
+            "y": 814,
+            "altura": 601
+          },
+          "total": 0.036,
+          "altura_dif": 0.06,
+          "passou": true,
+          "motivos": [],
+          "altura": 567
+        },
+        {
+          "secao": 2,
+          "tipo": "nove cartões com imagem larga, em três fileiras",
+          "ref": {
+            "y": 1495,
+            "altura": 2926
+          },
+          "molde": {
+            "y": 1415,
+            "altura": 2926
+          },
+          "total": 0.0371,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 2926
+        },
+        {
+          "secao": 3,
+          "tipo": "quatro cartões com imagem e botão central",
+          "ref": {
+            "y": 4421,
+            "altura": 1371
+          },
+          "molde": {
+            "y": 4341,
+            "altura": 1371
+          },
+          "total": 0.0374,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1371
+        },
+        {
+          "secao": 4,
+          "tipo": "meia largura com lista de checagem (imagem à direita)",
+          "ref": {
+            "y": 5792,
+            "altura": 1091
+          },
+          "molde": {
+            "y": 5711,
+            "altura": 1091
+          },
+          "total": 0.0303,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1091
+        },
+        {
+          "secao": 5,
+          "tipo": "meia largura com lista de checagem (imagem à esquerda)",
+          "ref": {
+            "y": 6883,
+            "altura": 1031
+          },
+          "molde": {
+            "y": 6802,
+            "altura": 1031
+          },
+          "total": 0.0342,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1031
+        },
+        {
+          "secao": 7,
+          "tipo": "meia largura com subtítulos em negrito (imagem à direita)",
+          "ref": {
+            "y": 8158,
+            "altura": 898
+          },
+          "molde": {
+            "y": 7832,
+            "altura": 898
+          },
+          "total": 0.0275,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 898
+        },
+        {
+          "secao": 8,
+          "tipo": "meia largura com lista de checagem (imagem à esquerda)",
+          "ref": {
+            "y": 9057,
+            "altura": 1106
+          },
+          "molde": {
+            "y": 8731,
+            "altura": 1106
+          },
+          "total": 0.0173,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1106
+        },
+        {
+          "secao": 9,
+          "tipo": "meia largura com lista de checagem (imagem à direita)",
+          "ref": {
+            "y": 10163,
+            "altura": 1111
+          },
+          "molde": {
+            "y": 9837,
+            "altura": 1111
+          },
+          "total": 0.0016,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1111
+        },
+        {
+          "secao": 10,
+          "tipo": "quatro passos com ícone",
+          "ref": {
+            "y": 11274,
+            "altura": 1129
+          },
+          "molde": {
+            "y": 10948,
+            "altura": 1129
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1129
+        },
+        {
+          "secao": 11,
+          "tipo": "meia largura com lista de checagem (imagem à esquerda)",
+          "ref": {
+            "y": 12403,
+            "altura": 1032
+          },
+          "molde": {
+            "y": 12077,
+            "altura": 1032
+          },
+          "total": 0.0311,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1032
+        },
+        {
+          "secao": 13,
+          "tipo": "meia largura com lista de checagem (imagem à direita)",
+          "ref": {
+            "y": 13668,
+            "altura": 952
+          },
+          "molde": {
+            "y": 13109,
+            "altura": 952
+          },
+          "total": 0.0371,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 952
+        },
+        {
+          "secao": 14,
+          "tipo": "carrossel de cartões com setas",
+          "ref": {
+            "y": 14620,
+            "altura": 681
+          },
+          "molde": {
+            "y": 14061,
+            "altura": 650
+          },
+          "total": 0.0221,
+          "altura_dif": 0.0455,
+          "passou": true,
+          "motivos": [],
+          "altura": 681
+        },
+        {
+          "secao": 15,
+          "tipo": "formulário de teste grátis",
+          "ref": {
+            "y": 15302,
+            "altura": 1131
+          },
+          "molde": {
+            "y": 14711,
+            "altura": 1131
+          },
+          "total": 0.0131,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1131
+        },
+        {
+          "secao": 16,
+          "tipo": "perguntas frequentes",
+          "ref": {
+            "y": 16433,
+            "altura": 2351
+          },
+          "molde": {
+            "y": 15842,
+            "altura": 2351
+          },
+          "total": 0.0025,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 2351
+        }
+      ],
+      "total": 0.022,
+      "pior": 0.0374,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 12004,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 0,
+          "tipo": "hero dividido: texto + foto em caixa arredondada",
+          "ref": {
+            "y": 120,
+            "altura": 601
+          },
+          "molde": {
+            "y": 0,
+            "altura": 601
+          },
+          "total": 0.0083,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 601
+        },
+        {
+          "secao": 1,
+          "tipo": "três cartões de número",
+          "ref": {
+            "y": 721,
+            "altura": 365
+          },
+          "molde": {
+            "y": 601,
+            "altura": 365
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 365
+        },
+        {
+          "secao": 2,
+          "tipo": "nove cartões com imagem larga, em três fileiras",
+          "ref": {
+            "y": 1086,
+            "altura": 1355
+          },
+          "molde": {
+            "y": 966,
+            "altura": 1355
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1355
+        },
+        {
+          "secao": 3,
+          "tipo": "quatro cartões com imagem e botão central",
+          "ref": {
+            "y": 2441,
+            "altura": 641
+          },
+          "molde": {
+            "y": 2321,
+            "altura": 641
+          },
+          "total": 0.0009,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 641
+        },
+        {
+          "secao": 4,
+          "tipo": "meia largura com lista de checagem (imagem à direita)",
+          "ref": {
+            "y": 3082,
+            "altura": 808
+          },
+          "molde": {
+            "y": 2962,
+            "altura": 808
+          },
+          "total": 0.0205,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 808
+        },
+        {
+          "secao": 5,
+          "tipo": "meia largura com lista de checagem (imagem à esquerda)",
+          "ref": {
+            "y": 3890,
+            "altura": 738
+          },
+          "molde": {
+            "y": 3770,
+            "altura": 738
+          },
+          "total": 0.0158,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 738
+        },
+        {
+          "secao": 7,
+          "tipo": "meia largura com subtítulos em negrito (imagem à direita)",
+          "ref": {
+            "y": 4840,
+            "altura": 732
+          },
+          "molde": {
+            "y": 4508,
+            "altura": 732
+          },
+          "total": 0.0154,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 732
+        },
+        {
+          "secao": 8,
+          "tipo": "meia largura com lista de checagem (imagem à esquerda)",
+          "ref": {
+            "y": 5572,
+            "altura": 809
+          },
+          "molde": {
+            "y": 5241,
+            "altura": 809
+          },
+          "total": 0.039,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 809
+        },
+        {
+          "secao": 9,
+          "tipo": "meia largura com lista de checagem (imagem à direita)",
+          "ref": {
+            "y": 6381,
+            "altura": 782
+          },
+          "molde": {
+            "y": 6049,
+            "altura": 782
+          },
+          "total": 0.0065,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 782
+        },
+        {
+          "secao": 10,
+          "tipo": "quatro passos com ícone",
+          "ref": {
+            "y": 7163,
+            "altura": 537
+          },
+          "molde": {
+            "y": 6832,
+            "altura": 537
+          },
+          "total": 0.0224,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 537
+        },
+        {
+          "secao": 11,
+          "tipo": "meia largura com lista de checagem (imagem à esquerda)",
+          "ref": {
+            "y": 7701,
+            "altura": 741
+          },
+          "molde": {
+            "y": 7369,
+            "altura": 741
+          },
+          "total": 0.02,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 741
+        },
+        {
+          "secao": 13,
+          "tipo": "meia largura com lista de checagem (imagem à direita)",
+          "ref": {
+            "y": 8728,
+            "altura": 713
+          },
+          "molde": {
+            "y": 8110,
+            "altura": 713
+          },
+          "total": 0.036,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 713
+        },
+        {
+          "secao": 14,
+          "tipo": "carrossel de cartões com setas",
+          "ref": {
+            "y": 9441,
+            "altura": 782
+          },
+          "molde": {
+            "y": 8822,
+            "altura": 760
+          },
+          "total": 0.0467,
+          "altura_dif": 0.0281,
+          "passou": true,
+          "motivos": [],
+          "altura": 782
+        },
+        {
+          "secao": 15,
+          "tipo": "formulário de teste grátis",
+          "ref": {
+            "y": 10223,
+            "altura": 1083
+          },
+          "molde": {
+            "y": 9583,
+            "altura": 1083
+          },
+          "total": 0.0115,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1083
+        },
+        {
+          "secao": 16,
+          "tipo": "perguntas frequentes",
+          "ref": {
+            "y": 11306,
+            "altura": 1339
+          },
+          "molde": {
+            "y": 10665,
+            "altura": 1339
+          },
+          "total": 0.0206,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1339
+        }
+      ],
+      "total": 0.0175,
+      "pior": 0.0467,
+      "passou": true
+    }
+  },
+  "omitidas": [
+    {
+      "secao": 6,
+      "tipo": "faixa de selos de avaliação",
+      "motivo": "selos de avaliação de sites de terceiros (G2, Capterra) dados à Lightspeed; o SoftPay não tem nota equivalente publicada e nota não se inventa"
+    },
+    {
+      "secao": 12,
+      "tipo": "logos de clientes",
+      "motivo": "logos de lojas reais clientes da Lightspeed; nada de cliente inventado"
+    },
+    {
+      "secao": 17,
+      "tipo": "notas legais",
+      "motivo": "avisos legais da Lightspeed (marca registrada, GTV, Insights); o conteúdo da rota não tem nota de rodapé"
+    },
+    {
+      "secao": 18,
+      "tipo": "notas de rodapé dos números",
+      "motivo": "fontes dos números da Lightspeed (relatório anual e trimestral); os números saíram com a seção 1 trocada pelos planos"
+    }
+  ],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}

@@ -1,0 +1,25 @@
+/* paleta e fontes da FONTE do molde, geradas por vestir-css.mjs: só para a prova contra a captura */
+.mx-pagina .mx-lightspeed-estoque {
+  --m-fundo: #ffffff;
+  --m-fundo-2: #f0f0f0;
+  --m-superficie: #e9e3e0;
+  --m-borda: #dddddd;
+  --m-texto: #000000;
+  --m-texto-suave: #555555;
+  --m-texto-fraco: #757575;
+  --m-primaria: #e81c1c;
+  --m-primaria-2: #c7141f;
+  --m-sobre-primaria: #ffffff;
+  --m-alta: #0ead30;
+  --m-baixa: #ea891e;
+  --m-inv-fundo: #191513;
+  --m-inv-texto: #ffffff;
+  --m-f-titulo: "lsMedium","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --m-f-corpo: "lsRegular","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/* a prova renderiza só o modo origem: nada do acabamento do produto muda a letra ou a cor dela */
+@media (min-width: 960px) { .mx-pagina .mx-lightspeed-estoque [data-element-reset-height] { min-height: var(--lv-minh, 0); } }
+@media (max-width: 767.98px) { .mx-pagina .mx-lightspeed-estoque .swiper-slide { width: 267px !important; margin-right: 16px !important; } }
+.mx-pagina .mx-lightspeed-estoque { overflow-x: clip; }
+.mx-pagina .mx-lightspeed-estoque .gb-recaptcha:empty::before { content: ""; display: block; height: 78px; }
