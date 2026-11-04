@@ -1,0 +1,209 @@
+{
+ "artigo": true,
+ "slug": "blog/troca-e-devolucao-na-loja",
+ "title": "Troca e Devolução na Loja: Regras e Como Organizar | SoftPay",
+ "description": "O que o Código de Defesa do Consumidor obriga, o que é política da loja, e como organizar trocas sem prejuízo. Com as regras de arrependimento e vício.",
+ "h1": "Troca e devolução na loja",
+ "intro": "Boa parte dos conflitos de troca vem de uma confusão simples: lojista e cliente acham que a lei diz coisas que ela não diz. Esta página separa o que é obrigação legal do que é política da loja — e como organizar isso sem perder dinheiro.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   "/blog/"
+  ],
+  [
+   "Troca e devolução",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Sou obrigado a trocar produto sem defeito?",
+   "Na loja física, não. O direito de arrependimento em 7 dias previsto no Código de Defesa do Consumidor vale para compras feitas fora do estabelecimento, como internet e telefone. Na loja física, sem defeito, a troca é política da loja — mas esta página não é orientação jurídica: confirme com o Procon do seu estado."
+  ],
+  [
+   "E se o produto tiver defeito?",
+   "Aí há obrigação legal prevista no Código de Defesa do Consumidor, com prazos definidos para o fornecedor sanar o vício. Consulte o CDC ou um advogado para o seu caso específico."
+  ],
+  [
+   "Posso dar crédito na loja em vez de devolver dinheiro?",
+   "Em troca por cortesia, sim: a política é sua e o crédito costuma ser melhor para o caixa. Em caso de defeito, as regras do CDC se aplicam."
+  ],
+  [
+   "Preciso de nota fiscal para aceitar a troca?",
+   "É a sua política que decide. Se você registra as vendas com o cliente cadastrado no sistema, o histórico funciona como comprovante mesmo sem a nota em mãos."
+  ],
+  [
+   "O produto devolvido volta para o estoque?",
+   "Se estiver em condição de venda, sim, e precisa ser registrado. Se voltou com defeito, não volta ao estoque: vira perda ou devolução ao fornecedor, e também precisa ser registrado como tal."
+  ],
+  [
+   "O SoftPay registra trocas?",
+   "O registro de troca com controle de crédito do cliente é um ponto a confirmar com o suporte antes de contratar."
+  ]
+ ],
+ "cta_title": "Mantenha o estoque certo depois da troca",
+ "cta_text": "Venda registrada e cliente cadastrado fazem a troca deixar de bagunçar o estoque. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Histórico como comprovante"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "Entradas e saídas"
+  ],
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "Onde a troca é rotina"
+  ],
+  [
+   "Loja de calçados",
+   "/segmentos/loja-de-calcados/",
+   "Troca de numeração"
+  ],
+  [
+   "Produtos parados",
+   "/blog/produtos-parados-no-estoque/",
+   "O que volta e não sai"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Registro da venda"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-que-a-lei-obriga-e-o-que-nao-obriga",
+   "titulo": "O que a lei obriga e o que não obriga",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A confusão mais comum: <strong>a loja física não é obrigada a trocar produto por arrependimento</strong> — quando o cliente simplesmente mudou de ideia, sem defeito algum. Muita gente acha que é."
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Situação",
+      "Obrigação"
+     ],
+     "linhas": [
+      [
+       "Produto com defeito (vício)",
+       "A lei obriga a solução — o Código de Defesa do Consumidor prevê prazo para o fornecedor sanar o problema"
+      ],
+      [
+       "Compra fora do estabelecimento (internet, telefone)",
+       "Direito de arrependimento em 7 dias, previsto no CDC"
+      ],
+      [
+       "Compra na loja física, sem defeito",
+       "<strong>Não há obrigação legal</strong> — a troca é política da loja"
+      ]
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Importante",
+     "texto": "Esta página é orientação de rotina, <strong>não é orientação jurídica</strong>. As regras exatas, prazos e exceções estão no Código de Defesa do Consumidor (Lei nº 8.078/1990) e a aplicação ao seu caso deve ser confirmada com um advogado ou com o Procon do seu estado."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "por-que-ter-politica-de-troca-mesmo-sem-obrigacao",
+   "titulo": "Por que ter política de troca mesmo sem obrigação",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A maioria das lojas troca por cortesia mesmo sem ser obrigada. E faz sentido: a troca costuma custar menos que o cliente perdido, e quem volta para trocar frequentemente sai com outra compra."
+    },
+    {
+     "tipo": "p",
+     "texto": "O problema não é trocar — é <strong>trocar sem regra</strong>. Sem política escrita, cada atendente decide de um jeito, o cliente insistente consegue mais que o educado, e a loja perde dinheiro sem saber quanto."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-a-sua-politica-precisa-dizer",
+   "titulo": "O que a sua política precisa dizer",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Prazo.</strong> Sete, quinze, trinta dias — o número importa menos que ele existir e ser o mesmo para todos.",
+      "<strong>Condição do produto.</strong> Com etiqueta, sem uso, na embalagem original.",
+      "<strong>O que comprova a compra.</strong> Nota, cupom ou registro no sistema.",
+      "<strong>O que não troca.</strong> Íntimos, cosméticos abertos, produto de mostruário, item em liquidação — se for a sua regra, escreva.",
+      "<strong>Como devolve.</strong> Outro produto, crédito na loja ou dinheiro. Crédito costuma ser melhor para o caixa que devolução em dinheiro.",
+      "<strong>Onde isso fica visível.</strong> No balcão, no cupom, no site. Regra que o cliente só descobre na hora do conflito não protege ninguém."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-registrar-a-troca-sem-baguncar-o-estoque",
+   "titulo": "Como registrar a troca sem bagunçar o estoque",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "É aqui que a troca vira problema de gestão, e não de atendimento:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O produto que volta precisa voltar ao estoque</strong> — se estiver em condição de venda. Troca não registrada é estoque errado no dia seguinte.",
+      "<strong>O produto que sai precisa dar baixa.</strong> Parece óbvio, e é o passo mais esquecido no meio do atendimento.",
+      "<strong>A diferença de valor precisa ir para o caixa.</strong> Se o cliente leva algo mais caro e paga a diferença, essa entrada é uma venda.",
+      "<strong>Produto devolvido com defeito não volta ao estoque.</strong> Ele vira perda ou devolução ao fornecedor — e precisa estar registrado como tal, senão o seu estoque diz que você tem algo que não pode vender."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que confirmar antes de contratar",
+     "texto": "Sendo transparente: <strong>o registro de troca com controle de crédito do cliente não é um recurso confirmado do SoftPay.</strong> Confirme com o suporte como fazer isso antes de contratar contando com esse fluxo."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "tres-situacoes-que-mais-geram-atrito",
+   "titulo": "Três situações que mais geram atrito",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "O cliente sem nota"
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você tem o registro da venda no sistema, com cliente cadastrado, a nota deixa de ser o único comprovante. É um dos benefícios menos falados de registrar as vendas com cliente."
+    },
+    {
+     "tipo": "h3",
+     "texto": "O produto em promoção"
+    },
+    {
+     "tipo": "p",
+     "texto": "Se item de liquidação não troca, isso precisa estar escrito <strong>e</strong> ser dito na hora da venda. Descobrir na troca é o caminho mais curto para uma reclamação pública."
+    },
+    {
+     "tipo": "h3",
+     "texto": "A troca fora do prazo"
+    },
+    {
+     "tipo": "p",
+     "texto": "Aqui a política existe justamente para você poder dizer não sem parecer arbitrário. E poder abrir exceção quando quiser, sabendo que é exceção."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

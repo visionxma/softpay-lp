@@ -1,0 +1,132 @@
+{
+  "_fonte": "https://herosistemas.com.br/, textos lidos do HTML capturado em 03/11/2026 (pagina.html da captura) e conferidos na foto de 1440",
+  "hero": {
+    "h1Azul": "Sistema para delivery de bebidas",
+    "h1Resto": " com pedidos, estoque e caixa integrados",
+    "intro": "Centralize sua operação no <strong>Zé Delivery, iFood Bebidas, 99Food e AnotaAI em uma plataforma.</strong> Sem perder vendas, sem perda de estoque, com controle do lucro do dia",
+    "checks": [
+      "Integração com os principais canais de vendas",
+      "Controle de estoque em tempo real",
+      "Gestão de cascos, entregadores e caixa",
+      "Emissão fiscal integrada (NFC-e, NF-e e NFS-e)",
+      "Cardápio digital próprio"
+    ],
+    "prova": "Mais de 300 deliveries já usam a Hero no Brasil"
+  },
+  "form": {
+    "tituloA": "Veja como a Hero pode ",
+    "tituloAzul": "funcionar no seu delivery",
+    "texto": "Sem compromisso. Um consultor entra em contato para entender sua operação.",
+    "campos": ["Nome", "Nome do seu delivery", "WhatsApp com DDD", "E-mail"],
+    "botao": "Agendar demonstração →",
+    "aviso": "Usaremos seus dados para responder ao seu pedido e organizar o atendimento. Consulte a Política de Privacidade."
+  },
+  "integracoes": {
+    "titulo": "Integrado com as principais plataformas de delivery de bebidas"
+  },
+  "diferenciais": {
+    "titulo": "Diferenciais da Hero Sistemas",
+    "itens": [
+      "Pedidos do <strong>Zé Delivery e iFood Bebidas</strong> direto no sistema",
+      "<strong>Estoque 100% integrado</strong> e preços sempre atualizados em tempo real",
+      "<strong>Zero retrabalho:</strong> nada de ficar digitando manualmente",
+      "<strong>Menos erros, mais agilidade</strong> nas entregas",
+      "<strong>Performance estável</strong> mesmo em alto volume de pedidos"
+    ],
+    "botao": "Quero ver como funciona na prática",
+    "fundo": "HERO"
+  },
+  "situacoes": {
+    "tituloA": "Você já passou por ",
+    "tituloAzul": "alguma dessas situações?",
+    "botao": "Quero saber mais!",
+    "itens": [
+      ["Pedido chegou no Zé Delivery e você ficou sabendo só depois", "O estoque já não batia e a conferência virou rotina manual toda noite."],
+      ["Perdeu casco e não sabe por quê", "O controle em papel ou planilha falha toda semana. Cliente devolveu? Não anotou. Prejuízo garantido."],
+      ["Entregador saiu, voltou, e você não tem certeza do que entregou", "Sem controle de rota e devolução, cada entrega é uma aposta."],
+      ["Fechou o dia sem saber se teve lucro ou prejuízo", "As vendas aconteceram, mas o caixa não fecha. Você não consegue ver onde o dinheiro foi."],
+      ["Pedidos chegando por vários canais ao mesmo tempo", "Zé Delivery, iFood, WhatsApp — você perdeu pedido no meio da correria e o cliente reclamou."],
+      ["Emitir nota fiscal ainda é um processo separado", "Sai do sistema de pedidos, abre outro programa, digita tudo de novo. Tempo perdido todo dia."]
+    ]
+  },
+  "solucoes": {
+    "pilula": "SOlUÇÕES",
+    "tituloA": "O que a Hero ",
+    "tituloAzul": "resolve na sua operação",
+    "itens": [
+      ["Integração em tempo real com todos os canais", "Zé Delivery, iFood Bebidas, 99Food e AnotaAI em um só painel. Cada pedido que entra já aparece na tela e já baixa do estoque automaticamente."],
+      ["Controle de cascos atualizado a cada entrega", "Saída e devolução de casco registradas por cliente. Você sabe exatamente onde está cada vasilhame — sem planilha, sem papel."],
+      ["Gestão completa de entregadores", "Rota atribuída, entregas realizadas e devoluções registradas em tempo real. Você acompanha tudo do painel sem precisar ligar para ninguém."],
+      ["Caixa do dia integrado à operação", "Todas as entradas e saídas consolidadas automaticamente. Relatório do dia pronto ao fechar, sem precisar somar nada na mão."],
+      ["Um único painel para todos os pedidos", "Chega pelo Zé Delivery, iFood ou AnotaAI — aparece no mesmo lugar. Sem trocar de tela, sem perder pedido."],
+      ["Emissão fiscal dentro do próprio sistema", "NFC-e, NF-e e NFS-e emitidos diretamente pelo sistema Hero, sem abrir outro programa. Um clique e a nota está emitida."]
+    ]
+  },
+  "depoimentos": {
+    "pilula": "DEPOIMENTOS",
+    "tituloA": "O que os ",
+    "tituloAzul": "clientes da Hero",
+    "tituloB": " dizem",
+    "itens": [
+      ["Mizael", "São Paulo - SP"],
+      ["Francisco", "Fortaleza - CE"],
+      ["Leo", "Florianópolis - SC"],
+      ["Felipe", "Brasília - DF"],
+      ["Bianca", "Palmas - TO"],
+      ["Renan", "Goiânia - GO"]
+    ]
+  },
+  "app": {
+    "pilula": "APP HERO ADMIN",
+    "tituloA": "Conte o estoque pelo celular.",
+    "tituloB": "Sincronize com a Hero.",
+    "texto": "Transforme o próprio telefone em um leitor de código de barras e faça inventários com mais agilidade, precisão e controle.",
+    "pilulas": ["Leitura pela câmera", "Contagem em tempo real", "Sincronização com o ERP Hero"],
+    "nota": "Disponível para clientes Hero Sistemas."
+  },
+  "planos": {
+    "pilula": "PLANOS",
+    "tituloA": "Escolha o plano para o ",
+    "tituloAzul": "seu negócio",
+    "selo": "Mais popular",
+    "botao": "Quero este plano!",
+    "desconto": "15% de desconto no plano anual à vista",
+    "recursos": [
+      "Gestão de Produtos e Estoque", "Gestão de Clientes", "Sistema de Pedidos PDV", "Relatórios de Vendas", "Pedido consignado",
+      "Pedido agendado", "Sugestão de compra", "Varejo/dose", "Notificações de validade", "Alerta de conta recorrente",
+      "Integração Zé Delivery", "Desativar Produtos na Hero Desativa no Zé", "Controle de cascos", "Desempenho de entregadores",
+      "Integração com iFood Bebidas", "Auditoria de iFood", "Contas a Pagar", "Contas a Receber", "Módulo fiscal (NFC-e, NF-e e NFS-e)",
+      "Cardápio Digital Hero", "Nuvem de Documentos Fiscais"
+    ],
+    "itens": [
+      { "nome": "Essencial (balcão)", "preco": "R$187,90", "ciclo": "/mês", "inclui": 10 },
+      { "nome": "Profissional", "preco": "R$287,90", "ciclo": "/mês", "inclui": 14 },
+      { "nome": "Premium", "preco": "R$367,90", "ciclo": "/mês", "inclui": 21, "destaque": true }
+    ]
+  },
+  "faq": {
+    "pilula": "FAQ",
+    "titulo": "Dúvidas frequentes",
+    "itens": [
+      ["Como funciona a integração com o Zé Delivery?", "Os pedidos do Zé Delivery caem sozinhos no PDV da Hero, sem digitar nada."],
+      ["A Hero integra com iFood, 99Food e Anota Aí?", "Sim. Os pedidos do iFood, do 99Food e do Anota Aí chegam ao mesmo PDV do balcão e baixam o mesmo estoque."],
+      ["O sistema emite nota fiscal?", "Sim. Com o módulo fiscal ativo, a Hero emite NFC-e na venda ao consumidor e NF-e para empresa."],
+      ["Quanto custa?", "Os planos começam em R$ 187,90 por mês, com 15% de desconto no plano anual à vista."],
+      ["Funciona no celular?", "O PDV roda no navegador do computador e pode ser instalado como aplicativo."],
+      ["E se a internet cair?", "O PDV continua vendendo no balcão e envia os pedidos quando a internet volta."],
+      ["Tem maquininha de cartão integrada (TEF) e Pix?", "Sim, a Hero tem TEF integrado com parceiros e Pix integrado no PDV."],
+      ["Consigo controlar os cascos pelo sistema?", "Sim. Na venda você informa quantos cascos o cliente trouxe e o sistema cobra só a diferença."],
+      ["Como funciona o controle de entregadores?", "Na expedição você atribui cada pedido a um entregador e, na volta, confirma a entrega e os cascos."],
+      ["Tenho cardápio digital próprio? Paga comissão?", "Sim. Sua loja ganha um cardápio digital com endereço próprio, sem comissão por pedido."],
+      ["Quanto tempo leva para começar a usar o sistema?", "Em poucos dias sua equipe já consegue usar o sistema com segurança."],
+      ["Como passo meus produtos para a Hero?", "Na implantação, nossa equipe ajuda a importar a sua lista de produtos por planilha."],
+      ["O sistema funciona para delivery de bebidas pequeno?", "Sim. A Hero atende desde deliveries com poucos pedidos por dia até operações maiores."],
+      ["E se minha equipe não souber usar tecnologia?", "Não tem problema. O sistema foi feito para ser fácil de usar."],
+      ["Como funciona o suporte?", "Sua loja tem um grupo de WhatsApp exclusivo com a nossa equipe."]
+    ]
+  },
+  "consultor": {
+    "titulo": "Ainda tem dúvida? Fale com um consultor agora",
+    "texto": "Nosso time conhece a fundo a operação de delivery de bebidas e vai entender o que você precisa antes de qualquer apresentação."
+  }
+}

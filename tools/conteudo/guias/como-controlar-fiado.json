@@ -1,0 +1,213 @@
+{
+ "artigo": true,
+ "slug": "guias/como-controlar-fiado",
+ "passos": [
+  [
+   "Decida a quem você vende fiado",
+   "Defina um critério e aplique igual para todos.",
+   "passo-1-decida-a-quem-voce-vende-fiado"
+  ],
+  [
+   "Combine prazo antes, não depois",
+   "Um prazo combinado na venda transforma a cobrança em lembrete, não em conflito.",
+   "passo-2-combine-prazo-antes-nao-depois"
+  ],
+  [
+   "Registre no nome do cliente",
+   "Cada venda fiada ligada a um cadastro, com data, valor e produtos.",
+   "passo-3-registre-no-nome-do-cliente"
+  ],
+  [
+   "Olhe o total, não os nomes",
+   "A pergunta que muda a gestão é quanto a loja tem a receber no conjunto.",
+   "passo-4-olhe-o-total-nao-os-nomes"
+  ],
+  [
+   "Cobre sem constrangimento",
+   "Uma mensagem com link de pagamento chega na hora certa sem transformar o balcão em conversa difícil.",
+   "passo-5-cobre-sem-constrangimento"
+  ]
+ ],
+ "figura": [
+  "/assets/lojistas/casal-comerciantes.webp",
+  "Comerciantes conferindo o que os clientes ainda têm a pagar"
+ ],
+ "title": "Como Controlar Vendas Fiadas na Loja | SoftPay",
+ "description": "Como organizar o fiado da sua loja: registro por cliente, limite, prazo, cobrança sem constrangimento e como sair do caderno. Guia prático.",
+ "h1": "Como controlar vendas fiadas",
+ "intro": "Resposta curta: registre cada venda fiada no nome do cliente, com data e valor, e combine prazo antes de vender. O caderno não é o problema por ser papel — é por não ter total.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como controlar fiado",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Devo parar de vender fiado?",
+   "Não necessariamente. No comércio de bairro o fiado sustenta a fidelidade do cliente. O que precisa mudar é o controle: critério para conceder, prazo combinado e registro por cliente."
+  ],
+  [
+   "Como cobrar sem perder o cliente?",
+   "Cobrança impessoal funciona melhor: uma mensagem com link de pagamento chega na hora certa sem transformar o balcão em conversa constrangedora."
+  ],
+  [
+   "Dá para definir limite por cliente?",
+   "Como prática de gestão, sim, e é recomendável. Sobre o limite automático dentro do SoftPay, confirme com o suporte antes de contratar."
+  ],
+  [
+   "A venda fiada baixa o estoque?",
+   "Sim. É uma venda como qualquer outra: a mercadoria sai e o valor fica registrado como a receber."
+  ],
+  [
+   "Como levo o caderno para o sistema?",
+   "Some o saldo de cada cliente, cadastre essas pessoas e lance os saldos como vendas fiadas. Depois disso, toda venda nova entra direto pelo sistema."
+  ]
+ ],
+ "cta_title": "Descubra quanto sua loja tem a receber",
+ "cta_text": "Cadastre os clientes com saldo em aberto e veja o total do fiado da sua loja em um número só.",
+ "related": [
+  [
+   "Aplicativo para controlar fiado",
+   "/solucoes/controle-de-fiado/",
+   "Como funciona no SoftPay"
+  ],
+  [
+   "Mercadinho",
+   "/segmentos/mercadinho/",
+   "O fiado do bairro"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "Migração completa"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "por-que-o-fiado-some",
+   "titulo": "Por que o fiado some",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O dinheiro fiado é o mais fácil de perder porque ele não dói na hora. A mercadoria sai, a venda parece feita e o buraco só aparece quando falta dinheiro para repor o estoque."
+    },
+    {
+     "tipo": "p",
+     "texto": "No caderno, três coisas conspiram contra você: não existe um total visível de quanto a loja tem a receber, a anotação depende de quem estava no balcão, e quando o cliente contesta não há histórico para mostrar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-1-decida-a-quem-voce-vende-fiado",
+   "titulo": "Passo 1 — Decida a quem você vende fiado",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Fiado para todo mundo não é política, é ausência de política. Defina um critério — cliente conhecido, tempo de relacionamento, valor máximo — e aplique igual para todos. Isso evita a conversa difícil caso a caso."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-2-combine-prazo-antes-nao-depois",
+   "titulo": "Passo 2 — Combine prazo antes, não depois",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "“Me paga quando puder” é a origem da maioria das dívidas que nunca são pagas. Um prazo combinado no momento da venda transforma a cobrança em lembrete, não em conflito."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-3-registre-no-nome-do-cliente",
+   "titulo": "Passo 3 — Registre no nome do cliente",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Cada venda fiada precisa ficar ligada a um cadastro, com data, valor e os produtos. Assim, quando o cliente perguntar quanto deve, a resposta é uma lista, não uma afirmação."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-4-olhe-o-total-nao-os-nomes",
+   "titulo": "Passo 4 — Olhe o total, não os nomes",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A pergunta que muda a gestão não é “quem me deve”, é “quanto a loja tem a receber”. Esse total costuma surpreender:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Fiado em aberto de uma loja",
+     "rodape": "Números fictícios. Para muita loja pequena, o fiado em aberto é maior que o saldo em conta corrente.",
+     "linhas": [
+      {
+       "rotulo": "18 clientes com saldo em aberto",
+       "valor": "R$ 4.380,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Desses, vencidos há mais de 30 dias",
+       "valor": "R$ 1.910,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "= Dinheiro fora do caixa",
+       "valor": "R$ 4.380,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-5-cobre-sem-constrangimento",
+   "titulo": "Passo 5 — Cobre sem constrangimento",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A cobrança pessoal no balcão é o que mais trava o lojista, porque mistura relação e dinheiro. Uma mensagem com link de pagamento resolve o problema: é impessoal, chega na hora certa e o cliente paga sem precisar voltar à loja."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Como isso funciona no SoftPay",
+     "texto": "No SoftPay, o <a href=\"/solucoes/controle-de-fiado/\">aplicativo para controlar fiado</a> já vem no plano Comércio. A partir do plano Loja, o sistema envia cobrança por link de Pix pelo WhatsApp."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-passar-o-caderno-atual-para-o-sistema",
+   "titulo": "Como passar o caderno atual para o sistema",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "Some o saldo em aberto de cada cliente do caderno.",
+      "Cadastre os clientes que têm dívida.",
+      "Lance o saldo de cada um como venda fiada, com a data aproximada.",
+      "A partir dali, toda venda fiada nova entra direto pelo sistema.",
+      "Guarde o caderno antigo por um tempo, até a conferência estar redonda."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

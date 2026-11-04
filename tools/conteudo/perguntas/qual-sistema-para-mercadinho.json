@@ -1,0 +1,114 @@
+{
+ "slug": "perguntas/qual-sistema-para-mercadinho",
+ "title": "Qual Sistema Usar em um Mercadinho? | SoftPay",
+ "description": "O que avaliar ao escolher um sistema para mercadinho: velocidade no PDV, estoque de muitos itens, fiado e fechamento de caixa. Critérios práticos.",
+ "h1": "Qual sistema usar em um mercadinho?",
+ "intro": "Mercadinho tem exigências próprias: muitos itens, margem apertada, venda rápida e fiado. Nem todo sistema de gestão foi pensado para esse conjunto.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Qual sistema para mercadinho",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual plano do SoftPay serve para mercadinho?",
+   "O Comércio, de R$ 69/mês, cobre PDV, caixa, fiado e estoque essencial com 1 usuário — o perfil mais comum de mercadinho de bairro."
+  ],
+  [
+   "Preciso de sistema com emissão de nota?",
+   "Depende do seu regime tributário e do perfil de venda. Consulte seu contador; se precisar emitir, o plano é o ERP Completo."
+  ],
+  [
+   "Funciona com leitor de código de barras?",
+   "O campo de busca do PDV aceita a leitura do código. Confirme a compatibilidade do seu leitor com o suporte."
+  ],
+  [
+   "Quantos produtos consigo cadastrar?",
+   "O cadastro atende a operação de um mercadinho. Se o seu catálogo for muito grande, confirme com o suporte antes de contratar."
+  ],
+  [
+   "Dá para testar antes?",
+   "Sim, 7 dias sem cartão de crédito. Teste com os seus produtos e no seu horário de movimento."
+  ]
+ ],
+ "related": [
+  [
+   "Sistema para mercadinho",
+   "/segmentos/mercadinho/",
+   "A página do segmento"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Venda no balcão"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "Fiado do bairro"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Priorize quatro coisas: <strong>PDV rápido</strong>, <strong>estoque que suporte muitos itens</strong>, <strong>controle de fiado</strong> e <strong>fechamento de caixa diário</strong>. Sem esses quatro, o resto não compensa.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "os-criterios-que-importam-nesse-segmento",
+   "titulo": "Os critérios que importam nesse segmento",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Velocidade no balcão.</strong> Em horário de pico, cada segundo a mais na venda vira fila.",
+      "<strong>Baixa automática de estoque.</strong> Com centenas de itens, controle manual não sobrevive a uma semana.",
+      "<strong>Custo por produto.</strong> Margem de mercadinho é apertada; sem custo, não há como saber o que dá resultado.",
+      "<strong>Fiado por cliente.</strong> É parte do negócio no comércio de bairro.",
+      "<strong>Fechamento de caixa.</strong> Diferença precisa aparecer no mesmo dia.",
+      "<strong>Uso no celular.</strong> Para conferir preço e estoque durante a reposição."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-costuma-ser-superfluo-no-comeco",
+   "titulo": "O que costuma ser supérfluo no começo",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Muito sistema vendido para varejo traz módulos que um mercadinho de bairro não usa: gestão de produção, ordem de serviço, comissão de vendedor, integração com marketplace. Pagar por isso não melhora a sua operação — e complica o aprendizado."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-se-encaixa",
+   "titulo": "Como o SoftPay se encaixa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O plano <strong>Comércio</strong> (R$ 69/mês) cobre os quatro critérios essenciais: PDV/caixa completo, caderninho de fiado, estoque essencial e notas recebidas, com 1 usuário — que é o perfil da maioria dos mercadinhos de bairro."
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você quiser cobrança automática do fiado por link de Pix e estoque avançado com custo e curva ABC, o plano <strong>Loja</strong> (R$ 89/mês) adiciona isso. Emissão de nota fiscal só no <strong>ERP Completo</strong> (R$ 109/mês)."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O melhor critério é o teste",
+     "texto": "Não decida por lista de funcionalidades. Teste com os seus próprios produtos, no seu horário de pico. É a única forma de saber se o PDV aguenta a sua rotina."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

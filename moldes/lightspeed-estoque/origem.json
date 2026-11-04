@@ -1,0 +1,661 @@
+{
+ "hero": {
+  "pre": "Retail inventory management software",
+  "titulo": "POS inventory system: Master your stock from suppliers to sales",
+  "intro": "Track stock, manage suppliers and sell across all channels with Lightspeed’s in-built inventory management software, designed for growing, multi-location retailers.",
+  "botoes": [
+   {
+    "texto": "Try it free",
+    "href": "https://www.lightspeedhq.com/pos/retail/inventory-management-software/#lightbox|retail-free-trial-wizard-lightbox"
+   },
+   {
+    "texto": "Talk to an expert",
+    "href": "https://www.lightspeedhq.com/pos/retail/inventory-management-software/#lightbox|retail-talk-expert-wizard-lightbox"
+   }
+  ],
+  "img": {
+   "src": "https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en.webp",
+   "srcset": "https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en-435x327.webp 435w, https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en-869x652.webp 869w, https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en-870x653.webp 870w, https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en-1303x978.webp 1303w, https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en-1520x1141.webp 1520w, https://assets.lightspeedhq.com/img/b435bd85-retail_inventory_hero-united_new-en.webp 1725w",
+   "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+   "w": 1520,
+   "h": 1141,
+   "alt": ""
+  }
+ },
+ "numeros": [
+  {
+   "valor": "$98.1B",
+   "texto": "Processed in GTV through Lightspeed’s platform in fiscal 2026 *",
+   "minh": "51"
+  },
+  {
+   "valor": "~146K",
+   "texto": "~146K locations around the world trust Lightspeed **",
+   "minh": "51"
+  },
+  {
+   "valor": "20",
+   "texto": "Years of industry expertise",
+   "minh": "51"
+  }
+ ],
+ "grade2": {
+  "titulo": "Manage stock seamlessly with one POS inventory system",
+  "subtitulo": "Lightspeed Retail brings advanced inventory control, built-in wholesale ordering and mobile tools together in a single platform—helping multi-location retailers scale without the complexity of an ERP.",
+  "linhas": [
+   [
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/fe821768-multiple_blocks_display_module_retail_1_1x.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/fe821768-multiple_blocks_display_module_retail_1_1x-435x180.webp 435w, https://assets.lightspeedhq.com/img/fe821768-multiple_blocks_display_module_retail_1_1x-869x360.webp 869w, https://assets.lightspeedhq.com/img/fe821768-multiple_blocks_display_module_retail_1_1x-870x361.webp 870w, https://assets.lightspeedhq.com/img/fe821768-multiple_blocks_display_module_retail_1_1x-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/fe821768-multiple_blocks_display_module_retail_1_1x.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Connect with suppliers",
+     "texto": "Browse and buy instantly from the built-in NuORDER Catalog.",
+     "minh": "144"
+    },
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/30c31209-multiple_blocks_display_module_retail_3_1x.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/30c31209-multiple_blocks_display_module_retail_3_1x-435x180.webp 435w, https://assets.lightspeedhq.com/img/30c31209-multiple_blocks_display_module_retail_3_1x-869x360.webp 869w, https://assets.lightspeedhq.com/img/30c31209-multiple_blocks_display_module_retail_3_1x-870x361.webp 870w, https://assets.lightspeedhq.com/img/30c31209-multiple_blocks_display_module_retail_3_1x-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/30c31209-multiple_blocks_display_module_retail_3_1x.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Track inventory across channels",
+     "texto": "Keep stock levels consistent across stores, online, social media, and marketplaces.",
+     "minh": "144"
+    },
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/7fe19607-t45594_multiple_blocks_display_module-retail_3.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/7fe19607-t45594_multiple_blocks_display_module-retail_3-435x180.webp 435w, https://assets.lightspeedhq.com/img/7fe19607-t45594_multiple_blocks_display_module-retail_3-869x360.webp 869w, https://assets.lightspeedhq.com/img/7fe19607-t45594_multiple_blocks_display_module-retail_3-870x361.webp 870w, https://assets.lightspeedhq.com/img/7fe19607-t45594_multiple_blocks_display_module-retail_3-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/7fe19607-t45594_multiple_blocks_display_module-retail_3.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Enter it once, not twice",
+     "texto": "Stock levels and costs update automatically when you receive stock.",
+     "minh": "144"
+    }
+   ],
+   [
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/071a9527-t45594_multiple_blocks_display_module-retail_5.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/071a9527-t45594_multiple_blocks_display_module-retail_5-435x180.webp 435w, https://assets.lightspeedhq.com/img/071a9527-t45594_multiple_blocks_display_module-retail_5-869x360.webp 869w, https://assets.lightspeedhq.com/img/071a9527-t45594_multiple_blocks_display_module-retail_5-870x361.webp 870w, https://assets.lightspeedhq.com/img/071a9527-t45594_multiple_blocks_display_module-retail_5-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/071a9527-t45594_multiple_blocks_display_module-retail_5.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Know your true costs",
+     "texto": "See margins and COGS based on latest pricing and landed costs.",
+     "minh": "172"
+    },
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/c05ff52c-t45594_multiple_blocks_display_module-retail_4.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/c05ff52c-t45594_multiple_blocks_display_module-retail_4-435x180.webp 435w, https://assets.lightspeedhq.com/img/c05ff52c-t45594_multiple_blocks_display_module-retail_4-869x360.webp 869w, https://assets.lightspeedhq.com/img/c05ff52c-t45594_multiple_blocks_display_module-retail_4-870x361.webp 870w, https://assets.lightspeedhq.com/img/c05ff52c-t45594_multiple_blocks_display_module-retail_4-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/c05ff52c-t45594_multiple_blocks_display_module-retail_4.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Take the guesswork out of restocking",
+     "texto": "Easily set reorder points or ideal minimum/maximum stock levels across core products.",
+     "minh": "172"
+    },
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/0a879f5a-multiple_blocks_display_module_retail_5.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/0a879f5a-multiple_blocks_display_module_retail_5-435x180.webp 435w, https://assets.lightspeedhq.com/img/0a879f5a-multiple_blocks_display_module_retail_5-869x360.webp 869w, https://assets.lightspeedhq.com/img/0a879f5a-multiple_blocks_display_module_retail_5-870x361.webp 870w, https://assets.lightspeedhq.com/img/0a879f5a-multiple_blocks_display_module_retail_5-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/0a879f5a-multiple_blocks_display_module_retail_5.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Simplify stock counts",
+     "texto": "Cut shrinkage with fast, mobile-friendly inventory counts.",
+     "minh": "172"
+    }
+   ],
+   [
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/b34b3161-multiple_blocks_display_module_retail_5_1x.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/b34b3161-multiple_blocks_display_module_retail_5_1x-435x180.webp 435w, https://assets.lightspeedhq.com/img/b34b3161-multiple_blocks_display_module_retail_5_1x-869x360.webp 869w, https://assets.lightspeedhq.com/img/b34b3161-multiple_blocks_display_module_retail_5_1x-870x361.webp 870w, https://assets.lightspeedhq.com/img/b34b3161-multiple_blocks_display_module_retail_5_1x-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/b34b3161-multiple_blocks_display_module_retail_5_1x.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Update prices easily",
+     "texto": "Apply pricing changes across all channels in just a click.",
+     "minh": "119"
+    },
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/1f20d52e-multiple_blocks_display_module_retail_7_1x.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/1f20d52e-multiple_blocks_display_module_retail_7_1x-435x180.webp 435w, https://assets.lightspeedhq.com/img/1f20d52e-multiple_blocks_display_module_retail_7_1x-869x360.webp 869w, https://assets.lightspeedhq.com/img/1f20d52e-multiple_blocks_display_module_retail_7_1x-870x361.webp 870w, https://assets.lightspeedhq.com/img/1f20d52e-multiple_blocks_display_module_retail_7_1x-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/1f20d52e-multiple_blocks_display_module_retail_7_1x.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Use data to your advantage",
+     "texto": "Forecast demand, spot slow movers and draft POs from reports.",
+     "minh": "119"
+    },
+    {
+     "col": "col-md-4",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/21f2cb97-multiple_blocks_display_module_retail_8_1x.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/21f2cb97-multiple_blocks_display_module_retail_8_1x-435x180.webp 435w, https://assets.lightspeedhq.com/img/21f2cb97-multiple_blocks_display_module_retail_8_1x-869x360.webp 869w, https://assets.lightspeedhq.com/img/21f2cb97-multiple_blocks_display_module_retail_8_1x-870x361.webp 870w, https://assets.lightspeedhq.com/img/21f2cb97-multiple_blocks_display_module_retail_8_1x-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/21f2cb97-multiple_blocks_display_module_retail_8_1x.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "Boost efficiency",
+     "texto": "Automate manual tasks like stock ordering and stock counts.",
+     "minh": "119"
+    }
+   ]
+  ],
+  "botao": null
+ },
+ "grade3": {
+  "titulo": "Create draft POs in seconds",
+  "subtitulo": "Save time by quickly converting documents to draft purchase orders",
+  "linhas": [
+   [
+    {
+     "col": "col-md-3",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/b624ff2d-retail_ai-doc-import_inventory-page_descriptionwithicons_1.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/b624ff2d-retail_ai-doc-import_inventory-page_descriptionwithicons_1-435x180.webp 435w, https://assets.lightspeedhq.com/img/b624ff2d-retail_ai-doc-import_inventory-page_descriptionwithicons_1-869x360.webp 869w, https://assets.lightspeedhq.com/img/b624ff2d-retail_ai-doc-import_inventory-page_descriptionwithicons_1-870x361.webp 870w, https://assets.lightspeedhq.com/img/b624ff2d-retail_ai-doc-import_inventory-page_descriptionwithicons_1-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/b624ff2d-retail_ai-doc-import_inventory-page_descriptionwithicons_1.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "",
+     "texto": "Access AI Doc Import from your Stock control page",
+     "minh": "98"
+    },
+    {
+     "col": "col-md-3",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/c7bdf223-retail_ai-doc-import_inventory-page_descriptionwithicons_2.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/c7bdf223-retail_ai-doc-import_inventory-page_descriptionwithicons_2-435x180.webp 435w, https://assets.lightspeedhq.com/img/c7bdf223-retail_ai-doc-import_inventory-page_descriptionwithicons_2-869x360.webp 869w, https://assets.lightspeedhq.com/img/c7bdf223-retail_ai-doc-import_inventory-page_descriptionwithicons_2-870x361.webp 870w, https://assets.lightspeedhq.com/img/c7bdf223-retail_ai-doc-import_inventory-page_descriptionwithicons_2-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/c7bdf223-retail_ai-doc-import_inventory-page_descriptionwithicons_2.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "",
+     "texto": "Import invoices or other supplier docs and watch as the draft PO is generated",
+     "minh": "98"
+    },
+    {
+     "col": "col-md-3",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/82f6c72b-retail_ai-doc-import_inventory-page_descriptionwithicons_3.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/82f6c72b-retail_ai-doc-import_inventory-page_descriptionwithicons_3-435x180.webp 435w, https://assets.lightspeedhq.com/img/82f6c72b-retail_ai-doc-import_inventory-page_descriptionwithicons_3-869x360.webp 869w, https://assets.lightspeedhq.com/img/82f6c72b-retail_ai-doc-import_inventory-page_descriptionwithicons_3-870x361.webp 870w, https://assets.lightspeedhq.com/img/82f6c72b-retail_ai-doc-import_inventory-page_descriptionwithicons_3-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/82f6c72b-retail_ai-doc-import_inventory-page_descriptionwithicons_3.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "",
+     "texto": "AI uses smart matching to reduce errors and create new products",
+     "minh": "98"
+    },
+    {
+     "col": "col-md-3",
+     "img": {
+      "src": "https://assets.lightspeedhq.com/img/8af05a9f-retail_ai-doc-import_inventory-page_descriptionwithicons_4.webp",
+      "srcset": "https://assets.lightspeedhq.com/img/8af05a9f-retail_ai-doc-import_inventory-page_descriptionwithicons_4-435x180.webp 435w, https://assets.lightspeedhq.com/img/8af05a9f-retail_ai-doc-import_inventory-page_descriptionwithicons_4-869x360.webp 869w, https://assets.lightspeedhq.com/img/8af05a9f-retail_ai-doc-import_inventory-page_descriptionwithicons_4-870x361.webp 870w, https://assets.lightspeedhq.com/img/8af05a9f-retail_ai-doc-import_inventory-page_descriptionwithicons_4-1303x540.webp 1303w, https://assets.lightspeedhq.com/img/8af05a9f-retail_ai-doc-import_inventory-page_descriptionwithicons_4.webp 1460w",
+      "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+      "w": 1460,
+      "h": 605,
+      "alt": ""
+     },
+     "svg": "",
+     "titulo": "",
+     "texto": "Try the Lightspeed Scanner app when you’re on the move",
+     "minh": "98"
+    }
+   ]
+  ],
+  "botao": {
+   "texto": "Learn more",
+   "href": "https://www.lightspeedhq.com/pos/retail/purchase-orders/"
+  }
+ },
+ "grade10": {
+  "titulo": "Simplify your ordering with built-in purchase orders",
+  "subtitulo": "Create and manage purchase orders right from your POS inventory system to cut down manual updates and get a more accurate view of costs, COGS and margins.",
+  "linhas": [
+   [
+    {
+     "col": "col-md-3",
+     "img": null,
+     "svg": "<svg class=\"gb-icon\" fill=\"currentColor\" height=\"48\" viewbox=\"0 0 48 48\" width=\"48\"><path clip-rule=\"evenodd\" d=\"M11 37V11h26v26H11ZM8 10a2 2 0 0 1 2-2h28a2 2 0 0 1 2 2v28a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V10Zm7.5 11a1.5 1.5 0 0 0 0 3H23a3 3 0 0 0 3-3H15.5ZM28 22.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 1-1.5-1.5Zm1.5 3.5a1.5 1.5 0 0 0 0 3h3a1.5 1.5 0 0 0 0-3h-3ZM28 32.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 0 3h-3a1.5 1.5 0 0 1-1.5-1.5ZM15.5 26a1.5 1.5 0 0 0 0 3H23a3 3 0 0 0 3-3H15.5ZM14 32.5a1.5 1.5 0 0 1 1.5-1.5H26a3 3 0 0 1-3 3h-7.5a1.5 1.5 0 0 1-1.5-1.5ZM15.5 17a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm5.5-1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm2.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z\" fill-rule=\"evenodd\"></path></svg>",
+     "titulo": "Set up your order",
+     "texto": "Choose your supplier, select delivery locations and add key details in seconds.",
+     "minh": "169"
+    },
+    {
+     "col": "col-md-3",
+     "img": null,
+     "svg": "<svg class=\"gb-icon\" fill=\"currentColor\" height=\"48\" viewbox=\"0 0 48 48\" width=\"48\"><path clip-rule=\"evenodd\" d=\"M24 39c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15Zm0 3c9.941 0 18-8.059 18-18S33.941 6 24 6 6 14.059 6 24s8.059 18 18 18Zm0-26.5a1.5 1.5 0 0 1 1.5 1.5v5.5H31a1.5 1.5 0 0 1 0 3h-5.5V31a1.5 1.5 0 0 1-3 0v-5.5H17a1.5 1.5 0 0 1 0-3h5.5V17a1.5 1.5 0 0 1 1.5-1.5Z\" fill-rule=\"evenodd\"></path></svg>",
+     "titulo": "Add products",
+     "texto": "Search, scan, import via CSV or use smart reorder recommendations to add items.",
+     "minh": "169"
+    },
+    {
+     "col": "col-md-3",
+     "img": null,
+     "svg": "<svg class=\"gb-icon\" fill=\"currentColor\" height=\"48\" viewbox=\"0 0 48 48\" width=\"48\"><path clip-rule=\"evenodd\" d=\"M35.06 19.06a1.5 1.5 0 0 1-2.12 0l-7.44-7.439V33a1.5 1.5 0 0 1-3 0V11.621l-7.44 7.44a1.5 1.5 0 0 1-2.12-2.122l9.998-9.998.003-.003L24 5.878 35.06 16.94a1.5 1.5 0 0 1 0 2.122ZM11.5 39a1.5 1.5 0 0 0 0 3h25a1.5 1.5 0 0 0 0-3h-25Z\" fill-rule=\"evenodd\"></path></svg>",
+     "titulo": "Review and send",
+     "texto": "Apply costs or discounts, confirm quantities, then send the order to your supplier directly from POS.",
+     "minh": "169"
+    },
+    {
+     "col": "col-md-3",
+     "img": null,
+     "svg": "<svg class=\"gb-icon\" fill=\"currentColor\" height=\"48\" viewbox=\"0 0 48 48\" width=\"48\"><path clip-rule=\"evenodd\" d=\"M16 5h16v2h4a2 2 0 0 1 2 2v31a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h4V5Zm16 6v-1h3v29H13V10h3v1a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3Zm-13-1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8H19v2Zm-3 10.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 0 3h-1a1.5 1.5 0 0 1-1.5-1.5Zm0 6a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 0 3h-1a1.5 1.5 0 0 1-1.5-1.5Zm1.5 4.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 0 0-3h-1ZM22 20.5a1.5 1.5 0 0 1 1.5-1.5H32a3 3 0 0 1-3 3h-5.5a1.5 1.5 0 0 1-1.5-1.5Zm1.5 4.5a1.5 1.5 0 0 0 0 3H29a3 3 0 0 0 3-3h-8.5ZM22 32.5a1.5 1.5 0 0 1 1.5-1.5H32a3 3 0 0 1-3 3h-5.5a1.5 1.5 0 0 1-1.5-1.5Z\" fill-rule=\"evenodd\"></path></svg>",
+     "titulo": "Track and receive",
+     "texto": "Monitor order status, mark as dispatched and receive stock seamlessly into your system.",
+     "minh": "169"
+    }
+   ]
+  ],
+  "botao": null
+ },
+ "meias": {
+  "4": {
+   "alinhamento": "right",
+   "bullets": true,
+   "texto": "<h2 class=\"gb-h2\"> Buy wholesale from top brands with Lightspeed Wholesale </h2><p> Unlike other platforms, wholesale is built directly into Lightspeed POS via a seamless integration with NuORDER—so you can discover brands, place orders and sync product data without juggling separate systems. </p><ul class=\"gb-list--unordered gb-list--unordered--dividers tw:pt-3 tw:pb-0 tw:relative tw:w-[calc(100%+24px)]\"><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Stock your store faster</b>, browse thousands of brands and add products in just a few clicks. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Reduce manual work</b> by automating product setup with accurate descriptions and pricing synced to your POS. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Buy smarter</b> with real-time performance data and order trend insights, including top categories, sizes and colors, to guide confident purchasing decisions. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Create and send POs in one click</b> from your POS inventory system, with details synced automatically to reduce double work, manual updates and errors. </li></ul>",
+   "link": {
+    "texto": "Learn more",
+    "href": "https://www.lightspeedhq.com/pos/retail/B2B-wholesale-platform/"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/f040969e-retail_inventory_management_hw_1_1x.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/f040969e-retail_inventory_management_hw_1_1x-435x304.webp 435w, https://assets.lightspeedhq.com/img/f040969e-retail_inventory_management_hw_1_1x-869x607.webp 869w, https://assets.lightspeedhq.com/img/f040969e-retail_inventory_management_hw_1_1x-870x608.webp 870w, https://assets.lightspeedhq.com/img/f040969e-retail_inventory_management_hw_1_1x-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/f040969e-retail_inventory_management_hw_1_1x.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  },
+  "5": {
+   "alinhamento": "left",
+   "bullets": true,
+   "texto": "<h2 class=\"gb-h2\"> Meet your customers anywhere with Lightspeed Scanner </h2><p> From taking payments on the shop floor, to counting stock and fulfilling orders, Lightspeed Scanner makes it easy to manage your operations right from your smart phone*. </p><ul class=\"gb-list--unordered gb-list--unordered--dividers tw:pt-3 tw:pb-0 tw:relative tw:w-[calc(100%+24px)]\"><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Sell anywhere</b>: Accept eligible in-person, contactless payments right on your smartphone. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Stay accurate</b>: Count stock, track items across locations and reduce discrepancies. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Fulfill faster</b>: Pick, pack and ship online orders with barcode scanning and mobile-friendly workflows. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Keep shelves stocked</b>: Order, receive and transfer inventory in a few taps to avoid stockouts. </li></ul>",
+   "link": {
+    "texto": "Learn more",
+    "href": "https://www.lightspeedhq.com/pos/retail/scanner/"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/608d49c2-retail_inventory_management_hw_3_1x.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/608d49c2-retail_inventory_management_hw_3_1x-435x304.webp 435w, https://assets.lightspeedhq.com/img/608d49c2-retail_inventory_management_hw_3_1x-869x607.webp 869w, https://assets.lightspeedhq.com/img/608d49c2-retail_inventory_management_hw_3_1x-870x608.webp 870w, https://assets.lightspeedhq.com/img/608d49c2-retail_inventory_management_hw_3_1x-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/608d49c2-retail_inventory_management_hw_3_1x.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  },
+  "7": {
+   "alinhamento": "right",
+   "bullets": false,
+   "texto": "<h2 class=\"gb-h2\"> Manage your entire workflow, from order to floor, all in one place </h2><p> Keep inventory levels, costs, incoming stock and sales in sync by managing ordering and receiving in one place. <br class=\"tw:hidden tw:mob-l:inline\"/><br class=\"tw:hidden tw:mob-l:inline\"/><b>Cut down errors and double handling</b><br class=\"tw:hidden tw:mob-l:inline\"/> No exporting reports, no transcribing counts into a spreadsheet, no reconciling later. It’s all updated in one workflow.<br class=\"tw:hidden tw:mob-l:inline\"/><br class=\"tw:hidden tw:mob-l:inline\"/><b>Get better visibility into your bottom line</b><br class=\"tw:hidden tw:mob-l:inline\"/> Get a truer picture of margins, COGS and stock value with the latest pricing, freight, duties and handling factored in.<br class=\"tw:hidden tw:mob-l:inline\"/><br class=\"tw:hidden tw:mob-l:inline\"/><b>Make smarter reorder decisions—faster</b><br class=\"tw:hidden tw:mob-l:inline\"/> See your full stock position rather than a snapshot; create or add products to POs directly from inventory reports.\" </p>",
+   "link": {
+    "texto": "Try it free",
+    "href": "https://www.lightspeedhq.com/pos/retail/inventory-management-software/#lightbox|retail-free-trial-wizard-lightbox"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/5dcc3454-t45594_retail_inventory_management-hw_2.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/5dcc3454-t45594_retail_inventory_management-hw_2-435x304.webp 435w, https://assets.lightspeedhq.com/img/5dcc3454-t45594_retail_inventory_management-hw_2-869x607.webp 869w, https://assets.lightspeedhq.com/img/5dcc3454-t45594_retail_inventory_management-hw_2-870x608.webp 870w, https://assets.lightspeedhq.com/img/5dcc3454-t45594_retail_inventory_management-hw_2-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/5dcc3454-t45594_retail_inventory_management-hw_2.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  },
+  "8": {
+   "alinhamento": "left",
+   "bullets": true,
+   "texto": "<h2 class=\"gb-h2\"> Make smarter inventory decisions with Lightspeed Insights </h2><p> With demand forecasting and automated reporting, Lightspeed Insights helps retailers improve efficiency and can add ~$4,457 to monthly gross profit based on the typical value of inventory held by Lightspeed retailers—boosting GMROI by 25.4%*. </p><ul class=\"gb-list--unordered gb-list--unordered--dividers tw:pt-3 tw:pb-0 tw:relative tw:w-[calc(100%+24px)]\"><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Never get caught short</b> with estimated sales and out-of-stock periods for your bestsellers. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Forecast confidently</b> with tailored recommendations for seasonal and non-seasonal items. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"> Order and receive product in one place so <b>stock counts and true costs update automatically.</b></li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Stay informed</b> with automatic dashboards and scheduled reports sent to your inbox. </li></ul>",
+   "link": {
+    "texto": "*Learn more",
+    "href": "https://www.lightspeedhq.com/pos/retail/analytics/"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/01b5fca0-retail_inventory_management_hw_4_1x.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/01b5fca0-retail_inventory_management_hw_4_1x-435x304.webp 435w, https://assets.lightspeedhq.com/img/01b5fca0-retail_inventory_management_hw_4_1x-869x607.webp 869w, https://assets.lightspeedhq.com/img/01b5fca0-retail_inventory_management_hw_4_1x-870x608.webp 870w, https://assets.lightspeedhq.com/img/01b5fca0-retail_inventory_management_hw_4_1x-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/01b5fca0-retail_inventory_management_hw_4_1x.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  },
+  "9": {
+   "alinhamento": "right",
+   "bullets": true,
+   "texto": "<h2 class=\"gb-h2\"> Inventory management, built right into your POS </h2><p> Every sale, stock movement and supplier order stays connected, for quick visibility and control without switching between systems. </p><ul class=\"gb-list--unordered gb-list--unordered--dividers tw:pt-3 tw:pb-0 tw:relative tw:w-[calc(100%+24px)]\"><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"> Track stock in real time: Every sale and return updates inventory across all stores and channels. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"> Order and receive with ease: Create POs, restock shelves, and receive products directly in your POS. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"> Manage Special Orders end to end: Sell out-of-stock items, track what needs sourcing and fulfill customer orders in one workflow. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"> Unify sales and inventory data: Access accurate reports that combine stock, sales and customer insights in one place. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"> Scale without silos: Manage multiple locations, suppliers and channels from a single integrated platform. </li></ul>",
+   "link": {
+    "texto": "Learn more",
+    "href": "https://www.lightspeedhq.com/pos/retail/"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/5f5aa65e-retail_inventory_management_hw_6_1x.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/5f5aa65e-retail_inventory_management_hw_6_1x-435x304.webp 435w, https://assets.lightspeedhq.com/img/5f5aa65e-retail_inventory_management_hw_6_1x-869x607.webp 869w, https://assets.lightspeedhq.com/img/5f5aa65e-retail_inventory_management_hw_6_1x-870x608.webp 870w, https://assets.lightspeedhq.com/img/5f5aa65e-retail_inventory_management_hw_6_1x-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/5f5aa65e-retail_inventory_management_hw_6_1x.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  },
+  "11": {
+   "alinhamento": "left",
+   "bullets": true,
+   "texto": "<h2 class=\"gb-h2\"> Stay in control with real-time visibility across channels </h2><p> Lightspeed gives you one source of truth for products, variants and stock across every store and channel—so you can stay accurate, scale with confidence and stay in control from one powerful cloud-based system. </p><ul class=\"gb-list--unordered gb-list--unordered--dividers tw:pt-3 tw:pb-0 tw:relative tw:w-[calc(100%+24px)]\"><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Track inventory levels and SKUs</b> across multiple locations, no matter where you are. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Create product variants</b> to manage different sizes, colours and more. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Identify inventory with unique serial numbers</b> in any of your locations from a single search. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Track and understand stock changes</b> with custom adjustment reasons and detailed reporting. </li></ul>",
+   "link": {
+    "texto": "Talk to an expert",
+    "href": "https://www.lightspeedhq.com/pos/retail/inventory-management-software/#lightbox|retail-talk-expert-wizard-lightbox"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/809e3c42-retail_inventory_management_hw_5.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/809e3c42-retail_inventory_management_hw_5-435x304.webp 435w, https://assets.lightspeedhq.com/img/809e3c42-retail_inventory_management_hw_5-869x607.webp 869w, https://assets.lightspeedhq.com/img/809e3c42-retail_inventory_management_hw_5-870x608.webp 870w, https://assets.lightspeedhq.com/img/809e3c42-retail_inventory_management_hw_5-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/809e3c42-retail_inventory_management_hw_5.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  },
+  "13": {
+   "alinhamento": "right",
+   "bullets": true,
+   "texto": "<h2 class=\"gb-h2\"> Smarter pricing and margin control </h2><p> Lightspeed helps you manage pricing, promotions, and true product costs across all channels, so you can stay agile, protect margins and price with confidence. </p><ul class=\"gb-list--unordered gb-list--unordered--dividers tw:pt-3 tw:pb-0 tw:relative tw:w-[calc(100%+24px)]\"><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Bulk price updates</b>: Quickly adjust prices across stores and channels in seconds, including seasonal promotions and loyalty pricing. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Protect your margins</b>: Factor in supplier, shipping and duty costs with landed cost calculations, to help ensure your cost of goods sold (COGS) is always accurate. </li><li class=\"tw:max-w-full tw:before:bg-[image:var(--black-checkmark-svg)]\" data-half-width-bullet-list-item=\"\"><b>Flexible pricing strategies</b>: Use price books and distributed costs to run promotions, maintain profitability and respond to changing market conditions. </li></ul>",
+   "link": {
+    "texto": "Talk to an expert",
+    "href": "https://www.lightspeedhq.com/pos/retail/inventory-management-software/#lightbox|retail-talk-expert-wizard-lightbox"
+   },
+   "img": {
+    "src": "https://assets.lightspeedhq.com/img/e8b28ff1-retail_inventory_management_hw_7_1x.webp",
+    "srcset": "https://assets.lightspeedhq.com/img/e8b28ff1-retail_inventory_management_hw_7_1x-435x304.webp 435w, https://assets.lightspeedhq.com/img/e8b28ff1-retail_inventory_management_hw_7_1x-869x607.webp 869w, https://assets.lightspeedhq.com/img/e8b28ff1-retail_inventory_management_hw_7_1x-870x608.webp 870w, https://assets.lightspeedhq.com/img/e8b28ff1-retail_inventory_management_hw_7_1x-1303x910.webp 1303w, https://assets.lightspeedhq.com/img/e8b28ff1-retail_inventory_management_hw_7_1x.webp 1460w",
+    "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+    "w": 1460,
+    "h": 1020,
+    "alt": ""
+   }
+  }
+ },
+ "carrossel": {
+  "titulo": "What do you sell?",
+  "aria": "What do you sell?",
+  "slides": [
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/eba884e4-industry_selector_1_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/eba884e4-industry_selector_1_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/eba884e4-industry_selector_1_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/eba884e4-industry_selector_1_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/eba884e4-industry_selector_1_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Apparel and shoes",
+    "texto": "‎ Manage your clothing store inventory, customers, sales channels and more with an all-in-one platform.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/apparel/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/6410ea61-industry_selector_12_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/6410ea61-industry_selector_12_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/6410ea61-industry_selector_12_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/6410ea61-industry_selector_12_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/6410ea61-industry_selector_12_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Garden",
+    "texto": "Get the garden center POS with advanced inventory tracking, customer management, automated reports and insights.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/garden-center-pos/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/8ef9e9aa-industry_selector_6_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/8ef9e9aa-industry_selector_6_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/8ef9e9aa-industry_selector_6_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/8ef9e9aa-industry_selector_6_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/8ef9e9aa-industry_selector_6_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Home decor",
+    "texto": "‎ From in-depth inventory management and reporting to multichannel sales, get everything you need to run your home decor store.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/home-decor-store-pos/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/14812827-industry_selector_11_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/14812827-industry_selector_11_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/14812827-industry_selector_11_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/14812827-industry_selector_11_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/14812827-industry_selector_11_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Vape",
+    "texto": "‎ Manage your inventory, sales and customers with a POS system designed to support you with meeting vape shop compliance standards.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/vape-store-pos/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/430b8cc5-industry_selector_5_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/430b8cc5-industry_selector_5_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/430b8cc5-industry_selector_5_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/430b8cc5-industry_selector_5_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/430b8cc5-industry_selector_5_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Health and supplements",
+    "texto": "‎ Run your entire business from inventory to sales and eCommerce to keep customers happy, healthy and loyal.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/supplement-store-pos/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/09e56df6-industry_selector_2_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/09e56df6-industry_selector_2_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/09e56df6-industry_selector_2_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/09e56df6-industry_selector_2_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/09e56df6-industry_selector_2_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Bike",
+    "texto": "‎ From inventory management to sales and customer insights, get everything you need to run your bike store in one seamless platform.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/bike-shop/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/87dad537-industry_selector_7_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/87dad537-industry_selector_7_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/87dad537-industry_selector_7_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/87dad537-industry_selector_7_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/87dad537-industry_selector_7_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Jewelry",
+    "texto": "‎ Manage your inventory and service workflows, sell anywhere and control everything from a single platform tailored for jewelry retailers.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/jewellery-store-pos/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/d9fe94f7-industry_selector_8_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/d9fe94f7-industry_selector_8_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/d9fe94f7-industry_selector_8_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/d9fe94f7-industry_selector_8_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/d9fe94f7-industry_selector_8_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Pet",
+    "texto": "‎ Manage inventory, sell anywhere and control everything from a unified pet store POS system.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/pet-shop-point-of-sale/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/c721b199-industry_selector_3_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/c721b199-industry_selector_3_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/c721b199-industry_selector_3_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/c721b199-industry_selector_3_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/c721b199-industry_selector_3_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "CBD",
+    "texto": "‎ Whether you sell in-store or online, power your CBD store's sales, customer management and inventory tracking from one unified POS platfor",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/cbd-pos/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/2b117eb2-industry_selector_9_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/2b117eb2-industry_selector_9_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/2b117eb2-industry_selector_9_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/2b117eb2-industry_selector_9_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/2b117eb2-industry_selector_9_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Sporting goods",
+    "texto": "‎ From inventory to in-depth insights and customer loyalty, get everything you need to run your sporting goods store in one unified platform",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/sporting-goods-point-of-sale/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/9170f9a3-industry_selector_10_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/9170f9a3-industry_selector_10_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/9170f9a3-industry_selector_10_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/9170f9a3-industry_selector_10_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/9170f9a3-industry_selector_10_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Toy",
+    "texto": "‎ Manage your stock, sell anywhere and control all your operations from a single system designed to manage your toy store.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/toy-store-point-of-sale/"
+    }
+   },
+   {
+    "img": {
+     "src": "https://assets.lightspeedhq.com/img/aba5095d-industry_selector_4_retail_1x.webp",
+     "srcset": "https://assets.lightspeedhq.com/img/aba5095d-industry_selector_4_retail_1x-435x272.webp 435w, https://assets.lightspeedhq.com/img/aba5095d-industry_selector_4_retail_1x-869x543.webp 869w, https://assets.lightspeedhq.com/img/aba5095d-industry_selector_4_retail_1x-870x544.webp 870w, https://assets.lightspeedhq.com/img/aba5095d-industry_selector_4_retail_1x.webp 960w",
+     "sizes": "(min-width: 1440px) 1520px, (min-width: 1280px) 1303px, (min-width: 960px) 869px, (min-width: 480px) 435px, 100vw",
+     "w": 960,
+     "h": 600,
+     "alt": ""
+    },
+    "titulo": "Electronics",
+    "texto": "‎ Manage your inventory, customers, staff and more with a POS system built for electronics stores.",
+    "link": {
+     "texto": "Explore",
+     "href": "https://www.lightspeedhq.com/pos/retail/electronics-store-pos/"
+    }
+   }
+  ]
+ },
+ "form": {
+  "titulo": "Try Lightspeed Retail for free",
+  "subtitulo": "Become the go-to retailer with Lightspeed’s complete solution. 14-day trial. Unlimited access to eligible features. No credit card required.",
+  "atributos": {
+   "class": "gb-form",
+   "style": "min-height: 805px;"
+  },
+  "miolo": "<div data-form=\"hidden-field-container\"><input name=\"form_name\" type=\"hidden\" value=\"free_trial\"/><input name=\"product\" type=\"hidden\" value=\"Cloud\"/><input name=\"stage\" type=\"hidden\" value=\"bofu\"/><input name=\"business_type_slug\" type=\"hidden\" value=\"\"/><input name=\"form_type\" type=\"hidden\" value=\"free-trial\"/><input name=\"action\" type=\"hidden\" value=\"retail\"/></div><label aria-hidden=\"true\" class=\"fax\" for=\"fax\">Fax</label><input aria-hidden=\"true\" autocomplete=\"off\" class=\"fax\" name=\"fax\" type=\"text\" value=\"\"/><div class=\"gb-form__field gb-form__field-full_name\" data-formfield=\"ls-form-field\"><input autocapitalize=\"none\" autocorrect=\"off\" class=\"gb-form__field-text\" id=\"leadform-1_full_name\" maxlength=\"50\" minlength=\"2\" name=\"full_name\" pattern=\"^([\\s]?(?![\\s]))[^!#$%@&lt;&gt;=_*+:;\\?\\{\\|\\}\\(\\)\\\\\\/\\[\\]\\^\\n\\b\\r\\t\\`]{2,}$\" placeholder=\"Full name\" required=\"\" spellcheck=\"false\" type=\"text\" value=\"\"/><label class=\"gb-form__field-label\" for=\"leadform-1_full_name\">Full name</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please enter your full name\"}' data-formfield-error=\"full_name\" id=\"full_name-error-message\"></span></div><div class=\"gb-form__field gb-form__field-email\" data-formfield=\"ls-form-field\"><input autocapitalize=\"none\" autocorrect=\"off\" class=\"gb-form__field-text\" id=\"leadform-1_email\" maxlength=\"255\" minlength=\"4\" name=\"email\" pattern=\"^[a-zA-Z0-9\\!\\#\\$\\%\\&amp;’\\*\\+\\/\\=\\?\\^\\{\\|\\}\\~\\\\\\-_\\`]+(?:\\.[a-zA-Z0-9\\!\\#\\$\\%\\&amp;’\\*\\+\\/\\=\\?\\^\\{\\|\\}\\~\\\\\\-_\\`]+)*@(?:[a-z0-9](?:[a-z0-9\\-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9\\-]*[a-z0-9])?$\" placeholder=\"example@yourcompany.com\" required=\"\" spellcheck=\"false\" type=\"email\" value=\"\"/><label class=\"gb-form__field-label\" for=\"leadform-1_email\">Email address</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please enter a valid email address\",\"email_domain\":\"Please enter a valid domain.\"}' data-formfield-error=\"email\" id=\"email-error-message\"></span></div><div class=\"gb-form__field gb-form__field-phone\" data-formfield=\"ls-form-field\"><div class=\"iti iti--allow-dropdown iti--show-flags iti--inline-dropdown\"><div class=\"iti__country-container\" style=\"left: 0px; height: 48px;\"><button aria-controls=\"iti-0__dropdown-content\" aria-expanded=\"false\" aria-haspopup=\"true\" aria-label=\"Selected country\" class=\"iti__selected-country\" role=\"combobox\" title=\"Brazil\" type=\"button\"><div class=\"iti__selected-country-primary\"><div class=\"iti__flag iti__br\"><span class=\"iti__a11y-text\">Brazil +55</span></div><div aria-hidden=\"true\" class=\"iti__arrow\"></div></div><div class=\"iti__selected-dial-code\">+55</div></button></div><input autocomplete=\"tel\" class=\"gb-form__field-text iti__tel-input\" data-form-field-name=\"phone\" data-intl-tel-input-id=\"0\" id=\"leadform-1_phone\" maxlength=\"255\" name=\"phone\" pattern=\"^([\\s]?(?![\\s]))\\+?([\\d\\s\\-\\.\\(\\)]{6,30})$\" placeholder=\"11 96123-4567\" required=\"\" style=\"padding-left: 96px;\" type=\"tel\" value=\"\"/><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please enter a valid phone number\"}' data-formfield-error=\"phone\" id=\"phone-error-message\"></span></div><label class=\"gb-form__field-label\" for=\"leadform-1_phone\">Phone number</label><div class=\"gb-form__field-background\"></div></div><div class=\"gb-form__field gb-form__field-company\" data-formfield=\"ls-form-field\"><input autocapitalize=\"none\" autocorrect=\"off\" class=\"gb-form__field-text\" id=\"leadform-1_company\" maxlength=\"50\" minlength=\"2\" name=\"company\" pattern=\"^([\\s]?(?![\\s]))[^#*%\\\\`\\/:&lt;&gt;_]{2,}$\" placeholder=\"Store name\" required=\"\" spellcheck=\"false\" type=\"text\" value=\"\"/><label class=\"gb-form__field-label\" for=\"leadform-1_company\">Company</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please enter a valid company name\"}' data-formfield-error=\"company\" id=\"company-error-message\"></span></div><div class=\"gb-form__field gb-form__field-business_type\" data-formfield=\"ls-form-field\"><select aria-label=\"Business type\" class=\"gb-form__field-text\" data-form=\"form-field-select\" id=\"business_type_leadform-1\" name=\"business_type\" required=\"\"><option value=\"\"></option><option data-series=\"x_series\" data-slug=\"apparel\" label=\"Apparel &amp; Footwear\" value=\"Apparel &amp; Footwear\"> Apparel &amp; Footwear</option><option data-series=\"x_series\" data-slug=\"bike\" label=\"Bicycle\" value=\"Bicycle\"> Bicycle</option><option data-series=\"x_series\" data-slug=\"books_toys_hobby\" label=\"Books, Toys &amp; Hobby\" value=\"Books, Toys &amp; Hobby\"> Books, Toys &amp; Hobby</option><option data-series=\"x_series\" data-slug=\"electronics\" label=\"Electronics\" value=\"Electronics\"> Electronics</option><option data-series=\"x_series\" data-slug=\"food_beverage\" label=\"Food &amp; Beverage\" value=\"Food &amp; Beverage\"> Food &amp; Beverage</option><option data-series=\"x_series\" data-slug=\"gift_shop\" label=\"Gift Shop\" value=\"Gift Shop\"> Gift Shop</option><option data-series=\"x_series\" data-slug=\"health_beauty_supplies\" label=\"Health &amp; Beauty Supplies\" value=\"Health &amp; Beauty Supplies\"> Health &amp; Beauty Supplies</option><option data-series=\"x_series\" data-slug=\"home_garden\" label=\"Home &amp; Garden\" value=\"Home &amp; Garden\"> Home &amp; Garden</option><option data-series=\"x_series\" data-slug=\"jewelry\" label=\"Jewelry &amp; Accessories\" value=\"Jewelry &amp; Accessories\"> Jewelry &amp; Accessories</option><option data-adp=\"\" data-series=\"x_series\" data-slug=\"motorized_vehicles_dealerships\" label=\"Powersports, Marine, and RV\" value=\"Motorized Vehicles &amp; Dealerships\"> Powersports, Marine, and RV</option><option data-series=\"x_series\" data-slug=\"pet\" label=\"Pet\" value=\"Pet\"> Pet</option><option data-series=\"x_series\" data-slug=\"services\" label=\"Services\" value=\"Services\"> Services</option><option data-series=\"x_series\" data-slug=\"sporting_goods\" label=\"Sporting &amp; Outdoor Goods\" value=\"Sporting &amp; Outdoor Goods\"> Sporting &amp; Outdoor Goods</option><option data-series=\"x_series\" data-slug=\"vape\" label=\"Vape &amp; Smoke\" value=\"Vape &amp; Smoke\"> Vape &amp; Smoke</option><option data-series=\"x_series\" data-slug=\"wine_liquor\" label=\"Wine &amp; Liquor\" value=\"Wine &amp; Liquor\"> Wine &amp; Liquor</option><option data-series=\"x_series\" data-slug=\"other\" label=\"Other\" value=\"Other\"> Other</option></select><label class=\"gb-form__field-label\" for=\"leadform-1_business_type\">Business type</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please choose a business type\",\"adp\":\"Oops! Lightspeed does not serve the Automotive, Powersports, Marine, or recreational Vehicle industries. If you are looking for a Dealer Management Solution, please visit &lt;a href=\\\"https:\\/\\/www.adplightspeed.com\\\" rel=\\\"nofollow\\\" target=\\\"_blank\\\"&gt;ADP Lightspeed here&lt;\\/a&gt; (not affiliated with Lightspeed POS).\"}' data-formfield-error=\"business_type\" id=\"business_type-error-message\"></span></div><div class=\"gb-form__field gb-form__field-estimated_annual_gtv\" data-formfield=\"ls-form-field\"><select class=\"gb-form__field-text\" id=\"leadform-1_estimated_annual_gtv\" name=\"estimated_annual_gtv\" required=\"\"><option value=\"\"></option><option data-tracking=\"unknown\" label=\"Unknown / No revenue\" value=\"No revenue\"> Unknown / No revenue</option><option data-tracking=\"1-300k\" label=\"1-300k USD\" value=\"1-300k\"> 1-300k USD</option><option data-tracking=\"301k-500k\" label=\"301k-500k USD\" value=\"301k-500k\"> 301k-500k USD</option><option data-tracking=\"501k-1M\" label=\"501k-1M USD\" value=\"501k-1M\"> 501k-1M USD</option><option data-tracking=\"1M-2M\" label=\"1M-2M USD\" value=\"1M-2M\"> 1M-2M USD</option><option data-tracking=\"2M-5M\" label=\"2M-5M USD\" value=\"2M-5M\"> 2M-5M USD</option><option data-tracking=\"5m_plus\" label=\"5M+ USD\" value=\"5M+\"> 5M+ USD</option><option data-tracking=\"not_comfortable_disclosing\" label=\"I prefer not to say\" value=\"Not comfortable disclosing\"> I prefer not to say</option></select><label class=\"gb-form__field-label\" for=\"leadform-1_estimated_annual_gtv\">What is your annual revenue?</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please choose an option\"}' data-formfield-error=\"estimated_annual_gtv\" id=\"estimated_annual_gtv-error-message\"></span></div><div class=\"gb-form__field gb-form__field-domain_prefix\" data-formfield=\"ls-form-field\"><input autocapitalize=\"none\" autocorrect=\"off\" class=\"gb-form__field-text\" id=\"leadform-1_domain_prefix\" maxlength=\"50\" minlength=\"5\" name=\"domain_prefix\" pattern=\"^[a-z0-9]*$\" placeholder=\"janedoeshop\" required=\"\" spellcheck=\"false\" type=\"text\" value=\"\"/><span class=\"gb-form__field-placeholder-suffix\">.retail.lightspeed.app</span><label class=\"gb-form__field-label\" for=\"leadform-1_domain_prefix\">Store URL</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Please provide a valid store URL. Minimum of 5 characters, all lowercase, no spaces, no special characters.\",\"unavailable_domain\":\"This store URL is unavailable, please try another one.\"}' data-formfield-error=\"domain_prefix\" id=\"domain_prefix-error-message\"></span></div><div class=\"gb-form__field gb-form__field-password\" data-formfield=\"ls-form-field\"><input autocapitalize=\"none\" autocorrect=\"off\" class=\"gb-form__field-text\" id=\"leadform-1_password\" maxlength=\"64\" minlength=\"8\" name=\"password\" pattern=\"^((?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?!.*[\\\\&amp;\\\\&gt;&quot;\\\\&lt;\\\\'])).{8,}$\" placeholder=\"(min 8 - max 30)\" required=\"\" spellcheck=\"false\" type=\"password\"/><label class=\"gb-form__field-label\" for=\"leadform-1_password\">Password</label><div class=\"gb-form__field-background\"></div><span class=\"gb-form__error\" data-form=\"error\" data-form-error-messages='{\"default\":\"Minimum of 8 characters - 1 uppercase, 1 lowercase, and 1 digit. Must not contain any of the following (&lt;, &gt;, \\u201c, \\u2019, &amp;)\"}' data-formfield-error=\"password\" id=\"password-error-message\"></span></div><div class=\"gb-recaptcha gb-flex gb-flex--center-horizontal gb-flex--column gb-flex--center-vertical\" data-form=\"recaptcha\"></div><div class=\"gb-button-container gb-button-container--center\"><button class=\"gb-button-cta-form gb-button-cta-form--on-light gb-button-cta-form--center\" data-form=\"submit\" data-formui=\"button\" data-select=\"form-submit\" data-tracking-button-name=\"cta-form\" data-tracking-placement=\"Body\" rel=\"nofollow\" type=\"submit\"> Get started </button></div><div class=\"gb-form__disclaimer form-subtext text-center\"><p class=\"gb-form__disclaimer__text gb-form__disclaimer__text--dark\"> By clicking Get started you agree to the<br/><a class=\"gb-form__disclaimer__text-link gb-form__disclaimer__text-link--dark\" href=\"https://www.lightspeedhq.com/pos/retail/service-agreement/\" target=\"_blank\"> Terms of Service </a> and <a class=\"gb-form__disclaimer__text-link gb-form__disclaimer__text-link--dark\" href=\"https://www.lightspeedhq.com/privacy-policy/\" target=\"_blank\"> privacy policy </a>. </p></div><div class=\"gb-form__disclaimer form-subtext text-center\" data-form-extras=\"sms_opt_in_footnote\"><p class=\"gb-form__disclaimer__text gb-form__disclaimer__text--dark\"> By submitting this form, you agree that Lightspeed may call or text the number provided about Lightspeed products and services, including using an automatic telephone dialing system and an artificial or prerecorded voice. Consent is not required to purchase. Msg/data rates may apply. You may opt out at any time. See our <a href=\"https://www.lightspeedhq.com/legal/privacy-policy/\" target=\"_blank\"> Privacy Policy</a> for more details. </p></div>"
+ },
+ "faq": [
+  [
+   "What is retail inventory software?",
+   "<p>Retail inventory software is a specialized tool that enables stores to efficiently manage and track their stock levels. Inventory management software helps retailers maintain accurate records of their inventory, streamline operations and optimize their stock based on sales trends and forecasts.<br/><br/> Stores can keep track of inventory using inventory management systems that monitor stock levels, manage reordering and track sales. Systems like Lightspeed update in seconds, helping to ensure that sales and stock levels are always synchronized. It also provides analytics to help retailers make informed decisions about stock replenishment and markdowns.<br/><br/> An inventory tracking system is a part of inventory management that focuses specifically on monitoring the quantities of goods in stock, and potentially their location within a store or warehouse. A POS (Point of Sale) inventory management system integrates the sales and inventory functions, enabling automatic tracking of inventory as sales occur. This system helps retailers understand what is selling well and what isn’t, allowing them to adjust purchasing and marketing strategies accordingly. It simplifies the sales process by automatically updating inventory levels as transactions are processed at the point of sale.<br/><br/> This system is crucial for retailers to ensure they have the right products in the right quantities at the right time, maximizing sales potential and minimizing holding costs.</p>"
+  ],
+  [
+   "Which inventory system is best for a small business?",
+   "<p>Choosing the best inventory system for a small business depends on several factors, including the business's size, budget and specific operational needs. Software for inventory management should offer features like automatic stock level updates, multi-channel sales integration, supplier and purchase order management, and detailed analytics on inventory turnover and sales trends. The ideal software also includes forecasting tools to help predict future sales and inventory needs based on historical data.<br/><br/> To pick the right system for your business:<br/><br/> 1. Assess needs: determine what features are most important for your business, such as sales tracking, order management or customer data integration.<br/> 2. Choose software: select software that fits your budget and meets your identified needs. It should allow for easy input and tracking of inventory, sales monitoring and data analysis.<br/> 3. Set up and integration: implement the software, set up product categories and integrate it with other systems like accounting or customer relationship management (CRM) if necessary. Look for professional onboarding services from your POS provider to speed up the process. <br/> 4. Train: train staff on how to use the system efficiently to ensure accuracy in data entry and operations. Your POS provider may be able to assist. </p>"
+  ],
+  [
+   "Which is the best inventory management software for wholesale and retail businesses?",
+   "<p>The best software for wholesale and retail is one that combines POS functionalities with inventory management in a single interface. Look for features like multi-store management, ecommerce integration and mobile accessibility, which allow retail managers to oversee their operations on the go. Effective software also provides detailed reports that aid in making informed purchasing decisions and optimizing product placement and promotions based on data-driven insights.<br/><br/> Selecting the best inventory management software for both wholesale and retail businesses is crucial for streamlining operations, reducing costs and enhancing customer satisfaction. Effective inventory management software should cater to the unique needs of both sectors, supporting extensive inventory volumes for wholesalers and diverse product assortments for retailers.<br/><br/> Retailers can manage their inventory efficiently by implementing software that offers real-time tracking, automated restocking alerts and detailed analytics on sales patterns and customer preferences. <br/><br/> Wholesalers typically manage large volumes of products and require robust software that can handle bulk processing and track inventory across multiple locations. Essential features include batch tracking, barcode scanning and integration with supply chain management tools.</p>"
+  ],
+  [
+   "Can I connect my retail inventory to ecommerce through Lightspeed?",
+   "<p>Yes, you can connect your retail inventory to ecommerce with Lightspeed. Lightspeed Retail and Lightspeed eCom are an integrated system that allow you to manage your inventory data for both sales channels from one platform. You'll be able to connect your webstore with your brick and mortar location's inventory for streamlined sales and stock management.</p>"
+  ],
+  [
+   "How can I migrate inventory data to Lightspeed?",
+   "<p>You can quickly transition to Lightspeed Retail by using a spreadsheet to import your inventory. Learn more about importing products to Lightspeed Retail (X-Series) here.</p>"
+  ],
+  [
+   "Do POS systems track inventory?",
+   "<p>Yes, most modern POS systems include inventory tracking features, but the level of functionality varies. With Lightspeed Retail, pos inventory software is built in—so every sale, return and stock movement updates automatically across all your channels and locations. This visibility helps reduce stockouts, prevent overstocking and keep your records accurate without relying on spreadsheets or manual updates.</p>"
+  ],
+  [
+   "Can you schedule an automatic restock in the inventory management system?",
+   "<p>While POS systems don’t usually reorder stock completely on their own, advanced pos inventory software like Lightspeed let you automate much of the process. You can set reorder points and low-stock alerts, generate purchase orders in seconds and even receive data-driven order recommendations through Lightspeed Insights. This way, restocking becomes faster, more accurate and less dependent on manual work.</p>"
+  ]
+ ]
+}

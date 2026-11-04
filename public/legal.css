@@ -7,7 +7,7 @@
    faltava, agora escrito sobre os tokens do sistema.css — as páginas passam a
    ser do mesmo site, não órfãs do design anterior.
 
-   Depende de /sistema.css?v=ba449f6dc1 (tokens, reset e tipografia). Carregue os dois.
+   Depende de /sistema.css?v=c273036b03 (tokens, reset e tipografia). Carregue os dois.
    ========================================================================== */
 
 .legal-page { background: var(--fundo); }

@@ -1,0 +1,420 @@
+/* Acabamento SoftPay do molde lightspeed-varejo (03/11/2026). Só vale na página VESTIDA (main.mx-vestido), nunca na
+   prova: composição, tamanho de letra, espaço e componente são os da Retail POS da Lightspeed (o CSS podado acima).
+   Aqui entram: a paleta azul do SoftPay papel por papel, a letra da casa (SoftPay Display e SoftPay Texto, mesmos
+   tamanhos), a hero de tela inteira, as grades do celular (lado a lado, sem rolagem lateral), o alvo de toque de
+   44 px e as peças que o conteúdo da rota pede (trilha, cartões de plano, cenas com print real, ladrilhos de
+   "continue por aqui", nota, FAQ com "ver mais", "veja também"). Nada aqui move bloco nem troca componente.
+   O que só vale com o script rodando fica sob .lv-js, classe que molde.js põe na própria raiz do molde (nunca no
+   <html>, para não esconder o .revelar do chassi numa página sem efeitos.js). */
+
+/* ---------- paleta e letra ---------- */
+.mx-lightspeed-varejo.mx-vestido {
+  --m-fundo: #ffffff;
+  --m-fundo-2: #eef5fb;
+  --m-superficie: #e8f3fb;
+  --m-superficie-2: #d6e8f6;
+  --m-borda: #dce5ec;
+  --m-texto: #0a1a28;
+  --m-texto-suave: #46596b;
+  --m-texto-fraco: #5e7083;
+  /* azul de ação do SoftPay (#0C5C9E: branco por cima 6,91:1) */
+  --m-primaria: #0c5c9e;
+  --m-primaria-2: #084a81;
+  --m-sobre-primaria: #ffffff;
+  --m-destaque: #1da1f2;
+  --m-sobre-destaque: #06121f;
+  --m-alta: #0f7a3d;
+  --m-baixa: #b4410c;
+  --m-inv-fundo: #06121f;
+  --m-inv-texto: #ffffff;
+  --m-f-titulo: "SoftPay Display", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --m-f-corpo: "SoftPay Texto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --m-f-mono: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  /* o check das listas da Lightspeed (preto) vira o azul do SoftPay */
+  --black-checkmark-svg: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230C5C9E'%3E%3Cpath d='M6.43 9.148L12.294 2l2.32 1.903-7.965 9.708L1 7.96 3.121 5.84z'/%3E%3C/svg%3E");
+  --lv-curva: cubic-bezier(.22, 1, .36, 1);
+  overflow-wrap: anywhere;
+  background: var(--m-fundo);
+  color: var(--m-texto);
+}
+
+/* o chassi (sistema.css) pinta tag nua (a, h1-h4, p, img com a letra e o espaço dele): dentro do molde essas regras
+   voltam ao padrão com peso (0,0,1), e qualquer regra da Lightspeed (sempre com classe) vence */
+:where(.mx-vestido) :is(a, p, h1, h2, h3, h4, h5, h6, span, b, strong, em, small, button, ul, ol, li, img, nav, section,
+  header, article, aside, details, summary, figure, figcaption, table, th, td, hgroup) { all: revert; }
+.mx-vestido img { max-width: 100%; height: auto; }
+.mx-vestido :is(h1, h2, h3, .gb-h1, .gb-h2, .gb-h3) { text-wrap: balance; }
+.mx-vestido p { text-wrap: pretty; }
+
+/* a FFRealText Medium dos títulos é uma família de peso único; a SoftPay Display é variável: o peso que dá a mesma
+   massa é 600 (títulos) e, no corpo, o Bold da Lightspeed vira o 600 da SoftPay Texto */
+/* Espaçamento entre letras é o da CASA, nunca o negativo da referência: a SoftPay Display é condensada e o -0,02em
+   da FFRealText cola as letras e come o espaço entre palavras (achado da onda 1, BRIEFING passo 5): 0.005em nos
+   títulos, -0.0036em no h1 da hero, como no chassi. !important porque utilitário tw:tracking-* da origem vem com ele. */
+.mx-vestido :is(h1, h2, h3, h4, .gb-h1, .gb-h2, .gb-h3, .gb-h4, .module-title, .override-full-width-module-title) {
+  font-weight: 600; letter-spacing: 0.005em !important;
+}
+.mx-vestido .lv-hero :is(h1, .gb-h1) { letter-spacing: -0.0036em !important; }
+.mx-vestido :is(b, strong, .gb-preheader, .gb-button-cta-featured-primary, .gb-button-cta-featured-secondary,
+  .gb-button-jumpoff, summary, .tw\:font-lsBold, .tw\:font-lsMedium) { font-weight: 600; }
+.mx-vestido .gb-preheader { letter-spacing: .16em; }
+/* papel por papel, como no chassi do SoftPay: a Display (ultracondensada) é o gesto dos títulos de seção; título
+   de cartão e pergunta do FAQ (o gb-h4 da Lightspeed, 20 px) são texto de leitura e vão na SoftPay Texto 600 */
+.mx-lightspeed-varejo.mx-vestido :is(.gb-h4, h4, summary, summary *) { font-family: var(--m-f-corpo); font-weight: 600; letter-spacing: 0 !important; }
+
+/* ---------- 0 · hero: cobre a tela inteira, logo abaixo do cabeçalho fixo do chassi ---------- */
+.mx-vestido .lv-hero {
+  min-height: 100svh;
+  padding-top: var(--nav-h, 4.5rem);
+  display: flex; flex-direction: column; justify-content: center;
+  background: var(--m-fundo-2);
+}
+.mx-vestido .lv-hero > .tw\:max-w-full { width: 100%; }
+.mx-vestido .lv-hero .hero-united { background: transparent !important; }
+.mx-vestido .lv-hero-midia {
+  background: linear-gradient(160deg, #ffffff 0%, var(--m-superficie) 100%);
+  box-shadow: 0 30px 60px -28px rgba(6, 18, 31, .28);
+}
+.mx-vestido .lv-hero-midia img { animation: lv-chega .7s var(--lv-curva) both; }
+@keyframes lv-chega { from { opacity: 0; transform: scale(1.03); } to { opacity: 1; transform: none; } }
+
+.mx-vestido .lv-trilha { display: flex; flex-wrap: wrap; align-items: center; column-gap: .5em; letter-spacing: .12em; }
+.mx-vestido .lv-trilha a { color: var(--m-primaria); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+.mx-vestido .lv-trilha a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.mx-vestido .lv-trilha [aria-current] { color: var(--m-texto-suave); }
+.mx-vestido .lv-trilha-sep { color: var(--m-texto-fraco); }
+@media (max-width: 536px) { .mx-vestido .lv-trilha { justify-content: center; } }
+
+/* hero, acerto do portão (03/11/2026). (1) Fundo de ponta a ponta: degradê reto do azul-claro ao branco, de borda a
+   borda, correndo por trás do menu estendido (a cor chapada não contava como fundo). (2) A sobra de altura dos 100svh
+   ia toda para cima e para baixo do bloco centrado (158 e 193 px em 1440; teto da doutrina: 120 no computador, 72 no
+   celular): agora ela se divide IGUAL entre os vãos por space-evenly. O <header> some da caixa (display: contents)
+   para trilha, título, texto e botões serem os itens espaçados, e margem e padding dos utilitários da origem saem
+   (somavam ao vão). Computador (≥960, duas colunas): a coluna de texto estica na altura útil da hero e a arte fica
+   centrada ao lado. Celular e tablet em pé (uma coluna): a coluna também some da caixa e a arte entra na conta. */
+.mx-vestido .lv-hero {
+  background-color: var(--m-fundo-2);
+  background-image: linear-gradient(180deg, var(--m-superficie) 0%, var(--m-fundo-2) 45%, var(--m-fundo) 100%);
+}
+.mx-vestido .lv-hero .hero-united__text-content__header { display: contents; }
+.mx-vestido .lv-hero .hero-united__text-content__header > *,
+.mx-vestido .lv-hero .hero-united__cta-buttons { margin-top: 0 !important; margin-bottom: 0 !important; padding-top: 0 !important; }
+.mx-vestido .lv-hero .hero-united__media { margin-top: 0 !important; margin-bottom: 0 !important; }
+@media (min-width: 960px) {
+  .mx-vestido .lv-hero .tw\:tab\:flex > [data-lv-anima]:first-child {
+    display: flex !important; flex-direction: column; justify-content: space-evenly !important;
+    /* !important: o utilitário da origem (tw:lap-s:min-h-[462px]) também é !important, e sem ele a coluna ficava em
+       462 px, centrada, com 181 e 193 px de vão (medição de 03/11, 15:24) */
+    min-height: calc(100svh - var(--nav-h, 4.5rem)) !important; padding-top: 0 !important; padding-bottom: 0 !important;
+  }
+  /* o título cresce com a ALTURA da tela: o da origem (46 px, uma linha na nossa letra condensada) deixava 112 a 130 px
+     entre os blocos da coluna em 1440×900 (medição de 03/11, 16:07), acima do teto de 120 */
+  .mx-vestido .lv-hero :is(h1, .gb-h1) { font-size: clamp(2.875rem, 8.2svh, 4.75rem); line-height: 1.04; }
+}
+@media (max-width: 959.98px) {
+  .mx-vestido .lv-hero .tw\:tab\:flex {
+    display: flex; flex-direction: column; justify-content: space-evenly;
+    min-height: calc(100svh - var(--nav-h, 4.5rem));
+  }
+  .mx-vestido .lv-hero .tw\:tab\:flex > [data-lv-anima]:first-child { display: contents; }
+  /* trilha numa linha só no celular: "SEGMENTOS / EMPRESAS COM FILIAIS" quebrava em duas com .12em de espaço */
+  .mx-vestido .lv-trilha { font-size: 13px; letter-spacing: .06em; }
+}
+
+/* par de botões lado a lado também no celular (rótulos curtos) */
+@media (max-width: 479px) {
+  .mx-vestido .lv-par { flex-wrap: nowrap; gap: 10px; }
+  .mx-vestido .lv-par > a { flex: 1 1 0; min-width: 0 !important; width: auto; margin: 12px 0; padding-left: 12px; padding-right: 12px; }
+}
+
+/* botões: toque e foco */
+.mx-vestido :is(.gb-button-cta-featured-primary, .gb-button-cta-featured-secondary) {
+  transition: transform .18s var(--lv-curva), background-color .2s, border-color .2s, color .2s;
+}
+.mx-vestido :is(.gb-button-cta-featured-primary, .gb-button-cta-featured-secondary):active { transform: scale(.98); }
+.mx-vestido :is(a, button, summary):focus-visible { outline: 3px solid var(--m-destaque); outline-offset: 3px; }
+/* o "saiba mais" da Lightspeed é texto em linha: aqui ganha os 44 px de toque sem mudar a letra */
+/* alvo de 44px por padding (8,5px em cima e embaixo da linha de 27px), sem flex: a seta segue em linha logo depois da
+   última palavra, como na referência, também quando o rótulo quebra; dentro do cartão em coluna flex ela não estica */
+.mx-vestido .gb-button-jumpoff {
+  display: inline-block; align-self: flex-start; min-height: 44px; padding-top: 8.5px; padding-bottom: 8.5px;
+  padding-right: 0; color: var(--m-primaria);
+}
+.mx-vestido .gb-button-jumpoff .gb-button-jumpoff__arrow { position: static; width: auto; margin-left: 8px; }
+.mx-vestido .gb-button-jumpoff .lv-junto { white-space: nowrap; font: inherit; letter-spacing: inherit; color: inherit; }
+.mx-vestido .gb-button-jumpoff svg path { fill: currentColor; }
+@media (hover: hover) and (pointer: fine) {
+  .mx-vestido .gb-button-jumpoff .gb-button-jumpoff__arrow { transition: transform .2s var(--lv-curva); }
+  .mx-vestido .gb-button-jumpoff:hover .gb-button-jumpoff__arrow { transform: translateX(4px); }
+}
+
+/* ---------- 1 · planos nos cartões de número ---------- */
+.mx-vestido .lv-planos-sub { margin: -16px auto 32px; max-width: 60ch; color: var(--m-texto-suave); }
+.mx-vestido .lv-plano { position: relative; }
+.mx-vestido .lv-plano-topo { display: flex; flex-direction: column; gap: 6px; }
+.mx-vestido .lv-plano-nome { margin: 0; font-family: var(--m-f-corpo); font-weight: 600; font-size: 1rem; color: var(--m-texto-suave); }
+.mx-vestido .lv-plano-nome span { color: var(--m-texto-fraco); font-weight: 500; }
+.mx-vestido .lv-plano-selo {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); margin: 0; white-space: nowrap;
+  padding: 4px 12px; border-radius: 999px; background: var(--m-primaria); color: var(--m-sobre-primaria);
+  font-family: var(--m-f-corpo); font-weight: 600; font-size: .8125rem; letter-spacing: .02em;
+}
+.mx-vestido .lv-rot { display: block; margin-bottom: 4px; color: var(--m-texto); }
+.mx-vestido .lv-plano a { color: var(--m-primaria); }
+.mx-vestido .lv-plano--destaque { border-color: var(--m-primaria) !important; box-shadow: 0 24px 48px -24px rgba(12, 92, 158, .45); }
+@media (min-width: 768px) {
+  /* o recomendado vai no meio e domina por tamanho (doutrina, seção 8) */
+  .mx-vestido .lv-planos .tw\:grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr) !important; align-items: center; }
+  .mx-vestido .lv-plano { max-width: none !important; }
+  .mx-vestido .lv-plano:not(.lv-plano--destaque) { transform: scale(.965); }
+  .mx-vestido .lv-plano--destaque { padding-top: 40px !important; padding-bottom: 40px !important; border-radius: 16px !important; }
+}
+@media (max-width: 767.98px) {
+  /* celular: os três cartões lado a lado (nome e preço) e o texto do plano tocado numa faixa da largura toda */
+  .mx-vestido .lv-planos .tw\:grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; column-gap: 8px !important; row-gap: 12px !important; }
+  .mx-vestido .lv-plano { display: contents !important; }
+  .mx-vestido .lv-plano > .lv-plano-topo {
+    grid-row: 1; position: relative; align-items: center; text-align: center; gap: 2px; min-height: 44px;
+    padding: 18px 6px 14px; border: 1px solid var(--m-borda); border-radius: 12px; background: var(--m-fundo); cursor: pointer;
+    transition: border-color .2s, box-shadow .2s, transform .18s var(--lv-curva);
+  }
+  .mx-vestido .lv-plano:nth-child(1) > .lv-plano-topo { grid-column: 1; }
+  .mx-vestido .lv-plano:nth-child(2) > .lv-plano-topo { grid-column: 2; }
+  .mx-vestido .lv-plano:nth-child(3) > .lv-plano-topo { grid-column: 3; }
+  .mx-vestido .lv-plano--destaque > .lv-plano-topo { border-color: var(--m-primaria); }
+  .mx-vestido .lv-plano-topo:active { transform: scale(.98); }
+  .mx-vestido .lv-plano-topo .gb-h1 { font-size: clamp(1.0625rem, 4.6vw, 1.5rem) !important; line-height: 1.15; white-space: nowrap; }
+  .mx-vestido .lv-plano-nome { font-size: .875rem; }
+  .mx-vestido .lv-plano-nome span { display: none; }
+  .mx-vestido .lv-plano-selo { font-size: .75rem; letter-spacing: 0; padding: 2px 8px; }
+  .mx-vestido .lv-plano > p {
+    grid-column: 1 / -1; margin: 0; padding: 16px 18px; border: 1px solid var(--m-borda); border-radius: 12px;
+    background: var(--m-fundo-2);
+  }
+  .mx-vestido .lv-plano:nth-child(1) > p { grid-row: 2; }
+  .mx-vestido .lv-plano:nth-child(2) > p { grid-row: 3; }
+  .mx-vestido .lv-plano:nth-child(3) > p { grid-row: 4; }
+  .mx-vestido.lv-js .lv-plano > p { grid-row: 2; }
+  .mx-vestido.lv-js .lv-plano:not(.lv-ativo) > p { display: none; }
+  .mx-vestido.lv-js .lv-plano.lv-ativo > .lv-plano-topo { border-color: var(--m-primaria); box-shadow: 0 0 0 2px var(--m-primaria) inset; }
+  .mx-vestido.lv-js .lv-plano.lv-ativo > p { animation: lv-faixa .32s var(--lv-curva) both; }
+  @keyframes lv-faixa { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+}
+
+/* ---------- 2 · faixa escura ---------- */
+.mx-vestido .lv-escuro .override-full-width-module-subtext { max-width: 68ch; margin-left: auto; margin-right: auto; color: rgba(255, 255, 255, .86) !important; }
+.mx-vestido .lv-escuro .override-full-width-module-title { color: var(--m-inv-texto) !important; }
+
+/* ---------- 3, 7, 8, 9 · meia largura ---------- */
+.mx-vestido .lv-figura { position: relative; }
+.mx-vestido .lv-figura > img:first-child { box-shadow: 0 30px 60px -32px rgba(6, 18, 31, .35); }
+.mx-vestido .lv-pilula { background: var(--m-superficie) !important; color: var(--m-primaria-2) !important; }
+.mx-vestido .lv-lista-b { list-style: none; margin: 0; padding: 0; }
+.mx-vestido .lv-lista-b li { margin: 0 0 1lh; }
+.mx-vestido .lv-lista-b li:last-child { margin-bottom: 0; }
+.mx-vestido .lv-lista-b b { color: var(--m-texto); }
+/* recorte real do SoftPay flutuando sobre a foto (no lugar dos cartões de nota da referência) */
+.mx-vestido .lv-flutua {
+  position: absolute; left: -3%; bottom: 9%; width: min(46%, 260px); height: auto; border-radius: 12px; background: #fff;
+  box-shadow: 0 22px 44px -12px rgba(6, 18, 31, .35); animation: lv-flutuar 6s ease-in-out infinite alternate;
+}
+@keyframes lv-flutuar { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+@media (max-width: 767.98px) { .mx-vestido .lv-flutua { left: 10px; bottom: 22px; width: 48%; } }
+
+.mx-vestido .lv-lista-div { padding-left: 0; margin: 8px 0 20px; list-style: none; }
+.mx-vestido .lv-lista-div li { padding-left: 0 !important; }
+.mx-vestido .lv-lista-div li::before { content: none !important; }
+.mx-vestido .lv-lista-div a, .mx-vestido .lv-nota a, .mx-vestido .lv-check a { color: var(--m-primaria); }
+
+/* os dois pontos da rede marcados na foto */
+.mx-vestido .lv-pinos { position: absolute; inset: 0; pointer-events: none; }
+.mx-vestido .lv-pino {
+  position: absolute; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px 6px 8px; border-radius: 999px;
+  background: #fff; color: var(--m-texto); font: 600 .875rem/1 var(--m-f-corpo); box-shadow: 0 12px 28px -10px rgba(6, 18, 31, .45);
+}
+.mx-vestido .lv-pino svg { width: 16px; height: 21px; }
+.mx-vestido .lv-pino svg path { fill: var(--m-primaria); }
+.mx-vestido .lv-pino svg circle { fill: #fff; }
+.mx-vestido .lv-pino--1 { top: 9%; left: 6%; }
+.mx-vestido .lv-pino--2 { top: 22%; right: 6%; }
+.mx-vestido .lv-pino::after {
+  content: ""; position: absolute; left: 8px; top: 6px; width: 16px; height: 16px; border-radius: 50%;
+  background: rgba(12, 92, 158, .35); animation: lv-pulso 2.4s ease-out infinite;
+}
+@keyframes lv-pulso { from { transform: scale(.6); opacity: .9; } to { transform: scale(2.6); opacity: 0; } }
+
+.mx-vestido .lv-nota {
+  /* caixa de borda fina, no desenho dos cartões da Lightspeed (borda tertiary de 1px em toda a volta, raio 12) */
+  margin: 20px 0 0; padding: 16px 20px; border: 1px solid var(--m-borda); border-radius: 12px;
+  background: var(--m-fundo-2);
+}
+.mx-vestido .lv-nota p { margin: 0; }
+.mx-vestido .lv-nota .lv-nota-t { margin-bottom: 4px; font-family: var(--m-f-titulo); font-weight: 600; font-size: 1.125rem; }
+
+/* ladrilhos de "continue por aqui" (no lugar da grade de logos de integração) */
+.mx-vestido .lv-ladrilhos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.mx-vestido .lv-ladrilho {
+  position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; min-height: 160px;
+  padding: 16px 16px 18px; border-radius: 12px; text-decoration: none; color: #fff; overflow: hidden;
+  transition: transform .24s var(--lv-curva), box-shadow .24s;
+}
+.mx-vestido .lv-ladrilho::after {
+  content: ""; position: absolute; top: 14px; right: 14px; width: 28px; height: 28px; border-radius: 50%;
+  background: rgba(255, 255, 255, .16) url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11 11 5M6 5h5v5'/%3E%3C/svg%3E") center / 14px no-repeat;
+}
+.mx-vestido .lv-ladrilho-t { font: 600 1.125rem/1.2 var(--m-f-titulo); }
+.mx-vestido .lv-ladrilho-d { font: 400 .875rem/1.35 var(--m-f-corpo); opacity: .86; }
+.mx-vestido .lv-ladrilho--1 { background: linear-gradient(160deg, #1570bf, #0c5c9e); }
+.mx-vestido .lv-ladrilho--2 { background: linear-gradient(160deg, #123048, #06121f); }
+.mx-vestido .lv-ladrilho--3 { background: linear-gradient(160deg, #e8f3fb, #d6e8f6); color: var(--m-texto); }
+.mx-vestido .lv-ladrilho--4 { background: linear-gradient(160deg, #0c5c9e, #084a81); }
+.mx-vestido .lv-ladrilho--5 { background: linear-gradient(160deg, #eef5fb, #dcebf7); color: var(--m-texto); }
+.mx-vestido .lv-ladrilho--6 { background: linear-gradient(160deg, #0b2033, #123048); }
+.mx-vestido :is(.lv-ladrilho--3, .lv-ladrilho--5)::after {
+  background-color: rgba(12, 92, 158, .12);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%230C5C9E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 11 11 5M6 5h5v5'/%3E%3C/svg%3E");
+}
+.mx-vestido .lv-ladrilho:active { transform: scale(.98); }
+@media (hover: hover) and (pointer: fine) {
+  .mx-vestido .lv-ladrilho:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -22px rgba(6, 18, 31, .55); }
+}
+@media (max-width: 767.98px) {
+  .mx-vestido .lv-ladrilhos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .mx-vestido .lv-ladrilho { min-height: 116px; padding: 12px 12px 14px; }
+  .mx-vestido .lv-ladrilho-t { font-size: 1rem; }
+  .mx-vestido .lv-ladrilho-d { font-size: .8125rem; }
+}
+
+/* ---------- 4 · cartões com ícone 3D (o que o SoftPay não é) ---------- */
+.mx-vestido .lv-icone-faixa {
+  display: flex; align-items: center; width: 100%; aspect-ratio: 840 / 300; margin-bottom: 24px; padding-left: 7%;
+  border-radius: 12px; background: linear-gradient(160deg, var(--m-fundo-2), var(--m-superficie-2));
+}
+.mx-vestido .lv-icone-faixa img { width: auto; height: 84%; filter: drop-shadow(0 10px 14px rgba(6, 18, 31, .16)); }
+.mx-vestido .lv-fecho { max-width: 66ch; margin: 48px auto 0; }
+@media (max-width: 959.98px) {
+  .mx-vestido .lv-icones .lv-linha { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; margin: 0; }
+  .mx-vestido .lv-icones .lv-col { width: auto; margin: 0 !important; padding: 0; float: none; }
+  .mx-vestido .lv-icones .lv-cartao { margin: 0 !important; }
+  .mx-vestido .lv-icones .lv-icone-faixa { margin-bottom: 14px; }
+}
+@media (max-width: 479.98px) {
+  .mx-vestido .lv-icones .lv-cartao h3 { font-size: 1.0625rem !important; }
+  .mx-vestido .lv-icones .lv-cartao p { font-size: .9375rem; }
+  .mx-vestido .lv-fecho { margin-top: 32px; }
+}
+
+/* ---------- 6 · seis cartões com cena: print real do SoftPay + ícone 3D da casa ---------- */
+.mx-vestido .lv-cena {
+  position: relative; display: block; width: 100%; aspect-ratio: 840 / 700; margin-bottom: 24px;
+  border-radius: 12px; background: linear-gradient(160deg, var(--m-fundo-2) 0%, var(--m-superficie-2) 100%);
+}
+/* A tela encosta na borda direita e no pé da cena; o print se recorta DENTRO da própria imagem (object-fit a partir
+   do canto de cima à esquerda), sem nada passando da caixa e sem overflow escondendo estouro. */
+.mx-vestido .lv-cena-tela {
+  position: absolute; top: 11%; right: 0; bottom: 0; width: 84%; border-radius: 10px 0 12px 0; background: #fff;
+  box-shadow: 0 24px 48px -18px rgba(6, 18, 31, .35); transition: transform .4s var(--lv-curva);
+}
+.mx-vestido .lv-cena-print {
+  display: block; width: 100%; height: 100%; object-fit: cover; object-position: left top; border-radius: inherit;
+}
+.mx-vestido .lv-cena--celular .lv-cena-tela { top: 7%; right: 12%; bottom: auto; width: 34%; border-radius: 18px; }
+.mx-vestido .lv-cena--recorte .lv-cena-tela { top: 24%; right: 8%; bottom: auto; width: 66%; border-radius: 12px; }
+.mx-vestido :is(.lv-cena--celular, .lv-cena--recorte) .lv-cena-print { height: auto; }
+.mx-vestido .lv-cena-icone {
+  position: absolute; left: 5%; bottom: 4%; width: 34%; height: auto; filter: drop-shadow(0 14px 18px rgba(6, 18, 31, .22));
+  transition: transform .4s var(--lv-curva);
+}
+@media (hover: hover) and (pointer: fine) {
+  .mx-vestido .lv-cenas .lv-cartao:hover .lv-cena-tela { transform: translateY(-6px); }
+  .mx-vestido .lv-cenas .lv-cartao:hover .lv-cena-icone { transform: translateY(-4px) rotate(-3deg); }
+}
+@media (min-width: 768px) and (max-width: 959.98px) {
+  /* tablet: duas colunas de três fileiras, sem órfão */
+  .mx-vestido .lv-cenas .container > .row > .col-xs-12 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 24px; }
+  .mx-vestido .lv-cenas .lv-linha { display: contents; }
+  /* o clearfix da .row (::before/::after) vira item da grade quando a fileira é display:contents: tirar */
+  .mx-vestido .lv-cenas .lv-linha::before, .mx-vestido .lv-cenas .lv-linha::after { display: none; }
+  .mx-vestido .lv-cenas .lv-col { width: auto; margin: 0; padding: 0; }
+  .mx-vestido .lv-cenas .lv-cartao { margin: 0 !important; }
+}
+@media (max-width: 767.98px) {
+  /* celular: a cena ao lado do texto (recurso com parágrafo = ícone ao lado, nunca pilha de imagem cheia) */
+  /* uma grade só para os seis cartões: o vão entre eles é UM número (28px), sem somar margem de fileira, de coluna e
+     do botão como na grade de 12 colunas da referência */
+  .mx-vestido .lv-cenas .container > .row > .col-xs-12 { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 28px; }
+  .mx-vestido .lv-cenas .lv-linha { display: contents; }
+  .mx-vestido .lv-cenas .lv-linha::before, .mx-vestido .lv-cenas .lv-linha::after { display: none; }
+  .mx-vestido .lv-cenas .lv-col { width: auto; margin: 0 !important; padding: 0; }
+  .mx-vestido .lv-cenas .lv-cartao .gb-button-jumpoff { margin: 4px 0 0; }
+  .mx-vestido .lv-cenas .lv-cartao {
+    display: grid !important; grid-template-columns: minmax(0, 34%) minmax(0, 1fr); column-gap: 14px; align-items: start; margin: 0 !important;
+  }
+  .mx-vestido .lv-cenas .lv-cartao-midia { grid-column: 1; grid-row: 1 / span 2; }
+  .mx-vestido .lv-cenas .lv-cartao > .override-desc-with-icons-card-content { grid-column: 2; }
+  .mx-vestido .lv-cenas .lv-cartao > .gb-button-jumpoff { grid-column: 2; justify-self: start; }
+  .mx-vestido .lv-cenas .lv-cena { margin-bottom: 0; aspect-ratio: 4 / 5; }
+  .mx-vestido .lv-cenas .lv-cena-tela { top: 9%; right: 0; width: 88%; }
+  .mx-vestido .lv-cenas .lv-cena--celular .lv-cena-tela { right: 14%; width: 52%; top: 6%; border-radius: 12px; }
+  .mx-vestido .lv-cenas .lv-cena--recorte .lv-cena-tela { width: 90%; right: 5%; top: 18%; }
+  .mx-vestido .lv-cenas .lv-cena-icone { width: 46%; }
+  .mx-vestido .lv-cenas .lv-cartao h3 { font-size: 1.125rem !important; margin-bottom: 6px !important; }
+  .mx-vestido .lv-cenas .lv-cartao p { font-size: .9375rem; margin: 0 !important; }
+  .mx-vestido .lv-cenas .gb-button-jumpoff { font-size: .9375rem; }
+}
+
+/* ---------- 10 · chamada ---------- */
+.mx-vestido .lv-chamada .override-full-width-module-subtext { max-width: 60ch; margin-left: auto; margin-right: auto; }
+
+/* ---------- 11 · perguntas frequentes ---------- */
+.mx-vestido .lv-faq .module-header { padding-bottom: 32px; }
+.mx-vestido .lv-faq summary { list-style: none; min-height: 44px; }
+.mx-vestido .lv-faq summary::-webkit-details-marker { display: none; }
+.mx-vestido .lv-faq details > div p { margin: 0; color: var(--m-texto-suave); }
+.mx-vestido .lv-faq details > div a { color: var(--m-primaria); }
+.mx-vestido .lv-faq details[open] { border-color: var(--m-primaria) !important; }
+.mx-vestido .lv-faq details[open] > div { animation: lv-faixa-abre .32s var(--lv-curva) both; }
+@keyframes lv-faixa-abre { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.mx-vestido.lv-js .lv-faq:not(.lv-faq-aberto) .lv-faq-extra { display: none; }
+.mx-vestido .lv-faq-mais-caixa { display: flex; justify-content: center; }
+.mx-vestido .lv-faq-mais {
+  min-height: 48px; padding: 0 28px; border: 2px solid var(--m-texto); border-radius: 30px; background: transparent;
+  color: var(--m-texto); font: 600 1rem/1 var(--m-f-corpo); cursor: pointer; transition: background-color .2s, color .2s, transform .18s var(--lv-curva);
+}
+.mx-vestido .lv-faq-mais[hidden] { display: none; }
+.mx-vestido .lv-faq-mais:active { transform: scale(.98); }
+@media (hover: hover) and (pointer: fine) { .mx-vestido .lv-faq-mais:hover { background: var(--m-texto); color: #fff; } }
+
+/* ---------- 12 · veja também (no lugar das notas de rodapé) ---------- */
+.mx-vestido .lv-mais { border-top: 1px solid var(--m-borda); }
+.mx-vestido .lv-mais-titulo { margin: 8px 0 8px; font: 600 1.25rem/1.3 var(--m-f-titulo); color: var(--m-texto); }
+.mx-vestido .lv-mais-lista { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 32px; }
+.mx-vestido .lv-mais-lista a {
+  display: flex; align-items: center; min-height: 44px; padding: 6px 0; border-bottom: 1px solid var(--m-borda);
+  color: var(--m-texto-suave); font: 400 .9375rem/1.35 var(--m-f-corpo); text-decoration: none; transition: color .2s;
+}
+.mx-vestido .lv-mais-lista a:hover { color: var(--m-primaria); }
+@media (max-width: 767.98px) {
+  .mx-vestido .lv-mais-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+  .mx-vestido .lv-mais-lista a { font-size: .875rem; }
+}
+
+/* ---------- teto de vão: 120 px no computador, 72 no celular ---------- */
+@media (max-width: 767.98px) {
+  .mx-vestido .gb-section-spacing { padding-top: 36px; padding-bottom: 36px; }
+  .mx-vestido .desc-with-icons .module-header { padding-bottom: 24px; }
+  .mx-vestido .half-width-module, .mx-vestido .half-width-module-with-bullets { padding-top: 32px !important; padding-bottom: 32px !important; }
+}
+
+/* ---------- revelar ao entrar na tela (só a página vestida; o conteúdo nunca depende do script) ---------- */
+.mx-vestido.lv-js [data-lv-anima] {
+  opacity: 0; transform: translateY(16px);
+  transition: opacity .4s var(--lv-curva), transform .4s var(--lv-curva);
+  transition-delay: var(--lv-atraso, 0ms);
+}
+.mx-vestido.lv-js [data-lv-anima].lv-visto { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .mx-vestido.lv-js [data-lv-anima] { transform: none; transition: opacity .2s linear; }
+  .mx-vestido .lv-flutua, .mx-vestido .lv-pino::after, .mx-vestido .lv-hero-midia img { animation: none; }
+  .mx-vestido .lv-plano:not(.lv-plano--destaque) { transform: none; }
+}

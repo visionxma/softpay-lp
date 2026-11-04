@@ -1,0 +1,320 @@
+{
+ "slug": "segmentos/loja-de-celulares-e-acessorios",
+ "figura": [
+  "/assets/lojistas/celular-balcao.webp",
+  "Comerciante usando o celular sobre o balcão da loja"
+ ],
+ "title": "Sistema para Loja de Celulares e Acessórios | SoftPay",
+ "description": "Sistema para loja de celulares com controle de aparelhos e acessórios, custo e margem por categoria, PDV, fiado e nota fiscal. Teste grátis por 7 dias.",
+ "h1": "Sistema para loja de celulares e acessórios",
+ "intro": "Na mesma loja convivem dois negócios: o aparelho, que é caro e sai pouco, e o acessório, que é barato e sai o tempo todo. Eles precisam de controles diferentes — e é isso que costuma faltar.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Celulares e acessórios",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay controla IMEI de aparelho?",
+   "Não. Ele controla produto, custo, estoque e venda. Controle de IMEI e ordem de serviço não fazem parte do sistema — confirme com o suporte se isso for decisivo para a sua loja."
+  ],
+  [
+   "Consigo separar a margem de aparelho e de acessório?",
+   "Sim, desde que o custo esteja cadastrado em cada produto. É o que mostra de onde vem o lucro, já que faturamento e lucro costumam vir de categorias diferentes nesse segmento."
+  ],
+  [
+   "Dá para controlar capa por modelo de aparelho e cor?",
+   "Sim, com o cadastro de variações, disponível a partir do plano Loja."
+  ],
+  [
+   "Como controlo aparelho vendido fiado?",
+   "O saldo fica registrado no nome do cliente. A partir do plano Loja, o sistema envia cobrança por link de Pix pelo WhatsApp."
+  ],
+  [
+   "Emite nota fiscal para a venda do aparelho?",
+   "Sim, nos planos Nota Fiscal e ERP Completo. A emissão consta como em ativação — confirme a situação com o suporte antes de contratar."
+  ],
+  [
+   "Como descubro aparelho parado antes de desvalorizar?",
+   "Pela curva ABC, que separa os produtos por giro. Num segmento em que o produto perde valor com o tempo, é a informação que evita prejuízo."
+  ],
+  [
+   "Serve para assistência técnica?",
+   "O SoftPay cobre a parte comercial: venda, estoque, caixa e clientes. Não tem ordem de serviço nem controle de reparo."
+  ]
+ ],
+ "cta_title": "Descubra de onde vem o seu lucro",
+ "cta_text": "Cadastre alguns aparelhos e acessórios com custo e veja a margem de cada categoria. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Custo, variações e curva ABC"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "Fiado de valor alto"
+  ],
+  [
+   "NF-e e NFC-e",
+   "/solucoes/nfe/",
+   "Nota na venda do aparelho"
+  ],
+  [
+   "Como calcular margem",
+   "/guias/como-calcular-margem-de-lucro/",
+   "A conta por trás do preço"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "dois-negocios-no-mesmo-balcao",
+   "titulo": "Dois negócios no mesmo balcão",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Um aparelho representa centenas ou milhares de reais parados na vitrine, com margem apertada e risco de desvalorizar a cada lançamento. Uma capa custa poucos reais, tem margem larga e sai às dezenas."
+    },
+    {
+     "tipo": "p",
+     "texto": "Tratar os dois com o mesmo controle é o erro mais comum. O faturamento vem dos aparelhos, mas boa parte do <strong>lucro</strong> costuma vir dos acessórios — e sem custo cadastrado por item, isso fica invisível."
+    },
+    {
+     "tipo": "p",
+     "texto": "Some a rotina de troca rápida: modelo novo sai, o anterior precisa girar antes de perder valor. Aparelho encalhado não é só espaço ocupado, é dinheiro que encolhe sozinho."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Você não sabe qual categoria dá lucro.</strong> Vende bem em aparelho, mas o resultado do mês não acompanha.",
+      "<strong>Acessório some sem explicação.</strong> Item pequeno e barato é o que mais sai do estoque sem registro.",
+      "<strong>O aparelho antigo fica.</strong> Quando você percebe, o modelo já desvalorizou e a margem virou prejuízo.",
+      "<strong>A mesma capa tem dez versões.</strong> Modelo de aparelho, cor, material — e a planilha não dá conta.",
+      "<strong>O fiado do cliente conhecido</strong> vira caderno, e o valor de um aparelho fiado não é pequeno."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Custo e margem por item, não por média"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com o custo cadastrado em cada produto, você vê a margem do aparelho e a do acessório separadamente. É o que revela de onde vem o lucro de verdade."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Variações para acessório"
+    },
+    {
+     "tipo": "p",
+     "texto": "Capa, película e cabo existem em versões por modelo e cor. O cadastro com variações controla cada combinação com quantidade própria, a partir do plano Loja."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC para girar o que está parado"
+    },
+    {
+     "tipo": "p",
+     "texto": "A curva ABC mostra o que sustenta o faturamento e o que está encalhado. Num segmento em que o produto desvaloriza com o tempo, saber disso cedo vale dinheiro."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Fiado com valor alto"
+    },
+    {
+     "tipo": "p",
+     "texto": "Vender um aparelho fiado é diferente de fiar uma bebida. O saldo fica registrado no nome do cliente e, a partir do plano Loja, o sistema envia cobrança por link de Pix pelo WhatsApp."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Nota fiscal"
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você precisa emitir, os planos Nota Fiscal e ERP Completo cobrem NFC-e e NF-e, com cadastro fiscal e pacote do contador. A emissão consta como em ativação — confirme com o suporte."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O que ele não faz",
+     "texto": "O SoftPay controla o produto, o custo e a venda. Ele <strong>não</strong> faz controle de IMEI, ordem de serviço nem gestão de assistência técnica. Se a sua loja depende disso, confirme com o suporte antes de contratar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "um-dia-comum-do-jeito-que-acontece",
+   "titulo": "Um dia comum, do jeito que acontece",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Cliente entra para comprar um aparelho e sai com mais duas coisas:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Você registra a venda do aparelho no PDV, com a forma de pagamento.",
+      "Acrescenta a capa e a película na mesma venda — cada uma baixa do próprio estoque.",
+      "O cliente fica com metade fiada; o saldo entra no nome dele.",
+      "No fim do mês, o relatório mostra que o aparelho deu 12% de margem e os acessórios, 55%.",
+      "A curva ABC aponta dois modelos parados há 90 dias, ainda a tempo de remarcar."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sobre este exemplo",
+     "texto": "Exemplo ilustrativo do fluxo. As margens da sua loja dependem dos seus próprios dados de custo e venda."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Qual margem real do aparelho e qual a do acessório?",
+      "Quanto tenho investido em aparelhos parados na vitrine?",
+      "Que modelo não vende há mais de 60 dias?",
+      "Quanto os clientes ainda me devem em aparelho fiado?",
+      "Qual acessório mais sai junto com cada aparelho?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a loja de celulares"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial. Para quem trabalha com poucos itens"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O plano da loja de celulares:</strong> custo, curva ABC, variações de acessório, cobrança do fiado por Pix e registro pelo WhatsApp"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais emissão de NFC-e e NF-e, para quem precisa dar nota no aparelho"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos com 7 dias de teste, sem cartão. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [
+  [
+   "Sistema para pet shop",
+   "/segmentos/pet-shop/"
+  ],
+  [
+   "Sistema para loja de calçados",
+   "/segmentos/loja-de-calcados/"
+  ],
+  [
+   "Como controlar vendas fiadas",
+   "/guias/como-controlar-fiado/"
+  ],
+  [
+   "Como precificar um produto na loja",
+   "/blog/como-precificar-produto/"
+  ],
+  [
+   "Como organizar a vitrine de uma loja pequena",
+   "/blog/como-organizar-vitrine-de-loja/"
+  ],
+  [
+   "Como calcular a margem de lucro",
+   "/guias/como-calcular-margem-de-lucro/"
+  ],
+  [
+   "Quanto custa um sistema para loja?",
+   "/perguntas/quanto-custa-um-sistema-para-loja/"
+  ],
+  [
+   "Alternativa ao Bling para loja física",
+   "/comparativos/alternativa-ao-bling/"
+  ],
+  [
+   "Posso usar em vários dispositivos?",
+   "/perguntas/posso-usar-em-varios-dispositivos/"
+  ],
+  [
+   "Posso usar o SoftPay no celular?",
+   "/perguntas/posso-usar-o-softpay-no-celular/"
+  ],
+  [
+   "Caderno ou sistema?",
+   "/perguntas/caderno-ou-sistema/"
+  ],
+  [
+   "Posso migrar de outro sistema?",
+   "/perguntas/posso-migrar-de-outro-sistema/"
+  ],
+  [
+   "Sistema de gestão é seguro?",
+   "/perguntas/sistema-de-gestao-e-seguro/"
+  ],
+  [
+   "Funciona em todo o Brasil?",
+   "/perguntas/funciona-no-brasil-inteiro/"
+  ],
+  [
+   "Preciso instalar alguma coisa?",
+   "/perguntas/preciso-instalar/"
+  ],
+  [
+   "App de vendas e controle de estoque",
+   "/solucoes/sistema-de-estoque/"
+  ],
+  [
+   "Sistema para loja de bebidas",
+   "/segmentos/loja-de-bebidas/"
+  ],
+  [
+   "Sistema para distribuidora",
+   "/segmentos/distribuidora/"
+  ]
+ ],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

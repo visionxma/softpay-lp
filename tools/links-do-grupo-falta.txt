@@ -1,0 +1,6 @@
+# estado conferido em 2026-11-03
+# Fonte: caixa visionxma@gmail.com (e-mails do G2 e do Portal Software, 03/11 13h) e sonda da página do B2B Stack.
+# O script só usa este bloco se a data acima for a de HOJE; senão ele tira o bloco e avisa no relatório.
+G2: pedido para assumir o perfil do SoftPay enviado em 02/11; o G2 avisou que responde em até 2 dias úteis, por e-mail (até 04/11).
+B2B Stack: cadastro enviado em 02/11, aguardando a aprovação deles; a página pública do SoftPay sai depois disso.
+Portal Software: empresa SoftPay aprovada hoje (03/11); falta cadastrar o produto no painel deles.

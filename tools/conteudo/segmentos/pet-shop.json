@@ -1,0 +1,300 @@
+{
+ "slug": "segmentos/pet-shop",
+ "figura": [
+  "/assets/lojistas/pet-shop.webp",
+  "Dona de pet shop conferindo sacos de ração na prateleira da loja"
+ ],
+ "title": "Sistema para Pet Shop: PDV, Estoque e Fiado | SoftPay",
+ "description": "Sistema para pet shop com PDV, controle de estoque de ração e acessórios, fiado do cliente de sempre e curva ABC. Teste grátis por 7 dias, sem cartão.",
+ "h1": "Sistema para pet shop",
+ "intro": "Pet shop mistura dois negócios: a loja, que vende ração e acessório com estoque, e o serviço de banho e tosa, que é agenda. O SoftPay organiza a parte de loja — e esta página é honesta sobre a parte que ele não faz.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Pet shop",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay tem agenda de banho e tosa?",
+   "Não. O SoftPay é sistema de loja: PDV, estoque, caixa, fiado e clientes. Agendamento de horário, ficha do animal e controle de tosador ficam de fora. Se o serviço é a maior parte do seu faturamento, um sistema veterinário específico atende melhor."
+  ],
+  [
+   "Serve para pet shop pequeno, de uma pessoa só?",
+   "Sim. O plano Comércio, de R$ 69/mês, cobre PDV, caixa, fiado e estoque essencial com 1 usuário."
+  ],
+  [
+   "Controla a validade da ração e dos medicamentos?",
+   "Esse é um ponto a confirmar com o suporte antes de contratar. Em pet shop o controle de validade é importante e não deve ser assumido sem verificação."
+  ],
+  [
+   "Consigo controlar o fiado do cliente que paga todo dia 10?",
+   "Sim. O fiado está no plano Comércio, com saldo e histórico por cliente. A partir do plano Loja, o sistema envia cobrança por link de Pix pelo WhatsApp."
+  ],
+  [
+   "Dá para saber quais clientes compram ração todo mês?",
+   "Sim, pelo cadastro de clientes e pelo histórico de vendas. É o dado que mais se perde num pet shop sem sistema."
+  ],
+  [
+   "Vendo ração a granel, por peso. Funciona?",
+   "O SoftPay não integra com balança. O item entra como produto comum, com o valor digitado no PDV. Se a maior parte do faturamento é venda por peso, leve isso em conta na decisão."
+  ],
+  [
+   "Preciso emitir nota fiscal?",
+   "Depende do seu regime — confirme com o seu contador. Se precisar, a emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação."
+  ],
+  [
+   "Funciona no celular?",
+   "Sim. O SoftPay roda no navegador, então você consulta estoque e preço pelo celular enquanto atende ou repõe."
+  ]
+ ],
+ "cta_title": "Organize a loja do seu pet shop",
+ "cta_text": "Cadastre a ração e os itens de maior giro, passe as primeiras vendas no PDV e veja o estoque acompanhar sozinho. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Custo, quantidade e curva ABC"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "Quem deve, quanto e desde quando"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Histórico de quem compra sempre"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Venda rápida no balcão"
+  ],
+  [
+   "Mercadinho",
+   "/segmentos/mercadinho/",
+   "Outro comércio de bairro com fiado"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "O passo a passo da migração"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-rotina-de-um-pet-shop",
+   "titulo": "A rotina de um pet shop",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O cliente de pet shop é recorrente por natureza: a ração acaba todo mês, o antipulgas tem prazo, o banho tem frequência. Isso é uma vantagem enorme — e vira problema quando ninguém registra quem comprou o quê e quando."
+    },
+    {
+     "tipo": "p",
+     "texto": "Ao mesmo tempo, o estoque é heterogêneo. Saco de ração de 15 kg ocupa espaço e custa caro; coleira e petisco são baratos e giram devagar. Tratar tudo igual é como o dinheiro fica parado sem ninguém perceber."
+    },
+    {
+     "tipo": "p",
+     "texto": "E há o fiado do cliente de sempre, aquele que leva a ração e paga no dia 10. Num bairro, esse cliente é o que sustenta a loja — e o caderno onde ele está anotado é o ponto mais frágil do negócio."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>A ração de maior giro acaba.</strong> O cliente vem buscar o que sempre compra, não tem, e leva no concorrente — junto com o resto da compra.",
+      "<strong>Dinheiro parado em item que não sai.</strong> Brinquedo e acessório encalham fácil, e sem curva ABC ninguém vê quanto do capital está preso ali.",
+      "<strong>O fiado depende de quem anotou.</strong> Se a pessoa falta, ninguém sabe o saldo — e cobrar cliente de bairro sem registro é constrangedor.",
+      "<strong>Você não sabe quem é o cliente recorrente.</strong> Sem cadastro, quem compra ração todo mês é tratado como se fosse a primeira vez.",
+      "<strong>A margem some entre produto caro e produto barato.</strong> Sem custo por item, o resultado do mês é uma surpresa."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "PDV que atende loja e balcão"
+    },
+    {
+     "tipo": "p",
+     "texto": "A venda é registrada, o troco calculado e o estoque baixado na hora. Serve tanto para a compra grande de ração quanto para o petisco levado no impulso."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Estoque de ração, acessório e medicamento"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cada item com custo e preço de venda. Como a baixa é automática a cada venda, a quantidade em sistema acompanha a prateleira — e você vê o que está acabando antes de o cliente perguntar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Fiado do cliente de sempre"
+    },
+    {
+     "tipo": "p",
+     "texto": "O fiado fica no nome do cliente, com histórico e saldo. A partir do plano Loja, o SoftPay envia a cobrança por link de Pix no WhatsApp, o que resolve a parte mais desconfortável de vender fiado para o vizinho."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cadastro de clientes e histórico"
+    },
+    {
+     "tipo": "p",
+     "texto": "Quem comprou, o quê e quando. É o que permite saber que a ração de um cliente deve estar acabando — a informação mais valiosa de um pet shop, e a que mais se perde sem sistema."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC: onde está o seu dinheiro"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, a curva ABC separa o que sustenta o faturamento do que só ocupa prateleira. Num pet shop, costuma revelar que poucos itens de ração pagam a loja e dezenas de acessórios estão parados."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-num-pet-shop",
+   "titulo": "O que o SoftPay não faz num pet shop",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Este é o ponto mais importante desta página, e por isso ele vem antes do preço:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não tem agenda de banho e tosa.</strong> O SoftPay é sistema de loja: PDV, estoque, caixa e fiado. Agendamento de horário, ficha do animal e controle de tosador ficam de fora. Se a maior parte do seu faturamento é serviço, um sistema veterinário específico atende melhor.",
+      "<strong>Não tem prontuário nem ficha clínica do animal.</strong> Vacinação, histórico de saúde e receita não são registrados.",
+      "<strong>Não tem controle de validade confirmado.</strong> Em ração e medicamento isso pesa. Confirme com o suporte antes de contratar contando com esse recurso.",
+      "<strong>Não integra com balança.</strong> Ração vendida a granel entra como produto comum, com o valor digitado no PDV.",
+      "<strong>Não faz delivery nem roteiro de entrega.</strong> A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Para quem esta página é, e para quem não é",
+     "texto": "Sendo direto: se o seu pet shop é <strong>loja com banho e tosa no fundo</strong>, o SoftPay resolve a parte que move o seu dinheiro. Se é <strong>clínica ou serviço com uma loja pequena junto</strong>, provavelmente não é o sistema certo — e é melhor saber agora do que depois de contratar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-conta-que-todo-dono-de-pet-shop-precisa-fazer",
+   "titulo": "A conta que todo dono de pet shop precisa fazer",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Ração tem margem apertada e ocupa capital; acessório tem margem melhor e gira devagar. O resultado depende da mistura — e ela só aparece com custo cadastrado."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Vendi R$ 18.400 no mês. Quanto ficou?",
+     "rodape": "Números fictícios, só para mostrar o raciocínio. Com custo e quantidade cadastrados, essa conta deixa de ser estimativa. O passo a passo está no guia <a href=\"/guias/como-calcular-lucro-da-loja/\">como calcular o lucro da loja</a>.",
+     "linhas": [
+      {
+       "rotulo": "Vendas do mês",
+       "valor": "R$ 18.400,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Custo dos produtos vendidos (CMV)",
+       "valor": "&minus; R$ 12.900,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Lucro bruto",
+       "valor": "R$ 5.500,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Aluguel, energia, funcionário",
+       "valor": "&minus; R$ 3.600,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Resultado estimado",
+       "valor": "R$ 1.900,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto ainda tenho da ração que mais vende?",
+      "Quem está devendo fiado, quanto e desde quando?",
+      "Quais clientes compram ração todo mês?",
+      "Quanto de dinheiro está parado em acessório que não gira?",
+      "Qual a minha margem depois do custo da mercadoria?",
+      "O caixa de ontem bateu?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para o pet shop"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "<strong>O ponto de partida:</strong> PDV, caixa, fiado e estoque essencial, com 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Quando você quer curva ABC, cobrança de fiado por Pix no WhatsApp e catálogo online. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Para quem precisa emitir NF-e e NFC-e e tem equipe maior. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

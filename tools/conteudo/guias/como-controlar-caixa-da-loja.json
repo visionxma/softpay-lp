@@ -1,0 +1,220 @@
+{
+ "artigo": true,
+ "slug": "guias/como-controlar-caixa-da-loja",
+ "passos": [
+  [
+   "Defina o fundo de troco",
+   "Comece o dia com um valor fixo em espécie e registre esse valor.",
+   "passo-1-defina-o-fundo-de-troco"
+  ],
+  [
+   "Registre a venda com a forma de pagamento",
+   "Dinheiro, Pix, débito e crédito não são a mesma coisa na hora de conferir.",
+   "passo-2-registre-a-venda-com-a-forma-de-pagamento"
+  ],
+  [
+   "Registre as saídas, inclusive as pequenas",
+   "Toda retirada precisa ser registrada, incluindo a sangria para o cofre ou o banco.",
+   "passo-3-registre-as-saidas-inclusive-as-pequenas"
+  ],
+  [
+   "Feche o caixa todo dia",
+   "Compare o que o sistema registrou com o que existe fisicamente na gaveta.",
+   "passo-4-feche-o-caixa-todo-dia"
+  ],
+  [
+   "Não confunda caixa com lucro",
+   "Parte do dinheiro na gaveta é o custo da mercadoria que você vai repor.",
+   "passo-5-nao-confunda-caixa-com-lucro"
+  ]
+ ],
+ "figura": [
+  "/assets/lojistas/mercadinho.webp",
+  "Lojista no balcão do mercadinho, onde o caixa é fechado"
+ ],
+ "title": "Como Controlar o Caixa de uma Loja: Guia Prático | SoftPay",
+ "description": "Como fazer o controle e o fechamento de caixa da loja: rotina diária, conferência, sangria e o que fazer quando não bate. Guia passo a passo.",
+ "h1": "Como controlar o caixa de uma loja",
+ "intro": "Resposta curta: registre toda entrada e toda saída no momento em que acontecem e confira o caixa no fim de cada dia. Caixa que só é conferido no fim do mês não é controle, é arqueologia.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como controlar o caixa",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Com que frequência devo fechar o caixa?",
+   "Todo dia, ao fim do expediente. É o que permite explicar uma diferença enquanto ela ainda é lembrada."
+  ],
+  [
+   "O que fazer quando o caixa não bate?",
+   "Verifique primeiro as saídas não registradas e os erros de troco. Diferença pequena e recorrente costuma ser troco; diferença grande e isolada costuma ser retirada sem registro."
+  ],
+  [
+   "Preciso separar as formas de pagamento?",
+   "Sim. Dinheiro está na gaveta hoje; cartão e Pix entram depois na conta. Sem separar, o fechamento não fecha."
+  ],
+  [
+   "O que é sangria de caixa?",
+   "É a retirada de dinheiro do caixa durante o expediente, normalmente para o cofre ou o banco, por segurança. Precisa ser registrada como saída."
+  ],
+  [
+   "Como o SoftPay ajuda?",
+   "A venda registrada no PDV entra no caixa já com a forma de pagamento, e o fechamento compara o registrado com a contagem física."
+  ]
+ ],
+ "cta_title": "Feche seu primeiro caixa hoje",
+ "cta_text": "Registre o fundo de troco, passe as vendas do dia no PDV e faça a conferência no fim do expediente.",
+ "related": [
+  [
+   "Sistema financeiro",
+   "/solucoes/sistema-financeiro/",
+   "Caixa e resultado"
+  ],
+  [
+   "PDV no celular",
+   "/solucoes/sistema-pdv/",
+   "Onde a venda é registrada"
+  ],
+  [
+   "Como calcular lucro",
+   "/guias/como-calcular-lucro-da-loja/",
+   "Caixa não é lucro"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-diferenca-entre-gaveta-e-caixa",
+   "titulo": "A diferença entre gaveta e caixa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Gaveta é onde o dinheiro fica. Caixa é o registro do que entrou e do que saiu. Muita loja pequena tem gaveta e acha que tem caixa — e é por isso que a conta nunca fecha."
+    },
+    {
+     "tipo": "p",
+     "texto": "O sintoma é sempre o mesmo: sobra ou falta dinheiro no fim do dia e ninguém consegue explicar. Não porque houve desonestidade, mas porque não existe registro contra o qual comparar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-1-defina-o-fundo-de-troco",
+   "titulo": "Passo 1 — Defina o fundo de troco",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Comece o dia com um valor fixo em espécie para troco e registre esse valor. Sem um ponto de partida conhecido, qualquer conferência no fim do dia é impossível."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-2-registre-a-venda-com-a-forma-de-pagamento",
+   "titulo": "Passo 2 — Registre a venda com a forma de pagamento",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Dinheiro, Pix, débito e crédito não são a mesma coisa na hora de conferir. O dinheiro está na gaveta; o resto chega depois, na conta. Se a forma de pagamento não é registrada, o fechamento não tem como bater."
+    },
+    {
+     "tipo": "p",
+     "texto": "Sem computador no balcão, um <a href=\"/solucoes/sistema-pdv/\">PDV no celular</a> resolve: cada venda já sai com a forma de pagamento marcada e entra no fechamento. Para quem cuida da loja com uma ou duas pessoas, o <a href=\"/segmentos/pequeno-comercio/\">programa de vendas para pequeno comércio</a> junta PDV, caixa e fiado no mesmo lugar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-3-registre-as-saidas-inclusive-as-pequenas",
+   "titulo": "Passo 3 — Registre as saídas, inclusive as pequenas",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Pagar o motoboy, comprar água, adiantar dinheiro para alguém. Essas saídas somem da memória e aparecem como “falta” no fechamento. Toda retirada precisa ser registrada — inclusive a sangria, quando você tira dinheiro do caixa para o cofre ou para o banco."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-4-feche-o-caixa-todo-dia",
+   "titulo": "Passo 4 — Feche o caixa todo dia",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O fechamento compara o que o sistema registrou com o que existe fisicamente:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Fechamento de um dia",
+     "rodape": "Números fictícios. O valor da diferença importa menos que o hábito: conferida no mesmo dia, ela ainda tem explicação.",
+     "linhas": [
+      {
+       "rotulo": "Fundo de troco inicial",
+       "valor": "R$ 150,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Vendas em dinheiro",
+       "valor": "+ R$ 1.240,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Sangria para o cofre",
+       "valor": "− R$ 900,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "Pagamentos em dinheiro",
+       "valor": "− R$ 85,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Deveria ter na gaveta",
+       "valor": "R$ 405,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Contagem física",
+       "valor": "R$ 397,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "= Diferença a explicar",
+       "valor": "− R$ 8,00",
+       "classe": "result final"
+      }
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Como ler a diferença",
+     "texto": "Diferença pequena e recorrente costuma ser erro de troco. Diferença grande e isolada costuma ser saída não registrada. Diferença crescente merece atenção real."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-5-nao-confunda-caixa-com-lucro",
+   "titulo": "Passo 5 — Não confunda caixa com lucro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Dinheiro na gaveta não é lucro. Parte dele é o custo da mercadoria que você vai repor. Vender bem e ter caixa cheio no dia 5 não significa que o mês fechou no azul — essa conta é outra, e está no guia de <a href=\"/guias/como-calcular-lucro-da-loja/\">como calcular o lucro da loja</a>."
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

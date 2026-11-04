@@ -1,0 +1,33 @@
+{
+  "regras": [
+    { "seletor": "TextWithArrow_light__Sz7KG>*", "prop": "color", "cor": "#fff", "papel": "sobre-primaria" },
+    { "seletor": "data-style-theme-updated-2025] .mAZF70It--TextWithArrow_cta", "prop": "color", "cor": "#000", "papel": "sobre-destaque" }
+  ],
+  "cores": {
+    "#228800": "primaria",
+    "#225522": "primaria-2",
+    "#3271ab": "primaria-2",
+    "#004400": "alta",
+    "#000000": "texto",
+    "#333333": "texto",
+    "#4b4b4b": "texto-suave",
+    "#5d5d5d": "texto-suave",
+    "#727272": "texto-fraco",
+    "#d5d5d5": "borda",
+    "#ededed": "borda",
+    "#ffffff": "fundo",
+    "#f9f9f9": "superficie",
+    "#b6fb6f": "destaque"
+  },
+  "fontes": {
+    "Graphik": "corpo",
+    "graphik": "corpo",
+    "graphik-light": "corpo",
+    "graphik-medium": "corpo",
+    "Helvetica": "corpo",
+    "altform": "titulo",
+    "Formula-Black": "titulo",
+    "sans-serif": "manter",
+    "sans-serif)": "manter"
+  }
+}

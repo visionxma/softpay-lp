@@ -1,0 +1,201 @@
+{
+ "artigo": true,
+ "slug": "guias/como-organizar-uma-loja",
+ "figura": [
+  "/assets/lojistas/mercadinho.webp",
+  "Lojista organizando a rotina do mercadinho"
+ ],
+ "title": "Como Organizar uma Loja: Guia Prático de Gestão | SoftPay",
+ "description": "Como organizar a gestão de uma loja do zero: cadastro de produtos, rotina de caixa, estoque, fiado e clientes. Um roteiro em etapas realista.",
+ "h1": "Como organizar uma loja",
+ "intro": "Resposta curta: organize uma coisa de cada vez, na ordem em que cada uma sustenta a próxima. Tentar arrumar tudo no mesmo mês é o motivo mais comum de desistir na segunda semana.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Como organizar uma loja",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Por onde eu começo?",
+   "Pelo cadastro dos produtos de maior giro e por fazer toda venda passar pelo mesmo lugar. Sem esses dois, nenhuma outra etapa se sustenta."
+  ],
+  [
+   "Quanto tempo leva para organizar uma loja?",
+   "Com foco em uma etapa por semana, cerca de um mês para ter uma base confiável. Tentar fazer tudo de uma vez costuma terminar em desistência."
+  ],
+  [
+   "Preciso parar a loja para organizar?",
+   "Não. O método é justamente ir cadastrando e registrando durante o funcionamento normal, começando pelo que gira mais."
+  ],
+  [
+   "Dá para fazer isso em planilha?",
+   "Dá para começar, mas a planilha depende de alguém lembrar de dar baixa depois da venda — e é aí que o controle se perde conforme o volume cresce."
+  ],
+  [
+   "O teste de 7 dias dá tempo?",
+   "Dá para cobrir a primeira etapa: cadastrar os itens de maior giro e passar as vendas pelo PDV. É o suficiente para avaliar se faz sentido."
+  ]
+ ],
+ "cta_title": "Comece pela etapa 1 hoje",
+ "cta_text": "Cadastre os produtos que você vende toda semana e passe as vendas do dia pelo sistema.",
+ "related": [
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "Etapa do estoque"
+  ],
+  [
+   "Como controlar o caixa",
+   "/guias/como-controlar-caixa-da-loja/",
+   "Rotina diária"
+  ],
+  [
+   "Pequeno comércio",
+   "/segmentos/pequeno-comercio/",
+   "Para lojas pequenas"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-ordem-importa-mais-que-a-velocidade",
+   "titulo": "A ordem importa mais que a velocidade",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Existe uma sequência natural: sem cadastro de produto não há venda registrada; sem venda registrada não há estoque confiável; sem estoque confiável não há custo; sem custo não há lucro conhecido. Pular etapas produz números que ninguém acredita — e um sistema abandonado em duas semanas."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "etapa-1-cadastre-os-produtos-que-giram",
+   "titulo": "Etapa 1 — Cadastre os produtos que giram",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Não tente cadastrar o catálogo inteiro. Comece pelos itens que você vende toda semana, com preço de venda, custo e categoria. Complete o resto conforme repõe."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "etapa-2-faca-toda-venda-passar-pelo-mesmo-lugar",
+   "titulo": "Etapa 2 — Faça toda venda passar pelo mesmo lugar",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Inclusive a fiada, a do conhecido e a que o funcionário fez. Enquanto existir venda fora do registro, todo relatório será uma aproximação."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "etapa-3-estabeleca-a-rotina-de-caixa",
+   "titulo": "Etapa 3 — Estabeleça a rotina de caixa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Fundo de troco no início, forma de pagamento registrada em cada venda, saídas anotadas e conferência no fim do dia. É a rotina que mais rápido devolve resultado visível."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "etapa-4-traga-o-fiado-para-dentro",
+   "titulo": "Etapa 4 — Traga o fiado para dentro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Lance os saldos em aberto no nome de cada cliente. Só de enxergar o total, muita loja descobre que tem mais dinheiro na rua do que no banco."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "etapa-5-so-entao-olhe-os-numeros",
+   "titulo": "Etapa 5 — Só então olhe os números",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Com produto cadastrado, venda registrada, caixa fechado e fiado no sistema, os relatórios passam a significar alguma coisa. Aí vale calcular <a href=\"/guias/como-calcular-lucro-da-loja/\">lucro</a> e <a href=\"/guias/como-calcular-margem-de-lucro/\">margem</a> e usar a curva ABC para decidir compras."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "um-cronograma-realista",
+   "titulo": "Um cronograma realista",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Período",
+      "Foco",
+      "Resultado esperado"
+     ],
+     "linhas": [
+      [
+       "Semana 1",
+       "Cadastro dos itens de maior giro",
+       "Vendas já passam pelo sistema"
+      ],
+      [
+       "Semana 2",
+       "Rotina de caixa e fechamento diário",
+       "Caixa começa a bater"
+      ],
+      [
+       "Semana 3",
+       "Fiado em aberto lançado",
+       "Total a receber visível"
+      ],
+      [
+       "Semana 4",
+       "Conferência de estoque dos itens A",
+       "Estoque confiável no que importa"
+      ],
+      [
+       "Mês 2",
+       "Leitura de margem e curva ABC",
+       "Decisão de compra com base em dado"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O período de teste de 7 dias cobre bem a primeira etapa — o suficiente para você saber se o sistema faz sentido antes de pagar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-costuma-dar-errado",
+   "titulo": "O que costuma dar errado",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Tentar cadastrar tudo antes de começar a usar.",
+      "Deixar uma parte das vendas fora do registro.",
+      "Adiar o fechamento de caixa para “quando sobrar tempo”.",
+      "Cadastrar preço e esquecer o custo.",
+      "Trocar de método no meio do caminho."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Referências sobre CMV e margem: <a href=\"https://www.totvs.com/blog/gestao-varejista/cmv/\" target=\"_blank\" rel=\"noopener nofollow\">TOTVS</a>, <a href=\"https://www.serasaexperian.com.br/conteudos/cmv-o-que-e/\" target=\"_blank\" rel=\"noopener nofollow\">Serasa Experian</a> e <a href=\"https://conteudo.stone.com.br/o-que-e-cmv-como-calcular/\" target=\"_blank\" rel=\"noopener nofollow\">Stone</a>. Para obrigações fiscais, consulte o seu contador e os portais oficiais (gov.br, Receita Federal e SEFAZ do seu estado).</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-06"
+}

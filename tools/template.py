@@ -273,7 +273,9 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
     <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
 
-    <nav class="nav" aria-label="Principal">
+    <!-- data-topo: "sim" no alto da página (barra estendida de ponta a ponta,
+         clara: data-topo-tom), "nao" depois de rolar (cápsula), igual à home. -->
+    <nav class="nav" aria-label="Principal" data-topo="sim" data-topo-tom="claro">
         <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
             <img src="/assets/logo-232.png" width="232" height="84" alt="SoftPay" />
         </a>
@@ -297,6 +299,19 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
             </button>
         </div>
     </nav>
+    <script>
+        /* topo estendido × cápsula: uma escrita por quadro, só quando o estado muda */
+        (function () {
+            var nav = document.querySelector('.nav'), pedido = 0, atual = '';
+            function marcar() {
+                pedido = 0;
+                var v = window.scrollY < 8 ? 'sim' : 'nao';
+                if (v !== atual) { atual = v; nav.setAttribute('data-topo', v); }
+            }
+            window.addEventListener('scroll', function () { if (!pedido) pedido = requestAnimationFrame(marcar); }, { passive: true });
+            marcar();
+        })();
+    </script>
 
     <div class="gaveta" id="gaveta" data-aberta="nao">
         <a href="/solucoes/">Soluções</a>

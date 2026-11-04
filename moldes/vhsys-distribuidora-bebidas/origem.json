@@ -1,0 +1,107 @@
+{
+  "_fonte": "https://www.vhsys.com.br/segmentos/sistema-erp-para-distribuidora-de-bebidas/, textos lidos do HTML renderizado pela captura de 03/11/2026 (pagina.html). Só a prova usa este arquivo.",
+  "hero": {
+    "h1a": "Sistema de gestão para",
+    "h1b": "loja e distribuidora de bebidas",
+    "intro": "Venda no balcão com <strong>agilidade e segurança</strong>, controle seu estoque de bebidas e acompanhe o dinheiro que entra e sai em um só lugar.",
+    "botao": "Experimente grátis",
+    "nota": "Cadastro rápido e sem burocracia – <strong>comece seu teste grátis em segundos</strong>, sem cartão de crédito!",
+    "pilulas": ["vhsys ERP", "vhsys PDV", "vhsys Store", "vhsys App", "vhsys Hub"]
+  },
+  "tudo": {
+    "selo": "vhsys ERP",
+    "titulo": "Tudo o que sua loja ou distribuidora de bebidas precisa em um só sistema",
+    "texto": "Automatize as tarefas do dia a dia para atender seus clientes e acompanhar o lucro do seu negócio com mais facilidade.",
+    "cartoes": [
+      {
+        "titulo": "Venda por unidade, fardo ou caixa",
+        "itens": [
+          "Tenha <strong>listas de preços diferentes</strong> para varejo e atacado.",
+          "Venda a mesma bebida <strong>por unidade ou em embalagem fechada</strong>, como fardo e caixa.",
+          "Defina condições comerciais diferentes para <strong>bares, eventos e outros clientes que compram em maior volume</strong>.",
+          "Evite cadastros duplicados: <strong>um único produto pode ter diferentes preços e formas de venda</strong>."
+        ],
+        "ref": "tudo-1"
+      },
+      {
+        "titulo": "Controle de lotes e validade",
+        "itens": [
+          "<strong>Acompanhe os lotes dos produtos</strong> e saiba exatamente quais bebidas estão no estoque.",
+          "Tenha o <strong>prazo de validade registrado</strong> para facilitar o acompanhamento dos produtos.",
+          "Evite que <strong>cervejas artesanais, sucos e outras bebidas perecíveis</strong> fiquem esquecidos no estoque.",
+          "Tenha mais controle para <strong>identificar produtos próximos do vencimento</strong> e priorizar sua saída."
+        ],
+        "ref": "tudo-2"
+      }
+    ]
+  },
+  "recursos": {
+    "titulo": "Mais recursos do ERP que vão deixar a rotina da sua loja muito",
+    "destaque": "mais rápida e segura",
+    "abas": ["Controle de vendas", "Controle de estoque", "Controle financeiro", "Cadastro", "Notas fiscais", "Meios de pagamento"],
+    "itens": [
+      "Frente de caixa com <strong>leitura de código de barras</strong>",
+      "Abertura, sangria e <strong>fechamento de caixa</strong>",
+      "Venda rápida com <strong>emissão de NFC-e</strong>",
+      "Trocas e devoluções direto <strong>no caixa</strong>",
+      "Pedidos e orçamentos para <strong>bares, eventos e empresas</strong>",
+      "Preços diferentes para <strong>varejo e atacado</strong>",
+      "Pré-vendas e orçamentos <strong>direto no caixa</strong>"
+    ]
+  },
+  "gestao": {
+    "titulo": "Quanto mais sua loja vende, mais simples deve ser a gestão",
+    "texto": "O sistema <strong>vhsys</strong> coloca a gestão da sua loja ou distribuidora de bebidas no lugar, para você trabalhar com mais controle e menos correria.",
+    "itens": [
+      ["Mais tempo para vender", "Automatize tarefas da rotina e deixe de gastar seu dia conferindo informações, lançando dados e fazendo controles manualmente."],
+      ["Mais tranquilidade no dia a dia", "Saiba o que está acontecendo no negócio sem precisar parar a operação para conferir tudo."],
+      ["Menos desperdício", "Evite perdas de produtos, erros de venda e dinheiro parado onde não deveria."],
+      ["Decisões mais rápidas", "Tenha no sistema as informações que precisa para decidir o que comprar, vender e ajustar na sua <strong>loja ou distribuidora de bebidas</strong>."],
+      ["Mais confiança para crescer", "Tenha uma gestão que acompanhe o aumento das vendas, dos pedidos e dos clientes da sua distribuidora de bebidas."],
+      ["Mais margem no fim do mês", "Entenda melhor o resultado das vendas e encontre oportunidades para <strong>vender e lucrar mais</strong>."]
+    ]
+  },
+  "pdv": {
+    "selo": "vhsys PDV",
+    "titulo": "Quer só a frente de caixa? Conheça o <strong>vhsys PDV</strong>",
+    "texto": "Tenha o <strong>ERP com o PDV incluso</strong> para integrar vendas, estoque, financeiro, notas fiscais e vendedores em uma só gestão. Mas, se precisar apenas vender no balcão, tenha o PDV separadamente.",
+    "itens": [
+      ["Frente de caixa", "Vendas no balcão, abertura, sangria, reforço e fechamento de caixa"],
+      ["Emissão de notas", "NFC-e e outros tipos de notas fiscais"],
+      ["Cadastro de produtos", "Entrada por XML e importação automática de notas"]
+    ]
+  },
+  "planos": { "titulo": "Planos e preços" },
+  "pratica": {
+    "titulo": "Veja na prática como o sistema <strong>vhsys</strong> funciona em uma loja e distribuidora de bebidas",
+    "botao": "Experimente grátis",
+    "ref": "pratica"
+  },
+  "palma": {
+    "selo": "vhsys App",
+    "titulo": "Sua loja na palma da mão",
+    "texto": "Tenha as informações da sua distribuidora de bebidas sempre por perto, mesmo quando você não está no balcão.",
+    "itens": ["Acesse pelo computador, sem instalar nada", "Gerencie informações pelo app <strong>vhsys</strong> no celular", "Integre suas vendas na maquininha de cartão"],
+    "botao": "Experimente grátis",
+    "ref": "palma"
+  },
+  "conecte": {
+    "selo": "vhsys Store",
+    "titulo": "Conecte o seu negócio a mais ferramentas",
+    "texto": "Na <strong>vhsys</strong> Store, você encontra integrações e aplicativos para ampliar o sistema conforme a necessidade da sua empresa.",
+    "itens": ["CRM e vendas", "Automação", "Atendimento", "Financeiro", "Contabilidade", "Logística", "Gestão de tarefas", "Análise de crédito", "API e integrações"]
+  },
+  "faq": {
+    "titulo": "Perguntas frequentes",
+    "apoio": "Ainda ficou alguma dúvida? Ligue grátis no <a href=\"#\">0800 007 0017</a>.",
+    "itens": [
+      ["Para qual tamanho de distribuidora de bebidas o vhsys é indicado?", "O sistema é ideal para loja e distribuidora de bebidas de micro, pequeno e médio porte (atacado e varejo) que precisam organizar o estoque, automatizar vendas e controlar o financeiro sem complicação."],
+      ["O sistema vhsys atende vendas no atacado e no varejo ao mesmo tempo?", ""],
+      ["Como o vhsys ajuda no controle de estoque de fardos e unidades?", ""],
+      ["É possível emitir notas fiscais para vendas de balcão e atacado?", ""],
+      ["Como funciona a entrada de mercadorias via fornecedores no vhsys?", ""],
+      ["O sistema possui aplicativo para realizar vendas externas?", ""],
+      ["Como faço para testar o vhsys na minha distribuidora de bebidas?", ""]
+    ]
+  }
+}

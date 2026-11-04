@@ -1,0 +1,95 @@
+{
+  "lang": "en",
+  "nota": "Textos e imagens da própria referência (lightspeedhq.com/pos/retail, captura de 03/11/2026). Só a prova usa; nunca vai para a rota.",
+  "hero": {
+    "pre": "Retail POS system &amp; payments",
+    "titulo": "Maximize efficiency and team happiness",
+    "intro": "Set your store apart with Lightspeed. Delight your customers. Transform inventory operations by managing stores and suppliers in one platform. Get insights you need to scale and succeed.",
+    "botoes": [
+      { "texto": "Watch a demo", "href": "#demo" },
+      { "texto": "Request a quote", "href": "#quote" }
+    ],
+    "img": { "src": "https://assets.lightspeedhq.com/img/69c34079-retail_business-type_product_its-name_hero-united.webp", "w": 1520, "h": 1141, "alt": "" }
+  },
+  "numeros": {
+    "titulo": "Powering gamechanging businesses in over 100 countries",
+    "cartoes": [
+      { "valor": "$98.1B", "texto": "Processed in GTV through Lightspeed’s platform in fiscal 2026 *" },
+      { "valor": "~146K", "texto": "~146K locations around the world trust Lightspeed  **" },
+      { "valor": "20", "texto": "Years of industry expertise" }
+    ]
+  },
+  "escuro": {
+    "titulo": "Missed the Lightspeed Edge 2026 product showcase? Watch the replay",
+    "textos": ["On-demand webinar"],
+    "botao": { "texto": "Watch now", "href": "#watch" },
+    "imgCel": { "src": "https://assets.lightspeedhq.com/img/5c4de835-t46427_post-event-distro_full-width-module-added-to-retail-page_mobile-2.webp", "w": 1520, "h": 869, "alt": "Edge Virtual 2026 on-demand webinar" },
+    "imgPc": { "src": "https://assets.lightspeedhq.com/img/4ab93bd9-t46427_post-event-distro_full-width-module-added-to-retail-page_desktop-2.webp", "w": 1520, "h": 560, "alt": "Edge Virtual 2026 on-demand webinar" }
+  },
+  "atacado": {
+    "pilula": "BUILT-IN WHOLESALE",
+    "titulo": "Retail software to simplify and scale.",
+    "abertura": "Streamline your operations and accelerate growth with personalized workflows, payment capabilities and intuitive features that make life easier for your team.",
+    "itens": [
+      ["Expert help 24/7", "Enjoy dedicated and fast 24/7 support from retail specialists who know your business."],
+      ["Unified commerce", "Unite all your stores and channels to provide seamless experiences that delight customers at every touchpoint."],
+      ["Gain visibility", "Get real time insights into your sales, product and team performance with customizable reports available anywhere, anytime."]
+    ],
+    "img": { "src": "https://assets.lightspeedhq.com/img/b54d335f-retail_industrypos_halfwidth-1.jpg", "w": 1000, "h": 700, "alt": "" }
+  },
+  "beneficios": {
+    "titulo": "Manage locations and suppliers from a unified retail POS and payments platform that evolves with your business",
+    "subtitulo": "Get industry-leading tools, payment technology and integrations that enable you to keep up in today's fast-moving and competitive retail landscape.",
+    "cartoes": [
+      { "img": { "src": "https://assets.lightspeedhq.com/img/f5d20eea-retail_industrypos_benefits-1.jpg", "w": 840, "h": 300, "alt": "" }, "titulo": "Close gaps", "texto": "Improve inventory accuracy across every location and warehouse.", "itens": ["Order wholesale from top brands", "Track shrink and discrepancies", "Manage online orders"], "link": { "texto": "More on Inventory Management", "href": "#inv" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/9308d71e-retail_industrypos_benefits-2.jpg", "w": 840, "h": 300, "alt": "" }, "titulo": "See everything", "texto": "Get full visibility across your business.", "itens": ["Track real-time updates", "Spot trends across locations", "Powerful forecasting tools"], "link": { "texto": "More on Insights", "href": "#ins" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/f12fe2b0-retail_industrypos_benefits-3.jpg", "w": 840, "h": 300, "alt": "" }, "titulo": "Grow your business", "texto": "Attract more customers, no matter where they shop.", "itens": ["Automate your marketing", "Communicate on all channels", "Segment customers based on data"], "link": { "texto": "More on Advanced Marketing", "href": "#mkt" } }
+    ]
+  },
+  "recursos": {
+    "titulo": "Be the go-to business in your space with retail point of sale software built for ambitious merchants",
+    "cartoes": [
+      { "img": { "src": "https://assets.lightspeedhq.com/img/6f871904-retail-industry_nuorder_description-with-icon-1.jpg", "w": 840, "h": 764, "alt": "" }, "titulo": "Lightspeed NuORDER", "texto": "Manage your suppliers within your POS. Order stock, discover new products and sync accurate product data.", "link": { "texto": "Explore Lightspeed NuORDER", "href": "#nuorder" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/9646ef5d-retail_industrypos_add-on_inventory.jpg", "w": 840, "h": 700, "alt": "" }, "titulo": "Inventory management", "texto": "Reduce stockouts and overstocking, plus gain visibility across multiple locations and channels.", "link": { "texto": "View inventory tools", "href": "#inventory" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/cbef2b26-retail_industrypos_add-on_ecommerce.jpg", "w": 840, "h": 700, "alt": "" }, "titulo": "Ecommerce", "texto": "Meet your customers where they shop, from your site to social selling to online marketplaces.", "link": { "texto": "Discover eCom", "href": "#ecom" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/07ec747d-retail_industrypos_add-on_payments.jpg", "w": 840, "h": 700, "alt": "" }, "titulo": "Payments", "texto": "Speed up checkout, streamline payment reconciliation and accept cards and digital payments with ease.", "link": { "texto": "Check out Lightspeed Payments", "href": "#payments" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/27beba02-retail_industrypos_add-on_api.jpg", "w": 840, "h": 700, "alt": "" }, "titulo": "Open API", "texto": "Build highly customized workflows and capabilities to suit your business needs with Lightspeed's API.", "link": { "texto": "Get to know our API", "href": "#api" } },
+      { "img": { "src": "https://assets.lightspeedhq.com/img/7d480e71-retail_industrypos_add-on_capital.jpg", "w": 840, "h": 700, "alt": "" }, "titulo": "Capital", "texto": "Finance your ambitions with flexible business funding that's simple to get, simpler to repay.", "link": { "texto": "Explore Lightspeed Capital", "href": "#capital" } }
+    ]
+  },
+  "multiloja": {
+    "titulo": "Seamless multilocation management.",
+    "texto": "Integrate and manage inventory, sales and customer data across all your sales channels and stores.",
+    "link": { "texto": "Learn about multi-store", "href": "#multi" },
+    "img": { "src": "https://assets.lightspeedhq.com/img/8e808637-retail_industry_multilocation_half-width-1.jpg", "w": 1000, "h": 700, "alt": "" }
+  },
+  "integracoes": {
+    "titulo": "Integrate with best-in-class retail applications.",
+    "texto": "Extend the capabilities of Lightspeed. The platform integrates with the world's leading accounting software, ERP systems, marketing tools and more.",
+    "link": { "texto": "Learn more", "href": "#integrations" },
+    "img": { "src": "https://assets.lightspeedhq.com/img/f707863d-integrationblock.webp", "w": 1460, "h": 1020, "alt": "" }
+  },
+  "troca": {
+    "titulo": "Considering the switch to Lightspeed?",
+    "texto": "Switching to Lightspeed is easy. From data migration to hardware and payments setup, our industry experts will support you each step of the way.",
+    "itens": ["Get fast <b>24/7 support</b>", "<b>One-on-one</b> onboarding", "<b>Dedicated Account Manager</b> to answer every question"],
+    "img": { "src": "https://assets.lightspeedhq.com/img/96e996f5-reusable-modules_support-eng.webp", "w": 1460, "h": 1020, "alt": "" }
+  },
+  "chamada": {
+    "titulo": "See if Lightspeed Retail POS system is right for you.",
+    "texto": "Discover how Lightspeed can help you manage sales, inventory, customers, suppliers, payments and reporting in real time.",
+    "botao": { "texto": "Free trial", "href": "#trial" }
+  },
+  "faq": [
+    ["What is a retail POS system?", "A retail point of sale system is an integrated platform that combines software and hardware to facilitate and manage sales transactions in retail environments."],
+    ["How do I choose a retail POS system?", "To choose a retail point of sale, profile your business."],
+    ["How does POS payment work?", "Embedded POS payments work by directly and automatically transmitting sale data from the POS system to the payment terminal."],
+    ["Why should I use Lightspeed Retail POS system for my business?", "You should use Lightspeed because we can help you go further."],
+    ["Can I manage multiple stores using Lightspeed?", "Yes, Lightspeed’s enterprise POS system was designed to make managing multiple stores straightforward."],
+    ["Can you migrate my current inventory and customer data into the Lightspeed Retail POS software? How easy is the migration process of our data onto your POS?", "Yes, we can help migrate your data."]
+  ],
+  "notas": [
+    "For the fiscal year ended March 31, 2026, Lightspeed’s customers processed $98.1 billion in GTV through Lightspeed’s platform. GTV does not represent revenue earned by Lightspeed. See the section entitled “Key Performance Indicators” in Lightspeed’s most recent annual MD&amp;A available on its investor relations website and at www.sedarplus.ca and www.sec.gov for more details.",
+    "Customer Locations as of June 30, 2026. See Lightspeed’s quarterly earnings press release for the three months ended June 30, 2026 and the section entitled “Key Performance Indicators” within Management’s Discussion and Analysis of Financial Condition and Results of Operations for the three months ended June 30, 2026 and 2025, both documents being available on Lightspeed's investor relations page, on SEDAR+ at www.sedarplus.com and on EDGAR at www.sec.gov, for more details."
+  ]
+}

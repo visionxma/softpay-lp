@@ -1,0 +1,44 @@
+/* origem.css — só na prova: troca as variáveis do molde pelas da Square (Exact Block, Cash Sans, azul 0,106,255)
+   e reproduz o estado em que a captura renderizada ficou. A página da Square anima a seção 1 com GSAP: na captura
+   inteira só o cartão de foto aparece; a manchete, as abas de modo e o cartão escuro ficaram no estado inicial
+   (opacidade 0). Estas regras pintam esse mesmo estado; a página vestida não carrega este arquivo. */
+
+.mx-square-pdv {
+  --q-serif: "Exact Block", "Square Sans Display", system-ui, sans-serif;
+  --q-titulo: "Cash Sans", "Square Sans Display", system-ui, sans-serif;
+  --q-sans: "Cash Sans", "Square Sans Text", system-ui, sans-serif;
+  --q-mono: "Cash Sans Mono", "Square Sans Mono", ui-monospace, monospace;
+  --q-peso-serif: 400;
+  --q-peso-titulo: 500;
+  --q-ls-serif: -0.03em;
+  --q-tinta: #000000;
+  --q-cinza: rgb(112, 112, 112);
+  --q-acao: rgb(0, 106, 255);
+  --q-acao-forte: rgb(0, 85, 204);
+  --q-sobre-acao: #ffffff;
+  --q-fundo: #ffffff;
+  --q-fundo-2: rgb(247, 246, 245);
+  --q-linha: #cccccc;
+  --q-noite: #000000;
+}
+
+/* seção 1 no estado da captura: só o cartão com a foto; texto, abas e cartão escuro invisíveis */
+.mx-square-pdv .mxq--origem .mxq-s1 { height: clamp(2463px, 2400.6px + 16vw, 2631px); overflow: clip; }
+.mx-square-pdv .mxq--origem .mxq-palco__veu { background: none; }
+.mx-square-pdv .mxq--origem .mxq-palco__texto,
+.mx-square-pdv .mxq--origem .mxq-modos { opacity: 0; }
+
+/* a barra de ações do celular ficou presa à tela no ponto da captura: 1.173 px abaixo do topo da seção 1 */
+@media (max-width: 63.99rem) {
+  .mx-square-pdv .mxq--origem .mxq-acoes { position: absolute; left: 0; right: 0; top: 1173px; z-index: 3; }
+}
+
+/* notas no celular da captura: a nota ³ tem 10 px a mais em cima e a Square fecha a seção com um parágrafo vazio
+   de 24 px (mais 20 de vão) antes dos 60 px de baixo */
+@media (max-width: 63.99rem) {
+  .mx-square-pdv .mxq--origem .mxq-notas__col:last-child p:last-child { padding-top: 10px; }
+  .mx-square-pdv .mxq--origem .mxq-s8 { padding-bottom: 104px; }
+}
+
+/* a referência não tem animação de entrada nas outras seções: nada se esconde na prova */
+.mx-square-pdv .mxq--origem .mxq-rv { opacity: 1; transform: none; }

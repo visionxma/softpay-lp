@@ -1,0 +1,302 @@
+{
+ "slug": "solucoes/controle-de-fiado",
+ "figura": [
+  "/assets/lojistas/casal-comerciantes.webp",
+  "Casal de comerciantes conferindo as contas no computador da loja"
+ ],
+ "title": "Aplicativo para Controlar Fiado no Celular | SoftPay",
+ "description": "Caderneta de fiado no celular: saldo e histórico por cliente, venda fiada pelo PDV e cobrança por link de Pix no WhatsApp. Teste 7 dias grátis, sem cartão.",
+ "h1": "Aplicativo para controlar fiado no celular",
+ "intro": "O SoftPay é um aplicativo para controlar fiado que abre no navegador do celular ou do computador, sem baixar nada. Cada venda fiada fica no nome do cliente, com data, valor e saldo. A caderneta já vem no plano Comércio, de R$ 69/mês; a partir do Loja, de R$ 89/mês, o sistema manda cobrança por link de Pix no WhatsApp.",
+ "breadcrumbs": [
+  [
+   "Soluções",
+   "/solucoes/"
+  ],
+  [
+   "Controle de fiado",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Tem aplicativo para controlar fiado no celular?",
+   "Tem. O SoftPay abre no navegador do celular, Android ou iPhone, sem baixar nada da loja de aplicativos. A caderneta de fiado, com saldo e histórico por cliente, já vem no plano Comércio, de R$ 69/mês, e dá para testar por 7 dias sem cartão."
+  ],
+  [
+   "Mais de uma pessoa da loja pode anotar o fiado?",
+   "Pode, a partir do plano Loja, com até 3 usuários; no ERP Completo são até 10. Cada pessoa entra com o próprio acesso e todos veem o mesmo saldo. O plano Comércio tem 1 usuário."
+  ],
+  [
+   "Consigo ver quanto cada cliente me deve?",
+   "Sim. O saldo fica no cadastro do cliente, com o histórico das compras que formam o valor — dá para mostrar na tela quando ele perguntar."
+  ],
+  [
+   "O sistema cobra o cliente automaticamente?",
+   "Se você ligar, sim. A partir do plano Loja, o SoftPay manda link de pagamento por Pix pelo WhatsApp e tem um lembrete automático opcional: fica desligado até você ligar, lembra cada cliente com saldo no máximo uma vez a cada 7 dias (você muda o intervalo), só entre 9h e 20h, e o cliente pode responder PARAR."
+  ],
+  [
+   "Dá para definir um limite de fiado por cliente?",
+   "Esse ponto não está confirmado. Se travar venda acima de um valor é importante para você, verifique com o suporte antes de contratar."
+  ],
+  [
+   "O sistema cobra juros de quem atrasa?",
+   "Não. O saldo é o valor das compras; não há cálculo de juros nem multa por atraso."
+  ],
+  [
+   "Consigo consultar SPC ou negativar quem não paga?",
+   "Não. O SoftPay não consulta órgão de proteção ao crédito nem negativa ninguém. A decisão de vender a prazo continua sendo sua."
+  ],
+  [
+   "A venda fiada baixa o estoque?",
+   "Sim. Ela é uma venda como qualquer outra: o produto sai do estoque e o valor fica registrado como a receber."
+  ],
+  [
+   "Dá para registrar fiado pelo WhatsApp?",
+   "Sim, a partir do plano Loja — tanto a venda fiada quanto a baixa da dívida. O bot recusa baixa maior que o saldo e responde com o valor correto."
+  ],
+  [
+   "Emite carnê ou boleto?",
+   "Não. A cobrança sai por link de Pix pelo WhatsApp, disponível a partir do plano Loja."
+  ],
+  [
+   "Como faço para passar o caderno atual para o sistema?",
+   "O caminho prático é lançar os saldos em aberto como vendas fiadas no nome de cada cliente. O guia de fiado explica o processo."
+  ]
+ ],
+ "cta_title": "Descubra quanto você tem para receber",
+ "cta_text": "Lance os saldos do caderno no nome de cada cliente e veja o total aparecer. Costuma ser maior do que a gente imagina. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Como controlar fiado",
+   "/guias/como-controlar-fiado/",
+   "Método e cobrança"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Cadastro e histórico"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "A venda a prazo no balcão"
+  ],
+  [
+   "Bot do WhatsApp",
+   "/solucoes/bot-whatsapp/",
+   "Registrar e dar baixa falando"
+  ],
+  [
+   "Mercadinho",
+   "/segmentos/mercadinho/",
+   "O fiado do bairro"
+  ],
+  [
+   "Loja de joias",
+   "/segmentos/loja-de-joias/",
+   "Crediário de alto valor"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-problema",
+   "titulo": "O problema",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vender fiado não é o problema. O problema é o caderno: anotação rasurada, cliente que esquece e você sem saber quanto tem para receber."
+    },
+    {
+     "tipo": "p",
+     "texto": "No comércio de bairro o fiado é parte do negócio — é o que mantém o cliente fiel e o que atravessa o fim do mês de muita gente. Mas o dinheiro fiado é o mais fácil de perder: não tem comprovante, depende da memória de quem anotou e some quando a folha do caderno acaba."
+    },
+    {
+     "tipo": "p",
+     "texto": "O efeito é silencioso. A loja vendeu, o estoque saiu, mas o dinheiro não entrou — e como não há um total visível, ninguém percebe o tamanho do buraco."
+    },
+    {
+     "tipo": "p",
+     "texto": "Some a isso o desconforto de cobrar alguém que você encontra na rua. É por isso que muita dívida de fiado nunca é cobrada: não por falta de controle, por falta de jeito de puxar o assunto."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-isso-aparece-na-sua-loja",
+   "titulo": "Como isso aparece na sua loja",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Você não sabe o total a receber.</strong> Sabe que \"tem gente devendo\", não quanto.",
+      "<strong>O saldo depende de uma pessoa só.</strong> Se quem anota falta, ninguém resolve nada no balcão.",
+      "<strong>A conversa vira discussão.</strong> O cliente lembra de um valor, o caderno diz outro, e não há como provar.",
+      "<strong>A cobrança não acontece.</strong> Você adia porque é constrangedor, e o valor envelhece.",
+      "<strong>O caderno acaba.</strong> Folha rasgada, letra ilegível, página molhada — e o registro simplesmente deixa de existir."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Cada venda no nome do cliente"
+    },
+    {
+     "tipo": "p",
+     "texto": "A venda fiada é registrada no cadastro do cliente, com data e valor. O saldo é do sistema, não da memória de quem estava no balcão — e qualquer pessoa da loja consegue responder."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Histórico para consultar na hora"
+    },
+    {
+     "tipo": "p",
+     "texto": "Quando o cliente pergunta quanto deve, a resposta está na tela, com as compras que formam o valor. Isso encerra a discussão antes de ela começar, porque não é a sua palavra contra a dele."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cobrança sem constrangimento"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, o sistema envia link de pagamento por Pix pelo WhatsApp. A cobrança deixa de depender de você puxar o assunto no balcão — que é o motivo real de tanta dívida antiga não ser cobrada."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Ligado ao resto da loja"
+    },
+    {
+     "tipo": "p",
+     "texto": "A venda fiada baixa o estoque como qualquer outra e fica registrada como valor a receber, aparecendo no seu resultado. Fiado deixa de ser um controle paralelo."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Registrar e dar baixa falando"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, você registra uma venda fiada ou dá baixa numa dívida por mensagem ou áudio no WhatsApp. O bot recusa baixa maior que o saldo e responde com o valor certo. Veja o <a href=\"/solucoes/bot-whatsapp/\">bot do WhatsApp</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-controle-de-fiado-nao-faz",
+   "titulo": "O que o controle de fiado não faz",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "É crédito que você concede com o próprio dinheiro. Vale saber o que o sistema não cobre:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não consulta SPC nem Serasa.</strong> A decisão de vender fiado continua sendo sua, baseada no que você sabe do cliente.",
+      "<strong>Não negativa quem não paga.</strong> Não há qualquer integração com órgão de proteção ao crédito.",
+      "<strong>Não calcula juros nem multa por atraso.</strong> O saldo é o valor das compras.",
+      "<strong>Não gera carnê nem boleto.</strong> A cobrança sai por link de Pix no WhatsApp, a partir do plano Loja.",
+      "<strong>Limite de crédito por cliente não está confirmado.</strong> Se você precisa travar venda acima de um valor, verifique com o suporte antes de contratar.",
+      "<strong>Não é régua de cobrança com etapas.</strong> O que existe, a partir do plano Loja, é um lembrete gentil pelo WhatsApp que você liga se quiser: no máximo um por cliente a cada 7 dias (você escolhe o intervalo), só entre 9h e 20h, e o cliente pode responder PARAR."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-tamanho-do-buraco-quando-ele-fica-visivel",
+   "titulo": "O tamanho do buraco, quando ele fica visível",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O primeiro efeito de sair do caderno costuma ser um susto — o total a receber quase sempre é maior do que o dono imaginava:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "O que estava espalhado pelo caderno",
+     "rodape": "Números fictícios, só para mostrar o raciocínio. A linha do meio é a que muda o comportamento: quando o vencimento fica visível, a cobrança para de ser adiada. Veja o guia <a href=\"/guias/como-controlar-fiado/\">como controlar fiado</a>.",
+     "linhas": [
+      {
+       "rotulo": "14 clientes com saldo em aberto",
+       "valor": "R$ 3.180,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Desses, 5 com dívida acima de 60 dias",
+       "valor": "R$ 1.940,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Dinheiro seu, fora do caixa",
+       "valor": "R$ 3.180,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-voce-passa-a-conseguir-responder",
+   "titulo": "O que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto tenho a receber de fiado, no total?",
+      "Quem deve, quanto e desde quando?",
+      "Quais dívidas estão mais velhas?",
+      "Este cliente já pagou o que devia do mês passado?",
+      "Quanto do meu faturamento saiu a prazo?",
+      "Vale continuar vendendo fiado para esta pessoa?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "em-qual-plano-esta",
+   "titulo": "Em qual plano está",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "O fiado neste plano"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "<strong>Caderninho digital já aqui:</strong> saldo e histórico por cliente, venda fiada pelo PDV. 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "Tudo do Comércio mais <strong>cobrança por link de Pix no WhatsApp</strong> e registro pelo bot. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-04"
+}

@@ -1,0 +1,67 @@
+# url	referencia_url	nota — critério: página IRMÃ do Brasil no mapa-de-fontes.tsv (mesma referência, mesmo assunto); sem irmã, referência própria de LP/guia/ferramenta do assunto, em espanhol da América Latina quando existe; nao-e-lp = legal/institucional. Todas as referências testadas com HTTP 200 em 04/11/2026.
+https://site.softpayco.com/	https://www.treinta.co/	escolhida: home de app de gestão para pequeño negocio, em espanhol da Colômbia; BR sem home no mapa
+https://site.softpayco.com/comparativos/alternativa-a-treinta/	https://granmoney.com/comparativo/alternativas-ao-bling	irmã: comparativos/alternativa-ao-bling
+https://site.softpayco.com/comparativos/softpay-o-cuaderno/	https://squareup.com/ie/en/townsquare/what-is-square	irmã: perguntas/caderno-ou-sistema
+https://site.softpayco.com/comparativos/softpay-o-excel/	https://blog.contaazul.com/universidade/planilha-calculo-margem-lucro/	irmã: perguntas/excel-ou-sistema-de-gestao
+https://site.softpayco.com/comparativos/softpay-o-kyte/	https://www.shopify.com/compare/shopify-vs-lightspeed	irmã: comparativos/softpay-ou-kyte
+https://site.softpayco.com/sobre/	https://wise.com/gb/business/	irmã: sobre
+https://site.softpayco.com/contacto/	https://gestaoclick.com.br/novo-cadastro/	irmã: contato
+https://site.softpayco.com/guias/como-saber-cuanto-gana-su-negocio/	https://contaazul.com/blog/como-calcular-margem-de-lucro/	irmã: guias/como-calcular-lucro-da-loja
+https://site.softpayco.com/guias/como-hacer-el-cuadre-de-caja/	https://stripe.com/resources/more/small-business-payment-processing-a-guide	irmã: guias/como-controlar-caixa-da-loja
+https://site.softpayco.com/guias/control-de-inventario-para-tienda/	https://www.nuvemshop.com.br/blog/controle-de-estoque/	irmã: guias/como-controlar-estoque
+https://site.softpayco.com/guias/como-cobrar-un-fiado-sin-perder-al-cliente/	https://www.infinitepay.io/blog/link-de-pagamento-recebimento-na-hora	irmã: guias/como-controlar-fiado
+https://site.softpayco.com/guias/catalogo-de-whatsapp-para-su-negocio/	https://www.tiendanube.com/blog/como-hacer-un-catalogo-en-whatsapp/	escolhida: guia de catálogo no WhatsApp em espanhol, sem irmã no Brasil
+https://site.softpayco.com/guias/no-responsable-de-iva-debo-facturar/	https://loggro.com/blog/articulo/quienes-no-estan-obligados-a-expedir-facturas-electronicas/	escolhida: guia colombiana sobre quem não é obrigado a faturar, sem irmã no Brasil
+https://site.softpayco.com/guias/como-pasar-del-cuaderno-al-celular/	https://www.omie.com.br/blog/6-erros-de-gestao-de-estoque-que-a-sua-empresa-precisa-evitar/	irmã: guias/como-sair-do-caderno
+https://site.softpayco.com/herramientas/tengo-que-facturar/	https://siemprealdia.co/colombia/impuestos/personas-naturales-obligadas-a-facturar/	escolhida: verificação de obrigação de faturar na Colômbia, sem irmã no Brasil
+https://site.softpayco.com/herramientas/calculadora-de-ganancia/	https://www.shopify.com/tools/profit-margin-calculator	irmã: guias/como-calcular-margem-de-lucro
+https://site.softpayco.com/preguntas/softpay-hace-factura-electronica/	https://www.bling.com.br/funcionalidades/nota-fiscal-eletronica	irmã: solucoes/nfe
+https://site.softpayco.com/preguntas/cuanto-cuesta/	https://contaazul.com/teste-gratuito/	irmã: perguntas/quanto-custa-um-sistema-para-loja
+https://site.softpayco.com/preguntas/funciona-en-el-celular/	https://www.infinitepay.io/blog/como-receber-por-aproximacao-no-celular	irmã: perguntas/posso-usar-o-softpay-no-celular
+https://site.softpayco.com/preguntas/mis-datos-estan-seguros/	https://brex.com/product/corporate-card	irmã: perguntas/sistema-de-gestao-e-seguro
+https://site.softpayco.com/preguntas/puedo-pasar-mi-cuaderno/	https://squareup.com/ie/en/townsquare/what-is-square	irmã: perguntas/caderno-ou-sistema
+https://site.softpayco.com/preguntas/tiene-soporte/	https://www.stone.com.br/maquina-de-cartao	irmã: perguntas/tem-suporte-humano
+https://site.softpayco.com/preguntas/sirve-si-no-soy-responsable-de-iva/	https://www.alegra.com/colombia/facturacion-electronica/	escolhida: facturação eletrônica para quem não é responsável de IVA na Colômbia, sem irmã no Brasil
+https://site.softpayco.com/preguntas/puedo-cancelar-cuando-quiera/	https://www.alegra.com/colombia/precios/	escolhida: preços e planos sem permanência, em espanhol da Colômbia, sem irmã no Brasil
+https://site.softpayco.com/segmentos/tiendas-de-barrio-y-minimercados/	https://www.clover.com/pos-systems	irmã: segmentos/mercadinho
+https://site.softpayco.com/segmentos/peluquerias-y-barberias/	https://agendapro.com/es/barberia/software-para-barberias	escolhida: página de segmento barbearia/salão em espanhol, sem irmã no Brasil
+https://site.softpayco.com/segmentos/papelerias-y-miscelaneas/	https://criar.lojaintegrada.com.br/indicaae	irmã: segmentos/papelaria
+https://site.softpayco.com/segmentos/comidas-rapidas-y-panaderias/	https://www.alegra.com/colombia/pos/panaderias/	escolhida: POS para padarias na Colômbia, sem irmã no Brasil
+https://site.softpayco.com/segmentos/boutiques-y-tiendas-de-ropa/	https://www.shopify.com/pos/retail	irmã: segmentos/loja-de-roupas
+https://site.softpayco.com/segmentos/pequeno-comercio/	https://loyverse.com/	irmã: segmentos/pequeno-comercio
+https://site.softpayco.com/soluciones/punto-de-venta/	https://squareup.com/us/en/point-of-sale	irmã: solucoes/sistema-pdv
+https://site.softpayco.com/soluciones/control-de-inventario/	https://www.lightspeedhq.com/pos/retail/inventory-management/	irmã: solucoes/sistema-de-estoque
+https://site.softpayco.com/soluciones/cuaderno-de-fiados/	https://stripe.com/invoicing	irmã: solucoes/controle-de-fiado
+https://site.softpayco.com/soluciones/ganancia-real/	https://ramp.com/accounting	irmã: solucoes/sistema-financeiro
+https://site.softpayco.com/soluciones/clientes/	https://www.pipedrive.com/en/features/sales-pipeline	irmã: solucoes/controle-de-clientes
+https://site.softpayco.com/soluciones/catalogo-por-whatsapp/	https://anota.ai/home/plataforma-de-delivery-anota-ai/	irmã: solucoes/bot-whatsapp
+https://site.softpayco.com/segmentos/	https://squareup.com/us/en/retail	irmã: segmentos
+https://site.softpayco.com/soluciones/	https://www.shopify.com/pos/features	irmã: solucoes
+https://site.softpayco.com/guias/	https://www.pennylane.com/fr/	irmã: guias
+https://site.softpayco.com/preguntas/	https://www.sumup.com/pt-br/maquininhas/	irmã: perguntas
+https://site.softpayco.com/comparativos/	https://squareup.com/us/en/compare/square-vs-clover	irmã: comparativos
+https://site.softpayco.com/herramientas/	https://somosgreentic.com/emprendedores/herramientas/	escolhida: índice de ferramentas grátis para empreendedores em espanhol, sem irmã no Brasil
+https://site.softpayco.com/terminos-de-uso	nao-e-lp	legal
+https://site.softpayco.com/politica-de-privacidad	nao-e-lp	legal
+https://site.softpayco.com/politica-de-reembolso	nao-e-lp	legal
+https://softpaypdv.com/brasil/	https://www.clover.com/pos-systems	irmã: segmentos/mercadinho (Brasil usa a referência do mercadinho do mapa)
+https://softpaypdv.com/argentina/	https://www.alegra.com/argentina/pos/	modelo das páginas por país: Alegra POS versão argentina
+https://softpaypdv.com/bolivia/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/chile/	https://www.alegra.com/chile/pos/	modelo das páginas por país: Alegra POS versão chile
+https://softpaypdv.com/colombia/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS versão colombia
+https://softpaypdv.com/costa-rica/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/cuba/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/ecuador/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/el-salvador/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/guatemala/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/honduras/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/mexico/	https://www.alegra.com/mexico/pos/	modelo das páginas por país: Alegra POS versão mexico
+https://softpaypdv.com/nicaragua/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/panama/	https://www.alegra.com/panama/pos/	modelo das páginas por país: Alegra POS versão panama
+https://softpaypdv.com/paraguay/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/peru/	https://www.alegra.com/peru/pos/	modelo das páginas por país: Alegra POS versão peru
+https://softpaypdv.com/puerto-rico/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/republica-dominicana/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/uruguay/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://softpaypdv.com/venezuela/	https://www.alegra.com/colombia/pos/	modelo das páginas por país: Alegra POS (sem versão do país, usa a de Colômbia em espanhol)
+https://erp.softpaybr.com/erp	https://www.bling.com.br/segmentos/erp-pequena-empresa	escolhida: ERP para pequena empresa com estoque, financeiro e PDV; Bling

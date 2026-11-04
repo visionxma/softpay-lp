@@ -1,0 +1,41 @@
+/* origem.css — só na prova: troca as variáveis do molde pelas do vhsys, medidas na captura de 03/11/2026
+   (Montserrat, azul-noite #0E2A3E, verde #99BC29 e o verde dos ícones #7A9A1C, fundo #F2F6FA, ladrilhos #F2F6F8,
+   texto #333, botão verde com letra preta, cartões azul-claros #E1ECF4, selo verde-claro #E2ECD4, letra sem
+   espaçamento extra). A página vestida não carrega este arquivo. */
+
+.mx-vhsys-distribuidora-bebidas {
+  --v-titulo: "Montserrat", system-ui, sans-serif;
+  --v-sans: "Montserrat", system-ui, sans-serif;
+  --v-peso-titulo: 500;
+  --v-ls: normal;
+  --v-ls-h1: normal;
+  --v-noite: #0e2a3e;
+  --v-noite-2: #143954;
+  --v-tinta: #0e2a3e;
+  --v-texto: #333333;
+  --v-cinza: #5b6b78;
+  --v-pagina: #f2f6fa;
+  --v-ladrilho: #f2f6f8;
+  --v-ladrilho-texto: #1b2b38;
+  --v-azulado: #e1ecf4;
+  --v-linha: #dbe5ec;
+  --v-acao: #99bc29;
+  --v-acao-forte: #86a920;
+  --v-sobre-acao: #000000;
+  --v-destaque: #99bc29;
+  --v-destaque-escuro: #99bc29;
+  --v-check: #99bc29;
+  --v-check-escuro: #99bc29;
+  --v-ico-fundo: linear-gradient(160deg, #b4cf45 0%, #86a920 100%);
+  --v-ico-tinta: #0e2a3e;
+  --v-ico-escuro: #99bc29;
+  --v-ico-claro: #7a9a1c;
+  --v-selo-fundo: #e2ecd4;
+  --v-selo-borda: #c9dba4;
+  --v-selo-ico: #99bc29;
+  --v-pilula-fundo: rgba(255, 255, 255, .133);
+  --v-pilula-borda: rgba(255, 255, 255, .28);
+}
+
+/* brilho do painel azul-noite da referência (só na prova de origem) */
+.mx-vhsys-distribuidora-bebidas .mxv-painel.mxv-painel { background: linear-gradient(200deg, #1f4a6c 0%, var(--v-noite) 35%); }

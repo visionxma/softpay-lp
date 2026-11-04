@@ -1,0 +1,587 @@
+/* Molde vhsys-distribuidora-bebidas: a página "sistema ERP para distribuidora de bebidas" do vhsys (Elementor),
+   medida na captura renderizada de 03/11/2026 em 1440 e 390 (ferramentas/medidas.mjs e leitura de pixel das fotos).
+   ARQUIVO GERADO: a fonte é ferramentas/molde.fonte.css; `python3 ferramentas/fluido.py ferramentas/molde.fonte.css
+   > molde.css` troca F(a,b) por clamp() com o valor de 390 px em a e o de 1440 px em b (nas duas larguras da
+   captura dá o número exato). Duas camadas:
+   1. `.mx-vhsys-distribuidora-bebidas` — a COMPOSIÇÃO da referência: casca de 1140 px, cartões brancos de raio 30
+      sobre o fundo azul-gelo, hero e painel azul-noite, ordem, grades, tamanhos de letra e vãos medidos. É o que a
+      prova (provar-molde.mjs) compara com a captura.
+   2. `.page-molde.mx-vhsys-distribuidora-bebidas` — a página vestida: letra e cores do SoftPay e as regras da casa
+      que vencem a referência (hero cobre a tela, vãos ≤ 120/72 px, abas que quebram em vez de trilho lateral,
+      celular lado a lado, planos 3 lado a lado com a faixa do plano tocado, FAQ com 5 à vista, alvo ≥ 44 px,
+      revelar ao entrar). Nada daqui entra na prova.
+   Cores e letras moram em variáveis --v-*: o padrão (SoftPay) fica em :where() com peso zero e o origem.css da
+   prova troca pelos valores do vhsys sem disputar ordem. Base = celular (a captura de 390); a partir de 48rem, a
+   composição do computador. */
+
+:where(.mx-vhsys-distribuidora-bebidas) {
+  --v-titulo: "SoftPay Display", system-ui, sans-serif;
+  --v-sans: "SoftPay Texto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --v-peso-titulo: 700;
+  --v-ls: 0.005em;
+  --v-ls-h1: -0.0036em;
+  --v-noite: #06121f;
+  --v-noite-2: #0f2133;
+  --v-tinta: #0a1a28;
+  --v-texto: #2b3b4a;
+  --v-cinza: #4d6072;
+  --v-pagina: #f2f6fa;
+  --v-ladrilho: #eef4f9;
+  --v-ladrilho-texto: #0a1a28;
+  --v-azulado: #e8f3fb;
+  --v-linha: #dce5ec;
+  --v-acao: #0c5c9e;
+  --v-acao-forte: #084a81;
+  --v-sobre-acao: #ffffff;
+  --v-destaque: #0c5c9e;
+  --v-destaque-escuro: #7cc0f2;
+  --v-check: #0c5c9e;
+  --v-check-escuro: #7cc0f2;
+  --v-ico-fundo: linear-gradient(160deg, #1a7fd2 0%, #0c5c9e 100%);
+  --v-ico-tinta: #ffffff;
+  --v-ico-escuro: #7cc0f2;
+  --v-ico-claro: #0c5c9e;
+  --v-selo-fundo: #e8f3fb;
+  --v-selo-borda: #cfe3f3;
+  --v-selo-ico: #0c5c9e;
+  --v-pilula-fundo: rgba(255, 255, 255, .1);
+  --v-pilula-borda: rgba(255, 255, 255, .26);
+}
+
+/* ============================================================== 1. composição da referência ============ */
+.mx-vhsys-distribuidora-bebidas .mxv {
+  font-family: var(--v-sans);
+  color: var(--v-texto);
+  background: var(--v-pagina);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: anywhere;
+}
+.mx-vhsys-distribuidora-bebidas .mxv, .mx-vhsys-distribuidora-bebidas .mxv *, .mx-vhsys-distribuidora-bebidas .mxv *::before, .mx-vhsys-distribuidora-bebidas .mxv *::after { box-sizing: border-box; }
+.mx-vhsys-distribuidora-bebidas .mxv :where(h1, h2, h3, h4, p, ul, ol, li, figure) { margin: 0; padding: 0; }
+.mx-vhsys-distribuidora-bebidas .mxv :where(ul, ol) { list-style: none; }
+.mx-vhsys-distribuidora-bebidas .mxv img { display: block; max-width: 100%; height: auto; }
+.mx-vhsys-distribuidora-bebidas .mxv svg { display: block; flex: none; }
+/* :where() deixa o link com peso de classe só: senão (0,2,1) vence .mxv-botao--cheio e o botão herda a cor da seção */
+.mx-vhsys-distribuidora-bebidas .mxv :where(a) { color: inherit; }
+.mx-vhsys-distribuidora-bebidas .mxv-casca { width: 100%; max-width: 1180px; margin-inline: auto; padding-inline: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.mx-vhsys-distribuidora-bebidas .mxv-quadro { display: block; }
+.mx-vhsys-distribuidora-bebidas .mxv-quadro img { width: 100%; }
+.mx-vhsys-distribuidora-bebidas .mxv-verde { color: var(--v-destaque); }
+.mx-vhsys-distribuidora-bebidas .mxv-cartao { background: #ffffff; border-radius: 30px; }
+
+/* títulos: 26/30 no celular, 34/40 no computador (36/42 no painel, no "palma", no "conecte" e no FAQ) */
+.mx-vhsys-distribuidora-bebidas .mxv-titulo {
+  font: 500 clamp(26px, 23.029px + 0.762vw, 34px)/clamp(30px, 26.286px + 0.952vw, 40px) var(--v-titulo); letter-spacing: var(--v-ls); color: var(--v-tinta);
+}
+.mx-vhsys-distribuidora-bebidas .mxv-titulo strong { font-weight: 700; }
+.mx-vhsys-distribuidora-bebidas .mxv-titulo--centro { text-align: left; }
+.mx-vhsys-distribuidora-bebidas .mxv-cab__corpo { margin-top: 12px; font-size: clamp(14px, 13.257px + 0.19vw, 16px); line-height: 20px; color: var(--v-texto); }
+.mx-vhsys-distribuidora-bebidas .mxv-cab__corpo p + p { margin-top: 10px; }
+
+/* selo: pílula clara com o ícone verde (no cartão escuro, pílula escura) */
+.mx-vhsys-distribuidora-bebidas .mxv-selo {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 37px; padding: 6px 14px 6px 8px; border-radius: 999px;
+  background: var(--v-selo-fundo); border: 1px solid var(--v-selo-borda);
+  font: 600 14px/20px var(--v-sans); color: var(--v-tinta);
+}
+.mx-vhsys-distribuidora-bebidas .mxv-selo__ico { width: 22px; height: 22px; border-radius: 6px; background: var(--v-selo-ico); position: relative; flex: none; }
+.mx-vhsys-distribuidora-bebidas .mxv-selo__ico::after { content: ""; position: absolute; inset: 5px 8px; border-radius: 2px; background: rgba(255, 255, 255, .85); }
+
+/* botões do vhsys: pílula de 50 px, 13 30 de recheio, letra 17–18/600 */
+.mx-vhsys-distribuidora-bebidas .mxv-botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 13px 30px; border-radius: 50px; border: 2px solid transparent;
+  font: 600 clamp(17px, 16.629px + 0.095vw, 18px)/24px var(--v-sans); text-decoration: none; white-space: nowrap; cursor: pointer; background: transparent; color: inherit;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .15s ease;
+}
+.mx-vhsys-distribuidora-bebidas .mxv-botao svg { width: 20px; height: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-botao--cheio { background: var(--v-acao); color: var(--v-sobre-acao); }
+.mx-vhsys-distribuidora-bebidas .mxv-botao--contorno { border-color: var(--v-tinta); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas :is(.mxv-hero, .mxv-escuro) .mxv-botao--contorno { border-color: #ffffff; color: #ffffff; }
+
+/* lista de checagem (bolinha cheia com o visto) */
+.mx-vhsys-distribuidora-bebidas .mxv-checks { display: grid; gap: 12px; }
+.mx-vhsys-distribuidora-bebidas .mxv-checks li { display: grid; grid-template-columns: 20px minmax(0, 1fr); column-gap: 10px; align-items: start; font-size: clamp(14px, 13.629px + 0.095vw, 15px); line-height: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-checks svg { width: 20px; height: 20px; color: var(--v-check); }
+.mx-vhsys-distribuidora-bebidas .mxv-checks--nao svg { color: var(--v-cinza); }
+.mx-vhsys-distribuidora-bebidas .mxv-checks strong { font-weight: 700; color: var(--v-tinta); }
+
+/* ---------------------------------------------------------------- 0 hero azul-noite */
+.mx-vhsys-distribuidora-bebidas .mxv-hero { background: var(--v-noite); color: #ffffff; padding-block: clamp(40px, 25.143px + 3.81vw, 80px) clamp(26px, 24.514px + 0.381vw, 30px); }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__grade { display: grid; grid-template-columns: minmax(0, 1fr); }
+.mx-vhsys-distribuidora-bebidas .mxv-h1 { font: 600 clamp(26px, 20.057px + 1.524vw, 42px)/clamp(32px, 26.8px + 1.333vw, 46px) var(--v-titulo); letter-spacing: var(--v-ls-h1); color: #ffffff; max-width: 532px; }
+.mx-vhsys-distribuidora-bebidas .mxv-hero .mxv-verde { color: var(--v-destaque-escuro); }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__intro { margin-top: 20px; font-size: 16px; line-height: clamp(22px, 21.257px + 0.19vw, 24px); color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__intro strong { font-weight: 700; }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__botoes { margin-top: clamp(20px, 11.829px + 2.095vw, 42px); display: flex; flex-wrap: wrap; gap: 10px; }
+/* 11+24+11+2+2 = 50 px, a altura medida do botão da referência em 390 (13 de recheio dava 54) */
+.mx-vhsys-distribuidora-bebidas .mxv-hero__botoes .mxv-botao { width: 100%; padding-block: 11px; }
+/* nota da referência em 390: 24 px abaixo do botão e linhas a cada 16 px (medido no pixel da prova 4) */
+.mx-vhsys-distribuidora-bebidas .mxv-hero__nota { margin-top: clamp(20px, 14.057px + 1.524vw, 36px); font-size: 12px; line-height: clamp(16px, 15.257px + 0.19vw, 18px); color: rgba(255, 255, 255, .86); }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__nota strong { font-weight: 700; color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__arte { position: relative; margin-top: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-hero__img img { border-radius: 16px; }
+.mx-vhsys-distribuidora-bebidas .mxv-pilulas { margin-top: clamp(26px, 9.657px + 4.19vw, 70px); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px clamp(8px, 3.543px + 1.143vw, 20px); }
+.mx-vhsys-distribuidora-bebidas .mxv-pilula {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; padding: clamp(4px, 6.743px - 0.19vw, 6px) 8px; border-radius: 50px;
+  background: var(--v-pilula-fundo); border: 1px solid var(--v-pilula-borda);
+  font: 500 13px/20px var(--v-sans); color: #ffffff; text-decoration: none;
+}
+.mx-vhsys-distribuidora-bebidas .mxv-pilula svg { width: clamp(14px, 13.257px + 0.19vw, 16px); height: clamp(14px, 13.257px + 0.19vw, 16px); color: var(--v-check-escuro); }
+.mx-vhsys-distribuidora-bebidas .mxv-chamada { display: none; }
+
+/* ---------------------------------------------------------------- 1 cabeçalho + 2 cartões em linha */
+.mx-vhsys-distribuidora-bebidas .mxv-tudo { padding-block: clamp(50px, 42.2px + 2vw, 71px) clamp(50px, 47.029px + 0.762vw, 58px); }
+.mx-vhsys-distribuidora-bebidas .mxv-tudo .mxv-titulo { margin-top: clamp(11px, 10.629px + 0.095vw, 12px); }
+.mx-vhsys-distribuidora-bebidas .mxv-tudo .mxv-checks { gap: clamp(6px, 3.771px + 0.571vw, 12px); }
+.mx-vhsys-distribuidora-bebidas .mxv-tudo__cartoes { margin-top: clamp(30px, 25.914px + 1.048vw, 41px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 30px; }
+.mx-vhsys-distribuidora-bebidas .mxv-linha { padding: 40px 20px; display: grid; grid-template-columns: minmax(0, 1fr); }
+.mx-vhsys-distribuidora-bebidas .mxv-linha__titulo { font: 500 clamp(26px, 25.257px + 0.19vw, 28px)/clamp(30px, 28.514px + 0.381vw, 34px) var(--v-titulo); letter-spacing: var(--v-ls); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-linha__corpo { margin-top: 16px; }
+.mx-vhsys-distribuidora-bebidas .mxv-linha__corpo > p { font-size: 15px; line-height: 20px; margin-bottom: 12px; }
+.mx-vhsys-distribuidora-bebidas .mxv-linha__arte { position: relative; margin-top: 40px; }
+.mx-vhsys-distribuidora-bebidas .mxv-linha__img img { border-radius: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-etiqueta { display: none; }
+
+/* ---------------------------------------------------------------- 2 cartão: título, abas, ladrilhos */
+.mx-vhsys-distribuidora-bebidas .mxv-recursos { padding-bottom: clamp(50px, 46.286px + 0.952vw, 60px); }
+.mx-vhsys-distribuidora-bebidas .mxv-recursos__cartao { padding: clamp(40px, 35.914px + 1.048vw, 51px) clamp(20px, 8.857px + 2.857vw, 50px) clamp(46px, 36.343px + 2.476vw, 72px); }
+.mx-vhsys-distribuidora-bebidas .mxv-abas { margin-top: clamp(27px, 25.886px + 0.286vw, 30px); display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.mx-vhsys-distribuidora-bebidas .mxv-abas li { flex: none; }
+.mx-vhsys-distribuidora-bebidas .mxv-aba {
+  display: inline-flex; align-items: center; gap: 8px; min-height: clamp(44px, 48.114px - 0.286vw, 47px); padding: clamp(9px, 10.371px - 0.095vw, 10px) clamp(12px, 14.743px - 0.19vw, 14px); border-radius: 999px;
+  border: 2px solid var(--v-linha); background: #ffffff; color: var(--v-tinta);
+  font: 700 clamp(14px, 14.686px - 0.048vw, 14.5px)/20px var(--v-sans); white-space: nowrap; cursor: pointer;
+}
+.mx-vhsys-distribuidora-bebidas .mxv-aba svg { width: 18px; height: 18px; color: var(--v-check); }
+.mx-vhsys-distribuidora-bebidas .mxv-aba.is-ativa { background: var(--v-noite); border-color: var(--v-noite); color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-aba.is-ativa svg { color: var(--v-check-escuro); }
+.mx-vhsys-distribuidora-bebidas .mxv-ladrilhos { margin-top: 24px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mx-vhsys-distribuidora-bebidas .mxv-ladrilho {
+  display: flex; align-items: center; gap: 14px; padding: clamp(16px, 13.771px + 0.571vw, 22px) clamp(14px, 12.514px + 0.381vw, 18px) clamp(18px, 15.771px + 0.571vw, 24px); border-radius: 22px;
+  background: var(--v-ladrilho); color: var(--v-ladrilho-texto); font-size: clamp(14px, 13.629px + 0.095vw, 15px); line-height: clamp(19.88px, 19.353px + 0.135vw, 21.3px);
+}
+.mx-vhsys-distribuidora-bebidas .mxv-ladrilho__ico { width: 48px; height: 48px; border-radius: 12px; background: var(--v-ico-fundo); color: var(--v-ico-tinta); display: grid; place-items: center; flex: none; }
+.mx-vhsys-distribuidora-bebidas .mxv-ladrilho__ico svg { width: 25px; height: 25px; }
+.mx-vhsys-distribuidora-bebidas .mxv-ladrilho__texto { min-width: 0; }
+.mx-vhsys-distribuidora-bebidas .mxv-ladrilho strong, .mx-vhsys-distribuidora-bebidas .mxv-ladrilho__titulo { font-weight: 700; color: var(--v-tinta); }
+
+/* ---------------------------------------------------------------- 3 painel azul-noite com 6 cartões brancos */
+.mx-vhsys-distribuidora-bebidas .mxv-gestao { padding-bottom: clamp(50px, 46.286px + 0.952vw, 60px); }
+.mx-vhsys-distribuidora-bebidas .mxv-painel { background: var(--v-noite); border-radius: 30px; padding: clamp(40px, 36.286px + 0.952vw, 50px) clamp(20px, 8.857px + 2.857vw, 50px) clamp(40px, 36.286px + 0.952vw, 50px); }
+.mx-vhsys-distribuidora-bebidas .mxv-painel .mxv-titulo { color: #ffffff; font-size: clamp(26px, 22.286px + 0.952vw, 36px); line-height: clamp(30px, 25.543px + 1.143vw, 42px); }
+.mx-vhsys-distribuidora-bebidas .mxv-painel__corpo { margin-top: 14px; font-size: clamp(14px, 13.257px + 0.19vw, 16px); line-height: clamp(20px, 19.257px + 0.19vw, 22px); color: rgba(255, 255, 255, .9); }
+.mx-vhsys-distribuidora-bebidas .mxv-painel__corpo strong { color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-beneficios { margin-top: clamp(26px, 31.486px - 0.381vw, 30px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-beneficio { background: #ffffff; border-radius: 22px; padding: clamp(15px, 21.857px - 0.476vw, 20px) clamp(20px, 16.286px + 0.952vw, 30px) 20px; color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-beneficio__ico { width: clamp(55px, 68.714px - 0.952vw, 65px); height: clamp(55px, 68.714px - 0.952vw, 65px); border-radius: 10px; background: var(--v-noite); color: var(--v-ico-escuro); display: grid; place-items: center; }
+.mx-vhsys-distribuidora-bebidas .mxv-beneficio__ico svg { width: clamp(34px, 42.229px - 0.571vw, 40px); height: clamp(34px, 42.229px - 0.571vw, 40px); }
+.mx-vhsys-distribuidora-bebidas .mxv-beneficio__titulo { margin-top: clamp(0px, 19.2px - 1.333vw, 14px); font: 700 clamp(16px, 15.629px + 0.095vw, 17px)/clamp(19px, 18.629px + 0.095vw, 20px) var(--v-sans); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-beneficio p:not(.mxv-beneficio__titulo) { margin-top: 8px; font: 500 clamp(14px, 13.629px + 0.095vw, 15px)/clamp(18px, 17.257px + 0.19vw, 20px) var(--v-sans); color: var(--v-tinta); }
+
+/* ---------------------------------------------------------------- 4 cartão: selo, título, 3 cartões com ícone redondo */
+.mx-vhsys-distribuidora-bebidas .mxv-pdv { padding-bottom: clamp(44px, 38.057px + 1.524vw, 60px); background: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-pdv__cartao { background: transparent; padding: clamp(50px, 46.286px + 0.952vw, 60px) clamp(0px, -18.571px + 4.762vw, 50px) clamp(0px, -16.714px + 4.286vw, 45px); }
+.mx-vhsys-distribuidora-bebidas .mxv-pdv .mxv-titulo { margin-top: 8px; }
+.mx-vhsys-distribuidora-bebidas .mxv-modulos { margin-top: clamp(16px, 35.2px - 1.333vw, 30px); display: grid; grid-auto-flow: column; grid-auto-columns: min(311px, 89%); gap: 20px; overflow: hidden; }
+.mx-vhsys-distribuidora-bebidas .mxv-modulo { background: var(--v-azulado); border-radius: 24px; padding: 22px 28px 29px; min-height: 250px; }
+.mx-vhsys-distribuidora-bebidas .mxv-modulo__ico {
+  width: 76px; height: 76px; border-radius: 50%; border: 9px solid #ffffff; background: var(--v-ico-fundo); color: var(--v-ico-tinta);
+  display: grid; place-items: center;
+}
+.mx-vhsys-distribuidora-bebidas .mxv-modulo__ico svg { width: 24px; height: 24px; }
+.mx-vhsys-distribuidora-bebidas .mxv-modulo__titulo { margin-top: 20px; font: 700 20px/25px var(--v-titulo); letter-spacing: var(--v-ls); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-modulo p { margin-top: 8px; font-size: 15.5px; line-height: 23.25px; color: var(--v-cinza); }
+.mx-vhsys-distribuidora-bebidas .mxv-setas { margin-top: clamp(20px, 36.457px - 1.143vw, 32px); display: flex; justify-content: center; gap: 12px; }
+.mx-vhsys-distribuidora-bebidas .mxv-seta { width: clamp(40px, 53.714px - 0.952vw, 50px); height: clamp(40px, 53.714px - 0.952vw, 50px); border-radius: 50%; display: grid; place-items: center; background: #ffffff; border: 2px solid var(--v-tinta); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-seta--ativa { background: var(--v-noite); border-color: var(--v-noite); color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-seta svg { width: 18px; height: 18px; }
+
+/* ---------------------------------------------------------------- 5 planos (na captura só o título carregou) */
+.mx-vhsys-distribuidora-bebidas .mxv-planos { background: #ffffff; padding-top: clamp(50px, 38.857px + 2.857vw, 80px); min-height: clamp(248px, 242.8px + 1.333vw, 262px); }
+.mx-vhsys-distribuidora-bebidas .mxv-planos__ponto { display: block; width: 10px; height: 10px; margin: 30px auto 0; border-radius: 50%; background: var(--v-linha); }
+
+/* ---------------------------------------------------------------- 6 e 7 cartões azul-noite: texto | mídia */
+.mx-vhsys-distribuidora-bebidas .mxv-escuro-sec--pratica { padding-block: clamp(50px, 46.286px + 0.952vw, 60px) clamp(0px, 68.571px - 4.762vw, 50px); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro-sec--palma { padding-block: clamp(0px, -22.286px + 5.714vw, 60px) clamp(50px, 46.286px + 0.952vw, 60px); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro { background: var(--v-noite); border-radius: 30px; color: #ffffff; display: grid; grid-template-columns: minmax(0, 1fr); padding: 40px 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma { padding-bottom: 0; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-titulo { color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-verde, .mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-titulo strong { color: var(--v-destaque-escuro); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-selo { background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .22); color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-titulo { margin-top: 12px; font-size: clamp(26px, 22.286px + 0.952vw, 36px); line-height: clamp(30px, 25.543px + 1.143vw, 42px); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__corpo { margin-top: 12px; font-size: 16px; line-height: 24px; color: rgba(255, 255, 255, .9); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__corpo > p + p { margin-top: 10px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__corpo strong { color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-checks { margin-top: 14px; gap: 6px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-checks li { font-size: 16px; line-height: 24px; color: #ffffff; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-checks svg { margin-top: 2px; color: var(--v-check-escuro); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__botoes { margin-top: 30px; display: flex; flex-wrap: wrap; gap: 10px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__botoes .mxv-botao { width: 100%; min-height: 46px; padding: 10px 30px; font-size: 16px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-escuro__botoes { margin-top: 26px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-escuro__botoes .mxv-botao { min-height: 44px; padding: 10px 20px; font-size: 18px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__arte { margin-top: 30px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro__img img { border-radius: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-escuro__arte { margin-top: 40px; justify-self: center; width: min(100%, 279px); }
+.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-escuro__img img { border-radius: 0; }
+
+/* ---------------------------------------------------------------- 10 cartão: texto | grade de ladrilhos */
+.mx-vhsys-distribuidora-bebidas .mxv-conecte { padding-block: clamp(50px, 46.286px + 0.952vw, 60px) clamp(0px, 68.571px - 4.762vw, 50px); }
+.mx-vhsys-distribuidora-bebidas .mxv-conecte__cartao { padding: 40px 20px; display: grid; grid-template-columns: minmax(0, 1fr); }
+.mx-vhsys-distribuidora-bebidas .mxv-conecte .mxv-titulo { margin-top: 12px; font-size: clamp(26px, 22.286px + 0.952vw, 36px); line-height: clamp(30px, 25.543px + 1.143vw, 42px); }
+.mx-vhsys-distribuidora-bebidas .mxv-integras { margin-top: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.mx-vhsys-distribuidora-bebidas .mxv-integra > :is(a, div) {
+  display: grid; align-content: start; gap: 10px; height: 100%; min-height: clamp(114px, 110.286px + 0.952vw, 124px); padding: clamp(16px, 14.514px + 0.381vw, 20px) clamp(14px, 12.514px + 0.381vw, 18px) clamp(18px, 16.514px + 0.381vw, 22px);
+  border-radius: clamp(18px, 16.514px + 0.381vw, 22px); background: var(--v-ladrilho); text-decoration: none; color: var(--v-tinta);
+}
+.mx-vhsys-distribuidora-bebidas .mxv-integra__ico { width: 36px; height: 36px; border-radius: 10px; background: #ffffff; color: var(--v-ico-claro); display: grid; place-items: center; }
+.mx-vhsys-distribuidora-bebidas .mxv-integra__ico svg { width: 26px; height: 26px; }
+.mx-vhsys-distribuidora-bebidas .mxv-integra__titulo { font: 700 clamp(14.5px, 13.943px + 0.143vw, 16px)/20px var(--v-sans); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-integra__texto { font-size: 14px; line-height: 19px; color: var(--v-cinza); }
+
+/* ---------------------------------------------------------------- 14 FAQ: título e apoio | sanfona */
+.mx-vhsys-distribuidora-bebidas .mxv-faq-sec { padding-bottom: clamp(50px, 46.286px + 0.952vw, 60px); }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__cartao { padding: clamp(40px, 32.571px + 1.905vw, 60px) clamp(20px, 12.571px + 1.905vw, 40px); display: grid; grid-template-columns: minmax(0, 1fr); gap: 55px 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__cab .mxv-titulo { font-size: clamp(26px, 22.286px + 0.952vw, 36px); line-height: clamp(30px, 26.286px + 0.952vw, 40px); }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__apoio { margin-top: 12px; font-size: clamp(14px, 13.257px + 0.19vw, 16px); line-height: 22px; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__apoio a { font-weight: 700; color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-faq { display: grid; gap: 10px; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__item { border-radius: 12px; background: transparent; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__item summary {
+  list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px; cursor: pointer; border-radius: 12px; background: var(--v-pagina);
+}
+.mx-vhsys-distribuidora-bebidas .mxv-faq__item summary::-webkit-details-marker { display: none; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__q { font: 600 clamp(15px, 14.629px + 0.095vw, 16px)/18px var(--v-sans); color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__ico { width: 18px; height: 18px; color: var(--v-tinta); }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__item[open] .mxv-faq__v { opacity: 0; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__a { padding: 10px 15px 19px; font-size: 14px; line-height: 20px; }
+.mx-vhsys-distribuidora-bebidas .mxv-faq__mais { margin-top: 16px; display: flex; justify-content: center; }
+
+/* ---------------------------------------------------------------- computador: a composição lado a lado */
+@media (min-width: 48rem) {
+  .mx-vhsys-distribuidora-bebidas .mxv-titulo--centro, .mx-vhsys-distribuidora-bebidas .mxv-tudo .mxv-cab, .mx-vhsys-distribuidora-bebidas .mxv-pdv .mxv-cab, .mx-vhsys-distribuidora-bebidas .mxv-painel__cab { text-align: center; }
+  .mx-vhsys-distribuidora-bebidas :is(.mxv-tudo, .mxv-pdv) .mxv-cab .mxv-titulo, .mx-vhsys-distribuidora-bebidas .mxv-titulo--centro { max-width: 832px; margin-inline: auto; }
+  .mx-vhsys-distribuidora-bebidas .mxv-cab__corpo, .mx-vhsys-distribuidora-bebidas .mxv-painel__corpo { max-width: 832px; margin-inline: auto; }
+  .mx-vhsys-distribuidora-bebidas .mxv-tudo .mxv-cab__corpo { margin-top: 15px; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-hero__grade { grid-template-columns: minmax(0, 1fr) minmax(0, 570px); column-gap: 38px; align-items: start; }
+  .mx-vhsys-distribuidora-bebidas .mxv-hero__botoes .mxv-botao { width: auto; }
+  .mx-vhsys-distribuidora-bebidas .mxv-hero__intro { margin-top: 28px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-hero__nota { max-width: 372px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-hero__arte { margin-top: 11px; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-linha { grid-template-columns: minmax(0, 1fr) minmax(0, 480px); column-gap: 40px; align-items: center; padding: 48px 50px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-linha__arte { margin-top: 0; }
+  .mx-vhsys-distribuidora-bebidas .mxv-linha--inversa { grid-template-columns: minmax(0, 480px) minmax(0, 1fr); }
+  .mx-vhsys-distribuidora-bebidas .mxv-linha--inversa .mxv-linha__arte { order: -1; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-abas { flex-wrap: wrap; justify-content: center; overflow: visible; }
+  .mx-vhsys-distribuidora-bebidas .mxv-ladrilhos { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 25px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-ladrilho { width: 248px; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-pdv { background: transparent; }
+  .mx-vhsys-distribuidora-bebidas .mxv-pdv__cartao { background: #ffffff; border-radius: 30px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-modulos { margin-top: 26px; grid-auto-flow: row; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-planos__titulo { max-width: none; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-escuro { grid-template-columns: minmax(0, 426px) minmax(0, 551px); justify-content: space-between; align-items: center; padding: 50px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-escuro__botoes .mxv-botao { width: auto; }
+  .mx-vhsys-distribuidora-bebidas .mxv-escuro__arte { margin-top: 0; }
+  .mx-vhsys-distribuidora-bebidas .mxv-escuro--palma { grid-template-columns: minmax(0, 1fr) minmax(0, 499px); column-gap: 20px; padding: 50px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-escuro__arte { margin-top: 0; width: 100%; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-conecte__cartao { grid-template-columns: minmax(0, 520px) minmax(0, 478px); justify-content: space-between; align-items: center; padding: 55px 50px; }
+  .mx-vhsys-distribuidora-bebidas .mxv-integras { margin-top: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+
+  .mx-vhsys-distribuidora-bebidas .mxv-faq__cartao { grid-template-columns: minmax(0, 354px) minmax(0, 1fr); align-items: start; }
+}
+@media (min-width: 75rem) {
+  /* na referência a foto passa 20 px da casca: coluna de texto de 532 px (a largura do h1), vão de 58.
+     A grade É a casca (margin-inline: auto): margem negativa a empurrava 150 px para a direita e dava 20 px
+     de rolagem lateral; tirar o respiro da direita dá a mesma caixa, 150 → 1310, sem sair da tela. */
+  .mx-vhsys-distribuidora-bebidas .mxv-hero__grade { padding-right: 0; column-gap: 58px; }
+}
+@media (min-width: 64rem) {
+  .mx-vhsys-distribuidora-bebidas .mxv-beneficios { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* na captura tudo já está à vista; a revelação só existe na página vestida, depois que o molde.js roda */
+
+/* ================================================================== 2. página vestida (SoftPay) ===== */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv { color: var(--v-texto); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv :is(h1, h2, h3) { text-wrap: balance; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv p { text-wrap: pretty; }
+.page-molde.mx-vhsys-distribuidora-bebidas :is(.mxv-titulo, .mxv-linha__titulo, .mxv-modulo__titulo) { font-weight: var(--v-peso-titulo); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-cab__corpo { line-height: 1.5; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-botao:active, .page-molde.mx-vhsys-distribuidora-bebidas .mxv-aba:active, .page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilula:active, .page-molde.mx-vhsys-distribuidora-bebidas .mxv-integra > a:active { transform: scale(.98); }
+@media (hover: hover) and (pointer: fine) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-botao--cheio:hover { background: var(--v-acao-forte); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-botao--contorno:hover { background: var(--v-tinta); color: #ffffff; }
+  .page-molde.mx-vhsys-distribuidora-bebidas :is(.mxv-hero, .mxv-escuro) .mxv-botao--contorno:hover { background: #ffffff; color: var(--v-noite); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilula:hover { background: rgba(255, 255, 255, .18); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-aba:not(.is-ativa):hover { border-color: var(--v-acao); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-integra > a:hover { transform: translateY(-3px); box-shadow: 0 14px 28px -18px rgba(6, 18, 31, .45); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__item summary:hover .mxv-faq__q { color: var(--v-acao); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano:hover { border-color: var(--v-acao); }
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-integra > a { transition: transform .2s cubic-bezier(.22, 1, .36, 1), box-shadow .2s ease; }
+
+/* hero: cobre a tela inteira abaixo do cabeçalho fixo do chassi (84 px); a sobra se divide entre os vãos */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero {
+  min-height: 100svh; display: grid; align-content: space-evenly; row-gap: 24px;
+  padding-block: calc(84px + clamp(16px, 4px + 2.5vw, 48px)) clamp(28px, 16px + 3vw, 64px);
+  background: radial-gradient(120% 80% at 85% 10%, #10304d 0%, var(--v-noite) 60%) var(--v-noite);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilulas { margin-top: 0; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-trilha {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0 8px; margin-bottom: 8px;
+  font: 500 14px/1.4 var(--v-sans); color: rgba(255, 255, 255, .72);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-trilha a { color: rgba(255, 255, 255, .78); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-trilha [aria-current] { color: #ffffff; font-weight: 600; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-h1 { font-size: clamp(32px, 24.571px + 1.905vw, 52px); line-height: 1.1; max-width: 15ch; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__intro { line-height: 1.5; max-width: 52ch; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__botoes { flex-wrap: wrap; gap: 8px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__botoes .mxv-botao { width: auto; flex: 1 1 auto; padding-inline: clamp(12px, 5.314px + 1.714vw, 30px); font-size: clamp(15px, 13.886px + 0.286vw, 18px); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__img img { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilula { min-height: 44px; padding: 6px 14px 6px 10px; }
+/* as duas chamadas da rota sobre a foto (frases da rota, sem número inventado) */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada {
+  position: absolute; display: grid; grid-template-columns: 34px auto; column-gap: 10px; align-items: center;
+  padding: 10px 14px 10px 10px; border-radius: 14px; background: #ffffff; color: var(--v-tinta);
+  box-shadow: 0 18px 36px -18px rgba(0, 0, 0, .55); max-width: calc(100% - 24px);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada--1 { top: 12px; left: 12px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada--2 { right: 12px; bottom: 12px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__ico { grid-row: 1 / span 2; width: 34px; height: 34px; border-radius: 10px; background: var(--v-ico-fundo); color: #ffffff; display: grid; place-items: center; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__ico svg { width: 18px; height: 18px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__titulo { font: 700 13px/1.25 var(--v-sans); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__texto { font: 500 13px/1.3 var(--v-sans); color: var(--v-cinza); }
+@media (prefers-reduced-motion: no-preference) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv.js-ok .mxv-chamada { animation: mxv-flutua 6s ease-in-out infinite; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv.js-ok .mxv-chamada--2 { animation-delay: -3s; }
+  @keyframes mxv-flutua { 50% { transform: translateY(-6px); } }
+}
+@media (max-width: 47.99rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__nota { font-size: 14px; line-height: 1.4; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilulas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilula { width: 100%; justify-content: flex-start; font-size: 14px; line-height: 18px; }
+}
+@media (min-width: 48rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__grade { align-items: center; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__arte { margin-top: 0; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada--1 { left: -18px; top: 28px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada--2 { right: -14px; bottom: 28px; }
+}
+/* hero cabe na tela (doutrina: sobra dividida IGUAL entre os vãos, teto 120 no computador e 72 no celular).
+   Medição de 03/11, 17:40, antes: 121/95/130 em 1440×900; 989 px de hero em 390×844; e na tela em pé a coluna de
+   texto ficava com 120 px (768) e 172 px (820) porque a foto de 570 px levava a grade inteira. */
+@media (max-width: 47.99rem) {
+  /* celular: a foto é a mesma, inteira, encolhida pela altura; o respiro de cima é só o do cabeçalho (63 px) */
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero { padding-block: calc(63px + 12px) 14px; row-gap: 8px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__intro { line-height: 1.4; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__botoes { margin-top: 14px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__arte { width: fit-content; margin-inline: auto; margin-top: 10px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__img img { width: auto; max-width: 100%; max-height: 21svh; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-pilulas { gap: 6px; }
+  /* foto menor: as chamadas viram etiquetas de uma linha nos cantos (com o texto de apoio cobriam a foto inteira) */
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada { grid-template-columns: 24px auto; column-gap: 6px; padding: 5px 9px 5px 5px; border-radius: 10px; max-width: 72%; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__ico { grid-row: auto; width: 24px; height: 24px; border-radius: 7px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__ico svg { width: 14px; height: 14px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__texto { display: none; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada__titulo { font-size: 12px; white-space: nowrap; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada--1 { top: -8px; left: -10px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-chamada--2 { right: -10px; bottom: 8px; }
+}
+@media (min-width: 48rem) and (min-aspect-ratio: 6/5) {
+  /* deitada: sem padding de sobra, o space-evenly divide o resto; o título cresce com a altura e come a sobra */
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero { padding-block: 84px 0; row-gap: 0; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-h1 { font-size: clamp(32px, max(clamp(32px, 24.571px + 1.905vw, 52px), 7svh), 64px); }
+}
+@media (min-width: 48rem) and (max-aspect-ratio: 6/5) {
+  /* em pé (768×1024, 820×1180, 1024×1366): composição do tablet, texto e foto em sequência, nunca duas colunas */
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero { padding-block: 84px 0; row-gap: 0; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__grade { grid-template-columns: minmax(0, 1fr); row-gap: 24px; column-gap: 0; padding-right: 0; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__texto { max-width: 40rem; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__arte { width: fit-content; margin-inline: auto; margin-top: 0; }
+  /* altura pela tela (não teto): com max-height a foto parava no tamanho intrínseco (545×387) e sobravam
+     131/121/121 em 1024×1366 e 73 em 820×1180; o sizes do molde pede o arquivo de 940 em tela em pé */
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__img img { width: auto; max-width: 100%; height: 34svh; object-fit: contain; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-h1 { font-size: clamp(34px, 5.6svh, 72px); }
+}
+@media (min-width: 48rem) and (max-aspect-ratio: 6/5) and (min-height: 1250px) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-hero__img img { height: 38svh; }
+}
+
+/* cartões em linha: a etiqueta do print real do Estoque senta sobre a foto */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-linha__img img { box-shadow: 0 24px 50px -30px rgba(6, 18, 31, .45); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-etiqueta {
+  display: block; position: absolute; left: 12px; bottom: -14px; width: min(56%, 230px); border-radius: 12px;
+  box-shadow: 0 20px 40px -18px rgba(6, 18, 31, .5);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-linha__corpo > p { font-size: 16px; line-height: 1.5; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-checks li { font-size: 16px; line-height: 1.45; }
+@media (min-width: 48rem) { .page-molde.mx-vhsys-distribuidora-bebidas .mxv-etiqueta { left: -24px; bottom: -20px; } }
+
+/* abas: quebram em linhas (nada de trilho lateral) e acendem os ladrilhos do assunto */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-abas { flex-wrap: wrap; overflow: visible; gap: 8px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-aba { min-height: 44px; transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .15s ease; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilho { transition: opacity .25s ease, transform .25s cubic-bezier(.22, 1, .36, 1); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilhos.is-filtrado .mxv-ladrilho:not(.is-aceso) { opacity: .45; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilhos.is-filtrado .mxv-ladrilho.is-aceso { box-shadow: inset 0 0 0 2px var(--v-acao); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilho { align-items: flex-start; font-size: 15px; line-height: 1.5; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilho__titulo { font: 700 16px/1.3 var(--v-sans); margin-bottom: 4px; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-abas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-aba { width: 100%; justify-content: center; padding-inline: 8px; font-size: 14px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-aba svg { display: none; }
+}
+@media (min-width: 48rem) { .page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilhos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } .page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilho { width: auto; } }
+@media (min-width: 64rem) { .page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilhos { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+/* painel: as 6 perguntas curtas em 2 colunas no celular */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-beneficio { height: 100%; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-beneficio p.mxv-beneficio__titulo { margin-top: 14px; font-size: clamp(15px, 14.257px + 0.19vw, 17px); line-height: 1.35; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-beneficios { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-beneficio { padding: 14px; border-radius: 16px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-beneficio__ico { width: 44px; height: 44px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-beneficio__ico svg { width: 22px; height: 22px; }
+}
+
+/* tipos de distribuidora: sem carrossel; no celular, um embaixo do outro com o ícone ao lado (parágrafo longo) */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulos { overflow: visible; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulo { min-height: 0; height: 100%; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulo p { font-size: 16px; line-height: 1.5; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-cab__corpo { max-width: 66ch; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-pdv__cartao { background: #ffffff; border-radius: 24px; padding: 32px 16px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulos { grid-auto-flow: row; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulo { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 14px; padding: 18px 16px; border-radius: 18px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulo__ico { grid-row: 1 / span 2; width: 56px; height: 56px; border-width: 5px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-modulo__titulo { margin-top: 2px; font-size: 18px; line-height: 1.3; }
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-nota { margin-top: 20px; padding: 16px 20px; border-radius: 16px; background: var(--v-azulado); color: var(--v-tinta); font-size: 15px; line-height: 1.5; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-nota__titulo { font-weight: 700; margin-bottom: 4px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro .mxv-nota { background: rgba(255, 255, 255, .08); color: #ffffff; }
+
+/* planos: os 3 cartões lado a lado em toda largura, o recomendado no meio e maior, a faixa do plano tocado */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos { min-height: 0; padding-block: clamp(48px, 30.171px + 4.571vw, 96px); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos__grade {
+  margin-top: clamp(28px, 20.571px + 1.905vw, 48px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr);
+  gap: clamp(6px, 0.8px + 1.333vw, 20px); align-items: center; max-width: 960px; margin-inline: auto;
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano {
+  position: relative; display: grid; justify-items: center; align-content: start; gap: clamp(4px, 2.514px + 0.381vw, 8px); min-width: 0;
+  padding: clamp(16px, 11.543px + 1.143vw, 28px) clamp(4px, -3.429px + 1.905vw, 24px) clamp(12px, 7.543px + 1.143vw, 24px); border-radius: clamp(14px, 11.029px + 0.762vw, 22px); border: 1px solid var(--v-linha); background: var(--v-pagina);
+  text-align: center; cursor: pointer; color: var(--v-tinta);
+  transition: transform .25s cubic-bezier(.22, 1, .36, 1), border-color .2s ease, box-shadow .2s ease;
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano:not(.is-destaque) { transform: scale(.965); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano.is-destaque {
+  background: var(--v-noite); border-color: var(--v-noite); color: #ffffff; padding-block: clamp(26px, 19.314px + 1.714vw, 44px) clamp(16px, 10.057px + 1.524vw, 32px); border-radius: clamp(18px, 14.286px + 0.952vw, 28px);
+  box-shadow: 0 30px 60px -28px rgba(6, 18, 31, .6);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano.is-escolhido { box-shadow: 0 0 0 2px var(--v-acao); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano.is-destaque.is-escolhido { box-shadow: 0 0 0 2px var(--v-destaque-escuro), 0 30px 60px -28px rgba(6, 18, 31, .6); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano__selo {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); white-space: nowrap;
+  padding: 4px clamp(8px, 5.771px + 0.571vw, 14px); border-radius: 999px; background: var(--v-acao); color: #ffffff; font: 700 clamp(12px, 11.629px + 0.095vw, 13px)/1.4 var(--v-sans);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano__nome { font: 700 clamp(13px, 11.143px + 0.476vw, 18px)/1.25 var(--v-sans); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano__preco { font: 700 clamp(17px, 10.686px + 1.619vw, 34px)/1.1 var(--v-titulo); white-space: nowrap; letter-spacing: var(--v-ls); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano__desc { font-size: 15px; line-height: 1.45; text-align: left; }
+/* em 360 a coluna de 1/3 tem 85 px por dentro: o botão perde recheio lateral e, se ainda faltar, quebra a linha em vez de vazar (de qa, 03/11 22:07: botão de 90 px em coluna de 85) */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano__botao { margin-top: clamp(6px, 3.771px + 0.571vw, 12px); min-height: 44px; padding: 8px clamp(3px, -4.057px + 1.81vw, 22px); font-size: clamp(13px, 11.886px + 0.286vw, 16px); line-height: 1.15; white-space: normal; text-wrap: balance; width: 100%; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano.is-destaque .mxv-plano__botao { background: var(--v-acao); color: #ffffff; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano.is-destaque .mxv-botao--contorno { border-color: #ffffff; color: #ffffff; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos__aberto { display: none; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos.is-pronto .mxv-plano__desc { display: none; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos.is-pronto .mxv-planos__aberto {
+  display: block; max-width: 960px; margin: 14px auto 0; padding: 16px 20px; border-radius: 16px; background: var(--v-azulado);
+  font-size: 16px; line-height: 1.5; color: var(--v-tinta);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos__qual { font-weight: 700; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano-faixa {
+  max-width: 960px; margin: 12px auto 0; display: grid; gap: 4px 20px; padding: 16px 20px; border-radius: 16px;
+  border: 1px solid var(--v-linha); background: #ffffff; color: var(--v-tinta);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano-faixa__nome { font-weight: 700; font-size: 16px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano-faixa__preco { margin-left: 6px; color: var(--v-acao); white-space: nowrap; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano-faixa__desc { font-size: 15px; line-height: 1.45; }
+/* link dentro do texto do ladrilho: 44 px de alvo de toque sem mexer na linha (o recheio sai pela margem negativa) */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-ladrilho__texto a { display: inline-block; padding-block: 13px; margin-block: -13px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-planos__sub { max-width: 960px; margin: 16px auto 0; font-size: 15px; line-height: 1.5; color: var(--v-cinza); }
+@media (min-width: 48rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano-faixa { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) { .page-molde.mx-vhsys-distribuidora-bebidas .mxv-plano:not(.is-destaque) { transform: none; } }
+
+/* cartões escuros: na rota, o passo a passo do pedido ganha espaço (texto mais largo, mídia que acompanha) */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro__corpo { line-height: 1.55; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-passos { margin-block: 14px; display: grid; gap: 10px; counter-reset: passo; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-passos li {
+  counter-increment: passo; display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 12px; align-items: start;
+  color: #ffffff; font-size: 16px; line-height: 1.5;
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-passos li::before {
+  content: counter(passo); width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .24); color: var(--v-destaque-escuro); font: 700 14px/1 var(--v-sans);
+}
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro__botoes .mxv-botao { flex: 1 1 auto; width: auto; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro__img img { box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma .mxv-escuro__img img { box-shadow: none; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma { padding-bottom: 24px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro__botoes .mxv-botao { padding-inline: 14px; font-size: 15px; }
+}
+@media (min-width: 48rem) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro--pratica { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); column-gap: 48px; align-items: start; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro--pratica .mxv-escuro__arte { position: sticky; top: 110px; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv-escuro--palma { padding-bottom: 50px; }
+}
+
+/* continue por aqui: os 6 relacionados em 2 colunas no celular, 3 no computador */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-integra__texto { font-size: 14px; line-height: 1.4; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-mais { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-mais a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--v-linha); text-decoration: none; }
+
+/* FAQ: 5 à vista + "Ver mais perguntas (+N)"; alvo de toque ≥ 44 px */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__item summary { min-height: 48px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__q { font-size: 16px; line-height: 1.4; font-weight: 600; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__a { font-size: 16px; line-height: 1.55; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__a p + p { margin-top: 10px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__ico { transition: transform .25s cubic-bezier(.22, 1, .36, 1); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__item[open] .mxv-faq__ico { transform: rotate(180deg); }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__v { transition: opacity .2s ease; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq.is-recolhido .mxv-faq__extra { display: none; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__mais[hidden] { display: none; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__mais .mxv-botao { min-height: 48px; font-size: 16px; padding: 10px 24px; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq__apoio a { text-underline-offset: 3px; }
+
+/* vãos da casa: até 72 px no celular, até 120 no computador (a referência fica abaixo disso) */
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-faq-sec { padding-bottom: clamp(48px, 30.171px + 4.571vw, 96px); }
+
+/* revelar ao entrar na tela: só depois que o molde.js roda (sem JS, tudo à vista) */
+@media (prefers-reduced-motion: no-preference) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv.js-ok .mxv-rv {
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .4s cubic-bezier(.22, 1, .36, 1), transform .4s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: calc(var(--rv-i, 0) * 60ms);
+  }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv.js-ok .mxv-rv.is-visto { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv.js-ok .mxv-rv { opacity: 0; transition: opacity .2s linear; }
+  .page-molde.mx-vhsys-distribuidora-bebidas .mxv.js-ok .mxv-rv.is-visto { opacity: 1; }
+}
+
+/* letra do SoftPay Display: espaçamento da casa */
+.page-molde.mx-vhsys-distribuidora-bebidas :is(.mxv-titulo, .mxv-linha__titulo, .mxv-modulo__titulo, .mxv-plano__preco) { letter-spacing: 0.005em; }
+.page-molde.mx-vhsys-distribuidora-bebidas .mxv-h1 { letter-spacing: -0.0036em; }

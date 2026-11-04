@@ -1,0 +1,288 @@
+{
+ "slug": "solucoes/loja-online",
+ "figura": [
+  "/assets/lojistas/celular-balcao.webp",
+  "Mãos de um comerciante usando o celular sobre o balcão"
+ ],
+ "title": "Loja Online com Catálogo e Pix | SoftPay",
+ "description": "Loja online integrada ao seu estoque, com catálogo, pagamento por Pix e confirmação automática do pedido. A partir do plano Loja. Teste grátis 7 dias.",
+ "h1": "Loja online com Pix",
+ "intro": "Nem todo cliente vai até o balcão. Com a loja online do SoftPay, seu catálogo fica disponível para quem prefere escolher pelo celular e pagar por Pix — usando o mesmo estoque da loja física.",
+ "breadcrumbs": [
+  [
+   "Soluções",
+   "/solucoes/"
+  ],
+  [
+   "Loja online",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "A loja online usa o mesmo estoque da loja física?",
+   "Sim. O catálogo usa os produtos já cadastrados, e a venda online baixa o mesmo saldo da venda do balcão. Não existem dois estoques para conciliar."
+  ],
+  [
+   "Em qual plano está a loja online?",
+   "A partir do plano Loja, de R$ 89/mês. O plano Comércio não inclui esse recurso."
+  ],
+  [
+   "Como o cliente paga?",
+   "Por Pix, com confirmação automática do pedido — sem você precisar conferir comprovante."
+  ],
+  [
+   "Aceita cartão parcelado?",
+   "Não. O pagamento na loja online é por Pix."
+  ],
+  [
+   "Calcula frete e integra com transportadora?",
+   "Não. Não há cálculo por CEP, emissão de etiqueta nem rastreio. A entrega é combinada fora do sistema."
+  ],
+  [
+   "Posso usar meu próprio domínio?",
+   "Esse ponto não está confirmado. Se ter a loja num endereço seu é importante, verifique com o suporte antes de contratar."
+  ],
+  [
+   "Integra com Mercado Livre, Shopee ou Nuvemshop?",
+   "Não. A loja online é um catálogo próprio ligado ao seu estoque, sem integração com marketplace."
+  ],
+  [
+   "Preciso cadastrar os produtos de novo?",
+   "Não. O catálogo usa os produtos que já estão no sistema, com o preço do cadastro."
+  ],
+  [
+   "A venda online entra no meu relatório?",
+   "Sim. Ela baixa estoque, entra no caixa e aparece nos relatórios junto com as vendas do balcão."
+  ]
+ ],
+ "cta_title": "Pare de digitar preço no WhatsApp",
+ "cta_text": "Publique o catálogo com os produtos que você já cadastrou e mande o link em vez da resposta. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "O estoque que os dois canais usam"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Quem compra pela internet"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "A venda do balcão"
+  ],
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "Catálogo com grade"
+  ],
+  [
+   "Loja de variedades",
+   "/segmentos/loja-de-variedades/",
+   "Catálogo grande"
+  ],
+  [
+   "Loja de joias",
+   "/segmentos/loja-de-joias/",
+   "Peça de alto valor online"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-problema",
+   "titulo": "O problema",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vender pela internet costuma significar montar uma segunda loja: outro cadastro de produtos, outro estoque para atualizar e outro lugar para conferir pedido. Na prática, quem tenta acaba com dois números de estoque que nunca batem."
+    },
+    {
+     "tipo": "p",
+     "texto": "O resultado mais comum é o pior possível: vender online algo que acabou de sair no balcão, e ter que desmarcar a venda com o cliente."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-isso-aparece-na-sua-loja",
+   "titulo": "Como isso aparece na sua loja",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O cliente pergunta preço pelo WhatsApp</strong> e alguém digita a resposta de novo, uma por uma, o dia inteiro.",
+      "<strong>A foto está no Instagram, o preço não.</strong> E o que estava no post já mudou.",
+      "<strong>Você vende o que não tem.</strong> O item saiu no balcão e o anúncio continua no ar.",
+      "<strong>O pagamento vira conversa.</strong> Mandar chave Pix, esperar comprovante, conferir na mão.",
+      "<strong>O pedido não vira registro.</strong> A venda online fica fora do estoque e do relatório."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Um estoque, dois canais"
+    },
+    {
+     "tipo": "p",
+     "texto": "O catálogo online usa os mesmos produtos já cadastrados. A venda online e a venda do balcão baixam o mesmo saldo — não existem dois números para conciliar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Catálogo sem cadastro dobrado"
+    },
+    {
+     "tipo": "p",
+     "texto": "Produto, foto, preço e descrição são os do sistema. Se você mudou o preço no cadastro, mudou na loja online. Nada de manter dois lugares atualizados."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Pix com confirmação automática"
+    },
+    {
+     "tipo": "p",
+     "texto": "O cliente paga por Pix e o pedido é confirmado sem você ficar conferindo comprovante. É a parte que mais consome tempo na venda por WhatsApp."
+    },
+    {
+     "tipo": "h3",
+     "texto": "O pedido entra no seu resultado"
+    },
+    {
+     "tipo": "p",
+     "texto": "Venda online é venda: baixa estoque, entra no caixa e aparece nos relatórios junto com o resto. O canal muda, o registro não."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Ligado ao cadastro de clientes"
+    },
+    {
+     "tipo": "p",
+     "texto": "Quem compra online alimenta o mesmo histórico de quem compra no balcão. Veja o <a href=\"/solucoes/controle-de-clientes/\">controle de clientes</a>."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Em qual plano",
+     "texto": "A loja online está disponível <strong>a partir do plano Loja</strong> (R$ 89/mês). Não existe no plano Comércio."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-a-loja-online-nao-e",
+   "titulo": "O que a loja online não é",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Ela é um catálogo que vende com Pix, não uma plataforma de e-commerce. Vale ser exato:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não calcula frete nem integra com transportadora.</strong> Não há cálculo por CEP, etiqueta nem rastreio.",
+      "<strong>Não gerencia entrega.</strong> Combinação de retirada ou entrega acontece fora do sistema.",
+      "<strong>Não tem checkout com cartão parcelado.</strong> O pagamento é por Pix.",
+      "<strong>Não tem domínio próprio confirmado.</strong> Se você precisa da loja em um endereço seu, confirme com o suporte antes de contratar.",
+      "<strong>Não faz marketplace nem integra com Mercado Livre, Shopee ou Nuvemshop.</strong>",
+      "<strong>Não tem recuperação de carrinho, cupom de frete nem ferramentas de conversão</strong> de e-commerce."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você precisa de operação de e-commerce completa, ela não substitui uma plataforma dedicada. Se você quer parar de responder preço no WhatsApp e receber por Pix sem conferir comprovante, resolve exatamente isso."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "onde-ela-rende-mais",
+   "titulo": "Onde ela rende mais",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O ganho não é abrir um canal novo — é tirar trabalho manual de um canal que você já usa:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "O cliente pergunta pelo WhatsApp se tem determinado produto.",
+      "Em vez de digitar preço e disponibilidade, você manda o link do catálogo.",
+      "Ele escolhe, vê o que realmente tem em estoque e paga por Pix.",
+      "A confirmação é automática — sem esperar comprovante.",
+      "O pedido baixa o estoque e entra no seu relatório como qualquer venda.",
+      "A compra fica no histórico daquele cliente."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sobre este exemplo",
+     "texto": "Exemplo ilustrativo do fluxo. O quanto isso rende depende de quanto do seu atendimento hoje acontece por mensagem."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-voce-passa-a-conseguir-responder",
+   "titulo": "O que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto vendi online neste mês?",
+      "Qual produto sai mais pelo catálogo e qual sai mais no balcão?",
+      "O estoque do site bate com o da loja?",
+      "Quem são os clientes que compram pela internet?",
+      "Quanto do meu faturamento já vem de fora do balcão?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "em-qual-plano-esta",
+   "titulo": "Em qual plano está",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Loja online neste plano"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "<strong>Não inclui loja online.</strong> Só a operação do balcão"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O plano que libera a loja online:</strong> catálogo, Pix com confirmação automática, cupons e fidelidade. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-07"
+}

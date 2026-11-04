@@ -1,0 +1,269 @@
+{
+  "referencia": "https://squareup.com/us/en/point-of-sale",
+  "molde": "square-pdv",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/square-pdv",
+  "quando": "2026-11-03T16:29:53.700Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 11115,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 1,
+          "tipo": "palco preso à rolagem + modos com abas",
+          "ref": {
+            "y": 515,
+            "altura": 2463
+          },
+          "molde": {
+            "y": 515,
+            "altura": 2463
+          },
+          "total": 0.0083,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 2463
+        },
+        {
+          "secao": 2,
+          "tipo": "linhas com foto e divisória",
+          "ref": {
+            "y": 3237,
+            "altura": 2227
+          },
+          "molde": {
+            "y": 2978,
+            "altura": 2307
+          },
+          "total": 0.0158,
+          "altura_dif": 0.0359,
+          "passou": true,
+          "motivos": [],
+          "altura": 2227
+        },
+        {
+          "secao": 3,
+          "tipo": "carrossel de aparelhos",
+          "ref": {
+            "y": 5464,
+            "altura": 850
+          },
+          "molde": {
+            "y": 5285,
+            "altura": 878
+          },
+          "total": 0.0381,
+          "altura_dif": 0.0329,
+          "passou": true,
+          "motivos": [],
+          "altura": 850
+        },
+        {
+          "secao": 4,
+          "tipo": "carrossel de cartões",
+          "ref": {
+            "y": 6313,
+            "altura": 928
+          },
+          "molde": {
+            "y": 6163,
+            "altura": 976
+          },
+          "total": 0.0208,
+          "altura_dif": 0.0517,
+          "passou": true,
+          "motivos": [],
+          "altura": 928
+        },
+        {
+          "secao": 5,
+          "tipo": "preços: 3 cartões + cartão largo",
+          "ref": {
+            "y": 7241,
+            "altura": 2055
+          },
+          "molde": {
+            "y": 7139,
+            "altura": 2051
+          },
+          "total": 0.0149,
+          "altura_dif": 0.0019,
+          "passou": true,
+          "motivos": [],
+          "altura": 2055
+        },
+        {
+          "secao": 6,
+          "tipo": "FAQ em acordeão",
+          "ref": {
+            "y": 9336,
+            "altura": 803
+          },
+          "molde": {
+            "y": 9190,
+            "altura": 803
+          },
+          "total": 0.0163,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 803
+        },
+        {
+          "secao": 8,
+          "tipo": "notas de rodapé em duas colunas",
+          "ref": {
+            "y": 10421,
+            "altura": 840
+          },
+          "molde": {
+            "y": 10275,
+            "altura": 840
+          },
+          "total": 0,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 840
+        }
+      ],
+      "total": 0.0149,
+      "pior": 0.0381,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 9553,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 1,
+          "tipo": "palco preso à rolagem + modos com abas",
+          "ref": {
+            "y": 486,
+            "altura": 2631
+          },
+          "molde": {
+            "y": 576,
+            "altura": 2631
+          },
+          "total": 0.0008,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 2631
+        },
+        {
+          "secao": 2,
+          "tipo": "linhas com foto e divisória",
+          "ref": {
+            "y": 3285,
+            "altura": 1612
+          },
+          "molde": {
+            "y": 3207,
+            "altura": 1611
+          },
+          "total": 0.0296,
+          "altura_dif": 0.0006,
+          "passou": true,
+          "motivos": [],
+          "altura": 1612
+        },
+        {
+          "secao": 3,
+          "tipo": "carrossel de aparelhos",
+          "ref": {
+            "y": 4897,
+            "altura": 1012
+          },
+          "molde": {
+            "y": 4818,
+            "altura": 1012
+          },
+          "total": 0.0037,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1012
+        },
+        {
+          "secao": 4,
+          "tipo": "carrossel de cartões",
+          "ref": {
+            "y": 5908,
+            "altura": 979
+          },
+          "molde": {
+            "y": 5830,
+            "altura": 979
+          },
+          "total": 0.0247,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 979
+        },
+        {
+          "secao": 5,
+          "tipo": "preços: 3 cartões + cartão largo",
+          "ref": {
+            "y": 6887,
+            "altura": 1186
+          },
+          "molde": {
+            "y": 6809,
+            "altura": 1165
+          },
+          "total": 0.0306,
+          "altura_dif": 0.0177,
+          "passou": true,
+          "motivos": [],
+          "altura": 1186
+        },
+        {
+          "secao": 6,
+          "tipo": "FAQ em acordeão",
+          "ref": {
+            "y": 8113,
+            "altura": 756
+          },
+          "molde": {
+            "y": 7974,
+            "altura": 756
+          },
+          "total": 0.0027,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 756
+        },
+        {
+          "secao": 8,
+          "tipo": "notas de rodapé em duas colunas",
+          "ref": {
+            "y": 9181,
+            "altura": 545
+          },
+          "molde": {
+            "y": 9042,
+            "altura": 511
+          },
+          "total": 0.0931,
+          "altura_dif": 0.0624,
+          "passou": true,
+          "motivos": [],
+          "altura": 545
+        }
+      ],
+      "total": 0.0191,
+      "pior": 0.0931,
+      "passou": true
+    }
+  },
+  "omitidas": [],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}

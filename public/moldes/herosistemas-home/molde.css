@@ -1,0 +1,1005 @@
+/* Molde herosistemas-home: a home da Hero Sistemas (herosistemas.com.br, Elementor, letra Inter), medida na captura
+   renderizada de 03/11/2026 em 1440 e 390 (ferramentas/secoes.mjs → trabalho/medidas-<L>.txt). Duas camadas:
+   1. `.mx-herosistemas-home` — a COMPOSIÇÃO da referência: casca de 1216 px, ordem, grades, tamanhos de letra e vãos
+      medidos. Tamanho fluido sai de clamp() com o valor do celular em 390 e o do computador em 1440, então nas duas
+      larguras da captura dá o número da referência. É o que a prova (provar-molde.mjs) compara com a captura.
+   2. `.page-molde.mx-herosistemas-home` — a página vestida: letra e cores do SoftPay e as regras da casa que vencem a
+      referência (hero cobre a tela, vãos ≤ 120/72 px, celular lado a lado sem trilho lateral, planos lado a lado com
+      a faixa do plano tocado e o destaque no MEIO, FAQ com 5 à vista, alvo de toque ≥ 44 px, revelar ao entrar).
+      Nada daqui entra na prova.
+   Cores e letras moram em variáveis: o padrão (SoftPay) fica em :where() com peso zero, e o origem.css da prova troca
+   pelos valores da Hero sem disputar ordem.
+   Composição por largura: base = celular (a captura de 390); a partir de 48rem, a do computador (lado a lado). */
+
+:where(.mx-herosistemas-home) {
+  --h-titulo: "SoftPay Display", system-ui, sans-serif;
+  --h-sans: "SoftPay Texto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --h-marca-letra: "SoftPay Display", system-ui, sans-serif;
+  --h-ls-h1: -0.0036em;
+  --h-ls-h2: 0.005em;
+  --h-ls-app: 0.005em;
+  --h-peso-titulo: 700;
+  --h-tinta: #0a1a28;
+  --h-texto: #2b3b4a;
+  --h-cinza: #4d6072;
+  --h-azul: #0c5c9e;
+  --h-azul-forte: #084a81;
+  --h-azul-anel: #b9d6ee;
+  --h-marinho: #06121f;
+  --h-faq-fundo: #06121f;
+  --h-consultor-fundo: #06121f;
+  --h-faixa: #e8f3fb;
+  --h-depo-fundo: #eef3f7;
+  --h-cartao-plano: #fbfdff;
+  --h-linha: #dce5ec;
+  --h-campo-linha: #c9d6e1;
+  --h-acao: #0c5c9e;
+  --h-acao-forte: #084a81;
+  --h-verde: #067a4c;
+  --h-alerta: #b54708;
+  --h-xis: #b42318;
+  --h-lilas: #9fd0f5;
+  --h-app-fundo: linear-gradient(135deg, #06121f 0%, #0a2c4c 55%, #0c5c9e 100%);
+  --h-marca-cor: rgba(255, 255, 255, .06);
+  --h-titulo-cor: #0a1a28;
+  --h-form-borda: var(--h-linha);
+  --h-pil-borda: #b9d6ee;
+  --h-pil-icone: #ffffff;
+  --h-grad-claro: #40a5e7;
+  --h-cartao-p: #4d6072;
+  --h-app-letra: var(--h-sans);
+  --h-app-titulo: var(--h-titulo);
+  --h-app-olho: #d8e8f5;
+  --h-app-check: var(--h-verde);
+  --h-margem: 20px;
+  --h-casca: 1216px;
+}
+
+/* ============================================================== 1. composição da referência ============ */
+/* Base = a captura de 390; @media (min-width: 48rem) = a de 1440. Letra que muda entre as duas sai de clamp()
+   (valor de 390 em 390, de 1440 em 1440); o que só a Hero tem (largura de linha forçada, cartão com respiro
+   extra, bordas da faixa do app) fica em `.mxh--origem`, que só existe na prova. */
+.mx-herosistemas-home .mxh {
+  font-family: var(--h-sans);
+  color: var(--h-texto);
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: anywhere;
+}
+.mx-herosistemas-home .mxh, .mx-herosistemas-home .mxh *, .mx-herosistemas-home .mxh *::before, .mx-herosistemas-home .mxh *::after { box-sizing: border-box; }
+.mx-herosistemas-home .mxh :where(h1, h2, h3, h4, p, ul, ol, li, figure) { margin: 0; padding: 0; }
+.mx-herosistemas-home .mxh :where(ul, ol) { list-style: none; }
+.mx-herosistemas-home .mxh img { display: block; max-width: 100%; height: auto; }
+.mx-herosistemas-home .mxh a { color: inherit; }
+.mx-herosistemas-home .mxh-casca { width: 100%; max-width: calc(var(--h-casca) + 2 * var(--h-margem)); margin-inline: auto; padding-inline: var(--h-margem); }
+.mx-herosistemas-home .mxh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.mx-herosistemas-home .mxh-quadro { display: block; }
+.mx-herosistemas-home .mxh-quadro img { width: 100%; }
+.mx-herosistemas-home .mxh-azul { color: var(--h-azul); }
+.mx-herosistemas-home .mxh-lilas { color: var(--h-lilas); }
+.mx-herosistemas-home .mxh-titulo {
+  font: var(--h-peso-titulo) clamp(28.8px, 21.669px + 1.8286vw, 48px)/1.1 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-tinta);
+}
+.mx-herosistemas-home .mxh-titulo--centro { text-align: center; }
+
+/* olho: pílula de contorno azul, maiúsculas (na Hero a linha de 5,12 px no celular dá a pílula de 31 px) */
+.mx-herosistemas-home .mxh-olho {
+  display: table; margin-inline: auto; padding: 12px 24px; border: 1px solid var(--h-azul); border-radius: 100px; background: rgba(255, 255, 255, .01);
+  font: 600 12.8px/5.12px var(--h-sans); text-transform: uppercase; color: var(--h-azul); text-align: center;
+}
+.mx-herosistemas-home .mxh-olho--escuro { border-color: #ffffff; color: #ffffff; }
+
+/* botão-pílula da Hero: contorno fino, texto e a seta num círculo claro */
+.mx-herosistemas-home .mxh-pilbotao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 23px; padding: 10px 22px;
+  border-radius: 100px; border: 1px solid var(--h-pil-borda); background: var(--h-azul); color: #ffffff;
+  font: 500 clamp(14px, 13.257px + .1905vw, 16px)/1.3 var(--h-sans); letter-spacing: -0.16px; text-align: center; text-decoration: none; cursor: pointer;
+  transition: background-color .18s ease, transform .15s ease;
+}
+.mx-herosistemas-home .mxh-pilbotao__seta {
+  display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--h-pil-icone); color: var(--h-azul); flex: none;
+}
+.mx-herosistemas-home .mxh-pilbotao__seta svg { width: 16px; height: 13px; }
+.mx-herosistemas-home .mxh-pilbotao--claro { background: linear-gradient(99deg, var(--h-azul) -32.87%, var(--h-grad-claro) 123.96%); }
+.mx-herosistemas-home .mxh-pilbotao--cheio { background: var(--h-azul); }
+
+/* ---------------------------------------------------------------- hero: título, checks e prova | formulário */
+.mx-herosistemas-home .mxh-hero { padding-block: 22px 47px; background: #ffffff; }
+.mx-herosistemas-home .mxh-hero__grade { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 23px; }
+.mx-herosistemas-home .mxh-hero__form { order: -1; }
+.mx-herosistemas-home .mxh-hero__texto { text-align: center; }
+.mx-herosistemas-home .mxh-h1 {
+  font: 700 clamp(33.15px, 27.634px + 1.4143vw, 48px)/1.1 var(--h-titulo); letter-spacing: var(--h-ls-h1); color: var(--h-titulo-cor);
+}
+.mx-herosistemas-home .mxh-hero__intro { margin-top: 12px; font-size: clamp(16px, 15.257px + .1905vw, 18px); line-height: 1.5; letter-spacing: .4px; color: var(--h-cinza); }
+.mx-herosistemas-home .mxh-hero__intro strong { font-weight: 600; }
+.mx-herosistemas-home .mxh-checks { margin-top: 5px; display: grid; gap: 1.5px; text-align: left; }
+.mx-herosistemas-home .mxh-checks li { display: flex; align-items: center; padding-bottom: 1.5px; font: 500 clamp(12.8px, 12.354px + .1143vw, 14px)/1.5 var(--h-sans); color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-checks li:last-child { padding-bottom: 0; }
+.mx-herosistemas-home .mxh-checks li > :is(span, a) { padding-left: 5px; }
+.mx-herosistemas-home .mxh-checks a { text-decoration: none; }
+.mx-herosistemas-home .mxh-ico-check { width: 21px; height: 21px; flex: none; color: var(--h-verde); }
+.mx-herosistemas-home .mxh-prova { margin-top: 16px; display: flex; align-items: center; justify-content: flex-start; gap: 9px; padding-left: 17px; }
+.mx-herosistemas-home .mxh-prova__img { width: 87px; flex: none; }
+.mx-herosistemas-home .mxh-prova__icones { display: flex; flex: none; }
+.mx-herosistemas-home .mxh-prova__icones img { width: 36px; height: 36px; border-radius: 50%; background: #ffffff; border: 2px solid #ffffff; box-shadow: 0 2px 8px rgba(6, 18, 31, .12); }
+.mx-herosistemas-home .mxh-prova__icones img + img { margin-left: -10px; }
+.mx-herosistemas-home .mxh-prova__texto { font: 600 11.2px/1.2 var(--h-sans); color: var(--h-titulo-cor); text-align: left; max-width: 165px; }
+
+/* formulário em cartão (hero e consultor) */
+.mx-herosistemas-home .mxh-form { background: #ffffff; border: 1px solid var(--h-form-borda); border-radius: 24px; padding: 32px 20px; text-align: center; }
+.mx-herosistemas-home .mxh-form__titulo { font: 700 clamp(24px, 22.217px + .4571vw, 28.8px)/1.1 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-titulo-cor); }
+.mx-herosistemas-home .mxh-form__texto { margin-top: 7px; font-size: clamp(14px, 13.257px + .1905vw, 16px); line-height: 1.5; letter-spacing: .4px; color: var(--h-cinza); }
+.mx-herosistemas-home .mxh-form__campos { margin-top: 20px; display: grid; gap: 11px; }
+.mx-herosistemas-home .mxh-campo { display: block; }
+.mx-herosistemas-home .mxh-campo__in {
+  display: block; width: 100%; height: 40px; padding: 8px 16px; border: 1px solid var(--h-campo-linha); border-radius: 4px; background: #ffffff;
+  font: 400 16px/1 var(--h-sans); color: var(--h-tinta);
+}
+.mx-herosistemas-home .mxh-campo__in::placeholder { color: var(--h-cinza); opacity: .8; }
+.mx-herosistemas-home .mxh-form__botao {
+  display: block; margin-top: 23px; width: 100%; min-height: 44px; padding: 20px 16px; border: 0; border-radius: 6px; background: var(--h-acao); color: #ffffff; cursor: pointer;
+  font: 500 clamp(16px, 15.257px + .1905vw, 18px)/1.1 var(--h-sans); transition: background-color .18s ease, transform .15s ease;
+}
+.mx-herosistemas-home .mxh-form__link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 4px; font: 600 15px/1.3 var(--h-sans); color: var(--h-azul); }
+.mx-herosistemas-home .mxh-form__aviso { margin-top: 9px; font-size: clamp(12.8px, 12.354px + .1143vw, 14px); line-height: 1.2; text-align: center; color: var(--h-cinza); }
+.mx-herosistemas-home .mxh-form__aviso a { color: inherit; }
+
+/* ------------------------------------------------------------------- faixa clara: título + esteira */
+.mx-herosistemas-home .mxh-integra { padding-block: 17px 47px; background: var(--h-faixa); }
+.mx-herosistemas-home .mxh-integra__titulo {
+  max-width: 332px; margin-inline: auto; text-align: center;
+  font: 700 clamp(20.8px, 18.423px + .6095vw, 27.2px)/1.2 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-azul);
+}
+.mx-herosistemas-home .mxh-esteira { margin-top: 13px; overflow: clip; contain: paint; }
+.mx-herosistemas-home .mxh-esteira__img { width: 100%; }
+
+/* ----------------------------- vídeo que sobe sobre a faixa clara + diferenciais numerados no azul + letra-d'água */
+.mx-herosistemas-home .mxh-video { position: relative; padding-bottom: 48px; background: var(--h-azul); color: #ffffff; }
+.mx-herosistemas-home .mxh-video > .mxh-casca { position: relative; z-index: 1; }
+.mx-herosistemas-home .mxh-video__quadro { margin-top: -24px; aspect-ratio: 16 / 9; border-radius: 24px; overflow: hidden; background: var(--h-marinho); }
+.mx-herosistemas-home .mxh-video__quadro .mxh-quadro, .mx-herosistemas-home .mxh-video__quadro img, .mx-herosistemas-home .mxh-video__v { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mx-herosistemas-home .mxh-dif { margin-top: 44px; text-align: center; }
+.mx-herosistemas-home .mxh-dif__titulo { font: 600 clamp(28.8px, 24.64px + 1.0667vw, 40px)/1.2 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: #ffffff; }
+.mx-herosistemas-home .mxh-dif__intro { margin: 14px auto 0; max-width: 66ch; font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, .9); }
+.mx-herosistemas-home .mxh-dif__intro a, .mx-herosistemas-home .mxh-dif__nota a { color: #ffffff; }
+.mx-herosistemas-home .mxh-dif__sub { margin-top: 18px; font: 600 18px/1.3 var(--h-sans); color: #ffffff; }
+.mx-herosistemas-home .mxh-dif__lista { margin-top: 33px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 29px; text-align: left; }
+.mx-herosistemas-home .mxh-dif__item { display: flex; align-items: center; gap: 12px; }
+.mx-herosistemas-home .mxh-dif__num {
+  display: grid; place-items: center; width: 32px; height: 32px; flex: none; border: 1.5px solid #ffffff; border-radius: 4px; font: 500 14px/1 var(--h-sans);
+}
+.mx-herosistemas-home .mxh-dif__txt { font-size: clamp(14px, 13.257px + .1905vw, 16px); line-height: 1.4; color: #ffffff; }
+.mx-herosistemas-home .mxh-dif__txt strong { font-weight: 600; }
+.mx-herosistemas-home .mxh-dif__nota { margin-top: 14px; font-size: 14px; line-height: 1.5; color: rgba(255, 255, 255, .85); }
+.mx-herosistemas-home .mxh-dif__acao { margin-top: 44px; display: flex; justify-content: center; }
+.mx-herosistemas-home .mxh-dif__acao .mxh-pilbotao { width: min(100%, 339px); }
+/* letra-d'água: a palavra repetida numa fileira presa ao pé da seção; mostra só a faixa de cima das letras */
+.mx-herosistemas-home .mxh-marca {
+  position: absolute; z-index: 0; left: 0; right: 0; bottom: 0; height: 122px; margin: 0; overflow: clip;
+  display: flex; align-items: flex-start; gap: 6px; pointer-events: none; user-select: none;
+}
+.mx-herosistemas-home .mxh-marca span {
+  flex: none; white-space: nowrap; font: 600 200px/200px var(--h-marca-letra); letter-spacing: -5.503px; color: var(--h-marca-cor);
+}
+.mx-herosistemas-home .mxh-marca span:first-child { margin-left: -203px; }
+.mx-herosistemas-home .mxh-marca--faq span { letter-spacing: normal; }
+.mx-herosistemas-home .mxh-marca--faq span:first-child { margin-left: -210px; }
+/* chanfro: a campânula da cor da seção de cima que desce sobre a de baixo, com o mouse dentro */
+.mx-herosistemas-home .mxh-chanfro {
+  position: absolute; z-index: 2; top: 0; left: 50%; width: 127px; height: 32px; transform: translateX(-50%); color: var(--h-azul); pointer-events: none;
+}
+.mx-herosistemas-home .mxh-chanfro__forma { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.mx-herosistemas-home .mxh-chanfro > svg:not(.mxh-chanfro__forma) { position: absolute; top: 5.7px; left: 50%; width: 13px; height: 20px; transform: translateX(-50%); color: #ffffff; }
+.mx-herosistemas-home .mxh-chanfro--claro { color: #ffffff; }
+.mx-herosistemas-home .mxh-chanfro--claro > svg:not(.mxh-chanfro__forma) { color: var(--h-azul); }
+
+/* ------------------------------------------ situações (alerta) + soluções (visto), cartões de contorno */
+.mx-herosistemas-home .mxh-sit { position: relative; padding-block: 64px 48px; background: #ffffff; }
+.mx-herosistemas-home .mxh-sit__cab { display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+.mx-herosistemas-home .mxh-sit__cab .mxh-titulo { font-weight: 700; }
+.mx-herosistemas-home .mxh-sit__cab .mxh-pilbotao { margin-top: 22px; }
+.mx-herosistemas-home .mxh-sit__lista, .mx-herosistemas-home .mxh-sol__lista { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.mx-herosistemas-home .mxh-sit__lista { margin-top: 25px; }
+.mx-herosistemas-home .mxh-cartao { border: 1px solid rgba(23, 24, 28, .25); border-radius: 14px; padding: 32px 20px; background: #ffffff; }
+.mx-herosistemas-home .mxh-cartao > svg { width: 30px; height: 27px; display: block; }
+.mx-herosistemas-home .mxh-ico-alerta { color: var(--h-alerta); }
+.mx-herosistemas-home .mxh-ico-visto { color: var(--h-azul); }
+.mx-herosistemas-home .mxh-cartao__titulo { margin-top: 18px; font: 700 clamp(19.2px, 18.606px + .1524vw, 20.8px)/1.3 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-cartao__texto { margin-top: 7px; font-size: clamp(14px, 13.257px + .1905vw, 16px); line-height: 1.5; color: var(--h-cartao-p); }
+.mx-herosistemas-home .mxh-cartao__texto a { color: var(--h-azul); }
+.mx-herosistemas-home .mxh-sit__nota { margin-top: 14px; padding: 22px 20px; border-radius: 12px; background: var(--h-faixa); border: 1px solid var(--h-linha); }
+.mx-herosistemas-home .mxh-sit__nota-titulo { font: 600 18px/1.3 var(--h-titulo); color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-sit__nota p { margin-top: 6px; font-size: 15px; line-height: 1.5; color: var(--h-texto); }
+.mx-herosistemas-home .mxh-sol { margin-top: 54px; }
+.mx-herosistemas-home .mxh-sol .mxh-titulo { margin-top: 12px; }
+.mx-herosistemas-home .mxh-sol__lista { margin-top: 13px; gap: 12px; }
+.mx-herosistemas-home .mxh-cartao--chamada { display: grid; align-content: center; justify-items: start; gap: 8px; background: var(--h-faixa); border-color: var(--h-linha); }
+.mx-herosistemas-home .mxh-cartao--chamada .mxh-cartao__titulo { margin-top: 0; }
+.mx-herosistemas-home .mxh-cartao--chamada .mxh-pilbotao { margin-top: 10px; }
+
+/* ----------------------------------------------- depoimentos: cartões brancos em 3 colunas desencontradas */
+.mx-herosistemas-home .mxh-depo { padding-block: 48px; background: var(--h-depo-fundo); }
+.mx-herosistemas-home .mxh-depo .mxh-titulo { margin-top: 16px; }
+.mx-herosistemas-home .mxh-depo__intro { margin: 14px auto 0; max-width: 66ch; text-align: center; font-size: 16px; line-height: 1.55; color: var(--h-cinza); }
+.mx-herosistemas-home .mxh-depo__grade { margin: 60px auto 0; display: grid; grid-template-columns: minmax(0, 1fr); gap: 44px; max-width: 315px; }
+/* no celular a Hero lista os cartões na ordem de leitura (1, 2, 3…), não coluna a coluna: a coluna some e a ordem é --o */
+.mx-herosistemas-home .mxh-depo__col { display: contents; }
+.mx-herosistemas-home .mxh-depo__cartao {
+  display: flow-root; order: var(--o, 0); background: #ffffff; border: 1px solid rgba(255, 255, 255, .09); border-radius: 14px; padding: 0 20px 43px; text-align: center;
+}
+.mx-herosistemas-home .mxh-depo__foto { width: 62px; height: 62px; margin: -29px auto 0; border-radius: 9px; overflow: hidden; background: var(--h-faixa); }
+.mx-herosistemas-home .mxh-depo__foto img, .mx-herosistemas-home .mxh-depo__foto .mxh-quadro { width: 100%; height: 100%; object-fit: cover; }
+.mx-herosistemas-home .mxh-depo__nome { margin-top: 18px; font: 700 24px/1.2 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-azul); }
+.mx-herosistemas-home .mxh-depo__nome a { text-decoration: none; color: inherit; }
+.mx-herosistemas-home .mxh-depo__onde { font-size: clamp(12.8px, 12.354px + .1143vw, 14px); line-height: 1.5; color: var(--h-cartao-p); }
+.mx-herosistemas-home .mxh-depo__print { margin-top: 18px; border-radius: 10px; overflow: hidden; }
+.mx-herosistemas-home .mxh-depo__print img { width: 100%; }
+
+/* ------------------------------------------------- app: degradê índigo, texto e pílulas | celular */
+.mx-herosistemas-home .mxh-app { padding-block: 64px 74px; background: var(--h-app-fundo); color: #ffffff; overflow: clip; font-family: var(--h-app-letra); }
+.mx-herosistemas-home .mxh-app__grade { display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 49.5px; max-width: none; padding-inline: 18px; }
+.mx-herosistemas-home .mxh-app__texto { text-align: center; }
+.mx-herosistemas-home .mxh-app .mxh-olho {
+  display: table; margin-inline: auto; padding: 9px 14px; border: 1px solid rgba(255, 255, 255, .25); border-radius: 999px; background: rgba(255, 255, 255, .1);
+  font: 800 13px/20px var(--h-app-letra); letter-spacing: 1.69px; color: var(--h-app-olho);
+}
+.mx-herosistemas-home .mxh-app__titulo {
+  margin-top: 19px; font: 800 clamp(38px, 29.115px + 2.2781vw, 61.92px)/1.04 var(--h-app-titulo); letter-spacing: -0.045em; color: #ffffff;
+}
+.mx-herosistemas-home .mxh-app__titulo .mxh-lilas { display: block; }
+.mx-herosistemas-home .mxh-app__corpo { margin-top: 25px; font-size: clamp(17px, 15.886px + .2857vw, 20px); line-height: 1.65; color: rgba(255, 255, 255, .82); }
+.mx-herosistemas-home .mxh-app__corpo a { color: #ffffff; }
+/* celular: uma coluna da largura da pílula mais longa, centrada, e todas esticam até ela (como na Hero) */
+.mx-herosistemas-home .mxh-app__pilulas { margin-top: 31px; display: grid; grid-template-columns: minmax(0, max-content); justify-content: center; gap: 10px; }
+.mx-herosistemas-home .mxh-app__pil {
+  display: flex; align-items: center; justify-content: flex-start; gap: 8px; padding: 10px 13px; border-radius: 12px;
+  background: rgba(255, 255, 255, .09); border: 1px solid rgba(255, 255, 255, .14); font: 650 14px/1.5 var(--h-app-letra); text-align: left;
+}
+.mx-herosistemas-home .mxh-app__pil strong { font-weight: inherit; }
+.mx-herosistemas-home .mxh-app__pil a, .mx-herosistemas-home .mxh-app__pil > span { display: grid; gap: 2px; text-decoration: none; color: #ffffff; }
+.mx-herosistemas-home .mxh-app__pil a span { font-weight: 400; font-size: 14px; color: rgba(255, 255, 255, .8); }
+.mx-herosistemas-home .mxh-app__pil .mxh-ico-check { color: var(--h-app-check); width: 19px; height: 19px; flex: none; }
+.mx-herosistemas-home .mxh-app__lojas { margin-top: 34px; display: flex; justify-content: center; }
+.mx-herosistemas-home .mxh-app__selos { width: 207px; margin-left: -11px; }
+.mx-herosistemas-home .mxh-app__botoes { margin-top: 28px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.mx-herosistemas-home .mxh-app__botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 22px; border-radius: 10px;
+  background: #ffffff; color: var(--h-tinta); font: 600 16px/1.2 var(--h-sans); text-decoration: none; border: 1px solid #ffffff;
+  transition: background-color .18s ease, transform .15s ease;
+}
+.mx-herosistemas-home .mxh-app__botao--zap { background: transparent; color: #ffffff; border-color: rgba(255, 255, 255, .6); }
+.mx-herosistemas-home .mxh-app__botao svg { width: 20px; height: 20px; flex: none; }
+.mx-herosistemas-home .mxh-app__nota { margin-top: 7px; font-size: 13px; line-height: 1.5; color: rgba(255, 255, 255, .6); }
+.mx-herosistemas-home .mxh-app__arte { display: flex; justify-content: center; }
+.mx-herosistemas-home .mxh-app__img { width: min(100%, 270px); }
+
+/* ------------------------------------------------------------------ planos: 3 cartões com lista ✓/✗ */
+.mx-herosistemas-home .mxh-planos { padding-block: 48px; background: #ffffff; }
+.mx-herosistemas-home .mxh-planos .mxh-titulo { margin-top: 16px; }
+.mx-herosistemas-home .mxh-planos__intro { margin: 14px auto 0; max-width: 66ch; text-align: center; font-size: 16px; line-height: 1.55; color: var(--h-cinza); }
+.mx-herosistemas-home .mxh-planos__intro a, .mx-herosistemas-home .mxh-planos__rodape a { color: var(--h-azul); }
+.mx-herosistemas-home .mxh-planos__grade { position: relative; z-index: 0; margin-top: 33px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.mx-herosistemas-home .mxh-plano {
+  position: relative; display: flex; flex-direction: column; min-width: 0; padding: 32px 24px; border-radius: 12px;
+  background: var(--h-cartao-plano); border: 1px solid rgba(57, 99, 173, .1); box-shadow: 0 2px 11.9px rgba(0, 0, 0, .05);
+}
+.mx-herosistemas-home .mxh-plano.is-destaque { margin-top: 39px; }
+.mx-herosistemas-home .mxh-plano__aba {
+  position: absolute; z-index: -1; left: -1px; right: -1px; bottom: calc(100% - 8px); height: 42px; padding: 8px 0 18px; text-align: center;
+  background: var(--h-azul); color: #ffffff; border-radius: 12px 12px 0 0; font: 600 14px/1.1 var(--h-sans);
+}
+.mx-herosistemas-home .mxh-plano__nome { font: 500 32px/1.1 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-plano__preco { margin-top: 12px; font: 700 40px/40px var(--h-titulo); color: var(--h-azul); white-space: nowrap; }
+.mx-herosistemas-home .mxh-plano__ciclo { font: 700 clamp(14px, 13.257px + .1905vw, 16px)/1 var(--h-sans); }
+.mx-herosistemas-home .mxh-plano__desc {
+  margin-top: 12px; padding-bottom: 12px; border-bottom: 1px solid #c4c5cc; font: 500 clamp(14px, 13.257px + .1905vw, 16px)/1 var(--h-sans); color: var(--h-azul);
+}
+.mx-herosistemas-home .mxh-plano__lista { margin-top: 12px; display: grid; gap: 1.5px; }
+.mx-herosistemas-home .mxh-plano__lista li { display: flex; align-items: center; padding-bottom: 1.5px; font: 500 clamp(12.8px, 12.354px + .1143vw, 14px)/1.5 var(--h-sans); color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-plano__lista li:last-child { padding-bottom: 0; }
+.mx-herosistemas-home .mxh-plano__lista li > span { padding-left: 5px; }
+.mx-herosistemas-home .mxh-plano__lista li.is-nao { color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-plano__lista .mxh-ico-check { color: var(--h-azul); width: 24px; height: 24px; }
+.mx-herosistemas-home .mxh-plano__lista .mxh-ico-x { color: var(--h-xis); width: 24px; height: 24px; flex: none; }
+.mx-herosistemas-home .mxh-plano__botao {
+  align-self: center; margin-top: 22px; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 14px 28px;
+  border-radius: 100px; border: 1px solid var(--h-azul); color: var(--h-azul); background: transparent; text-decoration: none;
+  font: 500 clamp(14px, 13.257px + .1905vw, 16px)/1.3 var(--h-sans); letter-spacing: -0.16px;
+  transition: background-color .18s ease, color .18s ease, transform .15s ease;
+}
+.mx-herosistemas-home .mxh-plano.is-destaque .mxh-plano__botao { background: var(--h-azul); color: #ffffff; }
+
+/* ---------------------------------------------------------- FAQ: sanfonas brancas no azul-marinho */
+.mx-herosistemas-home .mxh-faq { position: relative; padding-block: 64px 48px; background: var(--h-faq-fundo); color: #ffffff; }
+.mx-herosistemas-home .mxh-faq__casca { position: relative; z-index: 1; max-width: calc(778px + 2 * var(--h-margem)); }
+.mx-herosistemas-home .mxh-faq .mxh-olho { padding-inline: 32px; }
+.mx-herosistemas-home .mxh-faq__titulo { margin-top: 16px; text-align: center; font: 600 clamp(28.8px, 24.64px + 1.0667vw, 40px)/1.2 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: #ffffff; }
+.mx-herosistemas-home .mxh-faq__lista { margin-top: 32px; display: grid; gap: 10px; }
+.mx-herosistemas-home .mxh-faq__item { background: #ffffff; border-radius: 8px; color: var(--h-tinta); }
+.mx-herosistemas-home .mxh-faq__item summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 24px 20px; cursor: pointer; list-style: none;
+}
+.mx-herosistemas-home .mxh-faq__item summary::-webkit-details-marker { display: none; }
+.mx-herosistemas-home .mxh-faq__q { font: 600 clamp(14px, 13.257px + .1905vw, 16px)/1.2 var(--h-sans); color: var(--h-titulo-cor); }
+.mx-herosistemas-home .mxh-faq__seta { width: 16px; height: 15px; flex: none; transition: transform .25s cubic-bezier(.22, 1, .36, 1); }
+.mx-herosistemas-home .mxh-faq__item[open] .mxh-faq__seta { transform: rotate(180deg); }
+.mx-herosistemas-home .mxh-faq__a { padding: 0 20px 18px; font-size: 15px; line-height: 1.55; color: var(--h-texto); }
+.mx-herosistemas-home .mxh-faq__a a { color: var(--h-azul); }
+.mx-herosistemas-home .mxh-faq__mais { margin-top: 24px; display: flex; justify-content: center; }
+
+/* ---------------------------------------------------- consultor: cartão marinho | cartão de formulário */
+.mx-herosistemas-home .mxh-consultor { padding-block: 48px; background: #ffffff; }
+.mx-herosistemas-home .mxh-consultor__cartao {
+  display: grid; grid-template-columns: minmax(0, 1fr); row-gap: 32px; padding: 32px 20px; border-radius: 24px; background: var(--h-consultor-fundo); color: #ffffff;
+}
+.mx-herosistemas-home .mxh-consultor__texto { text-align: center; }
+.mx-herosistemas-home .mxh-consultor__logo { width: 174px; margin-inline: auto; }
+.mx-herosistemas-home .mxh-consultor__titulo { margin-top: 22px; font: 700 clamp(24px, 19.543px + 1.1429vw, 36px)/1.1 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: #ffffff; }
+.mx-herosistemas-home .mxh-consultor__corpo { margin-top: 8px; font-size: clamp(14px, 13.257px + .1905vw, 16px); line-height: 1.4; letter-spacing: -0.16px; color: #ffffff; }
+.mx-herosistemas-home .mxh-consultor__corpo p + p { margin-top: 10px; }
+.mx-herosistemas-home .mxh-consultor__form .mxh-form { border-color: #ffffff; }
+
+/* ligação interna (só na rota) */
+.mx-herosistemas-home .mxh-rel-sec { padding-block: 0 56px; background: #ffffff; }
+
+/* --------------------------------------------------------------------------- computador (a partir de 48rem) */
+@media (min-width: 48rem) {
+  .mx-herosistemas-home .mxh-olho { font-size: 14px; line-height: 14px; }
+
+  .mx-herosistemas-home .mxh-hero { padding-block: 58px 80px; }
+  .mx-herosistemas-home .mxh-hero__grade {
+    grid-template-columns: minmax(0, 547px) minmax(0, 462px); justify-content: space-between; align-items: center; column-gap: 40px;
+    max-width: calc(1160px + 2 * var(--h-margem));
+  }
+  .mx-herosistemas-home .mxh-hero__form { order: 0; }
+  .mx-herosistemas-home .mxh-hero__texto { text-align: left; }
+  .mx-herosistemas-home .mxh-h1 { line-height: 1.2; }
+  .mx-herosistemas-home .mxh-hero__intro { margin-top: 11px; line-height: 1.7; }
+  .mx-herosistemas-home .mxh-checks { margin-top: 17px; gap: 3px; }
+  .mx-herosistemas-home .mxh-checks li { padding-bottom: 3px; }
+  .mx-herosistemas-home .mxh-checks li:last-child { padding-bottom: 0; }
+  .mx-herosistemas-home .mxh-checks .mxh-ico-check { width: 24px; height: 24px; margin-right: 1px; }
+  .mx-herosistemas-home .mxh-prova { margin-top: 20px; gap: 11px; padding-left: 0; }
+  .mx-herosistemas-home .mxh-prova__img { width: 92px; }
+  .mx-herosistemas-home .mxh-prova__texto { max-width: 150px; }
+  .mx-herosistemas-home .mxh-form { padding: 40px; text-align: left; }
+  .mx-herosistemas-home .mxh-form__titulo { line-height: 1.2; }
+  .mx-herosistemas-home .mxh-form__texto { margin-top: 6px; }
+  .mx-herosistemas-home .mxh-campo__in { height: 46px; }
+  .mx-herosistemas-home .mxh-form__aviso { margin-top: 15px; }
+
+  .mx-herosistemas-home .mxh-integra { padding-block: 25px 59px; }
+  .mx-herosistemas-home .mxh-integra__titulo { max-width: 900px; line-height: 1.1; }
+  .mx-herosistemas-home .mxh-esteira { margin-top: 15px; }
+
+  .mx-herosistemas-home .mxh-video { padding-bottom: 111px; }
+  .mx-herosistemas-home .mxh-video__quadro { margin-top: -32px; }
+  .mx-herosistemas-home .mxh-dif { margin-top: 80px; }
+  .mx-herosistemas-home .mxh-dif__lista { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px 0; max-width: 1000px; margin: 42px auto 0; }
+  .mx-herosistemas-home .mxh-dif__item { flex: none; }
+  .mx-herosistemas-home .mxh-dif__num { font-size: 16px; }
+  .mx-herosistemas-home .mxh-dif__txt { line-height: 1.3; }
+  .mx-herosistemas-home .mxh-dif__acao { margin-top: 32px; }
+  .mx-herosistemas-home .mxh-dif__acao .mxh-pilbotao { width: auto; }
+  .mx-herosistemas-home .mxh-pilbotao { line-height: 1.2; }
+  .mx-herosistemas-home .mxh-marca { height: 344px; gap: 201px; }
+  .mx-herosistemas-home .mxh-marca span { font-size: 745px; line-height: 745px; }
+  .mx-herosistemas-home .mxh-marca span:first-child { margin-left: -682px; }
+  .mx-herosistemas-home .mxh-marca--faq { height: 345px; }
+  .mx-herosistemas-home .mxh-marca--faq span:first-child { margin-left: -676px; }
+  .mx-herosistemas-home .mxh-chanfro { width: 167px; height: 42px; }
+  .mx-herosistemas-home .mxh-chanfro > svg:not(.mxh-chanfro__forma) { top: 7.5px; width: 17px; height: 26px; }
+
+  .mx-herosistemas-home .mxh-sit { padding-block: 80px; }
+  .mx-herosistemas-home .mxh-sit__cab {
+    grid-template-columns: minmax(0, 658px) auto; justify-content: space-between; justify-items: start; align-items: start; text-align: left;
+    max-width: 1060px; margin-inline: auto;
+  }
+  .mx-herosistemas-home .mxh-sit__cab .mxh-pilbotao { margin-top: 31px; }
+  .mx-herosistemas-home :is(.mxh-sit__lista, .mxh-sol__lista) { grid-template-columns: repeat(2, minmax(0, 523px)); justify-content: center; gap: 9px 15px; max-width: 1061px; margin-inline: auto; }
+  .mx-herosistemas-home .mxh-sit__lista { margin-top: 54px; }
+  .mx-herosistemas-home .mxh-cartao { padding: 32px; }
+  .mx-herosistemas-home .mxh-cartao > svg { width: 37px; height: 33px; }
+  .mx-herosistemas-home .mxh-cartao__titulo { margin-top: 23px; line-height: 1.4; }
+  .mx-herosistemas-home .mxh-cartao__texto { margin-top: 5px; line-height: 1.6; }
+  .mx-herosistemas-home .mxh-sit__nota { max-width: 1060px; margin-inline: auto; }
+  .mx-herosistemas-home .mxh-sol { margin-top: 74px; }
+  .mx-herosistemas-home .mxh-sol .mxh-titulo { margin-top: 16px; max-width: 616px; margin-inline: auto; }
+  .mx-herosistemas-home .mxh-sol__lista { margin-top: 44px; gap: 15px; }
+  .mx-herosistemas-home .mxh-sol__lista .mxh-cartao > svg { width: 36px; height: 32px; }
+  .mx-herosistemas-home .mxh-sol__lista .mxh-cartao__titulo { margin-top: 18px; }
+
+  .mx-herosistemas-home .mxh-depo { padding-block: 72px 71px; }
+  .mx-herosistemas-home .mxh-depo__grade { grid-template-columns: repeat(3, minmax(0, 365px)); justify-content: center; column-gap: 9.5px; max-width: 1114px; margin-top: 83px; }
+  .mx-herosistemas-home .mxh-depo__col { display: grid; grid-template-columns: minmax(0, 1fr); gap: 59px; align-content: start; }
+  .mx-herosistemas-home .mxh-depo__cartao { order: 0; padding: 0 32px 42px; }
+  .mx-herosistemas-home .mxh-depo__foto { width: 88px; height: 88px; margin-top: -42px; }
+  .mx-herosistemas-home .mxh-depo__nome { margin-top: 17px; }
+  .mx-herosistemas-home .mxh-depo__print { margin-top: 14px; }
+
+  .mx-herosistemas-home .mxh-app { padding-block: 96px; }
+  .mx-herosistemas-home .mxh-app__grade {
+    grid-template-columns: minmax(0, 580px) minmax(0, 332px); column-gap: 11.944vw; align-items: start; padding-inline: 9.028vw 15.694vw;
+  }
+  .mx-herosistemas-home .mxh-app__texto { text-align: left; }
+  .mx-herosistemas-home .mxh-app .mxh-olho { margin-inline: 0; }
+  .mx-herosistemas-home .mxh-app__titulo { margin-top: 20px; }
+  .mx-herosistemas-home .mxh-app__corpo { margin-top: 24px; }
+  .mx-herosistemas-home .mxh-app__pilulas { margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: flex-start; }
+  .mx-herosistemas-home .mxh-app__pil { width: auto; }
+  .mx-herosistemas-home .mxh-app__lojas, .mx-herosistemas-home .mxh-app__botoes { justify-content: flex-start; }
+  .mx-herosistemas-home .mxh-app__lojas { margin-top: 25px; }
+  .mx-herosistemas-home .mxh-app__selos { width: 378px; }
+  .mx-herosistemas-home .mxh-app__arte { margin-top: 17px; }
+  .mx-herosistemas-home .mxh-app__img { width: min(100%, 332px); }
+
+  .mx-herosistemas-home .mxh-planos { padding-block: 80px; }
+  .mx-herosistemas-home .mxh-planos__grade { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 74px; align-items: stretch; }
+  .mx-herosistemas-home .mxh-plano.is-destaque { margin-top: 0; }
+  .mx-herosistemas-home .mxh-plano__preco { line-height: 44px; }
+  .mx-herosistemas-home .mxh-plano__desc { margin-top: 18px; }
+  .mx-herosistemas-home .mxh-plano__lista { gap: 3px; }
+  .mx-herosistemas-home .mxh-plano__lista li { padding-bottom: 3px; }
+  .mx-herosistemas-home .mxh-plano__lista li:last-child { padding-bottom: 0; }
+  .mx-herosistemas-home .mxh-plano__lista svg { margin-right: 1px; }
+  .mx-herosistemas-home .mxh-plano__botao { margin-top: 21px; padding: 17px 56px; line-height: 1.2; }
+
+  .mx-herosistemas-home .mxh-faq { padding-block: 80px; }
+  .mx-herosistemas-home .mxh-faq__titulo { margin-top: 12px; }
+  .mx-herosistemas-home .mxh-faq__lista { margin-top: 40px; }
+  .mx-herosistemas-home .mxh-faq__item summary { padding: 26px 32px; }
+  .mx-herosistemas-home .mxh-faq__q { line-height: 1.5; }
+  .mx-herosistemas-home .mxh-faq__a { padding: 0 32px 22px; }
+
+  .mx-herosistemas-home .mxh-consultor { padding-block: 80px; }
+  .mx-herosistemas-home .mxh-consultor__cartao { grid-template-columns: minmax(0, 1fr) minmax(0, 455px); column-gap: 60px; align-items: start; padding: 80px 66px 80px 90px; }
+  .mx-herosistemas-home .mxh-consultor__texto { text-align: left; padding-top: 118px; }
+  .mx-herosistemas-home .mxh-consultor__logo { width: 250px; margin-inline: 0; }
+  .mx-herosistemas-home .mxh-consultor__titulo { margin-top: 30px; max-width: 434px; }
+  .mx-herosistemas-home .mxh-consultor__corpo { margin-top: 16px; }
+}
+
+/* --------------------------------------------- só na prova: o que é da Hero e não serve para outro texto */
+/* largura de linha medida na captura (cada texto quebra onde quebrava lá) */
+.mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(1) .mxh-dif__txt { max-width: 215px; }
+.mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(2) .mxh-dif__txt { max-width: 230px; }
+.mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(3) .mxh-dif__txt { max-width: 191px; }
+.mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(4) .mxh-dif__txt { max-width: 281px; }
+.mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(5) .mxh-dif__txt { max-width: 195px; }
+/* título e texto do app: a Hero quebra "Conte o estoque / pelo celular." e "…um leitor / de código…" no celular */
+.mx-herosistemas-home .mxh--origem .mxh-app__titulo { max-width: 300px; margin-inline: auto; }
+.mx-herosistemas-home .mxh--origem .mxh-app__corpo { max-width: 325px; margin-inline: auto; }
+.mx-herosistemas-home .mxh--origem .mxh-app { border-top: 10px solid #f7f7f8; background-clip: padding-box; }
+/* no celular a Hero fecha o degradê 16 px antes da seção seguinte, numa faixa branca (medido: 1ª linha branca em 1430 de 1446) */
+.mx-herosistemas-home .mxh--origem .mxh-app { padding-bottom: 58px; border-bottom: 16px solid #ffffff; }
+/* o recorte do celular para antes da sombra da Hero (box-shadow 0 38px 70px rgba(3,5,23,.48), a 0,9 no celular): ela volta embaixo da imagem */
+.mx-herosistemas-home .mxh--origem .mxh-app__img { overflow: hidden; border-radius: 0 0 44px 44px; box-shadow: 0 34px 63px rgba(3, 5, 23, .48); }
+@media (min-width: 48rem) {
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(1) { width: 324px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(2) { width: 348px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(3) { width: 268px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(4) { width: 287px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(5) { width: 267px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(1) .mxh-dif__txt { max-width: 245px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(2) .mxh-dif__txt { max-width: 262px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(3) .mxh-dif__txt { max-width: 218px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(4) .mxh-dif__txt { max-width: 175px; }
+  .mx-herosistemas-home .mxh--origem .mxh-dif__item:nth-child(5) .mxh-dif__txt { max-width: 222px; }
+  .mx-herosistemas-home .mxh--origem :is(.mxh-app__titulo, .mxh-app__corpo) { max-width: none; margin-inline: 0; }
+  /* na Hero o 2º cartão de situação e os 4 de baixo das soluções têm respiro maior (o contorno fica igual) */
+  .mx-herosistemas-home .mxh--origem .mxh-sit__lista > li:nth-child(2) { padding-top: 48px; }
+  .mx-herosistemas-home .mxh--origem .mxh-sol__lista > li:nth-child(n+3) { padding-top: 48px; }
+  .mx-herosistemas-home .mxh--origem .mxh-sol__lista > li:nth-child(n+5) { padding-bottom: 48px; }
+  .mx-herosistemas-home .mxh--origem .mxh-planos .mxh-titulo { max-width: 501px; margin-inline: auto; }
+  .mx-herosistemas-home .mxh--origem .mxh-app { padding-bottom: 96px; border-bottom: 10px solid #e0e0e5; }
+  .mx-herosistemas-home .mxh--origem .mxh-app__img { border-radius: 0; box-shadow: none; }
+}
+
+/* na captura tudo já está à vista; a revelação só existe na página vestida, depois que o molde.js roda */
+
+/* ================================================================== 2. página vestida (SoftPay) ===== */
+.page-molde.mx-herosistemas-home .mxh { color: var(--h-texto); }
+/* só o ESTILO da quebra: o atalho `text-wrap` também zera o modo (wrap) e, com 0,3,1, desfazia o `white-space: nowrap`
+   do selo "Mais popular" (0,3,0) — com o `overflow-wrap: anywhere` da raiz ele partia em "popula|r" a 390 */
+.page-molde.mx-herosistemas-home .mxh :is(h1, h2, h3) { text-wrap-style: balance; }
+.page-molde.mx-herosistemas-home .mxh p { text-wrap-style: pretty; }
+.page-molde.mx-herosistemas-home .mxh-pilbotao__seta svg, .page-molde.mx-herosistemas-home .mxh-rel__lista svg { transition: transform .2s cubic-bezier(.22, 1, .36, 1); }
+.page-molde.mx-herosistemas-home :is(.mxh-pilbotao, .mxh-form__botao, .mxh-plano__botao, .mxh-app__botao):active { transform: scale(.98); }
+/* botão em cor viva: fundo e letra DECLARADOS no botão e no texto de dentro (o portão de contraste lia o span na
+   tinta da página); o claro da origem (#40a5e7 no fim do degradê) dava 3,35:1 com o branco, então escurece na
+   mesma matiz até o azul da ação */
+.page-molde.mx-herosistemas-home :is(.mxh-pilbotao, .mxh-pilbotao > span) { color: #ffffff; }
+.page-molde.mx-herosistemas-home :is(.mxh-pilbotao--cheio, .mxh-pilbotao--claro) { background: var(--h-azul); }
+.page-molde.mx-herosistemas-home .mxh-pilbotao--claro { background: linear-gradient(99deg, var(--h-azul-forte) 0%, var(--h-azul) 100%); }
+.page-molde.mx-herosistemas-home .mxh-app__botao:not(.mxh-app__botao--zap) { background: #ffffff; }
+.page-molde.mx-herosistemas-home .mxh-app__botao:not(.mxh-app__botao--zap), .page-molde.mx-herosistemas-home .mxh-app__botao:not(.mxh-app__botao--zap) > span { color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-app__botao--zap, .page-molde.mx-herosistemas-home .mxh-app__botao--zap > span { color: #ffffff; }
+@media (hover: hover) and (pointer: fine) {
+  .page-molde.mx-herosistemas-home .mxh-pilbotao:hover { background: var(--h-azul-forte); }
+  .page-molde.mx-herosistemas-home .mxh-pilbotao:hover .mxh-pilbotao__seta svg { transform: translateX(3px); }
+  .page-molde.mx-herosistemas-home .mxh-form__botao:hover { background: var(--h-acao-forte); }
+  .page-molde.mx-herosistemas-home .mxh-plano__botao:hover { background: var(--h-azul); color: #ffffff; }
+  .page-molde.mx-herosistemas-home .mxh-plano.is-destaque .mxh-plano__botao:hover { background: var(--h-azul-forte); }
+  .page-molde.mx-herosistemas-home .mxh-app__botao:hover { background: var(--h-faixa); }
+  .page-molde.mx-herosistemas-home .mxh-app__botao--zap:hover { background: rgba(255, 255, 255, .12); }
+  .page-molde.mx-herosistemas-home :is(.mxh-checks a, .mxh-form__link, .mxh-depo__nome a):hover { text-decoration: underline; text-underline-offset: 3px; }
+  .page-molde.mx-herosistemas-home .mxh-esteira__fila a:hover { border-color: var(--h-azul); }
+  .page-molde.mx-herosistemas-home .mxh-app__pil a:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+  .page-molde.mx-herosistemas-home .mxh-faq__item summary:hover .mxh-faq__q { color: var(--h-azul); }
+  .page-molde.mx-herosistemas-home .mxh-rel__lista a:hover { border-color: var(--h-azul); }
+  .page-molde.mx-herosistemas-home .mxh-rel__lista a:hover svg { transform: translateX(3px); }
+}
+.page-molde.mx-herosistemas-home :is(a, button, summary, input, .mxh-plano):focus-visible { outline: 2px solid var(--h-azul); outline-offset: 3px; }
+
+/* hero: cobre a tela inteira abaixo do cabeçalho fixo do chassi (84 px); a sobra se divide entre os vãos.
+   No celular o título vem antes do formulário (a página é de busca: o h1 tem de estar na primeira tela). */
+.page-molde.mx-herosistemas-home .mxh-hero {
+  min-height: 100svh; display: grid; align-content: center;
+  padding-block: calc(84px + clamp(16px, 4px + 2.5vw, 48px)) clamp(32px, 16px + 3vw, 72px);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 55%, var(--h-faixa) 100%);
+}
+.page-molde.mx-herosistemas-home .mxh-hero__form { order: 0; }
+.page-molde.mx-herosistemas-home .mxh-hero__grade { row-gap: 32px; }
+.page-molde.mx-herosistemas-home .mxh-trilha {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 8px; margin-bottom: 8px;
+  font: 500 14px/1.4 var(--h-sans); color: var(--h-cinza);
+}
+.page-molde.mx-herosistemas-home .mxh-trilha a { color: var(--h-cinza); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+.page-molde.mx-herosistemas-home .mxh-trilha [aria-current] { color: var(--h-tinta); font-weight: 600; }
+.page-molde.mx-herosistemas-home .mxh-h1 { font-weight: 700; line-height: 1.08; }
+/* celular: os 5 checks em 2 colunas (o 5º fecha a 2ª), cada um com alvo de 44 px */
+.page-molde.mx-herosistemas-home .mxh-checks { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; row-gap: 0; }
+.page-molde.mx-herosistemas-home .mxh-checks li { font-size: 14px; line-height: 18px; align-items: flex-start; }
+.page-molde.mx-herosistemas-home .mxh-checks li .mxh-ico-check { margin-top: 12px; width: 18px; height: 18px; }
+.page-molde.mx-herosistemas-home .mxh-checks a { display: flex; align-items: center; min-height: 44px; padding-block: 2px; }
+.page-molde.mx-herosistemas-home .mxh-prova { justify-content: center; margin-top: 18px; }
+.page-molde.mx-herosistemas-home .mxh-prova__texto { font-size: 13px; line-height: 18px; max-width: 220px; }
+/* o `.mxh a { color: inherit }` da camada 1 (0,2,1) vencia a cor do link: no cartão do consultor ele herdava o branco
+   do texto ao lado e sumia no cartão branco */
+.page-molde.mx-herosistemas-home .mxh-form__link { justify-content: center; color: var(--h-azul); }
+.page-molde.mx-herosistemas-home .mxh-campo__in { height: 48px; }
+.page-molde.mx-herosistemas-home .mxh-campo__in:focus { outline: 2px solid var(--h-azul); outline-offset: 0; border-color: var(--h-azul); }
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-trilha { justify-content: flex-start; }
+  .page-molde.mx-herosistemas-home .mxh-hero__grade { grid-template-columns: minmax(0, 560px) minmax(0, 460px); }
+  /* o título cresce com a altura da tela (BRIEFING, passo 5), mas a Montserrat é ~25% mais larga que a letra antiga: a 80 px e
+     5,6em de largura ele quebrava em 5 linhas e a hero passava da tela (970 numa de 900, 850 numa de 768). Agora o teto é 64 px
+     e a linha corre a coluna inteira (3 linhas a 1440x900: "Sistema de gestão" / "para pequenos" / "negócios"); a hero fecha
+     igual à tela de 720 a 1080 de altura */
+  .page-molde.mx-herosistemas-home .mxh-h1 { font-size: clamp(34px, min(6.4svh, 4.1vw), 64px); }
+  .page-molde.mx-herosistemas-home .mxh-h1 .mxh-azul { display: block; }
+  .page-molde.mx-herosistemas-home .mxh-checks { grid-template-columns: minmax(0, 1fr); margin-top: 20px; }
+  .page-molde.mx-herosistemas-home .mxh-checks li { font-size: 15px; }
+  .page-molde.mx-herosistemas-home .mxh-checks a { min-height: 32px; }
+  .page-molde.mx-herosistemas-home .mxh-checks li .mxh-ico-check { margin-top: 7px; }
+  .page-molde.mx-herosistemas-home .mxh-prova { justify-content: flex-start; }
+  .page-molde.mx-herosistemas-home .mxh-form__link { justify-content: flex-start; }
+}
+@media (min-width: 64rem) {
+  .page-molde.mx-herosistemas-home .mxh-checks { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; }
+  /* computador: a coluna do texto ganha 60 px (620) e o título sobe até 80 px, para a sobra de altura virar letra e não vão
+     (1440x900: vãos 119 e 128 px com 58 px de letra; teto de 120) */
+  .page-molde.mx-herosistemas-home .mxh-hero__grade { grid-template-columns: minmax(0, 620px) minmax(0, 460px); }
+  .page-molde.mx-herosistemas-home .mxh-h1 { font-size: clamp(34px, min(7.2svh, 4.5vw), 80px); }
+}
+/* computador de tela baixa (até 820 px: notebook 1280x720, 1366x768): o formulário é quem manda na altura da hero; ele encolhe um
+   degrau para a hero caber na tela (antes: 792 numa de 720 e 799 numa de 768) */
+@media (min-width: 48rem) and (max-height: 820px) {
+  .page-molde.mx-herosistemas-home .mxh-hero { padding-block-end: 24px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form { padding: 24px 32px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__titulo { font-size: clamp(22px, 1.75vw, 25px); }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-campo__in { height: 44px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__botao { padding-block: 14px; }
+}
+/* celular: o BOTÃO DE ENVIO na primeira tela (a varredura dos 58 tamanhos usa ele como chamada do herói). Copy resumida
+   (doutrina, "celular copia a composição"): sai o parágrafo de apoio e o 5º check; trilha numa linha só; formulário enxuto
+   (título 20, campos de 48, botão de 46). O cabeçalho fixo do chassi tem 63 px aqui, não 84. Medido antes → depois (fundo
+   do botão / altura da tela): 390x844 933 → 694; 375x667 933 → 623; 360x780 1017 → 641; 360x640 1017 → 637.
+   Tudo preso a `.mxh-hero`: o formulário do consultor usa o mesmo componente e não muda. */
+@media (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-hero { padding-block: 76px 24px; }
+  .page-molde.mx-herosistemas-home .mxh-hero__grade { row-gap: 16px; }
+  /* trilha numa linha a 360 pela letra de 13 px, nunca por reticências (o `de qa` acusa overflow escondido e texto cortado) */
+  .page-molde.mx-herosistemas-home .mxh-trilha { margin-bottom: 2px; font-size: 13px; column-gap: 6px; }
+  .page-molde.mx-herosistemas-home .mxh-hero__intro { display: none; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-checks { margin-top: 6px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-checks li:nth-child(5) { display: none; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-prova { margin-top: 8px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-prova__icones img { width: 30px; height: 30px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form { padding: 20px 16px 16px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__titulo { font-size: 20px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__texto { margin-top: 4px; font-size: 13px; line-height: 1.4; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__campos { margin-top: 12px; gap: 8px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__botao { margin-top: 12px; padding-block: 14px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__link { margin-top: 2px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__aviso { margin-top: 2px; }
+}
+/* celular baixo: a frase de apoio do formulário também sai (o título já diz o que acontece). O corte subiu de 800 para 860 px de
+   altura: a 390x844 a hero passava da tela (870) com a letra nova e fecha em 830 sem a frase */
+@media (max-width: 47.99rem) and (max-height: 860px) {
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__texto { display: none; }
+}
+/* celular baixo (até 700 px de altura: 360x640, 375x667): com a Montserrat, mais larga que a letra antiga, a trilha foi para
+   2 linhas (+18), o título do formulário também (+22) e os checks para 3 linhas (+28): o botão caiu em 727 numa tela de 640.
+   A letra encolhe um degrau só aqui (o corpo cheio fica de 390x844 para cima) e, abaixo de 660 px, a linha de prova dos
+   planos (que a seção Planos repete por inteiro) sai. Medido antes → depois (fundo do botão / altura da tela):
+   360x640 727 → 616; 375x667 713 → 660. */
+@media (max-width: 47.99rem) and (max-height: 700px) {
+  .page-molde.mx-herosistemas-home .mxh-hero { padding-block: 66px 16px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-h1 { font-size: 30px; line-height: 1.06; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-checks li { font-size: 13px; line-height: 17px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form { padding: 12px 16px 12px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__titulo { font-size: 18px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-campo__in { height: 44px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__botao { padding-block: 12px; }
+}
+@media (max-width: 47.99rem) and (max-height: 660px) {
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-prova { display: none; }
+}
+/* tela em pé (proporção abaixo de 6/5, até 1279 px; doutrina, "a mesma sensação em todo aparelho"): composição do tablet,
+   texto em cima e formulário embaixo, centrados. A sobra se divide IGUAL entre os três vãos (stretch no herói +
+   space-evenly na grade, sem padding embaixo) e o conteúdo cresce com a altura (título e formulário em clamp com svh).
+   Com a Montserrat (mais larga) título e formulário perderam um degrau: 768x1024 e 820x1180 passavam da tela (1093 e 1200);
+   agora a hero fecha igual à tela (1024/1024, 1180/1180, 1366/1366, 1194/1194).
+   Medido antes → depois (vãos): 768x1024 188/183 → 8/7/7; 1024x1366 374/381 → 53/53/53; 820x1180 e 834x1194 → 34–38. */
+@media (min-width: 48rem) and (max-width: 79.99rem) and (max-aspect-ratio: 6/5) and (min-height: 50rem) {
+  .page-molde.mx-herosistemas-home .mxh-hero { align-content: stretch; padding-block: 64px 0; }
+  .page-molde.mx-herosistemas-home .mxh-hero__grade { grid-template-columns: minmax(0, 1fr); align-content: space-evenly; justify-items: center; row-gap: 0; }
+  .page-molde.mx-herosistemas-home .mxh-hero__texto { text-align: center; width: 100%; }
+  .page-molde.mx-herosistemas-home .mxh-trilha { justify-content: center; }
+  .page-molde.mx-herosistemas-home .mxh-h1 { font-size: clamp(36px, 4.2svh, 72px); max-width: 12em; margin-inline: auto; }
+  .page-molde.mx-herosistemas-home .mxh-hero__intro { max-width: 36em; margin-inline: auto; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-checks { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; max-width: 50rem; margin-inline: auto; }
+  /* a 1024x1366 o check de 19 px quebrava em 2 linhas com a entrelinha de 18 px do celular: as linhas se colavam */
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-checks li { font-size: clamp(15px, 1.3svh, 18px); line-height: 1.35; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-prova { justify-content: center; }
+  .page-molde.mx-herosistemas-home .mxh-hero__form { width: min(100%, 42rem); }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form { padding: clamp(24px, 2.8svh, 46px); text-align: center; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__titulo { font-size: clamp(22px, 2.3svh, 34px); }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__texto { font-size: clamp(15px, 1.5svh, 19px); }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__campos { gap: clamp(10px, 1.2svh, 16px); }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-campo__in { height: clamp(48px, 4.6svh, 62px); font-size: 17px; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__botao { padding-block: clamp(18px, 2svh, 26px); }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-form__link { justify-content: center; }
+}
+/* em pé a partir de 1024 o cabeçalho do chassi tem 74 px */
+@media (min-width: 64rem) and (max-width: 79.99rem) and (max-aspect-ratio: 6/5) and (min-height: 50rem) {
+  .page-molde.mx-herosistemas-home .mxh-hero { padding-top: 74px; }
+}
+
+/* faixa clara: o que é um sistema de gestão (2 colunas no computador) e a esteira das 11 funções */
+.page-molde.mx-herosistemas-home .mxh-integra { padding-block: clamp(48px, 33.14px + 3.81vw, 88px) clamp(40px, 28.86px + 2.857vw, 70px); }
+.page-molde.mx-herosistemas-home .mxh-integra__titulo { font-size: clamp(28px, 22.06px + 1.524vw, 44px); color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-integra__corpo { margin-top: 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+.page-molde.mx-herosistemas-home .mxh-integra__col { display: grid; gap: 12px; align-content: start; font-size: 16px; line-height: 1.6; color: var(--h-texto); }
+.page-molde.mx-herosistemas-home .mxh-integra__col a { color: var(--h-azul); }
+.page-molde.mx-herosistemas-home .mxh-integra__dif { padding: 18px 18px 20px; border-radius: 16px; background: #ffffff; border: 1px solid var(--h-linha); }
+.page-molde.mx-herosistemas-home .mxh-integra__h3 { font: 600 19px/1.3 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-esteira { margin-top: clamp(24px, 18px + 1.5vw, 40px); }
+.page-molde.mx-herosistemas-home .mxh-esteira__trilho { display: flex; width: max-content; }
+.page-molde.mx-herosistemas-home .mxh-esteira__fila { display: flex; gap: 10px; padding-right: 10px; flex: none; }
+.page-molde.mx-herosistemas-home .mxh-esteira__fila a {
+  display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 4px 18px 4px 6px; border-radius: 999px; white-space: nowrap;
+  background: #ffffff; border: 1px solid var(--h-linha); text-decoration: none; color: var(--h-tinta); font: 600 15px/1.2 var(--h-sans);
+  transition: border-color .18s ease;
+}
+.page-molde.mx-herosistemas-home .mxh-esteira__fila img { width: 40px; height: 40px; border-radius: 50%; background: var(--h-faixa); }
+@media (prefers-reduced-motion: no-preference) {
+  .page-molde.mx-herosistemas-home .mxh-esteira__trilho { animation: mxh-esteira 48s linear infinite; }
+  .page-molde.mx-herosistemas-home .mxh-esteira:hover .mxh-esteira__trilho, .page-molde.mx-herosistemas-home .mxh-esteira:focus-within .mxh-esteira__trilho { animation-play-state: paused; }
+}
+@keyframes mxh-esteira { to { transform: translateX(-50%); } }
+/* menos movimento: a esteira para e vira grade que quebra (2 colunas no celular), sem a cópia */
+@media (prefers-reduced-motion: reduce) {
+  .page-molde.mx-herosistemas-home .mxh-esteira__trilho { width: auto; display: block; }
+  .page-molde.mx-herosistemas-home .mxh-esteira__fila.mxh-esteira__copia { display: none; } /* mesma força da regra da fila: a cópia some de verdade (antes a regra da grade, escrita depois, a reexibia) */
+  .page-molde.mx-herosistemas-home .mxh-esteira__fila { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr)); padding: 0 var(--h-margem); max-width: calc(var(--h-casca) + 2 * var(--h-margem)); margin-inline: auto; }
+  .page-molde.mx-herosistemas-home .mxh-esteira__fila a { white-space: normal; width: 100%; overflow-wrap: normal; }
+}
+/* menos movimento no celular: "Funcionários" e "NFC-e" cabem inteiros na pílula de 2 colunas (a 390px partiam em "Funcionário/s" e "NFC-/e" com a Montserrat, mais larga) */
+@media (prefers-reduced-motion: reduce) and (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-esteira__fila { gap: 8px; }
+  .page-molde.mx-herosistemas-home .mxh-esteira__fila a { gap: 8px; padding-right: 10px; font-size: 14px; }
+}
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-integra__corpo { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 32px; margin-top: 28px; }
+  .page-molde.mx-herosistemas-home .mxh-integra__dif { padding: 26px 28px 28px; }
+}
+
+/* vídeo do SoftPay em uso + o exemplo do faturamento ao resultado */
+.page-molde.mx-herosistemas-home .mxh-video { background: var(--h-azul); padding-bottom: clamp(72px, 54.17px + 4.571vw, 120px); }
+.page-molde.mx-herosistemas-home .mxh-video__quadro { box-shadow: 0 30px 60px -30px rgba(6, 18, 31, .5); }
+.page-molde.mx-herosistemas-home .mxh-dif { margin-top: clamp(40px, 29.6px + 2.667vw, 72px); }
+.page-molde.mx-herosistemas-home .mxh-dif__titulo { font-weight: 700; }
+.page-molde.mx-herosistemas-home .mxh-dif__lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+.page-molde.mx-herosistemas-home .mxh-dif__item {
+  align-items: flex-start; padding: 12px; border: 1px solid rgba(255, 255, 255, .28); border-radius: 12px; background: rgba(255, 255, 255, .06);
+}
+.page-molde.mx-herosistemas-home .mxh-dif__item:last-child { grid-column: 1 / -1; }
+.page-molde.mx-herosistemas-home .mxh-dif__txt { display: grid; gap: 2px; font-size: 14px; line-height: 1.35; }
+.page-molde.mx-herosistemas-home .mxh-dif__txt strong { font-weight: 500; color: rgba(255, 255, 255, .88); }
+.page-molde.mx-herosistemas-home .mxh-dif__valor { font: 700 17px/1.2 var(--h-titulo); color: #ffffff; white-space: nowrap; }
+.page-molde.mx-herosistemas-home .mxh-dif__item--result { background: rgba(255, 255, 255, .14); border-color: rgba(255, 255, 255, .5); }
+.page-molde.mx-herosistemas-home .mxh-dif__item--result .mxh-dif__txt strong { color: #ffffff; }
+.page-molde.mx-herosistemas-home .mxh-dif__item--final { background: #ffffff; border-color: #ffffff; }
+.page-molde.mx-herosistemas-home .mxh-dif__item--final .mxh-dif__txt strong { color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-dif__item--final .mxh-dif__valor { color: var(--h-azul); font-size: 20px; }
+.page-molde.mx-herosistemas-home .mxh-dif__item--final .mxh-dif__num { border-color: var(--h-azul); color: var(--h-azul); }
+.page-molde.mx-herosistemas-home .mxh-dif__acao { margin-top: 24px; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-dif__num { width: 26px; height: 26px; font-size: 13px; }
+  .page-molde.mx-herosistemas-home .mxh-dif__item { gap: 8px; }
+  /* "− R$ 16.560,00" (nowrap, Montserrat 700) passava 1-2 px da borda do cartão a 390 px: o valor encolhe com a largura (14 px a 390; 17 px a partir de 472) */
+  .page-molde.mx-herosistemas-home .mxh-dif__valor { font-size: clamp(12px, 3.6vw, 17px); }
+  .page-molde.mx-herosistemas-home .mxh-dif__item--final .mxh-dif__valor { font-size: clamp(14px, 4.4vw, 20px); }
+  /* link dentro do texto do cartão: área de toque de 44 px por padding vertical do próprio link (inline: não mexe
+     na entrelinha nem na quebra) */
+  .page-molde.mx-herosistemas-home .mxh-cartao__texto a { padding-block: 13px; }
+}
+/* marca d'água gigante: o recorte vem da contenção de pintura, não de overflow (o portão 3 do `de qa` lê overflow
+   como curativo); na tela fica igual */
+.page-molde.mx-herosistemas-home .mxh-marca { overflow: visible; contain: paint; }
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-dif__lista { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; max-width: 1000px; }
+  .page-molde.mx-herosistemas-home .mxh-dif__item { max-width: none; padding: 16px 18px; }
+  .page-molde.mx-herosistemas-home .mxh-dif__item:nth-child(4) { grid-column: 1 / span 2; }
+  .page-molde.mx-herosistemas-home .mxh-dif__item:last-child { grid-column: 3; }
+  .page-molde.mx-herosistemas-home .mxh-dif__valor { font-size: 20px; }
+  .page-molde.mx-herosistemas-home .mxh-dif__item--final .mxh-dif__valor { font-size: 24px; }
+}
+
+/* como escolher (6 passos, 2 colunas também no celular) + o que resolve (ícone ao lado do texto no celular) */
+.page-molde.mx-herosistemas-home .mxh-sit { padding-block: clamp(56px, 33.71px + 5.714vw, 116px) clamp(48px, 30.17px + 4.571vw, 96px); }
+.page-molde.mx-herosistemas-home .mxh-sit__lista { counter-reset: mxh-passo; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao { padding: 16px 14px 18px; }
+.page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao > svg { width: 26px; height: 23px; }
+/* título do passo no tamanho da referência (clone: o corpo da letra é o deles), 19,2 px a 390 e 20,8 px a 1440 */
+.page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao__titulo { margin-top: 12px; font-size: clamp(19.2px, 18.606px + .1524vw, 20.8px); line-height: 1.25; font-weight: 600; }
+/* celular, 2 colunas: a Montserrat é ~25% mais larga que a Inter e o título de 19,2 px quebrava em 5 e 6 linhas num cartão de
+   ~140 px de texto; um degrau abaixo (16 px a 390, 15 a 360) dá 4 linhas e os 6 cartões mantêm a altura da referência */
+@media (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao__titulo { font-size: clamp(15px, 4.1vw, 17.5px); line-height: 1.3; }
+}
+.page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao__titulo::before {
+  counter-increment: mxh-passo; content: counter(mxh-passo) ". "; color: var(--h-azul);
+}
+.page-molde.mx-herosistemas-home .mxh-cartao { scroll-margin-top: 100px; height: 100%; }
+.page-molde.mx-herosistemas-home .mxh-sol__lista .mxh-cartao:not(.mxh-cartao--chamada) {
+  display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 14px; align-content: start; padding: 20px 18px;
+}
+.page-molde.mx-herosistemas-home .mxh-sol__lista .mxh-cartao > svg { grid-row: 1 / span 2; margin-top: 2px; }
+.page-molde.mx-herosistemas-home .mxh-sol__lista .mxh-cartao__titulo { margin-top: 0; }
+.page-molde.mx-herosistemas-home .mxh-sol { margin-top: clamp(48px, 33.14px + 3.81vw, 88px); }
+.page-molde.mx-herosistemas-home .mxh-cartao--chamada { justify-items: center; text-align: center; padding: 22px 18px; }
+.page-molde.mx-herosistemas-home .mxh-sit__cab .mxh-pilbotao { min-height: 56px; }
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-sit__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao { padding: 26px 24px 28px; }
+  .page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao > svg { width: 34px; height: 30px; }
+  .page-molde.mx-herosistemas-home .mxh-sit__lista .mxh-cartao__titulo { margin-top: 18px; line-height: 1.3; }
+  .page-molde.mx-herosistemas-home .mxh-sol__lista .mxh-cartao:not(.mxh-cartao--chamada) { grid-template-columns: 38px minmax(0, 1fr); column-gap: 18px; padding: 28px 28px 30px; }
+  .page-molde.mx-herosistemas-home .mxh-sol__lista .mxh-cartao__texto { max-width: none; }
+  .page-molde.mx-herosistemas-home .mxh-sit__nota { padding: 26px 30px; }
+}
+
+/* para quem serve: 7 segmentos com o retrato da dona e o print real; celular em 2 colunas, na ordem dos cartões */
+.page-molde.mx-herosistemas-home .mxh-depo { padding-block: clamp(56px, 33.71px + 5.714vw, 116px) clamp(48px, 30.17px + 4.571vw, 96px); }
+.page-molde.mx-herosistemas-home .mxh-depo__grade { max-width: none; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 10px; margin-top: 52px; }
+.page-molde.mx-herosistemas-home .mxh-depo__col { display: contents; }
+/* 03/11: os cartões são irmãos de UMA grade só (a coluna da referência some em toda largura) e cada um herda da grade as 4 fileiras
+   (retrato, nome, descrição, tela): título que quebra em 2 linhas empurra a fileira dos irmãos juntos, então nome, descrição e tela
+   ficam alinhados e os cartões da mesma linha medem igual. O 7º cartão não é irmão de ninguém: ocupa a linha toda (sem órfão),
+   com o texto à esquerda e a tela à direita, na MESMA coluna e com o mesmo respiro da tela dos irmãos. */
+.page-molde.mx-herosistemas-home .mxh-depo__cartao { order: var(--o, 0); padding: 0 10px 12px; margin-bottom: 44px; display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; align-content: start; }
+.page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) { grid-column: 1 / -1; grid-row: auto; grid-template-columns: subgrid; grid-template-rows: auto auto 1fr; padding: 0 0 12px; margin-bottom: 0; }
+.page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) > :is(.mxh-depo__foto, .mxh-depo__nome, .mxh-depo__onde) { grid-column: 1 / -2; }
+.page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) > .mxh-depo__print { grid-column: -2 / -1; grid-row: 1 / -1; align-self: center; padding: 12px 10px 0; margin-top: 0; }
+.page-molde.mx-herosistemas-home .mxh-depo__foto { box-shadow: 0 0 0 4px #ffffff; }
+.page-molde.mx-herosistemas-home .mxh-depo__nome { margin-top: 10px; font-size: 19px; }
+.page-molde.mx-herosistemas-home .mxh-depo__nome a { display: inline-flex; align-items: center; min-height: 44px; }
+.page-molde.mx-herosistemas-home .mxh-depo__onde { font-size: 14px; line-height: 1.35; }
+.page-molde.mx-herosistemas-home .mxh-depo__print { margin-top: auto; padding-top: 12px; }
+/* a tela de TODO cartão tem a mesma proporção (a das capturas de computador, 1400×845) e o mesmo recorte: cobre a caixa e mostra o topo;
+   a captura de celular em pé (carrinho) e a da Papelaria entram cortadas ali, nunca esticadas nem mais altas que as irmãs */
+.page-molde.mx-herosistemas-home .mxh-depo__print .mxh-quadro { border-radius: 8px; overflow: hidden; border: 1px solid var(--h-linha); aspect-ratio: 1400 / 845; }
+.page-molde.mx-herosistemas-home .mxh-depo__print .mxh-quadro img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-depo__grade { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 10px; max-width: 1114px; margin-top: 70px; }
+  .page-molde.mx-herosistemas-home .mxh-depo__cartao { padding: 0 28px 30px; margin-bottom: 60px; }
+  .page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) { padding: 0 0 30px; margin-bottom: 0; }
+  .page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) > .mxh-depo__print { padding: 12px 28px 0; }
+  /* na linha larga do 7º cartão o texto não fica colado no topo com um vão embaixo: nome e descrição dividem o espaço sob o retrato */
+  .page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) { grid-template-rows: auto 1fr 1fr; }
+  .page-molde.mx-herosistemas-home .mxh-depo__cartao:is([style*="--o:6"], [style*="--o: 6"]) > .mxh-depo__nome { align-self: end; }
+  .page-molde.mx-herosistemas-home .mxh-depo__nome { font-size: 24px; }
+  .page-molde.mx-herosistemas-home .mxh-depo__onde { font-size: 15px; }
+}
+
+/* caderno, Excel ou sistema: as 3 pílulas lado a lado também no celular (só o título; o texto volta no tablet) */
+.page-molde.mx-herosistemas-home .mxh-app { padding-block: clamp(56px, 33.71px + 5.714vw, 116px) 0; }
+.page-molde.mx-herosistemas-home .mxh-app__pilulas { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.page-molde.mx-herosistemas-home .mxh-app__pil { width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; text-align: center; gap: 6px; padding: 10px 8px; }
+.page-molde.mx-herosistemas-home .mxh-app__pil a { min-height: 44px; align-content: start; font-size: 14px; }
+.page-molde.mx-herosistemas-home .mxh-app__pil a span { display: none; }
+.page-molde.mx-herosistemas-home .mxh-app__botoes { flex-wrap: nowrap; }
+.page-molde.mx-herosistemas-home .mxh-app__botao { flex: 1 1 0; min-width: 0; min-height: 52px; padding: 0 14px; }
+.page-molde.mx-herosistemas-home .mxh-app__nota { color: rgba(255, 255, 255, .78); }
+/* a imagem do celular vem em RGB com fundo preto de verdade (sem alfa): "screen" apagava também a moldura escura do aparelho (testado), então a caixa se dissolve por máscara radial no degradê, sem canto reto de retângulo preto */
+.page-molde.mx-herosistemas-home .mxh-app__img {
+  width: min(100%, 300px);
+  -webkit-mask-image: radial-gradient(ellipse 64% 60% at 47% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 64% 60% at 47% 50%, #000 62%, transparent 100%);
+}
+.page-molde.mx-herosistemas-home .mxh-app__arte { padding-bottom: 0; }
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-app { padding-block: clamp(72px, 40px + 4vw, 112px); }
+  .page-molde.mx-herosistemas-home .mxh-app__pilulas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .page-molde.mx-herosistemas-home .mxh-app__pil { align-items: flex-start; text-align: left; padding: 12px 14px; }
+  .page-molde.mx-herosistemas-home .mxh-app__pil a span { display: block; }
+  .page-molde.mx-herosistemas-home .mxh-app__botao { flex: none; padding: 0 24px; }
+  .page-molde.mx-herosistemas-home .mxh-app__img { width: min(100%, 400px); }
+}
+/* tablet e notebook pequeno (768 a 1199 px): a grade da referência reserva 25% da largura de margem e 12vw de vão e deixava a coluna do texto
+   com 244 px a 768 (as 3 pílulas ficavam com 46 px de texto, "Cadern|o ou sis|tema?") e 73 px de texto a 1024 ("desatualiz|a"); a margem e o vão
+   caem com a largura: coluna do texto 384 px a 768 e 540 px a 1024; a partir de 1200 px vale a grade da referência, provada em 1440 */
+@media (min-width: 48rem) and (max-width: 74.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-app__grade {
+    grid-template-columns: minmax(0, 1fr) minmax(0, clamp(280px, 26vw + 80px, 332px)); column-gap: clamp(28px, 4vw, 40px); padding-inline: clamp(32px, 5vw, 56px); align-items: center;
+  }
+  .page-molde.mx-herosistemas-home .mxh-app__img { width: min(100%, clamp(280px, 26vw + 80px, 332px)); }
+}
+
+/* planos: os 3 lado a lado em toda largura, o destaque no MEIO e mais largo, selo sobre a borda, faixa do tocado */
+.page-molde.mx-herosistemas-home .mxh-planos { padding-block: clamp(56px, 33.71px + 5.714vw, 116px) clamp(48px, 30.17px + 4.571vw, 96px); }
+.page-molde.mx-herosistemas-home .mxh-planos__grade {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr); gap: 8px; margin-top: 40px; align-items: stretch;
+}
+.page-molde.mx-herosistemas-home .mxh-plano { padding: 22px 8px 12px; text-align: center; border-radius: 14px; cursor: pointer; transition: transform .2s cubic-bezier(.22, 1, .36, 1), border-color .2s ease, box-shadow .2s ease; }
+.page-molde.mx-herosistemas-home .mxh-plano.is-destaque { margin-top: 0; border-radius: 16px; border-color: var(--h-azul); background: #ffffff; box-shadow: 0 24px 48px -24px rgba(12, 92, 158, .45); }
+.page-molde.mx-herosistemas-home .mxh-plano.is-escolhido { border-color: var(--h-azul); box-shadow: 0 0 0 1px var(--h-azul) inset; }
+.page-molde.mx-herosistemas-home .mxh-plano.is-destaque.is-escolhido { box-shadow: 0 0 0 1px var(--h-azul) inset, 0 24px 48px -24px rgba(12, 92, 158, .45); }
+.page-molde.mx-herosistemas-home .mxh-plano__aba {
+  z-index: 1; left: 50%; right: auto; top: 0; bottom: auto; height: auto; transform: translate(-50%, -50%); white-space: nowrap;
+  padding: 5px 10px; border-radius: 999px; font-size: 12px; line-height: 1.2;
+}
+.page-molde.mx-herosistemas-home .mxh-plano__nome { font: 700 15px/1.2 var(--h-titulo); }
+.page-molde.mx-herosistemas-home .mxh-plano__preco { margin-top: 6px; font-size: clamp(19px, 14.36px + 1.19vw, 32px); }
+.page-molde.mx-herosistemas-home .mxh-plano__desc { border-bottom: 0; padding-bottom: 0; font-size: 13px; line-height: 1.35; color: var(--h-cinza); }
+.page-molde.mx-herosistemas-home .mxh-plano__botao { margin-top: auto; min-width: 0; width: 100%; min-height: 44px; padding: 0 6px; font-size: 14px; }
+.page-molde.mx-herosistemas-home .mxh-plano__lista + .mxh-plano__botao { margin-top: 14px; }
+.page-molde.mx-herosistemas-home .mxh-plano__lista li { line-height: 1.4; padding-block: 4px; text-align: left; align-items: flex-start; }
+.page-molde.mx-herosistemas-home .mxh-plano__lista li svg { margin-top: 1px; }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa { display: none; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-planos.is-pronto :is(.mxh-plano__lista, .mxh-plano__desc) { display: none; }
+  .page-molde.mx-herosistemas-home .mxh-planos.is-pronto .mxh-plano__preco { margin-bottom: 10px; }
+  /* a Montserrat é mais larga que a letra antiga: "R$ 109/mês" (113 px a 19 px, nowrap, um nó de texto só por causa do portão
+     de texto) passava 33 px do cartão de ~80 px e dava 6 px de rolagem lateral a 360. Em celular estreito o valor acompanha a
+     largura do cartão (3,75vw: 12 px a 320, 13,5 px a 360, 18 px a 480, onde volta o clamp de baixo) e o cartão perde 4 px de cada lado */
+  .page-molde.mx-herosistemas-home .mxh-planos.is-pronto .mxh-planos__faixa {
+    display: block; margin-top: 10px; padding: 14px 16px; border-radius: 12px; background: var(--h-faixa); border: 1px solid var(--h-linha);
+  }
+}
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-nome { font-size: 15px; line-height: 1.45; color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-nome strong { font-weight: 700; }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-lista { margin-top: 8px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px; }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-lista li { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 1.35; color: var(--h-tinta); padding-block: 3px; }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-lista li.is-nao { color: var(--h-cinza); }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-lista svg { width: 18px; height: 18px; flex: none; margin-top: 1px; }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-lista .mxh-ico-check { color: var(--h-azul); }
+.page-molde.mx-herosistemas-home .mxh-planos__faixa-lista .mxh-ico-x { color: var(--h-xis); }
+/* Nota Fiscal: fora do trilho (sem PDV e sem estoque), faixa abaixo com preço e botão */
+.page-molde.mx-herosistemas-home .mxh-nf {
+  margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px 14px; padding: 16px;
+  border-radius: 14px; border: 1px solid var(--h-linha); background: var(--h-cartao-plano);
+}
+.page-molde.mx-herosistemas-home .mxh-nf__nome { font: 700 17px/1.2 var(--h-titulo); color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-nf__desc { margin-top: 2px; font-size: 14px; line-height: 1.4; color: var(--h-cinza); }
+.page-molde.mx-herosistemas-home .mxh-nf__preco { font: 700 20px/1.2 var(--h-titulo); color: var(--h-azul); white-space: nowrap; }
+.page-molde.mx-herosistemas-home .mxh-nf .mxh-plano__botao { grid-column: 1 / -1; margin-top: 4px; }
+.page-molde.mx-herosistemas-home .mxh-planos__rodape { margin-top: 18px; display: grid; gap: 8px; text-align: center; font-size: 15px; line-height: 1.5; color: var(--h-cinza); }
+.page-molde.mx-herosistemas-home .mxh-planos__garantia { font-weight: 600; color: var(--h-tinta); }
+@media (max-width: 29.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-planos.is-pronto .mxh-plano { padding-inline: 4px; }
+  .page-molde.mx-herosistemas-home .mxh-planos.is-pronto .mxh-plano__preco { font-size: clamp(11px, 3.75vw, 19px); }
+}
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-planos__grade { gap: 18px; margin-top: 64px; align-items: center; }
+  .page-molde.mx-herosistemas-home .mxh-plano { padding: 30px 24px 28px; text-align: left; }
+  .page-molde.mx-herosistemas-home .mxh-plano.is-destaque { padding: 40px 30px 34px; border-radius: 20px; }
+  .page-molde.mx-herosistemas-home .mxh-plano__nome { font-size: clamp(22px, 15.5px + .6vw, 28px); }
+  .page-molde.mx-herosistemas-home .mxh-plano__desc { font-size: 15px; padding-bottom: 12px; border-bottom: 1px solid var(--h-linha); }
+  .page-molde.mx-herosistemas-home .mxh-plano__aba { font-size: 14px; padding: 6px 16px; }
+  .page-molde.mx-herosistemas-home .mxh-plano__lista li { font-size: 15px; }
+  .page-molde.mx-herosistemas-home .mxh-plano__botao { width: auto; min-width: 180px; align-self: stretch; font-size: 16px; min-height: 52px; }
+  .page-molde.mx-herosistemas-home .mxh-nf { grid-template-columns: minmax(0, 1fr) auto auto; padding: 20px 28px; margin-top: 22px; }
+  .page-molde.mx-herosistemas-home .mxh-nf .mxh-plano__botao { grid-column: auto; margin-top: 0; min-width: 160px; }
+}
+@media (min-width: 48rem) and (prefers-reduced-motion: no-preference) {
+  .page-molde.mx-herosistemas-home .mxh-plano:not(.is-destaque) { transform: scale(.965); }
+}
+.page-molde.mx-herosistemas-home .mxh-plano:active { transform: scale(.98); }
+
+/* FAQ: 5 à vista + "Ver mais", sanfona que fecha a outra */
+.page-molde.mx-herosistemas-home .mxh-faq { padding-block: clamp(64px, 46.17px + 4.571vw, 112px) clamp(48px, 30.17px + 4.571vw, 96px); }
+.page-molde.mx-herosistemas-home .mxh-faq__titulo { font-weight: 700; }
+.page-molde.mx-herosistemas-home .mxh-faq__lista.is-recolhido .mxh-faq__extra { display: none; }
+.page-molde.mx-herosistemas-home .mxh-faq__mais[hidden] { display: none; }
+.page-molde.mx-herosistemas-home .mxh-faq__botao { min-height: 52px; }
+.page-molde.mx-herosistemas-home .mxh-faq__item summary { min-height: 60px; }
+.page-molde.mx-herosistemas-home .mxh-faq__a p + p { margin-top: 10px; }
+
+/* consultor: o fechamento com o formulário do WhatsApp */
+.page-molde.mx-herosistemas-home .mxh-consultor { padding-block: clamp(48px, 30.17px + 4.571vw, 96px); }
+.page-molde.mx-herosistemas-home .mxh-consultor__cartao { background: radial-gradient(120% 90% at 0% 0%, #0d3a63 0%, transparent 60%), var(--h-consultor-fundo); }
+.page-molde.mx-herosistemas-home .mxh-consultor__corpo { color: rgba(255, 255, 255, .88); }
+.page-molde.mx-herosistemas-home .mxh-consultor__corpo a { color: #ffffff; }
+.page-molde.mx-herosistemas-home .mxh-consultor__logo { width: 150px; }
+@media (min-width: 48rem) {
+  .page-molde.mx-herosistemas-home .mxh-consultor__cartao { padding: clamp(40px, 20px + 3vw, 72px) clamp(28px, 10px + 3vw, 66px) clamp(40px, 20px + 3vw, 72px) clamp(28px, 10px + 4vw, 88px); }
+  .page-molde.mx-herosistemas-home .mxh-consultor__logo { width: 190px; }
+  .page-molde.mx-herosistemas-home .mxh-consultor__texto { padding-top: 12px; }
+}
+
+/* ligação interna (só na rota) */
+.page-molde.mx-herosistemas-home .mxh-rel-sec { padding-block: 0 clamp(48px, 30.17px + 4.571vw, 96px); }
+.page-molde.mx-herosistemas-home .mxh-rel { display: grid; gap: 16px; }
+.page-molde.mx-herosistemas-home .mxh-rel__titulo { font: 700 clamp(22px, 19.77px + .571vw, 28px)/1.3 var(--h-titulo); letter-spacing: var(--h-ls-h2); color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-rel__lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.page-molde.mx-herosistemas-home .mxh-rel__lista a {
+  display: grid; grid-template-columns: minmax(0, 1fr) 18px; gap: 2px 10px; align-content: start; height: 100%; min-height: 56px; padding: 12px 14px;
+  border-radius: 12px; border: 1px solid var(--h-linha); text-decoration: none; color: var(--h-texto); transition: border-color .18s ease, transform .15s ease;
+}
+.page-molde.mx-herosistemas-home .mxh-rel__lista a:active { transform: scale(.98); }
+.page-molde.mx-herosistemas-home .mxh-rel__lista strong { font: 600 15px/1.35 var(--h-sans); color: var(--h-tinta); }
+.page-molde.mx-herosistemas-home .mxh-rel__lista span { grid-column: 1; font-size: 14px; line-height: 1.4; color: var(--h-cinza); }
+.page-molde.mx-herosistemas-home .mxh-rel__lista svg { grid-column: 2; grid-row: 1; width: 18px; height: 18px; color: var(--h-azul); align-self: center; }
+@media (min-width: 64rem) { .page-molde.mx-herosistemas-home .mxh-rel__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-rel__lista span { display: none; }
+  .page-molde.mx-herosistemas-home .mxh-rel__lista li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
+/* revelar ao entrar na tela: só depois que o molde.js roda (sem JS, tudo à vista) */
+@media (prefers-reduced-motion: no-preference) {
+  .page-molde.mx-herosistemas-home .mxh.js-ok .mxh-rv {
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .4s cubic-bezier(.22, 1, .36, 1), transform .4s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: calc(var(--rv-i, 0) * 60ms);
+  }
+  .page-molde.mx-herosistemas-home .mxh.js-ok .mxh-rv.is-visto { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-molde.mx-herosistemas-home .mxh.js-ok .mxh-rv { opacity: 0; transition: opacity .2s linear; }
+  .page-molde.mx-herosistemas-home .mxh.js-ok .mxh-rv.is-visto { opacity: 1; }
+  .page-molde.mx-herosistemas-home .mxh * { scroll-behavior: auto; }
+}
+
+/* letra do SoftPay Display: espaçamento da casa (achado da onda 1) */
+.page-molde.mx-herosistemas-home :is(.mxh-titulo, .mxh-faq__titulo, .mxh-dif__titulo, .mxh-integra__titulo, .mxh-rel__titulo, .mxh-cartao__titulo, .mxh-form__titulo, .mxh-consultor__titulo, .mxh-app__titulo, .mxh-plano__preco, .mxh-depo__nome) { letter-spacing: 0.005em; }
+.page-molde.mx-herosistemas-home .mxh-h1 { letter-spacing: -0.0036em; }
+
+/* celular de 320x568 (iPhone SE antigo): o botão do formulário ficava a 699 px de 568; os 4 checks saem da vista (o texto continua no HTML) e o título desce um degrau */
+@media (max-width: 47.99rem) and (max-height: 600px) {
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-checks { display: none; }
+  .page-molde.mx-herosistemas-home .mxh-hero .mxh-h1 { font-size: 26px; }
+}
+
+/* celular de 320 px: a Montserrat, mais larga, partia "Mercadinho", "Distribuidora", "Comércio", "Completo" e "WhatsApp" no meio da palavra
+   (medido por Range.getClientRects nos nós de texto); a letra desce só nesses cinco lugares e só abaixo de 22 rem */
+@media (max-width: 21.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-depo__nome { font-size: 16px; }
+  .page-molde.mx-herosistemas-home .mxh-plano__nome { font-size: 13px; }
+  .page-molde.mx-herosistemas-home .mxh-app__botao { padding: 0 8px; gap: 6px; font-size: 14px; }
+  .page-molde.mx-herosistemas-home .mxh-app__botao svg { width: 18px; height: 18px; }
+}
+
+/* achados do `de audit` (03/11): o link "Política de Privacidade" do aviso do formulário tinha 30 px de altura tocável no celular
+   (mínimo 44) e o título do app, de várias linhas, estava com entrelinha de 1,04. O link vira caixa de 44 px sem mexer na linha do aviso. */
+@media (max-width: 47.99rem) {
+  .page-molde.mx-herosistemas-home .mxh-form__aviso a { display: inline-flex; align-items: center; min-height: 44px; margin-block: -14px; }
+}
+.page-molde.mx-herosistemas-home .mxh-app__titulo { line-height: 1.12; }

@@ -1,0 +1,308 @@
+{
+ "slug": "solucoes/sistema-financeiro",
+ "figura": [
+  "/assets/lojistas/casal-comerciantes.webp",
+  "Comerciantes analisando os números da loja no computador"
+ ],
+ "title": "Sistema Financeiro para Loja: Caixa e Resultado | SoftPay",
+ "description": "Controle de caixa, entradas e saídas, e visão do resultado da loja. Entenda a diferença entre faturamento e lucro. Teste grátis por 7 dias.",
+ "h1": "Controle financeiro da loja",
+ "intro": "Faturamento é o que entrou. Lucro é o que sobrou. A maior parte dos problemas de caixa em loja pequena nasce de confundir os dois.",
+ "breadcrumbs": [
+  [
+   "Soluções",
+   "/solucoes/"
+  ],
+  [
+   "Sistema financeiro",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay calcula meu imposto ou gera o DAS?",
+   "Não. É um sistema de gestão comercial: registra venda, caixa, despesa e estoque. Cálculo de imposto, apuração e declaração continuam com o seu contador."
+  ],
+  [
+   "Ele importa meu extrato bancário?",
+   "Não. Não há integração com banco, importação de OFX nem conciliação bancária."
+  ],
+  [
+   "Concilia o que a maquininha me paga?",
+   "Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência é manual."
+  ],
+  [
+   "Dá para registrar as despesas da loja?",
+   "Sim. A despesa lançada entra na conta do resultado. A partir do plano Loja, ela também pode ser lançada por mensagem ou áudio no WhatsApp."
+  ],
+  [
+   "Tem contas a pagar com vencimento?",
+   "Não está confirmado. Se agenda de vencimentos é central na sua rotina, verifique com o suporte antes de contratar."
+  ],
+  [
+   "Mostra fluxo de caixa projetado?",
+   "Não. O sistema mostra o que já aconteceu — não faz previsão dos próximos meses."
+  ],
+  [
+   "Como sei quanto sobrou de verdade?",
+   "Pela conta de vendas menos custo dos produtos menos despesas. Ela só fecha se o custo estiver cadastrado nos produtos, o que está disponível a partir do plano Loja."
+  ],
+  [
+   "Consigo separar o dinheiro da loja do meu?",
+   "Sim, registrando retirada como sangria. É o que evita que a retirada do dono vire diferença inexplicada no fechamento."
+  ],
+  [
+   "Emite boleto?",
+   "Não. A cobrança de fiado sai por link de Pix pelo WhatsApp, a partir do plano Loja."
+  ]
+ ],
+ "cta_title": "Feche o caixa por uma semana",
+ "cta_text": "Registre as vendas, lance as despesas e feche o caixa todo dia por sete dias. No fim da semana você vê a diferença entre o que imaginava e o que aconteceu. Sem cartão.",
+ "related": [
+  [
+   "Como calcular o lucro",
+   "/guias/como-calcular-lucro-da-loja/",
+   "A conta, passo a passo"
+  ],
+  [
+   "Como controlar o caixa",
+   "/guias/como-controlar-caixa-da-loja/",
+   "Rotina de fechamento"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "O custo que entra na conta"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Onde a entrada é registrada"
+  ],
+  [
+   "Bot do WhatsApp",
+   "/solucoes/bot-whatsapp/",
+   "Lançar despesa falando"
+  ],
+  [
+   "Como calcular a margem",
+   "/guias/como-calcular-margem-de-lucro/",
+   "Margem contra giro"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-problema",
+   "titulo": "O problema",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O dono de loja pequena costuma saber quanto vendeu. Quase nunca sabe quanto sobrou — e essa distância é onde mora o problema. Vender bem e não ter dinheiro é o resultado normal de acompanhar só o faturamento."
+    },
+    {
+     "tipo": "p",
+     "texto": "Dois motivos explicam quase todos os casos: o custo da mercadoria não está registrado, e as despesas do mês vivem espalhadas entre memória, extrato e papel."
+    },
+    {
+     "tipo": "p",
+     "texto": "Sem essas duas peças, o resultado do mês vira sensação. E sensação não decide preço, não decide compra e não decide se dá para contratar alguém."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-isso-aparece-na-sua-loja",
+   "titulo": "Como isso aparece na sua loja",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O caixa fecha com diferença</strong> e a explicação nunca aparece.",
+      "<strong>Você mistura o dinheiro da loja com o seu.</strong> Retirada não registrada vira \"sumiço\" no fim do mês.",
+      "<strong>Vendeu muito, não sobrou nada.</strong> O CMV comeu a margem e ninguém viu acontecer.",
+      "<strong>A despesa recorrente surpreende.</strong> Aluguel, energia e fornecedor caem sempre, mas nunca entram na conta antes.",
+      "<strong>Você não sabe o quanto pode retirar.</strong> Então retira pouco e aperta, ou retira demais e quebra o caixa."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Caixa aberto e fechado todo dia"
+    },
+    {
+     "tipo": "p",
+     "texto": "Abertura com troco inicial, movimento do dia e fechamento comparando sistema e gaveta. A diferença aparece hoje, enquanto ainda dá para lembrar o que houve."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Suprimento e sangria registrados"
+    },
+    {
+     "tipo": "p",
+     "texto": "Dinheiro que entra fora da venda e dinheiro que sai do caixa ficam registrados. É o que separa retirada de sumiço."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Despesas no mesmo lugar"
+    },
+    {
+     "tipo": "p",
+     "texto": "A despesa lançada no sistema entra na conta do resultado. Enquanto ela vive só no extrato do banco, o cálculo do mês fica pela metade."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Custo da mercadoria no cálculo"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com o custo cadastrado nos produtos, o sistema mostra a margem, não só o faturamento. É a peça que transforma \"vendi R$ 25 mil\" em \"sobrou tanto\". Veja o <a href=\"/solucoes/sistema-de-estoque/\">controle de estoque</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Forma de recebimento separada"
+    },
+    {
+     "tipo": "p",
+     "texto": "Dinheiro, Pix, cartão e fiado ficam distintos. No fechamento você confere cada um, em vez de brigar com um total só."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Lançar despesa falando"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, despesa, suprimento e sangria entram por mensagem ou áudio no WhatsApp — no momento em que acontecem, que é quando costumam não ser registradas. Veja o <a href=\"/solucoes/bot-whatsapp/\">bot do WhatsApp</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-financeiro-do-softpay-nao-faz",
+   "titulo": "O que o financeiro do SoftPay não faz",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "É o controle financeiro da operação da loja, não um sistema contábil. O que fica de fora:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não é contabilidade.</strong> Não calcula imposto, não gera DAS, não faz apuração nem declaração. Isso é do seu contador.",
+      "<strong>Não integra com banco.</strong> Não há importação de extrato (OFX), conciliação bancária nem saldo de conta.",
+      "<strong>Não concilia maquininha.</strong> O que a adquirente deposita não entra sozinho no sistema.",
+      "<strong>Não emite boleto nem gera cobrança bancária.</strong>",
+      "<strong>Não faz contas a pagar com agenda de vencimentos</strong> de forma confirmada. Se isso é central para você, verifique com o suporte.",
+      "<strong>Não faz fluxo de caixa projetado.</strong> Ele mostra o que aconteceu, não uma previsão dos próximos meses."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-conta-que-separa-faturamento-de-lucro",
+   "titulo": "A conta que separa faturamento de lucro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "É a mesma conta em qualquer comércio, e quase nunca é feita:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Vendi R$ 25.480 no mês. Sobrou quanto?",
+     "rodape": "Números fictícios, só para mostrar o raciocínio. Com custo cadastrado e despesa lançada, essa conta deixa de ser estimativa e vira relatório. Veja o guia <a href=\"/guias/como-calcular-lucro-da-loja/\">como calcular o lucro da loja</a>.",
+     "linhas": [
+      {
+       "rotulo": "Vendas do mês",
+       "valor": "R$ 25.480,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Custo dos produtos vendidos (CMV)",
+       "valor": "− R$ 16.560,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Lucro bruto",
+       "valor": "R$ 8.920,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Despesas do período",
+       "valor": "− R$ 3.400,00",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= Resultado estimado",
+       "valor": "R$ 5.520,00",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-voce-passa-a-conseguir-responder",
+   "titulo": "O que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto sobrou de verdade no mês passado?",
+      "O caixa de ontem bateu? Se não, onde começou a diferença?",
+      "Quanto saiu de despesa neste mês?",
+      "Quanto do que vendi ainda está a receber, em fiado?",
+      "Quanto posso retirar sem apertar o caixa?",
+      "Minha margem melhorou ou piorou em relação ao mês anterior?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "em-qual-plano-esta",
+   "titulo": "Em qual plano está",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "O financeiro neste plano"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "Caixa com abertura e fechamento, suprimento, sangria, despesas e formas de recebimento. 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>Onde o resultado fica completo:</strong> custo por produto e curva ABC entram no cálculo da margem. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-07"
+}

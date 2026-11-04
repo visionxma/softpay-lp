@@ -1,0 +1,251 @@
+{
+ "artigo": true,
+ "slug": "guias/checklist-reforma-tributaria-2027",
+ "passos": [
+  [
+   "Confirme a sua data com o contador",
+   "Regime regular já está obrigado desde agosto de 2026; Simples Nacional e MEI entram em 1º de janeiro de 2027.",
+   "passo-1-confirme-a-sua-data-com-o-contador"
+  ],
+  [
+   "Pergunte ao seu sistema se ele está pronto",
+   "Quatro perguntas objetivas ao fornecedor, com prazo de resposta.",
+   "passo-2-pergunte-ao-seu-sistema-se-ele-esta-pronto"
+  ],
+  [
+   "Cadastre os produtos de maior giro",
+   "Nota fiscal exige produto cadastrado. Comece pelos que respondem pela maior parte das vendas.",
+   "passo-3-cadastre-os-produtos-de-maior-giro"
+  ],
+  [
+   "Comece a registrar as notas de entrada",
+   "A compra de mercadoria com nota passa a valer mais no novo modelo, por causa do crédito.",
+   "passo-4-comece-a-registrar-as-notas-de-entrada"
+  ],
+  [
+   "Emita nota antes de ser obrigado",
+   "Algumas por dia, para a rotina entrar antes do prazo.",
+   "passo-5-emita-nota-antes-de-ser-obrigado"
+  ],
+  [
+   "Revise em dezembro, sem migrar em dezembro",
+   "Dezembro é para conferir, não para começar.",
+   "passo-6-revise-em-dezembro-sem-migrar-em-dezembro"
+  ]
+ ],
+ "title": "Checklist da Reforma Tributária no Comércio | SoftPay",
+ "description": "Checklist prático para o pequeno comércio se preparar para a reforma tributária até 1º de janeiro de 2027, em seis passos e com as datas oficiais.",
+ "h1": "Checklist da reforma tributária até janeiro de 2027",
+ "intro": "Seis passos, em ordem, para chegar em 1º de janeiro de 2027 sem susto. Nenhum deles depende de você entender a reforma inteira — dependem de saber a sua data e organizar o que já é seu.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Checklist da reforma tributária",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual o prazo para o pequeno comércio se adequar à reforma?",
+   "Para Simples Nacional e MEI, 1º de janeiro de 2027. Para empresas do regime regular, a obrigação já vale desde 3 de agosto de 2026."
+  ],
+  [
+   "Por onde começo?",
+   "Pela sua data: confirme com o contador se você é regime regular, Simples ou MEI. Todo o resto do checklist depende dessa resposta."
+  ],
+  [
+   "Preciso fazer tudo isso mesmo sendo uma loja pequena?",
+   "Os passos 1, 2 e 3 valem para qualquer tamanho. Os demais são preparação que reduz o susto — quanto menor a estrutura, mais vale adiantar, porque não há equipe para resolver correndo."
+  ],
+  [
+   "Dá tempo se eu começar em novembro?",
+   "Dá, mas com menos folga. O passo que consome tempo é o cadastro de produtos; começar em setembro ou outubro permite fazer sem parar a loja."
+  ],
+  [
+   "O que eu não devo fazer?",
+   "Migrar de sistema em dezembro. É o mês de maior movimento e o de maior fila no suporte de todos os fornecedores."
+  ],
+  [
+   "Preciso entender a reforma tributária inteira?",
+   "Não. Você precisa saber a sua data, ter um sistema que emita a nota no formato novo e ter os produtos cadastrados. O resto é trabalho do contador."
+  ]
+ ],
+ "cta_title": "Comece pelo passo 3, que é o mais demorado",
+ "cta_text": "Cadastrar os produtos de maior giro leva uma tarde e resolve o passo que mais consome tempo. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Reforma tributária no comércio",
+   "/guias/reforma-tributaria-comercio/",
+   "As datas e o que muda"
+  ],
+  [
+   "Reforma tributária e o MEI",
+   "/guias/reforma-tributaria-mei/",
+   "A obrigação de 2027"
+  ],
+  [
+   "Meu sistema precisa mudar?",
+   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/",
+   "As perguntas ao fornecedor"
+  ],
+  [
+   "O que é NF-e e NFC-e",
+   "/guias/nfe-nfce-o-que-e/",
+   "A diferença entre as duas"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "O cadastro de produtos"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "Sair do papel"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "passo-1-confirme-a-sua-data-com-o-contador",
+   "titulo": "Passo 1 — Confirme a sua data com o contador",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Tudo começa aqui, porque a data muda conforme o regime:"
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Regime",
+      "Data",
+      "Situação"
+     ],
+     "linhas": [
+      [
+       "Lucro Real / Lucro Presumido",
+       "3 de agosto de 2026",
+       "Já em vigor"
+      ],
+      [
+       "Simples Nacional",
+       "1º de janeiro de 2027",
+       "A preparar"
+      ],
+      [
+       "MEI",
+       "1º de janeiro de 2027",
+       "A preparar"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você não tem certeza do seu regime, essa é a primeira pergunta ao contador — e é rápida."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-2-pergunte-ao-seu-sistema-se-ele-esta-pronto",
+   "titulo": "Passo 2 — Pergunte ao seu sistema se ele está pronto",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quatro perguntas ao suporte do sistema que você usa:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "O sistema já emite nota com IBS e CBS destacados?",
+      "Se não, qual a data prevista?",
+      "A atualização tem custo adicional?",
+      "O que preciso fazer do meu lado?"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O detalhamento está em <a href=\"/guias/meu-sistema-precisa-mudar-reforma-tributaria/\">meu sistema precisa mudar?</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-3-cadastre-os-produtos-de-maior-giro",
+   "titulo": "Passo 3 — Cadastre os produtos de maior giro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Nota fiscal exige produto cadastrado, com descrição e valor. Este é o passo que mais consome tempo, e por isso é o que mais compensa adiantar."
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "Liste os itens que respondem pela maior parte das vendas.",
+      "Cadastre com descrição clara, preço de venda e custo de compra.",
+      "Complete o restante conforme repõe o estoque — não pare a loja para cadastrar tudo."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-4-comece-a-registrar-as-notas-de-entrada",
+   "titulo": "Passo 4 — Comece a registrar as notas de entrada",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "No novo modelo, o imposto pago na compra pode ser abatido. Isso torna a nota de entrada mais valiosa do que era — e a compra sem nota, mais cara do que parece."
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você compra de fornecedor sem pedir nota, esse é um hábito que vale mudar agora."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-5-emita-nota-antes-de-ser-obrigado",
+   "titulo": "Passo 5 — Emita nota antes de ser obrigado",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Se você é MEI ou do Simples e quase não emite nota hoje, comece a emitir algumas por dia. O objetivo não é a nota em si: é <strong>a rotina</strong>."
+    },
+    {
+     "tipo": "p",
+     "texto": "Quem já emitiu cinquenta notas até dezembro chega em janeiro sem novidade. Quem vai emitir a primeira no dia 2 de janeiro, com cliente esperando, aprende na pior hora."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "passo-6-revise-em-dezembro-sem-migrar-em-dezembro",
+   "titulo": "Passo 6 — Revise em dezembro, sem migrar em dezembro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Dezembro é para conferir se está tudo funcionando, não para começar. É o mês de maior movimento do varejo e o mês em que o suporte de todo fornecedor está mais cheio."
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "Confira se a emissão está saindo certa.",
+      "Confira se os produtos de maior giro estão cadastrados.",
+      "Deixe o contato do suporte à mão."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Fontes oficiais: <a href=\"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/reforma-tributaria-do-consumo/orientacoes-2026\" target=\"_blank\" rel=\"noopener nofollow\">Receita Federal — Orientações 2026</a> e <a href=\"https://www.cgibs.gov.br/novo-marco-da-reforma-tributaria-inicia-em-03-de-agosto-com-preenchimento-obrigatorio-dos-campos-relativos-ao-ibs-e-a-cbs\" target=\"_blank\" rel=\"noopener nofollow\">Comitê Gestor do IBS</a> (Ato Conjunto RFB/CGIBS nº 4, de 30 de julho de 2026). Datas conferidas em 8 de setembro de 2026. <strong>Esta página não é orientação contábil:</strong> o enquadramento do seu negócio deve ser confirmado com o seu contador.</p>"
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-08",
+ "updated": "2026-09-08"
+}

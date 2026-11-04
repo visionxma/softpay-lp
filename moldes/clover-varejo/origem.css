@@ -1,0 +1,17 @@
+/* paleta e fontes da FONTE do molde, geradas por vestir-css.mjs: só para a prova contra a captura */
+.mx-clover-varejo {
+  --m-fundo: #ffffff;
+  --m-superficie: #f9f9f9;
+  --m-borda: #d5d5d5;
+  --m-texto: #000000;
+  --m-texto-suave: #5d5d5d;
+  --m-texto-fraco: #727272;
+  --m-primaria: #228800;
+  --m-primaria-2: #3271ab;
+  --m-sobre-primaria: #ffffff;
+  --m-destaque: #b6fb6f;
+  --m-sobre-destaque: #000000;
+  --m-alta: #004400;
+  --m-f-titulo: altform,sans-serif;
+  --m-f-corpo: "Graphik","Helvetica",sans-serif;
+}

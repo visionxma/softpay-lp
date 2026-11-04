@@ -1,0 +1,222 @@
+{
+ "artigo": true,
+ "slug": "guias/nfe-nfce-o-que-e",
+ "title": "NF-e e NFC-e: Qual a Diferença e Quando Usar | SoftPay",
+ "description": "A diferença entre NF-e e NFC-e em linguagem simples: qual usar na venda para consumidor, qual usar para empresa e o que muda com a reforma tributária.",
+ "h1": "NF-e e NFC-e: qual a diferença",
+ "intro": "A diferença é o cliente. NFC-e é a nota da venda no balcão, para o consumidor final. NF-e é a nota da venda para outra empresa, ou de operações que exigem documento completo. Esta página explica quando usar cada uma, sem termo de contador.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "NF-e e NFC-e",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual a diferença entre NF-e e NFC-e?",
+   "A NFC-e é a nota da venda para consumidor final, emitida no balcão. A NF-e é usada na venda para outra empresa e no transporte de mercadoria. Quem tem loja de rua usa NFC-e na maior parte das vendas."
+  ],
+  [
+   "Preciso das duas?",
+   "Se você vende só para consumidor final, a NFC-e costuma bastar. Se vende também para empresas, no atacado, provavelmente precisa das duas."
+  ],
+  [
+   "A NFC-e substituiu o cupom fiscal?",
+   "Sim, a NFC-e é o documento eletrônico que substituiu o antigo cupom fiscal na venda ao consumidor."
+  ],
+  [
+   "O que muda nas duas com a reforma tributária?",
+   "Ambas passam a exigir os campos de IBS e CBS preenchidos. Para o regime regular isso vale desde 3 de agosto de 2026; para Simples Nacional e MEI, a partir de 1º de janeiro de 2027."
+  ],
+  [
+   "O SoftPay emite as duas?",
+   "A emissão de NF-e e NFC-e está nos planos Nota Fiscal e ERP Completo e consta como recurso em ativação. Confirme com o suporte antes de contratar contando com ela."
+  ],
+  [
+   "Sou obrigado a emitir nota em toda venda?",
+   "Depende do seu regime e do seu estado — confirme com o seu contador. Para o MEI, a obrigação em qualquer venda começa em 1º de janeiro de 2027."
+  ]
+ ],
+ "cta_title": "Organize o cadastro antes do fiscal",
+ "cta_text": "Emitir nota exige produto cadastrado. Comece por aí: 7 dias grátis, sem cartão de crédito.",
+ "related": [
+  [
+   "Reforma tributária no comércio",
+   "/guias/reforma-tributaria-comercio/",
+   "As datas e o que muda"
+  ],
+  [
+   "Reforma tributária e o MEI",
+   "/guias/reforma-tributaria-mei/",
+   "A obrigação de 2027"
+  ],
+  [
+   "Emissão de NF-e",
+   "/solucoes/nfe/",
+   "O recurso no SoftPay"
+  ],
+  [
+   "Emissão de NFC-e",
+   "/solucoes/nfce/",
+   "O recurso no SoftPay"
+  ],
+  [
+   "Checklist até janeiro",
+   "/guias/checklist-reforma-tributaria-2027/",
+   "O que fazer, em ordem"
+  ],
+  [
+   "Distribuidora",
+   "/segmentos/distribuidora/",
+   "Quem usa as duas"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-diferenca-em-uma-tabela",
+   "titulo": "A diferença em uma tabela",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "",
+      "NFC-e",
+      "NF-e"
+     ],
+     "linhas": [
+      [
+       "Para quem",
+       "Consumidor final, no balcão",
+       "Outra empresa, ou operação que exige documento completo"
+      ],
+      [
+       "Onde é usada",
+       "Loja, venda direta",
+       "Venda para CNPJ, transporte de mercadoria"
+      ],
+      [
+       "Como o cliente recebe",
+       "Cupom impresso ou por QR Code",
+       "Arquivo XML e DANFE"
+      ],
+      [
+       "Situação comum",
+       "Mercadinho, loja de roupas, pet shop",
+       "Distribuidora, venda no atacado"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Na prática, quem tem loja de rua usa <strong>NFC-e</strong> na maior parte das vendas, e <strong>NF-e</strong> quando vende para uma empresa."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quando-voce-precisa-de-cada-uma",
+   "titulo": "Quando você precisa de cada uma",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "NFC-e — venda no balcão"
+    },
+    {
+     "tipo": "p",
+     "texto": "É o documento da venda para consumidor final. Substitui o antigo cupom fiscal. Sai na hora da venda, e o cliente pode receber impresso ou pelo celular."
+    },
+    {
+     "tipo": "h3",
+     "texto": "NF-e — venda para empresa"
+    },
+    {
+     "tipo": "p",
+     "texto": "Necessária quando o comprador é pessoa jurídica e precisa da nota para o próprio controle e crédito de imposto. Também é o documento que acompanha mercadoria em transporte."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Quem precisa das duas",
+     "texto": "Se a sua loja vende no atacado <em>e</em> no varejo, você provavelmente precisa das duas. É o caso de distribuidoras e de lojas que atendem tanto o consumidor quanto o pequeno revendedor."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-a-reforma-tributaria",
+   "titulo": "O que muda com a reforma tributária",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "As duas passam a exigir os campos de <strong>IBS e CBS</strong> preenchidos. Documento sem esses campos é rejeitado automaticamente pelo sistema."
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Quem",
+      "Desde quando"
+     ],
+     "linhas": [
+      [
+       "Regime regular (Lucro Real e Presumido)",
+       "3 de agosto de 2026 — já em vigor"
+      ],
+      [
+       "Simples Nacional e MEI",
+       "1º de janeiro de 2027"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Para o MEI há uma mudança adicional: a partir de 2027, a nota passa a ser obrigatória em <strong>qualquer venda</strong>, inclusive para pessoa física. Veja <a href=\"/guias/reforma-tributaria-mei/\">reforma tributária e o MEI</a>."
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Fontes oficiais: <a href=\"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/reforma-tributaria-do-consumo/orientacoes-2026\" target=\"_blank\" rel=\"noopener nofollow\">Receita Federal — Orientações 2026</a> e <a href=\"https://www.cgibs.gov.br/novo-marco-da-reforma-tributaria-inicia-em-03-de-agosto-com-preenchimento-obrigatorio-dos-campos-relativos-ao-ibs-e-a-cbs\" target=\"_blank\" rel=\"noopener nofollow\">Comitê Gestor do IBS</a> (Ato Conjunto RFB/CGIBS nº 4, de 30 de julho de 2026). Datas conferidas em 8 de setembro de 2026. <strong>Esta página não é orientação contábil:</strong> o enquadramento do seu negócio deve ser confirmado com o seu contador.</p>"
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "preciso-emitir-nota-em-toda-venda",
+   "titulo": "Preciso emitir nota em toda venda?",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Depende do seu regime e do seu estado — é pergunta para o seu contador, não para um site de sistema. O que dá para dizer com segurança:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "A partir de 1º de janeiro de 2027, o MEI passa a emitir em qualquer venda.",
+      "Empresas do regime regular já estão obrigadas ao formato novo desde agosto de 2026.",
+      "Independentemente da obrigação, registrar toda venda em algum lugar é o que permite saber quanto a loja realmente ganhou."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-trata-as-duas",
+   "titulo": "Como o SoftPay trata as duas",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A emissão de NF-e e NFC-e está nos planos <strong>Nota Fiscal (R$ 65/mês)</strong> e <strong>ERP Completo (R$ 109/mês)</strong>, e <strong>consta como recurso em ativação</strong> — confirme a situação para o seu caso com o suporte antes de contratar contando com ela."
+    },
+    {
+     "tipo": "p",
+     "texto": "Os planos Comércio e Loja não incluem emissão fiscal: cobrem PDV, estoque, caixa, fiado e clientes."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

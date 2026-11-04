@@ -1,0 +1,392 @@
+{
+ "slug": "segmentos/loja-de-joias",
+ "figura": [
+  "/assets/lojistas/loja-de-joias.webp",
+  "Vendedora de joalheria apresentando uma peça sobre bandeja de veludo no balcão"
+ ],
+ "title": "Sistema para Loja de Joias e Joalheria | SoftPay",
+ "description": "Sistema para loja de joias com controle unitário de peça, custo e margem, cadastro de clientes e crediário próprio. Teste grátis por 7 dias, sem cartão.",
+ "h1": "Sistema para loja de joias",
+ "intro": "Numa joalheria, uma peça pode valer o que um mercadinho vende num dia. Aqui o controle não é de quantidade, é de unidade — e o cliente que voltou é mais valioso que o cliente novo.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Loja de joias",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay controla cada peça separadamente?",
+   "Sim. Cada peça é cadastrada com custo e preço próprios, e a baixa no PDV é daquela peça. É o que permite conhecer a margem real de cada item em vez de uma média."
+  ],
+  [
+   "Dá para controlar aro de anel e comprimento de corrente?",
+   "Sim, pelo cadastro com variações, disponível a partir do plano Loja. O mesmo modelo tem saldo próprio para cada aro ou comprimento."
+  ],
+  [
+   "Consigo saber quanto tenho investido em mercadoria?",
+   "Sim, desde que o custo esteja cadastrado peça a peça. Sem custo, o sistema mostra faturamento; com custo, mostra quanto vale o estoque e qual a margem."
+  ],
+  [
+   "O sistema controla número de série ou certificado de pedra?",
+   "Não. Rastreio por número de série e laudo de pedra certificada ficam fora do SoftPay."
+  ],
+  [
+   "Trabalho com consignação. O SoftPay atende?",
+   "Não. Peça em consignação ou entregue a vendedor externo não tem controle próprio no sistema."
+  ],
+  [
+   "Tem ordem de serviço para conserto e ajuste?",
+   "Não. Entrada de conserto, prazo e retirada não fazem parte do sistema. Se o conserto é uma fatia grande do seu faturamento, leve isso em conta."
+  ],
+  [
+   "Como controlo o crediário próprio?",
+   "Pelo controle de fiado, que registra o saldo e o histórico por cliente. A partir do plano Loja, o sistema também envia cobrança por link de Pix pelo WhatsApp."
+  ],
+  [
+   "Dá para trabalhar recompra por data, como bodas e aniversário?",
+   "O cadastro de clientes guarda o histórico de compras com data, e é isso que sustenta o contato com propósito. Cupom e fidelidade estão disponíveis a partir do plano Loja."
+  ],
+  [
+   "Compro ouro usado. O sistema calcula por peso e teor?",
+   "Não. O SoftPay não faz avaliação por teor, peso ou cotação do metal — o cadastro é por peça, com preço definido por você."
+  ]
+ ],
+ "cta_title": "Teste com as peças da sua vitrine",
+ "cta_text": "Cadastre dez peças com custo e preço, registre as vendas por uma semana e veja a margem real de cada uma. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Custo por peça e curva ABC"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Histórico, cupom e fidelidade"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "Crediário próprio, por cliente"
+  ],
+  [
+   "Bot do WhatsApp",
+   "/solucoes/bot-whatsapp/",
+   "Registrar sem parar o atendimento"
+  ],
+  [
+   "Como calcular a margem",
+   "/guias/como-calcular-margem-de-lucro/",
+   "Margem contra giro"
+  ],
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "Outro segmento com grade e coleção"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-rotina-de-quem-vende-peca-de-alto-valor",
+   "titulo": "A rotina de quem vende peça de alto valor",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Joalheria é o oposto do comércio de volume. Você não vende centenas de itens por dia; vende poucas peças caras, e cada uma delas responde por uma fatia grande do faturamento do mês."
+    },
+    {
+     "tipo": "p",
+     "texto": "Isso inverte o peso do erro. Num mercadinho, perder a conta de um item de dois reais é irrelevante. Numa joalheria, uma peça que sumiu do controle é o resultado da semana. Não existe erro pequeno quando o valor unitário é alto."
+    },
+    {
+     "tipo": "p",
+     "texto": "A venda também é diferente: ela é lenta, conversada, muitas vezes marcada por uma data — aniversário, casamento, formatura. O cliente volta, e volta com motivo. Quem não registra quem comprou o quê está jogando fora o ativo mais caro da loja."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O estoque é um número, não uma lista de peças.</strong> Saber que há “12 anéis” não ajuda quando cada anel tem custo e valor diferentes.",
+      "<strong>Muito capital parado, invisível.</strong> A vitrine é o maior investimento da loja e quase nunca há um número confiável de quanto ela vale a preço de custo.",
+      "<strong>A margem parece ótima e o caixa não acompanha.</strong> Margem alta com giro lento não paga aluguel; sem custo cadastrado, ninguém percebe.",
+      "<strong>O crediário vive num caderno.</strong> Venda parcelada em alto valor é comum, e o controle costuma ser manual.",
+      "<strong>O cliente que comprou aliança não é chamado no aniversário de casamento.</strong> Sem histórico, cada venda recomeça do zero."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Controle por peça, com custo próprio"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cada peça cadastrada com o próprio custo e o próprio preço. Quando a venda passa no PDV, a baixa é daquela peça — não de um saldo genérico. É o que permite saber a margem real de cada item em vez de uma média que esconde tudo."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Variações para aro, tamanho e comprimento"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, o mesmo modelo existe em aros ou comprimentos diferentes, com saldo próprio para cada um. A resposta para “tem esse anel no aro 18?” deixa de depender de alguém abrir a gaveta."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Quanto vale a sua vitrine, a preço de custo"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com custo cadastrado peça a peça, o valor investido em mercadoria vira um número consultável. Numa joalheria esse costuma ser o maior ativo do negócio e o mais mal conhecido."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC: giro contra margem"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, a curva ABC separa o que sustenta o faturamento do que apenas ocupa vitrine. É a informação que decide o que repor e o que precisa sair, porque em joalheria uma peça parada é dinheiro caro dormindo."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Crediário próprio e fiado"
+    },
+    {
+     "tipo": "p",
+     "texto": "O caderninho de fiado registra o saldo por cliente, com histórico. A partir do plano Loja, o sistema envia cobrança por link de Pix pelo WhatsApp — o que importa quando o valor da parcela é alto e o combinado precisa estar registrado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "O cliente que volta por uma data"
+    },
+    {
+     "tipo": "p",
+     "texto": "O cadastro ligado às vendas mostra o que a pessoa comprou e quando. Numa joalheria isso é o motor da recompra: quem comprou a aliança tem bodas, quem comprou o presente tem outra data no ano seguinte. Cupom e fidelidade, a partir do plano Loja, se apoiam nesse histórico."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Registrar sem interromper o atendimento"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, entrada de peça, despesa e fiado entram por mensagem ou áudio no WhatsApp. Veja o <a href=\"/solucoes/bot-whatsapp/\">bot do WhatsApp</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-numa-joalheria",
+   "titulo": "O que o SoftPay não faz numa joalheria",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Uma joalheria tem exigências que o SoftPay não cobre. Melhor saber antes:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não controla peça por número de série nem certificado.</strong> Se você trabalha com pedra certificada e precisa rastrear laudo por unidade, isso fica fora do sistema.",
+      "<strong>Não faz consignação nem mostruário.</strong> Peça entregue a vendedor externo ou deixada em consignação não tem controle próprio.",
+      "<strong>Não tem ordem de serviço.</strong> Conserto, ajuste de aro, banho e troca de pilha não têm fluxo de entrada, prazo e retirada.",
+      "<strong>Não faz avaliação nem compra de ouro usado.</strong> Não há cálculo por teor, peso ou cotação do metal.",
+      "<strong>O cadastro é por peça, não por grama.</strong> Se o seu preço é calculado pelo peso em gramas na hora da venda, o SoftPay não faz essa conta."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se o conserto e a consignação são parte grande do seu faturamento, considere isso na decisão."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-conta-que-a-joalheria-precisa-fazer",
+   "titulo": "A conta que a joalheria precisa fazer",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Margem alta engana quando o giro é lento. O número que importa não é o percentual, é quanto tempo o dinheiro fica parado:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Duas peças, a mesma margem",
+     "rodape": "Números fictícios, só para mostrar o raciocínio. Com custo e data de venda registrados, a curva ABC mostra quais peças são A e quais são B na sua loja. Veja o guia <a href=\"/guias/como-calcular-margem-de-lucro/\">como calcular a margem de lucro</a>.",
+     "linhas": [
+      {
+       "rotulo": "Peça A — custo R$ 800, vende por R$ 1.600",
+       "valor": "margem 50%",
+       "classe": ""
+      },
+      {
+       "rotulo": "Peça A gira em 30 dias",
+       "valor": "R$ 800 de lucro no mês",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Peça B — custo R$ 800, vende por R$ 1.600",
+       "valor": "margem 50%",
+       "classe": ""
+      },
+      {
+       "rotulo": "Peça B gira em 180 dias",
+       "valor": "R$ 133 de lucro por mês",
+       "classe": "minus"
+      },
+      {
+       "rotulo": "= A margem é igual; o resultado não",
+       "valor": "6x de diferença",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quanto vale a minha vitrine a preço de custo, hoje?",
+      "Qual a margem real desta peça, depois do custo?",
+      "Quais peças estão paradas há mais de 90 dias?",
+      "Quem comprou aliança comigo e faz bodas neste mês?",
+      "Quanto tenho a receber de crediário e de quem?",
+      "Que faixa de preço mais sai na minha loja?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a joalheria"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "Loja pequena, sem grade de aro: PDV, caixa, fiado e estoque essencial. 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O plano da joalheria:</strong> variações de aro e tamanho, custo por peça, curva ABC, fidelidade, cobrança por Pix e loja online. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais NF-e e NFC-e, para quem precisa emitir nota. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [
+  [
+   "Sistema para loja de cosméticos e perfumaria",
+   "/segmentos/cosmeticos-e-perfumaria/"
+  ],
+  [
+   "Controle de clientes (CRM)",
+   "/solucoes/controle-de-clientes/"
+  ],
+  [
+   "Sistema para pet shop",
+   "/segmentos/pet-shop/"
+  ],
+  [
+   "Controle financeiro da loja",
+   "/solucoes/sistema-financeiro/"
+  ],
+  [
+   "Como controlar vendas fiadas",
+   "/guias/como-controlar-fiado/"
+  ],
+  [
+   "Como organizar a vitrine de uma loja pequena",
+   "/blog/como-organizar-vitrine-de-loja/"
+  ],
+  [
+   "Como escolher um sistema de gestão",
+   "/guias/como-escolher-sistema-de-gestao/"
+  ],
+  [
+   "Como precificar um produto na loja",
+   "/blog/como-precificar-produto/"
+  ],
+  [
+   "Fluxo de caixa para loja pequena",
+   "/blog/fluxo-de-caixa-loja-pequena/"
+  ],
+  [
+   "Como controlar o caixa de uma loja",
+   "/guias/como-controlar-caixa-da-loja/"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/"
+  ],
+  [
+   "Como calcular o lucro de uma loja",
+   "/guias/como-calcular-lucro-da-loja/"
+  ],
+  [
+   "Troca e devolução na loja",
+   "/blog/troca-e-devolucao-na-loja/"
+  ],
+  [
+   "Meu sistema precisa mudar por causa da reforma tributária?",
+   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/"
+  ],
+  [
+   "Preciso instalar alguma coisa?",
+   "/perguntas/preciso-instalar/"
+  ],
+  [
+   "Comparativos",
+   "/comparativos/"
+  ],
+  [
+   "App de vendas e controle de estoque",
+   "/solucoes/sistema-de-estoque/"
+  ],
+  [
+   "Sistema para loja de calçados",
+   "/segmentos/loja-de-calcados/"
+  ]
+ ],
+ "publicado": "2026-09-07",
+ "updated": "2026-09-08"
+}

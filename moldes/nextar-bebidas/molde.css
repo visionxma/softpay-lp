@@ -1,0 +1,528 @@
+/* Molde nextar-bebidas: a página "loja de bebidas" do Nex (nextar.com.br/segmento/loja-de-bebidas, feita em Framer),
+   medida na captura renderizada de 03/11/2026 em 1440 e 390 (ferramentas/medidas.mjs). Duas camadas neste arquivo:
+   1. `.mx-nextar-bebidas` — a COMPOSIÇÃO da referência: casca de 1216 px, ordem, grades, tamanhos de letra e vãos
+      medidos. Tamanho fluido sai de clamp() com o valor do celular em 390 e o do computador em 1440, então nas duas
+      larguras da captura dá o número exato. É o que a prova (provar-molde.mjs) compara com a captura.
+   2. `.page-molde.mx-nextar-bebidas` — a página vestida: letra e cores do SoftPay e as regras da casa que vencem a
+      referência (hero cobre a tela, vãos ≤ 120/72 px, celular lado a lado sem trilho lateral, planos lado a lado com
+      a faixa do plano tocado, FAQ com 5 à vista, alvo de toque ≥ 44 px, revelar ao entrar). Nada daqui entra na prova.
+   Cores e letras moram em variáveis: o padrão (SoftPay) fica em :where() com peso zero, e o origem.css da prova troca
+   pelos valores do Nex sem disputar ordem.
+   Composição por largura: base = celular (a captura de 390); a partir de 48rem, a do computador (lado a lado). */
+
+:where(.mx-nextar-bebidas) {
+  --n-titulo: "SoftPay Display", system-ui, sans-serif;
+  --n-sans: "SoftPay Texto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --n-ls-h1: -0.0036em;
+  --n-ls-h2: 0.005em;
+  --n-ls-h3: 0.005em;
+  --n-ls-grande: 0.005em;
+  --n-tinta: #0a1a28;
+  --n-texto: #2b3b4a;
+  --n-cinza: #4d6072;
+  --n-lista: #4d6072;
+  --n-acao: #0c5c9e;
+  --n-acao-forte: #084a81;
+  --n-sobre-acao: #ffffff;
+  --n-olho: #0c5c9e;
+  --n-olho-verde: #067a4c;
+  --n-olho-laranja: #a34a07;
+  --n-fundo: #ffffff;
+  --n-lilas: #e8f3fb;
+  --n-creme: #fff4dc;
+  --n-painel-verde: #e2f2ea;
+  --n-linha: #dce5ec;
+  --n-noite: #06121f;
+  --n-cartao: #0f2133;
+  --n-fio-escuro: rgba(255, 255, 255, .14);
+  --n-sobre-escuro: #ffffff;
+  --n-resposta: #d3dde6;
+  --n-num-claro: #e8f3fb;
+  --n-num-azul: #0c5c9e;
+  --n-num-tinta: #0a1a28;
+  --n-margem: 24px;
+  --n-casca: 1216px;
+}
+
+/* ============================================================== 1. composição da referência ============ */
+.mx-nextar-bebidas .mxn {
+  font-family: var(--n-sans);
+  color: var(--n-texto);
+  background: var(--n-fundo);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-wrap: anywhere;
+}
+.mx-nextar-bebidas .mxn, .mx-nextar-bebidas .mxn *, .mx-nextar-bebidas .mxn *::before, .mx-nextar-bebidas .mxn *::after { box-sizing: border-box; }
+.mx-nextar-bebidas .mxn :where(h1, h2, h3, h4, p, ul, ol, li, figure, blockquote) { margin: 0; padding: 0; }
+.mx-nextar-bebidas .mxn :where(ul, ol) { list-style: none; }
+.mx-nextar-bebidas .mxn img { display: block; max-width: 100%; height: auto; }
+.mx-nextar-bebidas .mxn-casca { width: 100%; max-width: calc(var(--n-casca) + 2 * var(--n-margem)); margin-inline: auto; padding-inline: var(--n-margem); }
+.mx-nextar-bebidas .mxn-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.mx-nextar-bebidas .mxn-quadro { display: block; }
+.mx-nextar-bebidas .mxn-quadro img { width: 100%; }
+
+/* botões do Nex: pílula de 56 px, 0 32 de recheio, letra 16/600 */
+.mx-nextar-bebidas .mxn-botao {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  min-height: 56px; padding: 0 32px; border-radius: 999px;
+  font: 600 16px/24px var(--n-sans); text-decoration: none; white-space: nowrap; cursor: pointer;
+  border: 1px solid transparent; background: transparent; color: inherit;
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .15s ease;
+}
+.mx-nextar-bebidas .mxn-botao svg { width: 20px; height: 20px; flex: none; }
+.mx-nextar-bebidas .mxn-botao--cheio { background: var(--n-acao); color: var(--n-sobre-acao); }
+.mx-nextar-bebidas .mxn-botao--contorno { border-color: var(--n-tinta); color: var(--n-tinta); gap: 40px; }
+.mx-nextar-bebidas .mxn-botao--contorno .mxn-botao__seta { width: 18px; height: 18px; }
+.mx-nextar-bebidas .mxn-botao--branco { border-color: var(--n-sobre-escuro); color: var(--n-sobre-escuro); }
+.mx-nextar-bebidas .mxn-botao--escuro { border-color: var(--n-fio-escuro); color: var(--n-sobre-escuro); }
+.mx-nextar-bebidas .mxn-botao--claro { background: #ffffff; color: var(--n-num-azul); }
+.mx-nextar-bebidas .mxn-botao:active { transform: scale(.98); }
+.mx-nextar-bebidas .mxn a:focus-visible, .mx-nextar-bebidas .mxn button:focus-visible,
+.mx-nextar-bebidas .mxn summary:focus-visible { outline: 2px solid var(--n-acao); outline-offset: 3px; }
+
+/* títulos (estilos do Framer: h2 42/1.3 no computador, 28/1.3 no celular; olho 20/1.5 600) */
+.mx-nextar-bebidas .mxn-olho { font: 600 20px/30px var(--n-sans); color: var(--n-olho); }
+.mx-nextar-bebidas .mxn-olho--verde { color: var(--n-olho-verde); }
+.mx-nextar-bebidas .mxn-olho--laranja { color: var(--n-olho-laranja); }
+.mx-nextar-bebidas .mxn-titulo {
+  font-family: var(--n-titulo); font-weight: 700; font-size: clamp(28px, 22.8px + 1.3333vw, 42px); line-height: 1.3;
+  letter-spacing: var(--n-ls-h2); color: var(--n-tinta);
+}
+
+/* ---------------------------------------------------------------------------------------------- hero */
+/* celular: título, texto, imagem, rótulo, botão, nota e a janela da lista, tudo centrado (o texto e a lista são
+   `display: contents` para a ordem do celular sair da mesma marcação do computador) */
+.mx-nextar-bebidas .mxn-hero { padding-block: 80px 128px; }
+.mx-nextar-bebidas .mxn-hero__grade { display: flex; flex-direction: column; align-items: stretch; text-align: center; }
+.mx-nextar-bebidas .mxn-hero__texto, .mx-nextar-bebidas .mxn-hero__rec { display: contents; }
+.mx-nextar-bebidas .mxn-trilha { order: 0; }
+.mx-nextar-bebidas .mxn-h1 {
+  order: 1; font-family: var(--n-titulo); font-weight: 700; font-size: clamp(28px, 22.8px + 1.3333vw, 42px); line-height: 1.3;
+  letter-spacing: var(--n-ls-h1); color: var(--n-tinta);
+}
+.mx-nextar-bebidas .mxn-hero__intro { order: 2; margin-top: 16px; font: 500 20px/30px var(--n-sans); color: var(--n-texto); }
+.mx-nextar-bebidas .mxn-hero__arte { order: 3; margin-top: 12px; }
+.mx-nextar-bebidas .mxn-hero__rotulo { order: 4; margin-top: 16px; font: 600 12px/18px var(--n-sans); color: var(--n-cinza); }
+.mx-nextar-bebidas .mxn-hero__botoes { order: 5; margin-top: 40px; display: flex; }
+.mx-nextar-bebidas .mxn-hero__botoes .mxn-botao { flex: 1 1 auto; }
+.mx-nextar-bebidas .mxn-hero__nota { order: 6; margin-top: 15px; font: 400 12px/18px var(--n-sans); color: var(--n-texto); }
+.mx-nextar-bebidas .mxn-hero__planos { font-weight: 700; }
+.mx-nextar-bebidas .mxn-hero__planos strong { font-weight: inherit; }
+.mx-nextar-bebidas .mxn-hero__celular { font-size: 14px; line-height: 21px; letter-spacing: -0.02em; }
+.mx-nextar-bebidas .mxn-hero__cols { order: 7; margin-top: 28px; display: flex; justify-content: center; }
+.mx-nextar-bebidas .mxn-hero__cols ul { display: grid; gap: 8px; padding: 8px 24px; border-right: 1px solid var(--n-linha); }
+.mx-nextar-bebidas .mxn-hero__cols ul:first-child { padding-left: 0; }
+.mx-nextar-bebidas .mxn-hero__cols ul:last-child { border-right: 0; padding-right: 0; }
+.mx-nextar-bebidas .mxn-hero__cols li { font: 400 16px/24px var(--n-sans); color: var(--n-lista); }
+.mx-nextar-bebidas .mxn-hero__cols a { color: inherit; text-decoration: none; }
+
+/* na referência, o celular mostra só a nota curta e uma janela de 2 itens da lista (o fim dela) */
+@media (max-width: 47.99rem) {
+  .mx-nextar-bebidas .mxn--origem .mxn-hero__planos, .mx-nextar-bebidas .mxn--origem .mxn-hero__sem { display: none; }
+  .mx-nextar-bebidas .mxn--origem .mxn-hero__cols ul:first-child,
+  .mx-nextar-bebidas .mxn--origem .mxn-hero__cols ul:last-child li:first-child { display: none; }
+  .mx-nextar-bebidas .mxn--origem .mxn-hero__cols ul { padding: 0; border: 0; }
+}
+.mx-nextar-bebidas .mxn-hero__celular { display: none; }
+@media (max-width: 47.99rem) { .mx-nextar-bebidas .mxn--origem .mxn-hero__celular { display: block; } }
+
+/* -------------------------------------------------------------------- vitrines (faixa centrada + print) */
+.mx-nextar-bebidas .mxn-vitrine { padding-block: 128px; }
+.mx-nextar-bebidas .mxn-vitrine--lilas { background: var(--n-lilas); }
+.mx-nextar-bebidas .mxn-vitrine--fio { border-bottom: 1px solid var(--n-linha); }
+.mx-nextar-bebidas .mxn-vitrine .mxn-casca { display: flex; flex-direction: column; }
+.mx-nextar-bebidas .mxn-vitrine__cab { text-align: center; margin-top: 56px; }
+.mx-nextar-bebidas .mxn-vitrine__arte { order: -1; }
+.mx-nextar-bebidas .mxn-vitrine__cab .mxn-titulo { margin-top: 8px; }
+.mx-nextar-bebidas .mxn-vitrine__corpo { margin-top: 16px; font: 400 18px/27px var(--n-sans); }
+.mx-nextar-bebidas .mxn-vitrine__corpo p + p { margin-top: 12px; }
+.mx-nextar-bebidas .mxn-vitrine__img img { border-radius: 8px; }
+
+/* ------------------------------------------------------------------------ linhas (texto | imagem) */
+.mx-nextar-bebidas .mxn-linha { padding-block: 128px; }
+.mx-nextar-bebidas .mxn-linha--fio { border-bottom: 1px solid var(--n-linha); }
+.mx-nextar-bebidas .mxn-linha__grade { display: flex; flex-direction: column; }
+.mx-nextar-bebidas .mxn-linha__arte { order: -1; }
+.mx-nextar-bebidas .mxn-linha__texto { margin-top: 32px; text-align: center; }
+.mx-nextar-bebidas .mxn-linha__texto .mxn-titulo { margin-top: 8px; }
+.mx-nextar-bebidas .mxn-linha__corpo { margin-top: 15px; font: 400 16px/24px var(--n-sans); }
+.mx-nextar-bebidas .mxn-linha__corpo p + p, .mx-nextar-bebidas .mxn-linha__corpo ul + p { margin-top: 12px; }
+.mx-nextar-bebidas .mxn-linha__botao { margin-top: 32px; }
+.mx-nextar-bebidas .mxn--origem .mxn-linha--pequena .mxn-linha__arte { width: 171px; margin-inline: auto; }
+
+/* ------------------------------------------------------- outros recursos (faixa creme: título | recursos) */
+.mx-nextar-bebidas .mxn-outros { background: var(--n-creme); padding-block: 128px; }
+.mx-nextar-bebidas .mxn-outros__grade { display: grid; grid-template-columns: minmax(0, 1fr); gap: 56px; }
+.mx-nextar-bebidas .mxn-outros__cab { text-align: center; }
+.mx-nextar-bebidas .mxn-outros__cab .mxn-titulo { margin-top: 8px; }
+.mx-nextar-bebidas .mxn-titulo--grande { font-size: clamp(28px, 18.34px + 2.4762vw, 54px); line-height: 1.2; letter-spacing: var(--n-ls-grande); }
+.mx-nextar-bebidas .mxn-outros__botao { margin-top: 32px; }
+.mx-nextar-bebidas .mxn-outros__lista { display: grid; gap: 26px; }
+.mx-nextar-bebidas .mxn-recurso { text-align: center; }
+.mx-nextar-bebidas .mxn-recurso__ico { display: block; width: 56px; height: 56px; margin-inline: auto; }
+.mx-nextar-bebidas .mxn-recurso__ico img { width: 56px; height: 56px; }
+.mx-nextar-bebidas .mxn-recurso__titulo {
+  margin-top: 24px; font-family: var(--n-titulo); font-weight: 600; font-size: clamp(24px, 22.51px + .381vw, 28px); line-height: 1.5;
+  letter-spacing: var(--n-ls-h3); color: var(--n-tinta);
+}
+.mx-nextar-bebidas .mxn-recurso__texto { margin-top: 8px; font: 400 16px/24px var(--n-sans); }
+
+/* --------------------------------------------------- página preta: FAQ em cartão escuro + depoimento */
+.mx-nextar-bebidas .mxn-noite { background: var(--n-noite); color: var(--n-sobre-escuro); padding-top: 72px; }
+.mx-nextar-bebidas .mxn-faq__cartao { background: var(--n-cartao); border-radius: 24px; padding: 48px 24px 44px; }
+.mx-nextar-bebidas .mxn-faq__titulo {
+  font-family: var(--n-titulo); font-weight: 700; font-size: clamp(28px, 22.8px + 1.3333vw, 42px); line-height: 1.3;
+  letter-spacing: var(--n-ls-h2); color: var(--n-sobre-escuro); margin-bottom: 28px;
+}
+.mx-nextar-bebidas .mxn-faq__item + .mxn-faq__item { border-top: 1px solid var(--n-fio-escuro); }
+.mx-nextar-bebidas .mxn-faq__item summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 0; padding: 28px 0; /* a referência encosta o h3 no ícone: h3 = conteúdo − 24 (270 em 390, 1144 em 1440) */ cursor: pointer; list-style: none;
+}
+.mx-nextar-bebidas .mxn-faq__item summary::-webkit-details-marker { display: none; }
+.mx-nextar-bebidas .mxn-faq__item[open] summary { padding-bottom: 16px; }
+.mx-nextar-bebidas .mxn-faq__q { font: 600 18px/27px var(--n-sans); color: var(--n-sobre-escuro); }
+.mx-nextar-bebidas .mxn-faq__ico { width: 24px; height: 24px; flex: none; color: var(--n-sobre-escuro); }
+.mx-nextar-bebidas .mxn-faq__v { transform-origin: 12px 12px; transition: transform .25s cubic-bezier(.22, 1, .36, 1); }
+.mx-nextar-bebidas .mxn-faq__item[open] .mxn-faq__v { transform: scaleY(0); }
+.mx-nextar-bebidas .mxn-faq__a { padding-bottom: 28px; font: 400 14px/21px var(--n-sans); color: var(--n-resposta); }
+.mx-nextar-bebidas .mxn-faq__a p + p { margin-top: 20px; }
+.mx-nextar-bebidas .mxn-faq__a a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.mx-nextar-bebidas .mxn-faq__mais { display: flex; justify-content: center; margin-top: 24px; }
+
+.mx-nextar-bebidas .mxn-depo { padding-block: 104px 72px; }
+.mx-nextar-bebidas .mxn-depo__caixa { margin: 0; display: grid; grid-template-columns: minmax(0, 1fr); justify-items: center; text-align: center; }
+.mx-nextar-bebidas .mxn-depo__foto { position: relative; width: 205px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; }
+.mx-nextar-bebidas .mxn-depo__img, .mx-nextar-bebidas .mxn-depo__img img { width: 100%; height: 100%; object-fit: cover; }
+.mx-nextar-bebidas .mxn-depo__texto { margin-top: 32px; display: grid; justify-items: center; }
+.mx-nextar-bebidas .mxn-depo__frase p {
+  font-family: var(--n-titulo); font-weight: 700; font-size: clamp(32px, 23.83px + 2.0952vw, 54px); line-height: 1.2;
+  letter-spacing: var(--n-ls-grande); color: var(--n-sobre-escuro);
+}
+.mx-nextar-bebidas .mxn-depo figcaption { margin-top: 56px; }
+.mx-nextar-bebidas .mxn-depo__nome { font: 600 20px/30px var(--n-sans); color: var(--n-sobre-escuro); }
+.mx-nextar-bebidas .mxn-depo__onde { font: 400 14px/21px var(--n-sans); color: var(--n-resposta); }
+.mx-nextar-bebidas .mxn-depo__botao { margin-top: 32px; }
+
+/* ------------------------------------------- cartão partido: números (azul-claro) | fale com a gente (azul) */
+.mx-nextar-bebidas .mxn-numeros { background: linear-gradient(180deg, var(--n-noite) 0 455px, var(--n-fundo) 455px); padding-bottom: 128px; }
+.mx-nextar-bebidas .mxn-numeros__cartao { display: grid; grid-template-columns: minmax(0, 1fr); border-radius: 16px; overflow: hidden; }
+.mx-nextar-bebidas .mxn-numeros__claro, .mx-nextar-bebidas .mxn-numeros__azul {
+  display: grid; grid-template-columns: minmax(0, 1fr); align-content: center; padding: 56px; min-height: 650px;
+}
+.mx-nextar-bebidas .mxn-numeros__claro { background: var(--n-num-claro); color: var(--n-num-tinta); text-align: center; }
+.mx-nextar-bebidas .mxn-numeros__azul { background: var(--n-num-azul); color: var(--n-sobre-escuro); min-height: 646px; }
+.mx-nextar-bebidas .mxn-numeros__lista { display: grid; gap: 32px; }
+.mx-nextar-bebidas .mxn-numero__valor {
+  font-family: var(--n-titulo); font-weight: 700; font-size: 64px; line-height: 1.2; letter-spacing: var(--n-ls-grande); color: var(--n-num-tinta);
+}
+.mx-nextar-bebidas .mxn-numero__valor small { font-size: .4em; letter-spacing: 0; }
+.mx-nextar-bebidas .mxn-numero__rotulo { font: 400 16px/24px var(--n-sans); }
+.mx-nextar-bebidas .mxn-numeros__h2 {
+  font-family: var(--n-titulo); font-weight: 600; font-size: 28px; line-height: 1.5; letter-spacing: var(--n-ls-h3);
+}
+.mx-nextar-bebidas .mxn-contato { display: grid; gap: 32px; margin-top: 40px; }
+.mx-nextar-bebidas .mxn-contato__item a {
+  display: grid; grid-template-columns: 20px minmax(0, 1fr); column-gap: 9px; row-gap: 8px; align-items: center;
+  color: var(--n-sobre-escuro); text-decoration: none;
+}
+.mx-nextar-bebidas .mxn-contato__ico { width: 20px; height: 20px; display: grid; }
+.mx-nextar-bebidas .mxn-contato__ico svg { width: 20px; height: 20px; }
+.mx-nextar-bebidas .mxn-contato__titulo { font: 600 18px/27px var(--n-sans); }
+.mx-nextar-bebidas .mxn-contato__sub { grid-column: 2; font: 400 12px/18px var(--n-sans); }
+
+/* ================================================== computador (a partir de 48rem): lado a lado ====== */
+@media (min-width: 48rem) {
+  /* hero: texto | aparelhos (602 | 602 com 12 de vão), texto centrado na altura da imagem; recursos embaixo */
+  .mx-nextar-bebidas .mxn-hero { padding-block: 56px 128px; }
+  .mx-nextar-bebidas .mxn-hero__grade {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 12px; text-align: left; align-items: center;
+  }
+  .mx-nextar-bebidas .mxn-hero__texto { display: block; grid-column: 1; grid-row: 1; }
+  .mx-nextar-bebidas .mxn-hero__arte { grid-column: 2; grid-row: 1; margin-top: 0; }
+  .mx-nextar-bebidas .mxn-hero__rec { display: block; grid-column: 1 / -1; grid-row: 2; margin-top: 16px; }
+  .mx-nextar-bebidas .mxn-hero__botoes { margin-top: 32px; }
+  .mx-nextar-bebidas .mxn-hero__botoes .mxn-botao { flex: 0 0 auto; }
+  .mx-nextar-bebidas .mxn-hero__nota { margin-top: 16px; }
+  .mx-nextar-bebidas .mxn-hero__rotulo { margin-top: 0; }
+  .mx-nextar-bebidas .mxn-hero__cols { margin-top: 24px; justify-content: flex-start; }
+  .mx-nextar-bebidas .mxn-hero__cols ul:last-child { border-right: 1px solid var(--n-linha); padding-right: 24px; }
+
+  /* vitrines: cabeçalho centrado em cima (730 px na lilás), print grande embaixo */
+  .mx-nextar-bebidas .mxn-vitrine__arte { order: 0; margin-top: 56px; }
+  .mx-nextar-bebidas .mxn-vitrine__cab { margin-top: 0; width: 100%; max-width: 730px; margin-inline: auto; }
+  .mx-nextar-bebidas .mxn-vitrine--larga .mxn-vitrine__cab { max-width: none; }
+
+  /* linhas: texto | imagem de 592, 32 de vão; a invertida põe a imagem à esquerda */
+  .mx-nextar-bebidas .mxn-linha__grade { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; align-items: center; }
+  .mx-nextar-bebidas .mxn-linha__arte { order: 0; grid-column: 2; grid-row: 1; }
+  .mx-nextar-bebidas .mxn-linha__texto { grid-column: 1; grid-row: 1; margin-top: 0; text-align: left; }
+  .mx-nextar-bebidas .mxn-linha--inversa .mxn-linha__arte { grid-column: 1; }
+  .mx-nextar-bebidas .mxn-linha--inversa .mxn-linha__texto { grid-column: 2; }
+  .mx-nextar-bebidas .mxn--origem .mxn-linha--pequena .mxn-linha__arte { width: auto; margin-inline: 0; }
+
+  /* outros: título grande e botão | recursos com ícone, alinhados à esquerda */
+  .mx-nextar-bebidas .mxn-outros__grade { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; align-items: start; }
+  .mx-nextar-bebidas .mxn-outros__cab, .mx-nextar-bebidas .mxn-recurso { text-align: left; }
+  .mx-nextar-bebidas .mxn-titulo--grande { line-height: 1.2; }
+  .mx-nextar-bebidas .mxn-recurso__ico { margin-inline: 0; }
+
+  /* depoimento: foto redonda de 592 | frase, nome e botão centrados */
+  .mx-nextar-bebidas .mxn-depo__caixa { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 32px; align-items: center; }
+  .mx-nextar-bebidas .mxn-depo__foto { width: 100%; }
+  .mx-nextar-bebidas .mxn-depo__texto { margin-top: 0; }
+
+  /* números: as duas metades lado a lado, o preto acaba em 319 px do cartão */
+  .mx-nextar-bebidas .mxn-numeros { background: linear-gradient(180deg, var(--n-noite) 0 319px, var(--n-fundo) 319px); }
+  .mx-nextar-bebidas .mxn-numeros__cartao { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-radius: 24px; }
+  .mx-nextar-bebidas .mxn-numeros__claro, .mx-nextar-bebidas .mxn-numeros__azul { min-height: 651px; padding: 56px; }
+}
+
+/* na captura tudo já está à vista; a revelação só existe na página vestida, depois que o molde.js roda */
+
+/* ================================================================== 2. página vestida (SoftPay) ===== */
+.page-molde.mx-nextar-bebidas .mxn { color: var(--n-texto); }
+.page-molde.mx-nextar-bebidas .mxn :is(h1, h2, h3) { text-wrap: balance; }
+.page-molde.mx-nextar-bebidas .mxn p { text-wrap: pretty; }
+.page-molde.mx-nextar-bebidas .mxn-botao--cheio:hover { background: var(--n-acao-forte); }
+@media (hover: hover) and (pointer: fine) {
+  .page-molde.mx-nextar-bebidas .mxn-botao--contorno:hover { background: var(--n-tinta); color: #ffffff; }
+  .page-molde.mx-nextar-bebidas .mxn-botao--contorno:hover .mxn-botao__seta { transform: translateX(4px); }
+  .page-molde.mx-nextar-bebidas .mxn-botao--branco:hover, .page-molde.mx-nextar-bebidas .mxn-botao--escuro:hover { background: rgba(255, 255, 255, .1); }
+  .page-molde.mx-nextar-bebidas .mxn-botao--claro:hover { background: var(--n-lilas); }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols a:hover, .page-molde.mx-nextar-bebidas .mxn-rel__lista a:hover strong { color: var(--n-acao); }
+  .page-molde.mx-nextar-bebidas .mxn-contato__item a:hover .mxn-contato__titulo { text-decoration: underline; text-underline-offset: 3px; }
+}
+.page-molde.mx-nextar-bebidas .mxn-botao__seta { transition: transform .2s cubic-bezier(.22, 1, .36, 1); }
+
+/* hero: cobre a tela inteira abaixo do cabeçalho fixo do chassi (84 px); a sobra se divide entre os vãos */
+.page-molde.mx-nextar-bebidas .mxn-hero {
+  min-height: 100svh; display: grid; align-content: center;
+  padding-block: calc(84px + clamp(16px, 4px + 2.5vw, 48px)) clamp(32px, 16px + 3vw, 72px);
+  background: linear-gradient(180deg, var(--n-fundo) 0%, var(--n-lilas) 100%);
+}
+.page-molde.mx-nextar-bebidas .mxn-trilha {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0 8px; margin-bottom: 12px;
+  font: 500 14px/1.4 var(--n-sans); color: var(--n-cinza);
+}
+.page-molde.mx-nextar-bebidas .mxn-trilha a { color: var(--n-cinza); text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; }
+.page-molde.mx-nextar-bebidas .mxn-trilha [aria-current] { color: var(--n-tinta); font-weight: 600; }
+.page-molde.mx-nextar-bebidas .mxn-h1 { line-height: 1.12; }
+.page-molde.mx-nextar-bebidas .mxn-hero__intro { font-weight: 400; font-size: clamp(17px, 15.9px + .29vw, 20px); line-height: 1.5; }
+.page-molde.mx-nextar-bebidas .mxn-hero__img img { filter: drop-shadow(0 24px 32px rgba(6, 18, 31, .16)); }
+.page-molde.mx-nextar-bebidas .mxn-hero__nota { font-size: 14px; line-height: 21px; color: var(--n-cinza); }
+.page-molde.mx-nextar-bebidas .mxn-hero__planos { color: var(--n-tinta); }
+.page-molde.mx-nextar-bebidas .mxn-hero__rotulo { font-size: 14px; line-height: 21px; }
+/* celular: os 6 recursos em 2 colunas de 3, links com alvo de 44 px */
+.page-molde.mx-nextar-bebidas .mxn-hero__cols { margin-top: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.page-molde.mx-nextar-bebidas .mxn-hero__cols ul { gap: 0; padding: 0 12px; }
+.page-molde.mx-nextar-bebidas .mxn-hero__cols ul:first-child { padding-left: 0; }
+.page-molde.mx-nextar-bebidas .mxn-hero__cols ul:last-child { padding-right: 0; }
+.page-molde.mx-nextar-bebidas .mxn-hero__cols li { color: var(--n-lista); font-size: 15px; line-height: 20px; }
+.page-molde.mx-nextar-bebidas .mxn-hero__cols a { display: flex; align-items: center; justify-content: center; min-height: 44px; text-decoration: underline; text-decoration-color: var(--n-linha); text-underline-offset: 4px; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-nextar-bebidas .mxn-hero__botoes { margin-top: 20px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__nota { margin-top: 10px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__rotulo { order: 6; margin-top: 20px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__nota { order: 5; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__botoes { order: 4; }
+  /* a hero inteira na primeira tela do celular (945 px numa tela de 844, medição de 03/11, 16:46): o respiro de cima
+     é a altura do menu (não os 84 px do cabeçalho antigo), os 6 recursos ficam em 3 colunas de 2 linhas (88 px em vez
+     de 132) e a arte encolhe pela altura da tela, como manda a doutrina para tela baixa */
+  .page-molde.mx-nextar-bebidas .mxn-hero { padding-block: calc(var(--nav-h, 4.5rem) + 4px) 16px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 8px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols ul { display: contents; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols li { font-size: 14px; line-height: 19px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__arte img { width: auto; max-width: 100%; max-height: 26svh; margin-inline: auto; }
+}
+@media (min-width: 48rem) {
+  .page-molde.mx-nextar-bebidas .mxn-trilha { justify-content: flex-start; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__grade { column-gap: clamp(24px, 3vw, 48px); }
+  .page-molde.mx-nextar-bebidas .mxn-h1 { font-size: clamp(34px, 18px + 2.4vw, 56px); }
+  .page-molde.mx-nextar-bebidas .mxn-hero__rec { margin-top: clamp(24px, 3vw, 40px); }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols { display: flex; flex-wrap: wrap; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols ul { display: flex; flex-wrap: wrap; column-gap: 24px; padding: 0 24px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols ul:last-child { border-right: 0; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols li { font-size: 16px; line-height: 24px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols a { justify-content: flex-start; }
+  /* a sobra dos 100svh se divide IGUAL entre os vãos (doutrina: stretch no herói + space-evenly na grade; teto 120):
+     centrado, ela ia toda para cima e para baixo (151 e 139 px em 1440, medição de 03/11). Padding mínimo e
+     row-gap seguram um respiro quando não sobra nada (tablet baixo). */
+  .page-molde.mx-nextar-bebidas .mxn-hero { align-content: stretch; padding-block: calc(84px + 16px) 16px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__grade { align-content: space-evenly; row-gap: 24px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__rec { margin-top: 0; }
+}
+@media (min-width: 48rem) and (min-height: 820px) {
+  /* tela alta: os recursos voltam às 2 colunas de 3 linhas da origem e o título cresce com a altura; em fileira única
+     sobravam 129 px acima do texto em 1440×900 (medição de 03/11, 16:07; teto 120) */
+  .page-molde.mx-nextar-bebidas .mxn-hero__cols ul { flex-direction: column; flex-wrap: nowrap; }
+  .page-molde.mx-nextar-bebidas .mxn-h1 { font-size: clamp(34px, max(18px + 2.4vw, 6.6svh), 64px); }
+}
+@media (min-width: 48rem) and (max-width: 79.99rem) and (max-aspect-ratio: 6/5) {
+  /* tela em pé (doutrina: proporção abaixo de 6/5 usa a composição do tablet, print na largura toda, nunca duas
+     colunas). Lado a lado a arte ficava com 280 px e sobravam vãos de 102/89/81 em 768×1024 e de 245 em 1024×1366
+     (medição de 03/11, 17:20); só crescer o título não bastava em 820×1180 (126). Empilhada: 41/29/28/20 em 768 */
+  .page-molde.mx-nextar-bebidas .mxn-hero__grade { grid-template-columns: minmax(0, 1fr); }
+  .page-molde.mx-nextar-bebidas .mxn-hero__arte { grid-column: 1; grid-row: 2; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__rec { grid-row: 3; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__arte img { width: auto; max-width: 100%; max-height: 30svh; margin-inline: auto; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__intro { max-width: 40rem; }
+  .page-molde.mx-nextar-bebidas .mxn-h1 { font-size: clamp(34px, 6.6svh, 80px); }
+}
+
+/* vãos da casa: até 72 px no celular, até 120 no computador (a referência usa 128) */
+.page-molde.mx-nextar-bebidas :is(.mxn-vitrine, .mxn-linha, .mxn-outros) { padding-block: clamp(48px, 13.4px + 7.4vw, 112px); }
+.page-molde.mx-nextar-bebidas .mxn-vitrine__cab { margin-top: clamp(24px, 16px + 2.2vw, 56px); }
+.page-molde.mx-nextar-bebidas .mxn-vitrine__img img, .page-molde.mx-nextar-bebidas .mxn-linha__img img { border-radius: 12px; box-shadow: 0 24px 60px -32px rgba(6, 18, 31, .45); }
+.page-molde.mx-nextar-bebidas .mxn-linha__texto { margin-top: 24px; }
+.page-molde.mx-nextar-bebidas .mxn-linha__botao { margin-top: 24px; }
+.page-molde.mx-nextar-bebidas .mxn-vitrine__corpo { font-size: clamp(16px, 15.3px + .19vw, 18px); line-height: 1.55; max-width: 66ch; margin-inline: auto; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-nextar-bebidas :is(.mxn-vitrine__cab, .mxn-linha__texto, .mxn-outros__cab) .mxn-olho { font-size: 16px; line-height: 24px; }
+  .page-molde.mx-nextar-bebidas .mxn-vitrine__corpo { text-align: left; }
+  .page-molde.mx-nextar-bebidas .mxn-linha__texto { text-align: left; }
+  .page-molde.mx-nextar-bebidas :is(.mxn-vitrine__cab, .mxn-linha__texto) :is(.mxn-olho, .mxn-titulo) { text-align: center; }
+  .page-molde.mx-nextar-bebidas .mxn-linha__botao { display: flex; justify-content: center; }
+}
+
+/* listas da rota: perguntas (2 colunas a partir do tablet) e problemas/limites com marcador */
+.page-molde.mx-nextar-bebidas .mxn-perguntas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; text-align: left; }
+.page-molde.mx-nextar-bebidas .mxn-perguntas li {
+  padding: 12px 16px; border: 1px solid var(--n-linha); border-radius: 12px; background: var(--n-fundo);
+  font-size: 16px; line-height: 1.45; color: var(--n-tinta);
+}
+@media (min-width: 37.5rem) { .page-molde.mx-nextar-bebidas .mxn-perguntas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64rem) { .page-molde.mx-nextar-bebidas .mxn-perguntas { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.page-molde.mx-nextar-bebidas .mxn-vitrine--fio .mxn-vitrine__cab { max-width: none; }
+.page-molde.mx-nextar-bebidas .mxn-vitrine--fio .mxn-vitrine__corpo { max-width: none; }
+.page-molde.mx-nextar-bebidas .mxn-lista { display: grid; gap: 10px; }
+.page-molde.mx-nextar-bebidas .mxn-lista li { position: relative; padding-left: 22px; }
+.page-molde.mx-nextar-bebidas .mxn-lista li::before {
+  content: ""; position: absolute; left: 2px; top: .62em; width: 8px; height: 8px; border-radius: 50%; background: var(--n-acao);
+}
+.page-molde.mx-nextar-bebidas .mxn-linha--inversa .mxn-lista li::before { background: var(--n-olho-verde); }
+.page-molde.mx-nextar-bebidas .mxn-lista strong { color: var(--n-tinta); }
+
+/* combos → "o que o SoftPay não faz": painel verde com o financeiro no tablet, em pé */
+.page-molde.mx-nextar-bebidas .mxn-linha--painel .mxn-linha__arte {
+  background: var(--n-painel-verde); border-radius: 16px; padding: clamp(20px, 3vw, 40px); display: grid; place-items: center;
+}
+.page-molde.mx-nextar-bebidas .mxn-linha--painel .mxn-linha__img { width: min(100%, 300px); }
+.page-molde.mx-nextar-bebidas .mxn-linha--painel .mxn-linha__img img { border-radius: 16px; aspect-ratio: 1268 / 1690; object-fit: contain; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-nextar-bebidas .mxn-linha--painel .mxn-linha__img { width: min(100%, 220px); }
+}
+
+/* outros recursos: celular com o ícone ao lado do texto (parágrafos longos), computador como a referência */
+.page-molde.mx-nextar-bebidas .mxn-outros__lista { gap: 20px; }
+.page-molde.mx-nextar-bebidas .mxn-recurso { scroll-margin-top: 100px; }
+.page-molde.mx-nextar-bebidas .mxn-recurso__titulo { font-size: clamp(20px, 17.8px + .57vw, 26px); line-height: 1.3; }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-nextar-bebidas .mxn-outros__grade { gap: 32px; }
+  .page-molde.mx-nextar-bebidas .mxn-recurso {
+    display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 14px; text-align: left; align-items: start;
+  }
+  .page-molde.mx-nextar-bebidas .mxn-recurso__ico { width: 48px; height: 48px; grid-row: 1 / span 2; margin: 0; }
+  .page-molde.mx-nextar-bebidas .mxn-recurso__titulo { margin-top: 0; }
+  .page-molde.mx-nextar-bebidas .mxn-recurso__texto { margin-top: 4px; }
+}
+@media (min-width: 48rem) {
+  .page-molde.mx-nextar-bebidas .mxn-outros__cab { position: sticky; top: 112px; }
+  .page-molde.mx-nextar-bebidas .mxn-recurso { display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 20px; }
+  .page-molde.mx-nextar-bebidas .mxn-recurso__ico { grid-row: 1 / span 2; }
+  .page-molde.mx-nextar-bebidas .mxn-recurso__titulo { margin-top: 4px; }
+}
+
+/* página preta: vãos da casa */
+.page-molde.mx-nextar-bebidas .mxn-noite { padding-top: clamp(40px, 26px + 3.6vw, 72px); }
+.page-molde.mx-nextar-bebidas .mxn-faq__cartao { padding: clamp(28px, 22px + 1.6vw, 48px) clamp(20px, 16px + 1.2vw, 32px) clamp(24px, 18px + 1.6vw, 44px); }
+.page-molde.mx-nextar-bebidas .mxn-faq__item summary { padding-block: 20px; min-height: 44px; }
+.page-molde.mx-nextar-bebidas .mxn-faq__item[open] summary { padding-bottom: 12px; }
+.page-molde.mx-nextar-bebidas .mxn-faq__a { font-size: 16px; line-height: 1.55; padding-bottom: 22px; }
+.page-molde.mx-nextar-bebidas .mxn-faq__a p + p { margin-top: 12px; }
+.page-molde.mx-nextar-bebidas .mxn-faq__q { font-size: clamp(16px, 15.3px + .19vw, 18px); line-height: 1.45; }
+.page-molde.mx-nextar-bebidas .mxn-faq.is-recolhido .mxn-faq__extra { display: none; }
+.page-molde.mx-nextar-bebidas .mxn-faq__mais[hidden] { display: none; }
+.page-molde.mx-nextar-bebidas .mxn-depo { padding-block: clamp(48px, 30px + 4.6vw, 104px) clamp(48px, 40px + 2vw, 72px); }
+.page-molde.mx-nextar-bebidas .mxn-depo__foto { width: clamp(180px, 40vw, 205px); background: var(--n-cartao); }
+.page-molde.mx-nextar-bebidas .mxn-depo__caixa.is-video .mxn-depo__foto { border-radius: 24px; width: 100%; aspect-ratio: 9 / 16; max-width: 360px; }
+.page-molde.mx-nextar-bebidas .mxn-depo__caixa.is-video .mxn-depo__img { display: none; }
+.page-molde.mx-nextar-bebidas .mxn-depo__video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.page-molde.mx-nextar-bebidas .mxn-depo__video[hidden] { display: none; }
+.page-molde.mx-nextar-bebidas .mxn-depo__frase p { font-size: clamp(28px, 20.6px + 1.9vw, 48px); line-height: 1.15; }
+.page-molde.mx-nextar-bebidas .mxn-depo figcaption { margin-top: clamp(24px, 16px + 2.2vw, 48px); }
+@media (min-width: 48rem) {
+  .page-molde.mx-nextar-bebidas .mxn-depo__foto { width: min(100%, 440px); justify-self: center; }
+  .page-molde.mx-nextar-bebidas .mxn-depo__caixa.is-video .mxn-depo__foto { width: min(100%, 360px); }
+}
+
+/* planos + fale com a gente: os 3 planos lado a lado em toda largura e a faixa do plano tocado */
+.page-molde.mx-nextar-bebidas .mxn-numeros { padding-bottom: clamp(48px, 13.4px + 7.4vw, 112px); background: linear-gradient(180deg, var(--n-noite) 0 120px, var(--n-fundo) 120px); }
+.page-molde.mx-nextar-bebidas .mxn-numeros__claro, .page-molde.mx-nextar-bebidas .mxn-numeros__azul {
+  min-height: 0; padding: clamp(28px, 18px + 2.6vw, 56px) clamp(16px, 4px + 3.2vw, 56px); gap: 0; align-content: center;
+}
+.page-molde.mx-nextar-bebidas .mxn-numeros__claro { text-align: left; }
+.page-molde.mx-nextar-bebidas .mxn-numeros__h2 { font-size: clamp(22px, 19px + .76vw, 28px); line-height: 1.3; }
+.page-molde.mx-nextar-bebidas .mxn-numeros__claro .mxn-numeros__h2 { color: var(--n-tinta); }
+.page-molde.mx-nextar-bebidas .mxn-numeros__sub { margin-top: 12px; font-size: 15px; line-height: 1.5; }
+.page-molde.mx-nextar-bebidas .mxn-numeros__sub a { color: inherit; font-weight: 600; }
+.page-molde.mx-nextar-bebidas .mxn-numeros__azul .mxn-numeros__sub { color: #e6f0f8; }
+.page-molde.mx-nextar-bebidas .mxn-numeros__botoes { margin-top: 20px; display: flex; }
+.page-molde.mx-nextar-bebidas .mxn-contato { margin-top: 28px; gap: 8px; }
+.page-molde.mx-nextar-bebidas .mxn-contato__item a { min-height: 56px; padding-block: 6px; row-gap: 2px; }
+.page-molde.mx-nextar-bebidas .mxn-contato__sub { font-size: 14px; line-height: 20px; color: #e6f0f8; }
+.page-molde.mx-nextar-bebidas .mxn-numeros__lista { margin-top: 20px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr) minmax(0, 1fr); gap: 8px; align-items: stretch; }
+.page-molde.mx-nextar-bebidas .mxn-numero {
+  display: grid; align-content: start; gap: 4px; padding: 16px 10px 14px; border-radius: 14px; text-align: center; cursor: pointer;
+  background: rgba(255, 255, 255, .6); border: 1px solid var(--n-linha); min-width: 0;
+  transition: transform .2s cubic-bezier(.22, 1, .36, 1), background-color .2s ease, border-color .2s ease;
+}
+.page-molde.mx-nextar-bebidas .mxn-numero.is-destaque { background: #ffffff; border-color: var(--n-acao); }
+.page-molde.mx-nextar-bebidas .mxn-numero.is-escolhido { border-color: var(--n-acao); box-shadow: 0 0 0 1px var(--n-acao) inset; }
+.page-molde.mx-nextar-bebidas .mxn-numero:active { transform: scale(.98); }
+.page-molde.mx-nextar-bebidas .mxn-numero__valor { order: 2; font-size: clamp(22px, 15.6px + 1.62vw, 40px); line-height: 1.1; white-space: nowrap; }
+.page-molde.mx-nextar-bebidas .mxn-numero__valor small { display: block; font: 500 13px/1.3 var(--n-sans); color: var(--n-cinza); margin-top: 2px; }
+.page-molde.mx-nextar-bebidas .mxn-numero__rotulo { order: 1; font: 700 14px/1.3 var(--n-sans); color: var(--n-tinta); }
+.page-molde.mx-nextar-bebidas .mxn-numero__desc { order: 3; margin-top: 6px; font-size: 14px; line-height: 1.45; text-align: left; }
+.page-molde.mx-nextar-bebidas .mxn-planos__faixa { display: none; }
+.page-molde.mx-nextar-bebidas .mxn-numeros.is-pronto .mxn-numero__desc { display: none; }
+.page-molde.mx-nextar-bebidas .mxn-numeros.is-pronto .mxn-planos__faixa {
+  display: block; margin-top: 10px; padding: 14px 16px; border-radius: 12px; background: #ffffff; border: 1px solid var(--n-linha);
+  font-size: 15px; line-height: 1.5; color: var(--n-tinta);
+}
+
+/* ligação interna (só na rota) */
+.page-molde.mx-nextar-bebidas .mxn-rel-sec { padding-block: 0 clamp(48px, 13.4px + 7.4vw, 112px); }
+.page-molde.mx-nextar-bebidas .mxn-rel { display: grid; gap: 16px; }
+.page-molde.mx-nextar-bebidas .mxn-rel__titulo { font: 700 clamp(22px, 19px + .76vw, 28px)/1.3 var(--n-titulo); letter-spacing: var(--n-ls-h2); color: var(--n-tinta); }
+.page-molde.mx-nextar-bebidas .mxn-rel__titulo + .mxn-rel__lista + .mxn-rel__titulo { margin-top: 16px; }
+.page-molde.mx-nextar-bebidas .mxn-rel__lista { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.page-molde.mx-nextar-bebidas .mxn-rel__lista a {
+  display: grid; gap: 2px; align-content: start; height: 100%; min-height: 56px; padding: 12px 14px; border-radius: 12px;
+  border: 1px solid var(--n-linha); text-decoration: none; color: var(--n-texto); transition: border-color .18s ease, transform .15s ease;
+}
+.page-molde.mx-nextar-bebidas .mxn-rel__lista a:active { transform: scale(.98); }
+.page-molde.mx-nextar-bebidas .mxn-rel__lista strong { font: 600 15px/1.35 var(--n-sans); color: var(--n-tinta); }
+.page-molde.mx-nextar-bebidas .mxn-rel__lista span { font-size: 14px; line-height: 1.4; color: var(--n-cinza); }
+@media (min-width: 64rem) { .page-molde.mx-nextar-bebidas .mxn-rel__lista { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 47.99rem) { .page-molde.mx-nextar-bebidas .mxn-rel__lista span { display: none; } }
+
+/* revelar ao entrar na tela: só depois que o molde.js roda (sem JS, tudo à vista) */
+@media (prefers-reduced-motion: no-preference) {
+  .page-molde.mx-nextar-bebidas .mxn.js-ok .mxn-rv {
+    opacity: 0; transform: translateY(16px);
+    transition: opacity .4s cubic-bezier(.22, 1, .36, 1), transform .4s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: calc(var(--rv-i, 0) * 60ms);
+  }
+  .page-molde.mx-nextar-bebidas .mxn.js-ok .mxn-rv.is-visto { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-molde.mx-nextar-bebidas .mxn.js-ok .mxn-rv { opacity: 0; transition: opacity .2s linear; }
+  .page-molde.mx-nextar-bebidas .mxn.js-ok .mxn-rv.is-visto { opacity: 1; }
+  .page-molde.mx-nextar-bebidas .mxn * { scroll-behavior: auto; }
+}
+
+/* letra do SoftPay Display: espaçamento da casa (achado da onda 1) */
+.page-molde.mx-nextar-bebidas :is(.mxn-titulo, .mxn-faq__titulo, .mxn-numeros__h2, .mxn-rel__titulo, .mxn-recurso__titulo, .mxn-depo__frase p, .mxn-numero__valor) { letter-spacing: 0.005em; }
+.page-molde.mx-nextar-bebidas .mxn-h1 { letter-spacing: -0.0036em; }

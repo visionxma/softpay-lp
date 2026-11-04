@@ -1,0 +1,148 @@
+{
+ "slug": "perguntas/excel-ou-sistema-de-gestao",
+ "title": "Excel ou Sistema de Gestão para Loja? | SoftPay",
+ "description": "Planilha ou sistema de gestão: o que o Excel resolve bem, onde ele trava numa loja com estoque e vendas diárias, e quando vale trocar.",
+ "h1": "Excel ou sistema de gestão?",
+ "intro": "Planilha é uma ferramenta excelente — para análise. O atrito começa quando ela precisa virar a operação diária de uma loja.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Excel ou sistema de gestão",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Por que a planilha desatualiza tão rápido?",
+   "Porque a baixa do estoque é uma segunda etapa, feita depois da venda e dependente de alguém lembrar. O desencontro começa em dias."
+  ],
+  [
+   "Dá para usar planilha e sistema juntos?",
+   "Sim. O sistema sustenta a operação e a planilha serve para análises pontuais, com dados exportados."
+  ],
+  [
+   "Consigo importar minha planilha atual?",
+   "A importação de dados está disponível a partir do plano Loja. Confirme o formato do arquivo com o suporte antes de migrar."
+  ],
+  [
+   "Planilha não é mais barata?",
+   "O custo direto é menor, mas o custo indireto aparece em decisões tomadas com dados desatualizados ou com erro de fórmula não percebido."
+  ],
+  [
+   "E o Google Sheets, resolve o problema de duas pessoas?",
+   "Resolve o acesso simultâneo, mas não o principal: a baixa de estoque continua sendo digitação manual depois da venda."
+  ]
+ ],
+ "related": [
+  [
+   "Caderno ou sistema?",
+   "/perguntas/caderno-ou-sistema/",
+   "A outra comparação"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "O método"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Baixa automática"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>A planilha falha na loja por um motivo estrutural: a baixa do estoque <strong>depende de alguém lembrar</strong> de digitar depois da venda. Num sistema, vender e dar baixa são o mesmo ato — e é isso que mantém o dado confiável.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "onde-a-planilha-e-boa",
+   "titulo": "Onde a planilha é boa",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Simular cenários e testar preço.",
+      "Analisar um período fechado com liberdade total.",
+      "Montar controles sob medida, do jeito que você pensa.",
+      "Custo zero se você já tem o programa."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "onde-ela-trava-numa-loja",
+   "titulo": "Onde ela trava numa loja",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Problema",
+      "Na planilha",
+      "No sistema"
+     ],
+     "linhas": [
+      [
+       "Baixa de estoque",
+       "Digitada depois, de memória",
+       "Automática na venda"
+      ],
+      [
+       "Duas pessoas ao mesmo tempo",
+       "Conflito de versão",
+       "Acesso simultâneo"
+      ],
+      [
+       "Erro de fórmula",
+       "Silencioso, contamina tudo",
+       "Cálculo fixo"
+      ],
+      [
+       "Histórico por cliente",
+       "Difícil de manter",
+       "Ligado à venda"
+      ],
+      [
+       "Backup",
+       "Depende de você",
+       "Automático na nuvem"
+      ],
+      [
+       "Uso no balcão",
+       "Inviável durante a venda",
+       "É o PDV"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O item mais perigoso é o erro de fórmula. Uma referência arrastada errado não avisa: ela produz números plausíveis e errados, que você usa para decidir compra e preço durante meses."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-combinacao-que-funciona",
+   "titulo": "A combinação que funciona",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Não é preciso escolher para sempre. Muita loja usa o sistema como fonte da operação — vendas, estoque, custo — e exporta dados para a planilha quando quer fazer uma análise específica. A planilha volta a fazer o que faz bem, sem sustentar o dia a dia."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sua planilha atual não é desperdício",
+     "texto": "Se você já tem uma planilha de produtos, ela não é trabalho perdido: a importação de dados está disponível a partir do plano Loja. Fale com o suporte para conferir o formato."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

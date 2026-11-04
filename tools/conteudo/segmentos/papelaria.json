@@ -1,0 +1,311 @@
+{
+ "slug": "segmentos/papelaria",
+ "figura": [
+  "/assets/lojistas/papelaria.webp",
+  "Atendente de papelaria finalizando a venda no caixa, com material escolar ao fundo"
+ ],
+ "title": "Sistema para Papelaria: PDV, Estoque e Atacado | SoftPay",
+ "description": "Sistema para papelaria com PDV, controle de estoque, preço de atacado e varejo e emissão de cupom. Preparado para a volta às aulas. Teste grátis 7 dias.",
+ "h1": "Sistema para papelaria",
+ "intro": "Papelaria vive dois negócios ao mesmo tempo: a venda unitária do dia a dia e o pico da volta às aulas. O SoftPay dá conta dos dois sem que você perca o controle do estoque.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Papelaria",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O sistema aguenta o volume da volta às aulas?",
+   "O PDV foi feito para venda contínua no balcão, com baixa automática de estoque. Para o pico, vale cadastrar antes os itens de lista escolar e liberar os logins de quem vai ajudar no caixa."
+  ],
+  [
+   "Consigo trabalhar preço de atacado para lista escolar?",
+   "Sim. O mesmo produto aceita preço de atacado e de varejo, sem precisar de dois cadastros."
+  ],
+  [
+   "Dá para vender serviços como xerox e encadernação?",
+   "Sim. Serviços podem ser cadastrados e vendidos pelo PDV como qualquer item, para que apareçam no faturamento e nos relatórios."
+  ],
+  [
+   "Quantas pessoas podem usar ao mesmo tempo?",
+   "Depende do plano: 1 usuário no Comércio, até 3 no Loja e até 10 no ERP Completo. Cada pessoa entra com o próprio acesso."
+  ],
+  [
+   "Emite cupom fiscal?",
+   "A emissão de NFC-e está nos planos Nota Fiscal e ERP Completo. A ativação depende do seu cadastro fiscal — confirme a situação com o suporte e com seu contador."
+  ],
+  [
+   "Dá para lançar a reposição pelo WhatsApp durante a temporada?",
+   "Sim, a partir do plano Loja. Entrada de estoque, despesa e fiado funcionam por mensagem ou áudio, sem tirar ninguém do caixa no pico da volta às aulas."
+  ]
+ ],
+ "cta_title": "Chegue preparado na próxima temporada",
+ "cta_text": "Cadastre os itens de lista escolar, registre as vendas e entre na volta às aulas sabendo o que tem em estoque.",
+ "related": [
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Venda rápida com baixa de estoque"
+  ],
+  [
+   "NFC-e",
+   "/solucoes/nfce/",
+   "Cupom fiscal eletrônico"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "O que repor e quando"
+  ],
+  [
+   "Bot do WhatsApp",
+   "/solucoes/bot-whatsapp/",
+   "Lançar a reposição falando"
+  ],
+  [
+   "Loja de variedades",
+   "/segmentos/loja-de-variedades/",
+   "Catálogo grande, giro desigual"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-ano-da-papelaria-nao-e-uniforme",
+   "titulo": "O ano da papelaria não é uniforme",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Boa parte do faturamento se concentra em poucas semanas. Nesse período o volume explode, entra gente para ajudar no balcão e o controle costuma ser a primeira coisa a se perder — justamente quando mais dinheiro está em jogo."
+    },
+    {
+     "tipo": "p",
+     "texto": "No resto do ano, o desafio é o oposto: giro baixo em um catálogo grande, com material escolar, escritório, presente e serviços convivendo no mesmo cadastro."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "PDV que aguenta o pico"
+    },
+    {
+     "tipo": "p",
+     "texto": "Venda registrada direto no caixa, com baixa automática de estoque. Na volta às aulas isso é a diferença entre saber o que ainda tem e prometer ao cliente um caderno que acabou de manhã."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Atacado e varejo no mesmo cadastro"
+    },
+    {
+     "tipo": "p",
+     "texto": "Lista escolar fechada e venda por unidade são preços diferentes do mesmo produto. Os dois convivem sem cadastro duplicado."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Estoque antes do pico"
+    },
+    {
+     "tipo": "p",
+     "texto": "Com o histórico de vendas registrado, a compra da próxima temporada deixa de ser feita de memória. Você vê o que saiu, em qual volume, e usa isso para não faltar nem sobrar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cupom e nota"
+    },
+    {
+     "tipo": "p",
+     "texto": "Se a sua papelaria precisa emitir NFC-e, os planos Nota Fiscal e ERP Completo cobrem a emissão, com cadastro fiscal e pacote do contador."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Mais de uma pessoa no balcão"
+    },
+    {
+     "tipo": "p",
+     "texto": "Na temporada, cada pessoa entra com o próprio login. O plano Loja permite até 3 usuários e o ERP Completo até 10."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Registrar a reposição sem sair do balcão"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, entrada de estoque, despesa e fiado entram por mensagem ou áudio no WhatsApp. Na volta às aulas, quando a mercadoria chega no meio do movimento e ninguém consegue parar para lançar, é aí que o registro deixa de acontecer. Veja o <a href=\"/solucoes/bot-whatsapp/\">bot do WhatsApp</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-numa-papelaria",
+   "titulo": "O que o SoftPay não faz numa papelaria",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Vale saber antes, principalmente por causa da temporada:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não faz reserva nem encomenda de lista escolar.</strong> Separar material no nome do cliente para retirar depois não tem fluxo próprio no sistema.",
+      "<strong>Não monta kit de lista.</strong> Vender \"lista do 3º ano\" como um item só, com baixa dos componentes, não faz parte do sistema.",
+      "<strong>Não gera orçamento em PDF</strong> para a família ou a escola levar.",
+      "<strong>Não tem ordem de serviço.</strong> Impressão sob encomenda, com prazo e retirada, fica fora — mesmo que o serviço em si possa ser vendido pelo PDV.",
+      "<strong>Não imprime etiqueta de preço.</strong>",
+      "<strong>A emissão fiscal consta como em ativação.</strong> Se você precisa de NFC-e no pico, confirme a situação com o suporte antes de contratar."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "O que mais saiu na última volta às aulas?",
+      "Quanto preciso comprar para a próxima temporada?",
+      "Qual a margem real do material escolar, depois do custo?",
+      "Quanto do faturamento vem de serviço e quanto vem de mercadoria?",
+      "Quem está no caixa em cada venda?",
+      "O que ficou encalhado depois da temporada?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para a papelaria"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "Papelaria de bairro com uma pessoa: PDV, caixa, fiado e estoque essencial"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O plano da temporada:</strong> custo, curva ABC, importação, registro pelo WhatsApp e até 3 usuários no balcão"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais NF-e e NFC-e e até 10 usuários — para quem emite cupom e reforça a equipe no pico"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "servicos-tambem-entram-na-conta",
+   "titulo": "Serviços também entram na conta",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Muita papelaria fatura com xerox, impressão, plastificação e encadernação. Esses itens podem ser cadastrados e vendidos pelo PDV como qualquer outro produto, para que o faturamento do balcão apareça inteiro no relatório — e não só a parte que tem mercadoria."
+    }
+   ]
+  }
+ ],
+ "mais": [
+  [
+   "Sistema para loja de bebidas",
+   "/segmentos/loja-de-bebidas/"
+  ],
+  [
+   "Qual sistema usar em um mercadinho?",
+   "/perguntas/qual-sistema-para-mercadinho/"
+  ],
+  [
+   "Emissão de NFC-e",
+   "/solucoes/nfce/"
+  ],
+  [
+   "Controle financeiro da loja",
+   "/solucoes/sistema-financeiro/"
+  ],
+  [
+   "Múltiplas lojas e filiais",
+   "/solucoes/multiplas-lojas/"
+  ],
+  [
+   "Controle de clientes (CRM)",
+   "/solucoes/controle-de-clientes/"
+  ],
+  [
+   "Loja online com Pix",
+   "/solucoes/loja-online/"
+  ],
+  [
+   "Como organizar uma loja",
+   "/guias/como-organizar-uma-loja/"
+  ],
+  [
+   "NF-e e NFC-e: qual a diferença",
+   "/guias/nfe-nfce-o-que-e/"
+  ],
+  [
+   "Reforma tributária no comércio: o que muda e quando",
+   "/guias/reforma-tributaria-comercio/"
+  ],
+  [
+   "O suporte é humano?",
+   "/perguntas/tem-suporte-humano/"
+  ],
+  [
+   "Posso usar em vários dispositivos?",
+   "/perguntas/posso-usar-em-varios-dispositivos/"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/"
+  ],
+  [
+   "Alternativa ao Bling para loja física",
+   "/comparativos/alternativa-ao-bling/"
+  ],
+  [
+   "É difícil aprender a usar?",
+   "/perguntas/e-dificil-aprender/"
+  ],
+  [
+   "Fluxo de caixa para loja pequena",
+   "/blog/fluxo-de-caixa-loja-pequena/"
+  ],
+  [
+   "Checklist da reforma tributária até janeiro de 2027",
+   "/guias/checklist-reforma-tributaria-2027/"
+  ],
+  [
+   "Sistema de gestão para pequenos negócios",
+   "/sistema-de-gestao-para-pequenos-negocios/"
+  ]
+ ],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

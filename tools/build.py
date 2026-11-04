@@ -7,11 +7,43 @@ import io, os, sys, re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from template import render, BASE
-from blocks import sec, p, ul, nota, tabela, cards
+from blocks import sec, p, ul, nota, tabela, cards, dado_de
+import json
 import c_segmentos, c_solucoes, c_guias, c_perguntas, c_extras, c_blog, c_comparativos
 import schema_fonte, interlinks, busca_home, robots, llms_full
 
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
+CONTEUDO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "conteudo")
+
+
+def _exportar_conteudo(pg, mais, publicado, modificado):
+    """Grava o conteúdo da rota como dado (tools/conteudo/<slug>.json).
+
+    É o que o molde clonado de cada rota lê (tools/moldes/vestir.mjs): o mesmo
+    texto da camada de busca, posto nos blocos da referência daquela rota.
+    """
+    dado = {k: v for k, v in pg.items() if k != "blocks"}
+    dado["blocks"] = [dado_de(b) for b in pg["blocks"]]
+    dado["mais"] = [list(m) for m in (mais or [])]
+    dado["publicado"], dado["updated"] = publicado, modificado
+    destino = os.path.join(CONTEUDO, pg["slug"] + ".json")
+    os.makedirs(os.path.dirname(destino), exist_ok=True)
+    io.open(destino, "w", encoding="utf-8").write(json.dumps(dado, ensure_ascii=False, indent=1) + "\n")
+
+
+def _vestir_moldes():
+    """Troca o <main> das rotas que já têm molde clonado (rotas-clonadas.json)."""
+    import subprocess, shutil, glob
+    script = os.path.join(os.path.dirname(os.path.abspath(__file__)), "moldes", "vestir.mjs")
+    # o node vem do nvm: fora do zsh interativo ele não está no PATH
+    node = shutil.which("node") or (sorted(glob.glob(os.path.expanduser("~/.nvm/versions/node/v*/bin/node")),
+                                           key=lambda c: [int(x) for x in re.findall(r"\d+", c.split("/node/v")[1].split("/")[0])])
+                                    or [None])[-1]
+    if not node:
+        sys.exit("vestir.mjs: node não encontrado (nem no PATH nem no ~/.nvm)")
+    r = subprocess.run([node, script])
+    if r.returncode:
+        sys.exit("vestir.mjs falhou (código %d): nenhuma rota clonada pode sair sem o texto de busca" % r.returncode)
 
 PAGINAS = (c_segmentos.PAGINAS + c_solucoes.PAGINAS + c_guias.PAGINAS
            + c_perguntas.PAGINAS + c_blog.PAGINAS
@@ -184,6 +216,7 @@ def main():
         destino = os.path.join(RAIZ, pg["slug"], "index.html")
         os.makedirs(os.path.dirname(destino), exist_ok=True)
         io.open(destino, "w", encoding="utf-8").write(html)
+        _exportar_conteudo(pg, mais, publicado, modificado)
         escritas.append("/%s/" % pg["slug"])
     for chave in schema_fonte.MANUAIS:
         schema_fonte.datas_de_arquivo(chave)
@@ -193,6 +226,8 @@ def main():
         print("  " + u)
     print("Links 'veja também' das indexadas: %d (teto por página: %d)"
           % (sum(len(v) for v in plano.values()), teto))
+    # rotas com molde clonado: o <main> de leitura dá lugar ao da referência
+    _vestir_moldes()
     # camada de busca: home, rastreadores, mapa do site, texto integral
     busca_home.aplicar()
     robots.gerar()

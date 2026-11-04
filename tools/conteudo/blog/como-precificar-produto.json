@@ -1,0 +1,278 @@
+{
+ "artigo": true,
+ "slug": "blog/como-precificar-produto",
+ "title": "Como Precificar um Produto: Markup e Margem | SoftPay",
+ "description": "A diferença entre markup e margem, a fórmula de cada um e o erro que faz o lojista achar que ganha 40% quando ganha 28%. Com exemplo numérico.",
+ "h1": "Como precificar um produto na loja",
+ "intro": "O erro mais comum na precificação não é errar a conta: é confundir markup com margem. São coisas diferentes, e quem troca uma pela outra acha que ganha 40% quando ganha 28%. Esta página mostra a diferença com número.",
+ "breadcrumbs": [
+  [
+   "Blog",
+   "/blog/"
+  ],
+  [
+   "Como precificar um produto",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual a diferença entre markup e margem?",
+   "O markup é calculado sobre o custo; a margem, sobre o preço de venda. Um produto que custa R$ 100 e é vendido por R$ 140 tem markup de 40% e margem de 28,6%. Confundir os dois é o erro de precificação mais comum."
+  ],
+  [
+   "Como calcular o preço para ter 40% de margem?",
+   "Divida o custo por (1 − margem desejada). Para 40% de margem sobre um custo de R$ 100: 100 ÷ 0,60 = R$ 166,67."
+  ],
+  [
+   "Qual margem devo usar na minha loja?",
+   "Não existe um número único. Produto de alto giro e comparável pede margem menor; produto exclusivo ou de baixo giro suporta margem maior. O que não funciona é aplicar o mesmo percentual em tudo."
+  ],
+  [
+   "Preciso incluir a taxa da maquininha no preço?",
+   "Sim. A taxa come de 2% a 5% da venda no cartão. Se ela não entra na formação do preço, some direto da sua margem."
+  ],
+  [
+   "Como sei se estou vendendo com prejuízo?",
+   "Só dá para saber com o custo cadastrado por produto, incluindo frete, embalagem, impostos e taxa de cartão. Sem isso, o resultado do mês é estimativa."
+  ],
+  [
+   "Devo mudar meus preços com que frequência?",
+   "Sempre que o custo mudar, e ao menos uma vez por ano numa revisão geral. Preço de produto cujo fornecedor aumentou e você não repassou é margem perdida em silêncio."
+  ]
+ ],
+ "cta_title": "Cadastre o custo e veja a margem real",
+ "cta_text": "Com custo por produto, a margem deixa de ser estimativa. 7 dias grátis, sem cartão de crédito.",
+ "related": [
+  [
+   "Como calcular margem de lucro",
+   "/guias/como-calcular-margem-de-lucro/",
+   "O método completo"
+  ],
+  [
+   "Como calcular o lucro da loja",
+   "/guias/como-calcular-lucro-da-loja/",
+   "Do faturamento ao que sobra"
+  ],
+  [
+   "Perda de estoque",
+   "/blog/perda-de-estoque-validade/",
+   "O custo que some da conta"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Custo e curva ABC"
+  ],
+  [
+   "Produtos parados",
+   "/blog/produtos-parados-no-estoque/",
+   "Dinheiro na prateleira"
+  ],
+  [
+   "Como controlar estoque",
+   "/guias/como-controlar-estoque/",
+   "O passo a passo"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-erro-que-quase-todo-lojista-comete",
+   "titulo": "O erro que quase todo lojista comete",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Você compra um produto por R$ 100 e quer ganhar 40%. Vende por R$ 140, certo?"
+    },
+    {
+     "tipo": "p",
+     "texto": "Você acabou de aplicar um <strong>markup</strong> de 40%. Mas a sua <strong>margem</strong> não é 40% — é 28,6%. E a diferença entre esses dois números é dinheiro que você achou que tinha e não tem."
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Por que R$ 140 não dá 40% de margem",
+     "rodape": "O markup se calcula <strong>sobre o custo</strong>. A margem se calcula <strong>sobre o preço de venda</strong>. Mesma venda, dois números diferentes.",
+     "linhas": [
+      {
+       "rotulo": "Custo do produto",
+       "valor": "R$ 100,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Preço de venda (custo + 40%)",
+       "valor": "R$ 140,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Lucro em reais",
+       "valor": "R$ 40,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Margem real (40 ÷ 140)",
+       "valor": "28,6%",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-diferenca-entre-markup-e-margem",
+   "titulo": "A diferença entre markup e margem",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "",
+      "Markup",
+      "Margem"
+     ],
+     "linhas": [
+      [
+       "Calculado sobre",
+       "o custo",
+       "o preço de venda"
+      ],
+      [
+       "Pergunta que responde",
+       "quanto acrescento ao custo?",
+       "quanto sobra de cada venda?"
+      ],
+      [
+       "No exemplo acima",
+       "40%",
+       "28,6%"
+      ],
+      [
+       "Serve para",
+       "formar o preço",
+       "saber o resultado"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Os dois são úteis: o markup é como você <em>chega</em> ao preço, a margem é o que você <em>ganha</em>. O problema é usar um pensando que é o outro."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "se-voce-quer-uma-margem-especifica-use-esta-formula",
+   "titulo": "Se você quer uma margem específica, use esta fórmula",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Para ter <strong>40% de margem de verdade</strong>, o preço não é custo + 40%. É:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Preço para uma margem-alvo de 40%",
+     "rodape": "A fórmula é <strong>preço = custo ÷ (1 − margem desejada)</strong>. Guarde essa, ela resolve a maior parte dos casos.",
+     "linhas": [
+      {
+       "rotulo": "Custo do produto",
+       "valor": "R$ 100,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Divisor: 1 − 0,40",
+       "valor": "0,60",
+       "classe": ""
+      },
+      {
+       "rotulo": "Preço de venda (100 ÷ 0,60)",
+       "valor": "R$ 166,67",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Lucro em reais",
+       "valor": "R$ 66,67",
+       "classe": ""
+      },
+      {
+       "rotulo": "Margem real (66,67 ÷ 166,67)",
+       "valor": "40,0%",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-custo-nao-e-so-o-que-voce-pagou-no-produto",
+   "titulo": "O custo não é só o que você pagou no produto",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O segundo erro mais caro é formar o custo só com a nota do fornecedor. Entram também:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Frete da compra</strong>, rateado por unidade.",
+      "<strong>Impostos</strong> que incidem na venda — confirme com o seu contador quais se aplicam ao seu regime.",
+      "<strong>Taxa da maquininha</strong>, que numa venda no cartão come de 2% a 5%.",
+      "<strong>Embalagem</strong>, sacola, etiqueta.",
+      "<strong>Perda</strong>: o que quebra, vence ou some. Se 3% do seu estoque se perde, esse custo está nos outros 97%."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "O custo esquecido com mais frequência",
+     "texto": "Uma loja que vende no cartão e não considera a taxa da maquininha na formação do preço perde a margem inteira de alguns produtos sem nunca descobrir por quê. Some a taxa <strong>antes</strong> de calcular o preço, não depois."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "nem-todo-produto-precisa-da-mesma-margem",
+   "titulo": "Nem todo produto precisa da mesma margem",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Aplicar o mesmo percentual em tudo é simples, mas deixa dinheiro na mesa e afasta cliente:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Produto de alto giro e comparável</strong> (refrigerante, arroz, o item que o cliente sabe quanto custa) pede margem menor. É por ele que a pessoa entra na loja.",
+      "<strong>Produto de baixo giro ou exclusivo</strong> suporta margem maior, porque o cliente não tem parâmetro.",
+      "<strong>Produto que puxa venda</strong> pode ter margem quase zero de propósito, desde que leve outros junto.",
+      "<strong>Produto encalhado</strong> precisa sair, e às vezes sair com prejuízo é melhor que ocupar espaço por mais um ano."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-saber-se-seu-preco-esta-funcionando",
+   "titulo": "Como saber se seu preço está funcionando",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Preço não se acerta uma vez: se acompanha. Três sinais de que o seu precisa de revisão:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Você vende bem e não sobra dinheiro.</strong> Sinal clássico de markup confundido com margem, ou de custo incompleto.",
+      "<strong>Um produto vende muito mais que os outros.</strong> Pode estar barato demais.",
+      "<strong>Um produto não vende há meses.</strong> Pode estar caro demais — ou ser um produto errado para a sua loja."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Para acompanhar isso sem planilha, é preciso ter <strong>o custo cadastrado por produto</strong>. É o passo que quase todo mundo pula, e sem ele nenhuma dessas contas existe. O método está no guia <a href=\"/guias/como-calcular-margem-de-lucro/\">como calcular margem de lucro</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-08",
+ "updated": "2026-09-08"
+}

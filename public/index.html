@@ -49,10 +49,11 @@
     <meta name="twitter:description" content="PDV, estoque, caixa, fiado, nota fiscal e loja online no mesmo sistema. Teste o SoftPay grátis por 7 dias, sem cartão de crédito." />
     <meta name="twitter:image" content="https://site.softpaybr.com/assets/desktop.webp?v=e9a78a25ba" />
 
-    <link rel="preload" href="/fontes/softpay-montserrat-v1.woff2?v=6438d7b8ea" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fontes/softpay-display-v1.woff2?v=7989b18269" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fontes/softpay-texto-400-v1.woff2?v=2d29cbc5c9" as="font" type="font/woff2" crossorigin />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster-retrato.webp?v=c7bf39940f" fetchpriority="high" media="(max-width: 47.99rem)" />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster.webp?v=69532422d0" fetchpriority="high" media="(min-width: 48rem)" />
-    <link rel="stylesheet" href="sistema.css?v=ba449f6dc1" />
+    <link rel="stylesheet" href="sistema.css?v=c273036b03" />
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- busca:inicio (gerado por tools/busca_home.py; não editar à mão) -->
@@ -104,7 +105,9 @@
           ],
           "sameAs": [
             "https://www.softpaybr.com/",
-            "https://www.linkedin.com/company/softpaybr/"
+            "https://www.linkedin.com/company/softpaybr/",
+            "https://www.findsaas.com.br/saas/softpay",
+            "https://portalsoftware.com.br/software/softpay"
           ]
         },
         {
@@ -186,7 +189,7 @@
             "@id": "https://site.softpaybr.com/#softpay"
           },
           "primaryImageOfPage": "https://site.softpaybr.com/assets/desktop.webp?v=e9a78a25ba",
-          "dateModified": "2026-11-02"
+          "dateModified": "2026-11-04"
         },
         {
           "@type": "FAQPage",
@@ -274,9 +277,12 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
+    <div class="fio-leitura" aria-hidden="true"></div>
 
     <!-- ======================================================= NAVEGAÇÃO -->
-    <nav class="nav" aria-label="Principal">
+    <!-- data-topo: "sim" no alto da página (barra estendida de ponta a ponta),
+         "nao" depois de rolar (cápsula). Quem troca é o script logo abaixo. -->
+    <nav class="nav" aria-label="Principal" data-topo="sim">
         <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
             <img src="/assets/logo-232.png?v=7b1ac2adcb" width="232" height="84" alt="SoftPay" />
         </a>
@@ -300,6 +306,19 @@
             </button>
         </div>
     </nav>
+    <script>
+        /* topo estendido × cápsula: uma escrita por quadro, só quando o estado muda */
+        (function () {
+            var nav = document.querySelector('.nav'), pedido = 0, atual = '';
+            function marcar() {
+                pedido = 0;
+                var v = window.scrollY < 8 ? 'sim' : 'nao';
+                if (v !== atual) { atual = v; nav.setAttribute('data-topo', v); }
+            }
+            window.addEventListener('scroll', function () { if (!pedido) pedido = requestAnimationFrame(marcar); }, { passive: true });
+            marcar();
+        })();
+    </script>
 
     <div class="gaveta" id="gaveta" data-aberta="nao">
         <a href="#sistema">O sistema</a>
@@ -702,6 +721,8 @@
                         <figure class="painel__figura">
                             <img src="/assets/lojistas/loja-de-variedades.webp?v=ab30bb8001" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Lojista organizando as prateleiras de uma loja de variedades" />
+                            <img class="painel__chip" src="/assets/sistema/recortes/estoque-alerta.webp?v=d7356828ac" width="330" height="172" loading="lazy" decoding="async"
+                                alt="Tela do SoftPay: produto com o estoque em alerta, 2 unidades, custo R$ 14,90 e preço de varejo R$ 39,90" />
                         </figure>
                     </section>
 
@@ -725,6 +746,8 @@
                         <figure class="painel__figura">
                             <img src="/assets/lojistas/mercadinho.webp?v=027c8e4a3b" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Atendimento no balcão de um mercadinho" />
+                            <img class="painel__chip painel__chip--esq" src="/assets/sistema/recortes/fiado-total.webp?v=e5dfac080a" width="332" height="120" loading="lazy" decoding="async"
+                                alt="Tela do SoftPay: total a receber de R$ 687,00 em débitos pendentes do fiado" />
                         </figure>
                     </section>
 
@@ -754,7 +777,7 @@
                     <!-- LOJA ONLINE -->
                     <section class="painel" id="painel-loja" aria-labelledby="painel-loja-titulo">
                         <div>
-                            <h3 class="display display--cartao" id="painel-loja-titulo">Sua vitrine na internet,<br />com o estoque que já existe</h3>
+                            <h3 class="display display--cartao" id="painel-loja-titulo">Sua vitrine na internet,<br />com o estoque que&nbsp;já&nbsp;existe</h3>
                             <p class="apoio">
                                 A loja online usa o catálogo que você já cadastrou: o mesmo produto, o
                                 mesmo preço, o mesmo saldo. O cliente paga por Pix e a confirmação
@@ -771,6 +794,8 @@
                         <figure class="painel__figura">
                             <img src="/assets/lojistas/cosmeticos-e-perfumaria.webp?v=c4c122ef98" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Loja de cosméticos e perfumaria com produtos expostos" />
+                            <img class="painel__chip painel__chip--estreito" src="/assets/sistema/recortes/loja-qr.webp?v=36e9582d8d" width="166" height="204" loading="lazy" decoding="async"
+                                alt="Tela do SoftPay: QR Code da loja online, com o botão Baixar QR Code" />
                         </figure>
                     </section>
 
@@ -788,14 +813,14 @@
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Notas recebidas: ver e manifestar</li>
                                 <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Planos Nota Fiscal e ERP Completo</li>
                             </ul>
-                            <p class="apoio" style="color: var(--atencao)">
-                            </p>
                             <a class="link-seta" href="/solucoes/nfe/">Ver a emissão de nota
                                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                         </div>
                         <figure class="painel__figura">
                             <img src="/assets/lojistas/distribuidora.webp?v=a3801f743c" width="1600" height="667" loading="lazy" decoding="async"
                                 alt="Conferência de mercadorias em uma distribuidora" />
+                            <img class="painel__chip painel__chip--esq painel__chip--largo" src="/assets/sistema/recortes/nota-ativar.webp?v=9502480aff" width="508" height="208" loading="lazy" decoding="async"
+                                alt="Tela do SoftPay: ativar a emissão de notas fiscais, com o botão Começar configuração" />
                         </figure>
                     </section>
                     </div>

@@ -1,0 +1,337 @@
+{
+  "referencia": "https://herosistemas.com.br/",
+  "molde": "herosistemas-home",
+  "captura": "/Users/victorgabryellferreiraqueiroz/.jarvis/visionx/clones/capturas/herosistemas-home",
+  "quando": "2026-11-04T02:46:25.994Z",
+  "limiar": 0.12,
+  "larguras": {
+    "390": {
+      "altura_molde_origem": 15060,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 1,
+          "tipo": "hero: título em dois tons, checks e prova | cartão de formulário",
+          "ref": {
+            "y": 97,
+            "altura": 1128
+          },
+          "molde": {
+            "y": 0,
+            "altura": 1065
+          },
+          "total": 0.0839,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1065
+        },
+        {
+          "secao": 2,
+          "tipo": "faixa clara: título azul + esteira infinita",
+          "ref": {
+            "y": 1225,
+            "altura": 199
+          },
+          "molde": {
+            "y": 1065,
+            "altura": 199
+          },
+          "total": 0.1144,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 199
+        },
+        {
+          "secao": 3,
+          "tipo": "vídeo sobre a costura + diferenciais numerados no azul",
+          "ref": {
+            "y": 1424,
+            "altura": 774
+          },
+          "molde": {
+            "y": 1240,
+            "altura": 798
+          },
+          "total": 0.0592,
+          "altura_dif": 0.031,
+          "passou": true,
+          "motivos": [],
+          "altura": 774
+        },
+        {
+          "secao": 4,
+          "tipo": "cartões com alerta + cartões com check, 2 colunas",
+          "ref": {
+            "y": 2198,
+            "altura": 3386
+          },
+          "molde": {
+            "y": 2038,
+            "altura": 3391
+          },
+          "total": 0.0739,
+          "altura_dif": 0.0015,
+          "passou": true,
+          "motivos": [],
+          "altura": 3386
+        },
+        {
+          "secao": 5,
+          "tipo": "cartões em 3 colunas desencontradas (depoimentos omitidos → segmentos)",
+          "ref": {
+            "y": 5584,
+            "altura": 2920
+          },
+          "molde": {
+            "y": 5429,
+            "altura": 2940
+          },
+          "total": 0.0443,
+          "altura_dif": 0.0068,
+          "passou": true,
+          "motivos": [],
+          "altura": 2920
+        },
+        {
+          "secao": 6,
+          "tipo": "degradê índigo: texto e pílulas | celular",
+          "ref": {
+            "y": 8505,
+            "altura": 1446
+          },
+          "molde": {
+            "y": 8369,
+            "altura": 1446
+          },
+          "total": 0.0259,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1446
+        },
+        {
+          "secao": 7,
+          "tipo": "3 planos com lista check/x",
+          "ref": {
+            "y": 9935,
+            "altura": 2830
+          },
+          "molde": {
+            "y": 9816,
+            "altura": 2826
+          },
+          "total": 0.0958,
+          "altura_dif": 0.0014,
+          "passou": true,
+          "motivos": [],
+          "altura": 2830
+        },
+        {
+          "secao": 8,
+          "tipo": "FAQ em sanfonas brancas no azul-marinho",
+          "ref": {
+            "y": 12765,
+            "altura": 1521
+          },
+          "molde": {
+            "y": 12641,
+            "altura": 1489
+          },
+          "total": 0.0451,
+          "altura_dif": 0.021,
+          "passou": true,
+          "motivos": [],
+          "altura": 1521
+        },
+        {
+          "secao": 9,
+          "tipo": "cartão marinho | cartão de formulário",
+          "ref": {
+            "y": 14286,
+            "altura": 932
+          },
+          "molde": {
+            "y": 14130,
+            "altura": 930
+          },
+          "total": 0.0433,
+          "altura_dif": 0.0021,
+          "passou": true,
+          "motivos": [],
+          "altura": 932
+        }
+      ],
+      "total": 0.0634,
+      "pior": 0.1144,
+      "passou": true
+    },
+    "1440": {
+      "altura_molde_origem": 10201,
+      "rolagem_lateral": 0,
+      "secoes": [
+        {
+          "secao": 1,
+          "tipo": "hero: título em dois tons, checks e prova | cartão de formulário",
+          "ref": {
+            "y": 71,
+            "altura": 858
+          },
+          "molde": {
+            "y": 0,
+            "altura": 728
+          },
+          "total": 0.0319,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 728
+        },
+        {
+          "secao": 2,
+          "tipo": "faixa clara: título azul + esteira infinita",
+          "ref": {
+            "y": 929,
+            "altura": 189
+          },
+          "molde": {
+            "y": 728,
+            "altura": 189
+          },
+          "total": 0.0284,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 189
+        },
+        {
+          "secao": 3,
+          "tipo": "vídeo sobre a costura + diferenciais numerados no azul",
+          "ref": {
+            "y": 1118,
+            "altura": 1139
+          },
+          "molde": {
+            "y": 885,
+            "altura": 1170
+          },
+          "total": 0.0044,
+          "altura_dif": 0.0272,
+          "passou": true,
+          "motivos": [],
+          "altura": 1139
+        },
+        {
+          "secao": 4,
+          "tipo": "cartões com alerta + cartões com check, 2 colunas",
+          "ref": {
+            "y": 2258,
+            "altura": 2119
+          },
+          "molde": {
+            "y": 2055,
+            "altura": 2114
+          },
+          "total": 0.0415,
+          "altura_dif": 0.0024,
+          "passou": true,
+          "motivos": [],
+          "altura": 2119
+        },
+        {
+          "secao": 5,
+          "tipo": "cartões em 3 colunas desencontradas (depoimentos omitidos → segmentos)",
+          "ref": {
+            "y": 4377,
+            "altura": 1358
+          },
+          "molde": {
+            "y": 4170,
+            "altura": 1359
+          },
+          "total": 0.0268,
+          "altura_dif": 0.0007,
+          "passou": true,
+          "motivos": [],
+          "altura": 1358
+        },
+        {
+          "secao": 6,
+          "tipo": "degradê índigo: texto e pílulas | celular",
+          "ref": {
+            "y": 5735,
+            "altura": 871
+          },
+          "molde": {
+            "y": 5529,
+            "altura": 870
+          },
+          "total": 0.0062,
+          "altura_dif": 0.0011,
+          "passou": true,
+          "motivos": [],
+          "altura": 871
+        },
+        {
+          "secao": 7,
+          "tipo": "3 planos com lista check/x",
+          "ref": {
+            "y": 6606,
+            "altura": 1315
+          },
+          "molde": {
+            "y": 6399,
+            "altura": 1312
+          },
+          "total": 0.0521,
+          "altura_dif": 0.0023,
+          "passou": true,
+          "motivos": [],
+          "altura": 1315
+        },
+        {
+          "secao": 8,
+          "tipo": "FAQ em sanfonas brancas no azul-marinho",
+          "ref": {
+            "y": 7921,
+            "altura": 1580
+          },
+          "molde": {
+            "y": 7711,
+            "altura": 1580
+          },
+          "total": 0.0014,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 1580
+        },
+        {
+          "secao": 9,
+          "tipo": "cartão marinho | cartão de formulário",
+          "ref": {
+            "y": 9501,
+            "altura": 910
+          },
+          "molde": {
+            "y": 9291,
+            "altura": 910
+          },
+          "total": 0.0377,
+          "altura_dif": 0,
+          "passou": true,
+          "motivos": [],
+          "altura": 910
+        }
+      ],
+      "total": 0.0263,
+      "pior": 0.0521,
+      "passou": true
+    }
+  },
+  "omitidas": [],
+  "faltando": [],
+  "passou": true,
+  "falhas": []
+}

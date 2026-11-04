@@ -1,0 +1,99 @@
+# rota	molde	referência — uma LP diferente por rota (regra rota-de-seo-e-clone-de-lp-diferente)
+# Pesquisa de 03/11/2026 (/tmp/sp-seo/pesquisa/{br,global,conteudo}.json): páginas de captação do nicho
+# (maquininha, PDV, ERP, varejo) e de fora dele, todas testadas com HTTP 200. A escolha segue o que a rota
+# capta: segmento → página de segmento de PDV; recurso → página de recurso; guia → guia que leva ao teste;
+# comparativo → página "versus"; pergunta → resposta curta com chamada. Fonte que não se deixar capturar
+# troca por uma das reservas do fim do arquivo (nunca por uma já usada) e o contrato se regera.
+segmentos/empresas-com-filiais	lightspeed-varejo	https://www.lightspeedhq.com/pos/retail/
+segmentos/mercadinho	clover-varejo	https://www.clover.com/pos-systems
+solucoes/sistema-pdv	square-pdv	https://squareup.com/us/en/point-of-sale
+sistema-de-gestao-para-pequenos-negocios	herosistemas-home	https://herosistemas.com.br/
+solucoes/sistema-de-estoque	lightspeed-estoque	https://www.lightspeedhq.com/pos/retail/inventory-management/
+segmentos/loja-de-roupas	shopify-pos-varejo	https://www.shopify.com/pos/retail
+segmentos/loja-de-variedades	marketup	https://marketup.com/
+segmentos/papelaria	lojaintegrada-indica	https://criar.lojaintegrada.com.br/indicaae
+segmentos/farmacia	digifarma	https://conteudo.digifarma.com.br/lp-adquira
+segmentos/distribuidora	vhsys-distribuidora-bebidas	https://www.vhsys.com.br/segmentos/sistema-erp-para-distribuidora-de-bebidas/
+segmentos/loja-de-celulares-e-acessorios	zettle-leitor	https://www.zettle.com/gb/card-reader
+segmentos/loja-de-autopecas	lightspeed-golfe	https://www.lightspeedhq.com/pos/golf/
+segmentos/materiais-de-construcao	hiper-mercadinhos	https://hiper.com.br/solucoes-para-voce/minimercados-e-mercadinhos/
+segmentos/pequeno-comercio	loyverse	https://loyverse.com/
+segmentos/loja-de-joias	square-beleza	https://squareup.com/us/en/beauty
+segmentos/pet-shop	fourpet-teste	https://www.fourpet.com.br/teste-gratis/
+segmentos/loja-de-calcados	protrole-roupas	https://lp.protrole.com.br/sistema-para-loja-de-roupas/
+segmentos/cosmeticos-e-perfumaria	clover-salao	https://www.clover.com/pos-systems/salon
+segmentos/loja-de-bebidas	nextar-bebidas	https://www.nextar.com.br/segmento/loja-de-bebidas
+solucoes/controle-de-fiado	stripe-cobranca	https://stripe.com/invoicing
+solucoes/sistema-financeiro	ramp-contabil	https://ramp.com/accounting
+solucoes/nfe	bling-nfe	https://www.bling.com.br/funcionalidades/nota-fiscal-eletronica
+solucoes/nfce	sumup-pdv	https://www.sumup.com/en-gb/point-of-sale/
+solucoes/loja-online	nuvemshop-gratis	https://www.nuvemshop.com.br/plano-gratis
+solucoes/controle-de-clientes	pipedrive-funil	https://www.pipedrive.com/en/features/sales-pipeline
+solucoes/bot-whatsapp	anotaai	https://anota.ai/home/plataforma-de-delivery-anota-ai/
+solucoes/multiplas-lojas	razorpay-pdv	https://razorpay.com/pos/
+guias/como-controlar-estoque	nuvemshop-guia-estoque	https://www.nuvemshop.com.br/blog/controle-de-estoque/
+guias/como-controlar-caixa-da-loja	stripe-guia-pagamentos	https://stripe.com/resources/more/small-business-payment-processing-a-guide
+guias/como-controlar-fiado	infinitepay-blog-link	https://www.infinitepay.io/blog/link-de-pagamento-recebimento-na-hora
+guias/como-calcular-lucro-da-loja	contaazul-margem	https://contaazul.com/blog/como-calcular-margem-de-lucro/
+guias/como-calcular-margem-de-lucro	shopify-calculadora-margem	https://www.shopify.com/tools/profit-margin-calculator
+guias/como-organizar-uma-loja	square-guia-pdv	https://squareup.com/ca/en/the-bottom-line/operating-your-business/best-pos-system
+guias/como-sair-do-caderno	omie-erros-estoque	https://www.omie.com.br/blog/6-erros-de-gestao-de-estoque-que-a-sua-empresa-precisa-evitar/
+guias/vale-a-pena-ter-sistema-de-gestao	shopify-blog-margem	https://www.shopify.com/blog/what-is-profit-margin
+guias/quanto-custa-um-sistema-de-gestao	hubspot-calculadora	https://offers.hubspot.com/sales-pricing-calculator
+guias/como-escolher-sistema-de-gestao	olist-melhor-erp	https://olist.com/lp/melhor-sistema-erp/
+guias/reforma-tributaria-comercio	sebrae-rn-reforma	https://blog.rn.sebrae.com.br/reforma-tributaria-pequenos-negocios/
+guias/reforma-tributaria-mei	sebrae-rs-mei	https://digital.sebraers.com.br/blog/leis-e-normas/reforma-tributaria-para-mei-o-que-muda-em-2026-e-2027/
+guias/meu-sistema-precisa-mudar-reforma-tributaria	stripe-guia-empresa	https://stripe.com/resources/more/how-to-start-a-business-in-the-us
+guias/checklist-reforma-tributaria-2027	rippling-folha	https://rippling.com/payroll
+guias/nfe-nfce-o-que-e	wise-blog-transferencia	https://wise.com/us/blog/how-to-wire-money
+perguntas/quanto-custa-um-sistema-para-loja	contaazul-teste	https://contaazul.com/teste-gratuito/
+perguntas/loja-pequena-precisa-de-sistema	hubspot-glossario	https://www.hubspot.com/glossary/profit-margin
+perguntas/caderno-ou-sistema	square-o-que-e	https://squareup.com/ie/en/townsquare/what-is-square
+perguntas/excel-ou-sistema-de-gestao	contaazul-planilha	https://blog.contaazul.com/universidade/planilha-calculo-margem-lucro/
+perguntas/qual-sistema-para-mercadinho	gestaoclick-mercadinho	https://gestaoclick.com.br/segmentos/pdv-para-mercadinho/
+perguntas/sistema-de-gestao-e-seguro	brex-cartao	https://brex.com/product/corporate-card
+perguntas/posso-usar-o-softpay-no-celular	infinitepay-blog-aproximacao	https://www.infinitepay.io/blog/como-receber-por-aproximacao-no-celular
+perguntas/posso-migrar-de-outro-sistema	wegou-bling	https://wegou.com.br/alternativa-ao-bling/
+perguntas/e-dificil-aprender	linear	https://linear.app/
+perguntas/preciso-instalar	infinitepay-maquininha-celular	https://www.infinitepay.io/maquininha-celular
+perguntas/tem-suporte-humano	stone-maquininha	https://www.stone.com.br/maquina-de-cartao
+perguntas/funciona-no-brasil-inteiro	ton-oferta	https://www.ton.com.br/oferta-ton
+perguntas/posso-usar-em-varios-dispositivos	infinitepay-tap	https://www.infinitepay.io/tap-to-pay
+blog/como-precificar-produto	sebrae-sc-precificar	https://www.sebrae-sc.com.br/blog/passos-para-precificar-um-produto
+blog/perda-de-estoque-validade	nuvemshop-blog-sistema-estoque	https://www.nuvemshop.com.br/blog/sistema-de-controle-de-estoque/
+blog/produtos-parados-no-estoque	ramp-despesas	https://ramp.com/expense-management
+blog/troca-e-devolucao-na-loja	stripe-assinaturas	https://stripe.com/billing
+blog/como-organizar-vitrine-de-loja	framer	https://www.framer.com/
+blog/fluxo-de-caixa-loja-pequena	mercury	https://mercury.com/
+comparativos/softpay-ou-nex	ramp-versus-brex	https://ramp.com/versus/brex
+comparativos/softpay-ou-kyte	shopify-versus-lightspeed	https://www.shopify.com/compare/shopify-vs-lightspeed
+comparativos/alternativa-ao-bling	granmoney-bling	https://granmoney.com/comparativo/alternativas-ao-bling
+sobre	wise-empresas	https://wise.com/gb/business/
+contato	gestaoclick-cadastro	https://gestaoclick.com.br/novo-cadastro/
+segmentos	square-varejo	https://squareup.com/us/en/retail
+solucoes	shopify-pos-recursos	https://www.shopify.com/pos/features
+guias	pennylane	https://www.pennylane.com/fr/
+comparativos	square-versus-clover	https://squareup.com/us/en/compare/square-vs-clover
+blog	attio	https://attio.com/
+perguntas	sumup-maquininhas	https://www.sumup.com/pt-br/maquininhas/
+# reservas (ainda sem rota; quem trocar de fonte tira daqui)
+# reserva	pagbank-campanha	https://pagbank.com.br/campanhas/maquinas-cartao-taxas-faturamento
+# reserva	pagbank-squeeze	https://pagbank.com.br/campanhas/oferta-moderninha-smart2-do-pagbank-melhores-taxas-squeeze
+# reserva	mercadopago-point	https://www.mercadopago.com.br/ferramentas-para-vender/maquininhas-point/point-pro-3
+# reserva	infinitepay-maquininha	https://www.infinitepay.io/maquininha
+# reserva	kyte-pdv	https://www.kyteapp.com/pt/sistema-pdv
+# reserva	tagplus-moda	https://www.tagplus.com.br/sistema-para-moda/
+# reserva	meupetsimples	https://meupetsimples.com.br/solucoes/sistema-para-pet-shop-gratis
+# reserva	tekfarma	https://www.tekfarma.com.br/cadastro/
+# reserva	lightspeed-restaurante	https://www.lightspeedhq.com/pos/restaurant/
+# reserva	square-restaurantes	https://squareup.com/us/en/restaurants
+# reserva	shopify-hardware	https://www.shopify.com/pos/hardware
+# reserva	stripe-terminal	https://stripe.com/terminal
+# reserva	hubspot-versus	https://www.hubspot.com/comparisons/pipedrive-vs-hubspot
+# reserva	pipedrive-versus	https://www.pipedrive.com/en/crm-comparison/pipedrive-vs-hubspot
+# reserva	stoqui-kyte	https://www.stoqui.com.br/blog/kyte-vs-stoqui
+# reserva	apurea-bling	https://apurea.com.br/alternativas/bling
+# reserva	gestaoclick-roupas	https://gestaoclick.com.br/sistema-para-loja-de-roupas/
+# reserva	shopify-pos	https://www.shopify.com/pos
+# reserva	nextar-mercado	https://www.nextar.com.br/segmento/mercado
+# reserva	clover-lanchonete	https://www.clover.com/pos-systems/quick-service-restaurant

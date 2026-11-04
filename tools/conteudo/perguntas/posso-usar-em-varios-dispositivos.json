@@ -1,0 +1,122 @@
+{
+ "slug": "perguntas/posso-usar-em-varios-dispositivos",
+ "title": "Posso Usar o SoftPay em Vários Dispositivos? | SoftPay",
+ "description": "Use o SoftPay no computador do balcão, no notebook e no celular ao mesmo tempo, com multi-login por funcionário. Veja os limites de cada plano.",
+ "h1": "Posso usar em vários dispositivos?",
+ "intro": "Sim. Os dados ficam na nuvem, então o balcão, o escritório e o celular olham para a mesma informação.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Vários dispositivos",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Posso acessar de dois lugares ao mesmo tempo?",
+   "Sim. Os dados ficam na nuvem e são sincronizados entre os dispositivos."
+  ],
+  [
+   "Quantos usuários posso cadastrar?",
+   "1 no Comércio, até 3 no Loja, até 10 no ERP Completo e até 2 no Nota Fiscal."
+  ],
+  [
+   "Preciso pagar por dispositivo?",
+   "Não. O que o plano define é o número de usuários, não de aparelhos."
+  ],
+  [
+   "Cada funcionário precisa de login próprio?",
+   "É o recomendado, para manter a rastreabilidade de quem fez cada operação."
+  ],
+  [
+   "Existem permissões diferentes por usuário?",
+   "O multi-login dá acesso individual. Sobre perfis com permissões distintas, confirme com o suporte antes de contratar."
+  ]
+ ],
+ "related": [
+  [
+   "Múltiplas lojas",
+   "/solucoes/multiplas-lojas/",
+   "Equipe e filiais"
+  ],
+  [
+   "Posso usar no celular?",
+   "/perguntas/posso-usar-o-softpay-no-celular/",
+   "Uso no telefone"
+  ],
+  [
+   "Preços",
+   "/#pricing",
+   "Usuários por plano"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Sim. Como o SoftPay é acessado pelo <strong>navegador</strong> e os dados ficam na nuvem, o computador do balcão, o notebook e o celular acessam a mesma conta, com informação sincronizada.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "dispositivos-e-usuarios-sao-coisas-diferentes",
+   "titulo": "Dispositivos e usuários são coisas diferentes",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Uma confusão comum: acessar de vários aparelhos não é o mesmo que ter vários usuários. O <strong>multi-login</strong> é o que dá acesso individual a cada pessoa da equipe, e ele tem limite por plano."
+    },
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Usuários incluídos"
+     ],
+     "linhas": [
+      [
+       "Nota Fiscal",
+       "Até 2"
+      ],
+      [
+       "Comércio",
+       "1"
+      ],
+      [
+       "Loja",
+       "Até 3"
+      ],
+      [
+       "ERP Completo",
+       "Até 10"
+      ]
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Por que não compartilhar login",
+     "texto": "Compartilhar o mesmo login entre várias pessoas parece economia, mas tira a rastreabilidade de quem fez cada operação — e é a origem mais comum de problema de acesso em loja pequena."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "usos-tipicos",
+   "titulo": "Usos típicos",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Computador do balcão como PDV principal.",
+      "Notebook no escritório para cadastro e relatórios.",
+      "Celular para consulta de preço e estoque na reposição.",
+      "Celular do dono para acompanhar as vendas fora da loja."
+     ]
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

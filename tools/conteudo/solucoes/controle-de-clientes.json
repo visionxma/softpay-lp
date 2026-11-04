@@ -1,0 +1,294 @@
+{
+ "slug": "solucoes/controle-de-clientes",
+ "figura": [
+  "/assets/lojistas/loja-de-roupas.webp",
+  "Lojista atendendo com o tablet na mão numa loja de roupas"
+ ],
+ "title": "Controle de Clientes e CRM para Loja | SoftPay",
+ "description": "Cadastro de clientes com histórico de compras, base para fiado, cupons e fidelidade. Saiba quem volta a comprar. Teste grátis por 7 dias.",
+ "h1": "Controle de clientes (CRM)",
+ "intro": "Conquistar cliente novo custa caro. O cliente que já comprou é o mais barato de trazer de volta — desde que você saiba quem ele é e o que ele comprou.",
+ "breadcrumbs": [
+  [
+   "Soluções",
+   "/solucoes/"
+  ],
+  [
+   "Controle de clientes",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O cadastro de clientes está em qual plano?",
+   "A partir do plano Comércio, de R$ 69/mês, com histórico de compras e saldo de fiado. Cupons e fidelidade ficam disponíveis a partir do plano Loja."
+  ],
+  [
+   "O histórico de compras fica ligado ao cliente?",
+   "Sim. Identificando o cliente no PDV, a compra entra no histórico dele, com data e valor."
+  ],
+  [
+   "Dá para trabalhar recompra e fidelidade?",
+   "Sim, a partir do plano Loja. Cupom e programa de fidelidade se apoiam no histórico de compras do cadastro."
+  ],
+  [
+   "O sistema dispara e-mail marketing ou mensagem automática?",
+   "Não. O SoftPay guarda o histórico e sustenta cupom e fidelidade, mas não tem régua de campanha nem automação de envio."
+  ],
+  [
+   "Tem funil de vendas ou CRM de oportunidades?",
+   "Não. É um cadastro de clientes de varejo, com histórico de compras — não uma ferramenta de venda consultiva com etapas e previsão."
+  ],
+  [
+   "Integra com Instagram ou WhatsApp Business?",
+   "Não. O bot do WhatsApp fala com você, o dono, para registrar operações — não com o seu cliente final."
+  ],
+  [
+   "Consigo saber quem parou de comprar?",
+   "O histórico com datas permite ver quem não volta há tempo. Não existe alerta automático de cliente inativo."
+  ],
+  [
+   "Preciso cadastrar todo cliente?",
+   "Não. O cadastro faz diferença em quem volta, compra fiado ou tem ticket alto. Para a venda de passagem, ele é opcional."
+  ],
+  [
+   "Dá para importar minha lista de clientes?",
+   "A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo."
+  ]
+ ],
+ "cta_title": "Comece pelos clientes que voltam",
+ "cta_text": "Cadastre os dez que você já reconhece de vista, registre as compras deles por um mês e veja o histórico virar argumento. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "O saldo por cliente"
+  ],
+  [
+   "Loja online",
+   "/solucoes/loja-online/",
+   "Vender para quem já conhece"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Onde o cliente é identificado"
+  ],
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "A cliente que volta na coleção"
+  ],
+  [
+   "Loja de joias",
+   "/segmentos/loja-de-joias/",
+   "Recompra por data"
+  ],
+  [
+   "Farmácia",
+   "/segmentos/farmacia/",
+   "Uso contínuo e recompra"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-problema",
+   "titulo": "O problema",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Na maior parte das lojas pequenas, o cliente é anônimo. Ele compra, vai embora e some do registro. A loja sabe quanto vendeu, mas não sabe para quem — e por isso trata quem volta pela décima vez igual a quem entrou pela primeira."
+    },
+    {
+     "tipo": "p",
+     "texto": "O custo disso é invisível porque nunca aparece numa conta. Não existe a linha \"clientes que deixaram de voltar\". Existe só um faturamento que não cresce e ninguém sabe explicar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-isso-aparece-na-sua-loja",
+   "titulo": "Como isso aparece na sua loja",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>A cliente que volta é atendida como nova.</strong> Ninguém lembra do que ela levou, nem do tamanho dela.",
+      "<strong>Você não sabe quem sumiu.</strong> O cliente de todo mês parou de vir e a queda só aparece no trimestre.",
+      "<strong>A promoção vai para todo mundo.</strong> Sem histórico, o desconto é disparado para uma lista inteira — inclusive para quem já ia comprar.",
+      "<strong>O fiado não tem dono.</strong> A dívida existe, mas não está ligada a um cadastro com histórico.",
+      "<strong>Você não sabe quanto vale um cliente.</strong> Quem gasta R$ 2.000 por ano e quem gastou R$ 40 uma vez são a mesma coisa no seu sistema."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Cadastro ligado à venda"
+    },
+    {
+     "tipo": "p",
+     "texto": "O cliente é identificado no PDV e a compra entra no histórico dele. Não é um cadastro morto num canto do sistema: é o registro do que aquela pessoa comprou e quando."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Histórico que responde na hora"
+    },
+    {
+     "tipo": "p",
+     "texto": "Quando ele volta, você vê o que levou da última vez. Numa loja de roupas isso é o tamanho e a preferência; numa joalheria, a data da compra que se repete no ano seguinte."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Base do fiado"
+    },
+    {
+     "tipo": "p",
+     "texto": "O saldo devedor vive no cadastro do cliente, com as compras que o formam. Veja o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado</a>."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cupom e fidelidade"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, o histórico sustenta cupom e programa de fidelidade. A diferença entre disparar desconto para uma lista e falar com quem tem motivo para voltar está inteira aqui."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Quem comprou o quê"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cruzar cliente e produto mostra qual público sustenta cada parte do seu catálogo — e é o que transforma uma coleção nova em contato com propósito em vez de mensagem em massa."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-crm-do-softpay-nao-faz",
+   "titulo": "O que o CRM do SoftPay não faz",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "É um cadastro de clientes com histórico, não uma plataforma de marketing. O que fica de fora:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não dispara e-mail marketing nem campanha automática.</strong> Não há régua de mensagens nem automação de envio.",
+      "<strong>Não tem funil de vendas.</strong> Sem etapas, oportunidades ou previsão — é varejo, não venda consultiva.",
+      "<strong>Não integra com Instagram, WhatsApp Business ou catálogo de rede social.</strong>",
+      "<strong>Não faz segmentação avançada.</strong> Não há criação de públicos por regra combinada.",
+      "<strong>Não importa a sua agenda de contatos do celular.</strong>"
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você precisa de automação de marketing, o SoftPay é a fonte do dado — não a ferramenta de disparo."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-quando-o-cliente-tem-nome",
+   "titulo": "O que muda quando o cliente tem nome",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O raciocínio que o cadastro torna possível:"
+    },
+    {
+     "tipo": "exemplo",
+     "titulo": "Dois clientes que faturam parecido",
+     "rodape": "Exemplo ilustrativo. Sem cadastro, os dois são a mesma linha no relatório. Com histórico, o B é uma relação e o A foi um evento — e você sabe em qual investir atenção.",
+     "linhas": [
+      {
+       "rotulo": "Cliente A — 1 compra de R$ 900",
+       "valor": "R$ 900,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "Cliente B — 9 compras de R$ 100 no ano",
+       "valor": "R$ 900,00",
+       "classe": ""
+      },
+      {
+       "rotulo": "= Mesmo faturamento",
+       "valor": "R$ 900,00",
+       "classe": "result"
+      },
+      {
+       "rotulo": "Quem vale um contato quando chega coleção nova?",
+       "valor": "o B",
+       "classe": "result final"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-voce-passa-a-conseguir-responder",
+   "titulo": "O que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Quem são meus clientes que mais compram?",
+      "O que esta pessoa levou da última vez?",
+      "Quem comprou nesta coleção e pode voltar na próxima?",
+      "Quem parou de comprar nos últimos meses?",
+      "Quanto este cliente já gastou comigo?",
+      "Quem está devendo e desde quando?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "em-qual-plano-esta",
+   "titulo": "Em qual plano está",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "O cadastro neste plano"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "Cadastro de clientes com histórico de compras e saldo de fiado. 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>Onde o cadastro vira ferramenta:</strong> cupons, fidelidade e cobrança por Pix no WhatsApp. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-07"
+}

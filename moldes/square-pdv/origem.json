@@ -1,0 +1,84 @@
+{
+  "lang": "en",
+  "topo": {
+    "olho": "Square Point of Sale",
+    "h1": "A POS ready for what you've got",
+    "botoes": [
+      { "texto": "Get started", "href": "#", "tipo": "contorno" },
+      { "texto": "Contact sales", "href": "#", "tipo": "cheio" }
+    ]
+  },
+  "palco": {
+    "manchete": "Get up and running with a POS personalized for however you do business."
+  },
+  "modos": {
+    "titulo": "See how our POS software works for your business",
+    "abas": [
+      { "rotulo": "Food & beverage", "texto": "<strong>Food and beverage modes</strong> Run your restaurant with the right features for quick service, full service, and bar service. Keep the front and back of house talking to serve customers faster.", "listaTitulo": "Get quick access to features like:", "lista": ["Quick order entry", "Table and course management", "Preauthorized bar tabs"], "link": "Learn more" },
+      { "rotulo": "Retail", "texto": "<strong>Retail mode</strong> Add advanced inventory features to your POS to manage your retail business across multiple locations and sales channels.", "listaTitulo": "Get quick access to features like:", "lista": ["Low-stock alerts", "Integrated in-person and online sales", "Vendor sales reports"], "link": "Learn more" },
+      { "rotulo": "Beauty", "texto": "<strong>Bookings mode</strong> Deliver top-tier service for clients with convenient booking and rebooking options.", "listaTitulo": "Get quick access to features like:", "lista": ["Class and appointment bookings", "Online booking site", "Waitlists and no-show protection"], "link": "Learn more" },
+      { "rotulo": "Services", "texto": "<strong>Services mode</strong> Run your business on the go with flexible invoicing features that get you paid on time.", "listaTitulo": "Get quick access to features like:", "lista": ["Invoices and estimates", "Contracts", "Real-time payment tracking"], "link": "Learn more" },
+      { "rotulo": "All businesses", "texto": "<strong>Standard mode</strong> Access all the essential POS features to take payments quickly.", "listaTitulo": "Get quick access to features like:", "lista": ["In-person and remote payments", "Inventory management", "Sales reports"], "link": "Learn more" }
+    ]
+  },
+  "linhas": {
+    "titulo": "Seamless selling from one location to one hundred",
+    "itens": [
+      { "titulo": "Take any payment", "texto": "Get paid in person, online, or over the phone, then access your revenue instantly.¹ Make checkout a breeze with features that help you keep the line moving.", "ref": "linha-1" },
+      { "titulo": "Sell anything", "texto": "Add menu items, products, services, or custom packages to a single item library. Ring up sales quickly with a custom item grid, and always know what’s in stock.", "ref": "linha-2" },
+      { "titulo": "Move fast and stay organized", "texto": "Get up and running quickly with an intuitive POS that’s easy to use for you and your team. No training required.", "ref": "linha-3" },
+      { "titulo": "Learn and grow with each sale", "texto": "Get real-time data and business insights on all aspects of your business — your sales, your team, and your customers.", "ref": "linha-4" }
+    ]
+  },
+  "carrossel": {
+    "titulo": "Hardware to upgrade your every day",
+    "itens": [
+      { "titulo": "Square Handheld", "texto": "The powerful, feature-packed POS that fits in your pocket.", "link": "Explore Square Handheld", "ref": "aparelho-1" },
+      { "titulo": "Square Terminal", "texto": "A fully integrated POS with built-in payments and a receipt printer.", "link": "Explore Square Terminal", "ref": "aparelho-2" },
+      { "titulo": "Square Register (2nd generation)", "texto": "Two responsive screens for lightning-fast checkout.", "link": "Explore Square Register" }
+    ]
+  },
+  "cartoes": {
+    "titulo": "Get more done with Square",
+    "itens": [
+      { "titulo": "Keep customers engaged", "texto": "Run email and text message marketing campaigns to drive repeat sales.", "link": "Explore Square Marketing", "ref": "cartao-1" },
+      { "titulo": "Build an online store", "texto": "Sell online and offer in-store pickup, shipping, and local delivery.", "link": "Explore Square Websites" }
+    ]
+  },
+  "precos": {
+    "titulo": "Choose the value-packed plan that fits you best",
+    "sub": "No locked-in contracts. Upgrade or cancel anytime.",
+    "botao": "Learn more",
+    "rotuloDesc": "",
+    "planos": [
+      { "nome": "Square Free", "desc": "Business essentials to start selling in-person, online, over the phone, or in the field. Only pay when you take a payment.", "preco": "$0/mo.", "unidade": "per location", "botao": "Get started" },
+      { "nome": "Square Plus", "selo": "Best value", "desc": "Get access to lower processing fees and more advanced features designed for your industry.", "preco": "$49/mo.", "unidade": "per location", "botao": "Try free for 30 days" },
+      { "nome": "Square Premium", "desc": "Unlock the lowest processing fees, 24/7 support, and a full suite of capabilities to meet the complexity of your operations.", "preco": "$149/mo.", "unidade": "per location", "botao": "Try free for 30 days" }
+    ],
+    "largo": { "rotulo": "Square Pro", "titulo": "Get custom pricing", "botao": "Talk to our team", "texto": "If you process over $250,000 per year, talk to our team to see if you’re eligible for custom pricing and processing fees. You can also ask about hardware discounts, onboarding and implementation support, technical specialists, and account management." }
+  },
+  "faq": {
+    "titulo": "FAQ",
+    "itens": [
+      ["What is a POS (Point of Sale) system?", "A POS system, or point-of-sale system, is a combination of hardware and software that enables businesses to accept payments, track sales, manage inventory, and more from a single platform."],
+      ["How do I take payments with Square Point of Sale?", "Download the Square Point of Sale app to get started."],
+      ["How long does it take to set up my point of sale?", "You can get up and running on your own in just a few minutes."],
+      ["How does Square Point of Sale work for different business types?", "When setting up your POS, select a mode to get quick access to features."],
+      ["Can I change my plan after I choose one?", "Yes."],
+      ["Do I need to purchase hardware to use Square Point of Sale?", "No."]
+    ]
+  },
+  "cta": {
+    "titulo": "Try Square",
+    "botoes": [
+      { "texto": "Get started", "href": "#", "tipo": "contorno" },
+      { "texto": "Contact sales", "href": "#", "tipo": "cheio" }
+    ]
+  },
+  "notas": {
+    "colunas": [
+      "<p>¹Instant availability requires a Square Checking account. Funds generated through Square payment processing services are generally available in the Square Checking account balance immediately after a payment is processed. Fund availability times may vary due to technical issues.</p><p>Instant availability does not apply to funds added to the Square Checking account via ACH transfer. ACH credit transfers to your account may take 1–2 business days.</p><p>Block, Inc. is a financial services platform and not an FDIC-insured bank. FDIC deposit insurance coverage only protects against the failure of an FDIC-insured deposit institution. If you have a Square Checking account, up to $250,000 of your balance may be covered by FDIC insurance on a pass-through basis through Sutton Bank, Member FDIC, subject to aggregation of the account holder’s funds held at Sutton Bank and if certain conditions have been met.</p>",
+      "<p>²Offline payments are processed automatically when you reconnect your device to the internet and will be declined if you do not reconnect to the internet within 24 hours of taking your first offline payment. By enabling offline payments, you are responsible for any expired, declined, or disputed payments accepted while offline. Square is unable to provide customer contact information for payments declined while offline. Offline payments are not supported on Square Reader for contactless and chip (1st generation, v1 and v2). Learn more about how to enable and use offline payments <a href=\"#\">here</a>.</p><p>³Instant transfer requires a linked bank account or supported debit card and costs a fee per transfer. Funds are subject to your bank’s availability schedule. Minimum amount is $25 and maximum is $10,000 in a single transfer. New Square sellers may be limited to $2,000 per day. Fund availability times may vary due to technical issues.</p>"
+    ]
+  }
+}

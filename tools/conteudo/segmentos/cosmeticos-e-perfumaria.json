@@ -1,0 +1,247 @@
+{
+ "slug": "segmentos/cosmeticos-e-perfumaria",
+ "figura": [
+  "/assets/lojistas/cosmeticos-e-perfumaria.webp",
+  "Atendente de loja de cosméticos organizando produtos na prateleira do balcão"
+ ],
+ "title": "Sistema para Loja de Cosméticos e Perfumaria | SoftPay",
+ "description": "Sistema para loja de cosméticos e perfumaria com PDV, estoque por variação, controle de revendedora, fiado e curva ABC. Teste grátis por 7 dias, sem cartão.",
+ "h1": "Sistema para loja de cosméticos e perfumaria",
+ "intro": "Cosmético tem muita variação — tom, tamanho, linha — e muita venda por indicação. O SoftPay organiza o estoque por variação, guarda o histórico de quem compra sempre e controla o fiado da revendedora.",
+ "breadcrumbs": [
+  [
+   "Segmentos",
+   "/segmentos/"
+  ],
+  [
+   "Cosméticos e perfumaria",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay controla tom e tamanho de cada produto?",
+   "Sim. O controle de variações está a partir do plano Loja, de R$ 89/mês. Cada tom ou tamanho tem a própria quantidade em estoque."
+  ],
+  [
+   "Dá para controlar o que a revendedora leva fiado?",
+   "Sim. Ela fica cadastrada como cliente, com saldo e histórico. A partir do plano Loja, a cobrança é enviada por link de Pix no WhatsApp."
+  ],
+  [
+   "O sistema calcula comissão de revendedora?",
+   "Não. O SoftPay controla o fiado e o saldo, mas não calcula comissão nem gerencia níveis de revenda."
+  ],
+  [
+   "Controla a validade dos cosméticos?",
+   "Esse é um ponto a confirmar com o suporte antes de contratar. Em cosmético a validade é importante e não deve ser assumida sem verificação."
+  ],
+  [
+   "Serve para quem vende só pelo WhatsApp e Instagram?",
+   "Sim. A loja online com Pix, a partir do plano Loja, funciona como catálogo para enviar ao cliente, e o PDV registra a venda mesmo sem loja física."
+  ],
+  [
+   "Guarda o histórico do que cada cliente comprou?",
+   "Sim, pelo cadastro de clientes. É o que permite lembrar o tom e a linha de quem volta."
+  ],
+  [
+   "Serve para salão de beleza que também vende produto?",
+   "Só para a parte de loja. O SoftPay não tem agenda de horário nem comanda de serviço — se o serviço é a maior parte do faturamento, um sistema de salão atende melhor."
+  ],
+  [
+   "Preciso emitir nota fiscal?",
+   "Depende do seu regime — confirme com o seu contador. A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação."
+  ]
+ ],
+ "cta_title": "Organize seu estoque de variações",
+ "cta_text": "Cadastre as linhas de maior giro com tom e tamanho, registre as vendas e veja a recompra ficar fácil. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Loja de roupas",
+   "/segmentos/loja-de-roupas/",
+   "Outro caso de variações"
+  ],
+  [
+   "Controle de clientes",
+   "/solucoes/controle-de-clientes/",
+   "Histórico e recompra"
+  ],
+  [
+   "Controle de fiado",
+   "/solucoes/controle-de-fiado/",
+   "Saldo da revendedora"
+  ],
+  [
+   "Loja online",
+   "/solucoes/loja-online/",
+   "Catálogo com Pix"
+  ],
+  [
+   "Controle de estoque",
+   "/solucoes/sistema-de-estoque/",
+   "Variações e curva ABC"
+  ],
+  [
+   "Loja de joias",
+   "/segmentos/loja-de-joias/",
+   "Peça a peça, com valor alto"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "a-rotina-de-quem-vende-cosmetico",
+   "titulo": "A rotina de quem vende cosmético",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "A base existe em doze tons; o batom, em vinte. O perfume tem 50 ml e 100 ml. Cada uma dessas é uma unidade de estoque diferente, e o cliente pergunta sempre pela específica — o tom exato, o tamanho exato."
+    },
+    {
+     "tipo": "p",
+     "texto": "Boa parte da venda vem de indicação e de recompra: a pessoa gostou, acabou, volta. Quem registra o que ela levou consegue vender de novo; quem não registra recomeça do zero a cada visita."
+    },
+    {
+     "tipo": "p",
+     "texto": "E há a revendedora — a cliente que leva em quantidade para revender, muitas vezes fiado, e acerta depois. Ela é volume garantido e, sem controle, é também o maior risco de prejuízo silencioso."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "os-problemas-que-aparecem-sempre",
+   "titulo": "Os problemas que aparecem sempre",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O tom que a cliente quer acabou e ninguém viu.</strong> Em cosmético, o tom errado não substitui o certo: a venda simplesmente não acontece.",
+      "<strong>Produto parado perde validade.</strong> Cosmético tem prazo, e o item encalhado vira perda, não só espaço ocupado.",
+      "<strong>A revendedora leva fiado e o saldo se perde.</strong> Sem registro, o acerto vira discussão.",
+      "<strong>A recompra depende de memória.</strong> Ninguém lembra o tom que a cliente usa, e a chance de vender de novo se perde.",
+      "<strong>Muita variação, margem confusa.</strong> Sem custo por item, não dá para saber qual linha realmente dá resultado."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-com-o-softpay",
+   "titulo": "O que muda com o SoftPay",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "Estoque por tom, tamanho e linha"
+    },
+    {
+     "tipo": "p",
+     "texto": "Cada variação tem a própria quantidade, com custo e preço. A baixa é automática na venda — e a resposta sobre o tom específico deixa de depender de alguém ir olhar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cliente com histórico de compra"
+    },
+    {
+     "tipo": "p",
+     "texto": "O cadastro guarda o que cada pessoa levou. Numa loja de cosméticos isso é o motor da recompra: saber o tom e a linha de quem volta."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Fiado e acerto da revendedora"
+    },
+    {
+     "tipo": "p",
+     "texto": "A revendedora fica cadastrada como cliente, com saldo e histórico. A partir do plano Loja, a cobrança sai por link de Pix no WhatsApp, o que torna o acerto objetivo."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Curva ABC entre tantas variações"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, a curva ABC mostra quais linhas sustentam o faturamento. Com centenas de variações, é o único jeito de decidir a compra sem chutar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Catálogo online com Pix"
+    },
+    {
+     "tipo": "p",
+     "texto": "A partir do plano Loja, você publica o catálogo e recebe por Pix — o formato natural de quem já vende por WhatsApp e Instagram."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-aqui",
+   "titulo": "O que o SoftPay não faz aqui",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não tem controle de validade confirmado.</strong> Em cosmético isso pesa; confirme com o suporte antes de contratar contando com esse recurso.",
+      "<strong>Não faz gestão de comissão de revendedora.</strong> O fiado e o saldo são controlados; cálculo de comissão e níveis de revenda ficam fora.",
+      "<strong>Não integra com marketplace nem com Instagram Shopping.</strong> A loja online é catálogo próprio com Pix.",
+      "<strong>Não é sistema para salão de beleza.</strong> Não há agenda de horário nem comanda de serviço. Se você vende produto <em>e</em> presta serviço com hora marcada, o SoftPay cobre só a parte de loja."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "perguntas-que-voce-passa-a-conseguir-responder",
+   "titulo": "Perguntas que você passa a conseguir responder",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Ainda tenho aquele tom específico?",
+      "O que essa cliente levou da última vez?",
+      "Quanto a revendedora está devendo?",
+      "Qual linha sustenta o meu faturamento?",
+      "Que produto está parado há mais tempo?",
+      "Qual a minha margem real por linha?"
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "qual-plano-faz-sentido",
+   "titulo": "Qual plano faz sentido",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "Para cosméticos e perfumaria"
+     ],
+     "linhas": [
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "PDV, caixa, fiado e estoque essencial, com 1 usuário"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>O mais indicado:</strong> variações de tom e tamanho, curva ABC, catálogo online e cobrança por Pix. Até 3 usuários"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "Quando é preciso emitir NF-e e NFC-e e a equipe é maior. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

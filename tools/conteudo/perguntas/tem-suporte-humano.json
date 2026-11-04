@@ -1,0 +1,98 @@
+{
+ "slug": "perguntas/tem-suporte-humano",
+ "title": "O Suporte do SoftPay é Humano? | SoftPay",
+ "description": "Como funciona o suporte do SoftPay: atendimento humano pelo WhatsApp, ajuda na configuração inicial e cobertura nacional.",
+ "h1": "O suporte é humano?",
+ "intro": "Sim. E para quem está saindo do caderno, essa costuma ser a diferença entre configurar o sistema e desistir na primeira dúvida.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Tem suporte humano",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Qual o canal de atendimento?",
+   "WhatsApp no (99) 9 8430-4630 e e-mail suporte@softpaybr.com."
+  ],
+  [
+   "O suporte ajuda a configurar o sistema?",
+   "Sim, inclusive na configuração inicial e no cadastro dos primeiros produtos."
+  ],
+  [
+   "Atende em todo o Brasil?",
+   "Sim. O sistema é usado pela internet e o atendimento é nacional."
+  ],
+  [
+   "Tenho suporte durante o teste grátis?",
+   "Sim. O suporte atende durante os 7 dias de teste, que é justamente quando as dúvidas de configuração aparecem."
+  ],
+  [
+   "O suporte é robô?",
+   "Não. O atendimento é feito por pessoas da equipe."
+  ]
+ ],
+ "related": [
+  [
+   "Contato",
+   "/contato/",
+   "Todos os canais"
+  ],
+  [
+   "É difícil aprender?",
+   "/perguntas/e-dificil-aprender/",
+   "Por onde começar"
+  ],
+  [
+   "Sobre o SoftPay",
+   "/sobre/",
+   "Quem está por trás"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Sim. O atendimento é feito por <strong>pessoas da equipe, pelo WhatsApp</strong> — não por robô de autoatendimento. O suporte ajuda inclusive na configuração inicial.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "no-que-o-suporte-costuma-ajudar",
+   "titulo": "No que o suporte costuma ajudar",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Configurar a conta e cadastrar os primeiros produtos.",
+      "Orientar a importação de dados de uma planilha ou de outro sistema.",
+      "Tirar dúvidas do dia a dia sobre PDV, estoque, caixa e fiado.",
+      "Confirmar o que está disponível em cada plano antes de você contratar.",
+      "Auxiliar na recuperação de acesso à conta."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-falar-com-a-gente",
+   "titulo": "Como falar com a gente",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O canal principal é o WhatsApp: <strong>(99) 9 8430-4630</strong>. Também dá para escrever para <strong>suporte@softpaybr.com</strong>. O atendimento cobre todo o Brasil."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Pergunte antes de assinar",
+     "texto": "Se você tem uma dúvida específica sobre um recurso — controle de validade, permissões por perfil, limite de fiado, situação da emissão fiscal —, pergunte antes de contratar. É mais rápido que descobrir depois."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-11-02"
+}

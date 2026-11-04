@@ -35,7 +35,8 @@ def organizacao():
     # sameAs: só perfis que existem e respondem 200. O aplicativo e a página do
     # SoftPay no LinkedIn (criada em 02/11/2026, nome "SoftPay PDV", com a
     # desambiguação da Softpay ApS na visão geral). Diretório entra aqui só
-    # depois que a ficha pública estiver no ar (G2 e B2B Stack em análise).
+    # depois que a ficha pública estiver no ar: FindSaaS (02/11/2026) e Portal
+    # Software (03/11/2026, selo Verificado) já estão; B2B Stack em análise.
     return {
         "@type": "Organization",
         "@id": ID_ORG,
@@ -73,7 +74,9 @@ def organizacao():
             "telephone": "+55-99-98430-4630",
             "availableLanguage": "pt-BR",
         }],
-        "sameAs": [APP_SITE + "/", "https://www.linkedin.com/company/softpaybr/"],
+        "sameAs": [APP_SITE + "/", "https://www.linkedin.com/company/softpaybr/",
+                   "https://www.findsaas.com.br/saas/softpay",
+                   "https://portalsoftware.com.br/software/softpay"],
     }
 
 

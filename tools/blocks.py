@@ -5,6 +5,25 @@ import re
 import unicodedata
 
 
+class Bloco(str):
+    """O HTML de sempre, com o mesmo conteúdo em forma de dado (`.dado`).
+
+    O molde clonado de cada rota (tools/moldes/vestir.mjs) lê o `.dado` para pôr
+    cada parte no bloco do mesmo tipo da referência; o HTML continua idêntico
+    para quem ainda usa o molde de leitura.
+    """
+
+    def __new__(cls, html, dado):
+        obj = str.__new__(cls, html)
+        obj.dado = dado
+        return obj
+
+
+def dado_de(parte):
+    """Dado de uma parte; texto solto vira bloco de HTML cru."""
+    return getattr(parte, "dado", None) or {"tipo": "html", "html": str(parte)}
+
+
 def slug(texto):
     """Gera a âncora de uma seção a partir do próprio título."""
     t = re.sub(r"<[^>]+>", "", texto)
@@ -16,32 +35,34 @@ def slug(texto):
 def sec(titulo, *partes, id=None):
     # Toda seção ganha âncora: permite link direto para um trecho específico.
     aid = id or slug(titulo)
-    return ('      <section class="page-section" id="%s">\n        <h2>%s</h2>\n%s\n      </section>'
-            % (aid, titulo, "\n".join(partes)))
+    return Bloco('      <section class="page-section" id="%s">\n        <h2>%s</h2>\n%s\n      </section>'
+                 % (aid, titulo, "\n".join(partes)),
+                 {"tipo": "secao", "id": aid, "titulo": titulo, "partes": [dado_de(x) for x in partes]})
 
 
 def p(texto):
-    return "        <p>%s</p>" % texto
+    return Bloco("        <p>%s</p>" % texto, {"tipo": "p", "texto": texto})
 
 
 def ul(*itens):
     li = "\n".join("          <li>%s</li>" % i for i in itens)
-    return "        <ul class=\"page-list\">\n%s\n        </ul>" % li
+    return Bloco("        <ul class=\"page-list\">\n%s\n        </ul>" % li, {"tipo": "ul", "itens": list(itens)})
 
 
 def ol(*itens):
     li = "\n".join("          <li>%s</li>" % i for i in itens)
-    return "        <ol class=\"page-steps\">\n%s\n        </ol>" % li
+    return Bloco("        <ol class=\"page-steps\">\n%s\n        </ol>" % li, {"tipo": "ol", "itens": list(itens)})
 
 
 def h3(texto):
-    return "        <h3>%s</h3>" % texto
+    return Bloco("        <h3>%s</h3>" % texto, {"tipo": "h3", "texto": texto})
 
 
 def nota(texto, titulo="Importante"):
-    return ('        <aside class="page-note">\n'
-            '          <strong>%s</strong>\n          <p>%s</p>\n'
-            '        </aside>' % (titulo, texto))
+    return Bloco('        <aside class="page-note">\n'
+                 '          <strong>%s</strong>\n          <p>%s</p>\n'
+                 '        </aside>' % (titulo, texto),
+                 {"tipo": "nota", "titulo": titulo, "texto": texto})
 
 
 def exemplo(titulo, linhas, rodape=None):
@@ -54,11 +75,13 @@ def exemplo(titulo, linhas, rodape=None):
                     '              <span class="calc-value">%s</span>\n'
                     '            </div>' % (c, rot, val))
     fim = ('\n          <p class="calc-note">%s</p>' % rodape) if rodape else ""
-    return ('        <div class="page-example">\n'
-            '          <span class="example-badge">Exemplo ilustrativo</span>\n'
-            '          <h3>%s</h3>\n'
-            '          <div class="calc">\n%s\n          </div>%s\n'
-            '        </div>' % (titulo, "\n".join(rows), fim))
+    return Bloco('        <div class="page-example">\n'
+                 '          <span class="example-badge">Exemplo ilustrativo</span>\n'
+                 '          <h3>%s</h3>\n'
+                 '          <div class="calc">\n%s\n          </div>%s\n'
+                 '        </div>' % (titulo, "\n".join(rows), fim),
+                 {"tipo": "exemplo", "titulo": titulo, "rodape": rodape,
+                  "linhas": [{"rotulo": r, "valor": v, "classe": c} for r, v, c in linhas]})
 
 
 def tabela(cabecalho, linhas):
@@ -69,9 +92,10 @@ def tabela(cabecalho, linhas):
     trs = "\n".join("            <tr>%s</tr>" %
                     "".join('<td data-rotulo="%s">%s</td>' % (cabecalho[i] if i < len(cabecalho) else "", c)
                             for i, c in enumerate(l)) for l in linhas)
-    return ('        <div class="table-wrap">\n          <table class="page-table">\n'
-            '            <thead><tr>%s</tr></thead>\n            <tbody>\n%s\n            </tbody>\n'
-            '          </table>\n        </div>' % (th, trs))
+    return Bloco('        <div class="table-wrap">\n          <table class="page-table">\n'
+                 '            <thead><tr>%s</tr></thead>\n            <tbody>\n%s\n            </tbody>\n'
+                 '          </table>\n        </div>' % (th, trs),
+                 {"tipo": "tabela", "cabecalho": list(cabecalho), "linhas": [list(l) for l in linhas]})
 
 
 def cards(itens):
@@ -84,4 +108,6 @@ def cards(itens):
         else:
             out.append('          <li><div><strong>%s</strong><span>%s</span></div></li>'
                        % (it[0], it[1]))
-    return '        <ul class="card-grid">\n%s\n        </ul>' % "\n".join(out)
+    return Bloco('        <ul class="card-grid">\n%s\n        </ul>' % "\n".join(out),
+                 {"tipo": "cards", "itens": [{"titulo": it[0], "texto": it[1], "href": it[2] if len(it) == 3 else None}
+                                             for it in itens]})

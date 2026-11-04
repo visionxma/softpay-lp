@@ -1,0 +1,101 @@
+{
+ "slug": "perguntas/posso-usar-o-softpay-no-celular",
+ "title": "Posso Usar o SoftPay no Celular? | SoftPay",
+ "description": "Como usar o SoftPay no celular: acesso pelo navegador, sem instalar aplicativo, com os dados sincronizados entre computador e telefone.",
+ "h1": "Posso usar o SoftPay no celular?",
+ "intro": "Sim — e sem instalar nada. O SoftPay roda no navegador, então o celular acessa a mesma conta do computador do balcão.",
+ "breadcrumbs": [
+  [
+   "Perguntas",
+   "/perguntas/"
+  ],
+  [
+   "Posso usar no celular",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "Preciso baixar um aplicativo?",
+   "Não. O SoftPay funciona pelo navegador do celular, sem instalação."
+  ],
+  [
+   "Funciona em Android e iPhone?",
+   "Por rodar no navegador, funciona nos dois. Se tiver dúvida sobre um aparelho específico, confirme com o suporte."
+  ],
+  [
+   "Os dados ficam sincronizados?",
+   "Sim. Como ficam na nuvem, o que você registra em um dispositivo aparece no outro."
+  ],
+  [
+   "Dá para vender pelo celular?",
+   "Sim, o acesso é o mesmo. Para volume alto no balcão, o computador costuma ser mais confortável."
+  ],
+  [
+   "Funciona sem internet?",
+   "Não. O sistema é acessado pela internet e depende de conexão."
+  ]
+ ],
+ "related": [
+  [
+   "Múltiplas lojas",
+   "/solucoes/multiplas-lojas/",
+   "Acesso de qualquer lugar"
+  ],
+  [
+   "Sistema PDV",
+   "/solucoes/sistema-pdv/",
+   "Venda no navegador"
+  ],
+  [
+   "Preciso instalar?",
+   "/perguntas/preciso-instalar/",
+   "Sobre instalação"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "      <div class=\"answer-lead\">\n        <span class=\"answer-tag\">Resposta direta</span>\n        <p>Sim. O SoftPay é acessado pelo <strong>navegador</strong>, sem instalar aplicativo. Como os dados ficam na nuvem, o que você registra no computador aparece no celular e vice-versa.</p>\n      </div>"
+  },
+  {
+   "tipo": "secao",
+   "id": "para-que-o-celular-costuma-servir-na-pratica",
+   "titulo": "Para que o celular costuma servir na prática",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "Consultar preço e estoque enquanto organiza a prateleira.",
+      "Verificar o saldo de fiado de um cliente longe do balcão.",
+      "Acompanhar as vendas do dia sem estar na loja.",
+      "Registrar venda em feira, evento ou entrega."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Na maioria das lojas o computador continua sendo o posto principal de venda, e o celular funciona como extensão — consulta e acompanhamento."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-considerar",
+   "titulo": "O que considerar",
+   "partes": [
+    {
+     "tipo": "nota",
+     "titulo": "Sobre conexão",
+     "texto": "O SoftPay depende de conexão com a internet. Se a sua loja fica em região com instabilidade de sinal, converse com o suporte antes de contratar."
+    },
+    {
+     "tipo": "p",
+     "texto": "A tela do celular é menor, então tarefas de cadastro em volume ficam mais confortáveis no computador. Consulta e venda avulsa funcionam bem no telefone."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-08"
+}

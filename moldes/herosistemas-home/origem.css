@@ -1,0 +1,58 @@
+/* origem.css — só na prova: troca as variáveis do molde pelas da Hero Sistemas, medidas na captura de 03/11/2026
+   (Inter; azul rgb(57,99,173); tinta #17181C; títulos em preto; cinza #767988; botão laranja #F97316 do formulário;
+   faixa #F3F4F6; cinza dos depoimentos #EDEEEE; marinho do FAQ e do consultor #0F2A6E; degradê índigo do app com
+   dois brilhos; letra do sistema no app; lilás do título do app; letra-d'água "HERO" na Space Ranger, a 5 %).
+   A página vestida não carrega este arquivo. */
+
+.mx-herosistemas-home {
+  --h-titulo: "Inter", system-ui, sans-serif;
+  --h-sans: "Inter", system-ui, sans-serif;
+  --h-marca-letra: "Space Ranger", sans-serif;
+  --h-ls-h1: 0em;
+  --h-ls-h2: 0em;
+  --h-ls-app: -0.04em;
+  --h-peso-titulo: 600;
+  --h-tinta: #17181c;
+  --h-texto: #17181c;
+  --h-titulo-cor: #000000;
+  --h-cinza: #767988;
+  --h-azul: #3963ad;
+  --h-azul-forte: #2f5394;
+  --h-azul-anel: #8fa9d6;
+  --h-marinho: #0f2a6e;
+  --h-faq-fundo: #0f2a6e;
+  --h-consultor-fundo: #0f2a6e;
+  --h-faixa: #f3f4f6;
+  --h-depo-fundo: #edeeee;
+  --h-cartao-plano: #fafbfb;
+  --h-linha: #edeef0;
+  --h-campo-linha: rgba(64, 113, 210, .17);
+  --h-form-borda: rgba(64, 113, 210, .09);
+  --h-acao: #f97316;
+  --h-acao-forte: #ea580c;
+  --h-verde: #25b225;
+  --h-alerta: #d00000;
+  --h-xis: #ff5d5d;
+  --h-lilas: #aebeff;
+  --h-pil-borda: #649cff;
+  --h-pil-icone: #d0efff;
+  --h-grad-claro: #5dc5eb;
+  --h-cartao-p: #7a7a7a;
+  --h-app-letra: -apple-system, system-ui, sans-serif;
+  --h-app-titulo: -apple-system, system-ui, sans-serif;
+  --h-app-olho: #d8ddff;
+  --h-app-check: #55bd5a;
+  --h-app-fundo:
+    radial-gradient(circle 210px at 30px 30px, rgba(96, 116, 230, .48), transparent),
+    radial-gradient(circle 270px at 340px 1466px, rgba(154, 86, 255, .55), transparent),
+    linear-gradient(135deg, #1f2a67 0%, #1e2a5e 35%, #333a93 70%, #5a46c9 100%);
+  --h-marca-cor: rgba(255, 255, 255, .05);
+}
+@media (min-width: 48rem) {
+  .mx-herosistemas-home {
+    --h-app-fundo:
+      radial-gradient(circle 210px at 30px 30px, rgba(96, 116, 230, .48), transparent),
+      radial-gradient(circle 270px at 1390px 891px, rgba(154, 86, 255, .55), transparent),
+      linear-gradient(135deg, #1f2a67 0%, #1e2a5e 35%, #333a93 70%, #5a46c9 100%);
+  }
+}

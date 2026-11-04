@@ -11,6 +11,24 @@
         ],
         "createdAt": "2026-09-25T15:48:22.354Z",
         "reason": "Claude: o nome 'Inter' é só o apelido que o CSS clonado da referência chama; o @font-face aponta para os arquivos SoftPay Texto (Funnel Sans), então a letra desenhada não é a Inter"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "public/solucoes/sistema-pdv/index.html"
+        ],
+        "createdAt": "2026-11-03T16:33:33.753Z",
+        "reason": "Claude 03/11/2026: falso positivo da leitura estática. mxq-s5/mxq-s8 são faixas de ponta a ponta com padding-block 72-120px e o texto dentro de um contêiner centrado com margem; mxq-palco__cartao é cartão de foto (imagem em inset:0 de propósito) com o texto numa camada de padding 24px; mxq-faq tem só a linha de cima e cada summary leva padding-block 20px. O de qa 7/7 mediu no navegador."
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "public/solucoes/sistema-pdv/index.html"
+        ],
+        "createdAt": "2026-11-03T16:33:34.016Z",
+        "reason": "Claude 03/11/2026: falso positivo da leitura estática (não resolve clamp nem o atalho font:). Os h2 do molde square-pdv têm 32-56px (mxq-faq__titulo clamp(32px..40px), mxq-s5__titulo clamp(44px..56px)) contra corpo de 16px."
       }
     ]
   }

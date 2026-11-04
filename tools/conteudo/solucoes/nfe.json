@@ -1,0 +1,280 @@
+{
+ "slug": "solucoes/nfe",
+ "figura": [
+  "/assets/lojistas/distribuidora.webp",
+  "Operação de distribuidora, onde a nota fiscal faz parte da rotina"
+ ],
+ "title": "Sistema para Emitir NF-e (Nota Fiscal Eletrônica) | SoftPay",
+ "description": "Emissão de NF-e com cadastro fiscal e pacote do contador. Planos a partir de R$ 65/mês. Teste grátis por 7 dias, sem cartão.",
+ "h1": "Emissão de NF-e",
+ "intro": "A NF-e é a nota fiscal eletrônica usada nas operações entre empresas e em vendas que exigem documento fiscal completo. O SoftPay cobre a emissão nos planos Nota Fiscal e ERP Completo.",
+ "breadcrumbs": [
+  [
+   "Soluções",
+   "/solucoes/"
+  ],
+  [
+   "NF-e",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay emite NF-e?",
+   "A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação atual com o suporte antes de contratar contando com ela."
+  ],
+  [
+   "Qual a diferença entre NF-e e NFC-e?",
+   "A NF-e é usada em operações entre empresas e em vendas que exigem documento fiscal completo. A NFC-e é o cupom da venda ao consumidor final, no balcão."
+  ],
+  [
+   "Em qual plano fica mais barato só a nota?",
+   "No plano Nota Fiscal, de R$ 65/mês, que traz a parte fiscal sem PDV nem estoque — para quem já tem outro sistema de gestão. Até 2 usuários."
+  ],
+  [
+   "O sistema calcula meus impostos?",
+   "Não. O SoftPay emite o documento com a configuração fiscal definida pelo seu contador. Apuração, guia e declaração continuam com ele."
+  ],
+  [
+   "Quem define CFOP, NCM e CST?",
+   "Seu contador. O sistema emite com o que estiver configurado — ele não decide a tributação da sua operação."
+  ],
+  [
+   "Preciso de certificado digital?",
+   "O certificado não está incluso. Confirme com o suporte qual tipo é aceito e o que você precisa providenciar."
+  ],
+  [
+   "Emite nota de serviço (NFS-e)?",
+   "Não. A NFS-e é municipal e fica fora do SoftPay."
+  ],
+  [
+   "E o MDF-e, para transporte?",
+   "Consta nos planos como recurso em ativação. Confirme com o suporte e com seu contador antes de contar com ele."
+  ],
+  [
+   "Consigo ver as notas que meus fornecedores emitiram?",
+   "As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal."
+  ]
+ ],
+ "cta_title": "Confirme a emissão antes de assinar",
+ "cta_text": "Fale com o suporte sobre a situação da emissão fiscal no seu estado e no seu regime, e use os 7 dias grátis para testar o resto do sistema. Sem cartão.",
+ "related": [
+  [
+   "NFC-e",
+   "/solucoes/nfce/",
+   "O cupom da venda no balcão"
+  ],
+  [
+   "Distribuidora",
+   "/segmentos/distribuidora/",
+   "Nota em quase toda saída"
+  ],
+  [
+   "Loja de autopeças",
+   "/segmentos/loja-de-autopecas/",
+   "Venda para oficina"
+  ],
+  [
+   "Materiais de construção",
+   "/segmentos/materiais-de-construcao/",
+   "Venda para obra e empresa"
+  ],
+  [
+   "Sistema financeiro",
+   "/solucoes/sistema-financeiro/",
+   "O que é do contador"
+  ],
+  [
+   "Preços",
+   "/#pricing",
+   "O que tem em cada plano"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "leia-isto-antes-de-contratar-por-causa-da-nota",
+   "titulo": "Leia isto antes de contratar por causa da nota",
+   "partes": [
+    {
+     "tipo": "nota",
+     "titulo": "Recurso em ativação",
+     "texto": "A emissão fiscal consta nos planos como <strong>recurso em ativação</strong>. Se a nota é condição para você fechar negócio, <strong>confirme a situação atual com o suporte antes de contratar</strong> — não assuma que está disponível hoje na sua conta e no seu estado."
+    },
+    {
+     "tipo": "p",
+     "texto": "Colocamos esse aviso no primeiro bloco de propósito. Descobrir isso depois de assinar seria pior para você e para nós."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-problema",
+   "titulo": "O problema",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quem vende para empresa não escolhe: sem NF-e, não há venda. O cliente exige o documento para lançar a compra na contabilidade dele, e a operação simplesmente não acontece sem isso."
+    },
+    {
+     "tipo": "p",
+     "texto": "A saída comum é emitir a nota num sistema separado, digitando de novo o que já foi vendido. É trabalho dobrado, e cada digitação repetida é uma chance de erro — em documento que tem consequência fiscal."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-isso-aparece-na-sua-operacao",
+   "titulo": "Como isso aparece na sua operação",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>A venda é digitada duas vezes:</strong> uma no sistema da loja, outra no emissor de nota.",
+      "<strong>O número na nota não bate com o da venda</strong>, e a diferença só aparece na conferência do contador.",
+      "<strong>O contador cobra os arquivos todo mês</strong> e alguém precisa juntar tudo na mão.",
+      "<strong>A nota de fornecedor se perde.</strong> Chega por e-mail, ninguém baixa, e a entrada de mercadoria fica sem documento.",
+      "<strong>Você perde venda</strong> porque não consegue emitir no ato."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-o-softpay-resolve",
+   "titulo": "Como o SoftPay resolve",
+   "partes": [
+    {
+     "tipo": "h3",
+     "texto": "A nota sai da venda que já existe"
+    },
+    {
+     "tipo": "p",
+     "texto": "O documento é emitido a partir da venda registrada no sistema, sem redigitar produto, quantidade e valor em outro lugar."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Cadastro fiscal da empresa"
+    },
+    {
+     "tipo": "p",
+     "texto": "Os dados fiscais ficam configurados na conta, para a emissão não depender de alguém preencher tudo de novo a cada nota."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Pacote do contador"
+    },
+    {
+     "tipo": "p",
+     "texto": "Os arquivos que o contador precisa ficam disponíveis para envio, em vez de virarem uma coleta manual no fim do mês."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Notas de fornecedor"
+    },
+    {
+     "tipo": "p",
+     "texto": "As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal — parte da rotina de quem compra em volume."
+    },
+    {
+     "tipo": "h3",
+     "texto": "Junto do resto da operação"
+    },
+    {
+     "tipo": "p",
+     "texto": "No ERP Completo, a emissão convive com PDV, estoque, caixa e clientes. No plano Nota Fiscal, ela vem sozinha, para quem já tem outro sistema de gestão."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-nao-faz-na-parte-fiscal",
+   "titulo": "O que o SoftPay não faz na parte fiscal",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O limite entre o sistema e o seu contador, com clareza:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Não é contabilidade.</strong> Não apura imposto, não calcula guia, não faz declaração nem entrega obrigação acessória.",
+      "<strong>Não decide a tributação da sua operação.</strong> CFOP, NCM, CST e regime são definição do seu contador — o sistema emite com o que estiver configurado.",
+      "<strong>Não emite NFS-e</strong>, a nota de serviço. Ela é municipal e fica fora do SoftPay.",
+      "<strong>Não emite CT-e.</strong>",
+      "<strong>MDF-e consta como recurso em ativação.</strong> Se a sua operação exige documento de transporte, confirme com o suporte e com o contador.",
+      "<strong>Certificado digital não está incluso.</strong> Confirme com o suporte qual tipo é aceito e o que você precisa ter."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quem-precisa-de-nf-e",
+   "titulo": "Quem precisa de NF-e",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Nem toda loja precisa. Vale saber em qual caso você está — e confirmar com o seu contador:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Quem vende para outra empresa (PJ).</strong> Aqui a nota costuma ser condição da venda.",
+      "<strong>Distribuidora e atacado.</strong> A maior parte das saídas exige documento fiscal.",
+      "<strong>Quem faz venda interestadual</strong> ou transporta mercadoria entre praças.",
+      "<strong>Quem vende para órgão público</strong> ou participa de licitação."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Para venda no balcão ao consumidor final, o documento costuma ser a <a href=\"/solucoes/nfce/\">NFC-e</a>, não a NF-e."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "em-qual-plano-esta",
+   "titulo": "Em qual plano está",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "Plano",
+      "Preço",
+      "A emissão neste plano"
+     ],
+     "linhas": [
+      [
+       "Nota Fiscal",
+       "R$ 65/mês",
+       "<strong>Só a parte fiscal:</strong> emissão de NF-e e NFC-e, cadastro fiscal, manifestação de notas e pacote do contador. Sem PDV nem estoque. Até 2 usuários"
+      ],
+      [
+       "Comércio",
+       "R$ 69/mês",
+       "<strong>Não emite nota.</strong> PDV, caixa, fiado e estoque essencial"
+      ],
+      [
+       "Loja",
+       "R$ 89/mês",
+       "<strong>Não emite nota.</strong> Estoque avançado, curva ABC, loja online e bot do WhatsApp"
+      ],
+      [
+       "ERP Completo",
+       "R$ 109/mês",
+       "<strong>Gestão e nota no mesmo lugar:</strong> tudo do Loja mais NF-e e NFC-e. Até 10 usuários"
+      ]
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os <a href=\"/#pricing\">planos completos</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}

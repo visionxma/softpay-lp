@@ -1,0 +1,440 @@
+{
+  "dominio": "site.softpaybr.com",
+  "observacao": "Cada rota de SEO é clone, pela captura renderizada, de uma LP diferente (regra rota-de-seo-e-clone-de-lp-diferente). A home (/) é a LP principal e não entra. Fonte por rota: tools/moldes/mapa-de-fontes.tsv. Rota cujo molde ainda não tem molde.mjs continua no molde de leitura até a onda dela.",
+  "exigir": [
+    "/segmentos/mercadinho/",
+    "/segmentos/loja-de-roupas/",
+    "/segmentos/loja-de-variedades/",
+    "/segmentos/papelaria/",
+    "/segmentos/farmacia/",
+    "/segmentos/distribuidora/",
+    "/segmentos/loja-de-celulares-e-acessorios/",
+    "/segmentos/loja-de-autopecas/",
+    "/segmentos/materiais-de-construcao/",
+    "/segmentos/pequeno-comercio/",
+    "/segmentos/loja-de-joias/",
+    "/segmentos/empresas-com-filiais/",
+    "/segmentos/pet-shop/",
+    "/segmentos/loja-de-calcados/",
+    "/segmentos/cosmeticos-e-perfumaria/",
+    "/segmentos/loja-de-bebidas/",
+    "/solucoes/sistema-de-estoque/",
+    "/solucoes/sistema-pdv/",
+    "/solucoes/controle-de-fiado/",
+    "/solucoes/sistema-financeiro/",
+    "/solucoes/nfe/",
+    "/solucoes/nfce/",
+    "/solucoes/loja-online/",
+    "/solucoes/controle-de-clientes/",
+    "/solucoes/bot-whatsapp/",
+    "/solucoes/multiplas-lojas/",
+    "/guias/como-controlar-estoque/",
+    "/guias/como-controlar-caixa-da-loja/",
+    "/guias/como-controlar-fiado/",
+    "/guias/como-calcular-lucro-da-loja/",
+    "/guias/como-calcular-margem-de-lucro/",
+    "/guias/como-organizar-uma-loja/",
+    "/guias/como-sair-do-caderno/",
+    "/guias/vale-a-pena-ter-sistema-de-gestao/",
+    "/guias/quanto-custa-um-sistema-de-gestao/",
+    "/guias/como-escolher-sistema-de-gestao/",
+    "/guias/reforma-tributaria-comercio/",
+    "/guias/reforma-tributaria-mei/",
+    "/guias/meu-sistema-precisa-mudar-reforma-tributaria/",
+    "/guias/checklist-reforma-tributaria-2027/",
+    "/guias/nfe-nfce-o-que-e/",
+    "/perguntas/quanto-custa-um-sistema-para-loja/",
+    "/perguntas/loja-pequena-precisa-de-sistema/",
+    "/perguntas/caderno-ou-sistema/",
+    "/perguntas/excel-ou-sistema-de-gestao/",
+    "/perguntas/qual-sistema-para-mercadinho/",
+    "/perguntas/sistema-de-gestao-e-seguro/",
+    "/perguntas/posso-usar-o-softpay-no-celular/",
+    "/perguntas/posso-migrar-de-outro-sistema/",
+    "/perguntas/e-dificil-aprender/",
+    "/perguntas/preciso-instalar/",
+    "/perguntas/tem-suporte-humano/",
+    "/perguntas/funciona-no-brasil-inteiro/",
+    "/perguntas/posso-usar-em-varios-dispositivos/",
+    "/blog/como-precificar-produto/",
+    "/blog/perda-de-estoque-validade/",
+    "/blog/produtos-parados-no-estoque/",
+    "/blog/troca-e-devolucao-na-loja/",
+    "/blog/como-organizar-vitrine-de-loja/",
+    "/blog/fluxo-de-caixa-loja-pequena/",
+    "/comparativos/softpay-ou-nex/",
+    "/comparativos/softpay-ou-kyte/",
+    "/comparativos/alternativa-ao-bling/",
+    "/sistema-de-gestao-para-pequenos-negocios/",
+    "/sobre/",
+    "/contato/",
+    "/segmentos/",
+    "/solucoes/",
+    "/guias/",
+    "/comparativos/",
+    "/blog/",
+    "/perguntas/"
+  ],
+  "rotas": {
+    "/segmentos/empresas-com-filiais/": {
+      "molde": "lightspeed-varejo",
+      "referencia": "https://www.lightspeedhq.com/pos/retail/",
+      "pasta": "moldes/lightspeed-varejo"
+    },
+    "/segmentos/mercadinho/": {
+      "molde": "clover-varejo",
+      "referencia": "https://www.clover.com/pos-systems",
+      "pasta": "moldes/clover-varejo"
+    },
+    "/solucoes/sistema-pdv/": {
+      "molde": "square-pdv",
+      "referencia": "https://squareup.com/us/en/point-of-sale",
+      "pasta": "moldes/square-pdv"
+    },
+    "/sistema-de-gestao-para-pequenos-negocios/": {
+      "molde": "herosistemas-home",
+      "referencia": "https://herosistemas.com.br/",
+      "pasta": "moldes/herosistemas-home"
+    },
+    "/solucoes/sistema-de-estoque/": {
+      "molde": "lightspeed-estoque",
+      "referencia": "https://www.lightspeedhq.com/pos/retail/inventory-management/",
+      "pasta": "moldes/lightspeed-estoque"
+    },
+    "/segmentos/loja-de-roupas/": {
+      "molde": "shopify-pos-varejo",
+      "referencia": "https://www.shopify.com/pos/retail",
+      "pasta": "moldes/shopify-pos-varejo"
+    },
+    "/segmentos/loja-de-variedades/": {
+      "molde": "marketup",
+      "referencia": "https://marketup.com/",
+      "pasta": "moldes/marketup"
+    },
+    "/segmentos/papelaria/": {
+      "molde": "lojaintegrada-indica",
+      "referencia": "https://criar.lojaintegrada.com.br/indicaae",
+      "pasta": "moldes/lojaintegrada-indica"
+    },
+    "/segmentos/farmacia/": {
+      "molde": "digifarma",
+      "referencia": "https://conteudo.digifarma.com.br/lp-adquira",
+      "pasta": "moldes/digifarma"
+    },
+    "/segmentos/distribuidora/": {
+      "molde": "vhsys-distribuidora-bebidas",
+      "referencia": "https://www.vhsys.com.br/segmentos/sistema-erp-para-distribuidora-de-bebidas/",
+      "pasta": "moldes/vhsys-distribuidora-bebidas"
+    },
+    "/segmentos/loja-de-celulares-e-acessorios/": {
+      "molde": "zettle-leitor",
+      "referencia": "https://www.zettle.com/gb/card-reader",
+      "pasta": "moldes/zettle-leitor"
+    },
+    "/segmentos/loja-de-autopecas/": {
+      "molde": "lightspeed-golfe",
+      "referencia": "https://www.lightspeedhq.com/pos/golf/",
+      "pasta": "moldes/lightspeed-golfe"
+    },
+    "/segmentos/materiais-de-construcao/": {
+      "molde": "hiper-mercadinhos",
+      "referencia": "https://hiper.com.br/solucoes-para-voce/minimercados-e-mercadinhos/",
+      "pasta": "moldes/hiper-mercadinhos"
+    },
+    "/segmentos/pequeno-comercio/": {
+      "molde": "loyverse",
+      "referencia": "https://loyverse.com/",
+      "pasta": "moldes/loyverse"
+    },
+    "/segmentos/loja-de-joias/": {
+      "molde": "square-beleza",
+      "referencia": "https://squareup.com/us/en/beauty",
+      "pasta": "moldes/square-beleza"
+    },
+    "/segmentos/pet-shop/": {
+      "molde": "fourpet-teste",
+      "referencia": "https://www.fourpet.com.br/teste-gratis/",
+      "pasta": "moldes/fourpet-teste"
+    },
+    "/segmentos/loja-de-calcados/": {
+      "molde": "protrole-roupas",
+      "referencia": "https://lp.protrole.com.br/sistema-para-loja-de-roupas/",
+      "pasta": "moldes/protrole-roupas"
+    },
+    "/segmentos/cosmeticos-e-perfumaria/": {
+      "molde": "clover-salao",
+      "referencia": "https://www.clover.com/pos-systems/salon",
+      "pasta": "moldes/clover-salao"
+    },
+    "/segmentos/loja-de-bebidas/": {
+      "molde": "nextar-bebidas",
+      "referencia": "https://www.nextar.com.br/segmento/loja-de-bebidas",
+      "pasta": "moldes/nextar-bebidas"
+    },
+    "/solucoes/controle-de-fiado/": {
+      "molde": "stripe-cobranca",
+      "referencia": "https://stripe.com/invoicing",
+      "pasta": "moldes/stripe-cobranca"
+    },
+    "/solucoes/sistema-financeiro/": {
+      "molde": "ramp-contabil",
+      "referencia": "https://ramp.com/accounting",
+      "pasta": "moldes/ramp-contabil"
+    },
+    "/solucoes/nfe/": {
+      "molde": "bling-nfe",
+      "referencia": "https://www.bling.com.br/funcionalidades/nota-fiscal-eletronica",
+      "pasta": "moldes/bling-nfe"
+    },
+    "/solucoes/nfce/": {
+      "molde": "sumup-pdv",
+      "referencia": "https://www.sumup.com/en-gb/point-of-sale/",
+      "pasta": "moldes/sumup-pdv"
+    },
+    "/solucoes/loja-online/": {
+      "molde": "nuvemshop-gratis",
+      "referencia": "https://www.nuvemshop.com.br/plano-gratis",
+      "pasta": "moldes/nuvemshop-gratis"
+    },
+    "/solucoes/controle-de-clientes/": {
+      "molde": "pipedrive-funil",
+      "referencia": "https://www.pipedrive.com/en/features/sales-pipeline",
+      "pasta": "moldes/pipedrive-funil"
+    },
+    "/solucoes/bot-whatsapp/": {
+      "molde": "anotaai",
+      "referencia": "https://anota.ai/home/plataforma-de-delivery-anota-ai/",
+      "pasta": "moldes/anotaai"
+    },
+    "/solucoes/multiplas-lojas/": {
+      "molde": "razorpay-pdv",
+      "referencia": "https://razorpay.com/pos/",
+      "pasta": "moldes/razorpay-pdv"
+    },
+    "/guias/como-controlar-estoque/": {
+      "molde": "nuvemshop-guia-estoque",
+      "referencia": "https://www.nuvemshop.com.br/blog/controle-de-estoque/",
+      "pasta": "moldes/nuvemshop-guia-estoque"
+    },
+    "/guias/como-controlar-caixa-da-loja/": {
+      "molde": "stripe-guia-pagamentos",
+      "referencia": "https://stripe.com/resources/more/small-business-payment-processing-a-guide",
+      "pasta": "moldes/stripe-guia-pagamentos"
+    },
+    "/guias/como-controlar-fiado/": {
+      "molde": "infinitepay-blog-link",
+      "referencia": "https://www.infinitepay.io/blog/link-de-pagamento-recebimento-na-hora",
+      "pasta": "moldes/infinitepay-blog-link"
+    },
+    "/guias/como-calcular-lucro-da-loja/": {
+      "molde": "contaazul-margem",
+      "referencia": "https://contaazul.com/blog/como-calcular-margem-de-lucro/",
+      "pasta": "moldes/contaazul-margem"
+    },
+    "/guias/como-calcular-margem-de-lucro/": {
+      "molde": "shopify-calculadora-margem",
+      "referencia": "https://www.shopify.com/tools/profit-margin-calculator",
+      "pasta": "moldes/shopify-calculadora-margem"
+    },
+    "/guias/como-organizar-uma-loja/": {
+      "molde": "square-guia-pdv",
+      "referencia": "https://squareup.com/ca/en/the-bottom-line/operating-your-business/best-pos-system",
+      "pasta": "moldes/square-guia-pdv"
+    },
+    "/guias/como-sair-do-caderno/": {
+      "molde": "omie-erros-estoque",
+      "referencia": "https://www.omie.com.br/blog/6-erros-de-gestao-de-estoque-que-a-sua-empresa-precisa-evitar/",
+      "pasta": "moldes/omie-erros-estoque"
+    },
+    "/guias/vale-a-pena-ter-sistema-de-gestao/": {
+      "molde": "shopify-blog-margem",
+      "referencia": "https://www.shopify.com/blog/what-is-profit-margin",
+      "pasta": "moldes/shopify-blog-margem"
+    },
+    "/guias/quanto-custa-um-sistema-de-gestao/": {
+      "molde": "hubspot-calculadora",
+      "referencia": "https://offers.hubspot.com/sales-pricing-calculator",
+      "pasta": "moldes/hubspot-calculadora"
+    },
+    "/guias/como-escolher-sistema-de-gestao/": {
+      "molde": "olist-melhor-erp",
+      "referencia": "https://olist.com/lp/melhor-sistema-erp/",
+      "pasta": "moldes/olist-melhor-erp"
+    },
+    "/guias/reforma-tributaria-comercio/": {
+      "molde": "sebrae-rn-reforma",
+      "referencia": "https://blog.rn.sebrae.com.br/reforma-tributaria-pequenos-negocios/",
+      "pasta": "moldes/sebrae-rn-reforma"
+    },
+    "/guias/reforma-tributaria-mei/": {
+      "molde": "sebrae-rs-mei",
+      "referencia": "https://digital.sebraers.com.br/blog/leis-e-normas/reforma-tributaria-para-mei-o-que-muda-em-2026-e-2027/",
+      "pasta": "moldes/sebrae-rs-mei"
+    },
+    "/guias/meu-sistema-precisa-mudar-reforma-tributaria/": {
+      "molde": "stripe-guia-empresa",
+      "referencia": "https://stripe.com/resources/more/how-to-start-a-business-in-the-us",
+      "pasta": "moldes/stripe-guia-empresa"
+    },
+    "/guias/checklist-reforma-tributaria-2027/": {
+      "molde": "rippling-folha",
+      "referencia": "https://rippling.com/payroll",
+      "pasta": "moldes/rippling-folha"
+    },
+    "/guias/nfe-nfce-o-que-e/": {
+      "molde": "wise-blog-transferencia",
+      "referencia": "https://wise.com/us/blog/how-to-wire-money",
+      "pasta": "moldes/wise-blog-transferencia"
+    },
+    "/perguntas/quanto-custa-um-sistema-para-loja/": {
+      "molde": "contaazul-teste",
+      "referencia": "https://contaazul.com/teste-gratuito/",
+      "pasta": "moldes/contaazul-teste"
+    },
+    "/perguntas/loja-pequena-precisa-de-sistema/": {
+      "molde": "hubspot-glossario",
+      "referencia": "https://www.hubspot.com/glossary/profit-margin",
+      "pasta": "moldes/hubspot-glossario"
+    },
+    "/perguntas/caderno-ou-sistema/": {
+      "molde": "square-o-que-e",
+      "referencia": "https://squareup.com/ie/en/townsquare/what-is-square",
+      "pasta": "moldes/square-o-que-e"
+    },
+    "/perguntas/excel-ou-sistema-de-gestao/": {
+      "molde": "contaazul-planilha",
+      "referencia": "https://blog.contaazul.com/universidade/planilha-calculo-margem-lucro/",
+      "pasta": "moldes/contaazul-planilha"
+    },
+    "/perguntas/qual-sistema-para-mercadinho/": {
+      "molde": "gestaoclick-mercadinho",
+      "referencia": "https://gestaoclick.com.br/segmentos/pdv-para-mercadinho/",
+      "pasta": "moldes/gestaoclick-mercadinho"
+    },
+    "/perguntas/sistema-de-gestao-e-seguro/": {
+      "molde": "brex-cartao",
+      "referencia": "https://brex.com/product/corporate-card",
+      "pasta": "moldes/brex-cartao"
+    },
+    "/perguntas/posso-usar-o-softpay-no-celular/": {
+      "molde": "infinitepay-blog-aproximacao",
+      "referencia": "https://www.infinitepay.io/blog/como-receber-por-aproximacao-no-celular",
+      "pasta": "moldes/infinitepay-blog-aproximacao"
+    },
+    "/perguntas/posso-migrar-de-outro-sistema/": {
+      "molde": "wegou-bling",
+      "referencia": "https://wegou.com.br/alternativa-ao-bling/",
+      "pasta": "moldes/wegou-bling"
+    },
+    "/perguntas/e-dificil-aprender/": {
+      "molde": "linear",
+      "referencia": "https://linear.app/",
+      "pasta": "moldes/linear"
+    },
+    "/perguntas/preciso-instalar/": {
+      "molde": "infinitepay-maquininha-celular",
+      "referencia": "https://www.infinitepay.io/maquininha-celular",
+      "pasta": "moldes/infinitepay-maquininha-celular"
+    },
+    "/perguntas/tem-suporte-humano/": {
+      "molde": "stone-maquininha",
+      "referencia": "https://www.stone.com.br/maquina-de-cartao",
+      "pasta": "moldes/stone-maquininha"
+    },
+    "/perguntas/funciona-no-brasil-inteiro/": {
+      "molde": "ton-oferta",
+      "referencia": "https://www.ton.com.br/oferta-ton",
+      "pasta": "moldes/ton-oferta"
+    },
+    "/perguntas/posso-usar-em-varios-dispositivos/": {
+      "molde": "infinitepay-tap",
+      "referencia": "https://www.infinitepay.io/tap-to-pay",
+      "pasta": "moldes/infinitepay-tap"
+    },
+    "/blog/como-precificar-produto/": {
+      "molde": "sebrae-sc-precificar",
+      "referencia": "https://www.sebrae-sc.com.br/blog/passos-para-precificar-um-produto",
+      "pasta": "moldes/sebrae-sc-precificar"
+    },
+    "/blog/perda-de-estoque-validade/": {
+      "molde": "nuvemshop-blog-sistema-estoque",
+      "referencia": "https://www.nuvemshop.com.br/blog/sistema-de-controle-de-estoque/",
+      "pasta": "moldes/nuvemshop-blog-sistema-estoque"
+    },
+    "/blog/produtos-parados-no-estoque/": {
+      "molde": "ramp-despesas",
+      "referencia": "https://ramp.com/expense-management",
+      "pasta": "moldes/ramp-despesas"
+    },
+    "/blog/troca-e-devolucao-na-loja/": {
+      "molde": "stripe-assinaturas",
+      "referencia": "https://stripe.com/billing",
+      "pasta": "moldes/stripe-assinaturas"
+    },
+    "/blog/como-organizar-vitrine-de-loja/": {
+      "molde": "framer",
+      "referencia": "https://www.framer.com/",
+      "pasta": "moldes/framer"
+    },
+    "/blog/fluxo-de-caixa-loja-pequena/": {
+      "molde": "mercury",
+      "referencia": "https://mercury.com/",
+      "pasta": "moldes/mercury"
+    },
+    "/comparativos/softpay-ou-nex/": {
+      "molde": "ramp-versus-brex",
+      "referencia": "https://ramp.com/versus/brex",
+      "pasta": "moldes/ramp-versus-brex"
+    },
+    "/comparativos/softpay-ou-kyte/": {
+      "molde": "shopify-versus-lightspeed",
+      "referencia": "https://www.shopify.com/compare/shopify-vs-lightspeed",
+      "pasta": "moldes/shopify-versus-lightspeed"
+    },
+    "/comparativos/alternativa-ao-bling/": {
+      "molde": "granmoney-bling",
+      "referencia": "https://granmoney.com/comparativo/alternativas-ao-bling",
+      "pasta": "moldes/granmoney-bling"
+    },
+    "/sobre/": {
+      "molde": "wise-empresas",
+      "referencia": "https://wise.com/gb/business/",
+      "pasta": "moldes/wise-empresas"
+    },
+    "/contato/": {
+      "molde": "gestaoclick-cadastro",
+      "referencia": "https://gestaoclick.com.br/novo-cadastro/",
+      "pasta": "moldes/gestaoclick-cadastro"
+    },
+    "/segmentos/": {
+      "molde": "square-varejo",
+      "referencia": "https://squareup.com/us/en/retail",
+      "pasta": "moldes/square-varejo"
+    },
+    "/solucoes/": {
+      "molde": "shopify-pos-recursos",
+      "referencia": "https://www.shopify.com/pos/features",
+      "pasta": "moldes/shopify-pos-recursos"
+    },
+    "/guias/": {
+      "molde": "pennylane",
+      "referencia": "https://www.pennylane.com/fr/",
+      "pasta": "moldes/pennylane"
+    },
+    "/comparativos/": {
+      "molde": "square-versus-clover",
+      "referencia": "https://squareup.com/us/en/compare/square-vs-clover",
+      "pasta": "moldes/square-versus-clover"
+    },
+    "/blog/": {
+      "molde": "attio",
+      "referencia": "https://attio.com/",
+      "pasta": "moldes/attio"
+    },
+    "/perguntas/": {
+      "molde": "sumup-maquininhas",
+      "referencia": "https://www.sumup.com/pt-br/maquininhas/",
+      "pasta": "moldes/sumup-maquininhas"
+    }
+  }
+}

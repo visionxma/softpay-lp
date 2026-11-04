@@ -1,0 +1,177 @@
+{
+ "artigo": true,
+ "slug": "guias/reforma-tributaria-mei",
+ "title": "Reforma Tributária e o MEI: Nota Fiscal em 2027 | SoftPay",
+ "description": "A partir de 1º de janeiro de 2027 o MEI passa a emitir nota fiscal em qualquer venda, inclusive para pessoa física. Veja o que muda e como se preparar.",
+ "h1": "Reforma tributária e o MEI",
+ "intro": "A mudança mais concreta para o MEI tem data: 1º de janeiro de 2027. A partir dali, a emissão de nota fiscal passa a ser obrigatória em qualquer venda — inclusive para pessoa física. Para quem hoje quase não emite nota, isso muda a rotina do balcão, não só a papelada.",
+ "breadcrumbs": [
+  [
+   "Guias",
+   "/guias/"
+  ],
+  [
+   "Reforma tributária e o MEI",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "MEI vai ser obrigado a emitir nota fiscal?",
+   "Sim, a partir de 1º de janeiro de 2027, em qualquer venda, inclusive para pessoa física. Até lá, a regra atual continua valendo."
+  ],
+  [
+   "O MEI vai acabar com a reforma tributária?",
+   "Não. O MEI continua existindo. O que muda é a obrigação de emitir documento fiscal em todas as vendas a partir de 2027."
+  ],
+  [
+   "Preciso de um sistema para emitir nota como MEI?",
+   "Você precisa de alguma forma de emitir o documento fiscal. Um sistema integrado ao PDV reduz o trabalho porque o produto já está cadastrado e a nota sai da própria venda, em vez de ser digitada de novo."
+  ],
+  [
+   "Quanto custa um sistema que emite nota?",
+   "No SoftPay, o plano Nota Fiscal custa R$ 65/mês e o ERP Completo R$ 109/mês. A faixa de mercado para pequeno comércio vai de cerca de R$ 39 a R$ 199."
+  ],
+  [
+   "Posso continuar vendendo sem nota para pessoa física?",
+   "Até 31 de dezembro de 2026, a regra atual continua. A partir de 1º de janeiro de 2027, a nota passa a ser obrigatória também nessas vendas."
+  ],
+  [
+   "O que acontece se eu não emitir?",
+   "A falta de emissão fica sujeita às penalidades previstas. O detalhe do seu caso deve ser confirmado com o seu contador."
+  ],
+  [
+   "Preciso cadastrar todos os produtos antes de janeiro?",
+   "Não todos de uma vez. Comece pelos de maior giro, que respondem pela maior parte das vendas, e complete o restante conforme repõe o estoque."
+  ]
+ ],
+ "cta_title": "Comece a rotina antes da obrigação",
+ "cta_text": "Cadastre os produtos de maior giro e passe as vendas pelo sistema. Quando janeiro chegar, o trabalho já está feito. 7 dias grátis, sem cartão.",
+ "related": [
+  [
+   "Reforma tributária no comércio",
+   "/guias/reforma-tributaria-comercio/",
+   "A visão completa"
+  ],
+  [
+   "Meu sistema precisa mudar?",
+   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/",
+   "A pergunta prática"
+  ],
+  [
+   "Checklist até janeiro",
+   "/guias/checklist-reforma-tributaria-2027/",
+   "O que fazer, em ordem"
+  ],
+  [
+   "O que é NF-e e NFC-e",
+   "/guias/nfe-nfce-o-que-e/",
+   "A diferença entre as duas"
+  ],
+  [
+   "Emissão de NFC-e",
+   "/solucoes/nfce/",
+   "O recurso no SoftPay"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/",
+   "Sair do papel primeiro"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "secao",
+   "id": "o-que-muda-em-uma-frase",
+   "titulo": "O que muda, em uma frase",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Hoje muitos MEI emitem nota apenas quando o cliente é empresa e pede. A partir de <strong>1º de janeiro de 2027</strong>, a nota passa a ser obrigatória em qualquer venda, para qualquer cliente."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Por que começar agora",
+     "texto": "Faltam poucos meses. Não é uma mudança que se resolve em uma tarde de dezembro: é um hábito novo no balcão, e hábito leva semanas para pegar."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-isso-significa-no-dia-a-dia",
+   "titulo": "O que isso significa no dia a dia",
+   "partes": [
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Toda venda gera documento.</strong> A venda para o vizinho, a venda pequena, a venda em dinheiro — todas.",
+      "<strong>O cadastro de produto deixa de ser opcional.</strong> Para emitir nota é preciso ter o produto cadastrado, com descrição e valor.",
+      "<strong>O tempo do atendimento muda.</strong> Emitir nota leva segundos quando o produto está cadastrado, e leva minutos quando não está. No balcão cheio, essa diferença aparece.",
+      "<strong>A compra sem nota passa a pesar.</strong> Com crédito de imposto no novo modelo, mercadoria comprada sem nota fica mais cara do que parece."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-erro-que-vai-custar-caro",
+   "titulo": "O erro que vai custar caro",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O erro previsível é deixar para dezembro de 2026. Três coisas dão errado ao mesmo tempo nesse cenário:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Você cadastra os produtos com pressa</strong>, e o cadastro fica ruim — descrição incompleta, preço errado, item faltando.",
+      "<strong>Ninguém aprende a rotina antes.</strong> A primeira nota do ano é emitida com cliente esperando no balcão.",
+      "<strong>O suporte de todo mundo está lotado</strong>, porque todo MEI do país deixou para a mesma semana."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Começar em setembro ou outubro custa o mesmo e evita os três."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-se-preparar-em-quatro-passos",
+   "titulo": "Como se preparar, em quatro passos",
+   "partes": [
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Confirme com o seu contador</strong> que você é MEI e que a sua data é 1º de janeiro de 2027.",
+      "<strong>Cadastre os produtos que mais vendem.</strong> Não precisa ser tudo: comece pelos de maior giro e complete conforme repõe.",
+      "<strong>Comece a emitir nota agora</strong>, mesmo sem obrigação, em algumas vendas por dia. É assim que a rotina entra antes do prazo.",
+      "<strong>Guarde as notas de entrada</strong> das compras de mercadoria."
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Fontes oficiais: <a href=\"https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/programas-e-atividades/reforma-tributaria-do-consumo/orientacoes-2026\" target=\"_blank\" rel=\"noopener nofollow\">Receita Federal — Orientações 2026</a> e <a href=\"https://www.cgibs.gov.br/novo-marco-da-reforma-tributaria-inicia-em-03-de-agosto-com-preenchimento-obrigatorio-dos-campos-relativos-ao-ibs-e-a-cbs\" target=\"_blank\" rel=\"noopener nofollow\">Comitê Gestor do IBS</a> (Ato Conjunto RFB/CGIBS nº 4, de 30 de julho de 2026). Datas conferidas em 8 de setembro de 2026. <strong>Esta página não é orientação contábil:</strong> o enquadramento do seu negócio deve ser confirmado com o seu contador.</p>"
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "o-que-o-softpay-faz-e-o-que-nao-faz-aqui",
+   "titulo": "O que o SoftPay faz e o que não faz aqui",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Direto ao ponto: a emissão de NF-e e NFC-e está nos planos Nota Fiscal (R$ 65/mês) e ERP Completo (R$ 109/mês), e <strong>consta como recurso em ativação</strong> — confirme a situação para o seu caso com o suporte antes de contratar contando com ela."
+    },
+    {
+     "tipo": "p",
+     "texto": "O que o sistema resolve desde já, e que você vai precisar de qualquer forma: cadastro de produtos, registro de toda venda e controle das entradas de mercadoria. Esse é o trabalho que leva tempo, e é ele que dá para adiantar agora."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-09-06",
+ "updated": "2026-09-17"
+}
