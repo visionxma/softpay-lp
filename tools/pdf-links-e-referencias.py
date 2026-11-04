@@ -10,6 +10,8 @@ De onde vem cada coisa (nada é escrito à mão aqui, a não ser as origens anti
   - a lista de links e a prova de cada um (200 direto, título): provas.json do tools/links-do-grupo.py;
   - a referência de cada rota de SEO: tools/moldes/mapa-de-fontes.tsv (rota, molde, URL da referência);
   - se o clone já está aplicado: public/<rota>/index.html contém a classe "mx-<molde>" que o vestir.mjs põe no <main>.
+Política de 04/11/2026 (`jarvis manual pdf-de-links-com-referencia-no-grupo-admin`): toda LP com referência ao lado,
+situação lida no HTML SERVIDO (produção e prévia), e --drive sobe no link fixo do Drive (drive link … softpay).
 Saída: ~/Documents/VisionX Docs/SoftPay/SoftPay-Links-e-Referencias-<data>.pdf (corpo em .../SoftPay/fonte/), pelo
 gera-doc --produto visionx. Depois de gerar, confere que cada URL da tabela virou anotação de link no PDF (sai 1 se não).
 """
@@ -97,12 +99,48 @@ def ler_mapa():
     return mapa
 
 
-def clone_aplicado(rota, molde):
-    arq = os.path.join(RAIZ, "public", rota, "index.html") if rota else os.path.join(RAIZ, "public/index.html")
-    try:
-        return f"mx-{molde}" in open(arq, encoding="utf-8", errors="replace").read()
-    except FileNotFoundError:
-        return False
+PREVIA = "https://softpay-previa.pages.dev"
+PRODUCAO = "https://site.softpaybr.com"
+OUTROS = os.path.join(RAIZ, "tools/moldes/mapa-de-fontes-outros.tsv")
+# grupos que não são LP: tela do aplicativo e perfil em diretório não têm referência de fora
+NAO_LP_GRUPOS = {"app-br", "app-co", "perfis"}
+NAO_LP_ROTAS = {"termos", "privacidade", "reembolso"}
+
+
+def html_servido(url):
+    """HTML como está NO AR (a situação do clone se lê no servido, nunca no ramo local)."""
+    r = subprocess.run(["curl", "-s", "-L", "--max-time", "20", "-A", "Mozilla/5.0 jarvis-pdf-links/1", url],
+                       capture_output=True)
+    return r.stdout.decode("utf-8", "replace") if r.returncode == 0 else ""
+
+
+def situacoes(rotas_molde):
+    """{rota: 'ar' | 'previa' | 'fila'} pelo HTML servido em produção e na prévia (classe mx-<molde> no <main>)."""
+    import concurrent.futures as cf
+    def uma(item):
+        rota, molde = item
+        cam = f"/{rota}/" if rota else "/"
+        if f"mx-{molde}" in html_servido(PRODUCAO + cam):
+            return rota, "ar"
+        if f"mx-{molde}" in html_servido(PREVIA + cam):
+            return rota, "previa"
+        return rota, "fila"
+    with cf.ThreadPoolExecutor(max_workers=6) as ex:
+        return dict(ex.map(uma, rotas_molde))
+
+
+def ler_outros():
+    """url → (referência | 'nao-e-lp', nota), escolhidas para Colômbia, páginas por país e ERP."""
+    saida = {}
+    if not os.path.exists(OUTROS):
+        return saida
+    for ln in open(OUTROS, encoding="utf-8"):
+        if not ln.strip() or ln.startswith("#"):
+            continue
+        c = ln.rstrip("\n").split("\t")
+        if len(c) >= 2:
+            saida[c[0].strip().rstrip("/")] = (c[1].strip(), c[2].strip() if len(c) > 2 else "")
+    return saida
 
 
 def mostrar(url):
@@ -127,8 +165,12 @@ def main():
     provas = json.load(open(PROVAS, encoding="utf-8"))
     mapa = ler_mapa()
     linhas_por_grupo = {g: {} for g, _ in lg.ORDEM_GRUPOS}
-    cont = {"clone": 0, "fila": 0, "propria": 0, "total": 0, "ok200": 0}
+    cont = {"clone": 0, "previa": 0, "fila": 0, "propria": 0, "falta": 0, "total": 0, "ok200": 0}
     usados = set()
+    outros = ler_outros()
+    rotas_br = {urllib.parse.urlparse(p["url"]).path.strip("/") for p in provas if p["grupo"] == "site-br"}
+    situ_de = situacoes([(r, mapa[r][0]) for r in rotas_br if r in mapa])
+    lateral = {"paginas": [], "sem_referencia_lp": [], "referencias": {}}
 
     for p in provas:
         url, g = p["url"], p["grupo"]
@@ -148,21 +190,43 @@ def main():
             usados.add(rota)
             nota = ' <span class="nota">indicada pelo Raykkony</span>' if rota in DO_RAYKKONY else ""
             ref_html = f'<span class="marca">{html.escape(marca(ref))}</span>{nota}<br>{link(ref)}'
-            if clone_aplicado(rota, molde):
+            lateral["referencias"][url] = ref
+            estado = situ_de.get(rota, "fila")
+            if estado == "ar":
                 situ, classe = "clone no ar", "ok"
                 cont["clone"] += 1
+            elif estado == "previa":
+                cam = f"{PREVIA}/{rota}/" if rota else f"{PREVIA}/"
+                situ, classe = f'pronto na prévia<br>{link(cam, "ver a prévia")}', "previa"
+                cont["previa"] += 1
             else:
-                situ, classe = "referência escolhida; clone na fila", "fila"
+                situ, classe = "na fila: referência escolhida", "fila"
                 cont["fila"] += 1
         elif g == "site-br" and rota in ORIGEM_FIXA:
             ref, nome, situ = ORIGEM_FIXA[rota]
             ref_html = f'<span class="marca">{html.escape(nome)}</span><br>{link(ref)}'
+            lateral["referencias"][url] = ref
             classe = "ok"
             cont["clone" if rota.startswith("campanha/") else "propria"] += 1
-        else:
-            ref_html = '<span class="propria">página própria, sem referência de fora</span>'
+        elif url.rstrip("/") in outros and outros[url.rstrip("/")][0] != "nao-e-lp":
+            ref, nota_o = outros[url.rstrip("/")]
+            nota = f' <span class="nota">{html.escape(nota_o)}</span>' if nota_o else ""
+            ref_html = f'<span class="marca">{html.escape(marca(ref))}</span>{nota}<br>{link(ref)}'
+            lateral["referencias"][url] = ref
+            situ, classe = "na fila: referência escolhida", "fila"
+            cont["fila"] += 1
+        elif (g in NAO_LP_GRUPOS or (g == "site-br" and rota in NAO_LP_ROTAS)
+              or outros.get(url.rstrip("/"), ("",))[0] == "nao-e-lp"):
+            tipo = {"app-br": "tela do aplicativo", "app-co": "tela do aplicativo", "perfis": "perfil em diretório"}
+            ref_html = f'<span class="propria">não é LP ({tipo.get(g, "página legal ou institucional")}): sem referência de fora</span>'
             situ, classe = "no ar", "propria"
             cont["propria"] += 1
+        else:
+            ref_html = '<span class="falta">LP sem referência: escolher e clonar</span>'
+            situ, classe = "falta referência", "falta"
+            cont["falta"] += 1
+            lateral["sem_referencia_lp"].append(url)
+        lateral["paginas"].append(url)
         nome = nome_da_pagina(p.get("titulo"))
         if "/j64tuzdncescfu" in url:
             nome = "Painel admin (endereço escondido)"
@@ -222,6 +286,8 @@ def main():
 .links .propria{{ font-size:8pt; color:var(--t2); font-style:italic; }}
 .links td.sit{{ font-family:"Inter Tight",sans-serif; font-size:7.8pt; font-weight:600; }}
 .links td.sit.ok{{ color:#0a7a3b; }} .links td.sit.fila{{ color:#9a5b00; }} .links td.sit.propria{{ color:var(--t2); }}
+.links td.sit.previa{{ color:#1d4ed8; }} .links td.sit.falta{{ color:#b42318; }}
+.links .falta{{ font-size:8pt; font-weight:600; color:#b42318; }}
 h3 .qtd{{ font-weight:400; color:var(--t2); }}
 </style>
 
@@ -238,13 +304,14 @@ h3 .qtd{{ font-weight:400; color:var(--t2); }}
     <dl class="capa__ficha">
       <dt>Preparado para</dt><dd>Victor Gabryell</dd>
       <dt>Data</dt><dd>{data_ext}, lista conferida às {agora:%H:%M}</dd>
-      <dt>Base</dt><dd>os mapas do site (sitemap), as campanhas, as páginas legais, as telas de entrada do aplicativo e os perfis; cada link foi aberto um a um e respondeu 200 (abriu direto, sem desvio). A referência de cada rota vem do mapa de moldes do projeto (tools/moldes/mapa-de-fontes.tsv)</dd>
-      <dt>Como ler</dt><dd><b>clone no ar</b>: a página já é a cópia da referência com a marca SoftPay. <b>referência escolhida; clone na fila</b>: a referência está definida e o clone entra numa das próximas levas. <b>página própria</b>: página feita pela casa, sem referência de fora</dd>
+      <dt>Base</dt><dd>sitemaps, campanhas, páginas legais, telas do aplicativo e perfis; cada link abriu com 200, sem desvio. Referências: tools/moldes/mapa-de-fontes.tsv e mapa-de-fontes-outros.tsv; situação lida no HTML servido</dd>
+      <dt>Como ler</dt><dd><b>clone no ar</b>: já é a cópia da referência. <b>pronto na prévia</b>: feito e conferido, esperando publicar. <b>na fila</b>: referência escolhida, clone a caminho. <b>não é LP</b>: aplicativo, página legal ou perfil</dd>
+      <dt>Link fixo</dt><dd>o mesmo link do grupo SoftPay Admin sempre abre a versão do dia</dd>
     </dl>
     <div class="capa__resumo">
       <dl class="capa__item"><dt>Links</dt><dd><span class="cifra">{cont['total']}</span>{cont['ok200']} abriram direto (200) na conferência.</dd></dl>
-      <dl class="capa__item"><dt>Clones no ar</dt><dd><span class="cifra">{cont['clone']}</span>páginas já copiadas de uma referência, com a marca SoftPay.</dd></dl>
-      <dl class="capa__item"><dt>Na fila</dt><dd><span class="cifra">{cont['fila']}</span>páginas de SEO com a referência escolhida, clone a caminho.</dd></dl>
+      <dl class="capa__item"><dt>Clones</dt><dd><span class="cifra">{cont['clone'] + cont['previa']}</span>{cont['clone']} no ar e {cont['previa']} prontos na prévia, cada um com a referência ao lado.</dd></dl>
+      <dl class="capa__item"><dt>Na fila</dt><dd><span class="cifra">{cont['fila']}</span>páginas com a referência escolhida, clone a caminho{f"; {cont['falta']} LP ainda sem referência" if cont['falta'] else ""}.</dd></dl>
     </div>
   </div>
 </div>
@@ -273,10 +340,24 @@ h3 .qtd{{ font-weight:400; color:var(--t2); }}
                         "--rodape", f"SoftPay · Todos os links e as referências · {DATA.replace('-', '/')}"])
     if r.returncode not in (0,):
         print(f"gera-doc saiu {r.returncode}")
-    return conferir_links(pdf, provas, mapa) or r.returncode
+    # lateral: o que o portão grupo_em_dia.py lê para saber se o PDF cobre o sitemap e se toda LP tem referência
+    lateral["gerado"] = agora.isoformat(timespec="seconds")
+    lateral["contagem"] = cont
+    json.dump(lateral, open(pdf + ".links.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    falhou = conferir_links(pdf, provas, mapa, lateral) or r.returncode
+    if lateral["sem_referencia_lp"]:
+        print(f"LP sem referência ({len(lateral['sem_referencia_lp'])}): a política pede referência em toda LP")
+        for u in lateral["sem_referencia_lp"][:30]:
+            print("  SEM REFERÊNCIA", u)
+    if "--drive" in sys.argv and not falhou:
+        d = subprocess.run([os.path.expanduser("~/.local/bin/drive"), "link", pdf, "softpay",
+                            "--titulo", "SoftPay · Links e referências (link fixo).pdf"], capture_output=True, text=True)
+        print(d.stdout.strip())
+        falhou = d.returncode
+    return falhou
 
 
-def conferir_links(pdf, provas, mapa):
+def conferir_links(pdf, provas, mapa, lateral=None):
     """Cada URL do SoftPay e cada referência usada tem de virar anotação /Link /URI no PDF."""
     py = os.path.expanduser("~/.claude/marca-visionx/.venv/bin/python")
     codigo = ("import sys,json\nfrom pypdf import PdfReader\nr=PdfReader(sys.argv[1]);s=set()\n"
@@ -291,6 +372,8 @@ def conferir_links(pdf, provas, mapa):
     rotas = {urllib.parse.urlparse(p["url"]).path.strip("/") for p in provas if p["grupo"] == "site-br"}
     esperadas |= {ref for r, (_, ref) in mapa.items() if r in rotas}
     esperadas |= {v[0] for k, v in ORIGEM_FIXA.items() if k in rotas}
+    if lateral:
+        esperadas |= set(lateral["referencias"].values())
     faltam = sorted(u for u in esperadas if u not in uris)
     print(f"links clicáveis no PDF: {len(uris)} anotações; esperadas {len(esperadas)}; faltam {len(faltam)}")
     for u in faltam[:20]:
