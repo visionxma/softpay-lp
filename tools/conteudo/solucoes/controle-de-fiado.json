@@ -33,7 +33,7 @@
   ],
   [
    "O sistema cobra o cliente automaticamente?",
-   "A partir do plano Loja, o SoftPay envia link de pagamento por Pix pelo WhatsApp. O envio é uma ação sua: não existe régua de cobrança que dispara sozinha."
+   "Se você ligar, sim. A partir do plano Loja, o SoftPay manda link de pagamento por Pix pelo WhatsApp e tem um lembrete automático opcional: fica desligado até você ligar, lembra cada cliente com saldo no máximo uma vez a cada 7 dias (você muda o intervalo), só entre 9h e 20h, e o cliente pode responder PARAR."
   ],
   [
    "Dá para definir um limite de fiado por cliente?",
@@ -203,7 +203,7 @@
       "<strong>Não calcula juros nem multa por atraso.</strong> O saldo é o valor das compras.",
       "<strong>Não gera carnê nem boleto.</strong> A cobrança sai por link de Pix no WhatsApp, a partir do plano Loja.",
       "<strong>Limite de crédito por cliente não está confirmado.</strong> Se você precisa travar venda acima de um valor, verifique com o suporte antes de contratar.",
-      "<strong>Não cobra sozinho de tempos em tempos.</strong> O envio do link é uma ação sua, não uma régua automática."
+      "<strong>Não é régua de cobrança com etapas.</strong> O que existe, a partir do plano Loja, é um lembrete gentil pelo WhatsApp que você liga se quiser: no máximo um por cliente a cada 7 dias (você escolhe o intervalo), só entre 9h e 20h, e o cliente pode responder PARAR."
      ]
     }
    ]
