@@ -97,7 +97,9 @@ breadcrumbs, figura…) + `origem` (true na prova contra a referência, false na
    `--noite #06121F`, `--azul #0C5C9E` (ação, branco por cima 6,91:1), `--azul-forte #084A81`,
    `--azul-vapor #E8F3FB`, `--tinta #0A1A28`, fundo branco. Botão em cor viva leva texto BRANCO.
    Regras que vencem a referência: hero cobre a tela inteira (`min-height: 100svh` menos o cabeçalho do
-   chassi), vão máximo de 120 px no computador e 72 px no celular, celular copia a composição do
+   chassi) com FUNDO DE PONTA A PONTA no próprio elemento da hero — foto/vídeo cobrindo a hero inteira ou
+   `background-image` (degradê nos tons da casa); só `background-color` reprova o `fundo-de-ponta-a-ponta`
+   do portão (shopify-pos-varejo, 04/11/2026, conserto em 18557d97) —, vão máximo de 120 px no computador e 72 px no celular, celular copia a composição do
    computador (lado a lado em 360 px, sem rolagem lateral, nem dentro de componente), FAQ em
    `<details name>` com tudo visível no HTML, alvo de toque ≥ 44 px.
    Achados da onda 1 (03/11/2026), que valem para todo molde:
