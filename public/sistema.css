@@ -5,7 +5,8 @@
 
    O que a Stone faz e foi trazido:
      · escala tipográfica curta com salto brutal entre texto e display
-     · display condensado, caixa alta, entrelinha menor que 1
+     · display grande com salto de escala (até 03/11/2026 também condensado
+       e em caixa alta; agora fala como o logo — ver Tipografia abaixo)
      · uma cor de energia usada com disciplina, sobre base escura
        (aqui ela é o azul do próprio logotipo do SoftPay, não o verde dela:
         a identidade da marca foi mantida — decisão do Victor, 17/09/2026)
@@ -22,51 +23,35 @@
    Escala: 7 degraus (a Stone tem 6; o SoftPay antigo tinha 14).
    Sombras: 2 (o SoftPay antigo tinha 8).
 
-   Tipografia da Stone (25/09/2026): Roobert (Displaay) no texto e ABC Gravity
-   X Compressed (Dinamo) no display. As duas são pagas e o próprio arquivo da
-   Gravity proíbe hospedar em servidor público — então o desenho foi medido e
-   reproduzido com fontes OFL, glifo a glifo (mesma altura de maiúscula,
-   interseção sobre união dos pixels):
-     · SoftPay Display = Roboto Flex fixada em wdth 28 · wght 650 · opsz 144,
-       com o espaço estreitado ao da Gravity. Parecença 0,875 (a Archivo, que
-       estava aqui, dava 0,577). Mesma largura de frase: 1,004×.
-     · SoftPay Texto = Funnel Sans em 350/450/625/725, servida como
-       400/500/600/700 — os pesos que casam com os quatro da Roobert.
-       Parecença 0,81–0,87; largura de frase 0,99×.
-   Comprou a licença? Troque só os src do @font-face abaixo; os nomes de
-   família e o resto do arquivo não mudam.
+   Tipografia (03/11/2026, escolha do Victor): Montserrat variável (OFL), a
+   letra do próprio logotipo. A palavra "SoftPay" do logo foi comparada, pixel
+   a pixel, com 100 fontes livres: Montserrat 800 deu interseção sobre união
+   de 0,832 e largura de 1,01× — o logo é Montserrat ExtraBold. Referência do
+   nicho que usa a mesma letra no site inteiro: vhsys.com.br.
+     · SoftPay Display = Montserrat 800, caixa normal, espaço -0,02em.
+     · SoftPay Texto   = Montserrat 500 no texto corrido (a 400 fica fina
+       sobre o fundo escuro), 600/700 nos destaques; itálico verdadeiro.
+   Antes disso o display imitava a ABC Gravity X Compressed da Stone
+   (Roboto Flex em wdth 28, caixa alta) e o texto era Funnel Sans; os arquivos
+   antigos continuam em /fontes/ porque as páginas de /campanha/ e os
+   geradores de imagem em tools/ ainda usam eles.
    ========================================================================== */
 
 /* ----------------------------------------------------------------- 0. FONTES */
 @font-face {
     font-family: 'SoftPay Display';
-    src: url('/fontes/softpay-display-v1.woff2') format('woff2');
+    src: url('/fontes/softpay-montserrat-v1.woff2') format('woff2');
     font-weight: 100 900; font-style: normal; font-display: swap;
 }
 @font-face {
     font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-texto-400-v1.woff2') format('woff2');
-    font-weight: 400; font-style: normal; font-display: swap;
+    src: url('/fontes/softpay-montserrat-v1.woff2') format('woff2');
+    font-weight: 100 900; font-style: normal; font-display: swap;
 }
 @font-face {
     font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-texto-400-italico-v1.woff2') format('woff2');
-    font-weight: 400; font-style: italic; font-display: swap;
-}
-@font-face {
-    font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-texto-500-v1.woff2') format('woff2');
-    font-weight: 500; font-style: normal; font-display: swap;
-}
-@font-face {
-    font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-texto-600-v1.woff2') format('woff2');
-    font-weight: 600; font-style: normal; font-display: swap;
-}
-@font-face {
-    font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-texto-700-v1.woff2') format('woff2');
-    font-weight: 700 900; font-style: normal; font-display: swap;
+    src: url('/fontes/softpay-montserrat-italico-v1.woff2') format('woff2');
+    font-weight: 100 900; font-style: italic; font-display: swap;
 }
 
 /* ---------------------------------------------------------------- 1. TOKENS */
@@ -4557,3 +4542,25 @@ html:has(.previa[open]) { overflow: hidden; }
 .cabeca-secao > .display--secao,
 .mapa__texto > .display--secao,
 .painel .display--cartao { display: inline-block; vertical-align: top; max-inline-size: 100%; }
+
+/* ------------------------------------------- 99. A VOZ DO LOGO (03/11/2026)
+   Camada da tipografia Montserrat (ver o cabeçalho). Fica no FIM de propósito:
+   vence as regras de caixa alta e entrelinha < 1 que o display condensado
+   espalhou pelas media queries acima. O fator --display-k existia só para
+   compensar a letra estreita; com letra de largura normal ele volta a 1. */
+:root { --display-k: 1; --display-k-hero: 1.12; }
+.display,
+.plano__nome,
+.plano-parte__nome,
+.plano__preco,
+.aba,
+.hero--video .hero__titulo,
+.previa__titulo,
+.vitrine__nome { text-transform: none; letter-spacing: -0.02em; }
+.previa__titulo { line-height: 1.05; }
+.vitrine__nome { font-size: min(12cqw, 3.5rem); line-height: 1; }
+.display { font-weight: 800; line-height: 1.06; }
+.display--cartao { line-height: 1.1; }
+/* Montserrat 400 fica fina sobre o fundo escuro: texto corrido em 500,
+   como na vhsys (parágrafo 500, 17px). */
+body { letter-spacing: 0; font-weight: 500; }
