@@ -250,7 +250,6 @@ Emissão de NFC-e e NF-e a partir da própria venda, com cadastro fiscal e pacot
 - NFC-e, NF-e, NFS-e e MDF-e
 - Notas recebidas: ver e manifestar
 - Planos Nota Fiscal e ERP Completo
-
 Ver a emissão de nota
 
 Para quem é
@@ -313,7 +312,7 @@ R$ 69 /mês · 1 usuário
 - PDV e caixa completo
 - Caderninho de fiado
 - Estoque essencial
-Testar grátis
+
 Mais popular
 
 ### Loja
@@ -326,7 +325,7 @@ R$ 89 /mês · até 3 usuários
 - Loja online com Pix automático
 - Estoque avançado e curva ABC
 - Venda pelo WhatsApp
-Testar grátis
+
 Com nota
 
 ### ERP Completo
@@ -337,15 +336,13 @@ R$ 109 /mês · até 10
 - Tudo da Loja
 - Emissão de NFC-e e NF-e
 - Equipe ampliada
-Testar grátis
+
 Só a nota
 
 ### Nota Fiscal
 
 Só precisa emitir nota? Este plano é só isso: você preenche o formulário e emite, sem PDV e sem estoque. NFC-e, NF-e, NFS-e e MDF-e, notas recebidas e o pacote do contador.
 
-R$ 65 /mês · até 2
-Testar grátis
 Sem cartão de crédito, cancele quando quiser e conte com ajuda para configurar no WhatsApp.
 
 Quem já usa
@@ -431,8 +428,6 @@ Sim. O sistema é usado pela internet e o atendimento é nacional.
 
 Sete dias com o sistema inteiro aberto. Se não servir para a sua loja, é só não continuar. Não pedimos cartão nem contrato.
 
-Começar grátis WhatsApp
-
 Quer uma segunda opinião? Pergunte a uma IA.
 - ChatGPT
 - Google IA
@@ -446,6 +441,13 @@ Endereço: https://site.softpaybr.com/sistema-de-gestao-para-pequenos-negocios/
 # Sistema de gestão para pequenos negócios
 
 Um guia completo para quem está avaliando se vale a pena, o que um sistema de gestão realmente faz e como escolher sem pagar por aquilo que a sua loja não usa.
+- Estoque e vendas no mesmo sistema
+- Caixa conferido no fim do dia
+- Fiado sem caderno, com saldo por cliente
+- Loja online com Pix automático
+- No computador, no celular e no tablet
+
+Planos de R$ 65 a R$ 109 por mês · 7 dias grátis, sem cartão
 
 ## O que é um sistema de gestão
 
@@ -456,94 +458,176 @@ Na prática, ele junta quatro coisas que hoje você já faz separado: registrar 
 ### ERP, PDV, sistema de gestão: qual a diferença?
 
 PDV é a frente de caixa: onde a venda é registrada. ERP é o sistema que integra as áreas do negócio. Sistema de gestão é o termo mais amplo. Para uma loja pequena, a distinção importa pouco — o que importa é se cobre a sua operação.
-
-## Para quem serve
-
-O perfil típico é o pequeno comércio com estoque: mercadinho, loja de roupas, loja de variedades, papelaria, farmácia, distribuidora. Geralmente com uma ou duas pessoas, faturamento crescendo e controle ainda no caderno ou na planilha.
-- MercadinhoMuitos itens, giro rápido, fiado de bairro
-- Loja de roupasGrade de tamanho e cor, recompra
-- Loja de variedadesCentenas de itens de baixo valor
-- PapelariaVarejo, atacado e pico da volta às aulas
-- FarmáciaGestão comercial do balcão
-- DistribuidoraVolume, atacado e nota fiscal
-- Pequeno comércioLoja de uma ou duas pessoas
-
-## Minha loja pequena precisa de um?
-
-Não existe faturamento mínimo. O indicador é a perda de controle: você não sabe de cabeça o estoque de um produto que vende todo dia, o fiado passou do ponto de lembrar, o caixa não bate, ou você vendeu bem e não sobrou dinheiro.
-
-Se nada disso acontece — poucos produtos, sem fiado, sem funcionário — o caderno provavelmente ainda dá conta. Aprofunde em loja pequena precisa de sistema?
-
-## Quanto custa
-
-Sistemas para pequeno varejo no Brasil são vendidos por assinatura mensal. No SoftPay os planos vão de R$ 65 a R$ 109 por mês, com 7 dias de teste grátis sem cartão.
-| Plano | Preço | Para quem |
-| Nota Fiscal | R$ 65/mês | Só emissão de notas, sem PDV nem estoque |
-| Comércio | R$ 69/mês | PDV, caixa, fiado e estoque essencial. 1 usuário |
-| Loja | R$ 89/mês | Fiado que cobra sozinho, loja online, estoque avançado. Até 3 usuários |
-| ERP Completo | R$ 109/mês | Tudo da Loja + NFC-e e NF-e. Até 10 usuários |
-Mais detalhes em quanto custa um sistema para loja.
-
-## O que um sistema de gestão resolve
-
-### Estoque
-
-A venda dá baixa sozinha, o custo fica registrado junto do preço e a curva ABC mostra o que gira e o que está parado. É o que responde “quanto dinheiro eu tenho na prateleira”. Veja o guia de estoque e a solução.
-
-### Vendas e PDV
-
-O PDV registra produto, preço, forma de pagamento e cliente no ato da venda. É de onde vem todo dado confiável do resto do sistema. Veja sistema PDV.
-
-### Caixa
-
-Fundo de troco, formas de pagamento separadas, saídas registradas e fechamento diário. Veja o guia de caixa.
-
-### Fiado
-
-Saldo por cliente com histórico, e cobrança por link de Pix pelo WhatsApp a partir do plano Loja. Veja o guia de fiado e a solução.
-
-### Clientes e CRM
-
-Cadastro ligado às vendas, base para fiado, cupom e fidelidade. Veja controle de clientes.
-
-### NF-e e NFC-e
-
-Emissão nos planos Nota Fiscal e ERP Completo, com cadastro fiscal e pacote do contador. Veja NF-e e NFC-e.
-
-### Loja online
-
-Catálogo alimentado pelo mesmo estoque, com Pix que confirma o pedido sozinho. Veja loja online.
-
-### Funcionários e filiais
-
-Multi-login com acesso individual e controle de filiais na mesma conta. Veja múltiplas lojas.
-
-### Celular
-
-Acesso pelo navegador, sem instalar aplicativo. Veja uso no celular.
-
-### Segurança e backup
-
-Banco de dados na nuvem com infraestrutura Supabase, backup automático e recuperação de conta. Veja é seguro?
-
-### Suporte
-
-Atendimento humano pelo WhatsApp, inclusive na configuração inicial. Veja suporte humano.
+- Estoque
+- Vendas e PDV
+- Caixa
+- Fiado
+- Clientes e CRM
+- NF-e e NFC-e
+- Loja online
+- Funcionários e filiais
+- Celular
+- Segurança e backup
+- Suporte
 
 ## Lucro e margem: a parte que decide o negócio
 
 É aqui que um sistema deixa de ser um registro e vira uma ferramenta de decisão. Faturamento é o que entrou; lucro é o que sobrou depois do custo da mercadoria e das despesas.
 
-Exemplo ilustrativo
-
 ### Do faturamento ao resultado
-
+- 01
 Vendas do mês R$ 25.480,00
+- 02
 Custo dos produtos vendidos (CMV) − R$ 16.560,00
+- 03
 = Lucro bruto R$ 8.920,00
+- 04
 Despesas do período − R$ 3.400,00
+- 05
 = Resultado estimado R$ 5.520,00
+
 Números fictícios. Método completo em como calcular o lucro da loja e como calcular a margem.
+
+## Como escolher sem errar
+
+-
+
+### Liste as três dores que mais te incomodam hoje. Ignore o resto.
+
+-
+
+### Confira se o sistema cobre essas três — e em qual plano.
+
+-
+
+### Verifique quantos usuários estão inclusos no preço anunciado.
+
+-
+
+### Teste com os seus produtos reais, não com dados de exemplo.
+
+-
+
+### Confirme se o suporte é humano e em qual canal.
+
+-
+
+### Pergunte se você consegue exportar seus dados caso queira sair.
+
+### O erro mais caro na escolha
+
+Recurso que você não vai usar não é vantagem: é complexidade a mais para aprender. Uma loja de bairro raramente precisa de gestão de produção ou integração com marketplace no primeiro ano.
+
+O que resolve
+
+## O que um sistema de gestão resolve
+
+-
+
+### Estoque
+
+A venda dá baixa sozinha, o custo fica registrado junto do preço e a curva ABC mostra o que gira e o que está parado. É o que responde “quanto dinheiro eu tenho na prateleira”. Veja o guia de estoque e a solução.
+
+-
+
+### Vendas e PDV
+
+O PDV registra produto, preço, forma de pagamento e cliente no ato da venda. É de onde vem todo dado confiável do resto do sistema. Veja sistema PDV.
+
+-
+
+### Caixa
+
+Fundo de troco, formas de pagamento separadas, saídas registradas e fechamento diário. Veja o guia de caixa.
+
+-
+
+### Fiado
+
+Saldo por cliente com histórico, e cobrança por link de Pix pelo WhatsApp a partir do plano Loja. Veja o guia de fiado e a solução.
+
+-
+
+### Clientes e CRM
+
+Cadastro ligado às vendas, base para fiado, cupom e fidelidade. Veja controle de clientes.
+
+-
+
+### NF-e e NFC-e
+
+Emissão nos planos Nota Fiscal e ERP Completo, com cadastro fiscal e pacote do contador. Veja NF-e e NFC-e.
+
+-
+
+### Loja online
+
+Catálogo alimentado pelo mesmo estoque, com Pix que confirma o pedido sozinho. Veja loja online.
+
+-
+
+### Funcionários e filiais
+
+Multi-login com acesso individual e controle de filiais na mesma conta. Veja múltiplas lojas.
+
+-
+
+### Celular
+
+Acesso pelo navegador, sem instalar aplicativo. Veja uso no celular.
+
+-
+
+### Segurança e backup
+
+Banco de dados na nuvem com infraestrutura Supabase, backup automático e recuperação de conta. Veja é seguro?
+
+-
+
+### Suporte
+
+Atendimento humano pelo WhatsApp, inclusive na configuração inicial. Veja suporte humano.
+
+-
+Veja tudo isso com a sua loja
+
+7 dias grátis, sem cartão de crédito.
+
+Segmentos
+
+## Para quem serve
+
+O perfil típico é o pequeno comércio com estoque: mercadinho, loja de roupas, loja de variedades, papelaria, farmácia, distribuidora. Geralmente com uma ou duas pessoas, faturamento crescendo e controle ainda no caderno ou na planilha.
+
+### Mercadinho
+
+Muitos itens, giro rápido, fiado de bairro
+
+### Papelaria
+
+Varejo, atacado e pico da volta às aulas
+
+### Pequeno comércio
+
+Loja de uma ou duas pessoas
+
+### Loja de roupas
+
+Grade de tamanho e cor, recompra
+
+### Farmácia
+
+Gestão comercial do balcão
+
+### Loja de variedades
+
+Centenas de itens de baixo valor
+
+### Distribuidora
+
+Volume, atacado e nota fiscal
+
+Na prática
 
 ## Caderno, Excel ou sistema
 
@@ -552,57 +636,145 @@ Caderno funciona enquanto uma pessoa só opera e o volume cabe na memória; ele 
 - Excel ou sistema?Por que a planilha desatualiza
 - Como sair do cadernoMigração em 7 dias
 
-## Como escolher sem errar
-- Liste as três dores que mais te incomodam hoje. Ignore o resto.
-- Confira se o sistema cobre essas três — e em qual plano.
-- Verifique quantos usuários estão inclusos no preço anunciado.
-- Teste com os seus produtos reais, não com dados de exemplo.
-- Confirme se o suporte é humano e em qual canal.
-- Pergunte se você consegue exportar seus dados caso queira sair.
-O erro mais caro na escolha
-Recurso que você não vai usar não é vantagem: é complexidade a mais para aprender. Uma loja de bairro raramente precisa de gestão de produção ou integração com marketplace no primeiro ano.
+Roda no navegador: computador, celular e tablet, sem instalar aplicativo.
+
+Planos
+
+## Quanto custa
+
+Sistemas para pequeno varejo no Brasil são vendidos por assinatura mensal. No SoftPay os planos vão de R$ 65 a R$ 109 por mês, com 7 dias de teste grátis sem cartão.
+
+-
+
+### Plano: Comércio
+
+Preço: R$ 69/mês
+
+Para quem: PDV, caixa, fiado e estoque essencial. 1 usuário
+- PDV e caixa completo
+- Caderninho de fiado
+- Estoque essencial
+- Não inclui: Fiado que cobra sozinho (link Pix)
+- Não inclui: Loja online com Pix automático
+- Não inclui: Estoque avançado e curva ABC
+- Não inclui: Venda pelo WhatsApp
+- Não inclui: Emissão de NFC-e e NF-e
+- Não inclui: Equipe ampliada
+
+-
+Mais popular
+
+### Plano: Loja
+
+Preço: R$ 89/mês
+
+Para quem: Fiado que cobra sozinho, loja online, estoque avançado. Até 3 usuários
+- PDV e caixa completo
+- Caderninho de fiado
+- Estoque essencial
+- Fiado que cobra sozinho (link Pix)
+- Loja online com Pix automático
+- Estoque avançado e curva ABC
+- Venda pelo WhatsApp
+- Não inclui: Emissão de NFC-e e NF-e
+- Não inclui: Equipe ampliada
+
+-
+
+### Plano: ERP Completo
+
+Preço: R$ 109/mês
+
+Para quem: Tudo da Loja + NFC-e e NF-e. Até 10 usuários
+- PDV e caixa completo
+- Caderninho de fiado
+- Estoque essencial
+- Fiado que cobra sozinho (link Pix)
+- Loja online com Pix automático
+- Estoque avançado e curva ABC
+- Venda pelo WhatsApp
+- Emissão de NFC-e e NF-e
+- Equipe ampliada
+
+### Plano: Nota Fiscal
+
+Para quem: Só emissão de notas, sem PDV nem estoque
+
+Preço: R$ 65/mês
+
+Mais detalhes em quanto custa um sistema para loja.
+
+Sem cartão de crédito, cancele quando quiser e conte com ajuda para configurar no WhatsApp.
+
+FAQ
 
 ## Perguntas frequentes
+
+###
 
 ### O que é um sistema de gestão?
 
 É o sistema que reúne as informações da loja em uma base só: vendas, estoque, caixa, fiado, clientes e notas fiscais, em vez de cada coisa em um lugar.
 
+###
+
 ### Qual a diferença entre ERP e PDV?
 
 PDV é a frente de caixa, onde a venda é registrada. ERP é o sistema que integra as áreas do negócio. Para uma loja pequena, o que importa é se cobre a sua operação.
+
+###
 
 ### Minha loja é pequena demais para isso?
 
 Não existe faturamento mínimo. O que indica a necessidade é a perda de controle sobre estoque, fiado e resultado.
 
+###
+
 ### Quanto custa um sistema de gestão?
 
 No SoftPay, de R$ 65 a R$ 109 por mês conforme o plano, com 7 dias de teste grátis sem cartão de crédito.
+
+###
 
 ### Preciso instalar alguma coisa?
 
 Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja.
 
+###
+
 ### O sistema calcula meu lucro?
 
 Ele reúne os dados que formam a conta — vendas registradas e custo cadastrado. A precisão depende de esses dados estarem completos, e ele não substitui a contabilidade.
+
+###
 
 ### Meus dados ficam seguros?
 
 Ficam em banco de dados na nuvem com infraestrutura Supabase, backup automático e acesso individual por usuário. Nenhum sistema garante segurança absoluta.
 
+###
+
 ### Consigo migrar da minha planilha?
 
 Sim. A importação de dados está disponível a partir do plano Loja; confirme o formato com o suporte.
+
+###
 
 ### Tem teste grátis?
 
 Sim, 7 dias com acesso aos recursos do plano e sem cartão de crédito.
 
+###
+
 ### Serve para qualquer tipo de loja?
 
 O SoftPay atende pequenos comércios com estoque. Segmentos regulados, como farmácia, têm obrigações específicas que ele não substitui.
+
+## Minha loja pequena precisa de um?
+
+Não existe faturamento mínimo. O indicador é a perda de controle: você não sabe de cabeça o estoque de um produto que vende todo dia, o fiado passou do ponto de lembrar, o caixa não bate, ou você vendeu bem e não sobrou dinheiro.
+
+Se nada disso acontece — poucos produtos, sem fiado, sem funcionário — o caderno provavelmente ainda dá conta. Aprofunde em loja pequena precisa de sistema?
 
 ---
 
@@ -773,6 +945,72 @@ Endereço: https://site.softpaybr.com/segmentos/mercadinho/
 
 Mercadinho é volume: muitos itens baratos, giro rápido e margem apertada. O SoftPay organiza a venda no balcão, o que está acabando na prateleira e o fiado dos clientes de sempre.
 
+Testar grátis por 7 dias
+
+## Os problemas que aparecem sempre
+
+-
+
+A fila trava por causa do preço. Ninguém lembra quanto custa um item entre centenas, e a venda para enquanto alguém confere na prateleira.
+
+-
+
+A prateleira vazia surpreende. O item de maior giro acaba no meio da tarde e só é notado quando um cliente pergunta.
+
+-
+
+O fiado depende de uma pessoa só. Se quem anota falta, ninguém sabe quem deve o quê — e cobrar vira constrangimento.
+
+-
+
+O caixa fecha com diferença e ninguém explica. Sem registro item a item, a diferença some no meio do movimento.
+
+-
+
+Vendeu muito e não sobrou. Com margem apertada, o custo da mercadoria decide o resultado — e ele quase nunca está anotado.
+
+## O que muda com o SoftPay
+
+### Venda rápida no balcão
+
+O PDV registra a venda, calcula o troco e já baixa o estoque. Não existe um segundo momento de digitar tudo de novo no fim do dia — a venda que passou no caixa já é o dado do relatório.
+
+Conhecer o PDV
+
+### Estoque de muitos itens sem virar bagunça
+
+Produtos organizados por categoria, com preço de venda e custo. Como cada venda dá baixa automática, a quantidade em sistema acompanha a prateleira em vez de virar um número que ninguém confia.
+
+Controle de estoque
+
+### Fiado sem caderno
+
+O fiado é parte do mercadinho de bairro — o problema nunca foi vender a prazo, foi anotar em papel. Cada venda fiada fica no nome do cliente, com histórico, e o saldo para de depender da memória de quem estava no balcão. A partir do plano Loja, o sistema ainda envia a cobrança por link de Pix pelo WhatsApp, o que tira de você a parte mais desconfortável: pedir.
+
+Controle de fiado
+
+### Fechamento de caixa
+
+No fim do expediente você confere o que o sistema registrou contra o que está na gaveta. A diferença aparece no mesmo dia, não no fim do mês.
+
+Controle financeiro
+
+### Curva ABC: onde está o seu resultado
+
+A partir do plano Loja, a curva ABC separa os itens que sustentam o faturamento daqueles que só ocupam prateleira. Num mercadinho com centenas de produtos, é o filtro que transforma a compra do mês numa decisão em vez de um hábito.
+
+Ver os planos
+
+### Registrar a entrada da mercadoria falando
+
+A partir do plano Loja, você dá entrada de estoque, lança despesa ou registra um fiado mandando uma mensagem ou um áudio no WhatsApp. Veja o bot do WhatsApp.
+
+Onde o bot rende, e onde não
+
+Seja realista sobre onde o bot ajuda no mercadinho: não é para o pico do caixa. Quem passa centenas de itens por dia precisa de PDV, não de conversa. O bot rende na reposição, na despesa do meio da tarde e no fiado do vizinho — os momentos em que abrir o sistema é justamente o que não acontece.
+
+Bot do WhatsApp
+
 ## A rotina de um mercadinho não perdoa lentidão
 
 Fila no caixa em horário de pico, cliente esperando enquanto alguém procura o preço, o refrigerante que acabou sem ninguém perceber e o caderno de fiado que só uma pessoa sabe ler. Esses quatro problemas têm a mesma origem: a informação da loja não está em lugar nenhum além da cabeça de quem trabalha ali.
@@ -781,71 +1019,46 @@ Um mercadinho de bairro chega a passar centenas de itens por dia. Sem registro, 
 
 E há um detalhe que separa o mercadinho dos outros comércios: aqui o cliente é o vizinho. Ele volta três vezes por semana, leva fiado, pergunta se chegou aquele item. A relação é o ativo do negócio — e ela não cabe num caderno que só uma pessoa lê.
 
-## Os problemas que aparecem sempre
-- A fila trava por causa do preço. Ninguém lembra quanto custa um item entre centenas, e a venda para enquanto alguém confere na prateleira.
-- A prateleira vazia surpreende. O item de maior giro acaba no meio da tarde e só é notado quando um cliente pergunta.
-- O fiado depende de uma pessoa só. Se quem anota falta, ninguém sabe quem deve o quê — e cobrar vira constrangimento.
-- O caixa fecha com diferença e ninguém explica. Sem registro item a item, a diferença some no meio do movimento.
-- Vendeu muito e não sobrou. Com margem apertada, o custo da mercadoria decide o resultado — e ele quase nunca está anotado.
+Tirar dúvidas no WhatsApp
 
-## O que muda com o SoftPay
+## Perguntas que você passa a conseguir responder
 
-### Venda rápida no balcão
+-
 
-O PDV registra a venda, calcula o troco e já baixa o estoque. Não existe um segundo momento de digitar tudo de novo no fim do dia — a venda que passou no caixa já é o dado do relatório.
+Quanto ainda tenho daquele item que vende todo dia?
 
-### Estoque de muitos itens sem virar bagunça
+-
 
-Produtos organizados por categoria, com preço de venda e custo. Como cada venda dá baixa automática, a quantidade em sistema acompanha a prateleira em vez de virar um número que ninguém confia.
+Quem está devendo fiado, quanto e desde quando?
 
-### Fiado sem caderno
+-
 
-O fiado é parte do mercadinho de bairro — o problema nunca foi vender a prazo, foi anotar em papel. Cada venda fiada fica no nome do cliente, com histórico, e o saldo para de depender da memória de quem estava no balcão. A partir do plano Loja, o sistema ainda envia a cobrança por link de Pix pelo WhatsApp, o que tira de você a parte mais desconfortável: pedir.
+O caixa de ontem bateu? Se não, em qual venda começou a diferença?
 
-### Fechamento de caixa
+-
 
-No fim do expediente você confere o que o sistema registrou contra o que está na gaveta. A diferença aparece no mesmo dia, não no fim do mês.
+Quais produtos sustentam o meu faturamento e quais só ocupam prateleira?
 
-### Curva ABC: onde está o seu resultado
+-
 
-A partir do plano Loja, a curva ABC separa os itens que sustentam o faturamento daqueles que só ocupam prateleira. Num mercadinho com centenas de produtos, é o filtro que transforma a compra do mês numa decisão em vez de um hábito.
+Qual a minha margem depois do custo da mercadoria?
 
-### Registrar a entrada da mercadoria falando
+-
 
-A partir do plano Loja, você dá entrada de estoque, lança despesa ou registra um fiado mandando uma mensagem ou um áudio no WhatsApp. Veja o bot do WhatsApp.
-Onde o bot rende, e onde não
-Seja realista sobre onde o bot ajuda no mercadinho: não é para o pico do caixa. Quem passa centenas de itens por dia precisa de PDV, não de conversa. O bot rende na reposição, na despesa do meio da tarde e no fiado do vizinho — os momentos em que abrir o sistema é justamente o que não acontece.
-
-## O que o SoftPay não faz num mercadinho
-
-Dizer isso antes da contratação é mais útil que descobrir depois:
-- Não integra com balança. Venda por peso — frios, hortifrúti, granel — não sai etiquetada pelo sistema. Esses itens entram como produto comum, com o valor digitado no PDV.
-- Não faz pedido automático ao fornecedor. O sistema mostra o que está acabando; a compra continua sendo sua, pelo canal de sempre.
-- Não tem controle de validade confirmado. Num mercadinho isso pesa. Confirme com o suporte antes de contratar contando com esse recurso.
-- Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
+Quanto tenho de dinheiro parado em estoque agora?
 
 ## A conta que todo dono de mercadinho precisa fazer
 
 Margem de mercadinho é apertada, então o custo de cada produto importa muito mais do que em outros comércios. Vender bastante e ganhar pouco é o resultado normal de não acompanhar o custo da mercadoria.
 
-Exemplo ilustrativo
+Vendi R$ 25.480 no mês. Quanto ficou?
 
-### Vendi R$ 25.480 no mês. Quanto ficou?
-
-Vendas do mês R$ 25.480,00
-Custo dos produtos vendidos (CMV) − R$ 20.900,00
-= Lucro bruto R$ 4.580,00
-Aluguel, energia, funcionário − R$ 3.100,00
-= Resultado estimado R$ 1.480,00
+Vendas do mêsR$ 25.480,00
+Custo dos produtos vendidos (CMV)− R$ 20.900,00
+= Lucro brutoR$ 4.580,00
+Aluguel, energia, funcionário− R$ 3.100,00
+= Resultado estimadoR$ 1.480,00
 Números fictícios, só para mostrar o raciocínio. Com custo e quantidade cadastrados no sistema, essa conta deixa de ser estimativa. Aprenda a fazê-la no guia como calcular o lucro da loja.
-
-## Perguntas que você passa a conseguir responder
-- Quanto ainda tenho daquele item que vende todo dia?
-- Quem está devendo fiado, quanto e desde quando?
-- O caixa de ontem bateu? Se não, em qual venda começou a diferença?
-- Quais produtos sustentam o meu faturamento e quais só ocupam prateleira?
-- Qual a minha margem depois do custo da mercadoria?
-- Quanto tenho de dinheiro parado em estoque agora?
 
 ## Qual plano faz sentido
 | Plano | Preço | Para o mercadinho |
@@ -854,43 +1067,98 @@ Números fictícios, só para mostrar o raciocínio. Com custo e quantidade cada
 | ERP Completo | R$ 109/mês | Para quem precisa emitir NF-e e NFC-e e tem equipe maior. Até 10 usuários |
 Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
 
-## Perguntas frequentes
+Ver todos os planos
+
+## Continue por aqui
+- Controle de estoqueCusto, quantidade e curva ABC
+- Controle de fiadoQuem deve, quanto e desde quando
+- Sistema PDVVenda rápida no balcão
+- Bot do WhatsAppRegistrar entrada e fiado falando
+- Como sair do cadernoO passo a passo da migração
+- Loja de variedadesOutro segmento com muitos itens
+
+## O que o SoftPay não faz num mercadinho
+
+Dizer isso antes da contratação é mais útil que descobrir depois:
+
+-
+
+Não integra com balança. Venda por peso — frios, hortifrúti, granel — não sai etiquetada pelo sistema. Esses itens entram como produto comum, com o valor digitado no PDV.
+
+-
+
+Não faz pedido automático ao fornecedor. O sistema mostra o que está acabando; a compra continua sendo sua, pelo canal de sempre.
+
+-
+
+Não tem controle de validade confirmado. Num mercadinho isso pesa. Confirme com o suporte antes de contratar contando com esse recurso.
+
+-
+
+Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
+
+##
+Perguntas frequentes
+
+###
 
 ### O SoftPay serve para mercadinho pequeno, de uma pessoa só?
 
 Sim. O plano Comércio, de R$ 69/mês, cobre PDV, caixa, fiado e estoque essencial com 1 usuário — o perfil mais comum de mercadinho de bairro.
 
+###
+
 ### Preciso cadastrar todos os produtos antes de começar a usar?
 
 Não. O caminho prático é cadastrar primeiro os itens de maior giro e ir completando o restante conforme você repõe o estoque. O sistema já é útil desde o primeiro dia.
+
+###
 
 ### Funciona com leitor de código de barras?
 
 O SoftPay roda no navegador e o campo de busca do PDV aceita a leitura do código. Confirme com o suporte a compatibilidade do seu leitor antes de contratar.
 
+###
+
 ### E a balança? Vendo frios e hortifrúti por peso.
 
 O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV. Se a maior parte do seu faturamento é venda por peso, leve isso em conta na decisão.
+
+###
 
 ### Consigo controlar o fiado dos clientes?
 
 Sim. O caderninho de fiado está no plano Comércio, com saldo e histórico por cliente. A partir do plano Loja, o sistema também envia cobrança por link de Pix pelo WhatsApp.
 
+###
+
 ### O sistema controla a validade dos produtos?
 
 Esse é um ponto a confirmar com o suporte antes de contratar. Num mercadinho o controle de validade é importante e não deve ser assumido sem verificação.
+
+###
 
 ### Dá para registrar a entrada de mercadoria pelo WhatsApp?
 
 Sim, a partir do plano Loja. Você manda uma mensagem ou um áudio e o SoftPay registra. Vale a ressalva: no pico do caixa o PDV continua sendo o caminho — o bot rende na reposição e no fiado.
 
+###
+
 ### Dá para usar no celular durante a reposição?
 
 Sim. Como é acessado pelo navegador, você consulta estoque e preço pelo celular enquanto organiza a prateleira.
 
+###
+
 ### Preciso emitir cupom fiscal?
 
 Depende do seu regime — confirme com o seu contador. Se precisar, a emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação.
+
+## Organize seu mercadinho em uma tarde
+
+Cadastre os produtos de maior giro, passe as primeiras vendas no PDV e veja o estoque acompanhar sozinho. 7 dias grátis, sem cartão.
+
+Testar grátis por 7 dias
 
 ---
 
@@ -901,24 +1169,60 @@ Endereço: https://site.softpaybr.com/segmentos/loja-de-roupas/
 
 O SoftPay é um sistema para loja de roupas com estoque por grade: cada tamanho e cor tem a própria quantidade, e a venda no PDV baixa a combinação certa. Abre no celular e no computador, mostra na curva ABC a peça parada e liga a venda à cliente. A grade está a partir do plano Loja, de R$ 89/mês.
 
+Loja de moda
+
 ## A rotina de quem vende moda
 
 Na loja de roupas o mesmo modelo existe em vários tamanhos e cores — e é aí que a planilha desiste. O SoftPay controla cada variação separadamente, mostra qual peça está encalhada e liga a venda ao cliente que comprou.
 
+### Uma combinação, não um produto
+
 O dia começa com a arrumação da vitrine e termina com o fechamento do caixa, mas entre uma coisa e outra a loja de roupas tem uma rotina que nenhum outro comércio tem: você não vende um produto, vende uma combinação.
+
+### A pergunta do provador
 
 A cliente pergunta se tem aquele vestido no M, na cor verde. A resposta certa exige saber o saldo de uma combinação específica, não do modelo. Multiplique por uma coleção inteira e você tem centenas de saldos para acompanhar — enquanto atende, prova e fecha venda.
 
+### O calendário da moda
+
 Some a isso o calendário próprio da moda: coleção que entra, peça que precisa sair antes da próxima estação, remarcação, queima. Uma peça parada não é só espaço ocupado; é dinheiro que perde valor a cada mês.
 
+Você não vende um produto, vende uma combinação: tamanho, cor e saldo de cada uma.
+
+No balcão
+
 ## Os problemas que aparecem sempre
-- A vendedora promete o que não existe. Diz que tem no tamanho da cliente, vai buscar e não acha. A venda morre ali.
-- Você recompra o que já tem. Vê o modelo vendendo bem, repõe, e descobre que ainda havia seis unidades — todas no tamanho que ninguém pede.
-- A peça encalhada só aparece no inventário. Quando você percebe, já passou da estação e a remarcação precisa ser agressiva.
-- A margem é uma média que engana. Sem custo por peça, o modelo que dá 20% e o que dá 50% viram um número só.
-- A cliente que volta é tratada como nova. Ninguém lembra o que ela levou da última vez, nem o tamanho dela.
+
+-
+A vendedora promete o que não existe.
+
+Diz que tem no tamanho da cliente, vai buscar e não acha. A venda morre ali.
+
+-
+Você recompra o que já tem.
+
+Vê o modelo vendendo bem, repõe, e descobre que ainda havia seis unidades — todas no tamanho que ninguém pede.
+
+-
+A peça encalhada só aparece no inventário.
+
+Quando você percebe, já passou da estação e a remarcação precisa ser agressiva.
+
+-
+A margem é uma média que engana.
+
+Sem custo por peça, o modelo que dá 20% e o que dá 50% viram um número só.
+
+-
+A cliente que volta é tratada como nova.
+
+Ninguém lembra o que ela levou da última vez, nem o tamanho dela.
+
+Recursos para moda
 
 ## Como o SoftPay resolve
+
+Estoque por tamanho e cor, curva ABC e margem por peça, no computador e no celular.
 
 ### Estoque por variação, não por modelo
 
@@ -932,6 +1236,32 @@ A curva ABC separa o que sustenta o faturamento do que só ocupa espaço. É a i
 
 Com o custo cadastrado, você enxerga a margem de cada modelo. Um item de giro alto com margem baixa pode ser ótimo negócio — mas você precisa saber que ele é de margem baixa para decidir.
 
+Estoque e vendas
+
+## Perguntas que você passa a conseguir responder
+
+-
+Tenho esse modelo no tamanho e na cor que a cliente quer?
+
+-
+Quais peças não vendem há mais de 60 dias?
+
+-
+Qual a margem real deste modelo, depois do custo?
+
+-
+Quanto tenho investido em mercadoria parada?
+
+-
+Quais clientes compraram nesta coleção e podem voltar na próxima?
+
+-
+Que tamanho mais sai na minha loja — e qual eu compro demais?
+
+Além do balcão
+
+## A cliente, a loja online e o WhatsApp no mesmo cadastro
+
 ### A cliente que volta
 
 O cadastro ligado às vendas mostra o que ela comprou e quando. É a base para cupom, fidelidade e um contato com propósito, em vez de disparo para uma lista inteira.
@@ -943,34 +1273,81 @@ A partir do plano Loja, o catálogo online usa os mesmos produtos já cadastrado
 ### Registrar sem parar o atendimento
 
 A partir do plano Loja, você registra venda, entrada de mercadoria e fiado mandando uma mensagem ou um áudio pelo WhatsApp. Numa loja em que a vendedora está de pé, com a cliente no provador, isso muda quando o registro acontece. Veja o bot do WhatsApp.
+Conhecer a loja online
+
+Planos
+
+## Qual plano faz sentido
+
+Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+
+Plano Comércio
+
+Preço R$ 69/mês
+
+Para a loja de roupas PDV, caixa e estoque essencial. Serve para quem trabalha com peça única ou brechó, sem grade
+Testar o Comércio
+
+Plano Loja
+
+Preço R$ 89/mês
+
+Para a loja de roupas O plano da loja de moda: variações de tamanho e cor, custo, curva ABC, loja online, fidelidade e registro pelo WhatsApp. Até 3 usuários
+Testar o Loja
+
+Plano ERP Completo
+
+Preço R$ 109/mês
+
+Para a loja de roupas Tudo da Loja mais emissão de NF-e e NFC-e, para quem precisa de nota. Até 10 usuários
+Testar o ERP Completo
+
+## Veja o SoftPay por dentro, com a sua loja
+
+Abre no navegador do celular e do computador, sem instalar nada. Teste 7 dias grátis, sem cartão.
 
 ## Um dia comum, do jeito que acontece
 
 Sexta de movimento. A cliente pergunta por um vestido específico:
-- Você consulta o modelo no sistema e vê: P esgotado, M com 2, G com 1, todos na cor verde.
-- Vende o M. A baixa acontece na variação certa, sem mexer no saldo dos outros tamanhos.
-- A cliente já tem cadastro — a compra entra no histórico dela.
-- No fim do dia, o fechamento de caixa compara o registrado com o que está na gaveta.
-- No fim do mês, a curva ABC mostra que aquele vestido é classe A e que uma blusa da coleção passada não sai há sessenta dias.
 
 A quinta linha é a que muda a compra do mês seguinte.
+
 Sobre este exemplo
+
 Exemplo ilustrativo do fluxo. Os números da sua loja dependem dos seus próprios dados de venda e de custo.
+- 1Você consulta o modelo no sistema e vê: P esgotado, M com 2, G com 1, todos na cor verde.
+- 2Vende o M. A baixa acontece na variação certa, sem mexer no saldo dos outros tamanhos.
+- 3A cliente já tem cadastro — a compra entra no histórico dela.
+- 4No fim do dia, o fechamento de caixa compara o registrado com o que está na gaveta.
+- 5No fim do mês, a curva ABC mostra que aquele vestido é classe A e que uma blusa da coleção passada não sai há sessenta dias.
 
-## Perguntas que você passa a conseguir responder
-- Tenho esse modelo no tamanho e na cor que a cliente quer?
-- Quais peças não vendem há mais de 60 dias?
-- Qual a margem real deste modelo, depois do custo?
-- Quanto tenho investido em mercadoria parada?
-- Quais clientes compraram nesta coleção e podem voltar na próxima?
-- Que tamanho mais sai na minha loja — e qual eu compro demais?
+## Continue por aqui
 
-## Qual plano faz sentido
-| Plano | Preço | Para a loja de roupas |
-| Comércio | R$ 69/mês | PDV, caixa e estoque essencial. Serve para quem trabalha com peça única ou brechó, sem grade |
-| Loja | R$ 89/mês | O plano da loja de moda: variações de tamanho e cor, custo, curva ABC, loja online, fidelidade e registro pelo WhatsApp. Até 3 usuários |
-| ERP Completo | R$ 109/mês | Tudo da Loja mais emissão de NF-e e NFC-e, para quem precisa de nota. Até 10 usuários |
-Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+Guias, recursos e outros segmentos para a loja de moda.
+
+### Controle de estoque
+
+Variações, custo e curva ABC
+
+### Loja online
+
+Catálogo e Pix no mesmo estoque
+
+### Controle de clientes
+
+Histórico, cupom e fidelidade
+
+### Bot do WhatsApp
+
+Registrar sem parar o atendimento
+
+### Como controlar estoque
+
+O método, passo a passo
+
+### Loja de variedades
+
+Outro segmento com muitos itens
 
 ## Perguntas frequentes
 
@@ -1013,6 +1390,10 @@ Serve. Se você não trabalha com grade, o cadastro simples do plano Comércio r
 ### Consigo importar minha planilha de produtos?
 
 A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo.
+
+## Teste com a sua própria grade
+
+Cadastre um modelo com todos os tamanhos e cores e veja o estoque baixar na variação certa a cada venda. 7 dias grátis, sem cartão.
 
 ---
 
@@ -1353,6 +1734,16 @@ Endereço: https://site.softpaybr.com/segmentos/distribuidora/
 
 Distribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação. O SoftPay junta estoque, atacado, varejo e emissão fiscal no mesmo lugar — seja a sua distribuidora de bebidas, de alimentos ou de produtos em geral.
 
+Cadastro em minutos: 7 dias grátis, sem cartão de crédito.
+- NF-e
+- Controle de estoque
+- Múltiplas lojas
+- Bot do WhatsApp
+- Controle de clientes
+- Empresas com filiais
+
+SoftPay
+
 ## Volume alto deixa pouco espaço para erro
 
 Quando a operação é de centenas ou milhares de unidades, um erro de contagem não é um item a menos: é uma carga inteira de diferença entre o que o sistema diz e o que existe no depósito.
@@ -1361,66 +1752,14 @@ Some a isso a convivência de dois preços — atacado para o revendedor, varejo
 
 E há uma diferença de fundo em relação ao varejo comum: o seu cliente não é uma pessoa que aparece uma vez. É um comerciante que compra toda semana, negocia preço e vai embora se você errar o pedido dele duas vezes seguidas.
 
-## Os problemas que aparecem sempre
+### Os problemas que aparecem sempre
 - O saldo do depósito é reconstruído de memória. Ninguém sabe o número exato antes do inventário, e o inventário é sempre depois do problema.
 - A tabela de preço mora na cabeça de quem vende. Cada vendedor cobra o atacado de um jeito, e a margem varia sem ninguém decidir isso.
 - O que já foi vendido continua sendo oferecido. A carga sai, o registro não acompanha e o pedido seguinte promete o que não existe.
 - A nota fiscal é um segundo trabalho. O que foi vendido tem de ser digitado de novo em outro lugar para virar documento.
 - Ninguém sabe quem parou de comprar. O revendedor some por dois meses e a queda só aparece no faturamento do trimestre.
 
-## O que muda com o SoftPay
-
-### Entradas e saídas registradas
-
-Cada compra de fornecedor e cada venda alimentam o mesmo estoque. O saldo deixa de ser reconstruído de memória no fim do mês.
-
-### Atacado e varejo no mesmo produto
-
-Os dois preços convivem no cadastro, sem duplicar item e sem depender de quem está atendendo lembrar a tabela certa.
-
-### Emissão de nota fiscal
-
-O plano ERP Completo inclui emissão de NF-e e NFC-e, com cadastro fiscal e pacote do contador. O plano Nota Fiscal atende quem só precisa da parte fiscal. A emissão consta como recurso em ativação — confirme a situação com o suporte antes de contratar contando com ela.
-
-### Notas de fornecedor
-
-As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal — parte da rotina de quem compra em volume.
-
-### Clientes recorrentes
-
-Revendedor compra sempre. O cadastro com histórico mostra frequência e volume, base para negociar preço e perceber quem parou de comprar antes de o trimestre fechar.
-
-### Curva ABC do depósito
-
-A partir do plano Loja, a curva ABC mostra quais produtos sustentam o faturamento e quais ocupam palete sem girar. Num depósito, item parado é capital imobilizado em metro quadrado alugado.
-
-### Equipe e mais de um ponto
-
-O ERP Completo permite até 10 usuários, e o sistema controla filiais dentro da mesma conta — útil para quem tem depósito e loja separados. Veja múltiplas lojas e filiais.
-
-### Registrar a carga que chegou sem voltar ao escritório
-
-A partir do plano Loja, entrada de estoque, despesa e consulta de saldo acontecem por mensagem ou áudio no WhatsApp. No depósito, onde ninguém está sentado na frente de um computador, isso muda quando o registro acontece. Veja o bot do WhatsApp.
-
-## Bebidas, alimentos ou produtos em geral
-
-A operação é a mesma; o que muda é onde o erro dói. Vale saber qual é o seu ponto sensível antes de contratar.
-
-### Distribuidora de bebidas
-
-Giro rápido, sazonalidade forte e venda por engradado e por unidade no mesmo dia. O preço de atacado e varejo no mesmo cadastro é o recurso que mais rende aqui — e a curva ABC mostra qual marca realmente sustenta o mês, em vez da que ocupa mais espaço.
-
-### Distribuidora de alimentos
-
-Aqui o custo por caixa e a margem por item decidem o resultado, porque o volume é grande e a margem é fina. O cadastro com custo é o que transforma faturamento em lucro conhecido. Um alerta honesto: controle de validade e de lote não está confirmado no sistema — se a sua operação depende disso, confirme com o suporte antes de contratar.
-
-### Produtos de limpeza, descartáveis e embalagem
-
-Catálogo grande, muita variação de tamanho e fornecedor, giro desigual. A organização por categoria e a curva ABC fazem mais diferença que qualquer outro recurso, porque o problema não é vender: é saber o que vale repor.
-Por que não há uma página por tipo
-Estas são seções da mesma página de propósito. A rotina de uma distribuidora é a mesma nos três casos, e criar uma página separada por tipo de produto daria três textos quase idênticos competindo entre si na busca.
-
-## O que o SoftPay não faz numa distribuidora
+### O que o SoftPay não faz numa distribuidora
 
 Dizer o limite antes da venda evita frustração depois:
 - Não faz roteirização nem controle de entrega. Não há rota de caminhão, canhoto de entrega nem acompanhamento de motorista.
@@ -1428,6 +1767,149 @@ Dizer o limite antes da venda evita frustração depois:
 - Não controla vasilhame retornável. Casco e comodato de engradado ficam fora do sistema.
 - MDF-e consta como recurso em ativação. Se a sua operação exige documento de transporte, confirme a situação com o suporte e com o seu contador antes de contratar.
 - Conversão automática de unidade não está confirmada. Se você precisa que o sistema converta fardo em unidade sozinho, verifique com o suporte.
+
+## O que muda com o SoftPay
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+### Entradas e saídas registradas
+
+Cada compra de fornecedor e cada venda alimentam o mesmo estoque. O saldo deixa de ser reconstruído de memória no fim do mês.
+
+-
+
+### Atacado e varejo no mesmo produto
+
+Os dois preços convivem no cadastro, sem duplicar item e sem depender de quem está atendendo lembrar a tabela certa.
+
+-
+
+### Emissão de nota fiscal
+
+O plano ERP Completo inclui emissão de NF-e e NFC-e, com cadastro fiscal e pacote do contador. O plano Nota Fiscal atende quem só precisa da parte fiscal. A emissão consta como recurso em ativação — confirme a situação com o suporte antes de contratar contando com ela.
+
+-
+
+### Notas de fornecedor
+
+As notas recebidas podem ser consultadas dentro do sistema, e manifestadas no plano Nota Fiscal — parte da rotina de quem compra em volume.
+
+-
+
+### Clientes recorrentes
+
+Revendedor compra sempre. O cadastro com histórico mostra frequência e volume, base para negociar preço e perceber quem parou de comprar antes de o trimestre fechar.
+
+-
+
+### Curva ABC do depósito
+
+A partir do plano Loja, a curva ABC mostra quais produtos sustentam o faturamento e quais ocupam palete sem girar. Num depósito, item parado é capital imobilizado em metro quadrado alugado.
+
+-
+
+### Equipe e mais de um ponto
+
+O ERP Completo permite até 10 usuários, e o sistema controla filiais dentro da mesma conta — útil para quem tem depósito e loja separados. Veja múltiplas lojas e filiais.
+
+-
+
+### Registrar a carga que chegou sem voltar ao escritório
+
+A partir do plano Loja, entrada de estoque, despesa e consulta de saldo acontecem por mensagem ou áudio no WhatsApp. No depósito, onde ninguém está sentado na frente de um computador, isso muda quando o registro acontece. Veja o bot do WhatsApp.
+
+## Perguntas que você passa a conseguir responder
+
+Sem abrir planilha nem esperar o inventário do fim do mês.
+
+-
+Quanto tenho deste produto no depósito, agora?
+
+-
+Qual a minha margem real por caixa, depois do custo?
+
+-
+Quais revendedores compraram menos neste mês do que no anterior?
+
+-
+Que produtos ocupam palete e não giram?
+
+-
+Quanto de capital está parado em mercadoria?
+
+-
+Quanto vendi no atacado e quanto no varejo?
+
+Por tipo de distribuidora
+
+## Bebidas, alimentos ou produtos em geral
+
+A operação é a mesma; o que muda é onde o erro dói. Vale saber qual é o seu ponto sensível antes de contratar.
+
+-
+
+### Distribuidora de bebidas
+
+Giro rápido, sazonalidade forte e venda por engradado e por unidade no mesmo dia. O preço de atacado e varejo no mesmo cadastro é o recurso que mais rende aqui — e a curva ABC mostra qual marca realmente sustenta o mês, em vez da que ocupa mais espaço.
+
+-
+
+### Distribuidora de alimentos
+
+Aqui o custo por caixa e a margem por item decidem o resultado, porque o volume é grande e a margem é fina. O cadastro com custo é o que transforma faturamento em lucro conhecido. Um alerta honesto: controle de validade e de lote não está confirmado no sistema — se a sua operação depende disso, confirme com o suporte antes de contratar.
+
+-
+
+### Produtos de limpeza, descartáveis e embalagem
+
+Catálogo grande, muita variação de tamanho e fornecedor, giro desigual. A organização por categoria e a curva ABC fazem mais diferença que qualquer outro recurso, porque o problema não é vender: é saber o que vale repor.
+
+Por que não há uma página por tipo
+
+Estas são seções da mesma página de propósito. A rotina de uma distribuidora é a mesma nos três casos, e criar uma página separada por tipo de produto daria três textos quase idênticos competindo entre si na busca.
+
+## Qual plano faz sentido
+
+-
+Plano: Comércio
+
+Preço: R$ 69/mês
+
+Para a distribuidora: Depósito pequeno, sem exigência de nota: PDV, caixa e estoque essencial, 1 usuário
+
+-
+Mais escolhido
+
+Plano: ERP Completo
+
+Preço: R$ 109/mês
+
+Para a distribuidora: O plano da distribuidora: tudo da Loja mais NF-e e NFC-e, cadastro fiscal e pacote do contador. Até 10 usuários
+
+-
+Plano: Loja
+
+Preço: R$ 89/mês
+
+Para a distribuidora: Estoque avançado, curva ABC, importação e registro pelo WhatsApp. Até 3 usuários
+
+Plano: Nota Fiscal Preço: R$ 65/mês
+
+Para a distribuidora: Para quem já tem outro sistema e só precisa da parte fiscal. Até 2 usuários
+
+Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
 
 ## Um pedido de revendedor, do começo ao fim
 
@@ -1440,58 +1922,85 @@ O fluxo típico de quem atende comerciante:
 - No fim do mês, o histórico mostra quem aumentou, quem manteve e quem sumiu.
 
 A última linha é a que sustenta a negociação da próxima tabela de preço.
+
 Sobre este exemplo
+
 Exemplo ilustrativo do fluxo. Os números e a rotina da sua distribuidora dependem da sua própria operação.
 
-## Perguntas que você passa a conseguir responder
-- Quanto tenho deste produto no depósito, agora?
-- Qual a minha margem real por caixa, depois do custo?
-- Quais revendedores compraram menos neste mês do que no anterior?
-- Que produtos ocupam palete e não giram?
-- Quanto de capital está parado em mercadoria?
-- Quanto vendi no atacado e quanto no varejo?
+7 dias grátis
 
-## Qual plano faz sentido
-| Plano | Preço | Para a distribuidora |
-| Comércio | R$ 69/mês | Depósito pequeno, sem exigência de nota: PDV, caixa e estoque essencial, 1 usuário |
-| Loja | R$ 89/mês | Estoque avançado, curva ABC, importação e registro pelo WhatsApp. Até 3 usuários |
-| ERP Completo | R$ 109/mês | O plano da distribuidora: tudo da Loja mais NF-e e NFC-e, cadastro fiscal e pacote do contador. Até 10 usuários |
-| Nota Fiscal | R$ 65/mês | Para quem já tem outro sistema e só precisa da parte fiscal. Até 2 usuários |
-Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+## Teste com o seu volume real
+
+Cadastre os produtos de maior saída, registre entradas e vendas por alguns dias e confira o saldo contra o depósito. 7 dias grátis, sem cartão.
+- Acesso pelo navegador, no computador ou no celular
+- Sem cartão de crédito para começar o teste
+- Suporte de gente pelo WhatsApp
+
+SoftPay
+
+## Continue por aqui
+
+Cada recurso da distribuidora tem uma página com o detalhe de como funciona no SoftPay.
+- NF-eEmissão para operação de atacado
+- Controle de estoqueEntradas, saídas e custo
+- Múltiplas lojasDepósito e filiais na mesma conta
+- Bot do WhatsAppRegistrar a carga sem voltar ao escritório
+- Controle de clientesHistórico do revendedor
+- Empresas com filiaisQuando há mais de um ponto
 
 ## Perguntas frequentes
+
+Ainda ficou alguma dúvida? Fale com a gente pelo WhatsApp.
+
+###
 
 ### O SoftPay serve para distribuidora de bebidas e de alimentos?
 
 Serve para as duas, e também para distribuidoras de produtos em geral. A operação é a mesma: estoque em volume, preço de atacado e varejo, nota fiscal e clientes revendedores. O que muda de um caso para outro é onde o erro dói — a página explica cada um.
 
+###
+
 ### O SoftPay emite NF-e para distribuidora?
 
 Sim, nos planos Nota Fiscal e ERP Completo, com cadastro fiscal e pacote do contador. A emissão consta como em ativação — confirme a situação com o suporte antes de contratar.
+
+###
 
 ### Consigo trabalhar preço de atacado e varejo?
 
 Sim. O mesmo produto aceita os dois preços, sem cadastro duplicado, e o preço não depende de quem está atendendo lembrar a tabela.
 
+###
+
 ### E o MDF-e para transporte?
 
 O MDF-e aparece nos planos como recurso em ativação. Confirme com o suporte e com seu contador antes de contar com ele na sua operação.
+
+###
 
 ### O sistema controla validade e lote?
 
 Não está confirmado. Se a sua distribuidora trabalha com alimentos e depende de controle de validade ou de lote, verifique com o suporte antes de contratar.
 
+###
+
 ### Tem roteirização de entrega ou aplicativo para o vendedor na rua?
 
 Não. O SoftPay não faz rota de entrega nem tem força de vendas em campo com uso offline. O acesso é pelo navegador e depende de internet.
+
+###
 
 ### Dá para controlar depósito e loja separadamente?
 
 O SoftPay permite controlar filiais dentro da mesma conta. Vale detalhar sua estrutura com o suporte para confirmar que atende ao seu caso.
 
+###
+
 ### Dá para registrar a chegada da carga pelo WhatsApp?
 
 Sim, a partir do plano Loja. Entrada de estoque, despesa e consulta de saldo funcionam por mensagem ou áudio, sem voltar ao escritório.
+
+###
 
 ### Quantos usuários o plano de distribuidora comporta?
 
@@ -2089,7 +2598,33 @@ Endereço: https://site.softpaybr.com/segmentos/empresas-com-filiais/
 
 Abrir o segundo ponto muda o negócio inteiro: você deixa de ser quem faz e passa a ser quem acompanha. Esta página é sobre essa empresa e a rotina dela — o recurso em si está em múltiplas lojas e filiais.
 
-## O que muda quando existe a segunda loja
+Testar grátis  WhatsApp
+
+##  Qual plano faz sentido
+
+Plano, preço e o uso de cada um
+
+Plano Loja
+
+###  R$ 89/mês
+
+Para a empresa com filiais Dois pontos com equipe enxuta: estoque avançado, curva ABC, loja online e registro pelo WhatsApp. Até 3 usuários
+
+Mais usuários
+
+Plano ERP Completo
+
+###  R$ 109/mês
+
+Para a empresa com filiais O plano de quem tem filiais: tudo da Loja mais NF-e e NFC-e e o teto de 10 usuários — normalmente o limitante quando há mais de um ponto
+
+Plano Comércio
+
+###  R$ 69/mês
+
+O plano Comércio, de R$ 69/mês, permite 1 usuário só — raramente serve a quem tem mais de uma loja. Todos podem ser testados por 7 dias, sem cartão. Veja os planos completos.
+
+##  O que muda quando existe a segunda loja
 
 Enquanto há um ponto só, o dono é o sistema. Ele sabe o que entrou, quem deve, o que está acabando e quanto sobrou, porque esteve lá o dia inteiro. O controle informal funciona porque cabe numa cabeça.
 
@@ -2097,60 +2632,72 @@ Com dois pontos, essa cabeça passa a estar sempre no lugar errado. Você está 
 
 A partir daí, a informação precisa existir fora de você — não porque a empresa cresceu muito, mas porque ela deixou de caber em um lugar só.
 
-## Os problemas que aparecem sempre
-- Dois sistemas que não conversam. Cada ponto com o seu, dois cadastros de produto e dois relatórios para somar na mão.
-- Preço diferente na mesma rede. O mesmo item custa uma coisa numa loja e outra na outra, e ninguém decidiu isso.
-- Você não sabe qual loja vai bem. Sabe o faturamento somado, e ele esconde que um ponto sustenta o outro.
-- A equipe divide a mesma senha. Quando algo é lançado errado, não há como saber por quem — e isso não é sobre desconfiar, é sobre poder corrigir.
-- Estoque parado num ponto e faltando no outro. Sem visão do conjunto, a mesma rede compra o que já tem.
+Criar conta grátis
 
-## Como o SoftPay se encaixa
+Rotina de quem tem filiais
 
-### Filiais dentro da mesma conta
+##  Os problemas que aparecem sempre
+- Dois sistemas que não conversam.  Cada ponto com o seu, dois cadastros de produto e dois relatórios para somar na mão.
+- Preço diferente na mesma rede.  O mesmo item custa uma coisa numa loja e outra na outra, e ninguém decidiu isso.
+- Você não sabe qual loja vai bem.  Sabe o faturamento somado, e ele esconde que um ponto sustenta o outro.
+- A equipe divide a mesma senha.  Quando algo é lançado errado, não há como saber por quem — e isso não é sobre desconfiar, é sobre poder corrigir.
+- Estoque parado num ponto e faltando no outro.  Sem visão do conjunto, a mesma rede compra o que já tem.
 
-O SoftPay permite controlar filiais na mesma conta, sem contratar um sistema separado para cada ponto. É o que acaba com os dois cadastros paralelos.
-
-### Cada pessoa com o próprio acesso
-
-Multi-login em vez de senha compartilhada: 1 usuário no Comércio, até 3 no Loja e até 10 no ERP Completo. Quando cada lançamento tem um autor, o erro deixa de ser anônimo.
-
-### Acompanhar de onde você estiver
-
-Os dados ficam na nuvem e o sistema roda no navegador, inclusive no celular. Você olha a loja em que não está — que é o problema central de quem tem dois pontos.
-
-### Um catálogo, um preço
-
-Produto cadastrado uma vez vale para a operação inteira, com custo e preço definidos em um lugar só. A padronização deixa de depender de alguém avisar a outra loja.
-
-### Curva ABC do conjunto
-
-A partir do plano Loja, a curva ABC mostra o que sustenta o resultado. Numa rede pequena, costuma revelar que o campeão de vendas de um ponto não vende nada no outro — e isso muda a compra.
-
-### Registrar de qualquer ponto
-
-A partir do plano Loja, entrada de estoque, despesa e fiado podem ser registrados por mensagem ou áudio no WhatsApp, sem que a pessoa precise estar na frente de um computador. Veja o bot do WhatsApp.
-
-## O que precisa ser confirmado antes de contratar
-
-Estruturas com filiais variam muito, e aqui é melhor perguntar do que supor. Estes pontos não estão confirmados e devem ser verificados com o suporte antes da contratação:
-- Estoque compartilhado ou separado por filial. Se cada ponto tem o próprio saldo ou se o estoque é único, confirme — a resposta muda toda a operação.
-- Perfis de permissão por funcionário. O multi-login dá acesso individual; se cada perfil vê e faz coisas diferentes, isso precisa ser verificado.
-- Transferência de mercadoria entre lojas. Mandar item de um ponto para o outro dentro do sistema não está confirmado.
-- Relatório separado por filial. Se você precisa comparar o desempenho de cada ponto lado a lado, confirme o formato do relatório.
-O que perguntar ao suporte
-Descreva a sua estrutura ao suporte antes de contratar — quantos pontos, se o estoque é compartilhado, quantas pessoas com acesso. É o tipo de coisa que decide se o sistema serve para você, e não dá para responder no genérico.
-
-## O que o SoftPay não é
+##  O que o SoftPay não é
 
 Vale dizer o tamanho da coisa antes de você investir tempo num teste:
-- Não é um ERP de rede grande. Não há centro de custo, aprovação de compra, orçamento por unidade nem consolidação contábil.
-- O teto é de 10 usuários, no ERP Completo. Se a sua rede precisa de mais acessos simultâneos que isso, o SoftPay não comporta.
-- Não faz gestão de franquia. Repasse de royalty, contrato e padronização de franqueado ficam fora.
-- Não substitui a sua presença. Ele mostra o que aconteceu em cada ponto; decidir continua com você.
+
+###  Não é um ERP de rede grande.
+
+Não há centro de custo, aprovação de compra, orçamento por unidade nem consolidação contábil.
+
+### O teto é de 10 usuários, no ERP Completo.
+
+Se a sua rede precisa de mais acessos simultâneos que isso, o SoftPay não comporta.
+
+###  Não faz gestão de franquia.
+
+Repasse de royalty, contrato e padronização de franqueado ficam fora.
+
+###  Não substitui a sua presença.
+
+Ele mostra o que aconteceu em cada ponto; decidir continua com você.
 
 O perfil que o SoftPay atende é o da empresa com dois, três ou quatro pontos — a que passou do controle informal e ainda não virou rede.
 
-## Segmento e recurso: qual página ler
+##  Como o SoftPay se encaixa
+
+###  Filiais dentro da mesma conta
+
+O SoftPay permite controlar filiais na mesma conta, sem contratar um sistema separado para cada ponto. É o que acaba com os dois cadastros paralelos.
+Ver múltiplas lojas
+
+###  Cada pessoa com o próprio acesso
+
+Multi-login em vez de senha compartilhada: 1 usuário no Comércio, até 3 no Loja e até 10 no ERP Completo. Quando cada lançamento tem um autor, o erro deixa de ser anônimo.
+Ver o multi-login
+
+###  Acompanhar de onde você estiver
+
+Os dados ficam na nuvem e o sistema roda no navegador, inclusive no celular. Você olha a loja em que não está — que é o problema central de quem tem dois pontos.
+Ver o PDV no celular
+
+###  Um catálogo, um preço
+
+Produto cadastrado uma vez vale para a operação inteira, com custo e preço definidos em um lugar só. A padronização deixa de depender de alguém avisar a outra loja.
+Ver o controle de estoque
+
+###  Curva ABC do conjunto
+
+A partir do plano Loja, a curva ABC mostra o que sustenta o resultado. Numa rede pequena, costuma revelar que o campeão de vendas de um ponto não vende nada no outro — e isso muda a compra.
+Ver o sistema financeiro
+
+###  Registrar de qualquer ponto
+
+A partir do plano Loja, entrada de estoque, despesa e fiado podem ser registrados por mensagem ou áudio no WhatsApp, sem que a pessoa precise estar na frente de um computador. Veja o bot do WhatsApp.
+Ver o bot do WhatsApp
+
+##  Segmento e recurso: qual página ler
 
 Duas páginas do site falam de mais de uma loja, e é bom saber qual serve para quê:
 - Esta página descreve a empresa: em que momento ela está, o que muda na rotina de quem tem dois pontos e o que precisa ser confirmado no seu caso.
@@ -2158,49 +2705,109 @@ Duas páginas do site falam de mais de uma loja, e é bom saber qual serve para 
 
 Se você está decidindo se o SoftPay serve para a sua rede, comece por esta. Se já decidiu e quer entender o funcionamento, vá para a de soluções.
 
-## Qual plano faz sentido
-| Plano | Preço | Para a empresa com filiais |
-| Loja | R$ 89/mês | Dois pontos com equipe enxuta: estoque avançado, curva ABC, loja online e registro pelo WhatsApp. Até 3 usuários |
-| ERP Completo | R$ 109/mês | O plano de quem tem filiais: tudo da Loja mais NF-e e NFC-e e o teto de 10 usuários — normalmente o limitante quando há mais de um ponto |
-O plano Comércio, de R$ 69/mês, permite 1 usuário só — raramente serve a quem tem mais de uma loja. Todos podem ser testados por 7 dias, sem cartão. Veja os planos completos.
+Ver múltiplas lojas e filiais
 
-## Perguntas frequentes
+##  Continue por aqui
+
+Seis páginas que seguem o assunto: o recurso de filiais por dentro, o estoque, o caixa do conjunto, o bot do WhatsApp e os segmentos vizinhos.
+
+Ver todos os segmentos
+
+Múltiplas lojasO recurso, por dentroControle de estoqueCusto, giro e curva ABCSistema financeiroO caixa do conjuntoBot do WhatsAppRegistrar de qualquer pontoDistribuidoraDepósito e loja separadosComo organizar uma lojaO método, passo a passo
+
+##  O que precisa ser confirmado antes de contratar
+
+Estruturas com filiais variam muito, e aqui é melhor perguntar do que supor. Estes pontos não estão confirmados e devem ser verificados com o suporte antes da contratação:
+- Estoque compartilhado ou separado por filial. Se cada ponto tem o próprio saldo ou se o estoque é único, confirme — a resposta muda toda a operação.
+- Perfis de permissão por funcionário. O multi-login dá acesso individual; se cada perfil vê e faz coisas diferentes, isso precisa ser verificado.
+- Transferência de mercadoria entre lojas. Mandar item de um ponto para o outro dentro do sistema não está confirmado.
+- Relatório separado por filial. Se você precisa comparar o desempenho de cada ponto lado a lado, confirme o formato do relatório.
+
+O que perguntar ao suporte
+
+Descreva a sua estrutura ao suporte antes de contratar — quantos pontos, se o estoque é compartilhado, quantas pessoas com acesso. É o tipo de coisa que decide se o sistema serve para você, e não dá para responder no genérico.
+
+##  Teste com as duas lojas
+
+Cadastre os produtos uma vez, dê acesso próprio a quem trabalha em cada ponto e veja o conjunto num lugar só. 7 dias grátis, sem cartão.
+
+Testar grátis
+
+##  Perguntas frequentes
+
+###
 
 ### Quantas filiais o SoftPay controla?
 
 O SoftPay permite controlar filiais dentro da mesma conta. Não há um número divulgado — descreva sua estrutura ao suporte para confirmar o atendimento ao seu caso. Na prática, o limitante costuma ser a quantidade de usuários do plano.
 
+###
+
 ### Cada loja tem estoque separado ou o estoque é compartilhado?
 
 Esse ponto não está confirmado e depende de como a sua operação funciona. Verifique com o suporte antes de contratar, porque a resposta muda a forma de trabalhar.
+
+###
 
 ### Quantos usuários posso cadastrar?
 
 1 no plano Comércio, até 3 no Loja e até 10 no ERP Completo. O plano Nota Fiscal permite até 2. Para quem tem filiais, o teto de usuários costuma ser o que define o plano.
 
+###
+
 ### Cada funcionário pode ter permissões diferentes?
 
 O multi-login dá acesso individual a cada pessoa. Sobre perfis de permissão distintos — cada um vendo e fazendo coisas diferentes —, confirme com o suporte antes de contratar.
+
+###
 
 ### Dá para transferir mercadoria de uma loja para outra pelo sistema?
 
 Não está confirmado. Se a transferência entre pontos é parte da sua rotina, verifique com o suporte antes de decidir.
 
+###
+
 ### Consigo comparar o desempenho de cada loja?
 
 O sistema tem relatórios de venda e de estoque. Se você precisa dos pontos lado a lado num mesmo relatório, confirme o formato com o suporte.
+
+###
 
 ### Qual a diferença entre esta página e a de múltiplas lojas?
 
 Esta descreve a empresa com filiais: o momento do negócio, a rotina e o que confirmar antes de contratar. A página de múltiplas lojas descreve o recurso dentro do sistema — como o controle de filiais e o multi-login funcionam.
 
+###
+
 ### Serve para franquia?
 
 Não. O SoftPay não faz gestão de franquia: repasse de royalty, contrato e padronização de franqueado ficam fora do sistema.
 
+###
+
 ### Acompanho as lojas pelo celular?
 
 Sim. Os dados ficam na nuvem e o sistema é acessado pelo navegador, inclusive no celular — é o caso de uso principal de quem não consegue estar nos dois pontos ao mesmo tempo.
+
+## Veja também
+- Posso usar em vários dispositivos?
+- Sistema de gestão para pequenos negócios
+- Programa de vendas para pequeno comércio e MEI
+- PDV no celular e online (frente de caixa)
+- Sistema de gestão é seguro?
+- Vale a pena ter um sistema de gestão na loja?
+- Quanto custa um sistema de gestão para comércio
+- Alternativa ao Kyte: SoftPay ou Kyte?
+- Loja pequena precisa de sistema?
+- Como escolher um sistema de gestão
+- SoftPay ou Nex: qual escolher
+- Reforma tributária e o MEI
+- Caderno ou sistema?
+- Posso usar o SoftPay no celular?
+- Como organizar uma loja
+- Perda de estoque por validade
+- Reforma tributária no comércio: o que muda e quando
+- App de vendas e controle de estoque
 
 ---
 
@@ -2534,6 +3141,20 @@ Endereço: https://site.softpaybr.com/segmentos/loja-de-bebidas/
 
 Loja de bebida é giro alto, margem apertada e pico de movimento concentrado no fim de semana. O SoftPay dá conta da venda rápida no balcão, do preço diferente por caixa ou unidade e do fiado do cliente de sempre.
 
+Planos a partir de R$ 69/mês
+
+7 dias grátis, sem cartão de crédito.
+
+Recursos principais para loja de bebidas:
+- PDV rápido para o pico
+- Atacado e varejo
+- Estoque de alto giro
+- Fiado sem caderno
+- Curva ABC
+- Planos a partir de R$ 69
+
+Sexta, sábado e o resto da semana
+
 ## A rotina de uma loja de bebidas
 
 O movimento não é constante: sexta e sábado concentram boa parte da semana. No pico, cada segundo no caixa importa — e é justamente quando ninguém tem tempo de anotar nada.
@@ -2542,41 +3163,7 @@ Existe também a dupla venda: o cliente que leva uma unidade e o que leva a caix
 
 E o produto é pesado, volumoso e caro de repor. Faltar cerveja na sexta é perder a semana inteira; sobrar é dinheiro parado ocupando um espaço que já é apertado.
 
-## Os problemas que aparecem sempre
-- Faltou no dia de maior movimento. O item de maior giro acaba na sexta e o cliente vai no concorrente — e leva o resto da compra junto.
-- Preço de caixa e de unidade se confundem. Sem controle, o desconto do atacado é aplicado no varejo e a margem some.
-- A fila trava no pico. Procurar preço no meio do movimento custa venda.
-- O fiado do cliente de sempre vira caderno. E o caderno vira discussão no fim do mês.
-- Vendeu muito, sobrou pouco. Margem apertada e custo não acompanhado dão sempre nesse resultado.
-
-## O que muda com o SoftPay
-
-### PDV rápido para o pico
-
-A venda é registrada, o troco calculado e o estoque baixado na hora. No fim do expediente não existe um segundo momento de digitar tudo de novo.
-
-### Atacado e varejo com preços diferentes
-
-O SoftPay trabalha com venda no atacado e no varejo, então a caixa fechada e a unidade podem ter preços distintos sem depender da memória de quem está no balcão.
-
-### Estoque de alto giro
-
-Cada item com custo e quantidade, com baixa automática na venda. Você enxerga o que está acabando antes da sexta-feira, não depois.
-
-### Fiado sem caderno
-
-O saldo fica no nome do cliente, com histórico. A partir do plano Loja, a cobrança sai por link de Pix no WhatsApp.
-
-### Curva ABC: o que paga a loja
-
-A partir do plano Loja, a curva ABC mostra quais itens sustentam o faturamento — e quais rótulos estão parados ocupando um espaço caro.
-
-## O que o SoftPay não faz numa loja de bebidas
-- Não faz controle de vasilhame ou casco retornável. Se você trabalha com troca de casco, esse controle fica fora do sistema.
-- Não integra com balança. Não é comum em bebidas, mas fica registrado.
-- Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
-- Não tem controle de validade confirmado. Confirme com o suporte se isso for parte da sua operação.
-- Não é sistema para bar ou distribuidora com consumo no local. Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor.
+Resposta na tela, não no caderno
 
 ## Perguntas que você passa a conseguir responder
 - Quanto ainda tenho do item que mais vende na sexta?
@@ -2586,46 +3173,145 @@ A partir do plano Loja, a curva ABC mostra quais itens sustentam o faturamento �
 - Quanto de dinheiro está parado em estoque agora?
 - O caixa do fim de semana bateu?
 
-## Qual plano faz sentido
-| Plano | Preço | Para a loja de bebidas |
-| Comércio | R$ 69/mês | O ponto de partida: PDV, caixa, fiado e estoque essencial, com 1 usuário |
-| Loja | R$ 89/mês | Quando você quer curva ABC, cobrança por Pix no WhatsApp e catálogo online. Até 3 usuários |
-| ERP Completo | R$ 109/mês | Para quem precisa emitir NF-e e NFC-e e tem equipe maior. Até 10 usuários |
-Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+Onde a margem escapa
+
+## Os problemas que aparecem sempre
+- Faltou no dia de maior movimento. O item de maior giro acaba na sexta e o cliente vai no concorrente — e leva o resto da compra junto.
+- Preço de caixa e de unidade se confundem. Sem controle, o desconto do atacado é aplicado no varejo e a margem some.
+- A fila trava no pico. Procurar preço no meio do movimento custa venda.
+- O fiado do cliente de sempre vira caderno. E o caderno vira discussão no fim do mês.
+- Vendeu muito, sobrou pouco. Margem apertada e custo não acompanhado dão sempre nesse resultado.
+
+Combinado antes de começar
+
+## O que o SoftPay não faz numa loja de bebidas
+- Não faz controle de vasilhame ou casco retornável. Se você trabalha com troca de casco, esse controle fica fora do sistema.
+- Não integra com balança. Não é comum em bebidas, mas fica registrado.
+- Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
+- Não tem controle de validade confirmado. Confirme com o suporte se isso for parte da sua operação.
+- Não é sistema para bar ou distribuidora com consumo no local. Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor.
+
+Feito para o giro da loja de bebidas
+
+## O que muda com o SoftPay
+
+-
+
+### PDV rápido para o pico
+
+A venda é registrada, o troco calculado e o estoque baixado na hora. No fim do expediente não existe um segundo momento de digitar tudo de novo.
+
+-
+
+### Atacado e varejo com preços diferentes
+
+O SoftPay trabalha com venda no atacado e no varejo, então a caixa fechada e a unidade podem ter preços distintos sem depender da memória de quem está no balcão.
+
+-
+
+### Estoque de alto giro
+
+Cada item com custo e quantidade, com baixa automática na venda. Você enxerga o que está acabando antes da sexta-feira, não depois.
+
+-
+
+### Fiado sem caderno
+
+O saldo fica no nome do cliente, com histórico. A partir do plano Loja, a cobrança sai por link de Pix no WhatsApp.
+
+-
+
+### Curva ABC: o que paga a loja
+
+A partir do plano Loja, a curva ABC mostra quais itens sustentam o faturamento — e quais rótulos estão parados ocupando um espaço caro.
 
 ## Perguntas frequentes
+
+###
 
 ### O SoftPay serve para adega e loja de conveniência?
 
 Sim, desde que a venda seja de produto para levar. O sistema cobre PDV, estoque, caixa e fiado. Para consumo no local, com comanda de mesa, ele não é o sistema indicado.
 
+###
+
 ### Dá para ter preço diferente para caixa e para unidade?
 
 Sim. O SoftPay trabalha com venda no atacado e no varejo, com preços distintos.
+
+###
 
 ### Controla vasilhame e casco retornável?
 
 Não. O controle de casco fica fora do sistema — se isso é parte importante da sua operação, leve em conta na decisão.
 
+###
+
 ### O PDV aguenta o movimento da sexta-feira?
 
 O PDV registra a venda, calcula o troco e baixa o estoque na hora, sem etapa extra. Para o pico, é o caminho — o registro pelo WhatsApp serve para reposição e despesa, não para o balcão cheio.
+
+###
 
 ### Consigo controlar o fiado?
 
 Sim, no plano Comércio, com saldo e histórico por cliente. A partir do plano Loja, a cobrança sai por link de Pix no WhatsApp.
 
+###
+
 ### Funciona com leitor de código de barras?
 
 O campo de busca do PDV aceita a leitura do código. Confirme a compatibilidade do seu leitor com o suporte antes de contratar.
+
+###
 
 ### Preciso emitir nota fiscal?
 
 Depende do seu regime — confirme com o seu contador. A emissão está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação.
 
+###
+
 ### Serve para distribuidora de bebidas?
 
-Se a operação for de depósito e entrega, veja a página de <a href="/segmentos/distribuidora/">distribuidora</a>, que trata desse caso.
+Se a operação for de depósito e entrega, veja a página de distribuidora, que trata desse caso.
+
+“O fiado saiu do caderno. Hoje o cliente recebe o link e paga por Pix.”
+
+Neto
+
+RN Grifes · cliente SoftPay
+
+## Qual plano faz sentido
+
+-
+Preço: R$ 69/mês
+
+Plano: Comércio
+
+Para a loja de bebidas: O ponto de partida: PDV, caixa, fiado e estoque essencial, com 1 usuário
+
+-
+Preço: R$ 89/mês
+
+Plano: Loja
+
+Para a loja de bebidas: Quando você quer curva ABC, cobrança por Pix no WhatsApp e catálogo online. Até 3 usuários
+
+-
+Preço: R$ 109/mês
+
+Plano: ERP Completo
+
+Para a loja de bebidas: Para quem precisa emitir NF-e e NFC-e e tem equipe maior. Até 10 usuários
+
+Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+
+## Prepare sua loja para a próxima sexta
+
+Cadastre os itens de maior giro, defina o preço de caixa e de unidade e veja o estoque acompanhar sozinho. 7 dias grátis, sem cartão.
+- Chat e WhatsAppSuporte humano pelo WhatsApp, em todo o Brasil
+- E-mailNosso e-mail é o suporte@softpaybr.com
+- Central de perguntasPlanos, nota fiscal, estoque e fiado
 
 ---
 
@@ -2636,50 +3322,85 @@ Endereço: https://site.softpaybr.com/solucoes/sistema-de-estoque/
 
 O SoftPay é um app de vendas e estoque que abre no navegador do celular, do tablet e do computador. Cada venda registrada no PDV baixa o estoque na hora, sem digitar duas vezes. O plano Comércio, de R$ 69/mês, traz o estoque essencial; o Loja, de R$ 89/mês, soma custo por produto, tamanho e cor e curva ABC.
 
-## O problema
+Testar grátis  WhatsApp
 
-Cada item na prateleira é dinheiro que você já pagou e ainda não recebeu de volta. Sem custo e quantidade registrados, esse valor fica invisível — e a loja vende bem sem nunca ter dinheiro em caixa.
+##  Em qual plano está cada parte
 
-Estoque descontrolado custa dos dois lados. Falta do que vende, e o cliente compra na concorrência. Sobra do que não vende, e o dinheiro fica preso na prateleira em vez de girar.
+Plano Comércio
 
-A causa quase sempre é a mesma: a baixa do estoque depende de alguém lembrar de fazer. Quando a venda e o estoque são dois controles separados, eles se desencontram em questão de dias.
+###  R$ 69/mês
 
-E o desencontro não avisa. Ele aparece semanas depois, na forma de um item que faltou num sábado de movimento ou de uma compra repetida do que já estava no depósito.
+O que você tem de estoque Estoque essencial: cadastro de produtos, quantidade e baixa automática pela venda
 
-## Como o descontrole aparece na sua loja
-- Você promete o que não tem. Diz que tem, vai buscar e não acha. A venda morre na hora.
-- Compra o que já está lá. O fornecedor chega, você repõe pela impressão, e o item aparece em dobro.
-- O encalhe só aparece no inventário. Quando você percebe, o dinheiro já está parado há meses.
-- A margem é uma média que engana. Sem custo por item, o produto de 15% e o de 60% viram um número só.
-- Ninguém confia no número da tela. E quando o sistema perde a confiança, todo mundo volta a conferir na prateleira.
+Mais popular
 
-## Como o SoftPay resolve
+Plano Loja
 
-### A venda dá baixa sozinha
+###  R$ 89/mês
+
+O que você tem de estoque O plano do controle completo: custo por produto, variações de tamanho e cor, curva ABC e importação
+
+Plano ERP Completo
+
+###  R$ 109/mês
+
+O que você tem de estoque Tudo da Loja, mais emissão de NF-e e NFC-e e até 10 usuários
+
+Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+
+##  Como o SoftPay resolve
+
+###  A venda dá baixa sozinha
 
 O estoque é alimentado pelo PDV. Toda venda registrada no balcão baixa a quantidade do produto na hora, sem segunda digitação. É o que impede o desencontro de nascer.
 
-### Custo junto com o preço
+###  Custo junto com o preço
 
 Cadastrar só o preço de venda responde quanto entrou. Cadastrar o custo é o que permite responder quanto sobrou — e é o que separa faturamento de lucro.
 
-### Variações de tamanho e cor
+###  Variações de tamanho e cor
 
 Para quem vende roupa e calçado, cada combinação tem a própria quantidade. A baixa acontece na variação certa, não no modelo genérico. A partir do plano Loja.
 
-### Curva ABC
+###  Curva ABC
 
 Separa os produtos por participação no resultado. É o filtro que transforma um cadastro de centenas de itens numa decisão de compra concreta: o que repor, o que remarcar e o que não comprar mais. A partir do plano Loja.
 
-### Atacado e varejo
+###  Atacado e varejo
 
 Dois preços no mesmo produto, para quem atende revendedor e consumidor final, sem cadastro duplicado.
 
-### Entrada de mercadoria pelo WhatsApp
+###  Entrada de mercadoria pelo WhatsApp
 
 A partir do plano Loja, a entrada de estoque pode ser registrada por mensagem ou áudio. No momento em que a carga chega, ninguém está sentado na frente do computador — e é aí que o registro costuma não acontecer. Veja o bot do WhatsApp.
 
-## O que o controle de estoque não faz
+##  Quanto dinheiro está parado, na prática
+
+O número que quase nenhuma loja pequena sabe de cabeça é o valor do próprio estoque a preço de custo. Com custo e quantidade cadastrados, ele deixa de ser chute:
+
+### O que a prateleira vale, a preço de custo
+
+R$ 9.200,00
+
+Classe A — 40 itens que giram
+
+R$ 7.400,00
+
+Classe B — 120 itens de giro médio
+
+R$ 11.800,00
+
+Classe C — 380 itens parados
+
+R$ 28.400,00
+
+= Total investido em mercadoria
+
+Números fictícios, só para mostrar o raciocínio. A leitura importante é a última linha da classe C: quase metade do dinheiro imobilizado nos itens que menos giram. Veja o guia como controlar estoque.
+
+Testar grátis
+
+##  O que o controle de estoque não faz
 
 Os limites, antes de você contratar contando com eles:
 - Não integra com balança. Venda por peso — frios, hortifrúti, granel — entra como produto comum, com o valor digitado no PDV.
@@ -2689,76 +3410,207 @@ Os limites, antes de você contratar contando com eles:
 - Validade e lote não estão confirmados. Se a sua operação depende disso, verifique com o suporte antes de contratar.
 - Estoque separado por filial não está confirmado. Descreva sua estrutura ao suporte se você tem mais de um ponto.
 
-## Quanto dinheiro está parado, na prática
+Tirar dúvida no WhatsApp
 
-O número que quase nenhuma loja pequena sabe de cabeça é o valor do próprio estoque a preço de custo. Com custo e quantidade cadastrados, ele deixa de ser chute:
+##  O estoque bate com a prateleira
 
-Exemplo ilustrativo
+Entrada, saída, custo e preço de venda por produto, com variação de tamanho e cor quando a loja precisa. A curva ABC mostra quais itens realmente sustentam o faturamento.
+-  Aviso de item acabando
+-  Custo e margem por produto
+-  Curva ABC: o que gira e o que empata dinheiro
 
-### O que a prateleira vale, a preço de custo
+Testar grátis
 
-Classe A — 40 itens que giram R$ 9.200,00
-Classe B — 120 itens de giro médio R$ 7.400,00
-Classe C — 380 itens parados R$ 11.800,00
-= Total investido em mercadoria R$ 28.400,00
-Números fictícios, só para mostrar o raciocínio. A leitura importante é a última linha da classe C: quase metade do dinheiro imobilizado nos itens que menos giram. Veja o guia como controlar estoque.
+##  O problema
 
-## O que você passa a conseguir responder
-- Quanto dinheiro eu tenho investido em mercadoria parada?
-- Quais produtos sustentam o meu faturamento?
-- O que está encalhado há tempo demais?
-- Quanto eu realmente ganho em cada produto, depois do custo?
-- O que preciso repor antes de acabar?
-- Qual variação de tamanho ou cor mais sai, e qual eu compro demais?
+Cada item na prateleira é dinheiro que você já pagou e ainda não recebeu de volta. Sem custo e quantidade registrados, esse valor fica invisível — e a loja vende bem sem nunca ter dinheiro em caixa.
 
-## Em qual plano está cada parte
-| Plano | Preço | O que você tem de estoque |
-| Comércio | R$ 69/mês | Estoque essencial: cadastro de produtos, quantidade e baixa automática pela venda |
-| Loja | R$ 89/mês | O plano do controle completo: custo por produto, variações de tamanho e cor, curva ABC e importação |
-| ERP Completo | R$ 109/mês | Tudo da Loja, mais emissão de NF-e e NFC-e e até 10 usuários |
-Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+Estoque descontrolado custa dos dois lados. Falta do que vende, e o cliente compra na concorrência. Sobra do que não vende, e o dinheiro fica preso na prateleira em vez de girar.
 
-## Perguntas frequentes
+A causa quase sempre é a mesma: a baixa do estoque depende de alguém lembrar de fazer. Quando a venda e o estoque são dois controles separados, eles se desencontram em questão de dias.
+
+E o desencontro não avisa. Ele aparece semanas depois, na forma de um item que faltou num sábado de movimento ou de uma compra repetida do que já estava no depósito.
+
+Testar grátis
+
+##  O que você passa a conseguir responder
+-  Quanto dinheiro eu tenho investido em mercadoria parada?
+-  Quais produtos sustentam o meu faturamento?
+-  O que está encalhado há tempo demais?
+-  Quanto eu realmente ganho em cada produto, depois do custo?
+-  O que preciso repor antes de acabar?
+-  Qual variação de tamanho ou cor mais sai, e qual eu compro demais?
+
+Ler o guia de controle de estoque
+
+##  Venda rápida, caixa fechado sem susto
+
+Leitor de código de barras, busca por nome, desconto e finalização em uma tela. No fim do dia o caixa fecha com sangria, suprimento e o que entrou por cada forma de pagamento.
+-  Cada venda baixa o estoque na hora
+-  Dinheiro, Pix, cartão, fiado e misto
+-  Funciona no computador do balcão e no celular
+
+Ver o sistema PDV
+
+##  Como o descontrole aparece na sua loja
+
+###  Você promete o que não tem.
+
+Diz que tem, vai buscar e não acha. A venda morre na hora.
+
+###  Compra o que já está lá.
+
+O fornecedor chega, você repõe pela impressão, e o item aparece em dobro.
+
+###  O encalhe só aparece no inventário.
+
+Quando você percebe, o dinheiro já está parado há meses.
+
+###  A margem é uma média que engana.
+
+Sem custo por item, o produto de 15% e o de 60% viram um número só.
+
+###  Ninguém confia no número da tela.
+
+E quando o sistema perde a confiança, todo mundo volta a conferir na prateleira.
+
+##  Sua vitrine na internet, com o estoque que já existe
+
+A loja online usa o catálogo que você já cadastrou: o mesmo produto, o mesmo preço, o mesmo saldo. O cliente paga por Pix e a confirmação chega sozinha, sem você conferir extrato.
+-  Catálogo e loja saem do mesmo cadastro
+-  Pix com confirmação automática
+-  Cupom e programa de fidelidade
+
+Ver a loja online
+
+##  Registre a venda falando no WhatsApp
+
+Mande um áudio ou uma mensagem dizendo o que vendeu. O SoftPay entende, registra a venda, baixa o estoque e responde confirmando, sem você largar o balcão para abrir o sistema.
+-  Funciona por texto ou áudio
+-  Consulta preço e saldo na hora
+-  Disponível a partir do plano Loja
+
+Ver o bot do WhatsApp
+
+##  Continue por aqui
+
+O guia do método, o caixa que alimenta o estoque, o bot do WhatsApp e os segmentos que mais dependem de estoque.
+
+-
+
+### Como controlar estoque
+
+Método passo a passo
+
+Ver como controlar estoque
+
+-
+
+### Sistema PDV
+
+A venda que alimenta o estoque
+
+Ver sistema PDV
+
+-
+
+### Bot do WhatsApp
+
+Dar entrada falando
+
+Ver bot do WhatsApp
+
+-
+
+### Loja de roupas
+
+Estoque com grade
+
+Ver loja de roupas
+
+-
+
+### Loja de variedades
+
+Centenas de itens
+
+Ver loja de variedades
+
+-
+
+### Distribuidora
+
+Estoque em volume
+
+Ver distribuidora
+
+## Descubra quanto está parado na sua prateleira
+
+Cadastre os produtos de maior giro com custo e quantidade, registre as vendas por uma semana e veja o número aparecer. 7 dias grátis, sem cartão.
+
+##  Perguntas frequentes
+
+###
 
 ### Tem app de controle de estoque para celular?
 
 Tem. O SoftPay abre no navegador do celular, sem instalar nada, e mostra o mesmo estoque do computador da loja, porque os dados ficam na nuvem. Dá para consultar o saldo de um produto na prateleira e vender pelo PDV no próprio celular. Precisa de internet.
 
+###
+
 ### Dá para dar entrada de mercadoria pelo celular?
 
 Dá. Pelo navegador você lança a entrada como no computador. A partir do plano Loja, também dá para registrar a entrada mandando uma mensagem ou um áudio no WhatsApp, na hora em que a carga chega.
+
+###
 
 ### O estoque baixa sozinho quando eu vendo?
 
 Sim. A venda registrada no PDV dá baixa na quantidade do produto automaticamente, sem digitação separada.
 
+###
+
 ### Consigo cadastrar o custo de cada produto?
 
 Sim, a partir do plano Loja. É o custo cadastrado que permite calcular margem e saber quanto está investido em mercadoria.
+
+###
 
 ### O que é curva ABC?
 
 É uma classificação que separa os produtos pela participação no resultado: poucos itens costumam responder pela maior parte do faturamento. Serve para focar a decisão de compra no que importa. Está disponível a partir do plano Loja.
 
+###
+
 ### Dá para controlar tamanho e cor?
 
 Sim, com o cadastro de variações, disponível a partir do plano Loja. Cada combinação tem quantidade própria e a baixa acontece na variação certa.
+
+###
 
 ### O sistema controla validade e lote?
 
 Não está confirmado. Se você trabalha com alimento, medicamento ou qualquer item com data crítica, verifique com o suporte antes de contratar.
 
+###
+
 ### Vendo por peso. Funciona com balança?
 
 O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV.
+
+###
 
 ### Dá para importar minha planilha de produtos?
 
 A importação está disponível a partir do plano Loja. Fale com o suporte antes de migrar para conferir o formato do arquivo.
 
+###
+
 ### Como faço o primeiro inventário?
 
 O caminho prático é cadastrar primeiro os produtos de maior giro com quantidade e custo, e completar o restante conforme repõe. O guia de estoque explica o método.
+
+###
 
 ### Tenho duas lojas. O estoque é separado?
 
@@ -2784,11 +3636,46 @@ Quando existe registro, ele costuma ser em papel ou planilha — feito depois, d
 O detalhe que quase ninguém nota: o erro não está no relatório, está na origem. Nenhuma ferramenta conserta depois um dado que nunca foi coletado.
 
 ## Como isso aparece na sua loja
-- O caixa não bate e ninguém sabe em qual venda a diferença começou.
-- O estoque mente, porque a saída do produto não foi registrada junto com a venda.
-- A fila trava no preço. Alguém vai conferir na prateleira enquanto o cliente espera.
-- Você não sabe como recebeu. Quanto foi Pix, quanto foi cartão, quanto foi dinheiro — tudo virou um total só.
-- O fiado sai por fora, num caderno paralelo que ninguém mais consegue ler.
+
+-
+O caixa não bate e ninguém sabe em qual venda a diferença começou.
+
+O que muda com o SoftPay:
+- Venda registrada na hora
+- Forma de pagamento por venda
+- Fechamento de caixa
+Como controlar o caixa
+
+-
+O estoque mente, porque a saída do produto não foi registrada junto com a venda.
+
+O que muda com o SoftPay:
+- Venda registrada na hora
+- Estoque e caixa alimentados juntos
+Controle de estoque
+
+-
+A fila trava no preço. Alguém vai conferir na prateleira enquanto o cliente espera.
+
+O que muda com o SoftPay:
+- Venda registrada na hora
+- Estoque e caixa alimentados juntos
+Testar no seu balcão
+
+-
+Você não sabe como recebeu. Quanto foi Pix, quanto foi cartão, quanto foi dinheiro — tudo virou um total só.
+
+O que muda com o SoftPay:
+- Forma de pagamento por venda
+- Fechamento de caixa
+Sistema financeiro
+
+-
+O fiado sai por fora, num caderno paralelo que ninguém mais consegue ler.
+
+O que muda com o SoftPay:
+- Venda fiada no mesmo fluxo
+Controle de fiado
 
 ## Como o SoftPay resolve
 
@@ -2799,14 +3686,17 @@ Produto, quantidade, preço, forma de pagamento e cliente ficam gravados no mome
 ### Estoque e caixa alimentados juntos
 
 A mesma venda baixa o estoque e entra no caixa. Um registro, três consequências: a prateleira, a gaveta e o relatório passam a contar a mesma história.
+Controle de estoque
 
 ### Fechamento de caixa
 
 No fim do expediente você compara o que o sistema registrou com o que está na gaveta. A diferença aparece no mesmo dia, enquanto ainda dá para lembrar o que houve.
+Como controlar o caixa
 
 ### Forma de pagamento por venda
 
 Dinheiro, Pix, cartão e fiado ficam registrados individualmente. No fechamento você confere cada tipo de recebimento separadamente, em vez de brigar com um total único.
+Sistema financeiro
 
 ### Venda fiada no mesmo fluxo
 
@@ -2815,6 +3705,189 @@ Se o cliente leva para pagar depois, a venda entra como fiado no nome dele, sem 
 ### Sem instalar nada
 
 O PDV roda no navegador. Funciona no computador do balcão, no notebook e no celular, com os dados na nuvem — sem servidor na loja e sem licença por máquina.
+
+## Um dia no balcão, do jeito que acontece
+
+A rotina que o PDV substitui:
+
+-
+
+Passo 1 de 6
+
+Abre o caixa com o valor de troco inicial.
+
+-
+
+Passo 2 de 6
+
+Cada venda passa pelo PDV: produto, quantidade e forma de pagamento.
+
+-
+
+Passo 3 de 6
+
+O estoque baixa junto, sem ninguém precisar lembrar.
+
+-
+
+Passo 4 de 6
+
+A venda fiada entra no nome do cliente, no mesmo lugar.
+
+-
+
+Passo 5 de 6
+
+No fim do dia, o fechamento compara sistema e gaveta.
+
+-
+
+Passo 6 de 6
+
+A diferença, se houver, é conferida hoje — não no fim do mês.
+
+Sobre este exemplo
+
+Exemplo ilustrativo do fluxo. O ritmo da sua loja depende do seu movimento e do tamanho do catálogo.
+
+## O que você passa a conseguir responder
+
+-
+
+Quanto vendi hoje, e quanto disso foi Pix, cartão e dinheiro?
+
+-
+
+O caixa de ontem bateu?
+
+-
+
+Qual produto mais saiu esta semana?
+
+-
+
+Quanto saiu em fiado no mês?
+
+-
+
+Qual o meu ticket médio?
+
+-
+
+Que horas a loja vende mais?
+
+## Em qual plano está
+
+Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+
+### Plano: Comércio
+
+O PDV neste plano
+
+PDV completo já aqui: venda, formas de pagamento, baixa de estoque, fiado e fechamento de caixa. 1 usuário
+
+Preço do plano Comércio: R$ 69/mês
+
+7 dias grátis, sem cartão
+
+### Plano: Loja
+Mais popular
+
+O PDV neste plano
+
+O mesmo PDV, com estoque avançado por trás: custo, variações e curva ABC. Até 3 usuários
+
+Preço do plano Loja: R$ 89/mês
+
+7 dias grátis, sem cartão
+
+### Plano: ERP Completo
+
+O PDV neste plano
+
+Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários
+
+Preço do plano ERP Completo: R$ 109/mês
+
+7 dias grátis, sem cartão
+
+Plano: Nota Fiscal
+
+Preço: R$ 65/mês
+
+Não inclui PDV. Serve só para emissão de notas
+
+## Perguntas frequentes
+
+###
+
+### Dá para usar o PDV no celular?
+
+Dá. O PDV do SoftPay abre no navegador do celular, do tablet ou do computador, com os mesmos dados na nuvem. Serve para vender no balcão sem computador, em feira ou na entrega. Precisa de internet: sem conexão, a venda não é registrada.
+
+###
+
+### PDV online é a mesma coisa que PDV na nuvem?
+
+É. PDV online é a frente de caixa que roda pela internet, com os dados guardados na nuvem e não num computador da loja. É o caso do SoftPay: não há programa para instalar nem servidor para manter.
+
+###
+
+### Preciso instalar o PDV no computador?
+
+Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja. Funciona no computador do balcão, no notebook e no celular.
+
+###
+
+### Funciona com leitor de código de barras?
+
+O campo de busca do PDV aceita a leitura do código. Confirme a compatibilidade do seu leitor com o suporte antes de contratar.
+
+###
+
+### Funciona sem internet?
+
+Não. O sistema é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade, converse com o suporte antes de contratar.
+
+###
+
+### O PDV controla as formas de pagamento?
+
+Sim. Dinheiro, Pix, cartão e fiado são registrados individualmente na venda, o que permite conferir o caixa por tipo de recebimento no fechamento.
+
+###
+
+### Ele concilia o que a maquininha me paga?
+
+Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência com o extrato é manual.
+
+###
+
+### Serve para bar ou restaurante?
+
+Não. O SoftPay não tem comanda nem controle de mesa. Ele foi feito para comércio que vende produto com estoque.
+
+###
+
+### Funciona com impressora térmica e gaveta de dinheiro?
+
+Esse ponto não está confirmado. Descreva seu equipamento ao suporte antes de contratar.
+
+###
+
+### O PDV emite cupom fiscal?
+
+A emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação com o suporte e com seu contador.
+
+###
+
+### Em qual plano está o PDV?
+
+A partir do plano Comércio, de R$ 69/mês. O plano Nota Fiscal não inclui PDV — ele serve só para emissão de notas.
+
+## Teste no seu próprio balcão
+
+Cadastre os produtos de maior giro, passe as vendas de um dia pelo PDV e feche o caixa no fim da tarde. 7 dias grátis, sem cartão.
 
 ## O que o PDV não faz
 
@@ -2826,79 +3899,13 @@ Os limites reais, para você não descobrir durante o teste:
 - Impressora térmica e gaveta não estão confirmadas. Verifique o seu equipamento com o suporte antes de contratar.
 - A emissão fiscal consta como em ativação. Se você precisa de NFC-e no ato da venda, confirme a situação atual com o suporte.
 
-## Um dia no balcão, do jeito que acontece
-
-A rotina que o PDV substitui:
-- Abre o caixa com o valor de troco inicial.
-- Cada venda passa pelo PDV: produto, quantidade e forma de pagamento.
-- O estoque baixa junto, sem ninguém precisar lembrar.
-- A venda fiada entra no nome do cliente, no mesmo lugar.
-- No fim do dia, o fechamento compara sistema e gaveta.
-- A diferença, se houver, é conferida hoje — não no fim do mês.
-Sobre este exemplo
-Exemplo ilustrativo do fluxo. O ritmo da sua loja depende do seu movimento e do tamanho do catálogo.
-
-## O que você passa a conseguir responder
-- Quanto vendi hoje, e quanto disso foi Pix, cartão e dinheiro?
-- O caixa de ontem bateu?
-- Qual produto mais saiu esta semana?
-- Quanto saiu em fiado no mês?
-- Qual o meu ticket médio?
-- Que horas a loja vende mais?
-
-## Em qual plano está
-| Plano | Preço | O PDV neste plano |
-| Comércio | R$ 69/mês | PDV completo já aqui: venda, formas de pagamento, baixa de estoque, fiado e fechamento de caixa. 1 usuário |
-| Loja | R$ 89/mês | O mesmo PDV, com estoque avançado por trás: custo, variações e curva ABC. Até 3 usuários |
-| ERP Completo | R$ 109/mês | Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários |
-| Nota Fiscal | R$ 65/mês | Não inclui PDV. Serve só para emissão de notas |
-Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
-
-## Perguntas frequentes
-
-### Dá para usar o PDV no celular?
-
-Dá. O PDV do SoftPay abre no navegador do celular, do tablet ou do computador, com os mesmos dados na nuvem. Serve para vender no balcão sem computador, em feira ou na entrega. Precisa de internet: sem conexão, a venda não é registrada.
-
-### PDV online é a mesma coisa que PDV na nuvem?
-
-É. PDV online é a frente de caixa que roda pela internet, com os dados guardados na nuvem e não num computador da loja. É o caso do SoftPay: não há programa para instalar nem servidor para manter.
-
-### Preciso instalar o PDV no computador?
-
-Não. O SoftPay roda no navegador, sem instalação e sem servidor na loja. Funciona no computador do balcão, no notebook e no celular.
-
-### Funciona com leitor de código de barras?
-
-O campo de busca do PDV aceita a leitura do código. Confirme a compatibilidade do seu leitor com o suporte antes de contratar.
-
-### Funciona sem internet?
-
-Não. O sistema é acessado pela internet, então depende de conexão. Se a sua região tem instabilidade, converse com o suporte antes de contratar.
-
-### O PDV controla as formas de pagamento?
-
-Sim. Dinheiro, Pix, cartão e fiado são registrados individualmente na venda, o que permite conferir o caixa por tipo de recebimento no fechamento.
-
-### Ele concilia o que a maquininha me paga?
-
-Não. A forma de pagamento fica registrada na venda, mas o depósito da adquirente não entra automaticamente. A conferência com o extrato é manual.
-
-### Serve para bar ou restaurante?
-
-Não. O SoftPay não tem comanda nem controle de mesa. Ele foi feito para comércio que vende produto com estoque.
-
-### Funciona com impressora térmica e gaveta de dinheiro?
-
-Esse ponto não está confirmado. Descreva seu equipamento ao suporte antes de contratar.
-
-### O PDV emite cupom fiscal?
-
-A emissão de NFC-e está nos planos Nota Fiscal e ERP Completo, e consta como recurso em ativação. Confirme a situação com o suporte e com seu contador.
-
-### Em qual plano está o PDV?
-
-A partir do plano Comércio, de R$ 69/mês. O plano Nota Fiscal não inclui PDV — ele serve só para emissão de notas.
+## Continue por aqui
+- Controle de estoqueA baixa automática
+- Sistema financeiroCaixa e resultado
+- Controle de fiadoA venda a prazo, no mesmo fluxo
+- Bot do WhatsAppRegistrar sem abrir o painel
+- Como controlar o caixaRotina de fechamento
+- MercadinhoO balcão de maior movimento
 
 ---
 
@@ -2911,80 +3918,155 @@ O SoftPay é um aplicativo para controlar fiado que abre no navegador do celular
 
 ## O problema
 
+### O caderno
+
 Vender fiado não é o problema. O problema é o caderno: anotação rasurada, cliente que esquece e você sem saber quanto tem para receber.
+
+### O fiado é parte do negócio
 
 No comércio de bairro o fiado é parte do negócio — é o que mantém o cliente fiel e o que atravessa o fim do mês de muita gente. Mas o dinheiro fiado é o mais fácil de perder: não tem comprovante, depende da memória de quem anotou e some quando a folha do caderno acaba.
 
+### O efeito silencioso
+
 O efeito é silencioso. A loja vendeu, o estoque saiu, mas o dinheiro não entrou — e como não há um total visível, ninguém percebe o tamanho do buraco.
+
+### O desconforto de cobrar
 
 Some a isso o desconforto de cobrar alguém que você encontra na rua. É por isso que muita dívida de fiado nunca é cobrada: não por falta de controle, por falta de jeito de puxar o assunto.
 
+Como funciona
+
+## Como o SoftPay resolve
+
+-
+
+### Cada venda no nome do cliente
+
+A venda fiada é registrada no cadastro do cliente, com data e valor. O saldo é do sistema, não da memória de quem estava no balcão — e qualquer pessoa da loja consegue responder.
+
+-
+
+### Histórico para consultar na hora
+
+Quando o cliente pergunta quanto deve, a resposta está na tela, com as compras que formam o valor. Isso encerra a discussão antes de ela começar, porque não é a sua palavra contra a dele.
+
+-
+
+### Cobrança sem constrangimento
+
+A partir do plano Loja, o sistema envia link de pagamento por Pix pelo WhatsApp. A cobrança deixa de depender de você puxar o assunto no balcão — que é o motivo real de tanta dívida antiga não ser cobrada.
+
+-
+
+### Ligado ao resto da loja
+
+A venda fiada baixa o estoque como qualquer outra e fica registrada como valor a receber, aparecendo no seu resultado. Fiado deixa de ser um controle paralelo.
+
+-
+
+### Registrar e dar baixa falando
+
+A partir do plano Loja, você registra uma venda fiada ou dá baixa numa dívida por mensagem ou áudio no WhatsApp. O bot recusa baixa maior que o saldo e responde com o valor certo. Veja o bot do WhatsApp.
+
 ## Como isso aparece na sua loja
+
+Cada sinal de que o caderno já não dá conta
 - Você não sabe o total a receber. Sabe que "tem gente devendo", não quanto.
 - O saldo depende de uma pessoa só. Se quem anota falta, ninguém resolve nada no balcão.
 - A conversa vira discussão. O cliente lembra de um valor, o caderno diz outro, e não há como provar.
 - A cobrança não acontece. Você adia porque é constrangedor, e o valor envelhece.
 - O caderno acaba. Folha rasgada, letra ilegível, página molhada — e o registro simplesmente deixa de existir.
 
-## Como o SoftPay resolve
-
-### Cada venda no nome do cliente
-
-A venda fiada é registrada no cadastro do cliente, com data e valor. O saldo é do sistema, não da memória de quem estava no balcão — e qualquer pessoa da loja consegue responder.
-
-### Histórico para consultar na hora
-
-Quando o cliente pergunta quanto deve, a resposta está na tela, com as compras que formam o valor. Isso encerra a discussão antes de ela começar, porque não é a sua palavra contra a dele.
-
-### Cobrança sem constrangimento
-
-A partir do plano Loja, o sistema envia link de pagamento por Pix pelo WhatsApp. A cobrança deixa de depender de você puxar o assunto no balcão — que é o motivo real de tanta dívida antiga não ser cobrada.
-
-### Ligado ao resto da loja
-
-A venda fiada baixa o estoque como qualquer outra e fica registrada como valor a receber, aparecendo no seu resultado. Fiado deixa de ser um controle paralelo.
-
-### Registrar e dar baixa falando
-
-A partir do plano Loja, você registra uma venda fiada ou dá baixa numa dívida por mensagem ou áudio no WhatsApp. O bot recusa baixa maior que o saldo e responde com o valor certo. Veja o bot do WhatsApp.
-
-## O que o controle de fiado não faz
-
-É crédito que você concede com o próprio dinheiro. Vale saber o que o sistema não cobre:
-- Não consulta SPC nem Serasa. A decisão de vender fiado continua sendo sua, baseada no que você sabe do cliente.
-- Não negativa quem não paga. Não há qualquer integração com órgão de proteção ao crédito.
-- Não calcula juros nem multa por atraso. O saldo é o valor das compras.
-- Não gera carnê nem boleto. A cobrança sai por link de Pix no WhatsApp, a partir do plano Loja.
-- Limite de crédito por cliente não está confirmado. Se você precisa travar venda acima de um valor, verifique com o suporte antes de contratar.
-- Não cobra sozinho de tempos em tempos. O envio do link é uma ação sua, não uma régua automática.
-
 ## O tamanho do buraco, quando ele fica visível
 
 O primeiro efeito de sair do caderno costuma ser um susto — o total a receber quase sempre é maior do que o dono imaginava:
 
-Exemplo ilustrativo
+O que estava espalhado pelo caderno
+- 14 clientes com saldo em abertoR$ 3.180,00
+- Desses, 5 com dívida acima de 60 diasR$ 1.940,00
+- = Dinheiro seu, fora do caixaR$ 3.180,00
 
-### O que estava espalhado pelo caderno
-
-14 clientes com saldo em aberto R$ 3.180,00
-Desses, 5 com dívida acima de 60 dias R$ 1.940,00
-= Dinheiro seu, fora do caixa R$ 3.180,00
 Números fictícios, só para mostrar o raciocínio. A linha do meio é a que muda o comportamento: quando o vencimento fica visível, a cobrança para de ser adiada. Veja o guia como controlar fiado.
 
-## O que você passa a conseguir responder
-- Quanto tenho a receber de fiado, no total?
-- Quem deve, quanto e desde quando?
-- Quais dívidas estão mais velhas?
-- Este cliente já pagou o que devia do mês passado?
-- Quanto do meu faturamento saiu a prazo?
-- Vale continuar vendendo fiado para esta pessoa?
+A venda fiada aparece como valor a receber no Financeiro.
+
+Planos
 
 ## Em qual plano está
+
+Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+
+### O caderninho digital em todos
+
+O saldo e o histórico por cliente estão desde o Comércio. A cobrança por link de Pix no WhatsApp entra a partir do Loja.
 | Plano | Preço | O fiado neste plano |
 | Comércio | R$ 69/mês | Caderninho digital já aqui: saldo e histórico por cliente, venda fiada pelo PDV. 1 usuário |
 | Loja | R$ 89/mês | Tudo do Comércio mais cobrança por link de Pix no WhatsApp e registro pelo bot. Até 3 usuários |
 | ERP Completo | R$ 109/mês | Tudo da Loja mais emissão de NF-e e NFC-e. Até 10 usuários |
-Todos podem ser testados por 7 dias, sem cartão de crédito. Veja os planos completos.
+
+Com transparência
+
+## O que o controle de fiado não faz
+
+É crédito que você concede com o próprio dinheiro. Vale saber o que o sistema não cobre:
+
+-
+
+### Não consulta SPC nem Serasa.
+
+A decisão de vender fiado continua sendo sua, baseada no que você sabe do cliente.
+
+-
+
+### Não negativa quem não paga.
+
+Não há qualquer integração com órgão de proteção ao crédito.
+
+-
+
+### Não calcula juros nem multa por atraso.
+
+O saldo é o valor das compras.
+
+-
+
+### Não gera carnê nem boleto.
+
+A cobrança sai por link de Pix no WhatsApp, a partir do plano Loja.
+
+-
+
+### Limite de crédito por cliente não está confirmado.
+
+Se você precisa travar venda acima de um valor, verifique com o suporte antes de contratar.
+
+-
+
+### Não é régua de cobrança com etapas.
+
+O que existe, a partir do plano Loja, é um lembrete gentil pelo WhatsApp que você liga se quiser: no máximo um por cliente a cada 7 dias (você escolhe o intervalo), só entre 9h e 20h, e o cliente pode responder PARAR.
+
+Recursos inclusos
+
+## O que você passa a conseguir responder
+
+### O total
+- Quanto tenho a receber de fiado, no total?
+- Quem deve, quanto e desde quando?
+
+### As dívidas
+- Quais dívidas estão mais velhas?
+- Este cliente já pagou o que devia do mês passado?
+
+### A decisão
+- Quanto do meu faturamento saiu a prazo?
+- Vale continuar vendendo fiado para esta pessoa?
+
+## Continue por aqui
+
+Método e cobrançaComo controlar fiadoSaiba maisCadastro e históricoControle de clientesSaiba maisA venda a prazo no balcãoSistema PDVSaiba maisRegistrar e dar baixa falandoBot do WhatsAppSaiba maisO fiado do bairroMercadinhoSaiba maisCrediário de alto valorLoja de joiasSaiba mais
+
+Dúvidas
 
 ## Perguntas frequentes
 
@@ -3002,7 +4084,7 @@ Sim. O saldo fica no cadastro do cliente, com o histórico das compras que forma
 
 ### O sistema cobra o cliente automaticamente?
 
-A partir do plano Loja, o SoftPay envia link de pagamento por Pix pelo WhatsApp. O envio é uma ação sua: não existe régua de cobrança que dispara sozinha.
+Se você ligar, sim. A partir do plano Loja, o SoftPay manda link de pagamento por Pix pelo WhatsApp e tem um lembrete automático opcional: fica desligado até você ligar, lembra cada cliente com saldo no máximo uma vez a cada 7 dias (você muda o intervalo), só entre 9h e 20h, e o cliente pode responder PARAR.
 
 ### Dá para definir um limite de fiado por cliente?
 
@@ -3031,6 +4113,20 @@ Não. A cobrança sai por link de Pix pelo WhatsApp, disponível a partir do pla
 ### Como faço para passar o caderno atual para o sistema?
 
 O caminho prático é lançar os saldos em aberto como vendas fiadas no nome de cada cliente. O guia de fiado explica o processo.
+
+## Descubra quanto você tem para receber
+
+Lance os saldos do caderno no nome de cada cliente e veja o total aparecer. Costuma ser maior do que a gente imagina. 7 dias grátis, sem cartão.
+
+### Como controlar fiado
+
+Método e cobrança
+Saiba mais
+
+### Bot do WhatsApp
+
+Registrar e dar baixa falando
+Saiba mais
 
 ---
 

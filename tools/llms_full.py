@@ -16,7 +16,10 @@ PUBLIC = os.path.join(RAIZ, "public")
 BASE = "https://site.softpaybr.com"
 PULAR = {"script", "style", "noscript", "svg", "button", "nav", "iframe", "video", "picture", "form", "template"}
 VAZIOS = {"br", "img", "hr", "input", "meta", "link", "source", "track", "wbr", "col", "area", "base", "embed"}
-PULAR_CLASSE = ("page-related", "page-mais", "page-cta", "breadcrumb", "so-leitor", "whatsapp-float", "float-cta")
+PULAR_CLASSE = ("page-related", "page-mais", "page-cta", "breadcrumb", "so-leitor", "whatsapp-float", "float-cta",
+                # botões e chamadas dos moldes clonados (a__botao, sc-btn, mxh-pilbotao, __acao, sc-entrar):
+                # sem isto o llms-full lia "Testar 7 dias grátisWhatsApp" e "Já usa o SoftPay? Entrar" (04/11/2026)
+                "botao", "btn", "botoes", "__acao", "-entrar")
 
 
 class Extrator(HTMLParser):

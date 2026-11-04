@@ -1,22 +1,22 @@
 {
  "_home": {
-  "hash": "6895a365a1d7",
-  "modificado": "2026-11-02",
+  "hash": "aba89a3229a2",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "_privacidade": {
-  "hash": "2c33160c0203",
-  "modificado": "2026-11-02",
+  "hash": "82eaeda33e21",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "_reembolso": {
-  "hash": "d07107cad41b",
-  "modificado": "2026-11-02",
+  "hash": "f0e2276731d3",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "_termos": {
-  "hash": "7243110a31f5",
-  "modificado": "2026-11-02",
+  "hash": "6a7b1711749c",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "blog": {
@@ -245,12 +245,12 @@
  },
  "segmentos/distribuidora": {
   "hash": "fbe60424a1f1",
-  "modificado": "2026-09-17",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "segmentos/empresas-com-filiais": {
   "hash": "ad31a050a760",
-  "modificado": "2026-09-08",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-07"
  },
  "segmentos/farmacia": {
@@ -265,7 +265,7 @@
  },
  "segmentos/loja-de-bebidas": {
   "hash": "d7ecd4adcdf1",
-  "modificado": "2026-09-17",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "segmentos/loja-de-calcados": {
@@ -285,7 +285,7 @@
  },
  "segmentos/loja-de-roupas": {
   "hash": "f551fede6821",
-  "modificado": "2026-11-02",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "segmentos/loja-de-variedades": {
@@ -300,7 +300,7 @@
  },
  "segmentos/mercadinho": {
   "hash": "48e7f32c325b",
-  "modificado": "2026-09-17",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "segmentos/papelaria": {
@@ -320,7 +320,7 @@
  },
  "sistema-de-gestao-para-pequenos-negocios": {
   "hash": "847af51769a8",
-  "modificado": "2026-09-08",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "sobre": {
@@ -344,8 +344,8 @@
   "publicado": "2026-09-06"
  },
  "solucoes/controle-de-fiado": {
-  "hash": "f58f01c80905",
-  "modificado": "2026-11-02",
+  "hash": "f30fce8cc9f7",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "solucoes/loja-online": {
@@ -370,7 +370,7 @@
  },
  "solucoes/sistema-de-estoque": {
   "hash": "83cca0fe42c9",
-  "modificado": "2026-11-02",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "solucoes/sistema-financeiro": {
@@ -380,7 +380,7 @@
  },
  "solucoes/sistema-pdv": {
   "hash": "207e98ad7940",
-  "modificado": "2026-11-02",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  }
 }

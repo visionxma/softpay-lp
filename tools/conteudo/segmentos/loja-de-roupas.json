@@ -309,12 +309,12 @@
    "/solucoes/loja-online/"
   ],
   [
-   "PDV no celular e online (frente de caixa)",
-   "/solucoes/sistema-pdv/"
-  ],
-  [
    "Aplicativo para controlar fiado no celular",
    "/solucoes/controle-de-fiado/"
+  ],
+  [
+   "PDV no celular e online (frente de caixa)",
+   "/solucoes/sistema-pdv/"
   ],
   [
    "Como organizar a vitrine de uma loja pequena",
@@ -341,8 +341,8 @@
    "/perguntas/excel-ou-sistema-de-gestao/"
   ],
   [
-   "Como sair do caderno",
-   "/guias/como-sair-do-caderno/"
+   "Posso migrar de outro sistema?",
+   "/perguntas/posso-migrar-de-outro-sistema/"
   ],
   [
    "Sistema para distribuidora",
@@ -350,5 +350,5 @@
   ]
  ],
  "publicado": "2026-09-06",
- "updated": "2026-11-02"
+ "updated": "2026-11-04"
 }
