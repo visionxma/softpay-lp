@@ -33,7 +33,15 @@ def arg(nome, padrao=None):
     return sys.argv[sys.argv.index(nome) + 1] if nome in sys.argv else padrao
 
 
-PROVAS = arg("--provas", "/tmp/sp-zap-v2/provas.json")
+def _provas_mais_novas():
+    # O padrão fixo em /tmp/sp-zap-v2 já fez o PDF sair sem os perfis de diretório (04/11/2026: a v3 tinha
+    # o B2B Stack e o Portal Software; a v2, não). Sem --provas, vale a rodada mais nova do links-do-grupo.py.
+    import glob
+    achados = sorted(glob.glob("/tmp/sp-zap-v*/provas.json"), key=os.path.getmtime)
+    return achados[-1] if achados else "/tmp/sp-zap-v2/provas.json"
+
+
+PROVAS = arg("--provas") or _provas_mais_novas()
 DATA = arg("--data", datetime.date.today().strftime("%d-%m-%Y"))
 MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro",
          "novembro", "dezembro"]
@@ -163,6 +171,8 @@ def nome_da_pagina(titulo):
 def main():
     lg = carregar_links_do_grupo()
     provas = json.load(open(PROVAS, encoding="utf-8"))
+    if not any(p["grupo"] == "perfis" for p in provas):
+        sys.exit(f"{PROVAS} não tem os perfis de diretório: rode tools/links-do-grupo.py de novo ou passe --provas")
     mapa = ler_mapa()
     linhas_por_grupo = {g: {} for g, _ in lg.ORDEM_GRUPOS}
     cont = {"clone": 0, "previa": 0, "fila": 0, "propria": 0, "falta": 0, "total": 0, "ok200": 0}
