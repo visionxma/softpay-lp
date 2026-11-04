@@ -40,17 +40,17 @@
 /* ----------------------------------------------------------------- 0. FONTES */
 @font-face {
     font-family: 'SoftPay Display';
-    src: url('/fontes/softpay-montserrat-v1.woff2') format('woff2');
+    src: url('/fontes/softpay-montserrat-v1.woff2?v=6438d7b8ea') format('woff2');
     font-weight: 100 900; font-style: normal; font-display: swap;
 }
 @font-face {
     font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-montserrat-v1.woff2') format('woff2');
+    src: url('/fontes/softpay-montserrat-v1.woff2?v=6438d7b8ea') format('woff2');
     font-weight: 100 900; font-style: normal; font-display: swap;
 }
 @font-face {
     font-family: 'SoftPay Texto';
-    src: url('/fontes/softpay-montserrat-italico-v1.woff2') format('woff2');
+    src: url('/fontes/softpay-montserrat-italico-v1.woff2?v=86589d0b59') format('woff2');
     font-weight: 100 900; font-style: italic; font-display: swap;
 }
 
@@ -1101,7 +1101,7 @@ a.so-leitor:focus {
     box-shadow: none;
 }
 .nav[data-solida="nao"] .nav__link { color: rgba(255, 255, 255, 0.86); }
-.nav[data-solida="nao"] .nav__logo img { content: url('/assets/logo-claro-232.png'); }
+.nav[data-solida="nao"] .nav__logo img { content: url('/assets/logo-claro-232.png?v=e644d34709'); }
 .nav[data-solida="nao"] .nav__hamburguer {
     background: rgba(255, 255, 255, 0.14); color: var(--branco);
 }

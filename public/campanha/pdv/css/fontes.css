@@ -3,8 +3,8 @@
 /* A família única da referência (títulos e corpo) -> SoftPay Texto, nos
    mesmos pesos das regras originais: o 300 da referência desenha com o
    arquivo 400 (o mais leve que existe) e o 700 cobre 700 a 900. */
-@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-400-v1.woff2") format("woff2"); font-weight: 100 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-400-italico-v1.woff2") format("woff2"); font-weight: 100 400; font-style: italic; font-display: swap; }
-@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-500-v1.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-600-v1.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-700-v1.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-400-v1.woff2?v=2d29cbc5c9") format("woff2"); font-weight: 100 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-400-italico-v1.woff2?v=1177719ce4") format("woff2"); font-weight: 100 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-500-v1.woff2?v=9fc15dd590") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-600-v1.woff2?v=9cdddf8303") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "SoftPay Texto"; src: url("/fontes/softpay-texto-700-v1.woff2?v=5471a5f938") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
