@@ -254,11 +254,11 @@ Ver a emissão de nota
 
 Para quem é
 
-## Comércio que vende produto com estoque
+## Da loja ao delivery, um sistema só
 
-Quem já usa o SoftPay todo dia, do balcão ao fechamento do caixa.
+Loja com estoque, distribuidora e casa de comida que vende pelo celular. Toque no seu segmento e veja o sistema.
 
-Gabriel Landim · cliente Celulares e acessórios Ver o sistema RN Grifes · cliente Loja de roupas Ver o sistema Naldo Bebidas · cliente Distribuidora Ver o sistema Farmácia Ver o sistema Papelaria Ver o sistema Variedades Ver o sistema
+Gabriel Landim · cliente Celulares e acessórios Ver o sistema RN Grifes · cliente Loja de roupas Ver o sistema Naldo Bebidas · cliente Distribuidora Ver o sistema Hamburgueria Ver o sistema Pizzaria Ver o sistema Açaiteria Ver o sistema Variedades Ver o sistema
 
 ## A loja na sua mão, fora da loja
 
@@ -390,7 +390,7 @@ Os dados ficam em banco de dados na nuvem, sobre infraestrutura Supabase, com ba
 
 ### Para quem o SoftPay serve?
 
-Para comércios com estoque: mercadinhos, lojas de roupas, lojas de variedades, papelarias, farmácias, distribuidoras e lojas em geral. O perfil mais comum é a loja que quer sair do caderno ou da planilha.
+Para comércios com estoque (mercadinhos, lojas de roupas, lojas de variedades, distribuidoras e lojas em geral) e para hamburguerias, pizzarias e açaiterias que vendem no balcão e no delivery. O perfil mais comum é a loja que quer sair do caderno ou da planilha.
 
 ### Posso usar no celular?
 
@@ -824,13 +824,16 @@ As páginas de segmento contam a rotina do seu negócio. As de soluções explic
 | Registrar exige parar o atendimento | Bot do WhatsApp | Todos. A partir do plano Loja |
 | Preciso emitir nota fiscal | NF-e e NFC-e | Distribuidora, autopeças, materiais de construção |
 | Tenho mais de um ponto de venda | Múltiplas lojas | Empresas com filiais e distribuidora |
+| Atendo mesa, balcão e entrega ao mesmo tempo | Mesas e comandas, no PDV, e pedido de entrega pela loja online | Hamburgueria, pizzaria e açaiteria. A partir do plano Loja |
 | Quero vender além da loja física | Loja online | Roupas, variedades, joias. A partir do plano Loja |
 
 ## Não achou o seu segmento?
 
 A base é a mesma para qualquer comércio com estoque: PDV, caixa, estoque, fiado, clientes e relatórios. Se a sua loja não tem página própria, comece pela de pequeno comércio e MEI — ela descreve o que vale para todos.
 
-Também vale ser direto sobre onde o SoftPay não é a escolha certa hoje: pizzaria e delivery, prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste.
+Comida também entra: hamburgueria, pizzaria e açaiteria usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja.
+
+Também vale ser direto sobre onde o SoftPay não é a escolha certa hoje: prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste.
 Como ler estas páginas
 Cada página de segmento traz um bloco com o que o sistema não faz naquele ramo. Vale ler esse bloco antes do resto — ele responde mais rápido se o SoftPay serve para você.
 
@@ -7730,7 +7733,7 @@ Sim. O sistema é usado pela internet e o atendimento é nacional, pelo WhatsApp
 
 ### Para que tipo de negócio o SoftPay foi feito?
 
-Para pequenos comércios com estoque: mercadinhos, lojas de roupas, lojas de variedades, papelarias, farmácias, distribuidoras e lojas em geral.
+Para pequenos comércios com estoque e para quem vende comida: mercadinhos, lojas de roupas, lojas de celulares, distribuidoras, hamburguerias, pizzarias, açaiterias, lojas de variedades e lojas em geral.
 
 ### Como falo com a equipe?
 

@@ -175,7 +175,7 @@ dict(
     ("O SoftPay atende todo o Brasil?",
      "Sim. O sistema é usado pela internet e o atendimento é nacional, pelo WhatsApp."),
     ("Para que tipo de negócio o SoftPay foi feito?",
-     "Para pequenos comércios com estoque: mercadinhos, lojas de roupas, lojas de variedades, papelarias, farmácias, distribuidoras e lojas em geral."),
+     "Para pequenos comércios com estoque e para quem vende comida: mercadinhos, lojas de roupas, lojas de celulares, distribuidoras, hamburguerias, pizzarias, açaiterias, lojas de variedades e lojas em geral."),
     ("Como falo com a equipe?",
      "Pelo WhatsApp (99) 9 8430-4630 ou pelo e-mail suporte@softpaybr.com."),
     ("Tem teste grátis?",

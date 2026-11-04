@@ -60,6 +60,10 @@ APP_BR = "https://www.softpaybr.com"
 APP_CO = "https://www.softpayco.com"
 ERP = "https://erp.softpaybr.com"
 SITEMAPS = [BR + "/sitemap.xml", CO + "/sitemap.xml", PDV + "/sitemap.xml"]
+# LPs de nicho (pedido do Alexandre, 04/11/2026): um subdomínio do softpaypdv.com por nicho,
+# cada um com página e referência próprias (repositório softpay-nichos).
+NICHOS = ["https://sistemaparaacaiteria.softpaypdv.com/", "https://sistemaparapizzaria.softpaypdv.com/",
+          "https://sistemaparahamburgueria.softpaypdv.com/"]
 
 # Campanhas de anúncio: ficam fora do sitemap DE PROPÓSITO. Além da lista fixa, o script lê
 # public/campanha/* do repositório do site.
@@ -89,12 +93,14 @@ ORDEM_GRUPOS = [
     ("site-br", "SITE BRASIL"),
     ("site-co", "SITE COLÔMBIA"),
     ("pdv", "PÁGINA POR PAÍS, softpaypdv.com"),
+    ("nichos", "SISTEMA POR NICHO, softpaypdv.com"),
     ("app-br", "APLICATIVO BRASIL"),
     ("erp", "ERP COMPLETO, página de venda"),
     ("app-co", "APLICATIVO COLÔMBIA"),
     ("perfis", "PERFIS FORA DO SITE"),
 ]
 NOME_CURTO = {"site-br": "Site Brasil", "site-co": "Site Colômbia", "pdv": "Página por país (softpaypdv.com)",
+              "nichos": "Sistema por nicho (softpaypdv.com)",
               "app-br": "Aplicativo Brasil", "erp": "ERP Completo (página de venda)",
               "app-co": "Aplicativo Colômbia", "perfis": "Perfis fora do site"}
 
@@ -242,6 +248,10 @@ def coletar(avisos):
                 add(loc, "pdv", "Países", "site", "sitemap")
             else:
                 avisos.append(f"sitemap traz endereço de outro domínio, ignorado: {loc}")
+
+    # 1b) LPs de nicho, cada uma no seu subdomínio
+    for u in NICHOS:
+        add(u, "nichos", "Nichos", "site", "LP de nicho (subdomínio)")
 
     # 2) campanhas (fora do sitemap): lista fixa + pastas do repositório
     camp = list(CAMPANHAS_FIXAS)
@@ -619,7 +629,7 @@ def main():
                     "Institucional e legal", "Campanhas de anúncio, fora do Google de propósito", "Outras páginas"],
         "site-co": ["Principais", "Segmentos", "Soluciones", "Comparativos", "Guias", "Ferramentas", "Perguntas",
                     "Institucional e legal", "Outras páginas"],
-        "pdv": ["Países"], "app-br": ["Aplicativo"], "erp": ["ERP"], "app-co": ["Aplicativo"], "perfis": ["Perfis"],
+        "pdv": ["Países"], "nichos": ["Nichos"], "app-br": ["Aplicativo"], "erp": ["ERP"], "app-co": ["Aplicativo"], "perfis": ["Perfis"],
     }
     admin_url = next((r["url"] for r in unicos if r["item"]["tipo"] == "admin"), None)
     final = []
@@ -632,7 +642,7 @@ def main():
             us = sorted(us, key=ordem_url) if g not in ("app-br", "app-co", "perfis") else us
             if g == "app-br":
                 us = [u for u in us if u != admin_url] + ([admin_url] if admin_url in us else [])
-            titulo_bloco = "" if b in ("Países", "Aplicativo", "ERP", "Perfis") else b
+            titulo_bloco = "" if b in ("Países", "Nichos", "Aplicativo", "ERP", "Perfis") else b
             linhas = [u + (ADMIN_ANOTACAO if u == admin_url else "") for u in us]
             final.append((g, titulo_bloco, linhas))
 

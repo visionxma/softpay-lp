@@ -691,16 +691,41 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
    minmax(0, 1fr) e não 1fr: com `1fr` a coluna não encolhe abaixo do
    min-content do cartão, que tem proporção fixa — em 1280px isso estourava a
    página em 28px (medido 17/09/2026). */
-.vitrine { display: grid; gap: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-@media (min-width: 48rem) { .vitrine { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 72rem) { .vitrine { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+/* SETE segmentos desde 04/11/2026 (pedido do Alexandre: saem farmácia e
+   papelaria, entram hamburgueria, pizzaria e açaiteria). Sete não divide em 3
+   nem em 6: no tablet a grade tem 12 trilhos e fecha 4 + 3, com os 3 de baixo
+   mais largos e na MESMA altura (3/5 em 1/4 da largura = 4/5 em 1/3); a partir
+   de 72rem é uma fileira de 7.
+   --palavra: a maior palavra dos nomes, em em, na Montserrat 800 com o
+   -0,02em do espaçamento ("Hamburgueria" = 7,49em, medido no arquivo da fonte
+   com fontTools; 7,7 leva a folga). O corpo do nome é a largura útil do painel
+   mais estreito dividida por ela (camada 99, no fim do arquivo). Nome novo
+   mais longo: medir e subir este número. */
+.vitrine { display: grid; gap: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); --palavra: 7.7; }
+@media (min-width: 48rem) {
+    /* do tablet para cima o nome mede pela FILEIRA (cqw da vitrine), não pelo
+       painel: os sete nomes ficam no mesmo corpo, e no acordeão, onde o painel
+       muda de largura, o corpo é conta, não sobra */
+    .vitrine { grid-template-columns: repeat(12, minmax(0, 1fr)); container-type: inline-size; }
+    .vitrine__item { grid-column: span 3; }
+    .vitrine__item:nth-child(n + 5) { grid-column: span 4; aspect-ratio: 4 / 5; }
+}
+@media (min-width: 72rem) {
+    .vitrine { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+    .vitrine__item:nth-child(n) { grid-column: auto; }
+    .vitrine__item:nth-child(n + 5) { aspect-ratio: auto; }
+}
 
 .vitrine__item {
     position: relative; display: block; overflow: hidden;
-    container-type: inline-size;      /* o tipo é proporcional ao painel, em cqw */
+    container-type: inline-size;      /* no celular o tipo é proporcional ao painel, em cqw */
     aspect-ratio: 3 / 4; text-decoration: none; color: var(--branco); isolation: isolate;
 }
-@media (min-width: 48rem) { .vitrine__item { aspect-ratio: 3 / 5; } }
+/* Do tablet para cima o painel deixa de ser contêiner, para o cqw do nome
+   medir a FILEIRA (.vitrine). O "normal" mora AQUI, depois da regra-base: no
+   bloco de 48rem lá em cima ele perdia para o inline-size da base (mesma
+   especificidade, vem antes) e o nome caía para 1,7px em 1440 (04/11/2026). */
+@media (min-width: 48rem) { .vitrine__item { aspect-ratio: 3 / 5; container-type: normal; } }
 /* ACORDEÃO (só onde existe ponteiro fino)
    Medido no print da referência: o painel aberto tem 620px contra 345px dos
    outros — 1,8 vez. Enquanto o ponteiro não entra na fileira, o PRIMEIRO fica
@@ -715,9 +740,8 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
     .vitrine__item {
         flex: 1 1 0; min-width: 0;
         aspect-ratio: auto; height: 100%;
-        /* o tipo para de ser proporcional ao painel: senão ele cresceria e
-           encolheria junto com a expansão, e a referência mantém tamanho fixo */
-        container-type: normal;
+        /* o tipo mede pela fileira (container na .vitrine, desde 48rem), não
+           pelo painel que abre e fecha */
         transition: flex-grow 0.55s var(--mola);
     }
     /* Nenhum painel vem aberto: a fileira começa igual e só abre o que estiver
@@ -726,7 +750,7 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
     .vitrine__item:hover,
     .vitrine__item:focus-visible { flex-grow: 1.8; }
 }
-/* Sem ponteiro (toque) não há acordeão: seis painéis altos iguais. */
+/* Sem ponteiro (toque) não há acordeão: sete painéis altos iguais. */
 @media (min-width: 72rem) and (not ((hover: hover) and (pointer: fine))) {
     .vitrine__item {
         aspect-ratio: auto;
@@ -757,6 +781,11 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
        lojista (medido em 390px). */
     position: absolute; inset: auto 0 0; padding: var(--sp-3) var(--sp-2);
     display: grid; justify-items: center;
+    /* Grade de uma coluna tranca a coluna na largura do painel (doutrina,
+       seção 1): em "auto" a pílula "Saiba mais" (~159px, invisível no painel
+       fechado) alargava a coluna e o nome saía do centro, cortado 4px à
+       direita em 1152px (04/11/2026). */
+    grid-template-columns: minmax(0, 1fr);
 }
 /* No desktop, como na referência: nome no meio do painel e a ação logo abaixo.
    A referência põe o texto a 42,6% do topo; aqui é 52%, porque as fotografias
@@ -772,13 +801,10 @@ html:has(.previa-flutua.is-visivel) .esteira__trilho { animation-play-state: pau
 }
 .vitrine__nome {
     font-family: var(--display); font-weight: 800;
-    /* A Stone usa 25cqw aqui porque a Gravity X Compressed é quase duas
-       vezes mais estreita que a Archivo que estava no lugar (794px contra
-       400px para treze letras a 100px) — com a Archivo o teto era 14cqw.
-       A SoftPay Display tem a largura da Gravity (1,004×), então o nome
-       volta ao tamanho da referência: 24cqw deixa "ACESSÓRIOS", o rótulo
-       mais largo, em ~74% do painel. */
-    font-size: min(24cqw, 4.5rem);
+    /* O TAMANHO mora num lugar só: a camada 99 (Montserrat), no fim do
+       arquivo, e a pilha do celular em #para-quem. Desde a troca para a
+       Montserrat (03/11/2026) a letra é ~2× mais larga que a SoftPay Display
+       condensada, e o 24cqw da Stone cortava os nomes. */
     line-height: 0.88; text-transform: uppercase; text-align: center;
     letter-spacing: -0.01em;
     /* branco, não o acento: sobre fotografia clara o azul só passava 4,5:1 com
@@ -1757,16 +1783,10 @@ body:has(.gaveta[data-aberta="sim"]) .nav .nav__hamburguer { color: var(--tinta)
 .vitrine__rotulo .vitrine__seta { margin-top: var(--sp-2); }
 
 @media (min-width: 72rem) and (hover: hover) and (pointer: fine) {
-    /* Teto medido no painel FECHADO do acordeão, que é o estreito: 212px menos
-       o respiro deixam 196px úteis. Com a Archivo, "VARIEDADES" ocupava 228px
-       a 48px e o teto era 28px; a SoftPay Display é ~0,6× mais estreita, então
-       o mesmo rótulo cabe a 44px. Acima disso o nome sangra para fora. */
-    .vitrine__nome { font-size: 2.75rem; transition: font-size 0.55s var(--mola); }
-    /* O painel aberto tem 365px úteis contra 196px: o nome dele cresce junto.
-       "Celulares e acessórios", o mais longo, media 341px a 34px na Archivo;
-       na SoftPay Display, a 52px, fica em ~315px — dentro dos 365. */
-    .vitrine__item:hover .vitrine__nome,
-    .vitrine__item:focus-visible .vitrine__nome { font-size: 3.25rem; }
+    /* O corpo do nome (fechado, aberto e em repouso) é conta da largura de
+       cada estado, na camada 99; aqui fica só a transição, no mesmo tempo da
+       expansão do painel. */
+    .vitrine__nome { transition: font-size 0.55s var(--mola); }
 
     .vitrine__seta { opacity: 0; transform: translateY(10px); margin-top: 0; }
     .vitrine__item:hover .vitrine__seta,
@@ -3549,7 +3569,14 @@ body:has(.gaveta[data-aberta="sim"]) .nav .nav__hamburguer { color: var(--tinta)
         padding: 0 var(--gutter) calc(5.5rem + env(safe-area-inset-bottom));
         gap: var(--sp-4);
     }
-    #para-quem .vitrine__nome { font-size: min(22cqw, 5.5rem); }
+    /* Cada painel é um cartaz de tela inteira: o nome ENCHE a largura útil.
+       --palavra-propria (no HTML, por nome) é a linha mais larga daquele nome
+       em em, na Montserrat 800, já com a quebra natural ("Celulares e" /
+       "acessórios"); sem ela vale a maior dos sete. Com min(22cqw, 5.5rem)
+       "Distribuidora" e "Hamburgueria" passavam da borda em 390px. */
+    #para-quem .vitrine__nome {
+        font-size: min(calc((100cqw - 2 * var(--gutter)) / var(--palavra-propria, var(--palavra))), 5.5rem);
+    }
     #para-quem .vitrine__rotulo .vitrine__seta {
         margin-top: 0;
         min-height: 3rem; padding-inline: 1.5rem 1.25rem;
@@ -4424,7 +4451,7 @@ html:has(.previa[open]) { overflow: hidden; }
    passagem pelo azul-noite, como o hero faz com a seção de baixo; a (b) quebrava
    a sangria que dá fôlego à página e a (c) acrescentava conteúdo.
    ========================================================================== */
-/* o pé da vitrine afunda no azul-noite só na fileira única de 6 (≥72rem): no
+/* o pé da vitrine afunda no azul-noite só na fileira única de 7 (≥72rem): no
    tablet a vitrine tem 2 fileiras e o véu apagava o "Ver o sistema" da de baixo;
    no celular cada painel já termina no azul */
 @media (min-width: 72rem) {
@@ -4558,7 +4585,27 @@ html:has(.previa[open]) { overflow: hidden; }
 .previa__titulo,
 .vitrine__nome { text-transform: none; letter-spacing: -0.02em; }
 .previa__titulo { line-height: 1.05; }
-.vitrine__nome { font-size: min(12cqw, 3.5rem); line-height: 1; }
+/* O nome do segmento CABE no painel (04/11/2026). Com min(12cqw, 3.5rem) o
+   corpo dava 56px num painel fechado de 212px, e "Distribuidora" saía cortada
+   no acordeão. Agora é a largura útil do painel mais estreito de cada
+   composição (menos 1rem de respiro) dividida por --palavra (seção 12): na
+   fileira de 7, fechado = 1 parte de 7,8 e aberto = 1,8 parte. Medidas em
+   1440px: 24,6px em repouso, 21,9px fechado, 41px aberto. */
+.vitrine__nome { line-height: 1; font-size: min(calc((100cqw - 1rem) / var(--palavra)), 3.5rem); }
+@media (min-width: 48rem) {
+    .vitrine__nome { font-size: min(calc((25cqw - 1rem) / var(--palavra)), 3.5rem); }
+}
+@media (min-width: 72rem) {
+    .vitrine__nome { font-size: min(calc((100cqw / 7 - 1rem) / var(--palavra)), 3.25rem); }
+}
+@media (min-width: 72rem) and (hover: hover) and (pointer: fine) {
+    .vitrine:has(.vitrine__item:is(:hover, :focus-visible)) .vitrine__nome {
+        font-size: calc((100cqw / 7.8 - 1rem) / var(--palavra));
+    }
+    .vitrine .vitrine__item:is(:hover, :focus-visible) .vitrine__nome {
+        font-size: min(calc((100cqw * 1.8 / 7.8 - 1rem) / var(--palavra)), 3.25rem);
+    }
+}
 .display { font-weight: 800; line-height: 1.06; }
 .display--cartao { line-height: 1.1; }
 /* Montserrat 400 fica fina sobre o fundo escuro: texto corrido em 500,
