@@ -360,6 +360,10 @@
    "/perguntas/tem-suporte-humano/"
   ],
   [
+   "Posso usar o SoftPay no celular?",
+   "/perguntas/posso-usar-o-softpay-no-celular/"
+  ],
+  [
    "Sistema de gestão é seguro?",
    "/perguntas/sistema-de-gestao-e-seguro/"
   ],
@@ -378,10 +382,6 @@
   [
    "Sistema para loja de cosméticos e perfumaria",
    "/segmentos/cosmeticos-e-perfumaria/"
-  ],
-  [
-   "Sistema de gestão para pequenos negócios",
-   "/sistema-de-gestao-para-pequenos-negocios/"
   ]
  ],
  "publicado": "2026-09-06",

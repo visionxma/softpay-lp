@@ -22,6 +22,7 @@ abertas de corpo inteiro (farmacia-w, papelaria-w, variedades-w).
 
 Uso:
     python3 tools/tela-cheia.py            # precisa de opencv-python-headless 4.10 e Pillow
+    python3 tools/tela-cheia.py pizzaria   # só os segmentos citados
     Real-ESRGAN em ~/.local/share/realesrgan (binário + models/)
 """
 import os, subprocess, pathlib
@@ -36,7 +37,12 @@ TMP = pathlib.Path('/tmp/telacheia')
 
 FONTES = {'celulares-e-acessorios': 'gabriel-alto.png', 'loja-de-roupas': 'neto-ext.png',
           'distribuidora': 'naldo-ext.png', 'farmacia': 'farmacia-w.png',
-          'papelaria': 'papelaria-w.png', 'loja-de-variedades': 'variedades-w.png'}
+          'papelaria': 'papelaria-w.png', 'loja-de-variedades': 'variedades-w.png',
+          # comida e delivery (pedido do Alexandre, 04/11/2026): fotos geradas, com respiro acima da cabeça
+          'hamburgueria': 'hamburgueria-w.png', 'pizzaria': 'pizzaria-w.png', 'acaiteria': 'acaiteria-w.png'}
+# rosto medido à mão quando o detector erra: na hamburgueria, a 1ª escala (1,03) acha também a coifa da chapa
+# (293 px) e ganha por ser a maior; as escalas 1,05, 1,08 e 1,10 só acham o rosto verdadeiro (x 426, y 392, 158 px)
+ROSTO = {'hamburgueria': (158, 426 + 158 / 2, 392 + 158 / 2)}
 R, FY = 0.25, 0.36                 # rosto / largura da tela, altura do rosto na foto
 ASP = 390 / (844 * 0.78)           # largura / altura da foto no painel
 det = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -52,10 +58,14 @@ def rosto(im):
     raise SystemExit('rosto não encontrado')
 
 def main():
+    import sys
+    so = set(sys.argv[1:])           # sem argumento: todos; com slugs: só eles (não refaz os prontos)
     TMP.mkdir(exist_ok=True); SAIDA.mkdir(parents=True, exist_ok=True)
     for slug, arq in FONTES.items():
+        if so and slug not in so:
+            continue
         im = Image.open(FONTE / arq).convert('RGB'); W, H = im.size
-        fw, cx, cy = rosto(im)
+        fw, cx, cy = ROSTO.get(slug) or rosto(im)
         Wc = fw / R; Hc = Wc / ASP; x0 = cx - Wc / 2; y0 = cy - FY * Hc
         assert x0 >= 0 and y0 >= 0 and x0 + Wc <= W and y0 + Hc <= H, f'{slug}: recorte não cabe'
         rec = TMP / f'rec-{slug}.png'; up = TMP / f'up-{slug}.png'

@@ -1,21 +1,21 @@
 {
  "_home": {
-  "hash": "aba89a3229a2",
+  "hash": "05b84904add6",
   "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "_privacidade": {
-  "hash": "82eaeda33e21",
+  "hash": "e4e02c3a3369",
   "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "_reembolso": {
-  "hash": "f0e2276731d3",
+  "hash": "2b1fa846ac25",
   "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
  "_termos": {
-  "hash": "6a7b1711749c",
+  "hash": "3c4b4f1652a8",
   "modificado": "2026-11-04",
   "publicado": "2026-09-04"
  },
@@ -234,8 +234,8 @@
   "publicado": "2026-09-06"
  },
  "segmentos": {
-  "hash": "12d8e58570d3",
-  "modificado": "2026-11-02",
+  "hash": "550f641d3ff8",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "segmentos/cosmeticos-e-perfumaria": {
@@ -324,8 +324,8 @@
   "publicado": "2026-09-06"
  },
  "sobre": {
-  "hash": "8cac4c71ccea",
-  "modificado": "2026-11-02",
+  "hash": "1870bda74ae9",
+  "modificado": "2026-11-04",
   "publicado": "2026-09-06"
  },
  "solucoes": {

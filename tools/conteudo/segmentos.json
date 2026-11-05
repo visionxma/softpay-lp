@@ -204,6 +204,11 @@
        "Empresas com filiais e distribuidora"
       ],
       [
+       "Atendo mesa, balcão e entrega ao mesmo tempo",
+       "Mesas e comandas, no PDV, e pedido de entrega pela <a href=\"/solucoes/loja-online/\">loja online</a>",
+       "<a href=\"https://sistemaparahamburgueria.softpaypdv.com/\">Hamburgueria</a>, <a href=\"https://sistemaparapizzaria.softpaypdv.com/\">pizzaria</a> e <a href=\"https://sistemaparaacaiteria.softpaypdv.com/\">açaiteria</a>. A partir do plano Loja"
+      ],
+      [
        "Quero vender além da loja física",
        "<a href=\"/solucoes/loja-online/\">Loja online</a>",
        "Roupas, variedades, joias. A partir do plano Loja"
@@ -223,7 +228,11 @@
     },
     {
      "tipo": "p",
-     "texto": "Também vale ser direto sobre onde o SoftPay <strong>não</strong> é a escolha certa hoje: pizzaria e delivery, prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste."
+     "texto": "Comida também entra: <a href=\"https://sistemaparahamburgueria.softpaypdv.com/\">hamburgueria</a>, <a href=\"https://sistemaparapizzaria.softpaypdv.com/\">pizzaria</a> e <a href=\"https://sistemaparaacaiteria.softpaypdv.com/\">açaiteria</a> usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja."
+    },
+    {
+     "tipo": "p",
+     "texto": "Também vale ser direto sobre onde o SoftPay <strong>não</strong> é a escolha certa hoje: prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste."
     },
     {
      "tipo": "nota",
@@ -235,5 +244,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-02"
+ "updated": "2026-11-04"
 }

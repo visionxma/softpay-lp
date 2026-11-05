@@ -54,12 +54,23 @@ ORIGEM_FIXA = {
     "campanha/gestao": ("https://www.nextar.com.br/", "Nextar", "clone no ar desde 25/09"),
     "": ("https://www.stone.com.br/", "Stone (a letra)", "LP principal, elevada em 03/11"),
 }
+# LPs de nicho (pedido do Alexandre, 04/11/2026): referência escolhida pela elegância e por mostrar o
+# sistema na mão de gente, nunca pelo nicho (regra referencia-de-lp-de-sistema-pela-elegancia).
+NICHO_REF = {
+    "https://sistemaparaacaiteria.softpaypdv.com/": ("https://www.infinitepay.io/", "InfinitePay",
+                                                     "escolhida pela elegância, de outro nicho"),
+    "https://sistemaparapizzaria.softpaypdv.com/": ("https://www.consumer.com.br/sistema-para-pizzarias",
+                                                    "Consumer", ""),
+    "https://sistemaparahamburgueria.softpaypdv.com/": ("https://expressodelivery.com.br/segmentos/hamburgueria",
+                                                        "Expresso Delivery", ""),
+}
 # referências que o Raykkony mandou na conversa (03/11/2026)
 DO_RAYKKONY = {"segmentos/loja-de-bebidas", "segmentos/distribuidora", "sistema-de-gestao-para-pequenos-negocios"}
 
 TITULO_GRUPO = {
     "site-br": "site.softpaybr.com, o site de busca do Brasil", "site-co": "site.softpayco.com, o site da Colômbia",
-    "pdv": "softpaypdv.com, uma página por país", "app-br": "www.softpaybr.com, o aplicativo no Brasil",
+    "pdv": "softpaypdv.com, uma página por país",
+    "nichos": "softpaypdv.com, uma página por nicho (açaiteria, pizzaria, hamburgueria)", "app-br": "www.softpaybr.com, o aplicativo no Brasil",
     "erp": "erp.softpaybr.com, a página de venda do ERP", "app-co": "www.softpayco.com, o aplicativo na Colômbia",
     "perfis": "Perfis do SoftPay fora do site",
 }
@@ -218,6 +229,19 @@ def main():
             lateral["referencias"][url] = ref
             classe = "ok"
             cont["clone" if rota.startswith("campanha/") else "propria"] += 1
+        elif g == "nichos" and url in NICHO_REF:
+            ref, nome_r, nota_n = NICHO_REF[url]
+            nota = f' <span class="nota">{html.escape(nota_n)}</span>' if nota_n else ""
+            ref_html = f'<span class="marca">{html.escape(nome_r)}</span>{nota}<br>{link(ref)}'
+            lateral["referencias"][url] = ref
+            if p["status"] == 200:
+                situ, classe = "clone no ar", "ok"
+                cont["clone"] += 1
+            else:
+                prev = "https://previa." + urllib.parse.urlparse(url).hostname.split(".")[0].replace(
+                    "sistemapara", "softpay-") + ".pages.dev/"
+                situ, classe = f'pronto na prévia<br>{link(prev, "ver a prévia")}', "previa"
+                cont["previa"] += 1
         elif url.rstrip("/") in outros and outros[url.rstrip("/")][0] != "nao-e-lp":
             ref, nota_o = outros[url.rstrip("/")]
             nota = f' <span class="nota">{html.escape(nota_o)}</span>' if nota_o else ""
