@@ -17,7 +17,7 @@ Perplexity-User ClaudeBot Claude-User Claude-SearchBot anthropic-ai CCBot Amazon
 Bytespider meta-externalagent FacebookBot LinkedInBot Twitterbot WhatsApp cohere-ai
 YouBot Diffbot ImagesiftBot PetalBot Timpibot""".split()
 
-FECHADO = ["/api/", "/admin", "/dashboard", "/login", "/conta", "/auth", "/app"]
+FECHADO = ["/api/", "/admin", "/dashboard", "/login", "/conta/", "/conta$", "/auth", "/app"]
 
 
 def texto():
