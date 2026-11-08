@@ -11,7 +11,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -23,7 +24,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -35,7 +37,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -47,7 +50,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -59,7 +63,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -71,7 +76,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -83,7 +89,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -95,7 +102,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -107,7 +115,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -119,7 +128,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -131,7 +141,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -143,7 +154,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -155,7 +167,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -167,7 +180,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -179,7 +193,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -191,7 +206,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -203,7 +219,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -215,7 +232,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -227,7 +245,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -239,7 +258,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -251,7 +271,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -263,7 +284,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -275,7 +297,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -287,7 +310,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -299,7 +323,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -311,7 +336,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -323,7 +349,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -335,7 +362,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -347,7 +375,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -359,7 +388,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -371,7 +401,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
@@ -383,7 +414,8 @@ Disallow: /api/
 Disallow: /admin
 Disallow: /dashboard
 Disallow: /login
-Disallow: /conta
+Disallow: /conta/
+Disallow: /conta$
 Disallow: /auth
 Disallow: /app
 Allow: /*.css$
