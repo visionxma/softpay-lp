@@ -34,6 +34,7 @@
     <!-- A home é servida na raiz de site.softpaybr.com (§2 do briefing de SEO).
     O redirect 301 de /lp/ -> / está declarado em _redirects. -->
     <link rel="canonical" href="https://site.softpaybr.com/" />
+    <meta name="apple-itunes-app" content="app-id=6829463542" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SoftPay" />
@@ -295,6 +296,13 @@
         </div>
 
         <div class="nav__acoes">
+            <style>.nav__iphone{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:2.75rem;min-width:2.75rem;padding:.5rem .625rem}
+.nav__iphone svg{flex:none;width:20px;height:20px}
+.nav__iphone-c,.nav__iphone-l{display:none}
+@media (min-width:30rem) and (max-width:61.99rem){.nav__iphone-c{display:inline}}
+@media (min-width:72rem) and (max-width:82.99rem){.nav__iphone-c{display:inline}}
+@media (min-width:83rem){.nav__iphone-l{display:inline}}
+@media (max-width:29.99rem){.nav__iphone{padding-inline:.25rem}}</style><a class="nav__link nav__iphone" href="https://apps.apple.com/br/app/softpay-pdv/id6829463542" target="_blank" rel="noopener" data-track="app-store" aria-label="Baixar para iPhone (abre a App Store em nova aba)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span class="nav__iphone-c">iPhone</span><span class="nav__iphone-l">Baixar para iPhone</span></a>
             <a class="nav__link nav__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
             <a class="btn btn--acao" href="https://www.softpaybr.com/auth?ref=alexandrehen_cf9e" data-track="complete-registration">Testar grátis</a>
             <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
@@ -326,6 +334,7 @@
         <a href="#planos">Planos</a>
         <a href="#depoimentos">Quem já usa</a>
         <a href="#duvidas">Dúvidas</a>
+        <a href="https://apps.apple.com/br/app/softpay-pdv/id6829463542" target="_blank" rel="noopener" data-track="app-store">Baixar para iPhone</a>
         <a href="https://www.softpaybr.com/auth">Entrar</a>
         <a class="btn btn--acao btn--grande" href="https://www.softpaybr.com/auth?ref=alexandrehen_cf9e">Começar grátis</a>
     </div>
