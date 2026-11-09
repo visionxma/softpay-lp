@@ -8,6 +8,8 @@ seguem o mesmo padrão de SEO e de layout.
 """
 
 import schema_fonte
+import pergunte_ia
+import baixar_iphone
 from schema_fonte import BASE, ID_ORG, ID_SITE, ID_APP, BING_VERIFICACAO
 
 APP = "https://www.softpaybr.com/auth"
@@ -220,6 +222,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <meta name="theme-color" content="#1DA1F2" />
     <link rel="canonical" href="%(url)s" />
+    %(apple_meta)s
     <meta name="msvalidate.01" content="%(bing)s" />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="SoftPay para assistentes de IA" />
 
@@ -288,6 +291,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
         </div>
 
         <div class="nav__acoes">
+            %(iphone)s
             <a class="nav__link nav__entrar" href="%(app)s">Entrar</a>
             <a class="btn btn--acao" href="%(cadastro)s" data-track="complete-registration">Testar grátis</a>
             <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
@@ -320,6 +324,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
         <a href="/blog/">Blog</a>
         <a href="/perguntas/">Perguntas</a>
         <a href="/#planos">Planos</a>
+        %(iphone_gaveta)s
         <a href="%(app)s">Entrar</a>
         <a class="btn btn--acao btn--grande" href="%(cadastro)s">Começar grátis</a>
     </div>
@@ -351,6 +356,9 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 
     <footer class="rodape">
         <div class="shell">
+            <div class="rodape__ia" style="margin-bottom: clamp(28px, 4vw, 44px)">
+%(pia)s
+            </div>
             <div class="rodape__grade">
                 <div class="rodape__marca">
                     <img src="/assets/logo-claro-232.png" width="232" height="84" loading="lazy"
@@ -447,7 +455,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
 ''' % dict(title=esc(title), description=esc(description), url=url, base=BASE,
            ld=ld, bc=bc_html, h1=h1, intro=intro, corpo=corpo, faq=faq_html, fig=fig_html,
            og_img=og_img, og_alt=esc(og_alt),
-           rel=rel_html, mais=mais_html, bing=BING_VERIFICACAO, app=APP, cadastro=CADASTRO, wpp=WPP,
+           pia=pergunte_ia.bloco(slug, h1), iphone=baixar_iphone.BOTAO, iphone_gaveta=baixar_iphone.GAVETA, apple_meta=baixar_iphone.META, rel=rel_html, mais=mais_html, bing=BING_VERIFICACAO, app=APP, cadastro=CADASTRO, wpp=WPP,
            cta_title=esc(cta_title or "Experimente o SoftPay por 7 dias"),
            cta_text=esc(cta_text or ("Teste todos os recursos do plano sem cartão de crédito. "
                                      "Se não fizer sentido para a sua loja, é só não continuar.")))
