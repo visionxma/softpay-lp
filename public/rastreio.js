@@ -387,6 +387,123 @@
         }
     }
 
+    /* ---------- o primeiro toque viaja até o cadastro (aviso "Novo cadastro") ---------- */
+
+    // Pedido do Victor (11/11/2026): o aviso "Novo cadastro" do grupo "SoftPay
+    // Admin" diz de onde a loja veio, no nível do FINAGRO. A 1ª visita a ESTE site
+    // fica no aparelho (a primeira vence, a mesma regra do app) e o botão que leva
+    // ao aplicativo carrega no link o que o app lê na 1ª visita dele e grava com a
+    // conta (src/lib/origemDoCadastro.ts, no repositório do app):
+    //
+    //   sp_origem      o botão, "<site>:<bloco>": site:heroi, site:planos, site:menu.
+    //                  O bloco é o cta_local do GTM; onde ele diria só "corpo", o
+    //                  papel da seção: a 1ª dobra é "heroi", a de fecho "cta-final",
+    //                  a seção ou a janela com id pelo id, a sem id pelo título;
+    //   canal_site     por onde a pessoa chegou a este site na 1ª visita: o
+    //                  utm_source, o host de quem mandou (google.com,
+    //                  l.instagram.com), a plataforma do anúncio pelo id do clique
+    //                  (gclid vira google) ou "direto";
+    //   entrada_site   a 1ª página dela aqui, sem a busca;
+    //   campanha_site  o utm_campaign daquela 1ª visita (e conteudo_site, o
+    //                  utm_content). NUNCA como utm_campaign: no /auth ele vira o
+    //                  afiliado que recebe comissão (ver o UTM lá em cima).
+    //
+    // O aviso escreve: "site do SoftPay (botão em site:heroi) · chegou ao site pelo
+    // Google, entrando em /segmentos/mercadinho/".
+    var SITE = 'site';
+    var TOQUE = 'sp_primeiro_toque_do_site';
+    var ANUNCIO = [['gclid', 'google'], ['gbraid', 'google'], ['wbraid', 'google'], ['fbclid', 'meta'],
+                   ['ttclid', 'tiktok'], ['msclkid', 'bing'], ['li_fat_id', 'linkedin'], ['twclid', 'x']];
+
+    // Os limites que o app aplica ao ler: texto curto, sem o que abriria HTML.
+    function curto(v, max) {
+        return String(v || '').replace(/[\u0000-\u001f\u007f<>"'`*]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, max);
+    }
+    function canalLimpo(v) {
+        return String(v || '').toLowerCase().trim().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '').slice(0, 40);
+    }
+    function caminhoLimpo(p) {
+        p = String(p || '/');
+        try { p = decodeURIComponent(p); } catch (e) {}
+        if (p.normalize) p = p.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        p = p.split(/[?#]/)[0].replace(/[^\w./-]/g, '').slice(0, 120);
+        return p.charAt(0) === '/' ? p : '/' + p;
+    }
+    // Nome de bloco: minúsculas e hífen, até 30 letras, cortado na palavra.
+    function marca(t) {
+        var s = String(t || '');
+        if (s.normalize) s = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        s = s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+        if (s.length > 30) { s = s.slice(0, 31); var h = s.lastIndexOf('-'); s = s.slice(0, h > 10 ? h : 30); }
+        return s;
+    }
+
+    function primeiroToque() {
+        var t = null;
+        try { t = JSON.parse(localStorage.getItem(TOQUE) || 'null'); } catch (e) { t = null; }
+        if (t && typeof t === 'object' && typeof t.canal_site === 'string') {
+            return { canal_site: canalLimpo(t.canal_site) || 'direto', entrada_site: caminhoLimpo(t.entrada_site),
+                     campanha_site: curto(t.campanha_site, 80), conteudo_site: curto(t.conteudo_site, 80) };
+        }
+        var q = new URLSearchParams(location.search);
+        var de = '';
+        try { de = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ''; } catch (e) { de = ''; }
+        var interno = !!de && de === location.hostname.toLowerCase();
+        var canal = canalLimpo(q.get('utm_source'));
+        if (!canal && de && !interno) {
+            de = de.replace(/^www\./, '');
+            while (de.length > 40 && de.indexOf('.') > -1) de = de.slice(de.indexOf('.') + 1);
+            canal = canalLimpo(de);
+        }
+        for (var i = 0; !canal && i < ANUNCIO.length; i++) { if (q.has(ANUNCIO[i][0])) canal = ANUNCIO[i][1]; }
+        // Navegação de dentro do site sem nada no link: a 1ª página da visita
+        // ficou para trás (o aparelho apagou o registro, ou a visita começou antes
+        // deste código). Página do meio não se grava como entrada.
+        if (!canal && interno) return null;
+        t = { canal_site: canal || 'direto', entrada_site: caminhoLimpo(location.pathname),
+              campanha_site: curto(q.get('utm_campaign'), 80), conteudo_site: curto(q.get('utm_content'), 80) };
+        try { localStorage.setItem(TOQUE, JSON.stringify(t)); } catch (e) {}
+        return t;
+    }
+
+    var PRIMEIRO_TOQUE = primeiroToque();
+
+    function blocoDoBotao(a) {
+        var b = local(a);
+        if (b !== 'corpo') return marca(b) || 'corpo';
+        var topo = a.closest('header');
+        if (topo && !topo.closest('main, section, article, dialog')) return 'menu';
+        for (var el = a.parentElement; el && el !== document.body; el = el.parentElement) {
+            var c = ' ' + (el.getAttribute('class') || '') + ' ';
+            if (/[\s_-]heroi?(?=[\s_-])/i.test(c)) return 'heroi';
+            if (/[\s_-](cta-final|fim|final)(?=[\s_-])/i.test(c)) return 'cta-final';
+            if (/^(SECTION|DIALOG|ASIDE)$/.test(el.tagName)) {
+                if (el.id && marca(el.id)) return marca(el.id);
+                var h = el.querySelector('h1, h2, h3');
+                if (h && marca(h.textContent)) return marca(h.textContent);
+            }
+        }
+        return 'corpo';
+    }
+
+    // No toque: mouse (os três botões, o direito para "abrir em nova aba"), dedo
+    // e teclado (Enter dispara click). Antes de a navegação começar.
+    function levaOToque(ev) {
+        var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+        if (!a) return;
+        var u;
+        try { u = new URL(a.href, location.href); } catch (e) { return; }
+        if (!APP.test(u.hostname) || u.hostname === location.hostname) return;
+        u.searchParams.set('sp_origem', SITE + ':' + blocoDoBotao(a));
+        if (PRIMEIRO_TOQUE) {
+            for (var k in PRIMEIRO_TOQUE) { if (PRIMEIRO_TOQUE[k]) u.searchParams.set(k, PRIMEIRO_TOQUE[k]); }
+        }
+        if (a.href !== u.toString()) a.href = u.toString();
+    }
+    ['mousedown', 'touchstart', 'click', 'auxclick', 'contextmenu'].forEach(function (tipo) {
+        document.addEventListener(tipo, levaOToque, { capture: true, passive: true });
+    });
+
     /* ---------- inspetor ao vivo: ?sp_debug=1 ---------- */
 
     // Para o gestor de tráfego CONFERIR sem depender do Preview do GTM e sem
