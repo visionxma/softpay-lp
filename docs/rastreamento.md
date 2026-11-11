@@ -186,6 +186,27 @@ identificadores da Meta criados na LP, e a atribuição entre LP e cadastro não
 depende do repasse na URL. O repasse continua valendo para GA4, Google Ads e
 para qualquer relatório que leia `utm_*`.
 
+## O primeiro toque vai até o aviso "Novo cadastro" (11/11/2026)
+
+Pedido do Victor: o aviso "Novo cadastro" do grupo "SoftPay Admin" diz de onde a
+loja veio, no nível do FINAGRO. `rastreio.js` guarda a 1ª visita da pessoa a ESTE
+site no aparelho (`localStorage`, chave `sp_primeiro_toque_do_site`; a primeira
+vence, como no app) e, no toque num link do aplicativo (mouse, botão do meio,
+menu de "abrir em nova aba", dedo ou Enter), acrescenta ao endereço:
+
+| parâmetro | o que leva | exemplo |
+|---|---|---|
+| `sp_origem` | o botão, `site:<bloco>`: o `cta_local`; onde ele diria `corpo`, a 1ª dobra vira `heroi`, a de fecho `cta-final` e a seção sem id, o título dela | `site:heroi`, `site:planos`, `site:menu` |
+| `canal_site` | por onde a pessoa chegou ao site na 1ª visita: o `utm_source`, o host de quem mandou, a plataforma do anúncio pelo id do clique (`gclid` → `google`) ou `direto` | `google`, `google.com.br`, `l.instagram.com` |
+| `entrada_site` | a 1ª página dela no site, sem a busca | `/segmentos/mercadinho/` |
+| `campanha_site`, `conteudo_site` | o `utm_campaign` e o `utm_content` daquela 1ª visita, com outro nome (o `utm_campaign` vira afiliado no app, ver acima) | `perfil-softpaybr`, `softpaybr-bio` |
+
+O app lê esses campos na 1ª visita dele (`src/lib/origemDoCadastro.ts`) e o aviso
+escreve "site do SoftPay (botão em site:heroi) · chegou ao site pelo Google,
+entrando em /segmentos/mercadinho/". Os sites irmãos mandam o mesmo, com o próprio
+prefixo: softpaypdv.com (`pdv:`), os de nicho (`pizzaria:`, `hamburgueria:`,
+`acaiteria:`) e site.softpayco.com (`co:`).
+
 ## Links de rastreio do Instagram (17/10/2026)
 
 Um endereço curto por perfil, para a bio, o story, o reels, o post, a mensagem
