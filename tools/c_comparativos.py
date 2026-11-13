@@ -163,6 +163,7 @@ dict(
          "<strong>Peça para outra pessoa da loja registrar uma venda</strong> sem você ensinar.",
          "<strong>Ligue para o suporte dos dois</strong> durante o teste.",
          "<strong>Compare o custo de 12 meses</strong> com o número de usuários que você realmente precisa."),
+      p("Se o sistema que você usa hoje não cobra mensalidade, a comparação item a item está em <a href=\"/comparativos/alternativa-ao-marketup/\">alternativa ao MarketUP</a>."),
     ),
   ],
   faq=[

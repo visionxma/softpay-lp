@@ -5135,6 +5135,8 @@ Quem faz as duas coisas deve decidir pela que move mais dinheiro hoje — e não
 - Ligue para o suporte dos dois durante o teste.
 - Compare o custo de 12 meses com o número de usuários que você realmente precisa.
 
+Se o sistema que você usa hoje não cobra mensalidade, a comparação item a item está em alternativa ao MarketUP.
+
 ## Perguntas frequentes
 
 ### O SoftPay é uma alternativa ao Kyte?
