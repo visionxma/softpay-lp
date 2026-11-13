@@ -109,6 +109,10 @@
      "tipo": "nota",
      "titulo": "Onde a maioria dos pequenos comércios está",
      "texto": "Se você é do Simples Nacional ou MEI, <strong>nada mudou ainda</strong> — e é exatamente por isso que este é o momento de se preparar. Quem deixa para dezembro descobre o problema no dia em que a nota é recusada."
+    },
+    {
+     "tipo": "p",
+     "texto": "A mudança chega primeiro ao programa que emite a nota, então vale ver como funciona o <a href=\"/solucoes/nfce/\">sistema para emitir NFC-e</a> do SoftPay."
     }
    ]
   },
@@ -240,5 +244,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-08",
- "updated": "2026-09-17"
+ "updated": "2026-11-13"
 }

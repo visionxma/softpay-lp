@@ -73,6 +73,10 @@
     {
      "tipo": "p",
      "texto": "É por isso que existe a frase mais repetida do varejo pequeno: “vendo muito e não tenho dinheiro”. Quase sempre não é problema de venda — é a margem sendo consumida sem acompanhamento."
+    },
+    {
+     "tipo": "p",
+     "texto": "Em loja de muitos itens baratos, como a papelaria, a margem se perde nos centavos: o <a href=\"/segmentos/papelaria/\">sistema para papelaria</a> guarda o custo de cada item, o dado que falta para a conta do lucro fechar."
     }
    ]
   },
@@ -211,5 +215,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

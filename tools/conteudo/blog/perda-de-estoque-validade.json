@@ -88,6 +88,10 @@
     {
      "tipo": "p",
      "texto": "Não é descuido: é o caminho natural de quem está com pressa recebendo mercadoria. Corrigir isso não custa dinheiro, custa <strong>uma regra combinada com quem repõe</strong>."
+    },
+    {
+     "tipo": "p",
+     "texto": "Em bebida o lote e a validade decidem a reposição, e a rotina completa está no <a href=\"/segmentos/loja-de-bebidas/\">sistema para depósito de bebidas</a>."
     }
    ]
   },
@@ -202,5 +206,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

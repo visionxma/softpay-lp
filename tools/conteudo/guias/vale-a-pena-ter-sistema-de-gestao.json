@@ -103,6 +103,10 @@
      "tipo": "nota",
      "titulo": "Sendo direto",
      "texto": "Se três ou mais dos itens acima descrevem a sua loja, <strong>não contrate sistema nenhum agora</strong> — nem o SoftPay. Volte quando o movimento crescer. Vender para quem ainda não precisa gera cancelamento em dois meses, e isso não interessa a ninguém."
+    },
+    {
+     "tipo": "p",
+     "texto": "Quem já sabe que o problema é o caderno de fiado pode testar primeiro o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado no celular</a>, que é onde o ganho de um sistema costuma aparecer mais rápido."
     }
    ]
   },
@@ -277,5 +281,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-08",
- "updated": "2026-09-08"
+ "updated": "2026-11-13"
 }

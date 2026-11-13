@@ -2832,8 +2832,8 @@ Sim. Os dados ficam na nuvem e o sistema é acessado pelo navegador, inclusive n
 - Caderno ou sistema?
 - Posso usar o SoftPay no celular?
 - Como organizar uma loja
-- Perda de estoque por validade
 - Reforma tributária no comércio: o que muda e quando
+- Perda de estoque por validade
 - Sistema para distribuidora de bebidas e atacado
 
 ---
@@ -5359,6 +5359,8 @@ Gaveta é onde o dinheiro fica. Caixa é o registro do que entrou e do que saiu.
 
 O sintoma é sempre o mesmo: sobra ou falta dinheiro no fim do dia e ninguém consegue explicar. Não porque houve desonestidade, mas porque não existe registro contra o qual comparar.
 
+No balcão de muitas vendas rápidas, o sistema para mercadinho registra cada venda com a forma de pagamento, e é desse registro que nasce o caixa que fecha.
+
 ## Passo 1 — Defina o fundo de troco
 
 Comece o dia com um valor fixo em espécie para troco e registre esse valor. Sem um ponto de partida conhecido, qualquer conferência no fim do dia é impossível.
@@ -5513,6 +5515,8 @@ Resposta curta: lucro bruto é o faturamento menos o custo da mercadoria vendida
 Faturamento é o total que passou pelo caixa. Dentro dele está o dinheiro que pertence ao fornecedor da mercadoria, ao aluguel, à energia e ao funcionário. O que sobra depois de tudo isso é o seu.
 
 É por isso que existe a frase mais repetida do varejo pequeno: “vendo muito e não tenho dinheiro”. Quase sempre não é problema de venda — é a margem sendo consumida sem acompanhamento.
+
+Em loja de muitos itens baratos, como a papelaria, a margem se perde nos centavos: o sistema para papelaria guarda o custo de cada item, o dado que falta para a conta do lucro fechar.
 
 ## As duas fórmulas que você precisa
 
@@ -5669,6 +5673,8 @@ Resposta curta: organize uma coisa de cada vez, na ordem em que cada uma sustent
 
 Existe uma sequência natural: sem cadastro de produto não há venda registrada; sem venda registrada não há estoque confiável; sem estoque confiável não há custo; sem custo não há lucro conhecido. Pular etapas produz números que ninguém acredita — e um sistema abandonado em duas semanas.
 
+A ordem muda um pouco conforme a loja: na roupa, o cadastro já começa pela grade de tamanho e cor, e o sistema para loja de roupas parte dela.
+
 ## Etapa 1 — Cadastre os produtos que giram
 
 Não tente cadastrar o catálogo inteiro. Comece pelos itens que você vende toda semana, com preço de venda, custo e categoria. Complete o resto conforme repõe.
@@ -5822,6 +5828,8 @@ Começando pelo lado que quase nenhum site de sistema escreve, porque não é do
 Sendo direto
 Se três ou mais dos itens acima descrevem a sua loja, não contrate sistema nenhum agora — nem o SoftPay. Volte quando o movimento crescer. Vender para quem ainda não precisa gera cancelamento em dois meses, e isso não interessa a ninguém.
 
+Quem já sabe que o problema é o caderno de fiado pode testar primeiro o controle de fiado no celular, que é onde o ganho de um sistema costuma aparecer mais rápido.
+
 ## Quando passa a valer
 
 O ponto de virada quase nunca é o faturamento. São estes cinco sinais:
@@ -5930,6 +5938,8 @@ Sistemas de gestão para pequeno comércio no Brasil se concentram em três faix
 | Completa | R$ 120 a R$ 300+ | Multi-loja, integrações, equipe maior, às vezes com implantação cobrada à parte |
 Onde o SoftPay fica: R$ 65 a R$ 109, entre a entrada e a intermediária, com 7 dias grátis e sem cartão.
 
+O valor também depende do ramo: atacado de bebida pede estoque em fardo e nota fiscal, e é isso que o sistema para depósito de bebidas reúne.
+
 ## O que costuma não estar no preço anunciado
 
 Esta é a parte que muda a conta, e quase nunca aparece na página de preços:
@@ -6022,6 +6032,8 @@ Antes de abrir o site de qualquer sistema, escreva num papel os três problemas 
 Esses três viram o seu critério de decisão. Recurso que não atende nenhum deles é irrelevante para você, por mais impressionante que pareça na página de vendas.
 O erro mais comum
 Comprar por lista de recursos é o erro mais caro. Sistema com 200 funcionalidades das quais você usa 4 custa mais, demora mais para aprender e tem mais lugares para errar. O melhor sistema é o que resolve os seus três problemas com o mínimo de estrada.
+
+Comparar pelo ramo da loja ajuda: o sistema para mercadinho pensa no balcão de muitos itens, e o sistema para loja de roupas, na grade de tamanho e cor.
 
 ## Passo 2 — Descarte o que não atende o seu tipo de negócio
 
@@ -6129,6 +6141,8 @@ Duas datas resolvem a maior parte da dúvida. Se a sua empresa é do regime regu
 | Simples Nacional e MEI | 1º de janeiro de 2027 | Emitir documento fiscal com as informações de IBS e CBS | Onde a maioria dos pequenos comércios está
 Se você é do Simples Nacional ou MEI, nada mudou ainda — e é exatamente por isso que este é o momento de se preparar. Quem deixa para dezembro descobre o problema no dia em que a nota é recusada.
 
+A mudança chega primeiro ao programa que emite a nota, então vale ver como funciona o sistema para emitir NFC-e do SoftPay.
+
 ## O que é IBS e CBS, sem termo técnico
 
 A reforma substitui cinco tributos — PIS, Cofins, IPI, ICMS e ISS — por dois:
@@ -6227,6 +6241,8 @@ Hoje muitos MEI emitem nota apenas quando o cliente é empresa e pede. A partir 
 Por que começar agora
 Faltam poucos meses. Não é uma mudança que se resolve em uma tarde de dezembro: é um hábito novo no balcão, e hábito leva semanas para pegar.
 
+A nota passa a sair no balcão, na hora da venda, e por isso a frente de caixa importa: veja o PDV no celular e online do SoftPay.
+
 ## O que isso significa no dia a dia
 - Toda venda gera documento. A venda para o vizinho, a venda pequena, a venda em dinheiro — todas.
 - O cadastro de produto deixa de ser opcional. Para emitir nota é preciso ter o produto cadastrado, com descrição e valor.
@@ -6300,6 +6316,8 @@ Resposta curta: não necessariamente. O que precisa mudar é a nota fiscal, não
 A exigência é específica: o documento fiscal precisa sair com os campos de IBS e CBS preenchidos. Documento sem esses campos é rejeitado automaticamente.
 
 Isso significa que a mudança é no software que emite a nota. Não é sobre o computador da loja, nem sobre a impressora, nem sobre a maquininha.
+
+Antes de decidir se troca, olhe a emissão na prática, no sistema para emitir NFC-e do SoftPay.
 
 ## As quatro perguntas para fazer ao seu fornecedor
 
@@ -6382,6 +6400,8 @@ Tudo começa aqui, porque a data muda conforme o regime:
 | Simples Nacional | 1º de janeiro de 2027 | A preparar |
 | MEI | 1º de janeiro de 2027 | A preparar |
 Se você não tem certeza do seu regime, essa é a primeira pergunta ao contador — e é rápida.
+
+Quem vende para outra empresa e já emite nota toda semana pode ver essa rotina no sistema para depósito de bebidas.
 
 ## Passo 2 — Pergunte ao seu sistema se ele está pronto
 
@@ -6552,6 +6572,8 @@ Lucro em reais R$ 40,00
 Margem real (40 ÷ 140) 28,6%
 O markup se calcula sobre o custo. A margem se calcula sobre o preço de venda. Mesma venda, dois números diferentes.
 
+Na roupa, o mesmo modelo tem custo e preço por tamanho e cor, e o sistema para loja de roupas guarda cada variação separada.
+
 ## A diferença entre markup e margem
 |  | Markup | Margem |
 | Calculado sobre | o custo | o preço de venda |
@@ -6644,6 +6666,8 @@ A mercadoria nova chega e é colocada onde tem espaço — normalmente na frente
 
 Não é descuido: é o caminho natural de quem está com pressa recebendo mercadoria. Corrigir isso não custa dinheiro, custa uma regra combinada com quem repõe.
 
+Em bebida o lote e a validade decidem a reposição, e a rotina completa está no sistema para depósito de bebidas.
+
 ## A regra que resolve a maior parte: PVPS
 
 Primeiro a Vencer, Primeiro a Sair. Quando chega mercadoria nova, ela vai para trás da que já estava lá, e a mais antiga fica na frente.
@@ -6728,6 +6752,8 @@ Produto parado não é neutro: é dinheiro que você já pagou, ocupando espaço
 A falta de um produto é escandalosa: o cliente pergunta, ninguém acha, a venda se perde na sua frente. Já o produto que não vende não faz barulho nenhum. Ele está lá, arrumadinho, há oito meses.
 
 É por isso que quase toda loja descobre o encalhe no inventário, quando já passou tempo demais para resolver com desconto pequeno.
+
+Para quem revende em volume, o encalhe é o que mais prende dinheiro, e o sistema para distribuidora de bebidas mostra o estoque junto da venda.
 
 ## Como achar sem sistema
 - Marque a data de entrada. Uma etiqueta discreta com o mês de chegada já resolve. Em três meses você começa a enxergar o que não se move.
@@ -6819,6 +6845,8 @@ A confusão mais comum: a loja física não é obrigada a trocar produto por arr
 | Compra na loja física, sem defeito | Não há obrigação legal — a troca é política da loja | Importante
 Esta página é orientação de rotina, não é orientação jurídica. As regras exatas, prazos e exceções estão no Código de Defesa do Consumidor (Lei nº 8.078/1990) e a aplicação ao seu caso deve ser confirmada com um advogado ou com o Procon do seu estado.
 
+Troca é rotina de loja de roupas, onde o tamanho errado volta ao estoque: veja como isso fica no sistema para loja de roupas.
+
 ## Por que ter política de troca mesmo sem obrigação
 
 A maioria das lojas troca por cortesia mesmo sem ser obrigada. E faz sentido: a troca costuma custar menos que o cliente perdido, e quem volta para trocar frequentemente sai com outra compra.
@@ -6899,6 +6927,8 @@ Quem passa na calçada te dá dois segundos. Nesses dois segundos dá para trans
 Vitrine com trinta produtos diferentes não comunica nada: o olho não sabe onde parar e segue andando. Vitrine com três peças da mesma linha comunica “é isso que essa loja tem de novo”.
 O teste dos dois segundos
 O teste é simples: pare na calçada, olhe a sua vitrine por dois segundos e desvie o olhar. O que ficou na memória? Se a resposta for “um monte de coisa”, ela ainda não está pronta.
+
+Na papelaria, a vitrine muda com a época de aulas, e o sistema para papelaria ajuda a saber o que repor antes dela.
 
 ## O que colocar
 - O produto que representa a loja. Não o mais caro nem o encalhado: aquele que, se a pessoa entrar por ele, resume o que você vende.
@@ -6982,6 +7012,8 @@ Entrou no caixa neste mês (1ª parcela, menos taxa) R$ 291,00
 Saiu do caixa neste mês − R$ 600,00
 = Efeito no caixa do mês − R$ 309,00
 A venda deu lucro e mesmo assim tirou dinheiro do caixa neste mês. Multiplique por um mês inteiro de vendas parceladas e você tem o motivo de tantas lojas lucrativas ficarem sem dinheiro.
+
+O fiado é o maior buraco do caixa de bairro, e o controle de fiado no celular soma o que cada cliente ainda deve.
 
 ## Os três buracos mais comuns
 - Venda parcelada com compra à vista. Você paga o fornecedor hoje e recebe do cliente em três meses. Quanto mais cresce a venda, maior o buraco.

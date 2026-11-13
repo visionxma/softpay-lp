@@ -100,6 +100,10 @@
     {
      "tipo": "p",
      "texto": "O sintoma é sempre o mesmo: sobra ou falta dinheiro no fim do dia e ninguém consegue explicar. Não porque houve desonestidade, mas porque não existe registro contra o qual comparar."
+    },
+    {
+     "tipo": "p",
+     "texto": "No balcão de muitas vendas rápidas, o <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a> registra cada venda com a forma de pagamento, e é desse registro que nasce o caixa que fecha."
     }
    ]
   },
@@ -216,5 +220,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-02"
+ "updated": "2026-11-13"
 }

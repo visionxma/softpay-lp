@@ -137,6 +137,10 @@
      "tipo": "nota",
      "titulo": "O erro mais comum",
      "texto": "Comprar por lista de recursos é o erro mais caro. Sistema com 200 funcionalidades das quais você usa 4 custa mais, demora mais para aprender e tem mais lugares para errar. O melhor sistema é o que resolve os seus três problemas com o mínimo de estrada."
+    },
+    {
+     "tipo": "p",
+     "texto": "Comparar pelo ramo da loja ajuda: o <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a> pensa no balcão de muitos itens, e o <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas</a>, na grade de tamanho e cor."
     }
    ]
   },
@@ -307,5 +311,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-08",
- "updated": "2026-09-08"
+ "updated": "2026-11-13"
 }

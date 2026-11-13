@@ -88,6 +88,10 @@
     {
      "tipo": "p",
      "texto": "É por isso que quase toda loja descobre o encalhe no inventário, quando já passou tempo demais para resolver com desconto pequeno."
+    },
+    {
+     "tipo": "p",
+     "texto": "Para quem revende em volume, o encalhe é o que mais prende dinheiro, e o <a href=\"/segmentos/distribuidora/\">sistema para distribuidora de bebidas</a> mostra o estoque junto da venda."
     }
    ]
   },
@@ -228,5 +232,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

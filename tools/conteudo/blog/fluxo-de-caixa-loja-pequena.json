@@ -121,6 +121,10 @@
        "classe": "result final"
       }
      ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O fiado é o maior buraco do caixa de bairro, e o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado no celular</a> soma o que cada cliente ainda deve."
     }
    ]
   },
@@ -199,5 +203,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }
