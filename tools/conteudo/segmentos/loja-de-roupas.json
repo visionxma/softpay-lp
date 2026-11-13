@@ -4,7 +4,7 @@
   "/assets/lojistas/loja-de-roupas.webp",
   "Lojista conferindo peças numa arara de roupas com um tablet na mão"
  ],
- "title": "Sistema e App para Loja de Roupas com Grade | SoftPay",
+ "title": "Sistema para Loja de Roupas com Grade e App | SoftPay",
  "description": "Sistema para loja de roupas com estoque por grade de tamanho e cor, no celular e no computador. PDV, curva ABC, clientes e loja online. Teste 7 dias grátis.",
  "h1": "Sistema para loja de roupas com grade",
  "intro": "O SoftPay é um sistema para loja de roupas com estoque por grade: cada tamanho e cor tem a própria quantidade, e a venda no PDV baixa a combinação certa. Abre no celular e no computador, mostra na curva ABC a peça parada e liga a venda à cliente. A grade está a partir do plano Loja, de R$ 89/mês.",
@@ -301,15 +301,15 @@
    "/segmentos/pequeno-comercio/"
   ],
   [
-   "Loja online com Pix",
-   "/solucoes/loja-online/"
-  ],
-  [
    "Produtos parados no estoque",
    "/blog/produtos-parados-no-estoque/"
   ],
   [
-   "Aplicativo para controlar fiado no celular",
+   "Loja online com Pix",
+   "/solucoes/loja-online/"
+  ],
+  [
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/"
   ],
   [
@@ -337,15 +337,15 @@
    "/comparativos/softpay-ou-nex/"
   ],
   [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/"
+  ],
+  [
    "Excel ou sistema de gestão?",
    "/perguntas/excel-ou-sistema-de-gestao/"
   ],
   [
-   "Posso migrar de outro sistema?",
-   "/perguntas/posso-migrar-de-outro-sistema/"
-  ],
-  [
-   "Sistema para distribuidora",
+   "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
   ]
  ],

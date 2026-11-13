@@ -213,6 +213,7 @@ dict(
   blocks=[
     resposta("Priorize quatro coisas: <strong>PDV rápido</strong>, <strong>estoque que suporte muitos itens</strong>, <strong>controle de fiado</strong> e <strong>fechamento de caixa diário</strong>. Sem esses quatro, o resto não compensa."),
     sec("Os critérios que importam nesse segmento",
+      p("A resposta curta está na página do <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a> do SoftPay; aqui vão os critérios para comparar qualquer opção."),
       ol("<strong>Velocidade no balcão.</strong> Em horário de pico, cada segundo a mais na venda vira fila.",
          "<strong>Baixa automática de estoque.</strong> Com centenas de itens, controle manual não sobrevive a uma semana.",
          "<strong>Custo por produto.</strong> Margem de mercadinho é apertada; sem custo, não há como saber o que dá resultado.",

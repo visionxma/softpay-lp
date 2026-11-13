@@ -72,12 +72,12 @@
  "cta_text": "Cadastre os clientes com saldo em aberto e veja o total do fiado da sua loja em um número só.",
  "related": [
   [
-   "Aplicativo para controlar fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "Como funciona no SoftPay"
   ],
   [
-   "Mercadinho",
+   "Sistema para mercadinho",
    "/segmentos/mercadinho/",
    "O fiado do bairro"
   ],
@@ -93,6 +93,10 @@
    "id": "por-que-o-fiado-some",
    "titulo": "Por que o fiado some",
    "partes": [
+    {
+     "tipo": "p",
+     "texto": "Este guia é o método. Para fazer o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado no celular</a>, com o saldo de cada cliente somado sozinho, veja como funciona no SoftPay."
+    },
     {
      "tipo": "p",
      "texto": "O dinheiro fiado é o mais fácil de perder porque ele não dói na hora. A mercadoria sai, a venda parece feita e o buraco só aparece quando falta dinheiro para repor o estoque."
@@ -209,5 +213,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-02"
+ "updated": "2026-11-13"
 }

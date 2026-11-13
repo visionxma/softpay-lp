@@ -100,6 +100,10 @@
    "partes": [
     {
      "tipo": "p",
+     "texto": "Quem sai do caderno costuma começar pelo fiado: o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado no celular</a> já resolve a maior parte das folhas rasuradas. No balcão de muitos itens, veja também o <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a>."
+    },
+    {
+     "tipo": "p",
      "texto": "Quase todo mundo tenta começar transcrevendo tudo: meses de vendas passadas, todos os produtos, o caderno inteiro. É um trabalho enorme, sem retorno imediato, feito nas horas vagas — e por isso é abandonado no meio."
     },
     {
@@ -219,5 +223,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

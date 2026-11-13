@@ -70,7 +70,7 @@
    "O que fazer, em ordem"
   ],
   [
-   "Distribuidora",
+   "Sistema para distribuidora de bebidas",
    "/segmentos/distribuidora/",
    "Quem usa as duas"
   ]
@@ -81,6 +81,10 @@
    "id": "a-diferenca-em-uma-tabela",
    "titulo": "A diferença em uma tabela",
    "partes": [
+    {
+     "tipo": "p",
+     "texto": "Quem vende para outra empresa emite NF-e quase toda semana, e é o caso do <a href=\"/segmentos/distribuidora/\">sistema para distribuidora de bebidas</a>, que junta atacado, estoque em volume e nota no mesmo lugar."
+    },
     {
      "tipo": "tabela",
      "cabecalho": [
@@ -218,5 +222,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-17"
+ "updated": "2026-11-13"
 }

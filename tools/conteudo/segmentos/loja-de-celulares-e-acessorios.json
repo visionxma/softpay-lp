@@ -57,7 +57,7 @@
    "Custo, variações e curva ABC"
   ],
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "Fiado de valor alto"
   ],
@@ -267,16 +267,12 @@
    "/guias/como-calcular-margem-de-lucro/"
   ],
   [
-   "Quanto custa um sistema para loja?",
-   "/perguntas/quanto-custa-um-sistema-para-loja/"
+   "Posso usar em vários dispositivos?",
+   "/perguntas/posso-usar-em-varios-dispositivos/"
   ],
   [
    "Alternativa ao Bling para loja física",
    "/comparativos/alternativa-ao-bling/"
-  ],
-  [
-   "Posso usar em vários dispositivos?",
-   "/perguntas/posso-usar-em-varios-dispositivos/"
   ],
   [
    "Posso usar o SoftPay no celular?",
@@ -303,15 +299,19 @@
    "/perguntas/preciso-instalar/"
   ],
   [
+   "Comparativos",
+   "/comparativos/"
+  ],
+  [
    "App de vendas e controle de estoque",
    "/solucoes/sistema-de-estoque/"
   ],
   [
-   "Sistema para loja de bebidas",
+   "Sistema para depósito de bebidas",
    "/segmentos/loja-de-bebidas/"
   ],
   [
-   "Sistema para distribuidora",
+   "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
   ]
  ],

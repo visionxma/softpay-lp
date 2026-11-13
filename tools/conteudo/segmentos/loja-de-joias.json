@@ -70,7 +70,7 @@
    "Histórico, cupom e fidelidade"
   ],
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "Crediário próprio, por cliente"
   ],
@@ -85,7 +85,7 @@
    "Margem contra giro"
   ],
   [
-   "Loja de roupas",
+   "Sistema para loja de roupas",
    "/segmentos/loja-de-roupas/",
    "Outro segmento com grade e coleção"
   ]
@@ -351,12 +351,12 @@
    "/blog/fluxo-de-caixa-loja-pequena/"
   ],
   [
-   "Como controlar o caixa de uma loja",
-   "/guias/como-controlar-caixa-da-loja/"
-  ],
-  [
    "Como sair do caderno",
    "/guias/como-sair-do-caderno/"
+  ],
+  [
+   "Como controlar o caixa de uma loja",
+   "/guias/como-controlar-caixa-da-loja/"
   ],
   [
    "Como calcular o lucro de uma loja",

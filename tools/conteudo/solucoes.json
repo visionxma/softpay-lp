@@ -47,8 +47,8 @@
        "href": "/solucoes/sistema-pdv/"
       },
       {
-       "titulo": "Aplicativo para controlar fiado no celular",
-       "texto": "O SoftPay é um aplicativo para controlar fiado que abre no navegador do celular ou do computador, sem…",
+       "titulo": "Controle de fiado no celular",
+       "texto": "O SoftPay faz o controle de fiado no celular: é um aplicativo que abre no navegador do celular ou do…",
        "href": "/solucoes/controle-de-fiado/"
       },
       {
@@ -93,5 +93,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-02"
+ "updated": "2026-11-13"
 }

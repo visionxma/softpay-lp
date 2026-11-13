@@ -80,7 +80,7 @@
    "Registrar de qualquer ponto"
   ],
   [
-   "Distribuidora",
+   "Sistema para distribuidora de bebidas",
    "/segmentos/distribuidora/",
    "Depósito e loja separados"
   ],
@@ -355,8 +355,8 @@
    "/guias/reforma-tributaria-comercio/"
   ],
   [
-   "App de vendas e controle de estoque",
-   "/solucoes/sistema-de-estoque/"
+   "Sistema para distribuidora de bebidas e atacado",
+   "/segmentos/distribuidora/"
   ]
  ],
  "publicado": "2026-09-07",

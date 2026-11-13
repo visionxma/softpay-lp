@@ -224,10 +224,10 @@ dict(
   slug="solucoes/controle-de-fiado",
   figura=("/assets/lojistas/casal-comerciantes.webp",
           "Casal de comerciantes conferindo as contas no computador da loja"),
-  title="Aplicativo para Controlar Fiado no Celular | SoftPay",
+  title="Controle de Fiado no Celular: App e Caderneta | SoftPay",
   description="Caderneta de fiado no celular: saldo e histórico por cliente, venda fiada pelo PDV e cobrança por link de Pix no WhatsApp. Teste 7 dias grátis, sem cartão.",
-  h1="Aplicativo para controlar fiado no celular",
-  intro="O SoftPay é um aplicativo para controlar fiado que abre no navegador do celular ou do computador, sem baixar nada. Cada venda fiada fica no nome do cliente, com data, valor e saldo. A caderneta já vem no plano Comércio, de R$ 69/mês; a partir do Loja, de R$ 89/mês, o sistema manda cobrança por link de Pix no WhatsApp.",
+  h1="Controle de fiado no celular",
+  intro="O SoftPay faz o controle de fiado no celular: é um aplicativo que abre no navegador do celular ou do computador, sem baixar nada. Cada venda fiada fica no nome do cliente, com data, valor e saldo. A caderneta já vem no plano Comércio, de R$ 69/mês; a partir do Loja, de R$ 89/mês, o sistema manda cobrança por link de Pix no WhatsApp.",
   breadcrumbs=_c("Controle de fiado"),
   blocks=[
     sec("O problema",
@@ -290,6 +290,8 @@ dict(
     ),
   ],
   faq=[
+    ("Existe app de controle de fiado grátis?",
+     "Existe app grátis que só anota o valor, separado do caixa e do estoque. No SoftPay o fiado nasce da própria venda no PDV, baixa o estoque junto e fica no nome do cliente. O plano Comércio custa R$ 69/mês, e você testa 7 dias grátis, sem cartão."),
     ("Tem aplicativo para controlar fiado no celular?",
      "Tem. O SoftPay abre no navegador do celular, Android ou iPhone, sem baixar nada da loja de aplicativos. A caderneta de fiado, com saldo e histórico por cliente, já vem no plano Comércio, de R$ 69/mês, e dá para testar por 7 dias sem cartão."),
     ("Mais de uma pessoa da loja pode anotar o fiado?",

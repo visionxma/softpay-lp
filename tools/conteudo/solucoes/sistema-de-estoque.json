@@ -83,7 +83,7 @@
    "Dar entrada falando"
   ],
   [
-   "Loja de roupas",
+   "Sistema para loja de roupas",
    "/segmentos/loja-de-roupas/",
    "Estoque com grade"
   ],
@@ -93,7 +93,7 @@
    "Centenas de itens"
   ],
   [
-   "Distribuidora",
+   "Sistema para distribuidora de bebidas",
    "/segmentos/distribuidora/",
    "Estoque em volume"
   ]

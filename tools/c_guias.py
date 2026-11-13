@@ -40,6 +40,7 @@ dict(
   breadcrumbs=_c("Como controlar estoque"),
   blocks=[
     sec("Por que o controle sempre desanda",
+      p("Os três hábitos valem para qualquer loja, mas cada estoque tem a sua armadilha: grade de tamanho e cor no <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas</a>, fardo e unidade no <a href=\"/segmentos/loja-de-bebidas/\">sistema para depósito de bebidas</a>."),
       p("O motivo mais comum não é preguiça: é que venda e estoque viram dois controles separados. A venda acontece no balcão e a baixa do estoque fica para depois. Como o “depois” depende de alguém lembrar, o desencontro começa em dias."),
       p("A correção estrutural é fazer a baixa acontecer no mesmo ato da venda. É isso que um PDV resolve — não por ser sofisticado, mas por eliminar a segunda etapa."),
     ),
@@ -192,6 +193,7 @@ dict(
   breadcrumbs=_c("Como controlar fiado"),
   blocks=[
     sec("Por que o fiado some",
+      p("Este guia é o método. Para fazer o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado no celular</a>, com o saldo de cada cliente somado sozinho, veja como funciona no SoftPay."),
       p("O dinheiro fiado é o mais fácil de perder porque ele não dói na hora. A mercadoria sai, a venda parece feita e o buraco só aparece quando falta dinheiro para repor o estoque."),
       p("No caderno, três coisas conspiram contra você: não existe um total visível de quanto a loja tem a receber, a anotação depende de quem estava no balcão, e quando o cliente contesta não há histórico para mostrar."),
     ),
@@ -324,6 +326,7 @@ dict(
   breadcrumbs=_c("Como calcular margem"),
   blocks=[
     sec("Margem e markup não são a mesma coisa",
+      p("Onde a margem por item é mais curta, como no balcão do mercadinho, errar a conta pesa mais: o <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a> calcula a margem de cada produto a partir do custo cadastrado."),
       p("Essa distinção parece detalhe e destrói a rentabilidade de muita loja. As duas contas partem do mesmo lucro, mas dividem por bases diferentes:"),
       ul("<strong>Margem</strong> = lucro ÷ <strong>preço de venda</strong>",
          "<strong>Markup</strong> = lucro ÷ <strong>custo</strong>"),
@@ -461,6 +464,7 @@ dict(
   breadcrumbs=_c("Como sair do caderno"),
   blocks=[
     sec("Por que a migração costuma travar",
+      p("Quem sai do caderno costuma começar pelo fiado: o <a href=\"/solucoes/controle-de-fiado/\">controle de fiado no celular</a> já resolve a maior parte das folhas rasuradas. No balcão de muitos itens, veja também o <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a>."),
       p("Quase todo mundo tenta começar transcrevendo tudo: meses de vendas passadas, todos os produtos, o caderno inteiro. É um trabalho enorme, sem retorno imediato, feito nas horas vagas — e por isso é abandonado no meio."),
       p("Venda passada não muda nada na sua decisão de amanhã. O que importa migrar é o que ainda está em aberto."),
     ),
@@ -1108,6 +1112,7 @@ dict(
   breadcrumbs=_c("NF-e e NFC-e"),
   blocks=[
     sec("A diferença em uma tabela",
+      p("Quem vende para outra empresa emite NF-e quase toda semana, e é o caso do <a href=\"/segmentos/distribuidora/\">sistema para distribuidora de bebidas</a>, que junta atacado, estoque em volume e nota no mesmo lugar."),
       tabela(["", "NFC-e", "NF-e"], [
         ["Para quem", "Consumidor final, no balcão", "Outra empresa, ou operação que exige documento completo"],
         ["Onde é usada", "Loja, venda direta", "Venda para CNPJ, transporte de mercadoria"],

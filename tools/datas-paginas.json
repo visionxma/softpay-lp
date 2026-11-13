@@ -5,18 +5,18 @@
   "publicado": "2026-09-04"
  },
  "_privacidade": {
-  "hash": "0fcd07d3fdc9",
-  "modificado": "2026-11-09",
+  "hash": "66de2cfd56e7",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-04"
  },
  "_reembolso": {
-  "hash": "edbba2c61995",
-  "modificado": "2026-11-09",
+  "hash": "3798fc6bb248",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-04"
  },
  "_termos": {
-  "hash": "21b8288ca6e3",
-  "modificado": "2026-11-09",
+  "hash": "7a76bd531df5",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-04"
  },
  "blog": {
@@ -95,8 +95,8 @@
   "publicado": "2026-09-06"
  },
  "guias/como-calcular-margem-de-lucro": {
-  "hash": "155cc0887751",
-  "modificado": "2026-09-06",
+  "hash": "722dd4deaa0f",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "guias/como-controlar-caixa-da-loja": {
@@ -105,13 +105,13 @@
   "publicado": "2026-09-06"
  },
  "guias/como-controlar-estoque": {
-  "hash": "c9798e8cc56d",
-  "modificado": "2026-11-02",
+  "hash": "25de5d888b28",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "guias/como-controlar-fiado": {
-  "hash": "42db0ff02ddc",
-  "modificado": "2026-11-02",
+  "hash": "13ff53db64c1",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "guias/como-escolher-sistema-de-gestao": {
@@ -125,8 +125,8 @@
   "publicado": "2026-09-06"
  },
  "guias/como-sair-do-caderno": {
-  "hash": "2b2b08ac9ba1",
-  "modificado": "2026-09-06",
+  "hash": "3e34883de0a2",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "guias/meu-sistema-precisa-mudar-reforma-tributaria": {
@@ -135,8 +135,8 @@
   "publicado": "2026-09-06"
  },
  "guias/nfe-nfce-o-que-e": {
-  "hash": "1696e432358c",
-  "modificado": "2026-09-17",
+  "hash": "0c0afc3b4326",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "guias/quanto-custa-um-sistema-de-gestao": {
@@ -214,8 +214,8 @@
   "publicado": "2026-09-06"
  },
  "perguntas/qual-sistema-para-mercadinho": {
-  "hash": "15e2ec42d047",
-  "modificado": "2026-09-08",
+  "hash": "19908636ce25",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "perguntas/quanto-custa-um-sistema-para-loja": {
@@ -234,8 +234,8 @@
   "publicado": "2026-09-06"
  },
  "segmentos": {
-  "hash": "550f641d3ff8",
-  "modificado": "2026-11-04",
+  "hash": "c2f008e3ea08",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "segmentos/cosmeticos-e-perfumaria": {
@@ -244,8 +244,8 @@
   "publicado": "2026-09-06"
  },
  "segmentos/distribuidora": {
-  "hash": "fbe60424a1f1",
-  "modificado": "2026-11-04",
+  "hash": "1e70ea7112ab",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "segmentos/empresas-com-filiais": {
@@ -264,8 +264,8 @@
   "publicado": "2026-09-06"
  },
  "segmentos/loja-de-bebidas": {
-  "hash": "d7ecd4adcdf1",
-  "modificado": "2026-11-04",
+  "hash": "f350405c735d",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "segmentos/loja-de-calcados": {
@@ -299,13 +299,13 @@
   "publicado": "2026-09-06"
  },
  "segmentos/mercadinho": {
-  "hash": "48e7f32c325b",
-  "modificado": "2026-11-04",
+  "hash": "263bd6594525",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "segmentos/papelaria": {
-  "hash": "3324e206b034",
-  "modificado": "2026-09-17",
+  "hash": "81f34cb364f1",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "segmentos/pequeno-comercio": {
@@ -329,8 +329,8 @@
   "publicado": "2026-09-06"
  },
  "solucoes": {
-  "hash": "8dc77141a34c",
-  "modificado": "2026-11-02",
+  "hash": "a8dfd126f4ac",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "solucoes/bot-whatsapp": {
@@ -344,8 +344,8 @@
   "publicado": "2026-09-06"
  },
  "solucoes/controle-de-fiado": {
-  "hash": "f30fce8cc9f7",
-  "modificado": "2026-11-04",
+  "hash": "5af8e2e527d9",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "solucoes/loja-online": {

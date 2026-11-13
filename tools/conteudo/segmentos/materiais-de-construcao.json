@@ -52,7 +52,7 @@
  "cta_text": "Cadastre alguns produtos com preço de atacado e varejo e registre uma retirada de obra. 7 dias grátis, sem cartão.",
  "related": [
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "O saldo de cada obra"
   ],
@@ -67,7 +67,7 @@
    "Nota para construtora"
   ],
   [
-   "Distribuidora",
+   "Sistema para distribuidora de bebidas",
    "/segmentos/distribuidora/",
    "Outro segmento de volume"
   ]
@@ -251,24 +251,16 @@
  ],
  "mais": [
   [
-   "Sistema para distribuidora",
+   "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
   ],
   [
-   "Sistema para loja de bebidas",
-   "/segmentos/loja-de-bebidas/"
-  ],
-  [
-   "Aplicativo para controlar fiado no celular",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/"
   ],
   [
    "Emissão de NFC-e",
    "/solucoes/nfce/"
-  ],
-  [
-   "Emissão de NF-e",
-   "/solucoes/nfe/"
   ],
   [
    "Quanto custa um sistema para loja?",
@@ -295,8 +287,16 @@
    "/comparativos/"
   ],
   [
+   "Sistema para depósito de bebidas",
+   "/segmentos/loja-de-bebidas/"
+  ],
+  [
    "Sistema para pet shop",
    "/segmentos/pet-shop/"
+  ],
+  [
+   "App de vendas e controle de estoque",
+   "/solucoes/sistema-de-estoque/"
   ]
  ],
  "publicado": "2026-09-06",

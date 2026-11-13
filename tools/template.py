@@ -374,7 +374,7 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                     <ul>
                         <li><a href="/solucoes/sistema-pdv/">Sistema PDV</a></li>
                         <li><a href="/solucoes/sistema-de-estoque/">Estoque</a></li>
-                        <li><a href="/solucoes/controle-de-fiado/">Fiado</a></li>
+                        <li><a href="/solucoes/controle-de-fiado/">Controle de fiado</a></li>
                         <li><a href="/solucoes/loja-online/">Loja online</a></li>
                         <li><a href="/solucoes/nfe/">NF-e</a></li>
                     </ul>
@@ -383,11 +383,15 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
                 <div>
                     <h3>Para quem</h3>
                     <ul>
-                        <li><a href="/segmentos/mercadinho/">Mercadinho</a></li>
-                        <li><a href="/segmentos/loja-de-roupas/">Loja de roupas</a></li>
-                        <li><a href="/segmentos/farmacia/">Farmácia</a></li>
-                        <li><a href="/segmentos/distribuidora/">Distribuidora</a></li>
-                        <li><a href="/segmentos/papelaria/">Papelaria</a></li>
+                        <li><a href="/segmentos/mercadinho/">Sistema para mercadinho</a></li>
+                        <li><a href="/segmentos/loja-de-roupas/">Sistema para loja de roupas</a></li>
+                        <li><a href="/segmentos/farmacia/">Sistema para farmácia</a></li>
+                        <li><a href="/segmentos/distribuidora/">Sistema para distribuidora de bebidas</a></li>
+                        <li><a href="/segmentos/loja-de-bebidas/">Sistema para depósito de bebidas</a></li>
+                        <li><a href="/segmentos/papelaria/">Sistema para papelaria</a></li>
+                        <li><a href="https://sistemaparaacaiteria.softpaypdv.com/">Sistema para açaiteria</a></li>
+                        <li><a href="https://sistemaparapizzaria.softpaypdv.com/">Sistema para pizzaria</a></li>
+                        <li><a href="https://sistemaparahamburgueria.softpaypdv.com/">Sistema para hamburgueria</a></li>
                     </ul>
                 </div>
 

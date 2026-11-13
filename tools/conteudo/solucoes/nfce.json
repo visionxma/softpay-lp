@@ -70,7 +70,7 @@
    "A venda que gera o cupom"
   ],
   [
-   "Papelaria",
+   "Sistema para papelaria",
    "/segmentos/papelaria/",
    "Cupom no pico da temporada"
   ],
@@ -80,7 +80,7 @@
    "Balcão e cupom"
   ],
   [
-   "Mercadinho",
+   "Sistema para mercadinho",
    "/segmentos/mercadinho/",
    "Venda ao consumidor final"
   ],
