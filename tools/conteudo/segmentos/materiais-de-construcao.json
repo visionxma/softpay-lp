@@ -267,14 +267,6 @@
    "/perguntas/quanto-custa-um-sistema-para-loja/"
   ],
   [
-   "Perda de estoque por validade",
-   "/blog/perda-de-estoque-validade/"
-  ],
-  [
-   "Como controlar o caixa de uma loja",
-   "/guias/como-controlar-caixa-da-loja/"
-  ],
-  [
    "Troca e devolução na loja",
    "/blog/troca-e-devolucao-na-loja/"
   ],
@@ -283,20 +275,28 @@
    "/perguntas/e-dificil-aprender/"
   ],
   [
+   "Posso usar em vários dispositivos?",
+   "/perguntas/posso-usar-em-varios-dispositivos/"
+  ],
+  [
+   "Posso usar o SoftPay no celular?",
+   "/perguntas/posso-usar-o-softpay-no-celular/"
+  ],
+  [
+   "Posso migrar de outro sistema?",
+   "/perguntas/posso-migrar-de-outro-sistema/"
+  ],
+  [
+   "Funciona em todo o Brasil?",
+   "/perguntas/funciona-no-brasil-inteiro/"
+  ],
+  [
    "Comparativos",
    "/comparativos/"
   ],
   [
    "Sistema para depósito de bebidas",
    "/segmentos/loja-de-bebidas/"
-  ],
-  [
-   "Sistema para pet shop",
-   "/segmentos/pet-shop/"
-  ],
-  [
-   "App de vendas e controle de estoque",
-   "/solucoes/sistema-de-estoque/"
   ]
  ],
  "publicado": "2026-09-06",

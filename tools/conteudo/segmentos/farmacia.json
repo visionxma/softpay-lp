@@ -328,10 +328,6 @@
    "/guias/nfe-nfce-o-que-e/"
   ],
   [
-   "Como organizar uma loja",
-   "/guias/como-organizar-uma-loja/"
-  ],
-  [
    "Reforma tributária no comércio: o que muda e quando",
    "/guias/reforma-tributaria-comercio/"
   ],
@@ -340,20 +336,16 @@
    "/guias/como-controlar-caixa-da-loja/"
   ],
   [
-   "Como sair do caderno",
-   "/guias/como-sair-do-caderno/"
-  ],
-  [
    "Perda de estoque por validade",
    "/blog/perda-de-estoque-validade/"
   ],
   [
-   "Meu sistema precisa mudar por causa da reforma tributária?",
-   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/"
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/"
   ],
   [
-   "Quanto custa um sistema para loja?",
-   "/perguntas/quanto-custa-um-sistema-para-loja/"
+   "Meu sistema precisa mudar por causa da reforma tributária?",
+   "/guias/meu-sistema-precisa-mudar-reforma-tributaria/"
   ],
   [
    "Alternativa ao Bling para loja física",
@@ -368,20 +360,28 @@
    "/perguntas/tem-suporte-humano/"
   ],
   [
-   "Posso usar o SoftPay no celular?",
-   "/perguntas/posso-usar-o-softpay-no-celular/"
+   "É difícil aprender a usar?",
+   "/perguntas/e-dificil-aprender/"
   ],
   [
    "Sistema de gestão é seguro?",
    "/perguntas/sistema-de-gestao-e-seguro/"
   ],
   [
-   "Posso migrar de outro sistema?",
-   "/perguntas/posso-migrar-de-outro-sistema/"
+   "Funciona em todo o Brasil?",
+   "/perguntas/funciona-no-brasil-inteiro/"
   ],
   [
    "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
+  ],
+  [
+   "Sistema para pet shop",
+   "/segmentos/pet-shop/"
+  ],
+  [
+   "Sistema para loja de cosméticos e perfumaria",
+   "/segmentos/cosmeticos-e-perfumaria/"
   ]
  ],
  "publicado": "2026-09-06",

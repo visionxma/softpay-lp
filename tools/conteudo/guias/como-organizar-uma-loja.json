@@ -69,6 +69,10 @@
     {
      "tipo": "p",
      "texto": "Existe uma sequência natural: sem cadastro de produto não há venda registrada; sem venda registrada não há estoque confiável; sem estoque confiável não há custo; sem custo não há lucro conhecido. Pular etapas produz números que ninguém acredita — e um sistema abandonado em duas semanas."
+    },
+    {
+     "tipo": "p",
+     "texto": "A ordem muda um pouco conforme a loja: na roupa, o cadastro já começa pela grade de tamanho e cor, e o <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas</a> parte dela."
     }
    ]
   },
@@ -197,5 +201,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

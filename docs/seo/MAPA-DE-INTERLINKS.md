@@ -22,8 +22,8 @@ por relevância, e traz links contextuais dentro do texto.
 | Métrica | Valor |
 |---|---|
 | Páginas | 81 |
-| Links internos (com âncora) | 3194 |
-| Links contextuais no corpo | 1092 |
+| Links internos (com âncora) | 3211 |
+| Links contextuais no corpo | 1109 |
 | Páginas órfãs | 4 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -108,6 +108,7 @@ por relevância, e traz links contextuais dentro do texto.
 | `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupasVitrine é decisiva |
 | `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
 | `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/papelaria/` | Sistema para papelaria |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/papelaria/` | sistema para papelaria |
 | `/blog/como-precificar-produto/` | `/blog/perda-de-estoque-validade/` | Perda de estoqueO custo que some da conta |
 | `/blog/como-precificar-produto/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosDinheiro na prateleira |
 | `/blog/como-precificar-produto/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular o lucro da lojaDo faturamento ao que sobra |
@@ -118,6 +119,7 @@ por relevância, e traz links contextuais dentro do texto.
 | `/blog/como-precificar-produto/` | `/segmentos/farmacia/` | Sistema para farmácia |
 | `/blog/como-precificar-produto/` | `/segmentos/loja-de-bebidas/` | Sistema para depósito de bebidas |
 | `/blog/como-precificar-produto/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
+| `/blog/como-precificar-produto/` | `/segmentos/loja-de-roupas/` | sistema para loja de roupas |
 | `/blog/como-precificar-produto/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
 | `/blog/como-precificar-produto/` | `/segmentos/papelaria/` | Sistema para papelaria |
 | `/blog/como-precificar-produto/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueCusto e curva ABC |
@@ -133,10 +135,8 @@ por relevância, e traz links contextuais dentro do texto.
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/papelaria/` | Sistema para papelaria |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/solucoes/controle-de-fiado/` | controle de fiado no celular |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/solucoes/sistema-financeiro/` | Sistema financeiroO recurso no SoftPay |
-| `/blog/perda-de-estoque-validade/` | `/blog/como-precificar-produto/` | Como precificarA perda entra no custo |
-| `/blog/perda-de-estoque-validade/` | `/blog/produtos-parados-no-estoque/` | Produtos parados no estoqueDinheiro preso na prateleira |
-| `/blog/perda-de-estoque-validade/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO passo a passo |
 
 ## Páginas órfãs
 

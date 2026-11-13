@@ -93,6 +93,10 @@
      "tipo": "nota",
      "titulo": "O teste dos dois segundos",
      "texto": "O teste é simples: pare na calçada, olhe a sua vitrine por dois segundos e desvie o olhar. O que ficou na memória? Se a resposta for “um monte de coisa”, ela ainda não está pronta."
+    },
+    {
+     "tipo": "p",
+     "texto": "Na papelaria, a vitrine muda com a época de aulas, e o <a href=\"/segmentos/papelaria/\">sistema para papelaria</a> ajuda a saber o que repor antes dela."
     }
    ]
   },
@@ -194,5 +198,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

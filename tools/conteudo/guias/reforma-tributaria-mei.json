@@ -93,6 +93,10 @@
      "tipo": "nota",
      "titulo": "Por que começar agora",
      "texto": "Faltam poucos meses. Não é uma mudança que se resolve em uma tarde de dezembro: é um hábito novo no balcão, e hábito leva semanas para pegar."
+    },
+    {
+     "tipo": "p",
+     "texto": "A nota passa a sair no balcão, na hora da venda, e por isso a frente de caixa importa: veja o <a href=\"/solucoes/sistema-pdv/\">PDV no celular e online</a> do SoftPay."
     }
    ]
   },
@@ -173,5 +177,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-17"
+ "updated": "2026-11-13"
 }

@@ -145,6 +145,10 @@
     {
      "tipo": "p",
      "texto": "Se você não tem certeza do seu regime, essa é a primeira pergunta ao contador — e é rápida."
+    },
+    {
+     "tipo": "p",
+     "texto": "Quem vende para outra empresa e já emite nota toda semana pode ver essa rotina no <a href=\"/segmentos/loja-de-bebidas/\">sistema para depósito de bebidas</a>."
     }
    ]
   },
@@ -247,5 +251,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-08",
- "updated": "2026-09-08"
+ "updated": "2026-11-13"
 }

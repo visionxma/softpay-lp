@@ -315,12 +315,12 @@
  ],
  "mais": [
   [
-   "Sistema para loja de cosméticos e perfumaria",
-   "/segmentos/cosmeticos-e-perfumaria/"
-  ],
-  [
    "Controle de clientes (CRM)",
    "/solucoes/controle-de-clientes/"
+  ],
+  [
+   "Sistema para loja de cosméticos e perfumaria",
+   "/segmentos/cosmeticos-e-perfumaria/"
   ],
   [
    "Sistema para pet shop",
@@ -347,20 +347,16 @@
    "/blog/como-precificar-produto/"
   ],
   [
+   "Como controlar o caixa de uma loja",
+   "/guias/como-controlar-caixa-da-loja/"
+  ],
+  [
    "Fluxo de caixa para loja pequena",
    "/blog/fluxo-de-caixa-loja-pequena/"
   ],
   [
    "Como sair do caderno",
    "/guias/como-sair-do-caderno/"
-  ],
-  [
-   "Como controlar o caixa de uma loja",
-   "/guias/como-controlar-caixa-da-loja/"
-  ],
-  [
-   "Como calcular o lucro de uma loja",
-   "/guias/como-calcular-lucro-da-loja/"
   ],
   [
    "Troca e devolução na loja",
@@ -381,6 +377,10 @@
   [
    "App de vendas e controle de estoque",
    "/solucoes/sistema-de-estoque/"
+  ],
+  [
+   "Sistema para distribuidora de bebidas e atacado",
+   "/segmentos/distribuidora/"
   ],
   [
    "Sistema para loja de calçados",

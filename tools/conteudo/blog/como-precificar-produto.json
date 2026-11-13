@@ -115,6 +115,10 @@
        "classe": "result final"
       }
      ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Na roupa, o mesmo modelo tem custo e preço por tamanho e cor, e o <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas</a> guarda cada variação separada."
     }
    ]
   },
@@ -274,5 +278,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-08",
- "updated": "2026-09-08"
+ "updated": "2026-11-13"
 }

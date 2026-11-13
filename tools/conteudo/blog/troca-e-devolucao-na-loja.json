@@ -110,6 +110,10 @@
      "tipo": "nota",
      "titulo": "Importante",
      "texto": "Esta página é orientação de rotina, <strong>não é orientação jurídica</strong>. As regras exatas, prazos e exceções estão no Código de Defesa do Consumidor (Lei nº 8.078/1990) e a aplicação ao seu caso deve ser confirmada com um advogado ou com o Procon do seu estado."
+    },
+    {
+     "tipo": "p",
+     "texto": "Troca é rotina de loja de roupas, onde o tamanho errado volta ao estoque: veja como isso fica no <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas</a>."
     }
    ]
   },
@@ -205,5 +209,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

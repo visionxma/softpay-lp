@@ -88,6 +88,10 @@
     {
      "tipo": "p",
      "texto": "Isso significa que a mudança é no <em>software que emite a nota</em>. Não é sobre o computador da loja, nem sobre a impressora, nem sobre a maquininha."
+    },
+    {
+     "tipo": "p",
+     "texto": "Antes de decidir se troca, olhe a emissão na prática, no <a href=\"/solucoes/nfce/\">sistema para emitir NFC-e</a> do SoftPay."
     }
    ]
   },
@@ -191,5 +195,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-17"
+ "updated": "2026-11-13"
 }

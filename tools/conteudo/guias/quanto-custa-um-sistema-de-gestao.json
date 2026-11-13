@@ -117,6 +117,10 @@
     {
      "tipo": "p",
      "texto": "Onde o SoftPay fica: <strong>R$ 65 a R$ 109</strong>, entre a entrada e a intermediária, com 7 dias grátis e sem cartão."
+    },
+    {
+     "tipo": "p",
+     "texto": "O valor também depende do ramo: atacado de bebida pede estoque em fardo e nota fiscal, e é isso que o <a href=\"/segmentos/loja-de-bebidas/\">sistema para depósito de bebidas</a> reúne."
     }
    ]
   },
@@ -250,5 +254,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-08",
- "updated": "2026-09-08"
+ "updated": "2026-11-13"
 }
