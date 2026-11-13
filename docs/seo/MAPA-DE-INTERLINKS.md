@@ -22,8 +22,8 @@ por relevância, e traz links contextuais dentro do texto.
 | Métrica | Valor |
 |---|---|
 | Páginas | 81 |
-| Links internos (com âncora) | 3073 |
-| Links contextuais no corpo | 641 |
+| Links internos (com âncora) | 3194 |
+| Links contextuais no corpo | 1092 |
 | Páginas órfãs | 4 |
 
 > O `/404` é excluído da checagem de órfãs de propósito: página de erro não
@@ -33,49 +33,52 @@ por relevância, e traz links contextuais dentro do texto.
 
 | Página | Links de entrada |
 |---|---|
-| `/` | 78 |
 | `/termos.html` | 76 |
 | `/privacidade.html` | 76 |
 | `/segmentos/loja-de-roupas/` | 75 |
 | `/segmentos/mercadinho/` | 75 |
+| `/` | 74 |
 | `/blog/` | 74 |
 | `/perguntas/` | 74 |
 | `/solucoes/controle-de-fiado/` | 74 |
 | `/solucoes/loja-online/` | 74 |
-| `/segmentos/farmacia/` | 74 |
 | `/sobre/` | 74 |
 | `/contato/` | 74 |
+| `/reembolso.html` | 74 |
 
 ## Links contextuais
 
 | Origem | Destino | Âncora |
 |---|---|---|
+| `/` | `/comparativos/softpay-ou-kyte/` | Alternativa ao Kyte |
 | `/` | `/perguntas/funciona-no-brasil-inteiro/` | Como funciona o atendimento nacional |
 | `/` | `/perguntas/sistema-de-gestao-e-seguro/` | Ver como os dados ficam seguros |
 | `/` | `/segmentos/distribuidora/` | Naldo Bebidas · cliente
                     
                         D |
-| `/` | `/segmentos/farmacia/` | Farmácia
-                        Ver o sistema |
+| `/` | `/segmentos/distribuidora/` | Sistema para distribuidora de bebidas |
+| `/` | `/segmentos/loja-de-bebidas/` | Sistema para depósito de bebidas |
 | `/` | `/segmentos/loja-de-celulares-e-acessorios/` | Gabriel Landim · cliente
                     
                          |
 | `/` | `/segmentos/loja-de-roupas/` | RN Grifes · cliente
                     
                         Loja  |
+| `/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
 | `/` | `/segmentos/loja-de-variedades/` | Variedades
                         Ver o sistema |
-| `/` | `/segmentos/papelaria/` | Papelaria
-                        Ver o sistema |
+| `/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
 | `/` | `/solucoes/bot-whatsapp/` | Ver o bot do WhatsApp |
 | `/` | `/solucoes/controle-de-clientes/` | Ver o controle de clientes |
+| `/` | `/solucoes/controle-de-fiado/` | Ver o app para controlar fiado |
 | `/` | `/solucoes/controle-de-fiado/` | Ver o controle de fiado |
 | `/` | `/solucoes/multiplas-lojas/` | Ver múltiplas lojas |
 | `/` | `/solucoes/nfce/` | Ver a emissão de nota |
 | `/` | `/solucoes/nfe/` | Ver a emissão de nota |
+| `/` | `/solucoes/sistema-de-estoque/` | Ver o app de vendas e estoque |
 | `/` | `/solucoes/sistema-de-estoque/` | Ver o controle de estoque |
 | `/` | `/solucoes/sistema-pdv/` | Ver como funciona o PDV |
-| `/` | `/solucoes/sistema-pdv/` | Ver o PDV por inteiro |
+| `/` | `/solucoes/sistema-pdv/` | Ver o PDV no celular |
 | `/404` | `/` | Ir para a página inicial |
 | `/blog/` | `/blog/como-organizar-vitrine-de-loja/` | Como organizar a vitrine de uma loja pequenaA vitrine é o único vended |
 | `/blog/` | `/blog/como-precificar-produto/` | Como precificar um produto na lojaO erro mais comum na precificação nã |
@@ -86,19 +89,37 @@ por relevância, e traz links contextuais dentro do texto.
 | `/blog/` | `/guias/` | GuiasMétodo passo a passo |
 | `/blog/` | `/perguntas/` | PerguntasDúvidas antes de contratar |
 | `/blog/` | `/segmentos/` | SegmentosPelo seu tipo de loja |
+| `/blog/` | `/segmentos/distribuidora/` | Sistema para distribuidora de bebidas |
+| `/blog/` | `/segmentos/farmacia/` | Sistema para farmácia |
+| `/blog/` | `/segmentos/loja-de-bebidas/` | Sistema para depósito de bebidas |
+| `/blog/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
+| `/blog/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
+| `/blog/` | `/segmentos/papelaria/` | Sistema para papelaria |
 | `/blog/como-organizar-vitrine-de-loja/` | `/blog/como-precificar-produto/` | Como precificarO preço que aparece |
 | `/blog/como-organizar-vitrine-de-loja/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosO que não vai na vitrine |
 | `/blog/como-organizar-vitrine-de-loja/` | `/blog/produtos-parados-no-estoque/` | produtos parados no estoque |
 | `/blog/como-organizar-vitrine-de-loja/` | `/guias/como-organizar-uma-loja/` | Como organizar uma lojaO roteiro completo |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/distribuidora/` | Sistema para distribuidora de bebidas |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/farmacia/` | Sistema para farmácia |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-bebidas/` | Sistema para depósito de bebidas |
 | `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-calcados/` | Loja de calçadosExposição por modelo |
 | `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-joias/` | Loja de joiasVitrine como argumento |
-| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-roupas/` | Loja de roupasVitrine é decisiva |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupasVitrine é decisiva |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
+| `/blog/como-organizar-vitrine-de-loja/` | `/segmentos/papelaria/` | Sistema para papelaria |
 | `/blog/como-precificar-produto/` | `/blog/perda-de-estoque-validade/` | Perda de estoqueO custo que some da conta |
 | `/blog/como-precificar-produto/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosDinheiro na prateleira |
 | `/blog/como-precificar-produto/` | `/guias/como-calcular-lucro-da-loja/` | Como calcular o lucro da lojaDo faturamento ao que sobra |
 | `/blog/como-precificar-produto/` | `/guias/como-calcular-margem-de-lucro/` | Como calcular margem de lucroO método completo |
 | `/blog/como-precificar-produto/` | `/guias/como-calcular-margem-de-lucro/` | como calcular margem de lucro |
 | `/blog/como-precificar-produto/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO passo a passo |
+| `/blog/como-precificar-produto/` | `/segmentos/distribuidora/` | Sistema para distribuidora de bebidas |
+| `/blog/como-precificar-produto/` | `/segmentos/farmacia/` | Sistema para farmácia |
+| `/blog/como-precificar-produto/` | `/segmentos/loja-de-bebidas/` | Sistema para depósito de bebidas |
+| `/blog/como-precificar-produto/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
+| `/blog/como-precificar-produto/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
+| `/blog/como-precificar-produto/` | `/segmentos/papelaria/` | Sistema para papelaria |
 | `/blog/como-precificar-produto/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueCusto e curva ABC |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/blog/como-precificar-produto/` | Como precificarA taxa do cartão no preço |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosEstoque que virou caixa preso |
@@ -106,39 +127,16 @@ por relevância, e traz links contextuais dentro do texto.
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-controlar-caixa-da-loja/` | Como controlar caixa da lojaO fechamento diário |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-controlar-caixa-da-loja/` | como controlar o caixa da loja |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/guias/como-controlar-fiado/` | Como controlar fiadoO dinheiro que já é seu |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/distribuidora/` | Sistema para distribuidora de bebidas |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/farmacia/` | Sistema para farmácia |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/loja-de-bebidas/` | Sistema para depósito de bebidas |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/loja-de-roupas/` | Sistema para loja de roupas |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/mercadinho/` | Sistema para mercadinho |
+| `/blog/fluxo-de-caixa-loja-pequena/` | `/segmentos/papelaria/` | Sistema para papelaria |
 | `/blog/fluxo-de-caixa-loja-pequena/` | `/solucoes/sistema-financeiro/` | Sistema financeiroO recurso no SoftPay |
 | `/blog/perda-de-estoque-validade/` | `/blog/como-precificar-produto/` | Como precificarA perda entra no custo |
 | `/blog/perda-de-estoque-validade/` | `/blog/produtos-parados-no-estoque/` | Produtos parados no estoqueDinheiro preso na prateleira |
 | `/blog/perda-de-estoque-validade/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO passo a passo |
-| `/blog/perda-de-estoque-validade/` | `/segmentos/farmacia/` | FarmáciaOutro caso de validade curta |
-| `/blog/perda-de-estoque-validade/` | `/segmentos/mercadinho/` | MercadinhoOnde a validade mais pesa |
-| `/blog/perda-de-estoque-validade/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueO recurso no SoftPay |
-| `/blog/produtos-parados-no-estoque/` | `/blog/como-precificar-produto/` | Como precificarRemarcar sem perder margem |
-| `/blog/produtos-parados-no-estoque/` | `/blog/perda-de-estoque-validade/` | Perda de estoqueQuando o parado vence |
-| `/blog/produtos-parados-no-estoque/` | `/guias/como-controlar-estoque/` | Como controlar estoqueO método completo |
-| `/blog/produtos-parados-no-estoque/` | `/guias/como-controlar-estoque/` | como controlar estoque |
-| `/blog/produtos-parados-no-estoque/` | `/segmentos/loja-de-roupas/` | Loja de roupasOnde a coleção encalha |
-| `/blog/produtos-parados-no-estoque/` | `/segmentos/loja-de-variedades/` | Loja de variedadesMuitos itens, muito encalhe |
-| `/blog/produtos-parados-no-estoque/` | `/solucoes/sistema-de-estoque/` | Controle de estoqueCurva ABC no SoftPay |
-| `/blog/troca-e-devolucao-na-loja/` | `/blog/produtos-parados-no-estoque/` | Produtos paradosO que volta e não sai |
-| `/blog/troca-e-devolucao-na-loja/` | `/guias/como-controlar-estoque/` | Como controlar estoqueEntradas e saídas |
-| `/blog/troca-e-devolucao-na-loja/` | `/segmentos/loja-de-calcados/` | Loja de calçadosTroca de numeração |
-| `/blog/troca-e-devolucao-na-loja/` | `/segmentos/loja-de-roupas/` | Loja de roupasOnde a troca é rotina |
-| `/blog/troca-e-devolucao-na-loja/` | `/solucoes/controle-de-clientes/` | Controle de clientesHistórico como comprovante |
-| `/blog/troca-e-devolucao-na-loja/` | `/solucoes/sistema-pdv/` | Sistema PDVRegistro da venda |
-| `/campanha/gestao/` | `/perguntas/` | Perguntas frequentes |
-| `/campanha/gestao/` | `/perguntas/` | Perguntas frequentesRespostas sobre planos, teste e uso |
-| `/campanha/gestao/` | `/segmentos/cosmeticos-e-perfumaria/` | Cosméticos e perfumaria |
-| `/campanha/gestao/` | `/segmentos/empresas-com-filiais/` | Empresas com filiais |
-| `/campanha/gestao/` | `/segmentos/loja-de-celulares-e-acessorios/` | Celulares e acessórios |
-| `/campanha/gestao/` | `/segmentos/materiais-de-construcao/` | Materiais de construção |
-| `/campanha/gestao/` | `/segmentos/materiais-de-construcao/` | Material de Construção |
-| `/campanha/gestao/` | `/segmentos/materiais-de-construcao/` | Materialde Construção |
-| `/campanha/gestao/` | `/segmentos/pequeno-comercio/` | Pequeno comércio e MEI |
-| `/campanha/gestao/` | `/solucoes/bot-whatsapp/` | Venda pelo WhatsApp |
-| `/campanha/gestao/` | `/solucoes/controle-de-clientes/` | Cadastro de clientes |
-| `/campanha/gestao/` | `/solucoes/controle-de-fiado/` | Caderninho de fiado |
-| `/campanha/gestao/` | `/solucoes/sistema-de-estoque/` | Controle de estoque |
 
 ## Páginas órfãs
 

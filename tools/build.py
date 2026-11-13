@@ -49,6 +49,21 @@ PAGINAS = (c_segmentos.PAGINAS + c_solucoes.PAGINAS + c_guias.PAGINAS
            + c_perguntas.PAGINAS + c_blog.PAGINAS
            + c_comparativos.PAGINAS + c_extras.PAGINAS)
 
+# Texto do link = o nome que o lojista digita na busca (13/11/2026). As páginas comerciais recebiam link
+# com rótulo curto ("Mercadinho", "Distribuidora", "Fiado"); a busca é "sistema para mercadinho",
+# "controle de fiado". Vale para os cartões "relacionados" de toda página que aponta para elas.
+ANCORA_DA_BUSCA = {
+    "/segmentos/mercadinho/": "Sistema para mercadinho",
+    "/segmentos/loja-de-roupas/": "Sistema para loja de roupas",
+    "/segmentos/distribuidora/": "Sistema para distribuidora de bebidas",
+    "/segmentos/loja-de-bebidas/": "Sistema para depósito de bebidas",
+    "/segmentos/papelaria/": "Sistema para papelaria",
+    "/solucoes/controle-de-fiado/": "Controle de fiado no celular",
+}
+for _pg in PAGINAS:
+    if _pg.get("related"):
+        _pg["related"] = [(ANCORA_DA_BUSCA.get(h, n), h, d) for n, h, d in _pg["related"]]
+
 
 def _lista(paginas, prefixo):
     """Cards de um cluster, a partir das próprias páginas já definidas."""

@@ -63,7 +63,7 @@
    "Dar entrada na mercadoria falando"
   ],
   [
-   "Mercadinho",
+   "Sistema para mercadinho",
    "/segmentos/mercadinho/",
    "Outro segmento de muitos itens"
   ],
@@ -257,7 +257,7 @@
    "/solucoes/sistema-de-estoque/"
   ],
   [
-   "Sistema para distribuidora",
+   "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
   ],
   [
@@ -265,8 +265,8 @@
    "/guias/como-controlar-estoque/"
   ],
   [
-   "Sistema de gestão para pequenos negócios",
-   "/sistema-de-gestao-para-pequenos-negocios/"
+   "Sistema para depósito de bebidas",
+   "/segmentos/loja-de-bebidas/"
   ],
   [
    "Produtos parados no estoque",
@@ -293,12 +293,12 @@
    "/guias/quanto-custa-um-sistema-de-gestao/"
   ],
   [
-   "Como precificar um produto na loja",
-   "/blog/como-precificar-produto/"
-  ],
-  [
    "Como calcular a margem de lucro",
    "/guias/como-calcular-margem-de-lucro/"
+  ],
+  [
+   "Como precificar um produto na loja",
+   "/blog/como-precificar-produto/"
   ],
   [
    "Fluxo de caixa para loja pequena",
@@ -321,8 +321,8 @@
    "/perguntas/funciona-no-brasil-inteiro/"
   ],
   [
-   "Sistema para loja de bebidas",
-   "/segmentos/loja-de-bebidas/"
+   "Sistema de gestão para pequenos negócios",
+   "/sistema-de-gestao-para-pequenos-negocios/"
   ]
  ],
  "publicado": "2026-09-06",

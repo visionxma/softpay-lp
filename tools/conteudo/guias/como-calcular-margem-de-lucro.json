@@ -68,6 +68,10 @@
    "partes": [
     {
      "tipo": "p",
+     "texto": "Onde a margem por item é mais curta, como no balcão do mercadinho, errar a conta pesa mais: o <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a> calcula a margem de cada produto a partir do custo cadastrado."
+    },
+    {
+     "tipo": "p",
      "texto": "Essa distinção parece detalhe e destrói a rentabilidade de muita loja. As duas contas partem do mesmo lucro, mas dividem por bases diferentes:"
     },
     {
@@ -198,5 +202,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-06"
+ "updated": "2026-11-13"
 }

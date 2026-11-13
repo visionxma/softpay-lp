@@ -93,7 +93,7 @@
        "href": "/segmentos/farmacia/"
       },
       {
-       "titulo": "Sistema para distribuidora",
+       "titulo": "Sistema para distribuidora de bebidas e atacado",
        "texto": "Distribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação",
        "href": "/segmentos/distribuidora/"
       },
@@ -143,8 +143,8 @@
        "href": "/segmentos/cosmeticos-e-perfumaria/"
       },
       {
-       "titulo": "Sistema para loja de bebidas",
-       "texto": "Loja de bebida é giro alto, margem apertada e pico de movimento concentrado no fim de semana",
+       "titulo": "Sistema para depósito de bebidas",
+       "texto": "Depósito de bebidas, adega e loja de bebida vivem de giro alto, margem apertada e pico de movimento…",
        "href": "/segmentos/loja-de-bebidas/"
       }
      ]
@@ -244,5 +244,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-04"
+ "updated": "2026-11-13"
 }

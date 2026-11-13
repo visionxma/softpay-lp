@@ -57,7 +57,7 @@
    "Curva ABC e custo por item"
   ],
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "A conta das oficinas"
   ],
@@ -67,7 +67,7 @@
    "Nota na venda para oficina"
   ],
   [
-   "Distribuidora",
+   "Sistema para distribuidora de bebidas",
    "/segmentos/distribuidora/",
    "Outro segmento de atacado"
   ]
@@ -279,10 +279,6 @@
    "/guias/meu-sistema-precisa-mudar-reforma-tributaria/"
   ],
   [
-   "Reforma tributária e o MEI",
-   "/guias/reforma-tributaria-mei/"
-  ],
-  [
    "Checklist da reforma tributária até janeiro de 2027",
    "/guias/checklist-reforma-tributaria-2027/"
   ],
@@ -303,6 +299,10 @@
    "/perguntas/tem-suporte-humano/"
   ],
   [
+   "Fluxo de caixa para loja pequena",
+   "/blog/fluxo-de-caixa-loja-pequena/"
+  ],
+  [
    "Excel ou sistema de gestão?",
    "/perguntas/excel-ou-sistema-de-gestao/"
   ],
@@ -315,12 +315,12 @@
    "/perguntas/preciso-instalar/"
   ],
   [
-   "Comparativos",
-   "/comparativos/"
+   "Funciona em todo o Brasil?",
+   "/perguntas/funciona-no-brasil-inteiro/"
   ],
   [
-   "App de vendas e controle de estoque",
-   "/solucoes/sistema-de-estoque/"
+   "Sistema para distribuidora de bebidas e atacado",
+   "/segmentos/distribuidora/"
   ]
  ],
  "publicado": "2026-09-06",

@@ -20,6 +20,14 @@
  ],
  "faq": [
   [
+   "Existe sistema para mercadinho gratuito?",
+   "Existe sistema grátis, em geral com limite de produtos, sem nota fiscal ou sem suporte. O SoftPay não é gratuito: o plano Comércio custa R$ 69/mês, e você testa 7 dias grátis, sem cartão de crédito, com o estoque de verdade do seu mercadinho antes de decidir."
+  ],
+  [
+   "Serve para mercadinho de bairro, com um caixa só?",
+   "Sim. O plano Comércio cobre o mercadinho de bairro com um caixa: PDV, estoque, caixa e fiado, com 1 usuário. Quando mais gente passar a vender no balcão, o plano Loja libera até 3 usuários."
+  ],
+  [
    "O SoftPay serve para mercadinho pequeno, de uma pessoa só?",
    "Sim. O plano Comércio, de R$ 69/mês, cobre PDV, caixa, fiado e estoque essencial com 1 usuário — o perfil mais comum de mercadinho de bairro."
   ],
@@ -65,7 +73,7 @@
    "Custo, quantidade e curva ABC"
   ],
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "Quem deve, quanto e desde quando"
   ],
@@ -311,12 +319,12 @@
    "/segmentos/pet-shop/"
   ],
   [
-   "App de vendas e controle de estoque",
-   "/solucoes/sistema-de-estoque/"
+   "Sistema para depósito de bebidas",
+   "/segmentos/loja-de-bebidas/"
   ],
   [
-   "Sistema para loja de bebidas",
-   "/segmentos/loja-de-bebidas/"
+   "App de vendas e controle de estoque",
+   "/solucoes/sistema-de-estoque/"
   ],
   [
    "Qual sistema usar em um mercadinho?",
@@ -335,24 +343,24 @@
    "/sistema-de-gestao-para-pequenos-negocios/"
   ],
   [
-   "Sistema para distribuidora",
+   "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
+  ],
+  [
+   "Controle de fiado no celular",
+   "/solucoes/controle-de-fiado/"
   ],
   [
    "Controle financeiro da loja",
    "/solucoes/sistema-financeiro/"
   ],
   [
-   "Aplicativo para controlar fiado no celular",
-   "/solucoes/controle-de-fiado/"
+   "Vale a pena ter um sistema de gestão na loja?",
+   "/guias/vale-a-pena-ter-sistema-de-gestao/"
   ],
   [
    "Sistema para loja de calçados",
    "/segmentos/loja-de-calcados/"
-  ],
-  [
-   "Vale a pena ter um sistema de gestão na loja?",
-   "/guias/vale-a-pena-ter-sistema-de-gestao/"
   ],
   [
    "Sistema para loja de cosméticos e perfumaria",
@@ -363,10 +371,6 @@
    "/guias/como-controlar-estoque/"
   ],
   [
-   "Loja pequena precisa de sistema?",
-   "/perguntas/loja-pequena-precisa-de-sistema/"
-  ],
-  [
    "Loja online com Pix",
    "/solucoes/loja-online/"
   ],
@@ -375,10 +379,14 @@
    "/guias/como-controlar-fiado/"
   ],
   [
-   "Como escolher um sistema de gestão",
-   "/guias/como-escolher-sistema-de-gestao/"
+   "Loja pequena precisa de sistema?",
+   "/perguntas/loja-pequena-precisa-de-sistema/"
+  ],
+  [
+   "SoftPay ou Nex: qual escolher",
+   "/comparativos/softpay-ou-nex/"
   ]
  ],
  "publicado": "2026-09-06",
- "updated": "2026-11-04"
+ "updated": "2026-11-13"
 }

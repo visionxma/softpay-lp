@@ -48,7 +48,7 @@
    "Venda no balcão"
   ],
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "Fiado do bairro"
   ]
@@ -63,6 +63,10 @@
    "id": "os-criterios-que-importam-nesse-segmento",
    "titulo": "Os critérios que importam nesse segmento",
    "partes": [
+    {
+     "tipo": "p",
+     "texto": "A resposta curta está na página do <a href=\"/segmentos/mercadinho/\">sistema para mercadinho</a> do SoftPay; aqui vão os critérios para comparar qualquer opção."
+    },
     {
      "tipo": "ol",
      "itens": [
@@ -110,5 +114,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-08"
+ "updated": "2026-11-13"
 }

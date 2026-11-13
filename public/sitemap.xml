@@ -19,13 +19,13 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -55,7 +55,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/mercadinho/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -85,7 +85,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/papelaria/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -105,7 +105,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/distribuidora/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -205,7 +205,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/segmentos/loja-de-bebidas/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -235,7 +235,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/solucoes/controle-de-fiado/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -333,7 +333,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-estoque/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -353,7 +353,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-controlar-fiado/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -373,7 +373,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-calcular-margem-de-lucro/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -393,7 +393,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/como-sair-do-caderno/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -445,7 +445,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/guias/nfe-nfce-o-que-e/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -511,7 +511,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/perguntas/qual-sistema-para-mercadinho/</loc>
-    <lastmod>2026-09-08</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -577,19 +577,19 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/termos</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/privacidade</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://site.softpaybr.com/reembolso</loc>
-    <lastmod>2026-11-09</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

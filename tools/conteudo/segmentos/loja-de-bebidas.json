@@ -4,21 +4,25 @@
   "/assets/lojistas/loja-de-bebidas.webp",
   "Dono de loja de bebidas conferindo garrafas em engradados empilhados"
  ],
- "title": "Sistema para Loja de Bebidas e Adega | SoftPay",
- "description": "Sistema para loja de bebidas com PDV rápido, estoque de alto giro, venda no atacado e varejo, fiado e curva ABC. Teste grátis por 7 dias, sem cartão.",
- "h1": "Sistema para loja de bebidas",
- "intro": "Loja de bebida é giro alto, margem apertada e pico de movimento concentrado no fim de semana. O SoftPay dá conta da venda rápida no balcão, do preço diferente por caixa ou unidade e do fiado do cliente de sempre.",
+ "title": "Sistema para Depósito de Bebidas e Adega | SoftPay",
+ "description": "Sistema para depósito de bebidas e adega: PDV rápido na sexta, preço do fardo e da unidade, estoque de alto giro e fiado. Teste 7 dias grátis, sem cartão.",
+ "h1": "Sistema para depósito de bebidas",
+ "intro": "Depósito de bebidas, adega e loja de bebida vivem de giro alto, margem apertada e pico de movimento concentrado no fim de semana. O SoftPay dá conta da venda rápida no balcão, do preço diferente por caixa ou unidade e do fiado do cliente de sempre.",
  "breadcrumbs": [
   [
    "Segmentos",
    "/segmentos/"
   ],
   [
-   "Loja de bebidas",
+   "Depósito de bebidas",
    null
   ]
  ],
  "faq": [
+  [
+   "Qual o melhor sistema para depósito de bebidas?",
+   "O que resolve o depósito é PDV rápido para o pico, preço diferente para o fardo e para a unidade, estoque com custo e fiado no nome do cliente. O SoftPay tem os quatro no plano Comércio, de R$ 69/mês, e você testa 7 dias grátis, sem cartão, com os seus produtos."
+  ],
   [
    "O SoftPay serve para adega e loja de conveniência?",
    "Sim, desde que a venda seja de produto para levar. O sistema cobre PDV, estoque, caixa e fiado. Para consumo no local, com comanda de mesa, ele não é o sistema indicado."
@@ -56,12 +60,12 @@
  "cta_text": "Cadastre os itens de maior giro, defina o preço de caixa e de unidade e veja o estoque acompanhar sozinho. 7 dias grátis, sem cartão.",
  "related": [
   [
-   "Mercadinho",
+   "Sistema para mercadinho",
    "/segmentos/mercadinho/",
    "Muitos itens, giro rápido"
   ],
   [
-   "Distribuidora",
+   "Sistema para distribuidora de bebidas",
    "/segmentos/distribuidora/",
    "Depósito, atacado e entrega"
   ],
@@ -76,7 +80,7 @@
    "Giro, custo e curva ABC"
   ],
   [
-   "Controle de fiado",
+   "Controle de fiado no celular",
    "/solucoes/controle-de-fiado/",
    "Quem deve e desde quando"
   ],
@@ -90,19 +94,27 @@
   {
    "tipo": "secao",
    "id": "a-rotina-de-uma-loja-de-bebidas",
-   "titulo": "A rotina de uma loja de bebidas",
+   "titulo": "A rotina de um depósito de bebidas",
    "partes": [
+    {
+     "tipo": "p",
+     "texto": "O depósito de bebidas atende três clientes diferentes ao mesmo tempo: quem leva o engradado ou o fardo fechado para o churrasco, quem passa na porta e leva uma unidade gelada, e o cliente fixo que manda mensagem, busca depois e acerta no fim do mês. Cada um tem preço, margem e risco próprios, e o sistema para depósito de bebidas precisa separar os três sem segurar a fila."
+    },
+    {
+     "tipo": "p",
+     "texto": "No SoftPay, o fardo e a unidade entram com preços distintos, pela venda no atacado e no varejo; a compra do cliente fixo vai para o fiado, no nome dele, com data e saldo; e a venda do balcão sai pelo PDV, que baixa o estoque na hora. No fim do sábado, o caixa mostra quanto entrou em dinheiro, Pix e fiado, sem somar comanda de papel."
+    },
     {
      "tipo": "p",
      "texto": "O movimento não é constante: sexta e sábado concentram boa parte da semana. No pico, cada segundo no caixa importa — e é justamente quando ninguém tem tempo de anotar nada."
     },
     {
      "tipo": "p",
-     "texto": "Existe também a dupla venda: o cliente que leva uma unidade e o que leva a caixa fechada, com preço diferente. Tratar os dois do mesmo jeito é como a margem se perde sem ninguém notar."
+     "texto": "E o produto é pesado, volumoso e caro de repor. Faltar cerveja na sexta é perder a semana inteira; sobrar é dinheiro parado ocupando um espaço que já é apertado."
     },
     {
      "tipo": "p",
-     "texto": "E o produto é pesado, volumoso e caro de repor. Faltar cerveja na sexta é perder a semana inteira; sobrar é dinheiro parado ocupando um espaço que já é apertado."
+     "texto": "Há ainda a conta da reposição, que quase todo depósito faz de cabeça. Cerveja, refrigerante e água ocupam espaço, pesam e chegam em carga fechada: pedir pouco deixa a geladeira vazia no domingo, pedir demais prende o dinheiro em mercadoria parada até a outra semana. Com custo e quantidade de cada item cadastrados, você vê o saldo antes de ligar para o fornecedor e compra pelo que girou de verdade."
     }
    ]
   },
@@ -184,6 +196,10 @@
       "<strong>Não tem controle de validade confirmado.</strong> Confirme com o suporte se isso for parte da sua operação.",
       "<strong>Não é sistema para bar ou distribuidora com consumo no local.</strong> Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor."
      ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Se você também atende pelo celular, a loja online do plano Loja recebe o pedido com Pix. A entrega (motoboy, rota e taxa) continua com você, como diz a lista acima."
     }
    ]
   },
@@ -244,5 +260,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-04"
+ "updated": "2026-11-13"
 }

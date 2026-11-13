@@ -95,6 +95,10 @@
    "partes": [
     {
      "tipo": "p",
+     "texto": "Os três hábitos valem para qualquer loja, mas cada estoque tem a sua armadilha: grade de tamanho e cor no <a href=\"/segmentos/loja-de-roupas/\">sistema para loja de roupas</a>, fardo e unidade no <a href=\"/segmentos/loja-de-bebidas/\">sistema para depósito de bebidas</a>."
+    },
+    {
+     "tipo": "p",
      "texto": "O motivo mais comum não é preguiça: é que venda e estoque viram dois controles separados. A venda acontece no balcão e a baixa do estoque fica para depois. Como o “depois” depende de alguém lembrar, o desencontro começa em dias."
     },
     {
@@ -256,5 +260,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-02"
+ "updated": "2026-11-13"
 }

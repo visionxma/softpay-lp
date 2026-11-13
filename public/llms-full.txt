@@ -801,7 +801,7 @@ Se a sua loja tem esse formato, é bem provável que um dos segmentos abaixo des
 - Sistema para loja de variedadesLoja de variedades vive de muitos produtos baratos e muito diferentes entre si
 - Sistema para papelariaPapelaria vive dois negócios ao mesmo tempo: a venda unitária do dia a dia e o pico da volta às aulas
 - Sistema para farmáciaO SoftPay cuida da gestão comercial da farmácia: PDV, estoque, caixa, clientes e notas fiscais
-- Sistema para distribuidoraDistribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação
+- Sistema para distribuidora de bebidas e atacadoDistribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação
 - Sistema para loja de celulares e acessóriosNa mesma loja convivem dois negócios: o aparelho, que é caro e sai pouco, e o acessório, que é barato e…
 - Sistema para loja de autopeçasAutopeças é o comércio do catálogo gigante: milhares de códigos, muitos que saem uma vez por ano e alguns…
 - Sistema para loja de material de construçãoMaterial de construção mistura a venda de um saco de cimento com o orçamento de uma obra inteira
@@ -811,7 +811,7 @@ Se a sua loja tem esse formato, é bem provável que um dos segmentos abaixo des
 - Sistema para pet shopPet shop mistura dois negócios: a loja, que vende ração e acessório com estoque, e o serviço de banho e…
 - Sistema para loja de calçadosNa loja de calçados o mesmo modelo existe em oito ou dez numerações
 - Sistema para loja de cosméticos e perfumariaCosmético tem muita variação — tom, tamanho, linha — e muita venda por indicação
-- Sistema para loja de bebidasLoja de bebida é giro alto, margem apertada e pico de movimento concentrado no fim de semana
+- Sistema para depósito de bebidasDepósito de bebidas, adega e loja de bebida vivem de giro alto, margem apertada e pico de movimento…
 
 ## Do seu segmento para o recurso que resolve
 
@@ -849,7 +849,7 @@ Cada recurso existe para responder uma pergunta concreta da sua loja. Veja qual 
 ## Escolha pelo que você precisa resolver
 - App de vendas e controle de estoqueO SoftPay é um app de vendas e estoque que abre no navegador do celular, do tablet e do computador
 - PDV no celular e online (frente de caixa)O PDV do SoftPay é uma frente de caixa online: abre no navegador do celular, do tablet ou do computador,…
-- Aplicativo para controlar fiado no celularO SoftPay é um aplicativo para controlar fiado que abre no navegador do celular ou do computador, sem…
+- Controle de fiado no celularO SoftPay faz o controle de fiado no celular: é um aplicativo que abre no navegador do celular ou do…
 - Controle financeiro da lojaFaturamento é o que entrou
 - Emissão de NF-eA NF-e é a nota fiscal eletrônica usada nas operações entre empresas e em vendas que exigem documento…
 - Emissão de NFC-eA NFC-e é o cupom fiscal eletrônico da venda ao consumidor final — o documento do balcão
@@ -1074,7 +1074,7 @@ Ver todos os planos
 
 ## Continue por aqui
 - Controle de estoqueCusto, quantidade e curva ABC
-- Controle de fiadoQuem deve, quanto e desde quando
+- Controle de fiado no celularQuem deve, quanto e desde quando
 - Sistema PDVVenda rápida no balcão
 - Bot do WhatsAppRegistrar entrada e fiado falando
 - Como sair do cadernoO passo a passo da migração
@@ -1102,6 +1102,18 @@ Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja,
 
 ##
 Perguntas frequentes
+
+###
+
+### Existe sistema para mercadinho gratuito?
+
+Existe sistema grátis, em geral com limite de produtos, sem nota fiscal ou sem suporte. O SoftPay não é gratuito: o plano Comércio custa R$ 69/mês, e você testa 7 dias grátis, sem cartão de crédito, com o estoque de verdade do seu mercadinho antes de decidir.
+
+###
+
+### Serve para mercadinho de bairro, com um caixa só?
+
+Sim. O plano Comércio cobre o mercadinho de bairro com um caixa: PDV, estoque, caixa e fiado, com 1 usuário. Quando mais gente passar a vender no balcão, o plano Loja libera até 3 usuários.
 
 ###
 
@@ -1165,7 +1177,7 @@ Testar grátis por 7 dias
 
 ---
 
-Página: Sistema e App para Loja de Roupas com Grade | SoftPay
+Página: Sistema para Loja de Roupas com Grade e App | SoftPay
 Endereço: https://site.softpaybr.com/segmentos/loja-de-roupas/
 
 # Sistema para loja de roupas com grade
@@ -1572,6 +1584,18 @@ Muita papelaria fatura com xerox, impressão, plastificação e encadernação. 
 
 ## Perguntas frequentes
 
+### Qual sistema usar numa papelaria com lista de material escolar?
+
+Na volta às aulas, a mesma lista chega dezenas de vezes ao balcão, com marca e quantidade definidas pela escola. O que ajuda é ter cada item com código, preço e saldo cadastrados antes de janeiro: a venda sai pelo PDV, o estoque baixa sozinho e você vê o que está acabando enquanto ainda dá tempo de repor com o fornecedor.
+
+### Serve para papelaria que vende no atacado para escolas e empresas?
+
+Sim. O SoftPay trabalha com preço de atacado e de varejo no mesmo produto, então a caixa de sulfite da escola e a resma do balcão saem com o preço certo de cada uma. Para quem pede nota, a emissão de NF-e está nos planos Nota Fiscal e ERP Completo, como recurso em ativação.
+
+### Existe sistema para papelaria grátis?
+
+Existe, em geral com limite de produtos e sem nota fiscal. O SoftPay custa a partir de R$ 69/mês, no plano Comércio, e pode ser testado por 7 dias grátis, sem cartão de crédito, com os itens da sua papelaria.
+
 ### O sistema aguenta o volume da volta às aulas?
 
 O PDV foi feito para venda contínua no balcão, com baixa automática de estoque. Para o pico, vale cadastrar antes os itens de lista escolar e liberar os logins de quem vai ajudar no caixa.
@@ -1730,10 +1754,10 @@ Sim, a partir do plano Loja. Entrada de estoque, despesa e fiado funcionam por m
 
 ---
 
-Página: Sistema para Distribuidora: Estoque, Atacado, NF-e | SoftPay
+Página: Sistema para Distribuidora de Bebidas e Atacado | SoftPay
 Endereço: https://site.softpaybr.com/segmentos/distribuidora/
 
-# Sistema para distribuidora
+# Sistema para distribuidora de bebidas e atacado
 
 Distribuidora trabalha com volume alto, margem por quantidade e nota fiscal em quase toda operação. O SoftPay junta estoque, atacado, varejo e emissão fiscal no mesmo lugar — seja a sua distribuidora de bebidas, de alimentos ou de produtos em geral.
 
@@ -2716,7 +2740,7 @@ Seis páginas que seguem o assunto: o recurso de filiais por dentro, o estoque, 
 
 Ver todos os segmentos
 
-Múltiplas lojasO recurso, por dentroControle de estoqueCusto, giro e curva ABCSistema financeiroO caixa do conjuntoBot do WhatsAppRegistrar de qualquer pontoDistribuidoraDepósito e loja separadosComo organizar uma lojaO método, passo a passo
+Múltiplas lojasO recurso, por dentroControle de estoqueCusto, giro e curva ABCSistema financeiroO caixa do conjuntoBot do WhatsAppRegistrar de qualquer pontoSistema para distribuidora de bebidasDepósito e loja separadosComo organizar uma lojaO método, passo a passo
 
 ##  O que precisa ser confirmado antes de contratar
 
@@ -2810,7 +2834,7 @@ Sim. Os dados ficam na nuvem e o sistema é acessado pelo navegador, inclusive n
 - Como organizar uma loja
 - Perda de estoque por validade
 - Reforma tributária no comércio: o que muda e quando
-- App de vendas e controle de estoque
+- Sistema para distribuidora de bebidas e atacado
 
 ---
 
@@ -3137,12 +3161,12 @@ Depende do seu regime — confirme com o seu contador. A emissão está nos plan
 
 ---
 
-Página: Sistema para Loja de Bebidas e Adega | SoftPay
+Página: Sistema para Depósito de Bebidas e Adega | SoftPay
 Endereço: https://site.softpaybr.com/segmentos/loja-de-bebidas/
 
-# Sistema para loja de bebidas
+# Sistema para depósito de bebidas
 
-Loja de bebida é giro alto, margem apertada e pico de movimento concentrado no fim de semana. O SoftPay dá conta da venda rápida no balcão, do preço diferente por caixa ou unidade e do fiado do cliente de sempre.
+Depósito de bebidas, adega e loja de bebida vivem de giro alto, margem apertada e pico de movimento concentrado no fim de semana. O SoftPay dá conta da venda rápida no balcão, do preço diferente por caixa ou unidade e do fiado do cliente de sempre.
 
 Planos a partir de R$ 69/mês
 
@@ -3158,13 +3182,17 @@ Recursos principais para loja de bebidas:
 
 Sexta, sábado e o resto da semana
 
-## A rotina de uma loja de bebidas
+## A rotina de um depósito de bebidas
+
+O depósito de bebidas atende três clientes diferentes ao mesmo tempo: quem leva o engradado ou o fardo fechado para o churrasco, quem passa na porta e leva uma unidade gelada, e o cliente fixo que manda mensagem, busca depois e acerta no fim do mês. Cada um tem preço, margem e risco próprios, e o sistema para depósito de bebidas precisa separar os três sem segurar a fila.
+
+No SoftPay, o fardo e a unidade entram com preços distintos, pela venda no atacado e no varejo; a compra do cliente fixo vai para o fiado, no nome dele, com data e saldo; e a venda do balcão sai pelo PDV, que baixa o estoque na hora. No fim do sábado, o caixa mostra quanto entrou em dinheiro, Pix e fiado, sem somar comanda de papel.
 
 O movimento não é constante: sexta e sábado concentram boa parte da semana. No pico, cada segundo no caixa importa — e é justamente quando ninguém tem tempo de anotar nada.
 
-Existe também a dupla venda: o cliente que leva uma unidade e o que leva a caixa fechada, com preço diferente. Tratar os dois do mesmo jeito é como a margem se perde sem ninguém notar.
-
 E o produto é pesado, volumoso e caro de repor. Faltar cerveja na sexta é perder a semana inteira; sobrar é dinheiro parado ocupando um espaço que já é apertado.
+
+Há ainda a conta da reposição, que quase todo depósito faz de cabeça. Cerveja, refrigerante e água ocupam espaço, pesam e chegam em carga fechada: pedir pouco deixa a geladeira vazia no domingo, pedir demais prende o dinheiro em mercadoria parada até a outra semana. Com custo e quantidade de cada item cadastrados, você vê o saldo antes de ligar para o fornecedor e compra pelo que girou de verdade.
 
 Resposta na tela, não no caderno
 
@@ -3193,6 +3221,8 @@ Combinado antes de começar
 - Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
 - Não tem controle de validade confirmado. Confirme com o suporte se isso for parte da sua operação.
 - Não é sistema para bar ou distribuidora com consumo no local. Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor.
+
+Se você também atende pelo celular, a loja online do plano Loja recebe o pedido com Pix. A entrega (motoboy, rota e taxa) continua com você, como diz a lista acima.
 
 Feito para o giro da loja de bebidas
 
@@ -3229,6 +3259,12 @@ O saldo fica no nome do cliente, com histórico. A partir do plano Loja, a cobra
 A partir do plano Loja, a curva ABC mostra quais itens sustentam o faturamento — e quais rótulos estão parados ocupando um espaço caro.
 
 ## Perguntas frequentes
+
+###
+
+### Qual o melhor sistema para depósito de bebidas?
+
+O que resolve o depósito é PDV rápido para o pico, preço diferente para o fardo e para a unidade, estoque com custo e fiado no nome do cliente. O SoftPay tem os quatro no plano Comércio, de R$ 69/mês, e você testa 7 dias grátis, sem cartão, com os seus produtos.
 
 ###
 
@@ -3525,11 +3561,11 @@ Ver bot do WhatsApp
 
 -
 
-### Loja de roupas
+### Sistema para loja de roupas
 
 Estoque com grade
 
-Ver loja de roupas
+Ver sistema para loja de roupas
 
 -
 
@@ -3541,11 +3577,11 @@ Ver loja de variedades
 
 -
 
-### Distribuidora
+### Sistema para distribuidora de bebidas
 
 Estoque em volume
 
-Ver distribuidora
+Ver sistema para distribuidora de bebidas
 
 ## Descubra quanto está parado na sua prateleira
 
@@ -3678,7 +3714,7 @@ O fiado sai por fora, num caderno paralelo que ninguém mais consegue ler.
 
 O que muda com o SoftPay:
 - Venda fiada no mesmo fluxo
-Controle de fiado
+Controle de fiado no celular
 
 ## Como o SoftPay resolve
 
@@ -3905,19 +3941,19 @@ Os limites reais, para você não descobrir durante o teste:
 ## Continue por aqui
 - Controle de estoqueA baixa automática
 - Sistema financeiroCaixa e resultado
-- Controle de fiadoA venda a prazo, no mesmo fluxo
+- Controle de fiado no celularA venda a prazo, no mesmo fluxo
 - Bot do WhatsAppRegistrar sem abrir o painel
 - Como controlar o caixaRotina de fechamento
-- MercadinhoO balcão de maior movimento
+- Sistema para mercadinhoO balcão de maior movimento
 
 ---
 
-Página: Aplicativo para Controlar Fiado no Celular | SoftPay
+Página: Controle de Fiado no Celular: App e Caderneta | SoftPay
 Endereço: https://site.softpaybr.com/solucoes/controle-de-fiado/
 
-# Aplicativo para controlar fiado no celular
+# Controle de fiado no celular
 
-O SoftPay é um aplicativo para controlar fiado que abre no navegador do celular ou do computador, sem baixar nada. Cada venda fiada fica no nome do cliente, com data, valor e saldo. A caderneta já vem no plano Comércio, de R$ 69/mês; a partir do Loja, de R$ 89/mês, o sistema manda cobrança por link de Pix no WhatsApp.
+O SoftPay faz o controle de fiado no celular: é um aplicativo que abre no navegador do celular ou do computador, sem baixar nada. Cada venda fiada fica no nome do cliente, com data, valor e saldo. A caderneta já vem no plano Comércio, de R$ 69/mês; a partir do Loja, de R$ 89/mês, o sistema manda cobrança por link de Pix no WhatsApp.
 
 ## O problema
 
@@ -4067,11 +4103,15 @@ Recursos inclusos
 
 ## Continue por aqui
 
-Método e cobrançaComo controlar fiadoSaiba maisCadastro e históricoControle de clientesSaiba maisA venda a prazo no balcãoSistema PDVSaiba maisRegistrar e dar baixa falandoBot do WhatsAppSaiba maisO fiado do bairroMercadinhoSaiba maisCrediário de alto valorLoja de joiasSaiba mais
+Método e cobrançaComo controlar fiadoSaiba maisCadastro e históricoControle de clientesSaiba maisA venda a prazo no balcãoSistema PDVSaiba maisRegistrar e dar baixa falandoBot do WhatsAppSaiba maisO fiado do bairroSistema para mercadinhoSaiba maisCrediário de alto valorLoja de joiasSaiba mais
 
 Dúvidas
 
 ## Perguntas frequentes
+
+### Existe app de controle de fiado grátis?
+
+Existe app grátis que só anota o valor, separado do caixa e do estoque. No SoftPay o fiado nasce da própria venda no PDV, baixa o estoque junto e fica no nome do cliente. O plano Comércio custa R$ 69/mês, e você testa 7 dias grátis, sem cartão.
 
 ### Tem aplicativo para controlar fiado no celular?
 
@@ -5224,6 +5264,8 @@ Resposta curta: registre o que entra, registre o que sai e cadastre o custo de c
 
 ## Por que o controle sempre desanda
 
+Os três hábitos valem para qualquer loja, mas cada estoque tem a sua armadilha: grade de tamanho e cor no sistema para loja de roupas, fardo e unidade no sistema para depósito de bebidas.
+
 O motivo mais comum não é preguiça: é que venda e estoque viram dois controles separados. A venda acontece no balcão e a baixa do estoque fica para depois. Como o “depois” depende de alguém lembrar, o desencontro começa em dias.
 
 A correção estrutural é fazer a baixa acontecer no mesmo ato da venda. É isso que um PDV resolve — não por ser sofisticado, mas por eliminar a segunda etapa.
@@ -5389,6 +5431,8 @@ Resposta curta: registre cada venda fiada no nome do cliente, com data e valor, 
 
 ## Por que o fiado some
 
+Este guia é o método. Para fazer o controle de fiado no celular, com o saldo de cada cliente somado sozinho, veja como funciona no SoftPay.
+
 O dinheiro fiado é o mais fácil de perder porque ele não dói na hora. A mercadoria sai, a venda parece feita e o buraco só aparece quando falta dinheiro para repor o estoque.
 
 No caderno, três coisas conspiram contra você: não existe um total visível de quanto a loja tem a receber, a anotação depende de quem estava no balcão, e quando o cliente contesta não há histórico para mostrar.
@@ -5548,6 +5592,8 @@ Resposta curta: margem é o lucro dividido pelo preço de venda, não pelo custo
 
 ## Margem e markup não são a mesma coisa
 
+Onde a margem por item é mais curta, como no balcão do mercadinho, errar a conta pesa mais: o sistema para mercadinho calcula a margem de cada produto a partir do custo cadastrado.
+
 Essa distinção parece detalhe e destrói a rentabilidade de muita loja. As duas contas partem do mesmo lucro, mas dividem por bases diferentes:
 - Margem = lucro ÷ preço de venda
 - Markup = lucro ÷ custo
@@ -5693,6 +5739,8 @@ Endereço: https://site.softpaybr.com/guias/como-sair-do-caderno/
 Resposta curta: não transcreva o caderno inteiro. Leve o que ainda está vivo — estoque atual, fiado em aberto e clientes — e comece a registrar as vendas novas no sistema desde o primeiro dia.
 
 ## Por que a migração costuma travar
+
+Quem sai do caderno costuma começar pelo fiado: o controle de fiado no celular já resolve a maior parte das folhas rasuradas. No balcão de muitos itens, veja também o sistema para mercadinho.
 
 Quase todo mundo tenta começar transcrevendo tudo: meses de vendas passadas, todos os produtos, o caderno inteiro. É um trabalho enorme, sem retorno imediato, feito nas horas vagas — e por isso é abandonado no meio.
 
@@ -6409,6 +6457,8 @@ Endereço: https://site.softpaybr.com/guias/nfe-nfce-o-que-e/
 A diferença é o cliente. NFC-e é a nota da venda no balcão, para o consumidor final. NF-e é a nota da venda para outra empresa, ou de operações que exigem documento completo. Esta página explica quando usar cada uma, sem termo de contador.
 
 ## A diferença em uma tabela
+
+Quem vende para outra empresa emite NF-e quase toda semana, e é o caso do sistema para distribuidora de bebidas, que junta atacado, estoque em volume e nota no mesmo lugar.
 |  | NFC-e | NF-e |
 | Para quem | Consumidor final, no balcão | Outra empresa, ou operação que exige documento completo |
 | Onde é usada | Loja, venda direta | Venda para CNPJ, transporte de mercadoria |
@@ -7227,6 +7277,8 @@ Resposta direta
 Priorize quatro coisas: PDV rápido, estoque que suporte muitos itens, controle de fiado e fechamento de caixa diário. Sem esses quatro, o resto não compensa.
 
 ## Os critérios que importam nesse segmento
+
+A resposta curta está na página do sistema para mercadinho do SoftPay; aqui vão os critérios para comparar qualquer opção.
 - Velocidade no balcão. Em horário de pico, cada segundo a mais na venda vira fila.
 - Baixa automática de estoque. Com centenas de itens, controle manual não sobrevive a uma semana.
 - Custo por produto. Margem de mercadinho é apertada; sem custo, não há como saber o que dá resultado.

@@ -20,6 +20,18 @@
  ],
  "faq": [
   [
+   "Qual sistema usar numa papelaria com lista de material escolar?",
+   "Na volta às aulas, a mesma lista chega dezenas de vezes ao balcão, com marca e quantidade definidas pela escola. O que ajuda é ter cada item com código, preço e saldo cadastrados antes de janeiro: a venda sai pelo PDV, o estoque baixa sozinho e você vê o que está acabando enquanto ainda dá tempo de repor com o fornecedor."
+  ],
+  [
+   "Serve para papelaria que vende no atacado para escolas e empresas?",
+   "Sim. O SoftPay trabalha com preço de atacado e de varejo no mesmo produto, então a caixa de sulfite da escola e a resma do balcão saem com o preço certo de cada uma. Para quem pede nota, a emissão de NF-e está nos planos Nota Fiscal e ERP Completo, como recurso em ativação."
+  ],
+  [
+   "Existe sistema para papelaria grátis?",
+   "Existe, em geral com limite de produtos e sem nota fiscal. O SoftPay custa a partir de R$ 69/mês, no plano Comércio, e pode ser testado por 7 dias grátis, sem cartão de crédito, com os itens da sua papelaria."
+  ],
+  [
    "O sistema aguenta o volume da volta às aulas?",
    "O PDV foi feito para venda contínua no balcão, com baixa automática de estoque. Para o pico, vale cadastrar antes os itens de lista escolar e liberar os logins de quem vai ajudar no caixa."
   ],
@@ -234,8 +246,12 @@
  ],
  "mais": [
   [
-   "Sistema para loja de bebidas",
+   "Sistema para depósito de bebidas",
    "/segmentos/loja-de-bebidas/"
+  ],
+  [
+   "Sistema de gestão para pequenos negócios",
+   "/sistema-de-gestao-para-pequenos-negocios/"
   ],
   [
    "Qual sistema usar em um mercadinho?",
@@ -254,8 +270,16 @@
    "/solucoes/multiplas-lojas/"
   ],
   [
+   "Emissão de NF-e",
+   "/solucoes/nfe/"
+  ],
+  [
    "Controle de clientes (CRM)",
    "/solucoes/controle-de-clientes/"
+  ],
+  [
+   "NF-e e NFC-e: qual a diferença",
+   "/guias/nfe-nfce-o-que-e/"
   ],
   [
    "Loja online com Pix",
@@ -266,46 +290,34 @@
    "/guias/como-organizar-uma-loja/"
   ],
   [
-   "NF-e e NFC-e: qual a diferença",
-   "/guias/nfe-nfce-o-que-e/"
-  ],
-  [
    "Reforma tributária no comércio: o que muda e quando",
    "/guias/reforma-tributaria-comercio/"
+  ],
+  [
+   "Quanto custa um sistema para loja?",
+   "/perguntas/quanto-custa-um-sistema-para-loja/"
   ],
   [
    "O suporte é humano?",
    "/perguntas/tem-suporte-humano/"
   ],
   [
+   "Reforma tributária e o MEI",
+   "/guias/reforma-tributaria-mei/"
+  ],
+  [
    "Posso usar em vários dispositivos?",
    "/perguntas/posso-usar-em-varios-dispositivos/"
-  ],
-  [
-   "Como sair do caderno",
-   "/guias/como-sair-do-caderno/"
-  ],
-  [
-   "Alternativa ao Bling para loja física",
-   "/comparativos/alternativa-ao-bling/"
   ],
   [
    "É difícil aprender a usar?",
    "/perguntas/e-dificil-aprender/"
   ],
   [
-   "Fluxo de caixa para loja pequena",
-   "/blog/fluxo-de-caixa-loja-pequena/"
-  ],
-  [
-   "Checklist da reforma tributária até janeiro de 2027",
-   "/guias/checklist-reforma-tributaria-2027/"
-  ],
-  [
-   "Sistema de gestão para pequenos negócios",
-   "/sistema-de-gestao-para-pequenos-negocios/"
+   "Sistema para distribuidora de bebidas e atacado",
+   "/segmentos/distribuidora/"
   ]
  ],
  "publicado": "2026-09-06",
- "updated": "2026-09-17"
+ "updated": "2026-11-13"
 }
