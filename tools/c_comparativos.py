@@ -301,7 +301,7 @@ dict(
         ["Teste", "7 dias, sem cartão", "não precisa: o Grátis não tem prazo"],
         ["Fiado no nome do cliente", "sim, desde o Comércio; cobrança por Pix no Loja", "não aparece nas páginas públicas"],
         ["Estoque", "baixa na venda, custo e margem; curva ABC no Loja", "gestão de estoque no plano Grátis"],
-        ["NFC-e", "<strong>em ativação</strong>: confirme com o suporte", "ilimitada no Grátis, com ativação por formulário"],
+        ["NFC-e", "<span><strong>em ativação</strong>: confirme com o suporte</span>", "ilimitada no Grátis, com ativação por formulário"],
         ["Sem internet", "não vende: precisa de conexão", "vende e emite nota offline"],
         ["Venda pelo WhatsApp", "texto ou áudio, no plano Loja", "não aparece nas páginas públicas"],
         ["Para quem serve", "loja de balcão que vende fiado e tem equipe", "MEI e empresa do Simples que quer nota sem mensalidade"],
