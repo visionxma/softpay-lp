@@ -73,7 +73,8 @@
     "/guias/",
     "/comparativos/",
     "/blog/",
-    "/perguntas/"
+    "/perguntas/",
+    "/comparativos/alternativa-ao-marketup/"
   ],
   "rotas": {
     "/segmentos/empresas-com-filiais/": {
@@ -435,6 +436,11 @@
       "molde": "sumup-maquininhas",
       "referencia": "https://www.sumup.com/pt-br/maquininhas/",
       "pasta": "moldes/sumup-maquininhas"
+    },
+    "/comparativos/alternativa-ao-marketup/": {
+      "molde": "linear-switch",
+      "referencia": "https://linear.app/switch",
+      "pasta": "moldes/linear-switch"
     }
   }
 }

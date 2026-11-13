@@ -55,14 +55,19 @@
   "publicado": "2026-09-06"
  },
  "comparativos": {
-  "hash": "41be277c95eb",
-  "modificado": "2026-11-02",
+  "hash": "5d83fd9d5cdb",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "comparativos/alternativa-ao-bling": {
-  "hash": "965f2adf8af8",
-  "modificado": "2026-09-17",
+  "hash": "303c2a0490a0",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
+ },
+ "comparativos/alternativa-ao-marketup": {
+  "hash": "5502168bb149",
+  "modificado": "2026-11-13",
+  "publicado": "2026-11-13"
  },
  "comparativos/softpay-ou-kyte": {
   "hash": "4664845da7fe",
@@ -70,8 +75,8 @@
   "publicado": "2026-09-06"
  },
  "comparativos/softpay-ou-nex": {
-  "hash": "e85a51637dec",
-  "modificado": "2026-09-17",
+  "hash": "47c27d562926",
+  "modificado": "2026-11-13",
   "publicado": "2026-09-06"
  },
  "contato": {
@@ -115,7 +120,7 @@
   "publicado": "2026-09-06"
  },
  "guias/como-escolher-sistema-de-gestao": {
-  "hash": "a227f21e5918",
+  "hash": "c2357621b647",
   "modificado": "2026-11-13",
   "publicado": "2026-09-08"
  },
@@ -140,7 +145,7 @@
   "publicado": "2026-09-06"
  },
  "guias/quanto-custa-um-sistema-de-gestao": {
-  "hash": "c33bb08eb5a3",
+  "hash": "f33fd1d6efd5",
   "modificado": "2026-11-13",
   "publicado": "2026-09-08"
  },

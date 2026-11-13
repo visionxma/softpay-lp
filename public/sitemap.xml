@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/comparativos/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -315,7 +315,7 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/comparativos/softpay-ou-nex/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -327,7 +327,13 @@
   </url>
   <url>
     <loc>https://site.softpaybr.com/comparativos/alternativa-ao-bling/</loc>
-    <lastmod>2026-09-17</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://site.softpaybr.com/comparativos/alternativa-ao-marketup/</loc>
+    <lastmod>2026-11-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
