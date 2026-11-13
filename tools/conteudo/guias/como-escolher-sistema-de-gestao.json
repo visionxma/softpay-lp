@@ -265,6 +265,10 @@
       "Consigo exportar produtos, clientes e vendas?",
       "Em que formato saem os dados?"
      ]
+    },
+    {
+     "tipo": "p",
+     "texto": "Vindo de um sistema sem mensalidade? O que pesa na troca, e quando vale ficar onde está, está em <a href=\"/comparativos/alternativa-ao-marketup/\">alternativa ao MarketUP</a>."
     }
    ]
   },

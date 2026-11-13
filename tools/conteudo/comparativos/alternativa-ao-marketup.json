@@ -1,0 +1,266 @@
+{
+ "artigo": true,
+ "slug": "comparativos/alternativa-ao-marketup",
+ "title": "Alternativa ao MarketUP para Loja com Fiado | SoftPay",
+ "description": "O MarketUP tem plano sem mensalidade e NFC-e; o SoftPay custa de R$ 69 a R$ 109 e cuida do fiado no balcão. Compare preço, teste, estoque e nota.",
+ "h1": "Alternativa ao MarketUP para loja com balcão e fiado",
+ "intro": "O MarketUP tem plano sem mensalidade para MEI e empresa do Simples Nacional, emite NFC-e e vende mesmo sem internet. O SoftPay é pago, de R$ 69 a R$ 109 por mês, e foi feito para o balcão que vende fiado. Abaixo, com o que cada um publica na própria página, está em que situação cada um serve melhor, inclusive quando o certo é ficar no MarketUP.",
+ "breadcrumbs": [
+  [
+   "Comparativos",
+   "/comparativos/"
+  ],
+  [
+   "Alternativa ao MarketUP",
+   null
+  ]
+ ],
+ "faq": [
+  [
+   "O SoftPay é uma alternativa ao MarketUP?",
+   "É, para a loja que vende no balcão e trabalha com fiado. O SoftPay junta PDV, caixa, estoque e o caderninho de fiado no nome do cliente, e no plano Loja cobra o fiado por link de Pix no WhatsApp. Se o que pesa é não ter mensalidade ou emitir NFC-e hoje, o MarketUP atende melhor."
+  ],
+  [
+   "O MarketUP é gratuito mesmo?",
+   "Segundo a página pública do MarketUP, lida em 13 de novembro de 2026, o plano Grátis é para MEI e empresa do Simples Nacional, sem prazo, com PDV, estoque e notas fiscais. O MarketUP+ começa em R$ 149,99 por mês. Confira as condições na fonte antes de decidir."
+  ],
+  [
+   "Por que pagar pelo SoftPay se o MarketUP tem plano grátis?",
+   "Só vale pagar se o que o SoftPay faz a mais pesa na sua loja: fiado com saldo por cliente e cobrança por Pix no WhatsApp, venda registrada por mensagem ou áudio e atendimento por uma pessoa da equipe. Se nada disso pesa, o plano grátis serve."
+  ],
+  [
+   "O SoftPay emite NFC-e como o MarketUP?",
+   "A emissão de NFC-e e NF-e do SoftPay está em ativação. Se você precisa emitir cupom fiscal hoje, confirme com o suporte antes de assinar. O MarketUP informa NFC-e ilimitada no plano Grátis, com ativação por formulário."
+  ],
+  [
+   "O SoftPay funciona sem internet?",
+   "Não. O SoftPay roda no navegador e precisa de conexão. O MarketUP informa uso offline no PDV, com venda e nota registradas sem internet. Se a internet da sua loja cai com frequência, isso pesa a favor dele."
+  ],
+  [
+   "Quanto custa o SoftPay?",
+   "O plano Comércio custa R$ 69 por mês, o Loja R$ 89 e o ERP Completo R$ 109. O plano Nota Fiscal, só para emitir nota, custa R$ 65. Todos têm 7 dias de teste sem cartão, sem taxa de instalação e sem fidelidade."
+  ],
+  [
+   "Dá para passar os produtos e o fiado para o SoftPay?",
+   "Dá. Comece pelos produtos de maior giro e pelos clientes com fiado em aberto. Não há cobrança para passar os produtos para o sistema, e a equipe ajuda a configurar pelo WhatsApp."
+  ],
+  [
+   "Vale a pena trocar do MarketUP para o SoftPay?",
+   "Se o fiado e o balcão são o centro da sua loja e o atendimento por uma pessoa faz falta, teste os 7 dias com as vendas de verdade. Se a nota fiscal sem mensalidade é o que segura o seu caixa, não troque agora."
+  ]
+ ],
+ "cta_title": "Teste com o fiado e o balcão da sua loja",
+ "cta_text": "7 dias sem cartão de crédito. Se o que pesa é nota fiscal sem mensalidade, o MarketUP atende melhor, e preferimos dizer isso agora.",
+ "related": [
+  [
+   "SoftPay ou Nex",
+   "/comparativos/softpay-ou-nex/",
+   "Outra comparação"
+  ],
+  [
+   "SoftPay ou Kyte",
+   "/comparativos/softpay-ou-kyte/",
+   "Balcão ou celular"
+  ],
+  [
+   "Alternativa ao Bling",
+   "/comparativos/alternativa-ao-bling/",
+   "Para quem vende online"
+  ],
+  [
+   "Controle de fiado no celular",
+   "/solucoes/controle-de-fiado/",
+   "O caderninho no sistema"
+  ],
+  [
+   "Quanto custa um sistema",
+   "/guias/quanto-custa-um-sistema-de-gestao/",
+   "Preço real de 12 meses"
+  ],
+  [
+   "Como escolher um sistema",
+   "/guias/como-escolher-sistema-de-gestao/",
+   "Os 7 critérios"
+  ]
+ ],
+ "blocks": [
+  {
+   "tipo": "html",
+   "html": "<p style=\"display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem;margin:0 0 2rem\"><a class=\"btn btn--acao btn--grande\" href=\"https://www.softpaybr.com/auth?ref=alexandrehen_cf9e\" data-track=\"complete-registration\">Testar grátis</a><span>7 dias com as vendas da sua loja, sem cartão de crédito.</span></p>"
+  },
+  {
+   "tipo": "secao",
+   "id": "quando-o-marketup-e-a-melhor-escolha",
+   "titulo": "Quando o MarketUP é a melhor escolha",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Começamos pelo lado dele, porque em três pontos ele está à frente e isso decide a escolha de muita loja:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>Se a mensalidade é o que pesa.</strong> O plano Grátis do MarketUP não tem prazo para MEI e empresa do Simples Nacional e traz PDV, estoque, fluxo de caixa e relatórios. O plano mais barato do SoftPay com PDV custa R$ 69 por mês.",
+      "<strong>Se você precisa emitir NFC-e hoje.</strong> O MarketUP informa NFC-e ilimitada no plano Grátis, com ativação por formulário. No SoftPay a emissão de nota está <strong>em ativação</strong>: confirme com o suporte antes de contar com ela.",
+      "<strong>Se a internet da loja cai com frequência.</strong> O PDV do MarketUP registra venda e nota mesmo offline. O SoftPay roda no navegador e precisa de conexão para vender.",
+      "<strong>Se você quer loja virtual, boleto e controle de produção no mesmo lugar.</strong> O plano Grátis dele inclui e-commerce integrado, envio de boleto e Pix e controle de produção (MRP)."
+     ]
+    },
+    {
+     "tipo": "nota",
+     "titulo": "Sendo direto",
+     "texto": "Se dois desses pontos descrevem a sua loja, <strong>o MarketUP provavelmente é a escolha certa</strong> e você não precisa trocar de sistema. Preferimos dizer isso agora a vender um sistema que vai frustrar no segundo mês."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "quando-o-softpay-tende-a-servir-melhor",
+   "titulo": "Quando o SoftPay tende a servir melhor",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "O outro cenário é o do comércio de bairro, em que o cliente leva hoje e paga no dia 10:"
+    },
+    {
+     "tipo": "ul",
+     "itens": [
+      "<strong>O fiado é parte do seu caixa.</strong> No SoftPay cada venda fiada fica no nome do cliente, com saldo e histórico na tela do balcão, desde o plano Comércio. No plano Loja, o sistema manda o link de Pix pelo WhatsApp e dá a conta por paga quando o dinheiro cai. Nas páginas públicas do MarketUP que lemos, o fiado não aparece.",
+      "<strong>Você quer registrar a venda sem largar o balcão.</strong> A partir do plano Loja, uma mensagem ou um áudio no WhatsApp dizendo o que saiu registra a venda, baixa o estoque e volta com a confirmação.",
+      "<strong>Você quer falar com gente quando trava.</strong> O atendimento do SoftPay é por WhatsApp, com uma pessoa da equipe do outro lado, sem robô e sem número de protocolo.",
+      "<strong>A sua grade tem tamanho, cor ou numeração.</strong> O estoque do SoftPay trabalha por variação, com custo e margem por item, e a curva ABC do plano Loja mostra o que repor e o que está parado na prateleira.",
+      "<strong>Você vende para revendedor e para consumidor.</strong> Dois preços no mesmo produto, atacado e varejo, sem cadastro duplicado."
+     ]
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-comparacao-em-uma-tabela",
+   "titulo": "A comparação em uma tabela",
+   "partes": [
+    {
+     "tipo": "tabela",
+     "cabecalho": [
+      "",
+      "SoftPay",
+      "MarketUP"
+     ],
+     "linhas": [
+      [
+       "Preço",
+       "R$ 69 a R$ 109/mês",
+       "R$ 0 no plano Grátis"
+      ],
+      [
+       "Teste",
+       "7 dias, sem cartão",
+       "não precisa: o Grátis não tem prazo"
+      ],
+      [
+       "Fiado no nome do cliente",
+       "sim, desde o Comércio; cobrança por Pix no Loja",
+       "não aparece nas páginas públicas"
+      ],
+      [
+       "Estoque",
+       "baixa na venda, custo e margem; curva ABC no Loja",
+       "gestão de estoque no plano Grátis"
+      ],
+      [
+       "NFC-e",
+       "<strong>em ativação</strong>: confirme com o suporte",
+       "ilimitada no Grátis, com ativação por formulário"
+      ],
+      [
+       "Sem internet",
+       "não vende: precisa de conexão",
+       "vende e emite nota offline"
+      ],
+      [
+       "Venda pelo WhatsApp",
+       "texto ou áudio, no plano Loja",
+       "não aparece nas páginas públicas"
+      ],
+      [
+       "Para quem serve",
+       "loja de balcão que vende fiado e tem equipe",
+       "MEI e empresa do Simples que quer nota sem mensalidade"
+      ]
+     ]
+    },
+    {
+     "tipo": "html",
+     "html": "        <p class=\"page-sources\">Plano, preço e recursos do MarketUP lidos na <a href=\"https://marketup.com/\" target=\"_blank\" rel=\"noopener nofollow\">página pública</a> e na <a href=\"https://marketup.com/recursos/pdv/\" target=\"_blank\" rel=\"noopener nofollow\">página do PDV</a> em <strong>13 de novembro de 2026</strong>. Preço e recurso mudam sem aviso — <strong>confirme na fonte antes de decidir</strong>. Esta comparação é feita pela VisionX, que desenvolve o SoftPay; por isso ela diz também quando o MarketUP é a melhor escolha.</p>"
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "para-quem-cada-um-serve-em-uma-frase",
+   "titulo": "Para quem cada um serve, em uma frase",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "<strong>O MarketUP serve a quem precisa de PDV com nota fiscal sem pagar mensalidade e está no Simples Nacional.</strong> É a escolha óbvia para o MEI que emite cupom e quer manter o custo fixo no zero."
+    },
+    {
+     "tipo": "p",
+     "texto": "<strong>O SoftPay serve à loja de balcão que vende fiado e quer o caderninho, o caixa e o estoque na mesma tela, com alguém da equipe respondendo no WhatsApp.</strong> Ele cobra pelo que faz, e por isso dá 7 dias para você conferir antes de pagar."
+    },
+    {
+     "tipo": "p",
+     "texto": "Se a sua empresa já saiu do Simples ou cresceu, vale saber que o plano pago do MarketUP, o MarketUP+, começa em R$ 149,99 por mês, e o ULTRA, com consultoria, custa R$ 999 por mês. O plano mais completo do SoftPay, o ERP Completo, custa R$ 109 por mês com até 10 usuários."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "a-conta-entre-o-gratis-e-o-pago",
+   "titulo": "A conta entre o grátis e o pago",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Sistema grátis custa R$ 0 de mensalidade, e isso é uma vantagem real. A pergunta honesta é outra: o que o sistema pago devolve no seu caixa todo mês?"
+    },
+    {
+     "tipo": "p",
+     "texto": "No SoftPay, o plano Loja custa R$ 89 por mês, ou R$ 1.068 em 12 meses. Ele se paga se trouxer de volta pelo menos R$ 89 por mês em fiado que hoje fica esquecido no caderno, em venda que você deixa de anotar no pico ou em mercadoria que vence parada sem você ver. Some quanto você deixou de receber de fiado nos últimos três meses: se passa de R$ 270, a conta tende a fechar a favor de cobrar; se não passa, o plano grátis provavelmente é a melhor escolha."
+    },
+    {
+     "tipo": "nota",
+     "titulo": "A régua",
+     "texto": "Quem conhece a sua loja é você. Use o teste de 7 dias para medir isso com os seus clientes, não com promessa de página."
+    }
+   ]
+  },
+  {
+   "tipo": "secao",
+   "id": "como-trocar-sem-parar-o-caixa",
+   "titulo": "Como trocar sem parar o caixa",
+   "partes": [
+    {
+     "tipo": "p",
+     "texto": "Se a decisão for testar o SoftPay, dá para fazer isso sem fechar a loja nem perder o histórico:"
+    },
+    {
+     "tipo": "ol",
+     "itens": [
+      "<strong>Cadastre primeiro os 30 produtos que mais saem.</strong> O resto entra com o tempo. Não há cobrança para passar os produtos para o sistema, e a equipe ajuda a configurar pelo WhatsApp.",
+      "<strong>Passe os clientes que têm fiado em aberto.</strong> Com o nome de cada um no sistema, a próxima venda fiada já cai na conta certa.",
+      "<strong>Rode os dois sistemas na mesma semana.</strong> Passe no SoftPay as vendas de dois dias reais, incluindo o horário de pico, e compare o fechamento do caixa.",
+      "<strong>Mande uma dúvida real ao suporte durante o teste.</strong> O tempo de resposta de hoje é o melhor que você vai ter depois de assinar.",
+      "<strong>Só então decida.</strong> Sem cartão no teste, não há nada para cancelar se o SoftPay não servir."
+     ]
+    },
+    {
+     "tipo": "p",
+     "texto": "O roteiro completo para comparar qualquer sistema está em <a href=\"/guias/como-escolher-sistema-de-gestao/\">como escolher um sistema de gestão</a>, e a conta de 12 meses, em <a href=\"/guias/quanto-custa-um-sistema-de-gestao/\">quanto custa um sistema de gestão</a>."
+    }
+   ]
+  }
+ ],
+ "mais": [],
+ "publicado": "2026-11-13",
+ "updated": "2026-11-13"
+}

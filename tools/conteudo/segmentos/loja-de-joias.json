@@ -319,12 +319,12 @@
    "/solucoes/controle-de-clientes/"
   ],
   [
-   "Sistema para loja de cosméticos e perfumaria",
-   "/segmentos/cosmeticos-e-perfumaria/"
-  ],
-  [
    "Sistema para pet shop",
    "/segmentos/pet-shop/"
+  ],
+  [
+   "Sistema para loja de cosméticos e perfumaria",
+   "/segmentos/cosmeticos-e-perfumaria/"
   ],
   [
    "Controle financeiro da loja",
@@ -335,12 +335,12 @@
    "/guias/como-controlar-fiado/"
   ],
   [
-   "Como organizar a vitrine de uma loja pequena",
-   "/blog/como-organizar-vitrine-de-loja/"
-  ],
-  [
    "Como escolher um sistema de gestão",
    "/guias/como-escolher-sistema-de-gestao/"
+  ],
+  [
+   "Como organizar a vitrine de uma loja pequena",
+   "/blog/como-organizar-vitrine-de-loja/"
   ],
   [
    "Como precificar um produto na loja",
@@ -357,10 +357,6 @@
   [
    "Como sair do caderno",
    "/guias/como-sair-do-caderno/"
-  ],
-  [
-   "Troca e devolução na loja",
-   "/blog/troca-e-devolucao-na-loja/"
   ],
   [
    "Meu sistema precisa mudar por causa da reforma tributária?",
@@ -385,6 +381,10 @@
   [
    "Sistema para loja de calçados",
    "/segmentos/loja-de-calcados/"
+  ],
+  [
+   "Sistema para depósito de bebidas",
+   "/segmentos/loja-de-bebidas/"
   ]
  ],
  "publicado": "2026-09-07",
