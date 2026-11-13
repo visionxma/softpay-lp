@@ -124,13 +124,13 @@
       ],
       [
        "Emissão fiscal",
-       "<strong>em ativação</strong> — confirme com o suporte",
+       "<span><strong>em ativação</strong> — confirme com o suporte</span>",
        "confira na fonte"
       ],
       [
        "App nas lojas (Google Play e App Store)",
        "não: abre no navegador do celular",
-       "<strong>sim</strong>, Android e iPhone"
+       "<span><strong>sim</strong>, Android e iPhone</span>"
       ]
      ]
     },
