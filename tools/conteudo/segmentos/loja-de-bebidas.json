@@ -192,14 +192,14 @@
      "itens": [
       "<strong>Não faz controle de vasilhame ou casco retornável.</strong> Se você trabalha com troca de casco, esse controle fica fora do sistema.",
       "<strong>Não integra com balança.</strong> Não é comum em bebidas, mas fica registrado.",
-      "<strong>Não faz delivery nem roteiro de entrega.</strong> A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.",
+      "<strong>Não faz roteiro de entrega nem controle de entregador.</strong> A loja online, a partir do plano Loja, recebe o pedido com Pix e soma a taxa de entrega do bairro; quem leva é você.",
       "<strong>Não tem controle de validade confirmado.</strong> Confirme com o suporte se isso for parte da sua operação.",
       "<strong>Não é sistema para bar ou distribuidora com consumo no local.</strong> Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor."
      ]
     },
     {
      "tipo": "p",
-     "texto": "Se você também atende pelo celular, a loja online do plano Loja recebe o pedido com Pix. A entrega (motoboy, rota e taxa) continua com você, como diz a lista acima."
+     "texto": "Se você também atende pelo celular, a loja online do plano Loja recebe o pedido com Pix e a taxa do bairro. A entrega (motoboy e rota) continua com você, como diz a lista acima."
     }
    ]
   },

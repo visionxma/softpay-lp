@@ -334,7 +334,7 @@
   .page-molde.mx-nextar-bebidas .mxn-hero__cols { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 8px; }
   .page-molde.mx-nextar-bebidas .mxn-hero__cols ul { display: contents; }
   .page-molde.mx-nextar-bebidas .mxn-hero__cols li { font-size: 14px; line-height: 19px; }
-  .page-molde.mx-nextar-bebidas .mxn-hero__arte img { width: auto; max-width: 100%; max-height: 26svh; margin-inline: auto; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__img img { width: auto; max-width: 100%; max-height: 26svh; margin-inline: auto; }
 }
 @media (min-width: 48rem) {
   .page-molde.mx-nextar-bebidas .mxn-trilha { justify-content: flex-start; }
@@ -366,10 +366,74 @@
   .page-molde.mx-nextar-bebidas .mxn-hero__grade { grid-template-columns: minmax(0, 1fr); }
   .page-molde.mx-nextar-bebidas .mxn-hero__arte { grid-column: 1; grid-row: 2; }
   .page-molde.mx-nextar-bebidas .mxn-hero__rec { grid-row: 3; }
-  .page-molde.mx-nextar-bebidas .mxn-hero__arte img { width: auto; max-width: 100%; max-height: 30svh; margin-inline: auto; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__img img { width: auto; max-width: 100%; max-height: 30svh; margin-inline: auto; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__cena { width: min(100%, 34rem); margin-inline: auto; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__foto img { max-height: 30svh; }
   .page-molde.mx-nextar-bebidas .mxn-hero__intro { max-width: 40rem; }
   .page-molde.mx-nextar-bebidas .mxn-h1 { font-size: clamp(34px, 6.6svh, 80px); }
 }
+
+/* topo elevado (14/11/2026, molde da loja de roupas): "Criar conta grátis" + "Entrar" lado a lado na 1ª tela, o caixa
+   REAL do SoftPay no celular à frente do dono do depósito e os seis selos na língua da adega. Celular: "Criar conta"
+   (rótulo curto para o par caber em 360), selos em 3 colunas só com o rótulo; tablet 3 colunas; computador uma fileira
+   de 6. */
+.page-molde.mx-nextar-bebidas .mxn-hero__botoes { gap: 10px; }
+.page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-hero__botoes .mxn-botao { min-height: 52px; padding: 0 26px; }
+.page-molde.mx-nextar-bebidas .mxn-botao--linha { border-color: var(--n-tinta); color: var(--n-tinta); background: #ffffff; }
+@media (hover: hover) and (pointer: fine) { .page-molde.mx-nextar-bebidas .mxn-botao--linha:hover { background: var(--n-tinta); color: #ffffff; } }
+.page-molde.mx-nextar-bebidas .mxn-hero__sem a { color: var(--n-acao); font-weight: 600; text-underline-offset: 3px; }
+.page-molde.mx-nextar-bebidas .mxn-hero__cena { position: relative; padding-bottom: clamp(10px, 2vw, 24px); }
+.page-molde.mx-nextar-bebidas .mxn-hero__foto { border-radius: 20px; overflow: clip; box-shadow: 0 30px 60px -30px rgba(6, 18, 31, .5); }
+.page-molde.mx-nextar-bebidas .mxn-hero__foto img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 60% 42%; }
+/* moldura preta do iPhone 16 Pro Max da extensão Mobile Simulator: a tela entra pelos números do background.js */
+.page-molde.mx-nextar-bebidas .mxn-hero__cena .sim {
+  position: absolute; z-index: 1; left: clamp(10px, 4%, 32px); bottom: 0;
+  width: clamp(5.75rem, 26%, 12.5rem); aspect-ratio: 481 / 991; filter: drop-shadow(0 18px 22px rgba(10, 20, 35, .38));
+}
+.page-molde.mx-nextar-bebidas .sim__moldura { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; max-width: none; pointer-events: none; user-select: none; }
+.page-molde.mx-nextar-bebidas .sim__tela { position: absolute; z-index: 1; overflow: clip; background: #ffffff; left: 4.3659%; top: 1.8163%; width: 91.4761%; height: 96.4682%; border-radius: 17.73% / 8.16%; container: tela / size; --barra: 6.5%; }
+.page-molde.mx-nextar-bebidas .sim__tela img { position: absolute; left: 0; top: var(--barra); width: 100%; max-width: none; height: calc(100% - var(--barra)); object-fit: cover; object-position: top; }
+.page-molde.mx-nextar-bebidas .sim__status { position: absolute; z-index: 3; left: 0; right: 0; top: 0; height: var(--barra); display: flex; align-items: center; justify-content: space-between; padding: 0 9.5cqw 0 12cqw; font-size: 3.7cqw; font-weight: 600; color: #0a1a28; background: #ffffff; }
+.page-molde.mx-nextar-bebidas .sim__sinais { display: inline-flex; align-items: flex-end; gap: 1cqw; height: 2.7cqw; }
+.page-molde.mx-nextar-bebidas .sim__sinais i { display: block; width: 1.6cqw; background: currentColor; border-radius: 1px; }
+.page-molde.mx-nextar-bebidas .sim__sinais i:nth-child(1) { height: 45%; }
+.page-molde.mx-nextar-bebidas .sim__sinais i:nth-child(2) { height: 70%; }
+.page-molde.mx-nextar-bebidas .sim__sinais i:nth-child(3) { height: 100%; }
+.page-molde.mx-nextar-bebidas .sim__ilha { position: absolute; z-index: 4; left: 35.863%; top: 3.33%; width: 28.441%; height: 3.976%; border-radius: 99px; background: #050505; pointer-events: none; }
+.page-molde.mx-nextar-bebidas .mxn-selos { order: 7; margin-top: 10px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; text-align: left; }
+.page-molde.mx-nextar-bebidas .mxn-selos li { min-width: 0; }
+.page-molde.mx-nextar-bebidas .mxn-selos a {
+  display: grid; align-content: center; gap: 2px; height: 100%; min-height: 44px; padding: 7px 10px; border-radius: 12px;
+  background: rgba(255, 255, 255, .85); border: 1px solid rgba(12, 92, 158, .18); box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+  color: var(--n-tinta); text-decoration: none; transition: transform .15s ease, border-color .18s ease;
+}
+.page-molde.mx-nextar-bebidas .mxn-selos a:active { transform: scale(.98); }
+.page-molde.mx-nextar-bebidas .mxn-selos strong { font: 600 13px/1.25 var(--n-sans); color: var(--n-tinta); }
+.page-molde.mx-nextar-bebidas .mxn-selos span { font: 400 13px/1.3 var(--n-sans); color: var(--n-cinza); }
+@media (hover: hover) and (pointer: fine) { .page-molde.mx-nextar-bebidas .mxn-selos a:hover { border-color: var(--n-acao); transform: translateY(-2px); } }
+@media (max-width: 47.99rem) {
+  .page-molde.mx-nextar-bebidas .mxn-so-largo { display: none; }
+  .page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-hero__botoes .mxn-botao { flex: 1 1 0; min-width: 0; padding: 0 12px; }
+  .page-molde.mx-nextar-bebidas .mxn-selos span { display: none; }
+  .page-molde.mx-nextar-bebidas .mxn-hero__foto img { max-height: 28svh; }
+  .page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-hero__rotulo { margin-top: 14px; }
+  /* o par de botões vem antes da cena, na ordem de leitura do computador (texto e botões | cena): com a cena antes,
+     "Criar conta" e "Entrar" caíam em y=661 de 844, embaixo do aviso de cookies, e o portão hero-capta reprovava
+     (medição de 15/11/2026, 390x844) */
+  .page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-hero__arte { order: 6; margin-top: 18px; }
+  .page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-hero__rotulo { order: 7; }
+  .page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-selos { order: 8; }
+}
+/* rótulo dos selos em tinta de texto: o cinza dava 4,38:1 sobre o fim do degradê em 768 (portão contraste-texto) */
+.page-molde.mx-nextar-bebidas .mxn-hero--cena .mxn-hero__rotulo { color: var(--n-texto); }
+@media (min-width: 48rem) {
+  .page-molde.mx-nextar-bebidas .mxn-hero__foto img { aspect-ratio: 5 / 4; }
+  .page-molde.mx-nextar-bebidas .mxn-selos { gap: 8px; }
+  .page-molde.mx-nextar-bebidas .mxn-selos strong { font-size: 15px; }
+  .page-molde.mx-nextar-bebidas .mxn-selos span { font-size: 14px; }
+}
+@media (min-width: 64rem) { .page-molde.mx-nextar-bebidas .mxn-selos { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
+@media (min-width: 48rem) and (max-height: 860px) { .page-molde.mx-nextar-bebidas .mxn-hero__foto img { max-height: 54svh; } }
 
 /* vãos da casa: até 72 px no celular, até 120 no computador (a referência usa 128) */
 .page-molde.mx-nextar-bebidas :is(.mxn-vitrine, .mxn-linha, .mxn-outros) { padding-block: clamp(48px, 13.4px + 7.4vw, 112px); }
@@ -451,6 +515,11 @@
 .page-molde.mx-nextar-bebidas .mxn-depo__video { width: 100%; height: 100%; object-fit: cover; display: block; }
 .page-molde.mx-nextar-bebidas .mxn-depo__video[hidden] { display: none; }
 .page-molde.mx-nextar-bebidas .mxn-depo__frase p { font-size: clamp(28px, 20.6px + 1.9vw, 48px); line-height: 1.15; }
+/* "Veja o vídeo do depoimento" não quebrava (nowrap do botão do Nex): 329 px numa coluna de 272 em 320, 5 px de
+   rolagem lateral, no ar desde o clone (varredura de 15/11/2026). No celular ele quebra e encolhe o recheio. */
+@media (max-width: 47.99rem) {
+  .page-molde.mx-nextar-bebidas .mxn-depo__botao { max-width: 100%; white-space: normal; text-align: center; padding-inline: 20px; gap: 10px; }
+}
 .page-molde.mx-nextar-bebidas .mxn-depo figcaption { margin-top: clamp(24px, 16px + 2.2vw, 48px); }
 @media (min-width: 48rem) {
   .page-molde.mx-nextar-bebidas .mxn-depo__foto { width: min(100%, 440px); justify-self: center; }

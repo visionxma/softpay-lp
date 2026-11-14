@@ -71,7 +71,9 @@ function quadro(D, img, sizes = '100vw', classe = '') {
   const menor = img.menor ? ` srcset="${D.v(D.base + '/' + img.menor)} ${img.menorW || 800}w, ${src} ${img.w}w" sizes="${sizes}"` : '';
   return `<picture class="mxn-quadro ${classe}"><img src="${src}"${menor} alt="${e(img.alt)}" width="${img.w}" height="${img.h}" loading="${img.cedo ? 'eager' : 'lazy'}"${img.cedo ? ' fetchpriority="high"' : ''} decoding="async"></picture>`;
 }
-const botao = (b, extra = '') => `<a class="mxn-botao mxn-botao--${b.tipo || 'cheio'} ${extra}" href="${e(b.href || '#')}"${b.externo ? ' target="_blank" rel="noopener"' : ''}>${b.icone || ''}<span>${e(b.texto)}</span>${b.tipo === 'contorno' ? SETA : ''}</a>`;
+// `so`: complemento que só aparece da largura de tablet para cima ("Criar conta" + " grátis"); `track`: o clique de
+// criar conta conta como cadastro na origem do cadastro (mesmo atributo da loja de roupas)
+const botao = (b, extra = '') => `<a class="mxn-botao mxn-botao--${b.tipo || 'cheio'} ${extra}" href="${e(b.href || '#')}"${b.externo ? ' target="_blank" rel="noopener"' : ''}${b.track ? ' data-track="complete-registration"' : ''}>${b.icone || ''}<span>${e(b.texto)}${b.so ? `<span class="mxn-so-largo">${e(b.so)}</span>` : ''}</span>${b.tipo === 'contorno' ? SETA : ''}</a>`;
 const olho = (t, cor = '') => (t ? `<p class="mxn-olho${cor ? ' mxn-olho--' + cor : ''}">${e(t)}</p>` : '');
 
 // ---------------------------------------------------------------------------------------- conteúdo das duas versões
@@ -106,6 +108,21 @@ function daOrigem() {
   };
 }
 
+// A rotina do depósito e da adega em seis selos, na língua de quem vende bebida (14/11/2026). Cada frase foi
+// conferida no código do SOFTPAY APP antes de entrar: preço de atacado "a partir de N unidades" no cadastro do
+// produto (ProductFormDialog, aplicado no PDV), fiado com cobrança por link (Fiado.tsx), variação com preço próprio
+// ("Preço da variação"), loja online com entrega e taxa por bairro (DeliveryZone {name, fee} no carrinho), nota que
+// recusa bebida sem ICMS-ST marcado (emitFromSale.ts) e estoque mínimo por item. Vasilhame/casco o app NÃO controla:
+// fica fora dos selos e continua dito em "o que o SoftPay não faz" e na FAQ.
+const SELOS = [
+  ['Engradado e lata', 'preço de atacado a partir de N unidades', '#mxn-muda-2'],
+  ['Fiado no nome', 'saldo, histórico e cobrança por Pix', '#mxn-muda-4'],
+  ['Gelada e natural', 'cada variação com o seu preço', '#mxn-muda-2'],
+  ['Delivery', 'pedido online com taxa por bairro', '#mxn-nao-faz'],
+  ['ICMS-ST na nota', 'bebida sem ST não passa', '#perguntas'],
+  ['Estoque da sexta', 'aviso do que está acabando', '#mxn-muda-3'],
+];
+
 // imagens da rota (fotos de comércio de verdade do acervo do SoftPay e prints reais do sistema, em publicar/)
 const FOTO = (n, alt) => ({ arq: `foto-${n}.webp`, menor: `foto-${n}-800.webp`, w: 1600, h: 668, alt });
 const TELA = (n, alt) => ({ arq: `tela-${n}.webp`, menor: `tela-${n}-800.webp`, w: 1400, h: 845, alt });
@@ -134,14 +151,21 @@ function daRota(D) {
     hero: {
       trilha: '<nav class="mxn-trilha" aria-label="Você está em"><a href="/">Início</a><span aria-hidden="true">/</span>'
         + (D.breadcrumbs || []).map((b) => (b[1] ? `<a href="${e(b[1])}">${e(b[0])}</a><span aria-hidden="true">/</span>` : `<span aria-current="page">${e(b[0])}</span>`)).join('') + '</nav>',
-      h1: D.h1, intro: `<p>${e(D.intro)}</p>`, botoes: [cadastro],
-      nota: { forte: 'Planos a partir de R$ 69/mês', texto: '7 dias grátis, sem cartão de crédito.', celular: '' },
-      img: { arq: 'aparelhos.webp', menor: 'aparelhos-800.webp', w: 1448, h: 1086, alt: 'Monitor com o caixa do SoftPay aberto e celular com o carrinho da venda', cedo: true },
-      rotulo: 'Recursos principais para loja de bebidas:',
-      colunas: [
-        [{ texto: 'PDV rápido para o pico', href: '#mxn-muda-1' }, { texto: 'Atacado e varejo', href: '#mxn-muda-2' }, { texto: 'Estoque de alto giro', href: '#mxn-muda-3' }],
-        [{ texto: 'Fiado sem caderno', href: '#mxn-muda-4' }, { texto: 'Curva ABC', href: '#mxn-muda-5' }, { texto: 'Planos a partir de R$ 69', href: '#mxn-planos' }],
-      ],
+      h1: D.h1, intro: `<p>${e(D.intro)}</p>`,
+      // regra `hero-de-lp-de-sistema-entrega-criar-conta-e-entrar` (14/11/2026): os dois lado a lado na 1ª tela; o
+      // WhatsApp desce para a nota, como texto, para quem prefere conversar antes
+      botoes: [{ texto: 'Criar conta', so: ' grátis', href: D.links.cadastro, tipo: 'cheio', track: true }, { texto: 'Entrar', href: D.links.app, tipo: 'linha' }],
+      nota: { forte: 'Planos a partir de R$ 69/mês', texto: '7 dias grátis, sem cartão.', zap: D.links.wpp, celular: '' },
+      // o sistema REAL na mão de quem vende bebida: o dono do depósito entre os engradados e, à frente dele, o caixa do
+      // SoftPay no celular (moldura preta do iPhone 16 Pro Max da extensão Mobile Simulator) com o print real tirado em
+      // 14/11/2026 pelo ~/.jarvis/softpay/prints-nicho (nicho "bebidas", conta de demonstração, 15 escritas abortadas)
+      cena: {
+        foto: { ...FOTO('loja-de-bebidas', 'Dono de depósito de bebidas conferindo uma garrafa entre engradados empilhados'), cedo: true },
+        print: 'celular-pdv-bebidas.webp',
+        printAlt: 'Tela real do SoftPay no celular: caixa de um depósito com fardo de cerveja, refrigerante 2 L, gelo e carvão no carrinho e o aviso de gelo acabando',
+      },
+      rotulo: 'O que o SoftPay resolve no depósito e na adega:',
+      selos: SELOS,
     },
     vitrines: [
       { k: 'catalogo', classe: 'mxn-vitrine--lilas', olho: 'Sexta, sábado e o resto da semana', titulo: bRot ? bRot.titulo : '', corpo: P(bRot),
@@ -152,7 +176,7 @@ function daRota(D) {
     linhas: [
       { k: 'fornecedores', classe: 'mxn-linha--fio', olho: 'Onde a margem escapa', cor: '', titulo: bProb ? bProb.titulo : '', corpo: lista(bProb, 'mxn-lista'), botao: contorno,
         img: FOTO('distribuidora', 'Comerciante conferindo no papel e no celular o estoque de engradados') },
-      { k: 'combos', classe: 'mxn-linha--inversa mxn-linha--painel', olho: 'Combinado antes de começar', cor: 'verde', titulo: bNao ? bNao.titulo : '', corpo: lista(bNao, 'mxn-lista') + P(bNao), botao: contorno,
+      { k: 'combos', id: 'mxn-nao-faz', classe: 'mxn-linha--inversa mxn-linha--painel', olho: 'Combinado antes de começar', cor: 'verde', titulo: bNao ? bNao.titulo : '', corpo: lista(bNao, 'mxn-lista') + P(bNao), botao: contorno,
         img: { arq: 'tela-tablet-financeiro.webp', menor: 'tela-tablet-financeiro-600.webp', menorW: 600, w: 1268, h: 1690, alt: 'Financeiro do SoftPay no tablet: vendas por forma de pagamento (Dinheiro, PIX, Fiado, Crédito e Débito)' } },
     ],
     outros: {
@@ -181,16 +205,30 @@ function daRota(D) {
 }
 
 // ---------------------------------------------------------------------------------------------------- peças
+// cena do topo da rota: a foto do depósito e, à frente, o celular com o print real do caixa (números da tela da
+// moldura da extensão: left 21, top 18, 440 x 956 sobre 481 x 991, os mesmos da loja de roupas)
+function cena(D, c) {
+  return `<div class="mxn-hero__cena">${quadro(D, c.foto, '(min-width: 64rem) 602px, 100vw', 'mxn-hero__foto')}`
+    + `<div class="sim"><img class="sim__moldura" src="${D.v(`${D.base}/iphone-16-pro-max-preto.webp`)}" width="962" height="1982" alt="">`
+    + `<div class="sim__tela"><div class="sim__status" aria-hidden="true"><span>9:41</span><span class="sim__sinais"><i></i><i></i><i></i></span></div>`
+    + `<img src="${D.v(`${D.base}/${c.print}`)}" width="690" height="1493" alt="${e(c.printAlt)}" fetchpriority="high" decoding="async"></div>`
+    + `<i class="sim__ilha" aria-hidden="true"></i></div></div>`;
+}
+
 function hero(D, C) {
   const t = C.hero;
   const item = (c) => `<li>${c.href ? `<a href="${e(c.href)}">${e(c.texto)}</a>` : `<span>${e(c.texto)}</span>`}</li>`;
-  return `<section class="mxn-hero"${sec(D, 'hero')}><div class="mxn-casca mxn-hero__grade">`
+  const zap = t.nota.zap ? ` Prefere conversar? <a href="${e(t.nota.zap)}" target="_blank" rel="noopener">Fale no WhatsApp</a>` : '';
+  const rec = t.selos
+    ? `<ul class="mxn-selos" aria-label="${e(t.rotulo)}">${t.selos.map(([s, d, h]) => `<li><a href="${e(h)}"><strong>${e(s)}</strong><span>${e(d)}</span></a></li>`).join('')}</ul>`
+    : `<div class="mxn-hero__cols">${t.colunas.map((c) => `<ul>${c.map(item).join('')}</ul>`).join('')}</div>`;
+  return `<section class="mxn-hero${t.cena ? ' mxn-hero--cena' : ''}"${sec(D, 'hero')}><div class="mxn-casca mxn-hero__grade">`
     + `<div class="mxn-hero__texto">${t.trilha}<h1 class="mxn-h1">${e(t.h1)}</h1><div class="mxn-hero__intro">${t.intro}</div>`
     + `<div class="mxn-hero__botoes">${t.botoes.map((b) => botao(b)).join('')}</div>`
-    + `<div class="mxn-hero__nota"><p class="mxn-hero__planos"><span aria-hidden="true">👉</span> <strong>${e(t.nota.forte)}</strong></p><p class="mxn-hero__sem">${e(t.nota.texto)}</p>`
+    + `<div class="mxn-hero__nota"><p class="mxn-hero__planos"><span aria-hidden="true">👉</span> <strong>${e(t.nota.forte)}</strong></p><p class="mxn-hero__sem">${e(t.nota.texto)}${zap}</p>`
     + (t.nota.celular ? `<p class="mxn-hero__celular">${e(t.nota.celular)}</p>` : '') + `</div></div>`
-    + `<div class="mxn-hero__arte">${quadro(D, t.img, '(min-width: 64rem) 602px, 100vw', 'mxn-hero__img')}</div>`
-    + `<div class="mxn-hero__rec"><p class="mxn-hero__rotulo">${e(t.rotulo)}</p><div class="mxn-hero__cols">${t.colunas.map((c) => `<ul>${c.map(item).join('')}</ul>`).join('')}</div></div>`
+    + `<div class="mxn-hero__arte">${t.cena ? cena(D, t.cena) : quadro(D, t.img, '(min-width: 64rem) 602px, 100vw', 'mxn-hero__img')}</div>`
+    + `<div class="mxn-hero__rec"><p class="mxn-hero__rotulo">${e(t.rotulo)}</p>${rec}</div>`
     + `</div></section>`;
 }
 
@@ -202,7 +240,7 @@ function vitrine(D, v) {
 }
 
 function linha(D, l) {
-  return `<section class="mxn-linha ${l.classe}"${sec(D, l.k)}><div class="mxn-casca mxn-linha__grade">`
+  return `<section class="mxn-linha ${l.classe}"${l.id ? ` id="${l.id}"` : ''}${sec(D, l.k)}><div class="mxn-casca mxn-linha__grade">`
     + `<div class="mxn-linha__texto mxn-rv">${olho(l.olho, l.cor)}<h2 class="mxn-titulo">${e(l.titulo)}</h2><div class="mxn-linha__corpo">${l.corpo}</div>`
     + (l.botao ? `<div class="mxn-linha__botao">${botao(l.botao)}</div>` : '') + `</div>`
     + `<div class="mxn-linha__arte mxn-rv">${quadro(D, l.img, '(min-width: 64rem) 592px, 100vw', 'mxn-linha__img')}</div>`
