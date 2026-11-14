@@ -59,12 +59,30 @@ function imgResp(D, arq, arq800, alt, w, h, sizes, extra = '') {
   return `<img src="${D.v(`${D.base}/${arq}`)}" srcset="${D.v(`${D.base}/${arq800}`)} 800w, ${D.v(`${D.base}/${arq}`)} ${w}w" sizes="${sizes}" width="${w}" height="${h}" alt="${e(alt)}"${extra}>`;
 }
 
+// Par de botões da hero e da faixa final (14/11/2026, regra `hero-de-lp-de-sistema-entrega-criar-conta-e-entrar`):
+// "Criar conta grátis" + "Entrar" lado a lado, os dois como botão de 44 px na 1ª tela; o WhatsApp desce para a
+// linha de baixo, como texto, para quem prefere conversar antes.
 function botoes(D, claro = false) {
   return `<div class="sh-botoes${claro ? ' sh-botoes--claro' : ''}">`
-    + `<a class="sh-btn sh-btn--cheio" href="${e(D.links.cadastro)}">Teste grátis</a>`
-    + `<a class="sh-btn sh-btn--contorno" href="${e(D.links.wpp)}" target="_blank" rel="noopener">WhatsApp</a>`
+    + `<a class="sh-btn sh-btn--cheio" href="${e(D.links.cadastro)}" data-track="complete-registration">Criar conta<span class="sh-so-largo">&nbsp;grátis</span></a>`
+    + `<a class="sh-btn sh-btn--contorno" href="${e(D.links.app)}">Entrar</a>`
     + `</div>`
-    + `<p class="sh-entrar">Já usa o SoftPay? <a href="${e(D.links.app)}">Entrar no sistema</a></p>`;
+    + `<p class="sh-entrar">7 dias grátis, sem cartão. Prefere conversar? <a href="${e(D.links.wpp)}" target="_blank" rel="noopener">Fale no WhatsApp</a></p>`;
+}
+
+// A rotina da loja de moda em quatro selos, na língua do lojista (grade, provador, crediário, Instagram).
+// Só o que a própria rota já afirma do produto: grade por tamanho e cor (plano Loja), saldo consultado no
+// celular no provador, caderninho de fiado com cobrança por link de Pix, loja online com Pix (link que vai na bio).
+const ROTINA = [
+  ['Grade de tamanho e cor', 'saldo por combinação'],
+  ['Provador', '“tem no M?” no celular'],
+  ['Crediário', 'caderninho com cobrança Pix'],
+  ['Instagram', 'loja online no link da bio'],
+];
+function rotina() {
+  return `<ul class="sh-rotina" aria-label="O que o SoftPay resolve na loja de moda">`
+    + ROTINA.map(([t, d]) => `<li><strong>${t}</strong><span>${d}</span></li>`).join('')
+    + `</ul>`;
 }
 
 // ---------- conteúdo da rota, por bloco ----------
@@ -96,8 +114,16 @@ function hero(D) {
     + `<h1 class="sh-t1">${D.h1}</h1>`
     + `<p class="sh-hero-intro">${D.intro}</p>`
     + botoes(D)
+    + rotina()
     + `</div>`
-    + `<div class="sh-hero-foto">${imgResp(D, 'hero-loja.webp', 'hero-loja-800.webp', alt, 1600, 668, '100vw', ' fetchpriority="high" decoding="async"')}</div>`
+    + `<div class="sh-hero-foto">${imgResp(D, 'hero-loja.webp', 'hero-loja-800.webp', alt, 1600, 668, '100vw', ' fetchpriority="high" decoding="async"')}`
+    // o sistema REAL na hero (14/11/2026): iPhone 16 Pro Max preto da extensão Mobile Simulator com a captura real
+    // do carrinho do PDV no celular, subindo da borda de baixo da foto, ao lado da lojista; a faixa recorta a base
+    + `<div class="sh-hero-sim sim"><img class="sim__moldura" src="${D.v(`${D.base}/iphone-16-pro-max-preto.webp`)}" width="962" height="1982" alt="">`
+    + `<div class="sim__tela"><div class="sim__status" aria-hidden="true"><span>9:41</span><span class="sim__sinais"><i></i><i></i><i></i></span></div>`
+    + `<img src="${D.v(`${D.base}/celular-carrinho.webp`)}" width="690" height="1498" alt="Tela real do SoftPay no celular: carrinho do PDV com quatro itens e o total da venda" fetchpriority="high" decoding="async"></div>`
+    + `<i class="sim__ilha" aria-hidden="true"></i></div>`
+    + `</div>`
     + `</section>`;
 }
 
