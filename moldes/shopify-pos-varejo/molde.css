@@ -196,6 +196,62 @@
   font-size: clamp(1rem, .95rem + .25vw, 1.1875rem);
 }
 .mx-shopify-pos-varejo .sh-hero .sh-botoes { max-width: 26rem; margin-inline: auto; }
+/* o sistema real na hero (14/11/2026): moldura preta do iPhone 16 Pro Max da extensão Mobile Simulator (números da
+   tela: left 21, top 18, 440 x 956 sobre 481 x 991), com a captura real do carrinho; sobe da borda de baixo da foto */
+.mx-shopify-pos-varejo .sh-hero-sim {
+  position: absolute;
+  z-index: 1;
+  right: max(1rem, 7%);
+  top: clamp(.75rem, 3svh, 2rem);
+  width: clamp(6.5rem, 11vw, 12.5rem);
+  aspect-ratio: 481 / 991;
+  filter: drop-shadow(0 18px 22px rgba(10, 20, 35, .38));
+}
+.mx-shopify-pos-varejo .sim__moldura { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; max-width: none; pointer-events: none; user-select: none; }
+.mx-shopify-pos-varejo .sim__tela { position: absolute; z-index: 1; overflow: clip; background: #fff; left: 4.3659%; top: 1.8163%; width: 91.4761%; height: 96.4682%; border-radius: 17.73% / 8.16%; container: tela / size; --barra: 6.5%; }
+.mx-shopify-pos-varejo .sh-hero-foto .sim__tela img { position: absolute; inset: auto; left: 0; top: var(--barra); width: 100%; height: calc(100% - var(--barra)); object-fit: cover; object-position: top; animation: none; }
+.mx-shopify-pos-varejo .sim__status { position: absolute; z-index: 3; left: 0; right: 0; top: 0; height: var(--barra); display: flex; align-items: center; justify-content: space-between; padding: 0 9.5cqw 0 12cqw; font-size: 3.7cqw; font-weight: 600; line-height: 1; color: #0b1b2c; background: #fff; }
+.mx-shopify-pos-varejo .sim__sinais { display: inline-flex; align-items: flex-end; gap: 1cqw; height: 2.7cqw; }
+.mx-shopify-pos-varejo .sim__sinais i { display: block; width: 1.6cqw; background: currentColor; border-radius: 1px; }
+.mx-shopify-pos-varejo .sim__sinais i:nth-child(1) { height: 45%; }
+.mx-shopify-pos-varejo .sim__sinais i:nth-child(2) { height: 70%; }
+.mx-shopify-pos-varejo .sim__sinais i:nth-child(3) { height: 100%; }
+.mx-shopify-pos-varejo .sim__ilha { position: absolute; z-index: 4; left: 35.863%; top: 3.33%; width: 28.441%; height: 3.976%; border-radius: 99px; background: #050505; pointer-events: none; }
+/* rotina da loja de moda em quatro selos (14/11/2026): 2 colunas no celular, uma fileira de 4 do tablet em diante */
+.mx-shopify-pos-varejo .sh-rotina {
+  list-style: none;
+  padding: 0;
+  margin: clamp(1rem, .8rem + .8vw, 1.5rem) auto 0;
+  max-width: 58rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem;
+  text-align: left;
+}
+.mx-shopify-pos-varejo .sh-rotina li {
+  display: grid;
+  gap: .125rem;
+  min-width: 0;
+  padding: .5rem .75rem;
+  border-radius: .75rem;
+  background: rgba(255, 255, 255, .78);
+  border: 1px solid rgba(13, 99, 176, .16);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .05);
+}
+.mx-shopify-pos-varejo .sh-rotina strong { font-family: var(--sh-display); font-size: .875rem; line-height: 1.25; color: var(--sh-tinta); }
+.mx-shopify-pos-varejo .sh-rotina span { font-size: .8125rem; line-height: 1.3; color: var(--sh-tinta-2); }
+/* celular: só o rótulo (copy resumida), para a foto da loja continuar na 1ª tela */
+@media (max-width: 47.99rem) {
+  .mx-shopify-pos-varejo .sh-rotina span { display: none; }
+  .mx-shopify-pos-varejo .sh-rotina li { padding: .4375rem .625rem; }
+  .mx-shopify-pos-varejo .sh-rotina strong { font-size: .8125rem; }
+  /* o botão flutuante do WhatsApp (chassi) fica no canto direito: o celular senta à esquerda dele */
+  .mx-shopify-pos-varejo .sh-hero-sim { right: 4.75rem; }
+}
+@media (min-width: 48rem) {
+  .mx-shopify-pos-varejo .sh-rotina { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .mx-shopify-pos-varejo .sh-hero .sh-hero-texto { padding-bottom: clamp(1.25rem, .9rem + 1vw, 2rem); }
+}
 .mx-shopify-pos-varejo .sh-hero-foto {
   position: relative;
   flex: 1 1 auto;
