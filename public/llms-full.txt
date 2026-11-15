@@ -824,14 +824,14 @@ As páginas de segmento contam a rotina do seu negócio. As de soluções explic
 | Registrar exige parar o atendimento | Bot do WhatsApp | Todos. A partir do plano Loja |
 | Preciso emitir nota fiscal | NF-e e NFC-e | Distribuidora, autopeças, materiais de construção |
 | Tenho mais de um ponto de venda | Múltiplas lojas | Empresas com filiais e distribuidora |
-| Atendo mesa, balcão e entrega ao mesmo tempo | Mesas e comandas, no PDV, e pedido de entrega pela loja online | Hamburgueria, pizzaria, açaiteria e restaurante. A partir do plano Loja |
+| Atendo mesa, balcão e entrega ao mesmo tempo | Mesas e comandas, no PDV, e pedido de entrega pela loja online | Hamburgueria, pizzaria, açaiteria, restaurante e lanchonete. A partir do plano Loja |
 | Quero vender além da loja física | Loja online | Roupas, variedades, joias. A partir do plano Loja |
 
 ## Não achou o seu segmento?
 
 A base é a mesma para qualquer comércio com estoque: PDV, caixa, estoque, fiado, clientes e relatórios. Se a sua loja não tem página própria, comece pela de pequeno comércio e MEI — ela descreve o que vale para todos.
 
-Comida também entra: hamburgueria, pizzaria, açaiteria e restaurante usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja.
+Comida também entra: hamburgueria, pizzaria, açaiteria e restaurante usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja. Para o balcão de lanchonete há a página Sistema para lanchonete: caixa rápido, fiado, cardápio digital e delivery.
 
 Também vale ser direto sobre onde o SoftPay não é a escolha certa hoje: prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste.
 Como ler estas páginas
@@ -1463,7 +1463,7 @@ A partir do plano Loja, entrada de estoque, despesa e fiado entram por mensagem 
 Os limites, antes de você contratar contando com eles:
 - Não monta kit nem cesta. Combinar produtos num item só, com baixa dos componentes, não faz parte do sistema — e em variedades isso pesa em datas comemorativas.
 - Não lê o peso direto da balança pelo cabo. O peso chega pela etiqueta: com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta e lança o item com o peso no carrinho, para o produto vendido em kg ou g. Sem balança etiquetadora, o próprio SoftPay cria o código de balança do produto e imprime a etiqueta com o peso.
-- Não imprime etiqueta de preço nem de gôndola.
+- Não tem modelo próprio de etiqueta de gôndola. A etiqueta que ele imprime leva nome, preço e código de barras, em rolo de 40×25 a 80×50 mm ou em folha A4, com o molde ajustável em milímetros.
 - Não faz pedido de compra automático. O sistema mostra o que está acabando; a compra continua sendo sua.
 - Validade e lote não estão confirmados. Se você trabalha com cosmético ou alimento, verifique com o suporte.
 - Não há limite de produtos divulgado. Se o seu catálogo passa de alguns milhares de itens, confirme antes de contratar.
@@ -1556,6 +1556,10 @@ Com o histórico de vendas registrado, a compra da próxima temporada deixa de s
 
 Se a sua papelaria precisa emitir NFC-e, os planos Nota Fiscal e ERP Completo cobrem a emissão, com cadastro fiscal e pacote do contador.
 
+### Etiqueta de preço com código de barras
+
+O SoftPay imprime a etiqueta do produto com nome, preço e código de barras, em rolo de 40×25 a 80×50 mm ou em folha A4, uma a uma ou em lote. Na volta às aulas, o caderno e a caneta que chegam em caixa saem etiquetados e já prontos para o caixa ler.
+
 ### Mais de uma pessoa no balcão
 
 Na temporada, cada pessoa entra com o próprio login. O plano Loja permite até 3 usuários e o ERP Completo até 10.
@@ -1571,7 +1575,6 @@ Vale saber antes, principalmente por causa da temporada:
 - Não monta kit de lista. Vender "lista do 3º ano" como um item só, com baixa dos componentes, não faz parte do sistema.
 - Não gera orçamento em PDF para a família ou a escola levar.
 - Não tem ordem de serviço. Impressão sob encomenda, com prazo e retirada, fica fora — mesmo que o serviço em si possa ser vendido pelo PDV.
-- Não imprime etiqueta de preço.
 - A emissão fiscal consta como em ativação. Se você precisa de NFC-e no pico, confirme a situação com o suporte antes de contratar.
 
 ## Perguntas que você passa a conseguir responder

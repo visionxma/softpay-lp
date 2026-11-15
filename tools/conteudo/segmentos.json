@@ -206,7 +206,7 @@
       [
        "Atendo mesa, balcão e entrega ao mesmo tempo",
        "Mesas e comandas, no PDV, e pedido de entrega pela <a href=\"/solucoes/loja-online/\">loja online</a>",
-       "<a href=\"https://sistemaparahamburgueria.softpaypdv.com/\">Hamburgueria</a>, <a href=\"https://sistemaparapizzaria.softpaypdv.com/\">pizzaria</a>, <a href=\"https://sistemaparaacaiteria.softpaypdv.com/\">açaiteria</a> e <a href=\"https://sistemapararestaurante.softpaypdv.com/\">restaurante</a>. A partir do plano Loja"
+       "<a href=\"https://sistemaparahamburgueria.softpaypdv.com/\">Hamburgueria</a>, <a href=\"https://sistemaparapizzaria.softpaypdv.com/\">pizzaria</a>, <a href=\"https://sistemaparaacaiteria.softpaypdv.com/\">açaiteria</a>, <a href=\"https://sistemapararestaurante.softpaypdv.com/\">restaurante</a> e <a href=\"https://sistemaparalanchonete.softpaypdv.com/\">lanchonete</a>. A partir do plano Loja"
       ],
       [
        "Quero vender além da loja física",
@@ -228,7 +228,7 @@
     },
     {
      "tipo": "p",
-     "texto": "Comida também entra: <a href=\"https://sistemaparahamburgueria.softpaypdv.com/\">hamburgueria</a>, <a href=\"https://sistemaparapizzaria.softpaypdv.com/\">pizzaria</a>, <a href=\"https://sistemaparaacaiteria.softpaypdv.com/\">açaiteria</a> e <a href=\"https://sistemapararestaurante.softpaypdv.com/\">restaurante</a> usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja."
+     "texto": "Comida também entra: <a href=\"https://sistemaparahamburgueria.softpaypdv.com/\">hamburgueria</a>, <a href=\"https://sistemaparapizzaria.softpaypdv.com/\">pizzaria</a>, <a href=\"https://sistemaparaacaiteria.softpaypdv.com/\">açaiteria</a> e <a href=\"https://sistemapararestaurante.softpaypdv.com/\">restaurante</a> usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja. Para o balcão de lanchonete há a página <a href=\"https://sistemaparalanchonete.softpaypdv.com/\">Sistema para lanchonete</a>: caixa rápido, fiado, cardápio digital e delivery."
     },
     {
      "tipo": "p",
@@ -244,5 +244,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-14"
+ "updated": "2026-11-15"
 }

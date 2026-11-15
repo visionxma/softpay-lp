@@ -140,6 +140,14 @@
     },
     {
      "tipo": "h3",
+     "texto": "Etiqueta de preço com código de barras"
+    },
+    {
+     "tipo": "p",
+     "texto": "O SoftPay imprime a etiqueta do produto com nome, preço e código de barras, em rolo de 40×25 a 80×50 mm ou em folha A4, uma a uma ou em lote. Na volta às aulas, o caderno e a caneta que chegam em caixa saem etiquetados e já prontos para o caixa ler."
+    },
+    {
+     "tipo": "h3",
      "texto": "Mais de uma pessoa no balcão"
     },
     {
@@ -172,7 +180,6 @@
       "<strong>Não monta kit de lista.</strong> Vender \"lista do 3º ano\" como um item só, com baixa dos componentes, não faz parte do sistema.",
       "<strong>Não gera orçamento em PDF</strong> para a família ou a escola levar.",
       "<strong>Não tem ordem de serviço.</strong> Impressão sob encomenda, com prazo e retirada, fica fora — mesmo que o serviço em si possa ser vendido pelo PDV.",
-      "<strong>Não imprime etiqueta de preço.</strong>",
       "<strong>A emissão fiscal consta como em ativação.</strong> Se você precisa de NFC-e no pico, confirme a situação com o suporte antes de contratar."
      ]
     }
@@ -274,20 +281,12 @@
    "/solucoes/multiplas-lojas/"
   ],
   [
-   "Controle de clientes (CRM)",
-   "/solucoes/controle-de-clientes/"
-  ],
-  [
    "Emissão de NF-e",
    "/solucoes/nfe/"
   ],
   [
    "Como organizar a vitrine de uma loja pequena",
    "/blog/como-organizar-vitrine-de-loja/"
-  ],
-  [
-   "Loja online com Pix",
-   "/solucoes/loja-online/"
   ],
   [
    "NF-e e NFC-e: qual a diferença",
@@ -298,10 +297,6 @@
    "/guias/reforma-tributaria-comercio/"
   ],
   [
-   "Como calcular o lucro de uma loja",
-   "/guias/como-calcular-lucro-da-loja/"
-  ],
-  [
    "Como organizar uma loja",
    "/guias/como-organizar-uma-loja/"
   ],
@@ -310,14 +305,26 @@
    "/perguntas/quanto-custa-um-sistema-para-loja/"
   ],
   [
+   "Como calcular o lucro de uma loja",
+   "/guias/como-calcular-lucro-da-loja/"
+  ],
+  [
    "O suporte é humano?",
    "/perguntas/tem-suporte-humano/"
   ],
   [
-   "Reforma tributária e o MEI",
-   "/guias/reforma-tributaria-mei/"
+   "Posso usar em vários dispositivos?",
+   "/perguntas/posso-usar-em-varios-dispositivos/"
+  ],
+  [
+   "Como sair do caderno",
+   "/guias/como-sair-do-caderno/"
+  ],
+  [
+   "É difícil aprender a usar?",
+   "/perguntas/e-dificil-aprender/"
   ]
  ],
  "publicado": "2026-09-06",
- "updated": "2026-11-13"
+ "updated": "2026-11-15"
 }
