@@ -265,7 +265,7 @@ dict(
   related=[("SoftPay ou Nex", "/comparativos/softpay-ou-nex/", "Outra comparação"),
            ("SoftPay ou Kyte", "/comparativos/softpay-ou-kyte/", "Balcão ou celular"),
            ("Como escolher um sistema", "/guias/como-escolher-sistema-de-gestao/", "Os 7 critérios"),
-           ("Loja online", "/solucoes/loja-online/", "O catálogo com Pix"),
+           ("Loja online", "/solucoes/loja-online/", "Pedido com Pix e taxa do bairro"),
            ("Quanto custa um sistema", "/guias/quanto-custa-um-sistema-de-gestao/", "Preço real de 12 meses"),
            ("Vale a pena ter sistema?", "/guias/vale-a-pena-ter-sistema-de-gestao/", "Antes de escolher")],
 ),

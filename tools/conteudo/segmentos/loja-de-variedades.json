@@ -150,7 +150,7 @@
      "itens": [
       "<strong>Não monta kit nem cesta.</strong> Combinar produtos num item só, com baixa dos componentes, não faz parte do sistema — e em variedades isso pesa em datas comemorativas.",
       "<strong>Não lê o peso direto da balança pelo cabo.</strong> O peso chega pela etiqueta: com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta e lança o item com o peso no carrinho, para o produto vendido em kg ou g. Sem balança etiquetadora, o próprio SoftPay cria o código de balança do produto e imprime a etiqueta com o peso.",
-      "<strong>Não imprime etiqueta de preço nem de gôndola.</strong>",
+      "<strong>Não tem modelo próprio de etiqueta de gôndola.</strong> A etiqueta que ele imprime leva nome, preço e código de barras, em rolo de 40×25 a 80×50 mm ou em folha A4, com o molde ajustável em milímetros.",
       "<strong>Não faz pedido de compra automático.</strong> O sistema mostra o que está acabando; a compra continua sendo sua.",
       "<strong>Validade e lote não estão confirmados.</strong> Se você trabalha com cosmético ou alimento, verifique com o suporte.",
       "<strong>Não há limite de produtos divulgado.</strong> Se o seu catálogo passa de alguns milhares de itens, confirme antes de contratar."
@@ -257,6 +257,14 @@
    "/solucoes/sistema-de-estoque/"
   ],
   [
+   "Sistema para pet shop",
+   "/segmentos/pet-shop/"
+  ],
+  [
+   "Sistema para depósito de bebidas",
+   "/segmentos/loja-de-bebidas/"
+  ],
+  [
    "Sistema para distribuidora de bebidas e atacado",
    "/segmentos/distribuidora/"
   ],
@@ -265,20 +273,20 @@
    "/guias/como-controlar-estoque/"
   ],
   [
-   "Sistema para depósito de bebidas",
-   "/segmentos/loja-de-bebidas/"
+   "PDV no celular e online (frente de caixa)",
+   "/solucoes/sistema-pdv/"
   ],
   [
    "Produtos parados no estoque",
    "/blog/produtos-parados-no-estoque/"
   ],
   [
-   "Como calcular o lucro de uma loja",
-   "/guias/como-calcular-lucro-da-loja/"
-  ],
-  [
    "NF-e e NFC-e: qual a diferença",
    "/guias/nfe-nfce-o-que-e/"
+  ],
+  [
+   "Como calcular o lucro de uma loja",
+   "/guias/como-calcular-lucro-da-loja/"
   ],
   [
    "Reforma tributária e o MEI",
@@ -289,20 +297,16 @@
    "/guias/checklist-reforma-tributaria-2027/"
   ],
   [
-   "Quanto custa um sistema de gestão para comércio",
-   "/guias/quanto-custa-um-sistema-de-gestao/"
-  ],
-  [
    "Como calcular a margem de lucro",
    "/guias/como-calcular-margem-de-lucro/"
   ],
   [
-   "Fluxo de caixa para loja pequena",
-   "/blog/fluxo-de-caixa-loja-pequena/"
+   "Troca e devolução na loja",
+   "/blog/troca-e-devolucao-na-loja/"
   ],
   [
-   "Como sair do caderno",
-   "/guias/como-sair-do-caderno/"
+   "Fluxo de caixa para loja pequena",
+   "/blog/fluxo-de-caixa-loja-pequena/"
   ],
   [
    "Caderno ou sistema?",
@@ -313,16 +317,12 @@
    "/comparativos/alternativa-ao-bling/"
   ],
   [
-   "Excel ou sistema de gestão?",
-   "/perguntas/excel-ou-sistema-de-gestao/"
-  ],
-  [
    "É difícil aprender a usar?",
    "/perguntas/e-dificil-aprender/"
   ],
   [
-   "Funciona em todo o Brasil?",
-   "/perguntas/funciona-no-brasil-inteiro/"
+   "Excel ou sistema de gestão?",
+   "/perguntas/excel-ou-sistema-de-gestao/"
   ]
  ],
  "publicado": "2026-09-06",

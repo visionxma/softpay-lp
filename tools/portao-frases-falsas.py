@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """Portão das frases falsas sobre o SoftPay (sai 1 se achar alguma).
 
-15/11/2026. O site dizia duas coisas que o produto desmente, e as duas
+15/11/2026. O site dizia três coisas que o produto desmente, e as três
 diminuíam o SoftPay em páginas de segmento e de solução:
 
   1. "Não integra com balança" (e "venda por peso entra como produto comum,
@@ -13,6 +13,13 @@ diminuíam o SoftPay em páginas de segmento e de solução:
   2. "A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de
      entregador". Falso: a loja online recebe o pedido com Pix e soma a taxa de
      entrega do bairro; quem leva é o lojista.
+
+  3. "Não imprime etiqueta de preço (nem de gôndola)" (loja de variedades e
+     papelaria). Falso: o app imprime a etiqueta do produto com nome, preço e
+     código de barras (src/lib/etiquetaProduto.ts, htmlDaEtiqueta, linhas 385 a
+     420: etq-nome, etq-preco, etq-codigo), em rolo de 40x25 a 80x50 mm
+     (src/components/BatchLabelPrint.tsx, linhas 75 a 79) ou folha A4 com molde
+     em milímetros. Só não existe um modelo próprio de gôndola.
 
 Prova no código do app (repositório SOFTPAY APP, main de 14/11/2026, 5686718d):
   - src/lib/scaleBarcode.ts: parseScaleBarcode lê /^2\\d{12}$/ (prefixo 2,
@@ -41,6 +48,8 @@ LISTA_NEGRA = [
      r"(peso|granel)[^.<]{0,90}valor\s+digitado\s+no\s+pdv"),
     ("loja online e catalogo com Pix (a partir do plano Loja)",
      r"plano\s+loja,?\s+e\s+catalogo\s+com\s+pix"),
+    ("nao imprime etiqueta de preco",
+     r"nao\W+(imprime|emite|gera|faz)\W+(a\W+)?etiquetas?\W+de\W+preco"),
     ("catalogo com Pix, nao gestao de entregador",
      r"catalogo\s+com\s+pix\W{1,8}nao\s+gestao\s+de\s+entregador"),
 ]
