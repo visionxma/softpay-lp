@@ -277,23 +277,27 @@ def render(*, slug, title, description, h1, intro, blocks, faq=None, figura=None
     <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- data-topo: "sim" no alto da página (barra estendida de ponta a ponta,
-         clara: data-topo-tom), "nao" depois de rolar (cápsula), igual à home. -->
+         clara: data-topo-tom), "nao" depois de rolar (cápsula), igual à home.
+         Barra = logo | links no centro | ações. data-p: prioridade do link;
+         o "2" sai da barra antes de encostar nas ações (sistema.css, seção 6). -->
     <nav class="nav" aria-label="Principal" data-topo="sim" data-topo-tom="claro">
         <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
             <img src="/assets/logo-232.png" width="232" height="84" alt="SoftPay" />
         </a>
 
         <div class="nav__menu">
-            <a class="nav__link" href="/solucoes/">Soluções</a>
-            <a class="nav__link" href="/segmentos/">Segmentos</a>
-            <a class="nav__link" href="/guias/">Guias</a>
-            <a class="nav__link" href="/#planos">Planos</a>
+            <a class="nav__link" href="/solucoes/" data-p="1">Soluções</a>
+            <a class="nav__link" href="/segmentos/" data-p="1">Segmentos</a>
+            <a class="nav__link" href="/guias/" data-p="2">Guias</a>
+            <a class="nav__link" href="/#planos" data-p="1">Planos</a>
         </div>
 
         <div class="nav__acoes">
             %(iphone)s
-            <a class="nav__link nav__entrar" href="%(app)s">Entrar</a>
-            <a class="btn btn--acao" href="%(cadastro)s" data-track="complete-registration">Testar grátis</a>
+            <div class="nav__conta">
+                <a class="nav__link nav__entrar" href="%(app)s">Entrar</a>
+                <a class="btn btn--acao" href="%(cadastro)s" data-track="complete-registration">Testar grátis</a>
+            </div>
             <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
                 aria-label="Abrir menu">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"

@@ -44,7 +44,7 @@
 
     <link rel="preload" href="/fontes/softpay-montserrat-v1.woff2?v=6438d7b8ea" as="font" type="font/woff2" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
-    <link rel="stylesheet" href="/sistema.css?v=f10b8e1e49" />
+    <link rel="stylesheet" href="/sistema.css?v=7f498a0f85" />
     <link rel="icon" href="/assets/icones e favicon.svg" type="image/svg+xml" />
 
     <script type="application/ld+json">
@@ -246,29 +246,27 @@
     <a class="so-leitor" href="#conteudo">Pular para o conteúdo</a>
 
     <!-- data-topo: "sim" no alto da página (barra estendida de ponta a ponta,
-         clara: data-topo-tom), "nao" depois de rolar (cápsula), igual à home. -->
+         clara: data-topo-tom), "nao" depois de rolar (cápsula), igual à home.
+         Barra = logo | links no centro | ações. data-p: prioridade do link;
+         o "2" sai da barra antes de encostar nas ações (sistema.css, seção 6). -->
     <nav class="nav" aria-label="Principal" data-topo="sim" data-topo-tom="claro">
         <a class="nav__logo" href="/" aria-label="SoftPay, página inicial">
             <img src="/assets/logo-232.png?v=7b1ac2adcb" width="232" height="84" alt="SoftPay" />
         </a>
 
         <div class="nav__menu">
-            <a class="nav__link" href="/solucoes/">Soluções</a>
-            <a class="nav__link" href="/segmentos/">Segmentos</a>
-            <a class="nav__link" href="/guias/">Guias</a>
-            <a class="nav__link" href="/#planos">Planos</a>
+            <a class="nav__link" href="/solucoes/" data-p="1">Soluções</a>
+            <a class="nav__link" href="/segmentos/" data-p="1">Segmentos</a>
+            <a class="nav__link" href="/guias/" data-p="2">Guias</a>
+            <a class="nav__link" href="/#planos" data-p="1">Planos</a>
         </div>
 
         <div class="nav__acoes">
-            <style>.nav__iphone{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:2.75rem;min-width:2.75rem;padding:.5rem .625rem}
-.nav__iphone svg{flex:none;width:20px;height:20px}
-.nav__iphone-c,.nav__iphone-l{display:none}
-@media (min-width:30rem) and (max-width:61.99rem){.nav__iphone-c{display:inline}}
-@media (min-width:72rem) and (max-width:82.99rem){.nav__iphone-c{display:inline}}
-@media (min-width:83rem){.nav__iphone-l{display:inline}}
-@media (max-width:29.99rem){.nav__iphone{padding-inline:.25rem}}</style><a class="nav__link nav__iphone" href="https://apps.apple.com/br/app/softpay-pdv/id6829463542" target="_blank" rel="noopener" data-track="app-store" aria-label="Baixar para iPhone (abre a App Store em nova aba)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span class="nav__iphone-c">iPhone</span><span class="nav__iphone-l">Baixar para iPhone</span></a>
-            <a class="nav__link nav__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
-            <a class="btn btn--acao" href="https://www.softpaybr.com/auth?ref=alexandrehen_cf9e" data-track="complete-registration">Testar grátis</a>
+            <a class="nav__link nav__iphone" href="https://apps.apple.com/br/app/softpay-pdv/id6829463542" target="_blank" rel="noopener" data-track="app-store" aria-label="Baixar para iPhone (abre a App Store em nova aba)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg><span class="nav__iphone-c">iPhone</span><span class="nav__iphone-l">Baixar para iPhone</span></a>
+            <div class="nav__conta">
+                <a class="nav__link nav__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
+                <a class="btn btn--acao" href="https://www.softpaybr.com/auth?ref=alexandrehen_cf9e" data-track="complete-registration">Testar grátis</a>
+            </div>
             <button class="nav__hamburguer" type="button" data-gaveta-botao aria-expanded="false" aria-controls="gaveta"
                 aria-label="Abrir menu">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
