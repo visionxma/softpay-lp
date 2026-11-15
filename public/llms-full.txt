@@ -824,14 +824,14 @@ As páginas de segmento contam a rotina do seu negócio. As de soluções explic
 | Registrar exige parar o atendimento | Bot do WhatsApp | Todos. A partir do plano Loja |
 | Preciso emitir nota fiscal | NF-e e NFC-e | Distribuidora, autopeças, materiais de construção |
 | Tenho mais de um ponto de venda | Múltiplas lojas | Empresas com filiais e distribuidora |
-| Atendo mesa, balcão e entrega ao mesmo tempo | Mesas e comandas, no PDV, e pedido de entrega pela loja online | Hamburgueria, pizzaria e açaiteria. A partir do plano Loja |
+| Atendo mesa, balcão e entrega ao mesmo tempo | Mesas e comandas, no PDV, e pedido de entrega pela loja online | Hamburgueria, pizzaria, açaiteria e restaurante. A partir do plano Loja |
 | Quero vender além da loja física | Loja online | Roupas, variedades, joias. A partir do plano Loja |
 
 ## Não achou o seu segmento?
 
 A base é a mesma para qualquer comércio com estoque: PDV, caixa, estoque, fiado, clientes e relatórios. Se a sua loja não tem página própria, comece pela de pequeno comércio e MEI — ela descreve o que vale para todos.
 
-Comida também entra: hamburgueria, pizzaria e açaiteria usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja.
+Comida também entra: hamburgueria, pizzaria, açaiteria e restaurante usam mesas e comandas no PDV, pedido de entrega pela loja online, com bairro e taxa, e venda por quilo na balança. Mesas, comandas e loja online vêm a partir do plano Loja.
 
 Também vale ser direto sobre onde o SoftPay não é a escolha certa hoje: prestadores de serviço com agenda e ordem de serviço, gestão de franquia e redes com mais de dez acessos simultâneos. Nesses casos falta recurso específico, e dizer isso antes é melhor que você descobrir durante o teste.
 Como ler estas páginas
@@ -949,7 +949,13 @@ Endereço: https://site.softpaybr.com/segmentos/mercadinho/
 
 Mercadinho é volume: muitos itens baratos, giro rápido e margem apertada. O SoftPay organiza a venda no balcão, o que está acabando na prateleira e o fiado dos clientes de sempre.
 
-Testar grátis por 7 dias
+7 dias grátis, sem cartão. Prefere conversar? Fale no WhatsApp
+- Etiqueta da balança o caixa lê o peso do código
+- Leitor de código bipou, entrou no carrinho
+- Fiado no nome saldo e cobrança por Pix
+- Estoque que avisa o que está acabando
+- Caixa conferido fechamento contra a gaveta
+- Curva ABC o que sustenta a venda
 
 ## Os problemas que aparecem sempre
 
@@ -1087,7 +1093,7 @@ Dizer isso antes da contratação é mais útil que descobrir depois:
 
 -
 
-Não integra com balança. Venda por peso — frios, hortifrúti, granel — não sai etiquetada pelo sistema. Esses itens entram como produto comum, com o valor digitado no PDV.
+Não lê o peso direto da balança pelo cabo. O peso chega pela etiqueta: com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta e lança o item com o peso no carrinho. Sem balança etiquetadora, o próprio SoftPay cria o código de balança do produto e imprime a etiqueta com o peso.
 
 -
 
@@ -1099,7 +1105,7 @@ Não tem controle de validade confirmado. Num mercadinho isso pesa. Confirme com
 
 -
 
-Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
+Não faz roteiro de entrega nem controle de entregador. A loja online, a partir do plano Loja, recebe o pedido com Pix e soma a taxa de entrega do bairro; quem leva é você.
 
 ##
 Perguntas frequentes
@@ -1138,7 +1144,7 @@ O SoftPay roda no navegador e o campo de busca do PDV aceita a leitura do códig
 
 ### E a balança? Vendo frios e hortifrúti por peso.
 
-O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV. Se a maior parte do seu faturamento é venda por peso, leve isso em conta na decisão.
+Sim, pela etiqueta. Com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta, acha o produto e lança o peso no carrinho, cobrando pelo preço do quilo cadastrado. Sem balança etiquetadora, o SoftPay cria o código de balança do produto e imprime a etiqueta com o peso digitado. O que ele não faz é ler o peso direto da balança pelo cabo.
 
 ###
 
@@ -1184,6 +1190,10 @@ Endereço: https://site.softpaybr.com/segmentos/loja-de-roupas/
 # Sistema para loja de roupas com grade
 
 O SoftPay é um sistema para loja de roupas com estoque por grade: cada tamanho e cor tem a própria quantidade, e a venda no PDV baixa a combinação certa. Abre no celular e no computador, mostra na curva ABC a peça parada e liga a venda à cliente. A grade está a partir do plano Loja, de R$ 89/mês.
+- Grade de tamanho e corsaldo por combinação
+- Provador“tem no M?” no celular
+- Crediáriocaderninho com cobrança Pix
+- Instagramloja online no link da bio
 
 Loja de moda
 
@@ -2827,6 +2837,7 @@ Sim. Os dados ficam na nuvem e o sistema é acessado pelo navegador, inclusive n
 - Vale a pena ter um sistema de gestão na loja?
 - Loja pequena precisa de sistema?
 - Alternativa ao Kyte: SoftPay ou Kyte?
+- Como escolher um sistema de gestão
 - SoftPay ou Nex: qual escolher
 - Reforma tributária e o MEI
 - Caderno ou sistema?
@@ -2835,7 +2846,6 @@ Sim. Os dados ficam na nuvem e o sistema é acessado pelo navegador, inclusive n
 - Quanto custa um sistema para loja?
 - Reforma tributária no comércio: o que muda e quando
 - Perda de estoque por validade
-- Troca e devolução na loja
 
 ---
 
@@ -3171,15 +3181,15 @@ Depósito de bebidas, adega e loja de bebida vivem de giro alto, margem apertada
 
 Planos a partir de R$ 69/mês
 
-7 dias grátis, sem cartão de crédito.
+7 dias grátis, sem cartão. Prefere conversar? Fale no WhatsApp
 
-Recursos principais para loja de bebidas:
-- PDV rápido para o pico
-- Atacado e varejo
-- Estoque de alto giro
-- Fiado sem caderno
-- Curva ABC
-- Planos a partir de R$ 69
+O que o SoftPay resolve no depósito e na adega:
+- Engradado e latapreço de atacado a partir de N unidades
+- Fiado no nomesaldo, histórico e cobrança por Pix
+- Gelada e naturalcada variação com o seu preço
+- Deliverypedido online com taxa por bairro
+- ICMS-ST na notabebida sem ST não passa
+- Estoque da sextaaviso do que está acabando
 
 Sexta, sábado e o resto da semana
 
@@ -3219,11 +3229,11 @@ Combinado antes de começar
 ## O que o SoftPay não faz numa loja de bebidas
 - Não faz controle de vasilhame ou casco retornável. Se você trabalha com troca de casco, esse controle fica fora do sistema.
 - Não integra com balança. Não é comum em bebidas, mas fica registrado.
-- Não faz delivery nem roteiro de entrega. A loja online, a partir do plano Loja, é catálogo com Pix — não gestão de entregador.
+- Não faz roteiro de entrega nem controle de entregador. A loja online, a partir do plano Loja, recebe o pedido com Pix e soma a taxa de entrega do bairro; quem leva é você.
 - Não tem controle de validade confirmado. Confirme com o suporte se isso for parte da sua operação.
 - Não é sistema para bar ou distribuidora com consumo no local. Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor.
 
-Se você também atende pelo celular, a loja online do plano Loja recebe o pedido com Pix. A entrega (motoboy, rota e taxa) continua com você, como diz a lista acima.
+Se você também atende pelo celular, a loja online do plano Loja recebe o pedido com Pix e a taxa do bairro. A entrega (motoboy e rota) continua com você, como diz a lista acima.
 
 Feito para o giro da loja de bebidas
 
