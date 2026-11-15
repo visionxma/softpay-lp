@@ -258,7 +258,7 @@ dict(
     ("Preciso de um sistema com e-commerce integrado?",
      "Só se você vende fora do balcão. Uma regra prática: se mais de 20% das suas vendas acontecem em marketplace ou loja virtual, a integração compensa; abaixo disso, costuma ser módulo pago e não usado."),
     ("O SoftPay tem loja online?",
-     "Tem catálogo online com Pix a partir do plano Loja — é um catálogo próprio para vender por WhatsApp e Instagram, não uma integração com marketplace."),
+     "Tem loja online a partir do plano Loja: o cliente faz o pedido e paga com Pix, com a taxa de entrega do bairro somada ao total, e quem leva é você. É uma loja própria para vender por WhatsApp e Instagram, não uma integração com marketplace."),
   ],
   cta_title="Se a sua venda é no balcão, teste",
   cta_text="7 dias grátis, sem cartão de crédito. Se você vende em marketplace, o Bling atende melhor — e preferimos dizer isso agora.",

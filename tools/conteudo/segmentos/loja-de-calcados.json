@@ -33,7 +33,7 @@
   ],
   [
    "Dá para vender pelo WhatsApp com catálogo?",
-   "Sim. A loja online com Pix está a partir do plano Loja e funciona como catálogo para enviar ao cliente."
+   "Sim. A loja online está a partir do plano Loja: o cliente escolhe o par e faz o pedido com Pix, com a taxa de entrega do bairro somada ao total (ou retirada na loja). Você envia o link pelo WhatsApp, e quem leva o pedido é você."
   ],
   [
    "O sistema integra com Shopee ou Mercado Livre?",
@@ -162,11 +162,11 @@
     },
     {
      "tipo": "h3",
-     "texto": "Catálogo online com Pix"
+     "texto": "Loja online com Pix e taxa de entrega"
     },
     {
      "tipo": "p",
-     "texto": "A partir do plano Loja, você publica um catálogo e recebe por Pix — útil para vender pelo WhatsApp o par que o cliente viu na vitrine."
+     "texto": "A partir do plano Loja, o cliente escolhe o par na loja online e faz o pedido com Pix. A entrega entra no total pela taxa do bairro (ou por uma taxa única), ou o cliente retira na loja. Quem leva é você — útil para vender o par que o cliente viu na vitrine ou no WhatsApp."
     }
    ]
   },
@@ -180,7 +180,7 @@
      "itens": [
       "<strong>Não faz gestão de coleção nem de estação.</strong> O sistema controla estoque, custo e giro; o calendário da moda continua sendo seu.",
       "<strong>Não integra com marketplace.</strong> Vender em Shopee, Mercado Livre ou Amazon não sincroniza estoque com o SoftPay.",
-      "<strong>Não faz etiqueta com código de barras próprio.</strong> Confirme com o suporte o que é possível no seu caso antes de contratar.",
+      "<strong>Não tem modelo próprio de etiqueta de gôndola.</strong> A etiqueta que ele imprime leva nome, preço e código de barras (o SoftPay gera o EAN-13 do par que ainda não tem), em rolo de 40×25 a 80×50 mm ou em folha A4.",
       "<strong>Não faz troca com controle de crédito do cliente.</strong> Troca é comum em calçado; confirme como registrar antes de contar com isso."
      ]
     }
@@ -243,5 +243,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-08"
+ "updated": "2026-11-15"
 }
