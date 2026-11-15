@@ -39,13 +39,15 @@ const sec = (D, idx) => (D.origem ? ` data-mx-secao="${idx}"` : '');
 const FT = '~FadeToastUp_fade-toast-up__jmg7z ~FadeToastUp_fade-toast-up--active__xnKww';
 const DUR = ' style="transition-duration: 600ms;"';
 
-// botão da Clover: medium/small, cheio ou contornado; `extra` são as classes que cada módulo acrescenta ao <a>
+// botão da Clover: medium/small, cheio ou contornado; `extra` são as classes que cada módulo acrescenta ao <a>.
+// `so`: complemento que só aparece do tablet para cima ("Criar conta" + " grátis", para o par caber em 360 px);
+// `track`: o clique de criar conta conta como cadastro na origem do cadastro (mesmo atributo das outras rotas).
 function botao(b, { tam = 'medium', contorno = false, extra = '' } = {}) {
   if (!b) return '';
   const tamanho = tam === 'small' ? '~TextWithArrow_small__HRlM4' : '~TextWithArrow_medium__S5L+z';
-  return `<div class="${K('~TextStack_cta-container__xpS3k')}"><a class="${K(`~Button_with-button-theme__65PpL ~Button_light__WvRrx${extra}`)}" href="${e(b.href)}">`
+  return `<div class="${K('~TextStack_cta-container__xpS3k')}"><a class="${K(`~Button_with-button-theme__65PpL ~Button_light__WvRrx${extra}`)}" href="${e(b.href)}"${b.track ? ' data-track="complete-registration"' : ''}>`
     + `<span class="${K(`~TextWithArrow_root__azywr ~TextWithArrow_light__Sz7KG ${tamanho} ~TextWithArrow_cta__oC8O+${contorno ? ' ~TextWithArrow_outline__9-iUz' : ''} ~Button_text-with-arrow__sg7EX`)}">`
-    + `<span class="${K('~TextV2_modern-button-text__lbHgv ~TextWithArrow_text__IyWS7')}">${e(b.texto)}</span></span>`
+    + `<span class="${K('~TextV2_modern-button-text__lbHgv ~TextWithArrow_text__IyWS7')}">${e(b.texto)}${b.so ? `<span class="mx-so-largo">${e(b.so)}</span>` : ''}</span></span>`
     + (b.oculto ? `<span class="visually-hidden">${e(b.oculto)}</span>` : '') + '</a></div>';
 }
 
@@ -62,15 +64,36 @@ const fundo = (D, src) => `background-image: url(&quot;${e(D.v ? D.v(src) : src)
 
 // ---------- módulos da Clover ----------
 
+// cena do topo da rota (15/11/2026, molde da loja de roupas e da loja de bebidas): a foto da dona do mercadinho no
+// balcão e, à frente, o celular com o print REAL do caixa do SoftPay, na moldura preta do iPhone 16 Pro Max da
+// extensão Mobile Simulator (a tela entra pelos números do background.js: left 21, top 18, 440 x 956 sobre 481 x 991)
+function cena(D, c) {
+  const v = (s) => (D.v ? D.v(s) : s);
+  return `<div class="mx-cena"><picture class="mx-cena-foto"><img src="${v(c.foto)}" srcset="${v(c.fotoMenor)} 800w, ${v(c.foto)} 1600w" sizes="(min-width: 1200px) 55vw, 100vw" width="1600" height="667" alt="${e(c.fotoAlt)}" fetchpriority="high" decoding="async"></picture>`
+    + `<div class="sim"><img class="sim__moldura" src="${v(c.moldura)}" width="962" height="1982" alt="">`
+    + `<div class="sim__tela"><div class="sim__status" aria-hidden="true"><span>9:41</span><span class="sim__sinais"><i></i><i></i><i></i></span></div>`
+    + `<img src="${v(c.print)}" width="690" height="1493" alt="${e(c.printAlt)}" fetchpriority="high" decoding="async"></div>`
+    + `<i class="sim__ilha" aria-hidden="true"></i></div></div>`;
+}
+
 function hero(D, h) {
-  return `<section class="${K('~TextMediaModule_module-wrapper__Avf0a ~featureHero_hero__owzEe ~TextMediaModule_module-wrapper--padding-top-medium__7whLF')}"${sec(D, 0)}>`
+  // regra `hero-de-lp-de-sistema-entrega-criar-conta-e-entrar`: com `entrar`, os dois botões lado a lado na 1ª tela
+  const cta = h.entrar
+    ? `<div class="mx-hero-botoes">${botao(h.botao, { extra: ' ~TextMediaModule_cta-button__GN+AP' })}${botao(h.entrar, { contorno: true, extra: ' ~TextMediaModule_cta-button__GN+AP' })}</div>`
+    : botao(h.botao, { extra: ' ~TextMediaModule_cta-button__GN+AP' });
+  // o espaço entre rótulo e apoio não aparece (o <li> é grade), mas separa as palavras para leitor de tela e para quem
+  // extrai o texto (llms-full.txt dava "Etiqueta da balançao caixa")
+  const selos = h.selos
+    ? `<ul class="mx-selos" aria-label="${e(h.rotuloSelos)}">${h.selos.map(([s, d]) => `<li><strong>${e(s)}</strong> <span>${e(d)}</span></li>`).join('')}</ul>`
+    : '';
+  return `<section class="${K('~TextMediaModule_module-wrapper__Avf0a ~featureHero_hero__owzEe ~TextMediaModule_module-wrapper--padding-top-medium__7whLF')}${h.cena ? ' mx-hero-cena' : ''}"${sec(D, 0)}>`
     + `<div class="${K('~TextMediaModule_container__2oZhB ~featureHero_container__BHKWc ~TextMediaModule_container--text-left__K01Pc')}">`
-    + `<div class="${K(`~EnhancedMedia_enhanced-media__BTHki ${FT} ~featureHero_media__QIJur ~TextMediaModule_image-wrapper__HRi1D`)}"${DUR}>${imagem(D, h.img, { prioridade: true })}</div>`
+    + `<div class="${K(`~EnhancedMedia_enhanced-media__BTHki ${FT} ~featureHero_media__QIJur ~TextMediaModule_image-wrapper__HRi1D`)}"${DUR}>${h.cena ? cena(D, h.cena) : imagem(D, h.img, { prioridade: true })}</div>`
     + `<div class="${K(`${FT} ~TextMediaModule_text-wrapper__kAKfv ~featureHero_text__RmsX8 ~TextMediaModule_text-wrapper--left__da96Q`)}"${DUR}>`
     + (h.topo || '')
     + `<h1 class="${K('~TextMediaModule_title__lEdqc ~TextMediaModule_title--with-color__IDNN7')}">${e(h.h1)}</h1>`
     + `<div class="${K('~MarkdownWrapper_wrapper__g8p+g ~TextStack_blurb__hRy9T ~featureHero_blurb__3Jfqa')}"><p>${h.p}</p></div>`
-    + botao(h.botao, { extra: ' ~TextMediaModule_cta-button__GN+AP' })
+    + cta + (h.nota ? `<p class="mx-hero-nota">${h.nota}</p>` : '') + selos
     + '</div></div></section>';
 }
 
@@ -204,6 +227,22 @@ const ICONES_PROBLEMAS = ['pdv-frente-de-caixa', 'controle-de-estoque', 'caderni
 const ICONES_PERGUNTAS = ['controle-de-estoque', 'caderninho-de-fiado', 'caixa-e-sangria', 'curva-abc', 'atacado-e-varejo', 'pdv-frente-de-caixa'];
 const ICONES_NAO_FAZ = ['balanca', 'pedido', 'validade', 'entrega'];
 
+// A rotina do mercadinho em seis selos, na língua de quem está no balcão (15/11/2026). Cada um foi conferido no código
+// do SOFTPAY APP (origin/main) antes de entrar: etiqueta de balança com o peso no código, prefixo 2
+// (src/lib/scaleBarcode.ts + handleBarcodeScanned em src/components/PDV.tsx); leitor de código no caixa
+// (getProductByBarcode no PDV.tsx); fiado no nome com cobrança por Pix pelo WhatsApp, do plano Loja para cima
+// (src/pages/Fiado.tsx, src/lib/paymentCharge.ts); estoque que avisa o que está acabando (listLowStockProducts e o
+// alerta isLow em src/components/Stock.tsx); fechamento de caixa (src/components/CashClosingReport.tsx,
+// src/components/pdv/PDVCashDialogs.tsx); curva ABC, do plano Loja para cima (src/components/CurvaABC.tsx).
+const SELOS = [
+  ['Etiqueta da balança', 'o caixa lê o peso do código'],
+  ['Leitor de código', 'bipou, entrou no carrinho'],
+  ['Fiado no nome', 'saldo e cobrança por Pix'],
+  ['Estoque que avisa', 'o que está acabando'],
+  ['Caixa conferido', 'fechamento contra a gaveta'],
+  ['Curva ABC', 'o que sustenta a venda'],
+];
+
 // as telas de cada tópico de "O que muda": prints REAIS do SoftPay dentro das molduras da Mobile Simulator
 const TELAS = [
   { arq: 'pdv-notebook', alt: 'Notebook com o PDV do SoftPay aberto numa venda, com a lista de produtos e o carrinho', botao: ['Conhecer o PDV', '/solucoes/sistema-pdv/'] },
@@ -237,6 +276,7 @@ function paginaProduto(D) {
   const blocos = D.blocks || [];
   const [bA, bB, bC, bD, bE, bF, bG, ...resto] = blocos;
   const so = (b, tipo) => (b?.partes || []).filter((p) => p.tipo === tipo);
+  const mercadinho = /(^|\/)mercadinho$/.test(D.slug || '');
 
   const trilha = `<nav class="mx-trilha" aria-label="Trilha de navegação"><ol><li><a href="/">Início</a></li>`
     + (D.breadcrumbs || []).map(([nome, href]) => (href ? `<li><a href="${e(href)}">${e(nome)}</a></li>` : `<li aria-current="page">${e(nome)}</li>`)).join('') + '</ol></nav>';
@@ -249,7 +289,21 @@ function paginaProduto(D) {
     else if (topicos.length) topicos[topicos.length - 1].miolo += partesHtml([pc[i]]);
   }
   const secoes = [
-    hero(D, { topo: trilha, h1: D.h1, p: e(D.intro), botao: cad, img: pub('aparelhos-4', 'Computador, notebook, tablet e celular com telas reais do SoftPay: PDV, estoque e financeiro', 1640, 1240, { sizes: '(min-width: 1200px) 55vw, 100vw' }) }),
+    mercadinho
+      ? hero(D, { topo: trilha, h1: D.h1, p: e(D.intro),
+        // "Criar conta grátis" + "Entrar" na 1ª tela; o WhatsApp desce para a nota, como texto
+        botao: { texto: 'Criar conta', so: ' grátis', href: cad.href, track: true },
+        entrar: { texto: 'Entrar', href: D.links?.app || 'https://app.softpaybr.com/' },
+        nota: `7 dias grátis, sem cartão.${D.links?.wpp ? ` Prefere conversar? <a href="${e(D.links.wpp)}" target="_blank" rel="noopener">Fale no WhatsApp</a>` : ''}`,
+        // a dona do mercadinho no balcão (a foto da própria rota) e o caixa REAL no celular: o print do PDV tirado em
+        // 14/11/2026 pelo ~/.jarvis/softpay/prints-nicho do Mac (conta de demonstração, nicho "bebidas": cerveja,
+        // refrigerante, água, gelo e carvão, itens que o mercadinho também vende)
+        cena: { foto: (D.figura && D.figura[0]) || '/assets/lojistas/mercadinho.webp', fotoMenor: '/assets/lojistas/800/mercadinho.webp',
+          fotoAlt: (D.figura && D.figura[1]) || 'Dona de mercadinho atrás do balcão',
+          moldura: `${B}/iphone-16-pro-max-preto.webp`, print: `${B}/celular-pdv.webp`,
+          printAlt: 'Tela real do SoftPay no celular: o caixa com cerveja, refrigerante 2 L, água, gelo e carvão e o carrinho da venda' },
+        selos: SELOS, rotuloSelos: 'O que o SoftPay resolve no mercadinho' })
+      : hero(D, { topo: trilha, h1: D.h1, p: e(D.intro), botao: cad, img: pub('aparelhos-4', 'Computador, notebook, tablet e celular com telas reais do SoftPay: PDV, estoque e financeiro', 1640, 1240, { sizes: '(min-width: 1200px) 55vw, 100vw' }) }),
     bB && grade(D, 1, { titulo: bB.titulo, lista: true, classe: 'mx-g-problemas', celulas: so(bB, 'ul').flatMap((u) => u.itens).map((it, i) => ({ icone: { src: RECURSO(ICONES_PROBLEMAS[i % 5]), alt: '' }, texto: it })) }),
     bC && rolagem(D, { titulo: bC.titulo, itens: topicos.map((t, i) => { const T = TELAS[i % TELAS.length]; return { tag: 'h3', titulo: t.titulo, miolo: t.miolo, img: { src: `${B}/${T.arq}.webp`, alt: T.alt }, botao: { texto: T.botao[0], href: T.botao[1] } }; }) }),
     bA && textoMidia(D, 3, { lado: 'esquerda', classe: 'mx-tingida', titulo: bA.titulo, miolo: partesHtml(bA.partes), img: pub('casal-balcao', 'Casal de comerciantes no balcão do mercadinho conferindo as vendas no computador', 1600, 668, { semMenor: true, sizes: '(min-width: 1200px) 50vw, 100vw' }), botao: D.links?.wpp ? { texto: 'Tirar dúvidas no WhatsApp', href: D.links.wpp } : cad }),
