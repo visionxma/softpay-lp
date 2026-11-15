@@ -49,7 +49,7 @@
   ],
   [
    "Vendo por peso. Funciona com balança?",
-   "O SoftPay não integra com balança. Itens vendidos por peso entram como produto comum, com o valor digitado no PDV."
+   "Sim, pela etiqueta. Com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta, acha o produto e lança o peso no carrinho, para o item cadastrado em kg ou g. Sem balança etiquetadora, o SoftPay cria o código de balança do produto e imprime a etiqueta com o peso digitado. O que ele não faz é ler o peso direto da balança pelo cabo."
   ],
   [
    "Dá para importar minha planilha de produtos?",
@@ -206,7 +206,7 @@
     {
      "tipo": "ul",
      "itens": [
-      "<strong>Não integra com balança.</strong> Venda por peso — frios, hortifrúti, granel — entra como produto comum, com o valor digitado no PDV.",
+      "<strong>Não lê o peso direto da balança pelo cabo.</strong> A venda por peso — frios, hortifrúti, granel — chega pela etiqueta: com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta e lança o item com o peso no carrinho, para o produto cadastrado em kg ou g. Sem balança etiquetadora, o próprio SoftPay cria o código de balança do produto e imprime a etiqueta com o peso.",
       "<strong>Não faz inventário por coletor.</strong> A contagem é feita por você e lançada no sistema; não há aparelho de leitura em massa.",
       "<strong>Não faz pedido de compra automático.</strong> O sistema mostra o que está acabando; a compra continua sendo sua, pelo canal de sempre.",
       "<strong>Não monta kit nem ficha técnica.</strong> Produto composto de outros produtos, com baixa dos componentes, não faz parte do sistema.",
@@ -311,5 +311,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-04"
+ "updated": "2026-11-15"
 }

@@ -191,7 +191,7 @@
      "tipo": "ul",
      "itens": [
       "<strong>Não faz controle de vasilhame ou casco retornável.</strong> Se você trabalha com troca de casco, esse controle fica fora do sistema.",
-      "<strong>Não integra com balança.</strong> Não é comum em bebidas, mas fica registrado.",
+      "<strong>Não lê o peso direto da balança pelo cabo.</strong> Vender bebida por peso não é comum, mas, se você precisar, o peso chega pela etiqueta: o caixa do SoftPay lê o código da balança etiquetadora (o código de 13 dígitos que começa com 2) e lança o peso no carrinho.",
       "<strong>Não faz roteiro de entrega nem controle de entregador.</strong> A loja online, a partir do plano Loja, recebe o pedido com Pix e soma a taxa de entrega do bairro; quem leva é você.",
       "<strong>Não tem controle de validade confirmado.</strong> Confirme com o suporte se isso for parte da sua operação.",
       "<strong>Não é sistema para bar ou distribuidora com consumo no local.</strong> Não há comanda de mesa. Se você vende para consumo no local, um sistema de bar atende melhor."
@@ -260,5 +260,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-13"
+ "updated": "2026-11-15"
 }
