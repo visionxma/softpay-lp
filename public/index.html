@@ -54,6 +54,56 @@
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster-retrato.webp?v=c7bf39940f" fetchpriority="high" media="(max-width: 47.99rem)" />
     <link rel="preload" as="image" href="/assets/hero/ritmo-poster.webp?v=69532422d0" fetchpriority="high" media="(min-width: 48rem)" />
     <link rel="stylesheet" href="sistema.css?v=7f498a0f85" />
+    <!-- Só desta página (15/11/2026): o par da 1ª tela e o selo de cliente da vitrine.
+         Fica aqui, e não no sistema.css, porque a hero de vídeo e o selo só existem na home. -->
+    <style>
+        /* 1ª TELA ENTREGA CRIAR CONTA E ENTRAR (doutrina, 04/11/2026), no padrão das
+           páginas de segmento (loja de roupas e de bebidas): o botão cheio de sempre e
+           o "Entrar" em contorno claro, com a mesma altura (56px), raio e letra. Lado a
+           lado em toda largura: no computador cada um no tamanho dele; no celular os
+           dois dividem a linha, e o "grátis" sai do rótulo (o apoio logo acima já diz
+           "7 dias grátis, sem cartão"). */
+        .hero--video .hero__botoes {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 0.625rem;
+            width: 100%;
+        }
+        .hero--video .hero__botoes > * { flex: 0 0 auto; }
+        .hero--video .hero__entrar {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1.5px solid rgba(255, 255, 255, 0.85);
+            box-shadow: none; text-shadow: none;
+            transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.2s ease, color 0.2s ease;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .hero--video .hero__entrar:hover {
+                background: var(--branco); color: var(--noite);
+                transform: translateY(-2px); box-shadow: 0 18px 32px -14px rgba(3, 10, 18, 0.9);
+            }
+        }
+        /* no celular cada um parte de METADE da linha (menos meio vão): a borda do
+           "Entrar" não o deixa mais largo que o cheio, como fazia com base 0 */
+        @media (max-width: 47.99rem) {
+            .hero--video .hero__botoes { flex-wrap: nowrap; }
+            .hero--video .hero__botoes > * { flex: 1 1 calc(50% - 0.3125rem); min-width: 0; width: auto; padding-inline: 0.75rem; }
+            .hero--video .hero__so-largo { display: none; }
+        }
+        /* celular estreito (menos de 360px): o título de 80px quebrava em 6 linhas
+           (432px) e o par caía abaixo da dobra (656px numa tela de 568 ou 640).
+           Aqui ele acompanha a largura: 56px em 320, 4 linhas, e o par fica na 1ª tela. */
+        @media (max-width: 22.49rem) {
+            .hero--video .hero__titulo { font-size: clamp(3.25rem, 17.5vw, 5rem); }
+        }
+        /* a entrada (1s, em sequência) agora é do PAR, 3º filho do bloco; o botão cheio
+           guarda só a luz que passa, e o contorno não tem luz nenhuma */
+        @media (prefers-reduced-motion: no-preference) {
+            .hero--video .hero__botoes .hero__cta { animation: hero-luz 5s ease-in-out 1.6s infinite; }
+            .hero--video .hero__botoes .hero__entrar { animation: none; }
+        }
+
+        /* Selo "· cliente" da vitrine: letra branca cheia. A 0,95 o selo do Gabriel Landim
+           dava 4,36:1 no pixel em 768px (portão de 15/11/2026); cheia, 4,62:1. */
+        .vitrine__selo { color: var(--branco); }
+    </style>
     <link rel="icon" href="/assets/icones e favicon.svg" />
 
     <!-- busca:inicio (gerado por tools/busca_home.py; não editar à mão) -->
@@ -361,7 +411,10 @@
                     <span>em uma tela só</span>
                 </h1>
                 <p class="hero__texto">PDV, estoque, fiado, nota fiscal e loja online direto no navegador. 7 dias grátis, sem cartão.</p>
-                <a class="hero__cta" href="https://www.softpaybr.com/auth?ref=alexandrehen_cf9e" data-track="complete-registration">Começar grátis</a>
+                <div class="hero__botoes">
+                    <a class="hero__cta" href="https://www.softpaybr.com/auth?ref=alexandrehen_cf9e" data-track="complete-registration"><span>Criar conta<span class="hero__so-largo">&nbsp;grátis</span></span></a>
+                    <a class="hero__cta hero__entrar" href="https://www.softpaybr.com/auth">Entrar</a>
+                </div>
             </div>
 
             <a class="hero__descer" href="#tudo-em-um-lugar" aria-label="Ver o que o SoftPay faz">
