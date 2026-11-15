@@ -371,6 +371,10 @@ p:last-child { margin-bottom: 0; }
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: var(--r-pill);
     box-shadow: var(--sombra-2);
+    /* a barra mede a si mesma: quem decide o que cabe é a largura DELA, que muda
+       entre o topo estendido e a cápsula na mesma janela (ver "Barra: logo |
+       links no CENTRO | ações" logo abaixo) */
+    container: barra / inline-size;
 }
 .nav__logo { flex: 0 0 auto; display: flex; align-items: center; }
 .nav__logo img { height: 1.75rem; width: auto; }
@@ -403,6 +407,42 @@ p:last-child { margin-bottom: 0; }
     }
     .nav__hamburguer { display: none; }
     .nav__entrar { display: inline-flex; }
+}
+
+/* Barra: logo | links no CENTRO | ações (regra `topo-sem-item-sobreposto`,
+   15/11/2026). O menu fica no centro real da barra (acima); quem garante que
+   nada encosta é a largura da PRÓPRIA barra (contêiner "barra"), não a da
+   janela: na mesma janela a barra é estendida no alto da página e vira a
+   cápsula (no máximo 1184 px) depois de rolar. Antes, a cápsula de 1366 a 1920
+   punha "Planos" 7 px por baixo de "Baixar para iPhone" (24 px em "Dúvidas",
+   na home), porque o rótulo longo seguia a janela.
+   Medido em 14/11/2026 (Montserrat 14 px): ações com "Baixar para iPhone" =
+   422 px, com "iPhone" = 338,5 px, só o ícone = 285,6 px; menu da home =
+   370,6 px (o maior; o das páginas internas tem 336). O menu só fica no
+   centro com as ações inteiras na metade direita, com 24 px de respiro:
+       largura útil da barra >= menu + 2 x ações + 2 x 24
+   Daí: "Baixar para iPhone" a partir de 79rem; "iPhone" de 68,5rem a 79rem;
+   só o ícone abaixo disso; e abaixo de 61,875rem o link de menos prioridade
+   (data-p="2") sai da barra antes de encostar, e continua na gaveta do
+   celular e no rodapé. Prova: node tools/portao-topo.mjs <url> <caminho...>
+   (16 larguras x topo e cápsula). */
+.nav__iphone {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+    min-height: 2.75rem; min-width: 2.75rem; padding: 0.5rem 0.625rem;
+}
+.nav__iphone svg { flex: none; width: 20px; height: 20px; }
+.nav__iphone-c, .nav__iphone-l { display: none; }
+/* "Entrar" + "Testar grátis" formam um par (a conta) sem caixa própria: a
+   barra não muda um pixel, e o grupo das ações deixa de ser uma fileira de
+   três links soltos, que o `abas-no-centro` do portão das correções tomava
+   pelas abas (e media 479 px fora do centro com o menu no centro exato). */
+.nav__conta { display: contents; }
+@media (max-width: 29.99rem) { .nav__iphone { padding-inline: 0.25rem; } }
+@media (min-width: 30rem) and (max-width: 61.99rem) { .nav__iphone-c { display: inline; } }
+@media (min-width: 62rem) {
+    @container barra (width < 61.875rem) { .nav__menu > [data-p="2"] { display: none; } }
+    @container barra (68.5rem <= width < 79rem) { .nav__iphone-c { display: inline; } }
+    @container barra (width >= 79rem) { .nav__iphone-l { display: inline; } }
 }
 
 /* Gaveta do celular */
