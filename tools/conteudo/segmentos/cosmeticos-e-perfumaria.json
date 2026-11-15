@@ -37,7 +37,7 @@
   ],
   [
    "Serve para quem vende só pelo WhatsApp e Instagram?",
-   "Sim. A loja online com Pix, a partir do plano Loja, funciona como catálogo para enviar ao cliente, e o PDV registra a venda mesmo sem loja física."
+   "Sim. A loja online, a partir do plano Loja, recebe o pedido com Pix e soma a taxa de entrega do bairro; você envia o link ao cliente e leva o pedido, e o PDV registra a venda mesmo sem loja física."
   ],
   [
    "Guarda o histórico do que cada cliente comprou?",
@@ -162,11 +162,11 @@
     },
     {
      "tipo": "h3",
-     "texto": "Catálogo online com Pix"
+     "texto": "Loja online com Pix e taxa de entrega"
     },
     {
      "tipo": "p",
-     "texto": "A partir do plano Loja, você publica o catálogo e recebe por Pix — o formato natural de quem já vende por WhatsApp e Instagram."
+     "texto": "A partir do plano Loja, a cliente faz o pedido na loja online e paga por Pix, com a taxa de entrega do bairro somada ao total (ou retira na loja). Quem leva é você — o formato natural de quem já vende por WhatsApp e Instagram."
     }
    ]
   },
@@ -243,5 +243,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-09-17"
+ "updated": "2026-11-15"
 }

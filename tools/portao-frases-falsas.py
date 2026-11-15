@@ -21,6 +21,18 @@ diminuíam o SoftPay em páginas de segmento e de solução:
      (src/components/BatchLabelPrint.tsx, linhas 75 a 79) ou folha A4 com molde
      em milímetros. Só não existe um modelo próprio de gôndola.
 
+  4. "Catálogo online com Pix" como descrição da loja online (calçados,
+     cosméticos, comparativo com o Bling) e "funciona como catálogo para enviar
+     ao cliente". Subestima: a loja online recebe o PEDIDO com Pix e soma a taxa
+     de entrega (CartDrawer.tsx, 468 a 476); quem leva é o lojista.
+  5. "Não faz etiqueta com código de barras próprio" (calçados). Falso: o app
+     GERA o código de barras (botão "Gerar EAN-13 para os faltantes",
+     generateBarcode em src/hooks/useDatabase, prefixo 789 no Brasil; teste
+     src/__tests__/pais/eanInternoDoPais.test.ts) e imprime a etiqueta com
+     nome, preço e as barras (src/lib/etiquetaProduto.ts: comentário da linha 45
+     "o 789… gerado" e htmlDaEtiqueta, linhas 385 a 420; BatchLabelPrint.tsx).
+     O que não existe é o modelo próprio de etiqueta de gôndola.
+
 Prova no código do app (repositório SOFTPAY APP, main de 14/11/2026, 5686718d):
   - src/lib/scaleBarcode.ts: parseScaleBarcode lê /^2\\d{12}$/ (prefixo 2,
     código de 6 dígitos, peso em gramas) e buildScaleBarcode gera a etiqueta.
@@ -52,6 +64,12 @@ LISTA_NEGRA = [
      r"nao\W+(imprime|emite|gera|faz)\W+(a\W+)?etiquetas?\W+de\W+preco"),
     ("catalogo com Pix, nao gestao de entregador",
      r"catalogo\s+com\s+pix\W{1,8}nao\s+gestao\s+de\s+entregador"),
+    ("catalogo online com Pix como descricao da loja online",
+     r"catalogo\s+online\s+com\s+pix"),
+    ("loja online funciona como catalogo para enviar ao cliente",
+     r"funciona\s+como\s+catalogo\s+para\s+enviar"),
+    ("nao faz etiqueta com codigo de barras proprio",
+     r"nao\W+(faz|gera|imprime|emite)\W+(a\W+)?etiquetas?\W+com\W+codigo\W+de\W+barras\W+proprio"),
 ]
 LISTA_NEGRA = [(n, re.compile(r)) for n, r in LISTA_NEGRA]
 

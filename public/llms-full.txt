@@ -3013,14 +3013,14 @@ Com o custo cadastrado, você vê a margem por modelo, e não uma média da loja
 
 O cadastro guarda o que a pessoa levou. Numa loja de calçados isso vale muito: saber a numeração de um cliente que volta transforma o atendimento.
 
-### Catálogo online com Pix
+### Loja online com Pix e taxa de entrega
 
-A partir do plano Loja, você publica um catálogo e recebe por Pix — útil para vender pelo WhatsApp o par que o cliente viu na vitrine.
+A partir do plano Loja, o cliente escolhe o par na loja online e faz o pedido com Pix. A entrega entra no total pela taxa do bairro (ou por uma taxa única), ou o cliente retira na loja. Quem leva é você — útil para vender o par que o cliente viu na vitrine ou no WhatsApp.
 
 ## O que o SoftPay não faz numa loja de calçados
 - Não faz gestão de coleção nem de estação. O sistema controla estoque, custo e giro; o calendário da moda continua sendo seu.
 - Não integra com marketplace. Vender em Shopee, Mercado Livre ou Amazon não sincroniza estoque com o SoftPay.
-- Não faz etiqueta com código de barras próprio. Confirme com o suporte o que é possível no seu caso antes de contratar.
+- Não tem modelo próprio de etiqueta de gôndola. A etiqueta que ele imprime leva nome, preço e código de barras (o SoftPay gera o EAN-13 do par que ainda não tem), em rolo de 40×25 a 80×50 mm ou em folha A4.
 - Não faz troca com controle de crédito do cliente. Troca é comum em calçado; confirme como registrar antes de contar com isso.
 
 ## Perguntas que você passa a conseguir responder
@@ -3054,7 +3054,7 @@ Sim, pela curva ABC, a partir do plano Loja. Ela separa os modelos que sustentam
 
 ### Dá para vender pelo WhatsApp com catálogo?
 
-Sim. A loja online com Pix está a partir do plano Loja e funciona como catálogo para enviar ao cliente.
+Sim. A loja online está a partir do plano Loja: o cliente escolhe o par e faz o pedido com Pix, com a taxa de entrega do bairro somada ao total (ou retirada na loja). Você envia o link pelo WhatsApp, e quem leva o pedido é você.
 
 ### O sistema integra com Shopee ou Mercado Livre?
 
@@ -3114,9 +3114,9 @@ A revendedora fica cadastrada como cliente, com saldo e histórico. A partir do 
 
 A partir do plano Loja, a curva ABC mostra quais linhas sustentam o faturamento. Com centenas de variações, é o único jeito de decidir a compra sem chutar.
 
-### Catálogo online com Pix
+### Loja online com Pix e taxa de entrega
 
-A partir do plano Loja, você publica o catálogo e recebe por Pix — o formato natural de quem já vende por WhatsApp e Instagram.
+A partir do plano Loja, a cliente faz o pedido na loja online e paga por Pix, com a taxa de entrega do bairro somada ao total (ou retira na loja). Quem leva é você — o formato natural de quem já vende por WhatsApp e Instagram.
 
 ## O que o SoftPay não faz aqui
 - Não tem controle de validade confirmado. Em cosmético isso pesa; confirme com o suporte antes de contratar contando com esse recurso.
@@ -3159,7 +3159,7 @@ Esse é um ponto a confirmar com o suporte antes de contratar. Em cosmético a v
 
 ### Serve para quem vende só pelo WhatsApp e Instagram?
 
-Sim. A loja online com Pix, a partir do plano Loja, funciona como catálogo para enviar ao cliente, e o PDV registra a venda mesmo sem loja física.
+Sim. A loja online, a partir do plano Loja, recebe o pedido com Pix e soma a taxa de entrega do bairro; você envia o link ao cliente e leva o pedido, e o PDV registra a venda mesmo sem loja física.
 
 ### Guarda o histórico do que cada cliente comprou?
 
@@ -5267,7 +5267,7 @@ Só se você vende fora do balcão. Uma regra prática: se mais de 20% das suas 
 
 ### O SoftPay tem loja online?
 
-Tem catálogo online com Pix a partir do plano Loja — é um catálogo próprio para vender por WhatsApp e Instagram, não uma integração com marketplace.
+Tem loja online a partir do plano Loja: o cliente faz o pedido e paga com Pix, com a taxa de entrega do bairro somada ao total, e quem leva é você. É uma loja própria para vender por WhatsApp e Instagram, não uma integração com marketplace.
 
 ---
 
