@@ -149,7 +149,7 @@
      "tipo": "ul",
      "itens": [
       "<strong>Não monta kit nem cesta.</strong> Combinar produtos num item só, com baixa dos componentes, não faz parte do sistema — e em variedades isso pesa em datas comemorativas.",
-      "<strong>Não integra com balança.</strong> Item vendido por peso entra como produto comum, com o valor digitado.",
+      "<strong>Não lê o peso direto da balança pelo cabo.</strong> O peso chega pela etiqueta: com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa do SoftPay lê a etiqueta e lança o item com o peso no carrinho, para o produto vendido em kg ou g. Sem balança etiquetadora, o próprio SoftPay cria o código de balança do produto e imprime a etiqueta com o peso.",
       "<strong>Não imprime etiqueta de preço nem de gôndola.</strong>",
       "<strong>Não faz pedido de compra automático.</strong> O sistema mostra o que está acabando; a compra continua sendo sua.",
       "<strong>Validade e lote não estão confirmados.</strong> Se você trabalha com cosmético ou alimento, verifique com o suporte.",
@@ -326,5 +326,5 @@
   ]
  ],
  "publicado": "2026-09-06",
- "updated": "2026-09-07"
+ "updated": "2026-11-15"
 }

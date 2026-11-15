@@ -207,7 +207,7 @@
      "tipo": "ul",
      "itens": [
       "<strong>Não funciona sem internet.</strong> O acesso é pelo navegador. Se a sua região tem queda frequente de conexão, pese isso na decisão.",
-      "<strong>Não integra com balança.</strong> Venda por peso entra como produto comum, com o valor digitado.",
+      "<strong>Não lê o peso direto da balança pelo cabo.</strong> A venda por peso entra pela etiqueta: com a balança etiquetadora gravando o peso no código de barras (o código que começa com 2), o caixa lê a etiqueta e lança o item com o peso no carrinho, para o produto cadastrado em kg ou g.",
       "<strong>Não tem TEF nem concilia maquininha.</strong> A forma de pagamento é registrada na venda, mas o valor que a adquirente deposita não entra sozinho no sistema.",
       "<strong>Não faz comanda nem mesa.</strong> Bar, restaurante e lanchonete precisam de um fluxo que o SoftPay não tem.",
       "<strong>Impressora térmica e gaveta não estão confirmadas.</strong> Verifique o seu equipamento com o suporte antes de contratar.",
@@ -305,5 +305,5 @@
  ],
  "mais": [],
  "publicado": "2026-09-06",
- "updated": "2026-11-04"
+ "updated": "2026-11-15"
 }
