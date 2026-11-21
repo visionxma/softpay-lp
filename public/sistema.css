@@ -2377,11 +2377,18 @@ body:has(.gaveta[data-aberta="sim"]) .nav .nav__hamburguer { color: var(--tinta)
 @media (prefers-reduced-motion: reduce) { .faq-question::after { transition: none; } }
 
 /* ------------------------------------------------------ CHAMADA E FIM */
+/* 20/11/2026, regra "seção de LP é faixa de ponta a ponta, nunca caixa recuada" (pedido do Victor): a chamada era um
+   cartão arredondado recuado dentro da coluna de leitura, com o branco da página em volta (em 390 o portão
+   portao-secao-sem-caixa.mjs acusava em todas as internas). Agora o fundo escuro vai de ponta a ponta e quem limita a
+   largura é o conteúdo, que continua na coluna de leitura. O fundo passa da coluna pela sombra dura (sombra é tinta:
+   não entra na rolagem) e o clip-path corta a sombra em cima e embaixo; o body já corta o que passa da janela
+   (overflow-x: clip). Nada de 100vw: com barra de rolagem clássica ele passa da janela. */
 .page-cta {
     margin: var(--sp-7) 0;
-    padding: var(--sp-6);
-    border-radius: var(--r-lg);
+    padding: clamp(2.5rem, 1.9rem + 2.4vw, 4rem) 0;
     background: var(--noite); color: var(--branco);
+    box-shadow: 0 0 0 100vmax var(--noite);
+    clip-path: inset(0 -100vmax);
     text-align: center;
 }
 .page-cta h2 { margin: 0 0 var(--sp-3); color: var(--branco); }
